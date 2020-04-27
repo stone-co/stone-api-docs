@@ -1,6 +1,6 @@
 ################################# Default configuration ###################
 # provide your domain here
-baseURL = "https://examplesite.com/"
+baseURL = "http://stone-co.github.io"
 # theme
 theme = "dot"
 # site title
@@ -44,22 +44,23 @@ url = "quero-ser-parceiro"
 ############################# Default Parameters ##########################
 [params]
 # logo is for all page
-logo = ""
+logo = "stoneg.png"
 # logo white is for homepage logo, you can use colorful logo too...
-logo_white = ""
+logo_white = "stonew.png"
 # when logo is empty, it will show your site title
 
 # customize color
-primary_color = "#02007e"
-body_color = "#f9f9f9"
-text_color = "#636363"
-text_color_dark = "#242738"
+primary_color = "#14aa4b"
+body_color = "#f8f9fd"
+text_color = "#677481"
+text_color_dark = "#5a6872"
 white_color = "#ffffff"
-light_color = "#f8f9fa"
+light_color = "#f4f4f9"
 
 # font family
-font_family = "lato" # Choose font family from : https://fonts.google.com/
+font_family = "Montserrat" # Choose font family from : https://fonts.google.com/
 
+# TODO
 # contact form action
 contact_form_action = "#" # contact form works with : https://formspree.io
 
