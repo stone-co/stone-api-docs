@@ -5,6 +5,8 @@ baseURL = "https://examplesite.com/"
 theme = "dot"
 # site title
 title = "Dot"
+# default language
+defaultContentLanguage = "pt"
 # disable language
 disableLanguages = []
 # google analytics
@@ -90,55 +92,31 @@ link = "#"
 icon = "ti-linkedin" # themify icon pack : https://themify.me/themify-icons
 link = "#"
 
-################################ English Language ######################
-[Languages.en]
-languageName = "En"
-languageCode = "en-us"
-weight = 1
-home = "Home"
-copyright = "The Hugo Documents are copyright © [gethugothemes](https://gethugothemes.com/) 2020."
+# languages
+[languages]
+    ### Portuguese Language ###
+    [Languages.pt]
+        languageName = "pt"
+        languageCode = "pt"
+        weight = 1
+        home = "Home"
+        # TODO: change footer text
+        copyright = "The Hugo Documents are copyright © [gethugothemes](https://gethugothemes.com/) 2020."
 
-# banner
-[Languages.en.params.banner]
-title = "Support Center & Knowledge base"
-subtitle = "Find advice and answers from our support team fast or get in touch"
-bg_image = "images/banner.jpg"
-placeholder = "Have a question? Just ask here or enter terms"
-
-# call to action
-[Languages.en.params.cta]
-enable = true
-title = "Didn't find an answer to your question?"
-content = "Musce libero nunc, dignissim quis turpis quis, semper vehicula dolor. Suspendisse tincidunt consequat quam."
-# call to action button
-[Languages.en.params.cta.button]
-enable = true
-label = "contact us"
-link = "contact"
-
-
-################################### Franch Language ######################
-[Languages.fr]
-languageName = "Fr"
-languageCode = "fr-fr"
-weight = 2
-home = "Accueil"
-copyright = "Les documents Hugo sont sous copyright © [gethugothemes](https://gethugothemes.com/) 2020."
-
-# banner
-[Languages.fr.params.banner]
-title = "Comment pouvons nous aider?"
-subtitle = "Trouvez rapidement des conseils et des réponses auprès de notre équipe d'assistance ou contactez-nous."
-bg_image = "images/banner.jpg"
-placeholder = "Avoir une question? Il suffit de demander ici ou de saisir les termes"
-
-# call to action
-[Languages.fr.params.cta]
-enable = true
-title = "Vous n'avez pas trouvé de réponse à votre question?"
-content = "Contactez-nous pour plus de détails sur les services supplémentaires et la tarification du travail personnalisé"
-# call to action button
-[Languages.fr.params.cta.button]
-enable = true
-label = "Contactez nous"
-link = "contact"
+        # banner
+        [Languages.pt.params.banner]
+            title = "Support Center & Knowledge base"
+            subtitle = "Find advice and answers from our support team fast or get in touch"
+            bg_image = ""
+            placeholder = "Have a question? Just ask here or enter terms"
+        # call to action
+        [Languages.pt.params.cta]
+            enable = true
+            title = "Didn't find an answer to your question?"
+            content = "Musce libero nunc, dignissim quis turpis quis, semper vehicula dolor. Suspendisse tincidunt consequat quam."
+        # call to action button
+        [Languages.pt.params.cta.button]
+            enable = true
+            label = "contact us"
+            # TODO: colocar link certo para contato
+            link = "https://docs.openbank.stone.com.br/discuss-new"
