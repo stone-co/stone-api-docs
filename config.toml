@@ -1,6 +1,6 @@
 ################################# Default configuration ###################
 # provide your domain here
-baseURL = "http://stone-co.github.io"
+baseURL = "https://stone-co.github.io"
 # theme
 theme = "dot"
 # site title
@@ -50,12 +50,12 @@ logo_white = "stonew.png"
 # when logo is empty, it will show your site title
 
 # customize color
-primary_color = "#14aa4b"
-body_color = "#f8f9fd"
-text_color = "#677481"
-text_color_dark = "#5a6872"
-white_color = "#ffffff"
-light_color = "#f4f4f9"
+primary_color = "#14aa4b" # "Stone Green"
+body_color = "#f8f9fd" # "Light Grey 2"
+text_color = "#677481" # "Medium Grey 1"
+text_color_dark = "#5a6872" # "Dark Grey 2"
+white_color = "#ffffff" # "White"
+light_color = "#f4f4f9" # "Light Grey 1"
 
 # font family
 font_family = "Montserrat" # Choose font family from : https://fonts.google.com/
