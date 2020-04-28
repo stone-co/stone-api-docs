@@ -31,7 +31,7 @@ weight = 2
 [[menu.main]]
 weight = 3
 name = "Quero ser parceiro"
-url = "quero-ser-parceiro"
+url = "https://docs.openbank.stone.com.br/docs/overview-guides"
 #hasChildren = true
 
 # exemplo de children menu
