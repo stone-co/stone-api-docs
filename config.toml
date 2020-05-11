@@ -67,21 +67,13 @@ contact_form_action = "#" # contact form works with : https://formspree.io
 
 ############################## social links ##############################
 [[params.social]]
-icon = "ti-facebook" # themify icon pack : https://themify.me/themify-icons
+icon = "ti-world" # themify icon pack : https://themify.me/themify-icons
 link = "#"
 
-[[params.social]]
-icon = "ti-twitter-alt" # themify icon pack : https://themify.me/themify-icons
-link = "#"
-  
 [[params.social]]
 icon = "ti-github" # themify icon pack : https://themify.me/themify-icons
 link = "#"
   
-[[params.social]]
-icon = "ti-linkedin" # themify icon pack : https://themify.me/themify-icons
-link = "#"
-
 # languages
 [languages]
     ### Portuguese Language ###
@@ -90,8 +82,7 @@ link = "#"
         languageCode = "pt"
         weight = 1
         # home = "Home"
-        # TODO: change footer text
-        copyright = "Feito com 💚 e com [Hugo](https://gohugo.io) - 2020."
+        copyright = ""
 
         # banner
         [Languages.pt.params.banner]
