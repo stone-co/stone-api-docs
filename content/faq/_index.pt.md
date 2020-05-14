@@ -6,6 +6,7 @@ draft: false
 icon: "ti-help"
 description: "Tire suas dúvidas aqui!"
 type : "docs"
+weight: "3"
 ---
 
 {{< faq "Will updates also be free?" >}}
