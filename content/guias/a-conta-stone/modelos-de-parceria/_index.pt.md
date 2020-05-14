@@ -7,6 +7,8 @@ draft: false
 ---
 ###### Como funcionam os principais modelos de parceria que oferecemos para aqueles que desejam integrar com a nossa API.
 
+------
+
 A Stone oferece dois modelos principais de parceria:
 
 #### Open Banking
