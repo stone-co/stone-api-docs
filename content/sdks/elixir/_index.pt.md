@@ -3,16 +3,13 @@ title: "Elixir"
 date: 2020-05-14T20:17:00-03:00
 lastmod: 2020-05-14T20:17:00-03:00
 draft: false
-icon: "ti-package"
-description: "SDK Elixir"
-type : "docs"
-weight: "2"
+weight: "5"
 ---
 
 Acesse [aqui](https://hexdocs.pm/ex_stone_openbank/ExStoneOpenbank.html) a SDK. 
 
 Linguagem: Elixir
-Principais funcionalidades disponpiveis:
+Principais funcionalidades disponíveis:
 - Autenticação
   - Token JWT de autenticação
   - Chamada de autenticação
