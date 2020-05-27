@@ -7,8 +7,8 @@ weight: "7"
 ---
 
 Acesse [aqui](https://github.com/stone-co/go-stone-openbank) a SDK. 
-
-Linguagem: .Net
+Desenvolvido por: Stone 
+Linguagem: Go
 Principais funcionalidades disponíveis:
 - Autenticação
   - Token JWT de autenticação
