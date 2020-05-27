@@ -29,5 +29,5 @@ Principais funcionalidades disponíveis:
   - Descriptografia
   - Validação de assinatura Stone
 - Contas
-  - listagem de contas pagamemtos que a aplicação tem acesso. 
+  - listagem de contas pagamentos que a aplicação tem acesso. 
 
