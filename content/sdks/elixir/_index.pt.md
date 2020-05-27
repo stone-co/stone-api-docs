@@ -9,6 +9,7 @@ weight: "5"
 Acesse [aqui](https://hexdocs.pm/ex_stone_openbank/ExStoneOpenbank.html) a SDK. 
 
 Linguagem: Elixir
+
 Principais funcionalidades disponíveis:
 - Autenticação
   - Token JWT de autenticação
