@@ -31,7 +31,7 @@ weight = 2
 [[menu.main]]
 weight = 3
 name = "Quero ser parceiro"
-url = "https://docs.openbank.stone.com.br/docs/overview-guides"
+url = "https://app.pipefy.com/public/form/Qz4ptt_W?origem_do_lead=Formul%C3%A1rio%20comercial%20documenta%C3%A7%C3%A3o"
 #hasChildren = true
 
 # exemplo de children menu
@@ -95,12 +95,12 @@ link = "#"
         [Languages.pt.params.cta]
             enable = true
             # TODO: change content or disable
-            title = "Não encontrou uma resposta para sua dúvida?"
-            content = "Sem problemas, estamos aqui para ajudar!"
+            title = "Quer entender mais dos nossos modelos de parceria?"
+            content = "Sem problemas, fale com nosso time comercial!"
         # call to action button
         [Languages.pt.params.cta.button]
             enable = true
             # TODO: change content or disable
             label = "Entrar em contato"
             # TODO: colocar link certo para contato
-            link = "https://docs.openbank.stone.com.br/discuss-new"
+            link = "https://app.pipefy.com/public/form/Qz4ptt_W?origem_do_lead=Formul%C3%A1rio%20comercial%20documenta%C3%A7%C3%A3o"
