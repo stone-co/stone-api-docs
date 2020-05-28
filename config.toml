@@ -19,7 +19,7 @@ unsafe= true
 ################################# navigation ################################
 [[menu.main]]
 name = "Referência da API"
-url = "referencia-da-api"
+url = "https://docs.openbank.stone.com.br/reference"
 weight = 1
 
 [[menu.main]]
