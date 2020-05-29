@@ -2,7 +2,6 @@
 title: "Account Bank"
 date: 2020-05-14T20:16:50-03:00
 lastmod: 2020-05-14T20:16:50-03:00
-type : "docs"
 weight: "1"
 draft: false
 ---
