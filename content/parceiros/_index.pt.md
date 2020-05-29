@@ -6,5 +6,5 @@ draft: false
 icon: "ti-heart"
 description: "Descrição Parceiros"
 type : "docs"
-weight: "3"
+weight: "6"
 ---
