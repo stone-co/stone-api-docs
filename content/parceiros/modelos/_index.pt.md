@@ -37,15 +37,11 @@ Nesse modelo é possível oferecer para a sua usuária as seguintes operações:
   * Emissão boletos de depósito;
   * Emissão comprovantes;
   * Consulta de extrato;
-  * Gerenciamento contatos.
-	
-  
+  * Gerenciamento contatos.  
   
 _________________
 
-
-
-### Conta de Liuidação
+### Conta de Liquidação
 
 No modelo de conta liquidação você pode movimentar sua Conta Stone por meio de uma API RESTful com as todas as funcionalidades para cash-in e cash-out.
 	
@@ -69,6 +65,8 @@ Com essa solução é possível gerenciar sua conta 100% via API, operando:
   * Consulta de extrato;
   * Folha de pagamento;
   * Gerenciamento de contatos.
+  
+_________________
 
 
-Se interessou? Entre em contato com nosso time comercial por [aqui](https://app.pipefy.com/public/form/Qz4ptt_W?origem_do_lead="Formulário%20comercial%20documentação").
+#### Se interessou? Entre em contato com nosso time comercial por *[aqui](https://app.pipefy.com/public/form/Qz4ptt_W?origem_do_lead="Formulário%20comercial%20documentação")*.
