@@ -8,7 +8,7 @@ draft: false
 ---
 
 
-Nome: Nimbly
+Nome: [Nimbly](https://nimbly.com.br/)
 
 Segmento: Gestão Financeira
 
