@@ -10,12 +10,12 @@ Melhorias tem como função principal a correção de comportamentos não ideais
 
 Vejas abaixo a lista de melhorias implementadas ou previstas.
 
-
-_________________
-
-
+<br>
+<br>
+<br>
 
 #### Validação de saldo na criação de TEDs, TEFs e Pagamentos
+_________________
 
 **A quem se aplica:** Aplicações no formato OpenBank. Essa mudança é válida apenas quando a criação e a provação são feitas em momentos diferentes. Aplicações que tem escopo de criação e aprovação não terão o comportamento afetado. 
 
