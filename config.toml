@@ -69,7 +69,7 @@ link = "#"
 
 [[params.social]]
 icon = "ti-github" # themify icon pack : https://themify.me/themify-icons
-link = "#"
+link = "https://github.com/stone-co/go-stone-openbank"
   
 # languages
 [languages]
