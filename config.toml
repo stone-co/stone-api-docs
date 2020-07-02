@@ -58,12 +58,9 @@ white_color = "#ffffff" # "White"
 light_color = "#f4f4f9" # "Light Grey 1"
 
 # font family
-font_family = "Montserrat" # Choose font family from : https://fonts.google.com/
-
-# TODO
-# contact form action
-contact_form_action = "#" # contact form works with : https://formspree.io
-
+#Uncomment the line below if you want to choose a font family from Google Fonts
+#PS: The source needs to be updated on the theme project as well
+#font_family = "" # Choose font family from : https://fonts.google.com/
 
 ############################## social links ##############################
 [[params.social]]
@@ -72,7 +69,7 @@ link = "#"
 
 [[params.social]]
 icon = "ti-github" # themify icon pack : https://themify.me/themify-icons
-link = "#"
+link = "https://github.com/stone-co/go-stone-openbank"
   
 # languages
 [languages]
