@@ -9,10 +9,11 @@ draft: false
 Vejas abaixo a lista de novidades que estão no forno e o que já foi lançado em produção.
 <br>
 <br>
-# Está no forno
+## Está no forno
 <br>
 <br>
 <br>
+
 #### URL com PDF do boleto emitido 
 _________________
 
@@ -24,10 +25,12 @@ _________________
 <br>
 <br>
 <br>
-# Subiu para produção
+
+## Subiu para produção
 <br>
 <br>
 <br>
+
 #### Disponibilização dos dados de quem de fato efetuou o pagamento de um boleto 
 _________________
 
@@ -41,17 +44,7 @@ Importante! Para evitar confusões entre pagador que consta no registro do bolet
 <br>
 <br>
 <br>
-#### Link de pagamento 
-_________________
 
-**Sandbox:** Subida em prevista em breve
-
-**Produção:** Subida prevista 29/06/2020
-
-**Novidade:** 
-<br>
-<br>
-<br>
 #### Juros, Multas, Descontos e Multipos Descontos na emissão de boletos cobrança
 _________________
 
@@ -63,5 +56,18 @@ _________________
 <br>
 <br>
 <br>
+
+#### Link de pagamento 
+_________________
+
+**Sandbox:** Subida em prevista em breve
+
+**Produção:** Subida prevista 29/06/2020
+
+**Novidade:** 
+<br>
+<br>
+<br>
+
 
 
