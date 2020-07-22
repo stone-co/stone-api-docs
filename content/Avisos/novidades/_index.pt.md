@@ -6,45 +6,62 @@ weight: "3"
 draft: false
 ---
 
-
-#### Link de pagamento 
-
-**A quem se aplica:** Aplicações no formato OpenBank. Essa mudança é válida apenas quando a criação e a provação são feitas em momentos diferentes. Aplicações que tem escopo de criação e aprovação não terão o comportamento afetado. 
-
-**Sandbox:** Subiu em 28/05/2020
-
-**Produção:** Subida prevista 29/06/2020
-
-**Mudança:** Vamos retirar a validação de saldo na criação de operações nas rotas *`/external_transfer`*, *`/internal_transfer`* e *`/payments`*. Assim o erro *`422: not_enough_funds`* deixará de existir para aplicações que tiverem escopo apenas de criação (modelo openbank).
-
-**Motivação:** Hoje a validação de saldo na criação inviabiliza alguns modelos de negócio em que ter saldo disponível naquele momento não é relevante.
-
-Se você entende que no seu caso de uso o tempo entre a criação e aprovação da usuária é bem curto e que a visualização do saldo é relevante sugerimos que passe a consultar essa informação na rota /balance e apresente a mesma para a usuária na sua interface.  
-
-
-
+Vejas abaixo a lista de novidades que estão no forno e o que já foi lançado em produção.
+<br>
+<br>
+# Está no forno
+<br>
+<br>
+<br>
+#### URL com PDF do boleto emitido 
 _________________
-
-
-
-#### Juros, Multas e Descontos na emissão de boletos *cobrança*
-
-**Sandbox:** Subida em prevista em breve
-
-**Produção:** Subida em prevista em breve
-
-**Novidade:** Passaremos a disponibilizar as funcionalidades de Juros, Multas e Descontos na emissão de boletos de cobrança. Os mesmos poderão ser setados com um valor absoluto ou % e a regra poderá se aplicar dado dias corridos ou dias úteis. Essas regras serão configuráveis boleto a boleto. 
-
-
-
-_________________
-
-
-
-#### URL com HTLM do boleto emitido 
 
 **Sandbox:** Subida em prevista em breve
 
 **Produção:** Subida em prevista em breve
 
 **Novidade:** Passaremos a disponibilizar no response de emissão de boleto uma URL com o boleto já formatado em HTML. 
+<br>
+<br>
+<br>
+# Subiu para produção
+<br>
+<br>
+<br>
+#### Disponibilização dos dados de quem de fato efetuou o pagamento de um boleto 
+_________________
+
+**Sandbox:** Subiu em ?
+
+**Produção:** Subida prevista 
+
+**Novidade:** Os webhooks de boleto passam a retornar os seguintes campos referentes a que de fato fez o pagamento:
+
+Importante! Para evitar confusões entre pagador que consta no registro do boleto e o pagador de fato do boleto fizemos algumas mudanças de nomeclatura. O objeto `payer` enviado na criação do boleto passará a se chamar `customer` e `payer` passará a ser sempre referente a quem de fato efetuou o pagamento. 
+<br>
+<br>
+<br>
+#### Link de pagamento 
+_________________
+
+**Sandbox:** Subida em prevista em breve
+
+**Produção:** Subida prevista 29/06/2020
+
+**Novidade:** 
+<br>
+<br>
+<br>
+#### Juros, Multas, Descontos e Multipos Descontos na emissão de boletos cobrança
+_________________
+
+**Sandbox:** Subiu em ?
+
+**Produção:** Subiu em ?
+
+**Novidade:** Agora é possível aplicar juros, multas, descontos e multiplos descontos aos boletos do tipo cobrança. Veja aqui as regras de negócios dessas novas funcionalidades.
+<br>
+<br>
+<br>
+
+
