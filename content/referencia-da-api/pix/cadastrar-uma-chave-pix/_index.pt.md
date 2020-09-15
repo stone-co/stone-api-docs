@@ -5,6 +5,9 @@ lastmod: 2020-09-14T18:14:34-03:00
 weight: "2"
 draft: false
 ---
+{{< notice info >}}
+Beta: O PIX ainda está em beta, o que significa que temos um grupo pequeno testando a funcionalidade para que então possamos liberar para todos.
+{{< /notice >}}
 
 A chave PIX é um identificador que vincula uma conta ao arranjo de pagamentos instantâneos, permitindo o recebimento de um PIX. As Chaves PIX poderão ser cadastradas a partir do dia 05 de outubro.
 

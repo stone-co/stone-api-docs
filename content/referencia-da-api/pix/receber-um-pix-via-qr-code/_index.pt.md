@@ -5,6 +5,9 @@ lastmod: 2020-09-14T18:15:48-03:00
 weight: "3"
 draft: false
 ---
+{{< notice info >}}
+Beta: O PIX ainda está em beta, o que significa que temos um grupo pequeno testando a funcionalidade para que então possamos liberar para todos.
+{{< /notice >}}
 
 Para receber um PIX via QR Code, a cliente precisa ter a sua chave aleatória cadastrada na instituição participante.
 
