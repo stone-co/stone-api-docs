@@ -29,6 +29,33 @@ que desencadeia uma nova construção do site sempre que a branch master deste r
 Essa ação roda o Hugo e alimenta o repositório do site com a versão atualizada dele - o que, por sua vez,
 desencadeia a ação de atualização do site, que utiliza o [GitHub Pages](https://pages.github.com/).
 
+## Contribuindo
+
+### Nomeando arquivos e diretórios
+A url do site vai ser baseada no nome dos diretórios que ficam sob o diretório `content`.
+Por isso, é importante que:
+    - espaços sejam representados por hífens
+    - acentos e pontuações não sejam utilizados
+    - os nomes sejam simples e representem aquilo que queremos ver na url
+    
+Os artigos devem receber o nome `_index.pt.md` e devem estar dentro de uma pasta com o nome do título.
+
+### Seções da Home
+As seções da home precisam ter o tipo `docs` __(type : "docs")__ indicado em seus cabeçalhos.
+Além disso, precisam ter um ícone, que deve ser indicado no campo `icon` e pode ser escolhido
+[aqui](https://themify.me/themify-icons), e uma descrição, que deve ser preenchida no campo
+`description`.
+
+### Ordem do conteúdo
+Se nenhuma providência for tomada, as seções e posts vão se organizar em ordem alfabética simples.
+Para impôr uma ordem intencional, é necessário preencher o campo `weight` do cabeçalho.
+O primeiro conteúdo que deve aparecer deve ter `weight` igual a 1, o segundo igual a 2, e assim
+por diante.
+
+### Escrevendo mensagens de commit
+As mensagens de commit devem seguir o [Guia de Estilo Git](https://github.com/stone-payments/stoneco-best-practices/blob/master/gitStyleGuide/README_pt.md#commits)
+da Stone.
+
 ## Usando Hugo
 
 ### Instalando
@@ -95,31 +122,6 @@ visualizar o site e verificar se não há erros na sua construção.
 após rodar o comando acima)
 
 - Para parar, apertar `Ctrl + C` no terminal
-
-## Contribuindo
-
-### Nomeando arquivos e diretórios
-A url do site vai ser baseada no nome dos diretórios que ficam sob o diretório `content`.
-Por isso, é importante que:
-    - espaços sejam representados por hífens
-    - acentos e pontuações não sejam utilizados
-    - os nomes sejam simples e representem aquilo que queremos ver na url
-
-### Seções da Home
-As seções da home precisam ter o tipo `docs` __(type : "docs")__ indicado em seus cabeçalhos.
-Além disso, precisam ter um ícone, que deve ser indicado no campo `icon` e pode ser escolhido
-[aqui](https://themify.me/themify-icons), e uma descrição, que deve ser preenchida no campo
-`description`.
-
-### Ordem do conteúdo
-Se nenhuma providência for tomada, as seções e posts vão se organizar em ordem alfabética simples.
-Para impôr uma ordem intencional, é necessário preencher o campo `weight` do cabeçalho.
-O primeiro conteúdo que deve aparecer deve ter `weight` igual a 1, o segundo igual a 2, e assim
-por diante.
-
-### Escrevendo mensagens de commit
-As mensagens de commit devem seguir o [Guia de Estilo Git](https://github.com/stone-payments/stoneco-best-practices/blob/master/gitStyleGuide/README_pt.md#commits)
-da Stone.
 
 --------
 
