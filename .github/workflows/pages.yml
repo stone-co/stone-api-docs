@@ -16,13 +16,6 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Install autoprefixer and PostCSS
-        run: |
-          sudo npm install -D --save postcss@^8.0.2
-          sudo npm install -D --save autoprefixer
-          sudo npm install -D --save postcss-cli
-          sudo npm install -D --save autoprefixer-cli
-
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
