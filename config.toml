@@ -1,103 +1,180 @@
-################################# Default configuration ###################
-# provide your domain here
-baseURL = "https://stone-co.github.io"
-# theme
-theme = "dot"
-# site title
+baseURL = "/"
 title = "Stone OpenBank"
-# default language
+
+enableRobotsTXT = true
+
+# Hugo allows theme composition (and inheritance). The precedence is from left to right.
+theme = ["docsy"]
+
+# Will give values to .Lastmod etc.
+enableGitInfo = false
+
+# Language settings
+contentDir = "content/pt"
 defaultContentLanguage = "pt"
-# disable language
-disableLanguages = []
-# google analytics
-googleAnalytics = "" # paste your analytics ID here. Ex: UA-123-45
+defaultContentLanguageInSubdir = false
+# Useful when translating.
+enableMissingTranslationPlaceholders = true
 
-# unsafe html
-[markup.goldmark.renderer]
-unsafe= true
+disableKinds = ["taxonomy", "taxonomyTerm"]
 
-################################# navigation ################################
-[[menu.main]]
-name = "Referência da API"
-url = "https://docs.openbank.stone.com.br/reference"
-weight = 1
+# Highlighting config
+pygmentsCodeFences = true
+pygmentsUseClasses = false
+# Use the new Chroma Go highlighter in Hugo.
+pygmentsUseClassic = false
+#pygmentsOptions = "linenos=table"
+# See https://help.farbox.com/pygments.html
+pygmentsStyle = "tango"
 
-[[menu.main]]
-name = "Guias"
-url = "guias"
-weight = 2
+# Configure how URLs look like per section.
+[permalinks]
+blog = "/:section/:year/:month/:day/:slug/"
 
-# Dropdown menu
-[[menu.main]]
-weight = 3
-name = "Quero ser parceiro"
-url = "https://app.pipefy.com/public/form/Qz4ptt_W?origem_do_lead=Formul%C3%A1rio%20comercial%20documenta%C3%A7%C3%A3o"
-#hasChildren = true
+## Configuration for BlackFriday markdown parser: https://github.com/russross/blackfriday
+[blackfriday]
+plainIDAnchors = true
+hrefTargetBlank = true
+angledQuotes = false
+latexDashes = true
 
-# exemplo de children menu
-#  [[menu.main]]
-#  parent = "docs"
-#  name = "Installation"
-#  url = "installation"
-#  weight = 1
+# Image processing configuration.
+[imaging]
+resampleFilter = "CatmullRom"
+quality = 75
+anchor = "smart"
 
-############################# Default Parameters ##########################
-[params]
-# logo is for all page
-logo = "stoneg.png"
-# logo white is for homepage logo, you can use colorful logo too...
-logo_white = "stonew.png"
-# when logo is empty, it will show your site title
+[services]
+[services.googleAnalytics]
+# Comment out the next line to disable GA tracking. Also disables the feature described in [params.ui.feedback].
+#id = "UA-00000000-0"
 
-# customize color
-primary_color = "#14aa4b" # "Stone Green"
-body_color = "#f8f9fd" # "Light Grey 2"
-text_color = "#677481" # "Medium Grey 1"
-text_color_dark = "#5a6872" # "Dark Grey 2"
-white_color = "#ffffff" # "White"
-light_color = "#f4f4f9" # "Light Grey 1"
+# Language configuration
 
-# font family
-#Uncomment the line below if you want to choose a font family from Google Fonts
-#PS: The source needs to be updated on the theme project as well
-#font_family = "" # Choose font family from : https://fonts.google.com/
-
-############################## social links ##############################
-[[params.social]]
-icon = "ti-world" # themify icon pack : https://themify.me/themify-icons
-link = "#"
-
-[[params.social]]
-icon = "ti-github" # themify icon pack : https://themify.me/themify-icons
-link = "https://github.com/stone-co/go-stone-openbank"
-  
-# languages
 [languages]
-    ### Portuguese Language ###
-    [Languages.pt]
-        languageName = "pt"
-        languageCode = "pt"
-        weight = 1
-        # home = "Home"
-        copyright = ""
+[languages.pt]
+title = "Stone OpenBank"
+description = "Escreva o Banco do futuro. Uma linha de código por vez."
+languageName ="Português"
+# Weight used for sorting.
+weight = 1
+time_format_default = "02.01.2006"
+#time_format_blog = "02.01.2006"
 
-        # banner
-        [Languages.pt.params.banner]
-            title = "Stone OpenBank"
-            subtitle = "Escreva o Banco do futuro. Uma linha de código por vez."
-            # TODO: add background image
-            bg_image = "grid.png"
-            placeholder = "Search"
-        # call to action
-        [Languages.pt.params.cta]
-            enable = true
-            # TODO: change content or disable
-            title = "Quer entender mais dos nossos modelos de parceria?"
-            content = "Sem problemas, fale com nosso time comercial!"
-        # call to action button
-        [Languages.pt.params.cta.button]
-            enable = true
-            # TODO: change content or disable
-            label = "Entrar em contato"
-            # TODO: colocar link certo para contato
-            link = "https://app.pipefy.com/public/form/Qz4ptt_W?origem_do_lead=Formul%C3%A1rio%20comercial%20documenta%C3%A7%C3%A3o"
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+      # See a complete list of available styles at https://xyproto.github.io/splash/docs/all.html
+      style = "tango"
+      # Uncomment if you want your chosen highlight style used for code blocks without a specified language
+      # guessSyntax = "true"
+
+# Everything below this are Site Params
+
+[params]
+copyright = "Stone"
+#privacy_policy = "https://policies.google.com/privacy"
+
+# First one is picked as the Twitter card image if not set on page.
+# images = ["images/project-illustration.png"]
+
+# Menu title if your navbar has a versions selector to access old versions of your site.
+# This menu appears only if you have at least one [params.versions] set.
+version_menu = "Releases"
+
+# Flag used in the "version-banner" partial to decide whether to display a 
+# banner on every page indicating that this is an archived version of the docs.
+# Set this flag to "true" if you want to display the banner.
+archived_version = false
+
+# The version number for the version of the docs represented in this doc set.
+# Used in the "version-banner" partial to display a version number for the 
+# current doc set.
+version = "0.0"
+
+# A link to latest version of the docs. Used in the "version-banner" partial to
+# point people to the main doc site.
+url_latest_version = "https://stone-co.github.io/"
+
+# Repository configuration (URLs for in-page links to opening issues and suggesting changes)
+#github_repo = "https://github.com/google/docsy-example"
+# An optional link to a related project repo. For example, the sibling repository where your product code lives.
+#github_project_repo = "https://github.com/google/docsy"
+
+# Specify a value here if your content directory is not in your repo's root directory
+# github_subdir = ""
+
+# Google Custom Search Engine ID. Remove or comment out to disable search.
+#gcs_engine_id = "011737558837375720776:fsdu1nryfng"
+
+# Enable Algolia DocSearch
+algolia_docsearch = false
+
+# Enable Lunr.js offline search
+offlineSearch = false
+
+# User interface configuration
+[params.ui]
+# Enable to show the side bar menu in its compact state.
+sidebar_menu_compact = false
+#  Set to true to disable breadcrumb navigation.
+breadcrumb_disable = false
+#  Set to true to hide the sidebar search box (the top nav search box will still be displayed if search is enabled)
+sidebar_search_disable = false
+#  Set to false if you don't want to display a logo (/assets/icons/logo.svg) in the top nav bar
+navbar_logo = true
+# Set to true to disable the About link in the site footer
+footer_about_disable = true
+
+# Adds a H2 section titled "Feedback" to the bottom of each doc. The responses are sent to Google Analytics as events.
+# This feature depends on [services.googleAnalytics] and will be disabled if "services.googleAnalytics.id" is not set.
+# If you want this feature, but occasionally need to remove the "Feedback" section from a single page,
+# add "hide_feedback: true" to the page's front matter.
+[params.ui.feedback]
+enable = false
+# The responses that the user sees after clicking "yes" (the page was helpful) or "no" (the page was not helpful).
+#yes = 'Glad to hear it! Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.'
+#no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.'
+
+# Adds a reading time to the top of each doc.
+# If you want this feature, but occasionally need to remove the Reading time from a single page, 
+# add "hide_readingtime: true" to the page's front matter
+[params.ui.readingtime]
+enable = false
+
+#[params.links]
+# End user relevant links. These will show up on left side of footer and in the community page if you have one.
+#[[params.links.user]]
+#	name = "User mailing list"
+#	url = "https://example.org/mail"
+#	icon = "fa fa-envelope"
+#        desc = "Discussion and help from your fellow users"
+#[[params.links.user]]
+#	name ="Twitter"
+#	url = "https://example.org/twitter"
+#	icon = "fab fa-twitter"
+#        desc = "Follow us on Twitter to get the latest news!"
+#[[params.links.user]]
+#	name = "Stack Overflow"
+#	url = "https://example.org/stack"
+#	icon = "fab fa-stack-overflow"
+#        desc = "Practical questions and curated answers"
+## Developer relevant links. These will show up on right side of footer and in the community page if you have one.
+#[[params.links.developer]]
+#	name = "GitHub"
+#	url = "https://github.com/google/docsy"
+#	icon = "fab fa-github"
+#        desc = "Development takes place here!"
+#[[params.links.developer]]
+#	name = "Slack"
+#	url = "https://example.org/slack"
+#	icon = "fab fa-slack"
+#        desc = "Chat with other project developers"
+#[[params.links.developer]]
+#	name = "Developer mailing list"
+#	url = "https://example.org/mail"
+#	icon = "fa fa-envelope"
+#        desc = "Discuss development issues around the project"
+#
