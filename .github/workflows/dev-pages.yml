@@ -40,9 +40,9 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         env:
-          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           EXTERNAL_REPOSITORY: stone-co/stone-co.github.io
-          PUBLISH_BRANCH: dev
+          PUBLISH_BRANCH: master
           PUBLISH_DIR: ./public
         with:
           emptyCommits: false
