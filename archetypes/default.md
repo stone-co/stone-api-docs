@@ -1,7 +1,9 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
+linkTitle: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 lastmod: {{ .Date }}
-weight: ""
-draft: true
+weight: 1
+description: >
+  Uma descrição 
 ---

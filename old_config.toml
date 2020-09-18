@@ -1,0 +1,103 @@
+################################# Default configuration ###################
+# provide your domain here
+baseURL = "https://stone-co.github.io"
+# theme
+theme = "dot"
+# site title
+title = "Stone OpenBank"
+# default language
+defaultContentLanguage = "pt"
+# disable language
+disableLanguages = []
+# google analytics
+googleAnalytics = "" # paste your analytics ID here. Ex: UA-123-45
+
+# unsafe html
+[markup.goldmark.renderer]
+unsafe= true
+
+################################# navigation ################################
+[[menu.main]]
+name = "Referência da API"
+url = "https://docs.openbank.stone.com.br/reference"
+weight = 1
+
+[[menu.main]]
+name = "Guias"
+url = "guias"
+weight = 2
+
+# Dropdown menu
+[[menu.main]]
+weight = 3
+name = "Quero ser parceiro"
+url = "https://app.pipefy.com/public/form/Qz4ptt_W?origem_do_lead=Formul%C3%A1rio%20comercial%20documenta%C3%A7%C3%A3o"
+#hasChildren = true
+
+# exemplo de children menu
+#  [[menu.main]]
+#  parent = "docs"
+#  name = "Installation"
+#  url = "installation"
+#  weight = 1
+
+############################# Default Parameters ##########################
+[params]
+# logo is for all page
+logo = "stoneg.png"
+# logo white is for homepage logo, you can use colorful logo too...
+logo_white = "stonew.png"
+# when logo is empty, it will show your site title
+
+# customize color
+primary_color = "#14aa4b" # "Stone Green"
+body_color = "#f8f9fd" # "Light Grey 2"
+text_color = "#677481" # "Medium Grey 1"
+text_color_dark = "#5a6872" # "Dark Grey 2"
+white_color = "#ffffff" # "White"
+light_color = "#f4f4f9" # "Light Grey 1"
+
+# font family
+#Uncomment the line below if you want to choose a font family from Google Fonts
+#PS: The source needs to be updated on the theme project as well
+#font_family = "" # Choose font family from : https://fonts.google.com/
+
+############################## social links ##############################
+[[params.social]]
+icon = "ti-world" # themify icon pack : https://themify.me/themify-icons
+link = "#"
+
+[[params.social]]
+icon = "ti-github" # themify icon pack : https://themify.me/themify-icons
+link = "https://github.com/stone-co/go-stone-openbank"
+  
+# languages
+[languages]
+    ### Portuguese Language ###
+    [Languages.pt]
+        languageName = "pt"
+        languageCode = "pt"
+        weight = 1
+        # home = "Home"
+        copyright = ""
+
+        # banner
+        [Languages.pt.params.banner]
+            title = "Stone OpenBank"
+            subtitle = "Escreva o Banco do futuro. Uma linha de código por vez."
+            # TODO: add background image
+            bg_image = "grid.png"
+            placeholder = "Search"
+        # call to action
+        [Languages.pt.params.cta]
+            enable = true
+            # TODO: change content or disable
+            title = "Quer entender mais dos nossos modelos de parceria?"
+            content = "Sem problemas, fale com nosso time comercial!"
+        # call to action button
+        [Languages.pt.params.cta.button]
+            enable = true
+            # TODO: change content or disable
+            label = "Entrar em contato"
+            # TODO: colocar link certo para contato
+            link = "https://app.pipefy.com/public/form/Qz4ptt_W?origem_do_lead=Formul%C3%A1rio%20comercial%20documenta%C3%A7%C3%A3o"

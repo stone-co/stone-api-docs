@@ -13,13 +13,17 @@ jobs:
         with:
           submodules: true
 
+      - name: Install autoprefixer and PostCSS
+        run: npm install -D --save autoprefixer && npm install -D --save postcss-cli
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.69.0'
+          extended: true
 
       - name: Build
-        run: hugo --minify
+        run: cd themes/docsy && git submodule update -f --init && cd ../.. && hugo
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v2
