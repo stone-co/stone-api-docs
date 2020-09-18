@@ -1,0 +1,48 @@
+name: hugo publish
+
+on:
+  pull_request:
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '14'
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.69.0'
+          extended: true
+
+      - name: Cache dependencies
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - run: npm ci
+      - run: hugo --minify
+
+      - name: Build
+        run: cd themes/docsy && git submodule update -f --init && cd ../.. && hugo
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        env:
+          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          EXTERNAL_REPOSITORY: stone-co/stone-co.github.io
+          PUBLISH_BRANCH: dev
+          PUBLISH_DIR: ./public
+        with:
+          emptyCommits: false
+          commitMessage: ${{ github.event.head_commit.message }}
