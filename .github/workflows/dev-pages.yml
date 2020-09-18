@@ -23,7 +23,7 @@ jobs:
           extended: true
 
       - name: Build
-      - run: |
+        run: |
           npm install -g postcss-cli
           npm install autoprefixer
           npm audit fix
