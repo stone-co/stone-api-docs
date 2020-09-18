@@ -27,7 +27,6 @@ jobs:
           npm install -g postcss
           npm install -g postcss-cli
           npm install autoprefixer
-          npm audit fix
           cd themes/docsy && git submodule update -f --init && cd ../.. && hugo
 
       - name: Deploy
