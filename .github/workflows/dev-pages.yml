@@ -31,7 +31,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
       
-      - run: npm ci
+      - name: NPM
+        run: |
+          npm init
+          npm ci
       
       - name: Build
         run: cd themes/docsy && git submodule update -f --init && cd ../.. && hugo
