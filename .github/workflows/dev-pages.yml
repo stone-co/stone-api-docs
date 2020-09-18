@@ -32,9 +32,7 @@ jobs:
             ${{ runner.os }}-node-
       
       - name: NPM
-        run: |
-          npm init
-          npm ci
+        run: npm ci
       
       - name: Build
         run: cd themes/docsy && git submodule update -f --init && cd ../.. && hugo
