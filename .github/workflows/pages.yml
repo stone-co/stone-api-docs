@@ -18,6 +18,7 @@ jobs:
 
       - name: Install autoprefixer and PostCSS
         run: |
+          npm install -g -D postcss@8.0.2
           npm install -D --save autoprefixer
           npm install -D --save postcss-cli
 
