@@ -35,7 +35,7 @@ jobs:
         run: npm ci
       
       - name: Build
-        run: cd themes/docsy && git submodule update -f --init && cd ../.. && hugo
+        run: hugo --minify
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
