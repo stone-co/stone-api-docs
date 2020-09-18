@@ -1,0 +1,24 @@
+{
+  "name": "stone-api-docs",
+  "version": "1.0.0",
+  "description": "docs for api documentation",
+  "main": "index.js",
+  "dependencies": {
+    "autoprefixer": "^10.0.0",
+    "postcss-cli": "^7.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stone-co/stone-api-docs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stone-co/stone-api-docs/issues"
+  },
+  "homepage": "https://github.com/stone-co/stone-api-docs#readme"
+}
