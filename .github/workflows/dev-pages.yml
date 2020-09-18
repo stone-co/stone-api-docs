@@ -23,6 +23,9 @@ jobs:
           extended: true
 
       - name: Build
+        run: npm install -g postcss-cli
+        run: npm install autoprefixer
+        run: npm audit fix
         run: cd themes/docsy && git submodule update -f --init && cd ../.. && hugo
 
       - name: Deploy
