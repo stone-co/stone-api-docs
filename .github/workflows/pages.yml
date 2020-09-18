@@ -14,7 +14,7 @@ jobs:
           submodules: true
 
       - name: Install autoprefixer and PostCSS
-        run: npm install -D --save autoprefixer && npm install -D --save postcss-cli
+        run: npm install -D --save autoprefixer && npm install -D --save postcss-cli@5.0.1
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
