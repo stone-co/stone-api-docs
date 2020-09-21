@@ -29,7 +29,7 @@ description: >
 #### Status reivindicação
 
 - `open`: aberta pelo reivindicador, mas ainda não recebida pelo doador.
-- `waittin_resolution`: reivindicação já foi recebida pelo doador e está aguardando a resolução. Os critérios confirmação ou cancelamento da reivindicação seguem normas específicas a depender do tipo (posse ou portabilidade).
+- `waiting_resolution`: reivindicação já foi recebida pelo doador e está aguardando a resolução. Os critérios confirmação ou cancelamento da reivindicação seguem normas específicas a depender do tipo (posse ou portabilidade).
 - `confirmed`: doador confirmou a reivindicação. Isso implica a remoção da chave do DICT e da base interna do PSP doador. Está aguardando o reivindicador encerrar o processo.
 - `cancelled`: doador ou reivindicador cancelou a reivindicação, mantendo o vínculo inalterado (conforme estava antes da reivindicação) tanto no DICT quanto na base interna do PSP.
-- `completd`: tanto o DICT quanto o reivindicador atualizaram suas bases com o novo vínculo.
+- `completed`: tanto o DICT quanto o reivindicador atualizaram suas bases com o novo vínculo.
