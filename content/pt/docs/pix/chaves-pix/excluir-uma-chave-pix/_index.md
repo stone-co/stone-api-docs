@@ -16,8 +16,11 @@ No caso de PSPs diretos e indiretos existem situações em que é necessária a 
 
 ##### **Request**
 
-```json5
+```http request
 DELETE /api/v1/pix_entries/key/:id
+```
+Body
+```text
 {
   "key_type": “phone”,
   “account_id”: “968cc34d-d827-448b-ac1b-e6e29836a160”,
@@ -36,9 +39,12 @@ DELETE /api/v1/pix_entries/key/:id
 
 ##### **Response**
 
-```json5
+```http request
 202 CONTINUE
 content-type: application/json
+```
+Body
+```text
 {
   "id": “4b612bce-f964-11ea-adc1-0242ac120002”
 }
@@ -51,7 +57,7 @@ content-type: application/json
 Serão disparados webhooks quando o status da solicitação alterar para `accepted`ou `rejected`.
 As seguintes informações virão no campo `target_data`.
 
-```json5
+```text
 {
   "id": “4b612bce-f964-11ea-adc1-0242ac120002”
   “key”: “+5510998765432”,
