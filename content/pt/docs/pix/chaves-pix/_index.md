@@ -5,7 +5,7 @@ date: 2020-09-17T18:00:00-03:00
 lastmod: 2020-09-17T18:00:00-03:00
 weight: 1
 description: >
-  Entenda como funcionam as chaves PIX!
+  Entenda como funcionam as Chaves PIX!
 ---
 
 ## O que é uma Chave PIX
