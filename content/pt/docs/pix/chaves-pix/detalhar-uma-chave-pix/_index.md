@@ -1,8 +1,8 @@
 ---
 title: "Detalhar"
-linkTitle: "Detalhar""
+linkTitle: "Detalhar"
 date: 2020-09-17T18:00:00-03:00
-lastmod: 2020-09-17T18:00:00-03:00
+lastmod: 2020-09-21T18:00:00-03:00
 weight: 5
 description: >
 
@@ -10,7 +10,7 @@ description: >
 
 ##### **Request**
 
-Deve ser informado o `id`da chave. 
+Deve ser informado o `id` da chave. 
 ```http request
 GET /api/v1/pix_entries/:id?participant_ispb=xxxx
 ```
