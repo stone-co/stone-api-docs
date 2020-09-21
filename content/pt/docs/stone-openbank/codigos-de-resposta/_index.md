@@ -1,9 +1,11 @@
 ---
 title: "Códigos De Resposta"
+linkTitle: "Códigos De Resposta"
 date: 2020-05-02T18:33:23-03:00
-lastmod: 2020-05-13T18:33:23-03:00
-weight: "6"
-draft: false
+lastmod: 2020-09-21T18:00:00-03:00
+weight: 6
+description: >
+
 ---
 
 Nossa API usa como retorno os [códigos HTTP](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) padrão para indicar tanto o sucesso de uma requisição, quanto para indicar falha. Pode-se utilizar a tabela abaixo como referência:
@@ -22,8 +24,6 @@ Nossa API usa como retorno os [códigos HTTP](https://www.w3.org/Protocols/rfc26
 | 422    | Entidade não processável. Não é uma ação válida para os dados enviados.                  |
 | 500    | Erro interno do servidor, tente sua requisição novamente.                                |
 
-{{< notice tip >}}
-**Identificador da Requisição**
-<br>O cabeçalho da resposta sempre inclui um campo identificador da requisição, chamado `x-request-id`. Este valor deve ser enviado sempre que precisar de suporte, já que ele nos permite encontrar a chamada no nosso sistema e verificar o que possa ter dado errado.
-{{< /notice >}}
-
+{{< alert title="Identificador da Requisição" >}}
+O cabeçalho da resposta sempre inclui um campo identificador da requisição, chamado `x-request-id`. Este valor deve ser enviado sempre que precisar de suporte, já que ele nos permite encontrar a chamada no nosso sistema e verificar o que possa ter dado errado.
+{{< /alert >}}

@@ -1,14 +1,16 @@
 ---
 title: "Paginação"
+linkTitle: "Paginação"
 date: 2020-05-04T18:32:40-03:00
-lastmod: 2020-05-13T18:32:40-03:00
-weight: "4"
-draft: false
+lastmod: 2020-09-21T18:00:00-03:00
+weight: 4
+description: >
+
 ---
 
 Nossas APIs usam um padrão de paginação por cursor. O retorno possui o seguinte formato:
 
-```typescript
+```text
 {
  cursor: {
  after: string | null,
@@ -20,7 +22,7 @@ Nossas APIs usam um padrão de paginação por cursor. O retorno possui o seguin
 ```
 
 Como funciona: deve-se informar o limite de items para a paginação, passando o parâmetro ?limit=10. Na resposta dessa query, será retornado as hashs referente ao cursor no momento da resposta, ex.:
-```typescript
+```text
 {
  cursor: {
  after: ASsa987fqw,
