@@ -7,7 +7,7 @@ weight: 3
 description: >
 
 ---
-Esse médodo deve ser usado quando o dado a ser usado como identificador da Chave PIX ainda não foi cadastrado junto ao DICT ou o cadastro já está inativo. Em casos em que a o dado já está sendo utilizado em uma Chave PIX ativa deve ser feita uma [reivindicação](https://stone-co.github.io/docs/pix/chaves-pix/reivindicar/) da Chave PIX. 
+Esse médodo deve ser usado quando o dado a ser usado como identificador da Chave PIX ainda não foi cadastrado junto ao DICT ou o cadastro já está inativo. Em casos em que o dado já está sendo utilizado em uma Chave PIX ativa deve ser feita uma [reivindicação](https://stone-co.github.io/docs/pix/chaves-pix/reivindicar/) da Chave PIX. 
 <br>\<br>
 
 ##### **Request**
