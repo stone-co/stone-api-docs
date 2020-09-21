@@ -8,7 +8,11 @@ description: >
    
 ---
 
-No caso de PSP diretos e indiretos existem situações em que é necessária a exclusão de uma Chave PIX como, por exemplo, no encerramento de uma conta.
+No caso de PSPs diretos e indiretos existem situações em que é necessária a exclusão de uma Chave PIX como, as principais são:
+- conta foi encerrada no PSP;
+- portabilidade cedida a outra instituição;
+- posse cedida a outra instituição/usuário.
+
 
 ##### **Request**
 
