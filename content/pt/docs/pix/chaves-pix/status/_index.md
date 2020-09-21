@@ -8,7 +8,7 @@ description: >
    
 ---
 
-#### Status das solicitações (criação e exclusão)
+## Status das solicitações (criação e exclusão)
 
 - `pending`: criação solicitada.
 - `accepted`: solicitação finalizada com sucesso.
@@ -16,7 +16,7 @@ description: >
 
 <br> <br> 
 
-#### Status da chave
+## Status da chave
 
 - `portability_pending`: o processo de reivindicação de portabilidade está em andamento. 
 - `claim_requested`: o processo de reivindicação de posse está em andamento. 
@@ -26,7 +26,7 @@ description: >
 <br> <br> 
 
 
-#### Status reivindicação
+## Status da reivindicação
 
 - `open`: aberta pelo reivindicador, mas ainda não recebida pelo doador.
 - `waiting_resolution`: reivindicação já foi recebida pelo doador e está aguardando a resolução. Os critérios confirmação ou cancelamento da reivindicação seguem normas específicas a depender do tipo (posse ou portabilidade).
