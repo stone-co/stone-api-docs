@@ -10,7 +10,7 @@ description: >
 
 ##### **Request**
 
-```json
+```http request
 POST /api/v1/pix_entries
 content-type: application/json
 ```
@@ -38,7 +38,7 @@ content-type: application/json
 
 ##### **Response**
 
-```json
+```http request
 202 CONTINUE
 content-type: application/json
 ```
