@@ -22,10 +22,10 @@ Os PSPs diretos e indiretos por sua vez são cadastrados e homologados junto ao 
 ## Tipos de Chave PIX
 
 Para fazer o cadastro dessa chave os usuários podem optar por 4 tipos diferentes:<br>
-- **Telefone celular ( `phone`)**: cada número de celular do usuário pode ser cadastrado uma única vez com uma única instituição.<br>
-- **Documento ( `CPF`, `CNPJ`)**: só pode ser cadastrado uma única vez com uma única instituição.<br>
-- **E-mail (`email`)**: cada email do usuário pode ser cadastrado uma única vez com uma única instituição.<br>
-- **Chave aleatória / EVP (`random_key`)**: é uma sequência alfa numérica aleatória gerada automaticamente pelo DICT mais utilizada no fluxo de QR Code. O usuário pode usar 1 chave aleatória por PSP seja indireto ou direto.<br>
+- **Telefone celular** ( `phone` ): cada número de celular do usuário pode ser cadastrado uma única vez com uma única instituição.<br>
+- **Documento** ( `CPF`, `CNPJ` ): só pode ser cadastrado uma única vez com uma única instituição.<br>
+- **E-mail** (`email`): cada email do usuário pode ser cadastrado uma única vez com uma única instituição.<br>
+- **Chave aleatória / EVP** (`random_key`): é uma sequência alfa numérica aleatória gerada automaticamente pelo DICT mais utilizada no fluxo de QR Code. O usuário pode usar 1 chave aleatória por PSP seja indireto ou direto.<br>
 <br>
 Um usuário pessoa física poderá ter no máximo 5 Chaves PIX por conta, enquanto um usuário do tipo pessoa jurídica pode ter até 20 Chaves PIX por conta.Os dois devem respeitar os limites de cada tipo.
 <br><br>
