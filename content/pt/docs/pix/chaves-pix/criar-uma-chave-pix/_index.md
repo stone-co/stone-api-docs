@@ -10,9 +10,11 @@ description: >
 
 ##### **Request**
 
-```json5
+```json
 POST /api/v1/pix_entries
 content-type: application/json
+```
+```text
 {
   "key": “+5510998765432”, 
   "key_type": “phone”, 
@@ -36,10 +38,11 @@ content-type: application/json
 
 ##### **Response**
 
-```json5
+```json
 202 CONTINUE
 content-type: application/json
-
+```
+```text
 {
   "id": “cee2f003-95a0-433f-a785-b933a5832531”
 }
@@ -52,7 +55,7 @@ content-type: application/json
 Serão disparados webhooks quando o status da solicitação alterar para `accepted`ou `rejected`.
 As seguintes informações virão no campo `target_data`.
 
-```json5
+```text
 {
   "id": "cee2f003-95a0-433f-a785-b933a5832531",
   "request_id": uuid(),
