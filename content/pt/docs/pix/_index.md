@@ -7,4 +7,5 @@ weight: 1
 description: >
     O PIX ainda está em alpha. 
 ---
-{{< alert title="Alerta">}}Um alerta aqui.{{< /alert >}}
+{{< alert title="APLPHA">}}A integração com o PIX ainda está em Alpha, o que significa que temos um grupo pequeno de parceiros testando a funcionalidade para que possamos fazer ajustes e então liberar para todos os parceiros.
+{{< /alert >}}
