@@ -14,6 +14,7 @@ description: >
 POST /api/v1/pix_entries
 content-type: application/json
 ```
+Body
 ```text
 {
   "key": “+5510998765432”, 
@@ -42,6 +43,7 @@ content-type: application/json
 202 CONTINUE
 content-type: application/json
 ```
+Body
 ```text
 {
   "id": “cee2f003-95a0-433f-a785-b933a5832531”
