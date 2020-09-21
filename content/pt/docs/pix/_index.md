@@ -9,7 +9,7 @@ description: >
 ---
 {{% pageinfo %}}
 A integração com o PIX ainda está em Alpha, o que significa que temos um grupo pequeno de parceiros testando a funcionalidade para que possamos fazer ajustes e então liberar para todos os parceiros.
-{{% pageinfo %}}
+{{% /pageinfo %}}
 
 
 ### O que é o PIX?
