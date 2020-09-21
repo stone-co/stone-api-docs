@@ -43,6 +43,7 @@ Ai receber uma reivindicação será disparado o seguinte webhook:
 POST /api/v1/pix_entry_claims/:claim_id/actions/:action {approve|reject}
 content-type: application/json
 ```
+<br> <br> 
 
 ##### **Response**
 
@@ -54,6 +55,19 @@ Body
 {
   "claim_id": “6c8e9fb9-1416-434d-9933-a36fb3ad7a8c”,
   "claim_type": “portability”
+}
+```
+<br> <br> 
+
+##### **Webhook**
+
+Serão disparados webhooks quando o status da reivindicação alterar. As seguintes informações virão no campo target_data.
+Veja [aqui](https://stone-co.github.io/docs/pix/chaves-pix/status/#status-da-reivindica%C3%A7%C3%A3o) todos os status de uma reivindicação.
+
+```text
+{
+  "claim_id": "6c8e9fb9-1416-434d-9933-a36fb3ad7a8c",
+  "status": "open"
 }
 ```
 <br> <br> 
