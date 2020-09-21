@@ -8,7 +8,7 @@ description: >
 
 ---
 Esse médodo deve ser usado quando o dado a ser usado como identificador da Chave PIX ainda não foi cadastrado junto ao DICT ou o cadastro já está inativo. Em casos em que o dado já está sendo utilizado em uma Chave PIX ativa deve ser feita uma [reivindicação](https://stone-co.github.io/docs/pix/chaves-pix/reivindicar/) da Chave PIX. 
-<br>\<br>
+<br><br>
 
 ##### **Request**
 
@@ -56,7 +56,7 @@ Body
 
 ##### **Webhook**
 
-Serão disparados webhooks quando o status da solicitação sofrer alterações. Veja [aqui](https://stone-co.github.io/docs/pix/chaves-pix/status/#status-das-solicita%C3%A7%C3%B5es-cria%C3%A7%C3%A3o-e-exclus%C3%A3o) os possíveis status para uma reivindicação.
+Serão disparados webhooks quando o status da solicitação sofrer alterações. Veja [aqui](https://stone-co.github.io/docs/pix/chaves-pix/status/#status-das-solicita%C3%A7%C3%B5es-cria%C3%A7%C3%A3o-e-exclus%C3%A3o) os possíveis status para uma solicitação.
 
 As seguintes informações virão no campo `target_data`.
 
