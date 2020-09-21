@@ -61,7 +61,8 @@ Body
 
 ##### **Webhook**
 
-Serão disparados webhooks quando o status da solicitação alterar.
+Serão disparados webhooks quando o status da reivindicação sofrer alterações. Veja [aqui](https://stone-co.github.io/docs/pix/chaves-pix/status/#status-da-reivindica%C3%A7%C3%A3o) os possíveis status para uma reivindicação. 
+
 As seguintes informações virão no campo `target_data`.
 
 ```text
