@@ -56,7 +56,8 @@ Body
 
 ##### **Webhook**
 
-Serão disparados webhooks quando o status da solicitação alterar para `accepted`ou `rejected`.
+Serão disparados webhooks quando o status da solicitação sofrer alterações. Veja [aqui](https://stone-co.github.io/docs/pix/chaves-pix/status/#status-das-solicita%C3%A7%C3%B5es-cria%C3%A7%C3%A3o-e-exclus%C3%A3o) os possíveis status para uma reivindicação.
+
 As seguintes informações virão no campo `target_data`.
 
 ```text
