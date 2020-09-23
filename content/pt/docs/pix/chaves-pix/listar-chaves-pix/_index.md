@@ -42,7 +42,7 @@ Body
       "id": d990cc41-e514-4343-a84c-80c677102b17,
       "key": “+5510998765432”, 
       "key_type": "phone",
-      "status": "active",
+      "key_status": "active",
       "account_id": "968cc34d-d827-448b-ac1b-e6e29836a160",
       "participant_ispb": “1234567890”,
       "beneficiary_type": “external_account”,
