@@ -22,6 +22,7 @@ Body
 {
   "key": “+5510998765432”, 
   "key_type": “phone”, 
+  "status": "active",
   "participant_ispb": “1234567890”,
   "beneficiary_type": “external_account”,
   "beneficiary_account": {
