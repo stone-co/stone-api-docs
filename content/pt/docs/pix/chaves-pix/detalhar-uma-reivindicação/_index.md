@@ -27,7 +27,7 @@ Body
   "id": "40346adc-74f3-4c4e-8275-73ba78993491",
   “claim_type”: “portability”,
   "status": "waiting_resolution",
-  "origin": internal,
+  "origin": "external",
   "origin_ispb": "1234567890",
   “created_at”: "“2020- 09-27T03:00:00Z”,
   “updated_at”: "2020-09-27T06:00:00Z", 
