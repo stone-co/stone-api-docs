@@ -47,7 +47,7 @@ Body
 ##### **Response**
 
 ```http request
-202 CONTINUE
+202 ACCEPTED
 ```
 Body
 ```text
