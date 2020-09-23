@@ -41,7 +41,8 @@ Body
     {
       "id": d990cc41-e514-4343-a84c-80c677102b17,
       "key": “+5510998765432”, 
-      "key_type": "phone", 
+      "key_type": "phone",
+      "status": "active",
       "account_id": "968cc34d-d827-448b-ac1b-e6e29836a160",
       "participant_ispb": “1234567890”,
       "beneficiary_type": “external_account”,
@@ -60,7 +61,8 @@ Body
     {
       "id": 8544718e-3c76-49ab-bc69-b367d2654a08,
       "key": “lucas@stone.com.br”, 
-      "key_type": "email", 
+      "key_type": "email",
+      "status": "active",
       "account_id": "968cc34d-d827-448b-ac1b-e6e29836a160",
       "participant_ispb": “1234567890”,
       "beneficiary_type": “external_account”,
