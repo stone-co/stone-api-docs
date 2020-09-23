@@ -12,7 +12,7 @@ description: >
 
 Deve ser informado o `id` da chave. 
 ```http request
-GET /api/v1/pix_entries/:id?participant_ispb=xxxx
+GET /api/v1/pix/:account_id/entries/:id?participant_ispb=xxxx
 ```
 
 ##### **Response**
