@@ -8,22 +8,25 @@ draft: false
 description: >
       
 ---
+<br>
 A API pode ser utilizada através de dois ambientes completamente separados: produção e sandbox. 
 Usuárias criadas em ambiente de Sandbox não existem em Produção, e vice-versa. As configurações da aplicação também são 100% apartados. 
-<br><br>
-## Ambiente de Sandbox
+<br>
+{{< alert title="Homologação">}} Após a integração temos uma etapa de homologação das funcionalidades integradas. É preciso ser aprovado na homologação para liberação das chaves de produção. 
+{{< /alert >}}
+
+
+### Ambiente de Sandbox
 
 É destinado à testes e pode ser acessado pelo endpoint:
 
 ```http request
 https://sandbox-api.openbank.stone.com.br.
 ```
-<br><br>
-## Ambiente de Produção
+<br>
+### Ambiente de Produção
 
 É onde ocorrem transações em contas reais e pode ser acessado pelo endpoint:
 ```http request
 https://api.openbank.stone.com.br.
 ```
-{{< alert title="APLPHA">}} Após a integração temos uma etapa de homologação das funcionalidades integradas. É preciso ser aprovado na homologação para liberação das chaves de produção. 
-{{< /alert >}}
