@@ -24,6 +24,7 @@ Usuárias criadas em ambiente de Sandbox não existem em Produção, e vice-vers
 https://sandbox-api.openbank.stone.com.br.
 ```
 <br>
+
 ### Ambiente de Produção
 
 É onde ocorrem transações em contas reais e pode ser acessado pelo endpoint:
