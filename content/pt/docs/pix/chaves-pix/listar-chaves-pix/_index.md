@@ -45,7 +45,6 @@ Body
       "key_status": "active",
       "account_id": "968cc34d-d827-448b-ac1b-e6e29836a160",
       "participant_ispb": “1234567890”,
-      "beneficiary_type": “external_account”,
       "beneficiary_account": {
         "branch_code": “0001”,
         "account_code": "00016583",
@@ -65,7 +64,6 @@ Body
       "key_status": "active",
       "account_id": "968cc34d-d827-448b-ac1b-e6e29836a160",
       "participant_ispb": “1234567890”,
-      "beneficiary_type": “external_account”,
       "beneficiary_account": {
         "branch_code": “0001”,
         "account_code": "00016576",
