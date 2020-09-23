@@ -62,7 +62,7 @@ Body
       "id": 8544718e-3c76-49ab-bc69-b367d2654a08,
       "key": “lucas@stone.com.br”, 
       "key_type": "email",
-      "status": "active",
+      "key_status": "active",
       "account_id": "968cc34d-d827-448b-ac1b-e6e29836a160",
       "participant_ispb": “1234567890”,
       "beneficiary_type": “external_account”,
