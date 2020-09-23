@@ -4,6 +4,7 @@ linkTitle: "Detalhar reivindicação"
 date: 2020-09-17T18:00:00-03:00
 lastmod: 2020-09-17T18:00:00-03:00
 weight: 9
+draft: false
 description: >
 
 ---
@@ -11,7 +12,7 @@ description: >
 ##### **Request**
 
 ```http request
-GET /api/v1/pix_entry_claims/:claim_id
+GET /api/v1/pix/:account_id/entry_claims/:claim_id
 ```
 <br> <br> 
 
