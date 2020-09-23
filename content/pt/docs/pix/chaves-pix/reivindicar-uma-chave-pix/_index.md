@@ -4,6 +4,7 @@ linkTitle: "Reivindicar"
 date: 2020-09-17T18:00:00-03:00
 lastmod: 2020-09-17T18:00:00-03:00
 weight: 7
+draft: false
 description: >
 
 ---
@@ -19,13 +20,12 @@ Disponível para os tipos: `phone`e `email`.
 ##### **Request**
 
 ```http request
-POST /api/v1/pix_entry_claims
+POST /api/v1/pix/:account_id/entry_claims
 ```
 Body
 ```text
 {
   "key_type": “phone”, 
-  “account_id”: “968cc34d-d827-448b-ac1b-e6e29836a160”,
   “claim_type”: “portability”,
   "participant_ispb": “1234567890”,
   "beneficiary_type": “external_account”,
