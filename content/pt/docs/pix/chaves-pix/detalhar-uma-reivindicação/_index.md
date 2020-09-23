@@ -47,15 +47,15 @@ Body
   "key": "+5510998765432",
   "events": [
    {
-      "id": 38963369-533c-42aa-a49e-b5369ff4bd52,
+      "id": "38963369-533c-42aa-a49e-b5369ff4bd52",
       "created_at": "20200-09-18T03:00:00Z",
       "type": "created",
       "from_status": null,
       "to_status": "active"
     },
     {
-      "id": 38963369-533c-42aa-a49e-b5369ff4bd52,
-      "created_at": "20200-09-18T03:00:00Z",
+      "id": "9bac50e2-c6ad-4193-8263-7170046a85a3",
+      "created_at": "20200-09-22T03:00:00Z",
       "type": "portability_requested",
       "from_status": "active",
       "to_status": "portability_pending"
