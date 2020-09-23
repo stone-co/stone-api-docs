@@ -13,7 +13,7 @@ Esse médodo deve ser usado quando o dado a ser usado como identificador da Chav
 ##### **Request**
 
 ```http request
-POST /api/v1/pix_entries
+POST /api/v1/pix/:account_id/entries
 content-type: application/json
 ```
 Body
@@ -21,7 +21,6 @@ Body
 {
   "key": “+5510998765432”, 
   "key_type": “phone”, 
-  "account_id": "968cc34d-d827-448b-ac1b-e6e29836a160",
   "participant_ispb": “1234567890”,
   "beneficiary_type": “external_account”,
   "beneficiary_account": {
