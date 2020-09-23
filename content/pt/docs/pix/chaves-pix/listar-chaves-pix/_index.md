@@ -3,7 +3,8 @@ title: "Listar"
 linkTitle: "Listar"
 date: 2020-09-17T18:00:00-03:00
 lastmod: 2020-09-17T18:00:00-03:00
-weight: 3
+weight: 6
+draft: false
 description: >
 
 ---
@@ -11,12 +12,11 @@ description: >
 ##### **Request**
 
 ```http request
-GET /api/v1/pix_entries
+GET /api/v1/pix/:account_id/entries
 ```
 Parâmetros para query. 
 ```text
 - "participant_ispb" *(obrigatório para participantes indiretos)
-- "account_id"
 - "beneficiary_entity_name"
 - "beneficiary_entity_document_type"
 - "beneficiary_entity_document"
