@@ -49,7 +49,7 @@ Body
       "origin_ispb": "9876543210",
       “created_at”: "“2020-09-27T03:00:00Z”,
       “updated_at”: "2020-09-27T06:00:00Z", 
-      “expiration_at”: "2020-09-30T03:00:00Z",
+      “expires_at”: "2020-09-30T03:00:00Z",
       "beneficiary_account": {
         "branch_code": “0001”,
         "account_code": "00016583",
