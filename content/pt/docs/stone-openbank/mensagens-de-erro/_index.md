@@ -8,7 +8,7 @@ description: >
 
 ---
 
-Nossos endpoints seguem um padrão de mensagens. Toda mensagem de erro, por exemplo, seguirá o modelo "srn:error:xxx\" e um [código HTTP](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) apropriado para a falha.
+Nossos endpoints seguem um padrão de mensagens. Toda mensagem de erro, por exemplo, seguirá o modelo "srn:error:xxx\" e um [código HTTP](https://stone-co.github.io/docs/stone-openbank/codigos-de-resposta/) apropriado para a falha.
 
 Por exemplo:
 
