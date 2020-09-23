@@ -9,7 +9,7 @@ description: >
 ---
 
  
-A nossa API só aceita chamadas autenticadas, ou seja, chamadas cujo sujeito da ação conseguimos identificar. Para isso, exigimos que nas [requisições HTTP](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods) exista no cabeçalho um campo chamado `authorization`, cujo valor será \"Bearer\" seguido do token de acesso.
+A nossa API só aceita chamadas autenticadas, ou seja, chamadas cujo sujeito da ação conseguimos identificar. Para isso, exigimos que nas [requisições HTTP](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods) exista no cabeçalho um campo chamado `authorization`, cujo valor será \"Bearer\" seguido do `access_token`.
 
 Exemplo de cabeçalho de uma chamada autenticada:
 
