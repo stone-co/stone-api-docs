@@ -22,7 +22,6 @@ Ai receber uma reivindicação será disparado o seguinte webhook:
   "key": "+5510998765432",
   “claim_type”: “portability”,
   "claim_origin_ispb": "9876543210",
-  "beneficiary_type": “external_account”,
   "beneficiary_account": {
      "branch_code": “0001”,
      "account_code": "00016583",
@@ -49,7 +48,7 @@ content-type: application/json
 ##### **Response**
 
 ```http request
-202 CONTINUE
+202 ACCEPTED
 ```
 Body
 ```text
