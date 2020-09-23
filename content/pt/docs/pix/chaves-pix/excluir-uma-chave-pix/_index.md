@@ -40,7 +40,7 @@ Body
 ##### **Response**
 
 ```http request
-202 CONTINUE
+202 ACCEPTED
 content-type: application/json
 ```
 Body
