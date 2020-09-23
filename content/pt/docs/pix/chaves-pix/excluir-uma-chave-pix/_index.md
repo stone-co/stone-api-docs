@@ -4,6 +4,7 @@ linkTitle: "Excluir"
 date: 2020-09-17T18:00:00-03:00
 lastmod: 2020-09-17T18:00:00-03:00
 weight: 4
+draft: false
 description: >
    
 ---
@@ -17,13 +18,12 @@ No caso de PSPs diretos e indiretos existem situações em que é necessária a 
 ##### **Request**
 
 ```http request
-DELETE /api/v1/pix_entries/key/:id
+DELETE /api/v1/pix/:account_id/entries/:id
 ```
 Body
 ```text
 {
   "key_type": “phone”,
-  “account_id”: “968cc34d-d827-448b-ac1b-e6e29836a160”,
   "participant_ispb": “1234567890”,
   "beneficiary_type": “external_account”,
   "beneficiary_account": {
