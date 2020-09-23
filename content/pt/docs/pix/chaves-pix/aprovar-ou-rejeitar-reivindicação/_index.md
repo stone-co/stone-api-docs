@@ -4,6 +4,7 @@ linkTitle: "Aprovar/Rejeitar reivindicação"
 date: 2020-09-17T18:00:00-03:00
 lastmod: 2020-09-17T18:00:00-03:00
 weight: 8
+draft: false
 description: >
 
 ---
@@ -40,7 +41,7 @@ Ai receber uma reivindicação será disparado o seguinte webhook:
 ##### **Request**
 
 ```http request
-POST /api/v1/pix_entry_claims/:claim_id/actions/:action {approve|reject}
+POST /api/v1/pix/:account_id/entry_claims/:claim_id/actions/:action {approve|reject}
 content-type: application/json
 ```
 <br> <br> 
