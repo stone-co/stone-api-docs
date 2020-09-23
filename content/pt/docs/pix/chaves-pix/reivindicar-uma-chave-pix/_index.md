@@ -28,7 +28,6 @@ Body
   "key_type": “phone”, 
   “claim_type”: “portability”,
   "participant_ispb": “1234567890”,
-  "beneficiary_type": “external_account”,
   "beneficiary_account": {
      "branch_code": “0001”,
      "account_code": "00016583",
