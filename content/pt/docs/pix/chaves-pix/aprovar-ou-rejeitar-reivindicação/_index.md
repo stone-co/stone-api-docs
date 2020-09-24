@@ -22,8 +22,6 @@ Ai receber uma reivindicação será disparado o seguinte webhook:
   "key": "+5510998765432",
   “claim_type”: “portability”,
   "claim_origin_ispb": "9876543210",
-  "resolution_period_end": "2019-12-18T03:00:00Z",
-  "completion_period_end": "2019-12-19T03:00:00Z",  
   "beneficiary_account": {
      "branch_code": “0001”,
      "account_code": "00016583",
