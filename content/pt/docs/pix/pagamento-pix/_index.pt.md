@@ -4,6 +4,7 @@ linkTitle: "Pagando com PIX"
 date: 2020-11-06T11:53:51-03:00
 lastmod: 2020-11-06T11:53:51-03:00
 weight: 1
+draft: true
 description: >
   Como fazer pagamentos com PIX
 ---

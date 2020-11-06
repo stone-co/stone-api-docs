@@ -1,9 +1,9 @@
 ---
-title: "Gerar Cobrança com QR Code dinâmico"
-linkTitle: "Gerar Cobrança com QR Code dinâmico"
+title: "Gerar Cobrança"
+linkTitle: "Gerar Cobrança"
 date: 2020-11-06T13:55:15-03:00
 lastmod: 2020-11-06T13:55:15-03:00
-weight: 1
+weight: 2
 description: >
   
 ---

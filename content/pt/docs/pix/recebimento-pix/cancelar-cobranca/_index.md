@@ -3,14 +3,14 @@ title: "Cancelar Cobrança"
 linkTitle: "Cancelar Cobrança"
 date: 2020-11-06T15:16:43-03:00
 lastmod: 2020-11-06T15:16:43-03:00
-weight: 1
+weight: 6
 description: >
   
 ---
 
 ##### **Request**
 ```http request
-DELETE - /api/v1/pix_payment_invoices/:id
+DELETE /api/v1/pix_payment_invoices/:id
 ```
 
 ##### **Response**
