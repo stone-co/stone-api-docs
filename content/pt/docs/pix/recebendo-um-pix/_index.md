@@ -4,9 +4,8 @@ linkTitle: "Recebendo um PIX"
 date: 2020-09-17T18:00:00-03:00
 lastmod: 2020-09-17T18:00:00-03:00
 weight: 2
-draft: true
+draft: false
 description: >
-  Veja como receber um PIX!
+  Veja como receber um PIX
 ---
 
-XXXXXX to do

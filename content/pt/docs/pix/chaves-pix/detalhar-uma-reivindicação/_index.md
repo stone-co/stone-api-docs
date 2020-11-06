@@ -14,7 +14,6 @@ description: >
 ```http request
 GET /api/v1/pix/:account_id/entry_claims/:claim_id
 ```
-<br> <br> 
 
 ##### **Response**
 
@@ -63,4 +62,3 @@ Body
   ]
 }
 ```
-<br> <br> 
