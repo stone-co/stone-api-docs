@@ -1,29 +1,64 @@
 ---
 title: "Criar nova identidade"
-slug: "criar-usuária-1"
 excerpt: "Cria um novo usuário e sua organização, caso exista."
 hidden: false
 createdAt: "2019-07-03T18:29:01.266Z"
 updatedAt: "2019-12-03T16:55:47.197Z"
+description: >
+
+
 ---
-[block:callout]
-{
-  "type": "warning",
-  "title": "Conteúdo criptografado",
-  "body": "O body deste endpoint (abaixo) deve ser criptografado antes de ser enviado (JWE)."
-}
-[/block]
+Cria um novo usuário e sua organização, caso exista.
+
+<br>
+
+---
+
+```http 
+POST https://sandbox-api.openbank.stone.com.br/api/v1/users/signup
+```
+---
+
+**BODY PARAMS**
+
+---
+
+**jwe***  `string` 
+
+
+
+{{% pageinfo %}}
+**Conteúdo Criptografado**
+
+O body deste endpoint (abaixo) deve ser criptografado antes de ser enviado (JWE)
+{{% /pageinfo %}}
+
+
+
 O conteúdo a ser criptografado é um JSON com a seguinte estrutura:
-[block:code]
+
+```JSON
 {
-  "codes": [
-    {
-      "code": "{  \n  user:{\n    document: \"00000000000\",\n    document_type: \"cpf\",\n    full_name: string,\n    email: string\n  },\n  organization: {\n    document: \"00000000000000\",\n    document_type: \"cnpj\",\n    full_name: string,\n    email: string\n  }\n}",
-      "language": "json"
+   user:{
+     document: "00000000000",
+     document_type: "cpf",
+     full_name: string,
+     email: string
+	},  
+
+   organization: {
+   	 document: "00000000000000",
+   	 document_type: "cnpj", 
+   	 full_name: string,
+   	 email: string  
+
     }
-  ]
-}
-[/block]
+}	
+```
+
+
+
+
 Para gerar um token JWT criptografado (usando JWE) temos 3 passos:
 1. Criar um conteúdo a ser criptografado (payload), no caso, o conteúdo JSON acima;
 2. Buscar a chave pública da Stone no endpoint /api/v1/discovery/keys, cujo campo "use" seja igual a "enc";

@@ -3,6 +3,7 @@ title: "Consultar Conta"
 slug: "contas-vinculadas"
 excerpt: "Verificar Contas Vinculadas a um Usuário"
 hidden: true
+draft: true
 createdAt: "2018-10-30T18:50:48.203Z"
 updatedAt: "2019-12-02T22:56:58.205Z"
 ---

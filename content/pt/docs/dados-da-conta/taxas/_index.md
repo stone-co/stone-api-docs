@@ -3,6 +3,7 @@ title: "Consultar Taxas"
 slug: "taxas"
 excerpt: "Taxa Cobrada por tipo de Pagamento"
 hidden: true
+draft: true
 createdAt: "2018-10-30T18:52:33.971Z"
 updatedAt: "2019-12-02T22:56:58.206Z"
 ---
