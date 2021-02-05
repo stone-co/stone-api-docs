@@ -5,13 +5,13 @@ hidden: false
 createdAt: "2019-04-01T19:05:11.368Z"
 updatedAt: "2020-04-20T20:28:41.079Z"
 ---
-[block:callout]
+
 {
   "type": "info",
   "title": "Valor da operação",
   "body": "Também repare que, quando se faz uma transferência de R$100,00, por exemplo, o campo _operation_amount_ terá valor de 10000 centavos. Já o campo _amount_ será a soma do valor da operação com a taxa cobrada (_fee_amount_)."
 }
-[/block]
+
 
 [block:callout]
 {
