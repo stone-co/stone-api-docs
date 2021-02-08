@@ -4,12 +4,53 @@ slug: "objetos-do-extrato"
 hidden: false
 createdAt: "2020-08-13T18:33:18.658Z"
 updatedAt: "2020-10-28T19:48:19.261Z"
+weight: 7
+---
+
 ---
 O extrato mostra todos os tipos de transações que ocorreram em determinada conta de pagamento. 
 
 Cada transação é uma nova entrada no extrato e elas estão listadas abaixo com seus campos.
 
 Para ver a estrutura de cada transação, basta dar uma olhadinha aqui do lado ->
+
+
+### Tipos de Transação
+
+Veja os possíveis valores para o campo `type`, sua descrição e as possíveis combinações com o campo `operation`.
+
+<br>
+
+| Valores type                                   |    Descrição               | Valores Possiveis (Operation)      |
+| ---------------------------------------------- | -------------------------  | -----------------------------------|
+| balance_blocked                                | Bloqueio de Saldo.         | `credit` ou `debit`  |
+| balance_unblocked                              | Desbloqueio de Saldo.      | `credit`
+| card_payment                                   | Liquidação de recebíveis de cartão recebido.  | `credit`
+| external                                       | Transferência externa. (TED)| `credit` ou `debit`
+| external refund                                | Devolução de Transferência externa. | `credit`
+| instant_payment                                | Transação de Instant Payment / Qr Code. | `credit` ou `debit` 
+| internal                                       | Transferencia interna. | `credit` ou `debit` 
+| loan_payments                                  | Valor referente a um empréstimo/crédito | `credit` ou `debit` 
+| outbound_stone_prepaid_card_payment            | Compra feita com Cartão Stone. | `debit`
+| outbound_stone_prepaid_card_payment_refund     | Devolução de compra com Cartão Stone. | `credit`
+| outbound_stone_prepaid_card_payment_chargeback | Devolução do dinheiro a usuária devido ao pedido de chagerback de uma compra feita com cartão Stone.   | `credit`
+| outbound_stone_prepaid_card_withdrawal         | Saque com Cartão Stone feito no Banco24Horas. | `debit`
+| outbound_stone_prepaid_card_withdrawal_refund  | Devolução de Saque feito no Banco24Horas. | `credit`
+| payment                                        | Pagamento de documento com código de barras. | `credit` ou `debit`
+| payment refund                                 | Devolução do pagamento de documento com código de barras. | `credit`
+| payroll                                        | Folha de pagamento.  | `debit`
+| sallary                                        | Recebimento de salário.  | `credit`
+| salary_portability                             | Envio do salário para a outra instituição onde foi solicitada a portabilidade. | `debit`
+| salary_portability_refund                      | Devolução de salário pela instituição cadastrada na portabilidade. | `credit`
+| salary_portability_employer_refund             | Devolução de salário do empregado para a instituição cadastrada na portabilidade. (No caso de processamento do cancelamento da portabilidade, o empregado poderá receber nas duas instituições) | `debit`
+
+---
+
+
+
+
+
+
 [block:api-header]
 {
   "title": "Tipos de transação"

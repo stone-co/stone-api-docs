@@ -40,21 +40,21 @@ O conteúdo a ser criptografado é um JSON com a seguinte estrutura:
 
 ```JSON
 {
-   user:{
-     document: "00000000000",
-     document_type: "cpf",
-     full_name: string,
-     email: string
-	},  
+	"user": {
+		"document": "00000000000",
+		"document_type": "cpf",
+		"full_name": "string",
+		"email": "string"
+	},
 
-   organization: {
-   	 document: "00000000000000",
-   	 document_type: "cnpj", 
-   	 full_name: string,
-   	 email: string  
+	"organization": {
+		"document": "00000000000000",
+		"document_type": "cnpj",
+		"full_name": "string",
+		"email": "string"
 
-    }
-}	
+	}
+}
 ```
 
 

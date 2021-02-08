@@ -27,6 +27,8 @@ Essa modelagem foi feita considerando que, antes de um `user_id` se tornar um `a
 <br>
 
 {{% pageinfo %}}
+**Atenção**
+
 Todo o processo de Due Diligience do usuário fica sob responsabilidade da 
 Stone e, se aprovada, será gerado um `account_id` para o usuário.
 {{% /pageinfo %}}
