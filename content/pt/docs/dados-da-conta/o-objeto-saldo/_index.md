@@ -8,7 +8,7 @@ weight: 5
 ---
 <br>
 
-| Chave             | Descrição                                                               | Total        |
+| Chave             | Descrição                                                               | Tipo        |
 | ------------------| ------------------------------------------------------------------------|--------------|
 | balance           | Saldo da conta livre para movimentação. Deve ser somado ao `blocked_balance` para calcular o saldo total.| *Integer*     |
 | blocked_balance   | Saldo da conta bloqueado. Deve ser somado ao `balance` para calcular o saldo total.| *Integer*     |

@@ -26,4 +26,4 @@ Identificador da Conta.
 {{% pageinfo %}}
 **Atenção**
 
-Note que a variável  _balance_ retornou um total de **9998**, isso corresponde a **R$ 99,98** reais da conta da usuária.
+Note que a variável  _balance_ retorna um valor sem vírgulas, exemplo **9998**, isso corresponde a **R$ 99,98** reais da conta do usuário.

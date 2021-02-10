@@ -35,7 +35,7 @@ Tipo de taxa. Valores possíveis: `internal_transfer`, `external_transfer`, `bar
 {{% pageinfo %}}
 **Outros Campos**
 
-No caso de `external_transfer` serão também retornados os campos billing_exempition_participant, `original_fee`, `max_free_transfers` e `remaining_free_transfers`.
+No caso de `external_transfer` serão também retornados os campos `billing_exempition_participant`, `original_fee`, `max_free_transfers` e `remaining_free_transfers`.
 
 No caso de `barcode_payment_invoice` também serão retornardos os campos `billing_exempition_participant`, `original_fee`, `max_free` e `remaining_free` .
 {{% /pageinfo %}}
