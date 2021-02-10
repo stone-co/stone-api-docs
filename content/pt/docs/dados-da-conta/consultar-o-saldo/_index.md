@@ -27,3 +27,20 @@ Identificador da Conta.
 **Atenção**
 
 Note que a variável  _balance_ retorna um valor sem vírgulas, exemplo **9998**, isso corresponde a **R$ 99,98** reais da conta do usuário.
+{{% /pageinfo %}}
+
+
+
+---
+
+##### **Response**
+
+```http request
+200 ok
+
+{
+  "balance": 9998,
+  "blocked_balance": 0,
+  "scheduled_balance": 0
+}
+```

@@ -27,6 +27,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/users/signup
 **jwe***  `string` 
 
 
+---
 
 {{% pageinfo %}}
 **Conteúdo Criptografado**
@@ -34,6 +35,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/users/signup
 O body deste endpoint (abaixo) deve ser criptografado antes de ser enviado (JWE).
 {{% /pageinfo %}}
 
+<br>
 
 
 O conteúdo a ser criptografado é um JSON com a seguinte estrutura:
@@ -64,3 +66,19 @@ Para gerar um token JWT criptografado (usando JWE) temos 3 passos:
 1. Criar um conteúdo a ser criptografado (payload), no caso, o conteúdo JSON acima;
 2. Buscar a chave pública da Stone no endpoint /api/v1/discovery/keys, cujo campo "use" seja igual a "enc";
 3. Usar uma biblioteca passando o payload, a chave pública e o algoritmo utilizado, no caso, RSA-OAEP-256.
+
+
+---
+
+##### **Response**
+
+```http request
+201 Created
+
+{
+  "id": “user:9359ea04-473b-4592-bbcc-7ec8461039ee”
+}
+```
+
+
+```
