@@ -39,3 +39,16 @@ No caso de `external_transfer` serão também retornados os campos `billing_exem
 
 No caso de `barcode_payment_invoice` também serão retornardos os campos `billing_exempition_participant`, `original_fee`, `max_free` e `remaining_free` .
 {{% /pageinfo %}}
+
+---
+
+##### **Response**
+
+```http request
+200 ok
+
+{
+  "amount": 130,
+  "fee_type": "internal_transfer"
+}
+```
