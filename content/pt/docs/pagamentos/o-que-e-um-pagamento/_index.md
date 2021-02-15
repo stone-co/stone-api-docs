@@ -25,7 +25,7 @@ Nossa API suporta pagamento de todos os boletos CIP e um grande número de conce
 
 Segue abaixo os estados possíveis de um **pagamento**: 
 
-**Inserir Figura**
+![Imagem 1](*inserir link)
 
 <br>
 
