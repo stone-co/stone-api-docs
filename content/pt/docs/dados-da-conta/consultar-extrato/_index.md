@@ -89,8 +89,12 @@ O extrato é dividido por tipos de movimentação. É possível consultar qual f
 
 ##### **Response**
 
-```http request
-200 ok
+```JSON
+201 Created
+content-type: application/json
+```
+Body
+```JSON
 
 {
     "cursor": {

@@ -72,9 +72,12 @@ Para gerar um token JWT criptografado (usando JWE) temos 3 passos:
 
 ##### **Response**
 
-```http request
+```JSON
 201 Created
-
+content-type: application/json
+```
+Body
+```JSON
 {
   "id": “user:9359ea04-473b-4592-bbcc-7ec8461039ee”
 }

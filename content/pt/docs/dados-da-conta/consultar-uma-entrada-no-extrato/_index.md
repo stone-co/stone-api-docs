@@ -1,6 +1,6 @@
 ---
 title: "Consultar Uma Entrada no Extrato"
-slug: "consultar-dados-da-conta-1"
+slug: "consultar-uma-entrada-no-extrato"
 hidden: false
 createdAt: "2019-04-01T18:19:45.163Z"
 updatedAt: "2019-12-02T22:56:58.128Z"
@@ -27,8 +27,12 @@ Identificador da entrada.
 
 ##### **Response**
 
-```http request
-200 ok
+```JSON
+201 OK
+content-type: application/json
+```
+Body
+```JSON
 
 {
     "amount": -5400,

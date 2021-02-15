@@ -27,8 +27,12 @@ Identificador da conta.
 
 ##### **Response**
 
-```http request
-200 ok
+```JSON
+201 OK
+content-type: application/json
+```
+Body
+```JSON
 
 {
   "cursor": {

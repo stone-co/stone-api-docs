@@ -34,9 +34,12 @@ Caso 'true', irá limitar a mostrar somente 50 contas, se for setado para 'false
 
 ##### **Response**
 
-```http request
-200 ok
-
+```JSON
+200 OK
+content-type: application/json
+```
+Body
+```JSON
 {
     "cursor": {
         "after": null,

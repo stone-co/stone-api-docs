@@ -44,8 +44,12 @@ No caso de `barcode_payment_invoice` também serão retornardos os campos `billi
 
 ##### **Response**
 
-```http request
-200 ok
+```JSON
+201 OK
+content-type: application/json
+```
+Body
+```JSON
 
 {
   "amount": 130,
