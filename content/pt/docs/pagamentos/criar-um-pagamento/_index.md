@@ -5,11 +5,29 @@ hidden: false
 createdAt: "2019-06-04T19:16:40.905Z"
 updatedAt: "2020-04-28T15:16:04.117Z"
 weight: 3
+description: >
 ---
 
 Usado para realizar pagamentos de boleto e concessionárias.
 
-O pagamento pode ser agendado através do campo `scheduled_to`. A data usada para no campo `scheduled_to` deve estar entre a data `next_available_execution_date` e a data limite retornada no campo `execution_limit_date` da API de calendário de agendamento chamada com o parâmetro `operation_type=payment`. Caso a data escolhida seja menor do que `next_available_execution_date`, o pagamento será executado imediatamente. Caso a data seja maior que `execution_limit_date`, será retornado um erro 422 na criação. A criação e o agendamento de pagamentos pode acontecer em qualquer dia (incluindo fins de semana e feriados) e em qualquer horário.
+---
+<br>
+
+{{% pageinfo %}}
+**Atenção**
+
+O pagamento pode ser agendado através do campo `scheduled_to`. 
+
+A data usada no campo `scheduled_to` deve estar entre a data `next_available_execution_date` e a data limite retornada no campo `execution_limit_date` da API de calendário de agendamento chamada com o parâmetro `operation_type=payment`. 
+
+Caso a data escolhida seja menor do que `next_available_execution_date`, o pagamento será executado imediatamente. 
+
+Caso a data seja maior que `execution_limit_date`, será retornado um erro 422 na criação. 
+
+A criação e o agendamento de pagamentos pode acontecer em qualquer dia (incluindo fins de semana e feriados) e em qualquer horário.
+
+{{% /pageinfo %}}
+
 
 <br>
 
