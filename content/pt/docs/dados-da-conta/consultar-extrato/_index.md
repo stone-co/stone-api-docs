@@ -15,7 +15,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/stateme
 ---
 
 
-**PATH PARAMS**
+##### **PATH PARAMS**
 
 ---
 
@@ -23,9 +23,10 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/stateme
 
 Identificador da Conta.
 
-<br>
 
-**QUERY PARAMS**
+
+
+##### **QUERY PARAMS**
 
 ---
 
@@ -164,4 +165,4 @@ Note que, na resposta acima, foram feitas duas transferências, uma interna e um
 
 Em cada extrato há duas informações: {balance before} e {balance after}. O _balance_before_ registra o saldo do usuário antes da operação, e o _balance_after_ registra o saldo após a operação dado o _balance_before_ menos o valor da operação.
 
-<br>
+

@@ -20,7 +20,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/users/signup
 ```
 ---
 
-**BODY PARAMS**
+##### **BODY PARAMS**
 
 ---
 
@@ -70,7 +70,7 @@ Para gerar um token JWT criptografado (usando JWE) temos 3 passos:
 
 ---
 
-##### **Response**
+#### **Response**
 
 ```JSON
 201 Created

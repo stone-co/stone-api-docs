@@ -14,7 +14,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/balance
 ```
 ---
 
-**PATH PARAMS**
+##### **PATH PARAMS**
 
 ---
 

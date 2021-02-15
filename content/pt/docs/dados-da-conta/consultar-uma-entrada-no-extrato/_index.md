@@ -15,7 +15,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/statement/entries/entry_id
 ---
 
 
-**PATH PARAMS**
+##### **PATH PARAMS**
 
 ---
 
