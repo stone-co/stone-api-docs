@@ -14,7 +14,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/balance
 ```
 ---
 
-**PATH PARAMS**
+##### **PATH PARAMS**
 
 ---
 
@@ -26,4 +26,24 @@ Identificador da Conta.
 {{% pageinfo %}}
 **Atenção**
 
-Note que a variável  _balance_ retorna um valor sem vírgulas, exemplo **9998**, isso corresponde a **R$ 99,98** reais da conta do usuário.
+Note que a variável  _balance_  abaixo retorna um valor sem vírgulas, exemplo **9998**, isso corresponde a **R$ 99,98** reais da conta do usuário.
+{{% /pageinfo %}}
+
+
+
+---
+
+##### **Response**
+
+```JSON
+200 OK
+content-type: application/json
+```
+Body
+```JSON
+{
+  "balance": 9998,
+  "blocked_balance": 0,
+  "scheduled_balance": 0
+}
+```

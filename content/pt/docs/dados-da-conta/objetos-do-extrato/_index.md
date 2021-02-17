@@ -12,7 +12,7 @@ O extrato mostra todos os tipos de transações que ocorreram em determinada con
 
 Cada transação é uma nova entrada no extrato e elas estão listadas abaixo com seus campos.
 
-Para ver a estrutura de cada transação, basta dar uma olhadinha aqui.
+Para ver a estrutura de cada transação, basta dar uma olhadinha [aqui](/docs/dados-da-conta/objetos-do-extrato/estrutura-de-transacoes-no-extrato/).
 
 
 ### Tipos de Transação
@@ -106,9 +106,9 @@ Abaixo temos os campos que são utilizados em cada tipo de transação no extrat
 |writable_line | Linha digitável de um boleto. | _String_ | `payment`, `payment_refund`
 
 ---
-<br>
 
-Campos do Objeto `counter_party` : 
+
+###### Campos do Objeto `counter_party` : 
 
 | Chave                     |    Descrição                        | Tipo    
 | ------------------------- | ----------------------------------  | -------------------------|
@@ -116,9 +116,9 @@ Campos do Objeto `counter_party` :
 | entity                    |   Dados Pessoais.                   |   _Object_
 
 
-<br>
 
-Campos do Objeto `account` :
+
+###### Campos do Objeto `account` :
 
 | Chave                     |    Descrição                        | Tipo    
 | ------------------------- | ----------------------------------  | -------------------------|
@@ -129,9 +129,9 @@ Campos do Objeto `account` :
 | institution_name          |   Nome da instituição da conta.     |   _String_
 
 
-<br>
 
-Campos do Objeto `entity` :
+
+###### Campos do Objeto `entity` :
 
 | Chave                     |    Descrição                                | Tipo    
 | ------------------------- | ------------------------------------------  | -------------------------|
@@ -140,9 +140,9 @@ Campos do Objeto `entity` :
 | name                      | Nome do responsável da conta.               |  _String_
 
 
-<br>
 
-Campos do Objeto `account_settlement_policy_retention` :
+
+###### Campos do Objeto `account_settlement_policy_retention` :
 
 | Chave                        |    Descrição                                | Tipo    
 | ---------------------------- | ------------------------------------------  | -------------------------|
@@ -151,9 +151,10 @@ Campos do Objeto `account_settlement_policy_retention` :
 | retained_amount              | Valor dos juros.                                     |  _Integer_
 | total_amount                 | Valor total do empréstimo/crédito.                   |  _Integer_
 
-<br>
 
-Campos do Objeto `applied_retention_rules` :
+
+
+###### Campos do Objeto `applied_retention_rules` :
 
 | Chave                        |    Descrição                                | Tipo    
 | ---------------------------- | ------------------------------------------  | -------------------------|
@@ -168,9 +169,9 @@ Campos do Objeto `applied_retention_rules` :
 | target_account_id            | Identificador da conta que irá receber o empréstimo/crédito. | _String_
 
 
-<br>
 
-Campos do Objeto `retained_portion` :
+
+###### Campos do Objeto `retained_portion` :
 
 
 | Chave                        |    Descrição                                | Tipo    
@@ -179,9 +180,9 @@ Campos do Objeto `retained_portion` :
 | exponent                     | Valor do expoente para cálculo dos juros do empréstimo/crédito. | _Integer_
 
 
-<br>
 
-Campos do Objeto `original_operation_entry` :
+
+###### Campos do Objeto `original_operation_entry` :
 
 
 | Chave                        |    Descrição                                | Tipo    
@@ -196,9 +197,9 @@ Campos do Objeto `original_operation_entry` :
 | writable_line                | Linha digitável do empréstimo/crédito.  | _String_
 
 
-<br>
 
-Campos do Objeto `beneficiary` :
+
+###### Campos do Objeto `beneficiary` :
 
 | Chave                        |    Descrição                                | Tipo    
 | ---------------------------- | ------------------------------------------  | -------------------------|
@@ -208,9 +209,9 @@ Campos do Objeto `beneficiary` :
 | trade_name                   | Nome fantasia do beneficiário. Campo não obrigatório. | _String_
 
 
-<br>
 
-Campos do Objeto `card_acceptor` :
+
+###### Campos do Objeto `card_acceptor` :
 
 | Chave                        |    Descrição                                | Tipo    
 | ---------------------------- | ------------------------------------------  | -------------------------|
@@ -220,9 +221,9 @@ Campos do Objeto `card_acceptor` :
 | name                         | Nome do dono do cartão.                     | _String_
 
 
-<br>
 
-Campos do Objeto `transaction_authorization` :
+
+###### Campos do Objeto `transaction_authorization` :
 
 
 | Chave                        |    Descrição                                | Tipo    
@@ -236,9 +237,9 @@ Campos do Objeto `transaction_authorization` :
 | value                        | Dados do valor convertido pra BRL, com taxas. | _Object_
 
 
-<br>
 
-Campos do Objeto `captured_value` :
+
+###### Campos do Objeto `captured_value` :
 
 
 | Chave                        |    Descrição                                | Tipo    
@@ -247,9 +248,8 @@ Campos do Objeto `captured_value` :
 | currency                     | Moeda utilizada no momento da compra via cartão.  | _String_
 
 
-<br>
 
-Campos do Objeto `value` :
+###### Campos do Objeto `value` :
 
 
 | Chave                        |    Descrição                                | Tipo    
@@ -258,9 +258,9 @@ Campos do Objeto `value` :
 | currency                     | Moeda convertida para BRL.                  | _String_
 
 
-<br>
 
-Campos do Objeto `transaction_chargeback` :
+
+###### Campos do Objeto `transaction_chargeback` :
 
 
 | Chave                        |    Descrição                                | Tipo    
@@ -268,3 +268,5 @@ Campos do Objeto `transaction_chargeback` :
 | charged_back_at              | Data em que ocorreu a devolução do valor da compra. | _String_
 | id                           | Identificador da devolução da transação.    | _String_
 | value                        | Dados do valor estornado.                   | _Object_
+
+
