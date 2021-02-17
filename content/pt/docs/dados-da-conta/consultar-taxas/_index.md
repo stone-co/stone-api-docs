@@ -14,7 +14,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/fees/fe
 ```
 ---
 
-**PATH PARAMS**
+##### **PATH PARAMS**
 
 ---
 
@@ -39,3 +39,20 @@ No caso de `external_transfer` serão também retornados os campos `billing_exem
 
 No caso de `barcode_payment_invoice` também serão retornardos os campos `billing_exempition_participant`, `original_fee`, `max_free` e `remaining_free` .
 {{% /pageinfo %}}
+
+---
+
+##### **Response**
+
+```JSON
+201 OK
+content-type: application/json
+```
+Body
+```JSON
+
+{
+  "amount": 130,
+  "fee_type": "internal_transfer"
+}
+```
