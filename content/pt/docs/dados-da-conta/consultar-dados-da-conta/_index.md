@@ -18,7 +18,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id
 
 ---
 
-**account_id***  `string` 
+**account_id**  `string`
 
 Identificador da conta no formato UUID.
 
