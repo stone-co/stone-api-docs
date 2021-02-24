@@ -17,7 +17,7 @@ Consentimento é o processo em que o usuário, dono da conta, acessa um link ger
 
 Toda vez que uma Aplicação faz um pedido de consentimento a um usuário, o mesmo englobará todos os escopos que aquela aplicação tem.  No fluxo serão listados todos os escopos que estão sendo solicitados.
 
-<br>
+
 
 
 #### **Fluxo de consentimento**
@@ -35,7 +35,7 @@ O sistema do parceiro será informado do ocorrido para cada um desses três caso
 
 Observe que no fluxo atual é preciso que o parceiro direcione seu cliente a abrir uma Conta Stone. Quando o usuário estiver com sua Conta Stone aberta, o parceiro poderá realizar o processo de consentimento para operar em sua conta.
 
-<br>
+
 
 
 #### **Gerando um link de consentimento**
@@ -47,7 +47,7 @@ Para dar início ao processo de consentimento, basta que o desenvolvedor gere um
 
 Após o link ser gerado, ele deverá ser enviado pela Aplicação Parceira para o usuário. Isso deve ser feito dentro da própria Aplicação como, por exemplo, através de um botão. O link de consentimento não deve ser enviado por e-mail para o usuário sob hipótese alguma. 
 
-<br>
+
 
 
 #### **O link de consentimento deve conter três parâmetros:**
@@ -63,7 +63,7 @@ Com estes parâmetros, basta gerar um link no seguinte formato (por ambiente):
 
 Substituindo CLIENT_ID e JWT por seus respectivos valores.
 
-<br>
+
 
 #### **Gerando o token**
 
@@ -73,6 +73,7 @@ Gerar um token JWT de consentimento é parecido com o processo de gerar um token
 
 | Campo         | Descrição                                       | Tipo                       |
 | --------------| ----------------------------------------------- |--------------------------- |
+| **Obrigatórios** |  |
 | type          | Será sempre "consent" neste caso. | _String_
 | clinet_id     | Será o ClientID da Aplicação Parceira. | _String_
 | redirect_uri  | A URI para redirecionamento após a ação da usuária. Esta URI foi informada previamente no cadastro da Aplicação Parceira. Caso seja enviada uma URI diferente, retornará erro. | _String_
@@ -133,7 +134,7 @@ Em ambos os casos, faremos um redirecionamento para a URI cadastrada no token. A
 
 <br>
 
-| Chave         | valor                                           | 
+| Chave         | Valor                                           | 
 | --------------| ----------------------------------------------- |
 | session_metadata | Com os mesmos os valores de passados no token.
 | consent_result | Indica o resultado do pedido de consentimento e pode ter os seguintes valores: - "ignored" caso o usuário não dê consentimento, - "approved" caso ele dê o consentimento, - "already_granted" caso o consentimento desse recurso para essa aplicação já tenha sido dado anteriormente.
@@ -148,7 +149,7 @@ Quando o `consent_result` é `approved` é enviado também o webhook `consent_re
 
 Assim, fica fácil para a desenvolvedora prover uma experiência para ambos os casos: basta validar estes campos!
 
-<br>
+
 
 
 #### **Fluxo para o usuário**
@@ -158,7 +159,7 @@ Para uma integração [Open Banking](https://docs.openbank.stone.com.br/docs/mod
 Ao seguir o link gerado pelo desenvolvedor, o usuário será redirecionado para uma página da Stone. Solicitaremos ao dono o acesso à sua conta, explicitando quais permissões ele está concedendo à aplicação parceira. Podemos observar abaixo um exemplo de tela em que isso ocorre.
 
 
-**Inserir Imagem**
+![imagem_consentimento](/home/bruno/Documentos/stone-api-docs/content/pt/docs/guias/integracao/consentimento/consentimento.png)
 
 
 Caso o usuário opte por conceder o acesso no botão `Permitir` e ocorra tudo bem, será exibida uma tela de sucesso, confirmando que a permissão foi concedida. Podemos observar um exemplo dessa tela abaixo.
@@ -166,7 +167,7 @@ Caso o usuário opte por conceder o acesso no botão `Permitir` e ocorra tudo be
 Ao clicar no botão `Ok, entendi` ele será redirecionado para uma página da aplicação parceira, cujo endereço foi definido no [cadastro da aplicação](https://docs.openbank.stone.com.br/docs/cadastro-da-aplicacao-guides), em Redirect URI.
 
 
-**Inserir Imagem**
+![imagem_consentimento_aprovado](/home/bruno/Documentos/stone-api-docs/content/pt/docs/guias/integracao/consentimento/consentimento-aprovado.png)
 
 
 É possível que ocorra também um caso em que o usuário já concedeu o acesso à aplicação parceira. Neste caso, o usuário irá visualizar uma tela como o seguinte exemplo.
@@ -174,4 +175,4 @@ Ao clicar no botão `Ok, entendi` ele será redirecionado para uma página da ap
 Assim como no caso anterior, ele também será redirecionado para uma página da aplicação parceira ao clicar no botão `Ok, entendi`.
 
 
-**Inserir Imagem**
+![imagem_com_consentimento](/home/bruno/Documentos/stone-api-docs/content/pt/docs/guias/integracao/consentimento/com-consentimento.png)

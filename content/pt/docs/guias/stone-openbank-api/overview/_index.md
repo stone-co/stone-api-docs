@@ -9,16 +9,14 @@ weight: 1
 
 ---
 
-<br>
 
 
 **Sejam bem-vindos à seção de Guias da Stone OpenBank API.**
 
 Agora é possível ter funcionalidades de internet banking e de apps de banco no seu negócio!
 
-<br>
 
----
+
 
 ### O que é a Stone OpenBank API
 
@@ -35,7 +33,7 @@ O Aplicativo da Conta Stone é mais um parceiro da Stone OpenBank API, usando ex
 
 Assim como nós pudemos criar o nosso aplicativo de conta em cima dessa API, você pode fazer o mesmo ou integrar as funcionalidades de automação bancária no seu negócio.   
 
-<br>
+
 
 ### O que oferecemos?
 
@@ -50,7 +48,6 @@ Com a [API](https://docs.openbank.stone.com.br/v1.0/reference) da Conta Stone vo
 * Emissão de boletos
 * Armazenar contatos favorecidos para envio de transferências para outros bancos
 
-<br>
 
 ### Como funciona a integração?
 

@@ -26,7 +26,7 @@ A usuária enxerga a Stone como provedor financeiro, agregando a imagem de confi
 
 A aprovação de cash-out (qualquer saída de recurso da conta) sempre terá que ser aprovada pela usuária por meio de autenticação no ambiente Stone, através do aplicativo [Aprovador](https://docs.openbank.stone.com.br/docs/aprovacao-guides). Dessa forma, o parceiro fica protegido da responsabilidade na movimentação de recursos financeiros.
 
-<br>
+
 
 ### API de Tesouraria 
 

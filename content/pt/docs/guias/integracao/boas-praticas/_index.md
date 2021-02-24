@@ -14,9 +14,9 @@ weight: 1
 
 Tokens JWT são dados sensíveis, assim como senhas ou dados de cartões de crédito. Por isso, é de extrema importância manusear e armazenar esses dados corretamente.
 
-<br>
 
----
+
+
 
 #### **Não armazene tokens no *local storage***
 
@@ -25,17 +25,13 @@ O armazenamento local de um Browser não é um lugar seguro para se armazenar da
 * Ser acessados via Javascript;
 * Ser vulneráveis a Cross-Site Scripting.
 
-<br>
 
----
 
 #### **Caso um backend esteja disponível**
 
 Se sua Aplicação tem um backend disponível, os tokens devem ser manuseados server-side.
 
-<br>
 
----
 
 #### **Caso um backend não esteja disponível**
 
@@ -43,9 +39,7 @@ Se sua Aplicação é uma Single Page Application, a Aplicação deve requisitar
 
 Para outros casos, informações sobre boas práticas com Tokens JWT estão disponíveis [aqui](https://auth0.com/docs/security/store-tokens).
 
-<br>
 
----
 
 #### **Idempotência**
 
@@ -68,9 +62,7 @@ Se isso ocorrer em um período curto demais pode ocasionar uma resposta `HTTP 42
 * Uma chamada com a **mesma chave de idempotência** e com o **corpo da requisição diferente do original** retornará um erro de idempotência `HTTP 409`.
 * Uma chamada com a **chave de idempotênca maior que 72 caracteres** retornará um erro `HTTP 431`.
 
-<br>
 
----
 
 #### **Simulações (dry-run)**
 

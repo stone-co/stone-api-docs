@@ -1,6 +1,6 @@
 ---
-title: "Cadastro da aplicação"
-slug: "cadastro-na-aplicação"
+title: "Cadastro da Aplicação"
+slug: "Cadastro-da-aplicação"
 hidden: false
 createdAt: "2020-01-27T00:38:05.163Z"
 updatedAt: "2020-09-29T12:03:51.843Z"

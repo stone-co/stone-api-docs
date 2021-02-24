@@ -69,7 +69,6 @@ Para detalhes sobre o processo de integração, consultar a página [Como Integr
     
 {{% /pageinfo %}}
 
-<br>
 
 
 ### 2 - Escolha a sua linguagem
@@ -86,7 +85,6 @@ https://sandbox-api.openbank.stone.com.br/api/v1
     
 {{% /pageinfo %}}
 
-<br>
 
 
 
@@ -212,7 +210,6 @@ IRestResponse response = client.Execute(request);
 
 Caso queira saber mais sobre as chamadas disponíveis na nossa API, consulte nossos endpoints em [API Reference](https://docs.openbank.stone.com.br/v1.0/reference).
 
-<br>
 
 
 ### 4 - Construindo o seu App
@@ -222,7 +219,8 @@ Caso queira saber mais sobre as chamadas disponíveis na nossa API, consulte nos
 Com a resposta gerada pela requisição da TED acima, você poderá elaborar uma tela exibindo as informações da transferência realizada. Por exemplo, para construir a tela abaixo:
 
 
-**Inserir Imagem**
+![imagem_tela_de_transferencia](/home/bruno/Documentos/stone-api-docs/content/pt/docs/guias/stone-openbank-api/quickstart/Tela-Transferencia.png)
+
 
 
 É utilizada a requisição citada 3º passo, tendo como resposta o seguinte JSON:

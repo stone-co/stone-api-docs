@@ -15,7 +15,7 @@ Detalhes sobre o processo de se autenticar na nossa API.
 
 Segurança sempre foi um assunto complexo, principalmente por ter uma terminologia específica. Para facilitar ao máximo a integração com a nossa API, procuramos adotar padrões estabelecidos de mercado.
 
-<br>
+
 
 #### **Autenticação de Aplicativos Parceiros**
 
@@ -26,7 +26,7 @@ Outra informação importante é o *par de chaves* do seu aplicativo, que deve s
 
 A desenvolvedora deve usar essa chave privada para assinar os tokens enviados para a Stone e nos enviar a chave pública para verificarmos a assinatura.
 
-<br>
+
 
 #### **Autenticação com o Auth e Open ID Connect**
 
@@ -35,7 +35,7 @@ A desenvolvedora deve usar essa chave privada para assinar os tokens enviados pa
 
 Já o [OpenID Connect](https://openid.net/connect/) é uma camada de identidade construída em cima do [OAuth 2.0](https://oauth.net/2/) e que permite a fácil verificação da identidade da usuária, bem como a capacidade de obter informações básicas de perfil do provedor de identidade (no caso, a Conta Stone).
 
-<br>
+
 
 #### **Autenticando a Aplicação Parceira**
 
