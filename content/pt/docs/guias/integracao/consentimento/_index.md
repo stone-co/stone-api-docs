@@ -52,9 +52,9 @@ Após o link ser gerado, ele deverá ser enviado pela Aplicação Parceira para 
 
 #### **O link de consentimento deve conter três parâmetros:**
 
-1. `client_id`: o ClientID recebido pela desenvolvedora pós-cadastro;
+1. `client_id`: o ClientID recebido pelo desenvolvedor pós-cadastro;
 2. `type`: no caso, será sempre o valor "consent";
-3. `jwt`: será um token gerado localmente pela desenvolvedora com a mesma chave privada e algoritmo que ela usa para se autenticar. Mais detalhes abaixo.
+3. `jwt`: será um token gerado localmente pelo desenvolvedor com a mesma chave privada e algoritmo que ele usa para se autenticar. Mais detalhes abaixo.
 
 Com estes parâmetros, basta gerar um link no seguinte formato (por ambiente):
 
@@ -76,8 +76,8 @@ Gerar um token JWT de consentimento é parecido com o processo de gerar um token
 | **Obrigatórios** |  |
 | type          | Será sempre "consent" neste caso. | _String_
 | clinet_id     | Será o ClientID da Aplicação Parceira. | _String_
-| redirect_uri  | A URI para redirecionamento após a ação da usuária. Esta URI foi informada previamente no cadastro da Aplicação Parceira. Caso seja enviada uma URI diferente, retornará erro. | _String_
-| session_metadata | Um objeto que contenha qualquer chave relevante para o parceiro identificar a sessão da usuária. Este valor estará presente na URI de redirecionamento e não pode ser nulo ou um mapa vazio. | _Objeto_
+| redirect_uri  | A URI para redirecionamento após a ação do usuário. Esta URI foi informada previamente no cadastro da Aplicação Parceira. Caso seja enviada uma URI diferente, retornará erro. | _String_
+| session_metadata | Um objeto que contenha qualquer chave relevante para o parceiro identificar a sessão do usuário. Este valor estará presente na URI de redirecionamento e não pode ser nulo ou um mapa vazio. | _Objeto_
 | iss           | Usar o client_id da Aplicação. | _String_
 | iat           | Momento em que o token foi gerado. É um timestamp UTC. Exemplo: "iat": 1542235633. | _Int_
 | aud           | accounts-hubid@openbank.stone.com.br | _String_
@@ -128,7 +128,7 @@ Assim, um exemplo de claims para este token seria:
 
 #### **Redirect callback**
 
-o usuário irá visualizar as permissões às quais a Aplicação Parceira está pedindo acesso e poderá optar por ignorar ou consentir o acesso.
+O usuário irá visualizar as permissões às quais a Aplicação Parceira está pedindo acesso e poderá optar por ignorar ou consentir o acesso.
 
 Em ambos os casos, faremos um redirecionamento para a URI cadastrada no token. Acrescentaremos na URI os seguintes campos:
 
@@ -147,19 +147,20 @@ Quando o `consent_result` é `approved` é enviado também o webhook `consent_re
 {{< /alert >}}
 
 
-Assim, fica fácil para a desenvolvedora prover uma experiência para ambos os casos: basta validar estes campos!
+Assim, fica fácil para o desenvolvedor prover uma experiência para ambos os casos: basta validar estes campos!
 
 
 
 
 #### **Fluxo para o usuário**
 
-Para uma integração [Open Banking](https://docs.openbank.stone.com.br/docs/modelos-de-parceria-guides#section-open-banking) de sucesso é essencial considerar a experiência do usuário, principalmente em fluxos de redirecionamento como para o consentimento. No início desta sessão detalhamos o passo a passo desse procedimento; neste tópico vamos exemplificar algumas das principais telas utilizadas.
+Para uma integração [Open Banking](https://docs.openbank.stone.com.br/docs/modelos-de-parceria-guides#section-open-banking) de sucesso é essencial considerar a experiência do usuário, principalmente em fluxos de redirecionamento como para o consentimento. 
+No início desta sessão detalhamos o passo a passo desse procedimento, neste tópico vamos exemplificar algumas das principais telas utilizadas.
 
 Ao seguir o link gerado pelo desenvolvedor, o usuário será redirecionado para uma página da Stone. Solicitaremos ao dono o acesso à sua conta, explicitando quais permissões ele está concedendo à aplicação parceira. Podemos observar abaixo um exemplo de tela em que isso ocorre.
 
 
-![imagem_consentimento](/home/bruno/Documentos/stone-api-docs/content/pt/docs/guias/integracao/consentimento/consentimento.png)
+![imagem_consentimento](/docs/guias/integracao/consentimento/consentimento.png)
 
 
 Caso o usuário opte por conceder o acesso no botão `Permitir` e ocorra tudo bem, será exibida uma tela de sucesso, confirmando que a permissão foi concedida. Podemos observar um exemplo dessa tela abaixo.
@@ -167,7 +168,7 @@ Caso o usuário opte por conceder o acesso no botão `Permitir` e ocorra tudo be
 Ao clicar no botão `Ok, entendi` ele será redirecionado para uma página da aplicação parceira, cujo endereço foi definido no [cadastro da aplicação](https://docs.openbank.stone.com.br/docs/cadastro-da-aplicacao-guides), em Redirect URI.
 
 
-![imagem_consentimento_aprovado](/home/bruno/Documentos/stone-api-docs/content/pt/docs/guias/integracao/consentimento/consentimento-aprovado.png)
+![imagem_consentimento_aprovado](/docs/guias/integracao/consentimento/consentimento-aprovado.png)
 
 
 É possível que ocorra também um caso em que o usuário já concedeu o acesso à aplicação parceira. Neste caso, o usuário irá visualizar uma tela como o seguinte exemplo.
@@ -175,4 +176,4 @@ Ao clicar no botão `Ok, entendi` ele será redirecionado para uma página da ap
 Assim como no caso anterior, ele também será redirecionado para uma página da aplicação parceira ao clicar no botão `Ok, entendi`.
 
 
-![imagem_com_consentimento](/home/bruno/Documentos/stone-api-docs/content/pt/docs/guias/integracao/consentimento/com-consentimento.png)
+![imagem_com_consentimento](/docs/guias/integracao/consentimento/com-consentimento.png)

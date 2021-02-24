@@ -12,7 +12,7 @@ weight: 7
 
 A ocorrência de certos eventos pode ser importante em diversos fluxos na integração de uma aplicação com a API OpenBank. Por isso, utilizamos webhooks para notificar as aplicações integradas da ocorrência destes eventos.
 
-Para sua utilização, é preciso que a aplicação tenha cadastrada no formulário a URI para a qual enviaremos um POST com os dados do evento. A aplicação deverá estar preparada para lidar com cada evento de forma adequada.
+Para sua utilização, é preciso que a aplicação tenha cadastrado no formulário a URI para a qual enviaremos um POST com os dados do evento. A aplicação deverá estar preparada para lidar com cada evento de forma adequada.
 
 Ao enviar um webhook, esperamos receber uma resposta do range 200 que indica o sucesso no recebimento dessa notificação por parte da sua aplicação. Caso a resposta seja um código diferente do range 200, encaramos como falha no recebimento do webhook e repetimos o envio até receber um sucesso ou batermos o número máximo de 50 tentativas no envio de um evento.
 

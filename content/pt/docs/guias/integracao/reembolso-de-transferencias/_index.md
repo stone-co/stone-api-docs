@@ -28,7 +28,7 @@ Através da nossa API é possível agendar uma transferência. Ocorre refund nes
 
 ##### **Dados da transferência incorretos**
 
-Ao realizar uma transferência a usuária precisará enviar os dados da conta destino. Caso os dados de agência, conta ou documento do destino estejam incorretos ou inexistentes, a transferência retorna indicando esse erro.
+Ao realizar uma transferência o usuário precisará enviar os dados da conta destino. Caso os dados de agência, conta ou documento do destino estejam incorretos ou inexistentes, a transferência retorna indicando esse erro.
 
 
 

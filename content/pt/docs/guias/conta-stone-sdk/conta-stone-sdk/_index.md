@@ -20,6 +20,8 @@ A Conta Stone SDK é o ponto de entrada para acesso às nossas SDKs de autentica
 
 ![](https://drive.google.com/uc?export=view&id=10taLBHeYD273QLj2JMAZZvAooqRc8pQp)
 
+![imagem_conta_stone_sdk_diagram](/docs/guias/conta-stone-sdk/conta-stone-sdk)
+
 - Auth SDK - responsável por executar todo o processo de autenticação seguindo as diretrizes do [oAuth2](https://oauth.net/2/).
 
 - Approver SDK - realiza todo o processo de aprovação e rejeição de transações.
