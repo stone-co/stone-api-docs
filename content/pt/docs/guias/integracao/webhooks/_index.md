@@ -26,7 +26,7 @@ A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) s
 
 {{% /pageinfo %}}
 
-<br>
+
 
 #### **Os eventos que geram notificações são:**
 
@@ -85,7 +85,7 @@ x-stone-webhook-event-type: "cash_out_internal_transfer"
 
 A idempotência de webhooks deverá ser validada no campo 'x-stone-webhook-event-id' disponível no header.
 
-<br>
+
 
 #### **O payload das notificações segue a seguinte estrutura:**
 
@@ -170,7 +170,7 @@ Nossa API envia webhooks de forma segura para evitar que eles sejam abertos e/ou
 - Assinatura do conteúdo usando uma das nossas [chaves públicas](https://api.openbank.stone.com.br/api/v1/discovery/keys).
 - Ciframento do resultado usando a chave pública do destinatário.
 
-<br>
+
 
 ##### **Como eu posso abrir de forma segura o conteúdo de um webhook?**
 
@@ -225,7 +225,7 @@ Veja [aqui](https://hexdocs.pm/joken_jwks/JokenJwks.DefaultStrategyTemplate.html
 
 O algoritmo que usamos será *sempre RS256*. Há uma lista de bibliotecas que tratam de assinatura de token em [jwt.io](https://jwt.io/). 
 
-<br>
+
 
 ##### **Segurança**
 
@@ -237,7 +237,7 @@ Sempre que em dúvida, consulte nossa API com os IDs dos dados no conteúdo do w
 
 Mais informações sobre JavaScript Object Signing and Encryption, como JWTs, JWEs, JWSs, [aqui](https://www.ca.com/pt/blog-latam/os-beneficios-de-jwtjwsjwe-no-designs-de-apis.html).
 
-<br>
+
 
 ##### **Webhooks idempotentes**
 

@@ -11,12 +11,11 @@ weight: 3
 
 <br>
 
-A API pode ser utilizada através de dois ambientes completamente separados: usuárias criadas em ambiente de Sandbox não existem em Produção, e vice-versa.
+A API pode ser utilizada através de dois ambientes completamente separados: usuários criados em ambiente de Sandbox não existem em Produção, e vice-versa.
 
 ## Ambiente de Sandbox
 
-É destinado à testes e pode ser acessado pelo endpoint
-https://sandbox-api.openbank.stone.com.br.
+É destinado à testes e pode ser acessado pelo endpoint https://sandbox-api.openbank.stone.com.br.
 
 
 ## Ambiente de Produção

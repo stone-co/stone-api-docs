@@ -7,6 +7,7 @@ updatedAt: "2020-12-29T13:59:12.916Z"
 ---
 
 ---
+a
 
 <br>
 
@@ -26,7 +27,7 @@ Utilizaremos a linguagem Python na versão 3.7 para montar o token e a [bibliote
 
 {{% /pageinfo %}}
 
-<br>
+
 
 #### **1. Conhecendo os dados**
 
@@ -35,7 +36,7 @@ Como resultado do [cadastro da sua aplicação](https://docs.openbank.stone.com.
 
 Para montar os tokens, tenha em mãos o seu `redirect_uri` cadastrado, o seu ClientID e sua chave privada.
 
-<br>
+
 
 #### **2. Se preparando para gerar tokens**
 

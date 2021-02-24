@@ -11,13 +11,13 @@ weight: 1
 
 <br>
 
-A Conta Stone é um novo produto da Stone, criado para devolver à cliente o controle de sua conta de pagamentos.
+A Conta Stone é um novo produto da Stone, criado para devolver ao cliente o controle de sua conta de pagamentos.
 
-Para cumprir esse propósito, desenvolvemos a nossa API. Através dela é possível, por exemplo, a usuária dividir a tarefa de gerenciar sua conta com uma Aplicação Parceira ou então se conectar em plataformas de serviços diversos. Além disso, também pode ser utilizada pela Aplicação Parceira para gerenciar sua própria conta. Os diferentes [Modelos de Parceria](https://docs.openbank.stone.com.br/docs/padroes-e-definicoes-guides#section-modelos-de-parcerias) são abordados com maior profundidade no tópico a seguir.
+Para cumprir esse propósito, desenvolvemos a nossa API. Através dela é possível, por exemplo, que o usuário possa dividir a tarefa de gerenciar sua conta com uma Aplicação Parceira ou então se conectar em plataformas de serviços diversos. Além disso, também pode ser utilizada pela Aplicação Parceira para gerenciar sua própria conta. Os diferentes [Modelos de Parceria](https://docs.openbank.stone.com.br/docs/padroes-e-definicoes-guides#section-modelos-de-parcerias) são abordados com maior profundidade no tópico a seguir.
 
-Através do [consentimento](https://docs.openbank.stone.com.br/docs/consentimento-guides), a dona da conta tem a segurança de saber ao que a aplicação terá acesso, caso opte por dividir a tarefa de gerenciar sua conta com uma Aplicação Parceira da Stone.
+Através do [consentimento](https://docs.openbank.stone.com.br/docs/consentimento-guides), o dono da conta tem a segurança de saber ao que a aplicação terá acesso, caso opte por dividir a tarefa de gerenciar sua conta com uma Aplicação Parceira da Stone.
 
-Além disso, também é possível para a usuária acessar todas suas contas no mesmo lugar. Ela pode usar suas credenciais para acessar tanto uma conta de pagamento vinculada a ela como pessoa física, como também contas de pagamento vinculadas às pessoas jurídicas de suas empresas. É importante observar que essas credenciais não dão acesso ao serviço de adquirência da Stone. Para esses serviços é preciso acessar o [Portal Stone](https://portal.stone.com.br/login).
+Além disso, também é possível para o usuário acessar todas suas contas no mesmo lugar. Ele pode usar suas credenciais para acessar tanto uma conta de pagamento vinculada a ele como pessoa física, como também contas de pagamento vinculadas às pessoas jurídicas de suas empresas. É importante observar que essas credenciais não dão acesso ao serviço de adquirência da Stone. Para esses serviços é preciso acessar o [Portal Stone](https://portal.stone.com.br/login).
 
 O acesso às contas de pagamento pode ser feito através da [plataforma web da Stone](https://conta.stone.com.br) ou através de nosso aplicativo, disponível para Android e IOS. Para a realização de testes por Aplicações Parceiras que desejam integrar com a nossa API, disponibilizamos uma versão [web em Sandbox](https://sandbox.conta.stone.com.br/).
 
