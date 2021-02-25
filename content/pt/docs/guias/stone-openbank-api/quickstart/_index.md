@@ -219,7 +219,9 @@ Caso queira saber mais sobre as chamadas disponíveis na nossa API, consulte nos
 Com a resposta gerada pela requisição da TED acima, você poderá elaborar uma tela exibindo as informações da transferência realizada. Por exemplo, para construir a tela abaixo:
 
 
+
 ![imagem_tela_de_transferencia](/docs/guias/stone-openbank-api/quickstart/Tela-Transferencia.png)
+
 
 
 

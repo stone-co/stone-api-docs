@@ -32,6 +32,8 @@ Ao realizar uma transferência o usuário precisará enviar os dados da conta de
 
 
 
+
+
 ##### **Tipo de transação ou finalidade inválida**
 
 Caso a conta destinatária não seja do tipo especificado na transferência ou algum dado do destino é inválido. Exemplo: conta destinatária é corrente e o tipo informado era conta poupança ou envio no nome fantasia do destino enquanto era esperado o nome da razão social.

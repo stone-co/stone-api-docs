@@ -152,6 +152,7 @@ Assim, fica fácil para o desenvolvedor prover uma experiência para ambos os ca
 
 
 
+
 #### **Fluxo para o usuário**
 
 Para uma integração [Open Banking](/docs/guias/a-conta-stone/modelos-de-parceria) de sucesso é essencial considerar a experiência do usuário, principalmente em fluxos de redirecionamento como para o consentimento. 
@@ -160,7 +161,9 @@ No início desta sessão detalhamos o passo a passo desse procedimento, neste t�
 Ao seguir o link gerado pelo desenvolvedor, o usuário será redirecionado para uma página da Stone. Solicitaremos ao dono o acesso à sua conta, explicitando quais permissões ele está concedendo à aplicação parceira. Podemos observar abaixo um exemplo de tela em que isso ocorre.
 
 
+
 ![imagem_consentimento](/docs/guias/integracao/consentimento/consentimento.png)
+
 
 
 Caso o usuário opte por conceder o acesso no botão `Permitir` e ocorra tudo bem, será exibida uma tela de sucesso, confirmando que a permissão foi concedida. Podemos observar um exemplo dessa tela abaixo.
@@ -168,7 +171,9 @@ Caso o usuário opte por conceder o acesso no botão `Permitir` e ocorra tudo be
 Ao clicar no botão `Ok, entendi` ele será redirecionado para uma página da aplicação parceira, cujo endereço foi definido no [cadastro da aplicação](/docs/guias/integracao/cadastro-da-aplicacao), em Redirect URI.
 
 
+
 ![imagem_consentimento_aprovado](/docs/guias/integracao/consentimento/consentimento-aprovado.png)
+
 
 
 É possível que ocorra também um caso em que o usuário já concedeu o acesso à aplicação parceira. Neste caso, o usuário irá visualizar uma tela como o seguinte exemplo.
@@ -176,4 +181,6 @@ Ao clicar no botão `Ok, entendi` ele será redirecionado para uma página da ap
 Assim como no caso anterior, ele também será redirecionado para uma página da aplicação parceira ao clicar no botão `Ok, entendi`.
 
 
+
 ![imagem_com_consentimento](/docs/guias/integracao/consentimento/com-consentimento.png)
+

@@ -37,6 +37,7 @@ Já o [OpenID Connect](https://openid.net/connect/) é uma camada de identidade 
 
 
 
+
 #### **Autenticando a Aplicação Parceira**
 
 

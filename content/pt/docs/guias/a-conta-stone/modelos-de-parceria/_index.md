@@ -24,6 +24,7 @@ O usuário interage com seu serviço através de uma interface de sua responsabi
 
 O usuário enxerga a Stone como provedor financeiro, agregando a imagem de confiança financeira da Stone ao seu serviço.
 
+
 A aprovação de cash-out (qualquer saída de recurso da conta) sempre terá que ser aprovada pelo usuário por meio de autenticação no ambiente Stone, através do aplicativo [Aprovador](/docs/guias/integracao/aprovacao). Dessa forma, o parceiro fica protegido da responsabilidade na movimentação de recursos financeiros.
 
 
