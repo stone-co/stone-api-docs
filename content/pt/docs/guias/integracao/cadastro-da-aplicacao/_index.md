@@ -16,7 +16,7 @@ weight: 1
 {{% pageinfo %}}
 **Atenção**
 
-Será necessário [gerar um par de chaves RSA 4096](https://docs.openbank.stone.com.br/docs/gerando-o-par-de-chaves) e compartilhar a **chave pública** conosco no formato .pem.
+Será necessário [gerar um par de chaves RSA 4096](/docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves) e compartilhar a **chave pública** conosco no formato .pem.
 
 {{% /pageinfo %}}
 
@@ -36,11 +36,11 @@ A chave que deverá ser enviada para a Stone através do formulário é a **chav
 
 #### **Credenciais da minha aplicação**
 
-O identificador que representa uma aplicação parceira na API Stone OpenBank é chamado de `cliend_id`. Ela é gerada pela Stone e é única. Ela será utilizada no processo de [autenticação](https://docs.openbank.stone.com.br/docs/autentica%C3%A7%C3%A3o) junto a API identificando assim todos os requests provenientes dessa aplicação. 
+O identificador que representa uma aplicação parceira na API Stone OpenBank é chamado de `cliend_id`. Ela é gerada pela Stone e é única. Ela será utilizada no processo de [autenticação](/docs/guias/integracao/autenticacao) junto a API identificando assim todos os requests provenientes dessa aplicação. 
 
-Alguns processos da nossa API, como o próprio processo de [autenticação](https://docs.openbank.stone.com.br/docs/autentica%C3%A7%C3%A3o), envolvem uma etapa de criptografia assimétrica, assim na hora da criação da `client_id` da sua aplicação atrelaremos a ela a chave pública fornecida por você. 
+Alguns processos da nossa API, como o próprio processo de [autenticação](/docs/guias/integracao/autenticacao), envolvem uma etapa de criptografia assimétrica, assim na hora da criação da `client_id` da sua aplicação atrelaremos a ela a chave pública fornecida por você. 
 
-Montamos um guia para te ajudar a gerar seu [par de chaves assimétricas](https://docs.openbank.stone.com.br/docs/gerando-o-par-de-chaves).
+Montamos um guia para te ajudar a gerar seu [par de chaves assimétricas](/docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves).
 
 Cada `client_id` tem também as as URIs de webhook e URI de redirect que serão configuradas de acordo com as informações fornecidas pelo parceiro.
 

@@ -195,7 +195,7 @@ Como falamos no início dos tópicos anteriores, para usar este token basta colo
 {{% pageinfo %}}
 **Autenticação nos exemplos**
 
-Cada exemplo de endpoint [desta documentação](https://docs.openbank.stone.com.br/v1.0/reference) tem um campo especial para o ACCESS_TOKEN.
+Cada exemplo de endpoint desta documentação tem um campo especial para o ACCESS_TOKEN.
 
 {{% /pageinfo %}}
 

@@ -87,7 +87,7 @@ Gerar um token JWT de consentimento é parecido com o processo de gerar um token
 
 <br>
 
-Observe que é preciso **assinar o token JWT com a chave privada da aplicação e o algoritmo RS256**, assim como é feito para o token de [autenticação](https://docs.openbank.stone.com.br/docs/autenticacao-guides). Dessa forma, neste token também é preciso incluir um header com as informações sobre o algoritmo de criptografia utilizado, entre outros metadados, como um id da chave utilizada. Por exemplo:
+Observe que é preciso **assinar o token JWT com a chave privada da aplicação e o algoritmo RS256**, assim como é feito para o token de [autenticação](/docs/guias/integracao/autenticacao). Dessa forma, neste token também é preciso incluir um header com as informações sobre o algoritmo de criptografia utilizado, entre outros metadados, como um id da chave utilizada. Por exemplo:
 
 
 ```JSON
@@ -100,7 +100,7 @@ Observe que é preciso **assinar o token JWT com a chave privada da aplicação 
 {{% pageinfo %}}
 **Atenção**
 
-Apesar do ClientID ser o disponibilizado pela Stone ao parceiro no [Cadastro da Aplicação](https://docs.openbank.stone.com.br/docs/cadastro-da-aplicacao-guides) e o mesmo utilizado para montar o token de [autenticação](https://docs.openbank.stone.com.br/docs/autenticacao-guides#section-1-gerando-o-token-jwt), observe que o **nome do campo** para esse token é `client_id`, diferente de `clientId` utilizado no token de autenticação.
+Apesar do ClientID ser o disponibilizado pela Stone ao parceiro no [Cadastro da Aplicação](/docs/guias/integracao/cadastro-da-aplicacao) e o mesmo utilizado para montar o token de [autenticação](/docs/guias/integracao/autenticacao), observe que o **nome do campo** para esse token é `client_id`, diferente de `clientId` utilizado no token de autenticação.
 
 {{% /pageinfo %}}
 
@@ -154,7 +154,7 @@ Assim, fica fácil para o desenvolvedor prover uma experiência para ambos os ca
 
 #### **Fluxo para o usuário**
 
-Para uma integração [Open Banking](https://docs.openbank.stone.com.br/docs/modelos-de-parceria-guides#section-open-banking) de sucesso é essencial considerar a experiência do usuário, principalmente em fluxos de redirecionamento como para o consentimento. 
+Para uma integração [Open Banking](/docs/guias/a-conta-stone/modelos-de-parceria) de sucesso é essencial considerar a experiência do usuário, principalmente em fluxos de redirecionamento como para o consentimento. 
 No início desta sessão detalhamos o passo a passo desse procedimento, neste tópico vamos exemplificar algumas das principais telas utilizadas.
 
 Ao seguir o link gerado pelo desenvolvedor, o usuário será redirecionado para uma página da Stone. Solicitaremos ao dono o acesso à sua conta, explicitando quais permissões ele está concedendo à aplicação parceira. Podemos observar abaixo um exemplo de tela em que isso ocorre.
@@ -165,7 +165,7 @@ Ao seguir o link gerado pelo desenvolvedor, o usuário será redirecionado para 
 
 Caso o usuário opte por conceder o acesso no botão `Permitir` e ocorra tudo bem, será exibida uma tela de sucesso, confirmando que a permissão foi concedida. Podemos observar um exemplo dessa tela abaixo.
 
-Ao clicar no botão `Ok, entendi` ele será redirecionado para uma página da aplicação parceira, cujo endereço foi definido no [cadastro da aplicação](https://docs.openbank.stone.com.br/docs/cadastro-da-aplicacao-guides), em Redirect URI.
+Ao clicar no botão `Ok, entendi` ele será redirecionado para uma página da aplicação parceira, cujo endereço foi definido no [cadastro da aplicação](/docs/guias/integracao/cadastro-da-aplicacao), em Redirect URI.
 
 
 ![imagem_consentimento_aprovado](/docs/guias/integracao/consentimento/consentimento-aprovado.png)

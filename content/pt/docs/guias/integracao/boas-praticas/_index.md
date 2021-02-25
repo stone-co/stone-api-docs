@@ -66,6 +66,6 @@ Se isso ocorrer em um período curto demais pode ocasionar uma resposta `HTTP 42
 
 #### **Simulações (dry-run)**
 
-Nossos endpoints que envolvem operações financeiras suportam [Simulações (dry-run)](https://docs.openbank.stone.com.br/reference#simular-uma-transfer%C3%AAncia-interna), permitindo que a usuária visualize com antecedência o que vai acontecer nessa operação.
+Nossos endpoints que envolvem operações financeiras suportam [Simulações (dry-run)](/docs/transferencias/3-transferencias-internas), permitindo que o usuário visualize com antecedência o que vai acontecer nessa operação.
 
 Em alguns casos, as Simulações permitem enriquecer os dados de uma operação, como, por exemplo o [Pagamento de Boletos](https://docs.openbank.stone.com.br/reference#simular-o-pagamento-de-um-documento).
