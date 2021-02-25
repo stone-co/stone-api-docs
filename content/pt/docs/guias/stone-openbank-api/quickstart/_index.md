@@ -27,9 +27,9 @@ Faça a sua primeira movimentação financeira de teste seguindo esses três pas
 
 
 Obtenha o seu *Access Token*, enviando um e-mail para nosso time de Parcerias através de parcerias@openbank.stone.com.br.
-Somente com o *Access Token* em mãos você consegue realizar as [autenticações](https://docs.openbank.stone.com.br/docs/autenticacao-guides) necessárias para realizar as [chamadas](https://docs.openbank.stone.com.br/v1.0/reference) na **Stone Open Bank API**. 
+Somente com o *Access Token* em mãos você consegue realizar as [autenticações](/docs/guias/integracao/autenticacao) necessárias para realizar as [chamadas](https://docs.openbank.stone.com.br/v1.0/reference) na **Stone Open Bank API**. 
 
-O time de Parcerias do Stone Open Bank irá te enviar um formulário para preenchimento com os dados sobre seu projeto e posteriormente irá gerar um *ClientID*. Uma vez cadastrado e com o seu *ClientID* em mãos, você poderá realizar o processo de [autenticação da aplicação](https://docs.openbank.stone.com.br/docs/autenticacao-guides), que permitirá que obtenha-se o *Access Token*. Este processo de [autenticação ](https://docs.openbank.stone.com.br/docs/autenticacao-guides) consiste nas seguintes etapas: 
+O time de Parcerias do Stone Open Bank irá te enviar um formulário para preenchimento com os dados sobre seu projeto e posteriormente irá gerar um *ClientID*. Uma vez cadastrado e com o seu *ClientID* em mãos, você poderá realizar o processo de [autenticação da aplicação](/docs/guias/integracao/autenticacao), que permitirá que obtenha-se o *Access Token*. Este processo de [autenticação ](/docs/guias/integracao/autenticacao) consiste nas seguintes etapas: 
 
 <br>
 
@@ -38,7 +38,7 @@ O time de Parcerias do Stone Open Bank irá te enviar um formulário para preenc
 - client_id: identificador enviado pelo time de suporte OpenBank;
 - sub: igual ao client_id;
 - realm: "stone_bank";
-- aud: https://sandbox-accounts.openbank.stone.com.br/auth/realms/stone_bank;
+- aud: https://sandbox-accounts.openbank.stone.com.br/auth/realms/stone_bank ;
 - exp: horário da expiração do token em segundos;
 - nbf: horário da geração do token em segundos.
 
@@ -65,7 +65,7 @@ Obtido sucesso, o servidor retornará o *access_token* e o *refresh_token* da co
 {{% pageinfo %}}
 **O fluxo acima é um exemplo de como iniciar a sua integração com a Stone Open Bank API.**
 
-Para detalhes sobre o processo de integração, consultar a página [Como Integrar com a API](https://docs.openbank.stone.com.br/docs/autenticacao-guides).
+Para detalhes sobre o processo de integração, consultar a página [Como Integrar com a API](/docs/guias/integracao/autenticacao).
     
 {{% /pageinfo %}}
 
@@ -219,7 +219,9 @@ Caso queira saber mais sobre as chamadas disponíveis na nossa API, consulte nos
 Com a resposta gerada pela requisição da TED acima, você poderá elaborar uma tela exibindo as informações da transferência realizada. Por exemplo, para construir a tela abaixo:
 
 
-![imagem_tela_de_transferencia](/home/bruno/Documentos/stone-api-docs/content/pt/docs/guias/stone-openbank-api/quickstart/Tela-Transferencia.png)
+
+![imagem_tela_de_transferencia](/docs/guias/stone-openbank-api/quickstart/Tela-Transferencia.png)
+
 
 
 
@@ -258,7 +260,7 @@ Com a resposta gerada pela requisição da TED acima, você poderá elaborar uma
 {{% pageinfo %}}
 **Entenda mais sobre a Transfers API e a sua requisição de TED**
 
-Detalhes sobre a Transfers API se encontram na página [Transferir para Outros Bancos](https://docs.openbank.stone.com.br/reference#transferir-para-outros-bancos).
+Detalhes sobre a Transfers API se encontram na página [Transferir para Outros Bancos](/docs/transferencias/4-transferencias-externas/7-transferir-para-outros-bancos).
 {{% /pageinfo %}}
 
 

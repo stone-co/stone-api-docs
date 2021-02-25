@@ -95,5 +95,5 @@ Essas requisições geram respostas, conforme podemos ver abaixo:
 
 
 Uma vez que o seu sistema que integra na API do Stone OpenBank está pronto e testado em Sandbox, você vai passar pelo processo de Homologação antes de ir para Produção.
-Esse processo consiste em executar todas as ações que a sua Aplicação tem autorização para fazer, numa sequência definida e com o acompanhamento da equipe da Stone. Esse processo visa garantir que sua Aplicação vai funcionar conforme o esperado e que possui acesso a todos os recursos necessários. 
+Esse processo consiste em executar todas as ações que a sua Aplicação tem autorização para fazer, numa sequência definida e com o acompanhamento da equipe da Stone. Esse processo visa garantir que sua Aplicação vá funcionar conforme o esperado e que possui acesso a todos os recursos necessários. 
 Qualquer problema encontrado durante esta fase deve ser resolvido antes de prosseguir com a subida para Produção.

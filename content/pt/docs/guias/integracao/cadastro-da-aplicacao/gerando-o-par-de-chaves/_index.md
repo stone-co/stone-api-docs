@@ -25,7 +25,9 @@ Mas **atenção** para ajustar o caminho para o local onde você instalou a ferr
 
 <br>
 
-![imagem_gerando_o_par_de_chaves](/home/bruno/Documentos/stone-api-docs/content/pt/docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves/gerando-o-par-de-chaves.png)
+
+![imagem_gerando_o_par_de_chaves](/docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves/gerando-o-par-de-chaves.png)
+
 
 
 
