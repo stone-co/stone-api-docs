@@ -2,8 +2,8 @@
 title: "Webhooks"
 slug: "webhooks-guides"
 hidden: false
-createdAt: "2019-07-29T21:31:30.337Z"
-updatedAt: "2021-02-01T22:57:33.698Z"
+date: "2019-07-29T21:31:30.337Z"
+lastmod: "2021-02-01T22:57:33.698Z"
 weight: 7
 ---
 
@@ -30,47 +30,47 @@ A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) s
 
 #### **Os eventos que geram notificações são:**
 
-| Tipo de Evento         | Descrição                                           | 
-| -----------------------| --------------------------------------------------- |
-| barcode_payment_invoice_created | Representa a criação/emissão de um boleto.
-| barcode_payment_invoice_registered | Representa o registro de um boleto.
-| barcode_payment_invoice_payment_promissed | Representa que o pagamento do boleto foi acolhido em alguma instituição.
-| barcode_payment_invoice_settled | Representa que pagamento do boleto foi confirmado.
-| cash_in_barcode_payment | Representa a entrada do valor do boleto na conta do beneficiário.
-| cash_in_payment_refund  | Representa o reembolso de um pagamento mal sucedido.
-| cash_in_internal_transfer | Representa o recebimento de uma transferência interna.
-|cash_in_external_transfer | Representa o recebimento de uma transferência externa.
-|cash_in_external_transfer_refund  | Representa o reembolso de uma transferência externa mal sucedida.
-|cash_out_internal_transfer  | Representa a criação de uma transferência interna.
-|cash_out_internal_transfer_failed | Representa a falha na criação de uma transferência interna.
-|cash_out_internal_transfer_scheduled  | Representa o agendamento de uma transferência interna.
-|cash_out_internal_transfer_scheduled_failed | Representa a falha no agendamento de uma transferência interna.
-|cash_out_internal_transfer_approved | Representa a aprovação de uma transferência interna
-|cash_out_internal_transfer_cancelled  | Representa o cancelamento de uma transferência interna
-|cash_out_internal_transfer_rejected | Representa a rejeição de uma transferência interna
-|cash_out_internal_transfer_finished | Representa a finalização de uma transferência interna
-|cash_out_internal_transfer_expired  | Representa a expiração de uma transferência interna
-|cash_out_external_transfer  | Representa a criação de uma transferência externa.
-|cash_out_external_transfer_failed | Representa a falha na criação de uma transferência externa.
-|cash_out_external_transfer_scheduled  | Representa o agendamento de uma transferência externa.
-|cash_out_external_transfer_scheduled_failed | Representa a falha no agendamento de uma transferência externa.
-|cash_out_external_transfer_approved | Representa a aprovação de uma transferência externa
-|cash_out_external_transfer_execution_started  | Representa o início da execução de uma transferência externa
-|cash_out_external_transfer_cancelled  | Representa o cancelamento de uma transferência externa
-|cash_out_external_transfer_rejected | Representa a rejeição de uma transferência externa
-|cash_out_external_transfer_finished | Representa a finalização de uma transferência externa
-|cash_out_external_transfer_expired  | Representa a expiração de uma transferência externa
-|cash_out_payment  | Representa a criação de um pagamento.
-|cash_out_payment_failed | Representa a falha na criação de um pagamento.
-|cash_out_payment_scheduled  | Representa o agendamento de um pagamento.
-|cash_out_payment_scheduled_failed | Representa a falha no agendamento de um pagamento.
-|cash_out_payment_approved | Representa a aprovação de um pagamento.
-|cash_out_payment_execution_started | Representa o início da execução de um pagamento
-|cash_out_payment_cancelled  | Representa o cancelamento de um pagamento.
-|cash_out_payment_rejected | Representa a rejeição de um pagamento.
-|cash_out_payment_finished | Representa a finalização de um pagamento.
-|cash_out_payment_expired  | Representa a expiração de um pagamento.
-|consent_requested | Representa a confirmação do pedido de consentimento por parte do user
+| Tipo de Evento                               | Descrição                                                                |
+| -------------------------------------------- | ------------------------------------------------------------------------ |
+| barcode_payment_invoice_created              | Representa a criação/emissão de um boleto.                               |
+| barcode_payment_invoice_registered           | Representa o registro de um boleto.                                      |
+| barcode_payment_invoice_payment_promissed    | Representa que o pagamento do boleto foi acolhido em alguma instituição. |
+| barcode_payment_invoice_settled              | Representa que pagamento do boleto foi confirmado.                       |
+| cash_in_barcode_payment                      | Representa a entrada do valor do boleto na conta do beneficiário.        |
+| cash_in_payment_refund                       | Representa o reembolso de um pagamento mal sucedido.                     |
+| cash_in_internal_transfer                    | Representa o recebimento de uma transferência interna.                   |
+| cash_in_external_transfer                    | Representa o recebimento de uma transferência externa.                   |
+| cash_in_external_transfer_refund             | Representa o reembolso de uma transferência externa mal sucedida.        |
+| cash_out_internal_transfer                   | Representa a criação de uma transferência interna.                       |
+| cash_out_internal_transfer_failed            | Representa a falha na criação de uma transferência interna.              |
+| cash_out_internal_transfer_scheduled         | Representa o agendamento de uma transferência interna.                   |
+| cash_out_internal_transfer_scheduled_failed  | Representa a falha no agendamento de uma transferência interna.          |
+| cash_out_internal_transfer_approved          | Representa a aprovação de uma transferência interna                      |
+| cash_out_internal_transfer_cancelled         | Representa o cancelamento de uma transferência interna                   |
+| cash_out_internal_transfer_rejected          | Representa a rejeição de uma transferência interna                       |
+| cash_out_internal_transfer_finished          | Representa a finalização de uma transferência interna                    |
+| cash_out_internal_transfer_expired           | Representa a expiração de uma transferência interna                      |
+| cash_out_external_transfer                   | Representa a criação de uma transferência externa.                       |
+| cash_out_external_transfer_failed            | Representa a falha na criação de uma transferência externa.              |
+| cash_out_external_transfer_scheduled         | Representa o agendamento de uma transferência externa.                   |
+| cash_out_external_transfer_scheduled_failed  | Representa a falha no agendamento de uma transferência externa.          |
+| cash_out_external_transfer_approved          | Representa a aprovação de uma transferência externa                      |
+| cash_out_external_transfer_execution_started | Representa o início da execução de uma transferência externa             |
+| cash_out_external_transfer_cancelled         | Representa o cancelamento de uma transferência externa                   |
+| cash_out_external_transfer_rejected          | Representa a rejeição de uma transferência externa                       |
+| cash_out_external_transfer_finished          | Representa a finalização de uma transferência externa                    |
+| cash_out_external_transfer_expired           | Representa a expiração de uma transferência externa                      |
+| cash_out_payment                             | Representa a criação de um pagamento.                                    |
+| cash_out_payment_failed                      | Representa a falha na criação de um pagamento.                           |
+| cash_out_payment_scheduled                   | Representa o agendamento de um pagamento.                                |
+| cash_out_payment_scheduled_failed            | Representa a falha no agendamento de um pagamento.                       |
+| cash_out_payment_approved                    | Representa a aprovação de um pagamento.                                  |
+| cash_out_payment_execution_started           | Representa o início da execução de um pagamento                          |
+| cash_out_payment_cancelled                   | Representa o cancelamento de um pagamento.                               |
+| cash_out_payment_rejected                    | Representa a rejeição de um pagamento.                                   |
+| cash_out_payment_finished                    | Representa a finalização de um pagamento.                                |
+| cash_out_payment_expired                     | Representa a expiração de um pagamento.                                  |
+| consent_requested                            | Representa a confirmação do pedido de consentimento por parte do user    |
 
 <br>
 
@@ -90,18 +90,18 @@ A idempotência de webhooks deverá ser validada no campo 'x-stone-webhook-event
 #### **O payload das notificações segue a seguinte estrutura:**
 
 
-| Campo                  | Descrição                                           | 
-| -----------------------| --------------------------------------------------- |
-| env                    | Especifica de qual ambiente partiu o evento. Valores possíveis: sandbox ou production.
-| event_type             | Especifica qual tipo de evento disparou a notificação. Veja os valores possíveis aqui.
-| id                     | É o identificador da notificação.
-| event_notified_at      | É a hora em que a notificação está sendo enviada.
-| event_happened_at      | É a hora em que o evento ocorreu.
-| target_data            | Objeto com as informações detalhadas do recurso que gerou o evento. Apesar de ter campo variáveis sempre conterá o campo account_id.
-| target_detail_uri      | É o endereço onde se pode consultar os detalhes do recurso.
-| target_id              | É o identificador do recurso que gerou o evento.
-| target_statement_uri   | É o endereço da entrada no extrato referente ao recurso.
-| target_type            | É o tipo do recurso.
+| Campo                | Descrição                                                                                                                            |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| env                  | Especifica de qual ambiente partiu o evento. Valores possíveis: sandbox ou production.                                               |
+| event_type           | Especifica qual tipo de evento disparou a notificação. Veja os valores possíveis aqui.                                               |
+| id                   | É o identificador da notificação.                                                                                                    |
+| event_notified_at    | É a hora em que a notificação está sendo enviada.                                                                                    |
+| event_happened_at    | É a hora em que o evento ocorreu.                                                                                                    |
+| target_data          | Objeto com as informações detalhadas do recurso que gerou o evento. Apesar de ter campo variáveis sempre conterá o campo account_id. |
+| target_detail_uri    | É o endereço onde se pode consultar os detalhes do recurso.                                                                          |
+| target_id            | É o identificador do recurso que gerou o evento.                                                                                     |
+| target_statement_uri | É o endereço da entrada no extrato referente ao recurso.                                                                             |
+| target_type          | É o tipo do recurso.                                                                                                                 |
 
 
 

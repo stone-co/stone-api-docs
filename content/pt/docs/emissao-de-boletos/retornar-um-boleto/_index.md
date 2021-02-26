@@ -3,8 +3,8 @@ title: "Retornar Um Boleto"
 slug: "retornar-um-boleto"
 draft: false
 weight: 7
-createdAt: "2020-03-06T17:19:19.691Z"
-updatedAt: "2020-03-06T17:19:19.691Z"
+date: "2020-03-06T17:19:19.691Z"
+lastmod: "2020-03-06T17:19:19.691Z"
 ---
 ---
 ```http request

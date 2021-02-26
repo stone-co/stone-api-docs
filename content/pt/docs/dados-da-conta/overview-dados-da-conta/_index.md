@@ -2,8 +2,8 @@
 title: "O Que é Uma Conta"
 slug: "overview-dados-da-conta"
 hidden: false
-createdAt: "2018-12-05T22:14:31.809Z"
-updatedAt: "2020-05-01T00:15:00.883Z"
+date: 2018-12-05T22:14:31.809Z
+lastmod: 2020-05-01T00:15:00.883Z
 weight: 2
 description: >
 
@@ -12,8 +12,6 @@ description: >
 Descrição do modelo de contas.
 
 ---
-
-<br>
 
 Em nossa modelagem da conta de pagamentos, temos o conceito de  *user_id* e  *account_id*.
 Esses conceitos podem ser definidos da seguinte maneira:
@@ -24,13 +22,9 @@ Esses conceitos podem ser definidos da seguinte maneira:
 
 Essa modelagem foi feita considerando que, antes de um `user_id` se tornar um `account_id`, ele passa por um processo de *due diligence*, que analisa informações de risco desse usuário antes dele ter uma conta de pagamentos Stone.
 
-<br>
-
 {{% pageinfo %}}
 **Atenção**
 
 Todo o processo de Due Diligence do usuário fica sob responsabilidade da 
 Stone e, se aprovada, será gerado um `account_id` para o usuário.
 {{% /pageinfo %}}
-
-

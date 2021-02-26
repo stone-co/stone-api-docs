@@ -2,8 +2,8 @@
 title: "Ambientes da API"
 slug: "ambientes-da-api-guides"
 hidden: false
-createdAt: "2019-07-24T18:35:31.033Z"
-updatedAt: "2019-07-24T18:37:37.742Z"
+date: "2019-07-24T18:35:31.033Z"
+lastmod: "2019-07-24T18:37:37.742Z"
 weight: 3
 ---
 

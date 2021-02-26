@@ -2,8 +2,8 @@
 title: "Criar Um Pagamento"
 slug: "criar-um-pagamento"
 hidden: false
-createdAt: "2019-06-04T19:16:40.905Z"
-updatedAt: "2020-04-28T15:16:04.117Z"
+date: "2019-06-04T19:16:40.905Z"
+lastmod: "2020-04-28T15:16:04.117Z"
 weight: 3
 description: >
 ---

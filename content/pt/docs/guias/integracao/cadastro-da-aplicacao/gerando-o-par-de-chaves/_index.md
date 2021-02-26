@@ -2,8 +2,8 @@
 title: "Gerando o par de chaves"
 slug: "gerando-o-par-de-chaves"
 hidden: false
-createdAt: "2020-01-27T15:29:06.333Z"
-updatedAt: "2021-02-01T22:52:07.420Z"
+date: "2020-01-27T15:29:06.333Z"
+lastmod: "2021-02-01T22:52:07.420Z"
 weight: 1
 ---
 

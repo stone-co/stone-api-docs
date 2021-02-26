@@ -3,8 +3,8 @@ title: "Rejeitar uma Transferência Interna"
 slug: "rejeitar-uma-transferência-interna"
 draft: false
 weight: 5
-createdAt: "2019-04-01T19:49:50.557Z"
-updatedAt: "2019-12-02T22:56:58.166Z"
+date: "2019-04-01T19:49:50.557Z"
+lastmod: "2019-12-02T22:56:58.166Z"
 ---
 ---
 

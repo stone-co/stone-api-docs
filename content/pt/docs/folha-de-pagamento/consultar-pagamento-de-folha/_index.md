@@ -3,8 +3,8 @@ title: "Consultar pagamento de folha"
 slug: "consultar-pagamento-de-folha"
 draft: false
 weight: 3
-createdAt: "2019-09-12T17:20:23.207Z"
-updatedAt: "2019-09-12T17:25:16.438Z"
+date: "2019-09-12T17:20:23.207Z"
+lastmod: "2019-09-12T17:25:16.438Z"
 ---
 ---
 

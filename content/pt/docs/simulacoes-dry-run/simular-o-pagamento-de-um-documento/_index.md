@@ -2,63 +2,56 @@
 title: "Simular o Pagamento de Um Documento"
 slug: "simular-o-pagamento-de-um-documento"
 hidden: false
-createdAt: "2019-04-01T20:21:16.934Z"
-updatedAt: "2020-06-04T00:43:25.396Z"
+date: 2019-04-01T20:21:16.934Z
+lastmod: 2020-06-04T00:43:25.396Z
 weight: 4
 ---
 
-
-```http 
+```http
 POST https://sandbox-api.openbank.stone.com.br/api/v1/dry_run/payments
 ```
+
 ---
 
 **BODY PARAMS**
 
 ---
 
-**barcode***  `string` 
+**barcode**  `string`
 
 Código de barras do documento.
 
-
-<br>
-
 ---
 
-**account_id***  `string` 
+**account_id**  `string`
 
-Identificador da conta pagadora.
+Identificador da conta pagadora
 
-<br>
-
-
+---
 **HEADERS**
 
 ---
 
-**x-stone-idempotency-key***  `string` 
+**x-stone-idempotency-key**  `string`
 
-Chave de idempotência.
-
-<br>
+Chave de idempotência
 
 ---
 
-**Results Params**
+###### Results Params
 
-
-| Chave                     |    Descrição                           
-| ------------------------- | ----------------------------------  |
-| document_type             | Tipo do documento, podendo ser um dentre os valores à seguir: 'boleto' ou 'concessionaria'
-| payment_being_processed?  | Indica se a Stone já recebeu uma solicitação de pagamento deste documento e ainda está processando a solicitação. Em caso de "true" não deve ser feito novo pagamento.
+| Chave                    | Descrição                                                                                                                                                              |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| document_type            | Tipo do documento, podendo ser um dentre os valores à seguir: 'boleto' ou 'concessionaria'                                                                             |
+| payment_being_processed? | Indica se a Stone já recebeu uma solicitação de pagamento deste documento e ainda está processando a solicitação. Em caso de "true" não deve ser feito novo pagamento. |
 
 ---
 
-##### **Response**
+##### Response
 
-```JSON
-200 ok 
+```http
+200 ok
+content-type: application/json
 ```
 
 ```JSON

@@ -3,8 +3,8 @@ title: "Gerar PDF Boleto"
 slug: "gerar-pdf-boleto"
 draft: false
 weight: 8
-createdAt: "2020-09-22T15:54:16.171Z"
-updatedAt: "2020-09-22T15:54:16.171Z"
+date: "2020-09-22T15:54:16.171Z"
+lastmod: "2020-09-22T15:54:16.171Z"
 ---
 ---
 ```http request

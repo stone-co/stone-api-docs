@@ -2,8 +2,8 @@
 title: "Aplicativos"
 slug: "aplicativos-guides"
 hidden: false
-createdAt: "2019-07-23T18:03:42.147Z"
-updatedAt: "2019-07-23T18:17:41.991Z"
+date: "2019-07-23T18:03:42.147Z"
+lastmod: "2019-07-23T18:17:41.991Z"
 weight: 3
 ---
 

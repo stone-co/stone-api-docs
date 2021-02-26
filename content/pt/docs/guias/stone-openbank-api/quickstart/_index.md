@@ -2,8 +2,8 @@
 title: "Quickstart"
 slug: "quickstart-guides"
 hidden: false
-createdAt: "2019-05-28T18:25:23.542Z"
-updatedAt: "2019-07-15T20:15:50.410Z"
+date: "2019-05-28T18:25:23.542Z"
+lastmod: "2019-07-15T20:15:50.410Z"
 weight: 2
 ---
 

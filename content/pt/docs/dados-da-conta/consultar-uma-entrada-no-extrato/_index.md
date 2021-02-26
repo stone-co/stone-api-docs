@@ -2,36 +2,36 @@
 title: "Consultar Uma Entrada no Extrato"
 slug: "consultar-uma-entrada-no-extrato"
 hidden: false
-createdAt: "2019-04-01T18:19:45.163Z"
-updatedAt: "2019-12-02T22:56:58.128Z"
+date: 2019-04-01T18:19:45.163Z
+lastmod: 2019-12-02T22:56:58.128Z
 weight: 9
 ---
 
 ---
 
-```http 
+```http
 GET https://sandbox-api.openbank.stone.com.br/api/v1/statement/entries/entry_id
 ```
----
-
-
-##### **PATH PARAMS**
 
 ---
 
-**entry_id***  `string`
+**PATH PARAMS**
+
+---
+
+**entry_id**  `string`
 
 Identificador da entrada.
 
 ---
 
-##### **Response**
+##### Response
 
-```JSON
+```http
 201 OK
 content-type: application/json
 ```
-Body
+
 ```JSON
 
 {

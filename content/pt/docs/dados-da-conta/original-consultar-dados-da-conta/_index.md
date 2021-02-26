@@ -3,8 +3,8 @@ title: "original- Consultar Dados da Conta"
 slug: "original-consultar-dados-da-conta"
 hidden: true
 draft: true
-createdAt: "2018-12-10T14:22:06.369Z"
-updatedAt: "2019-02-21T20:13:05.510Z"
+date: "2018-12-10T14:22:06.369Z"
+lastmod: "2019-02-21T20:13:05.510Z"
 ---
 [block:callout]
 {
