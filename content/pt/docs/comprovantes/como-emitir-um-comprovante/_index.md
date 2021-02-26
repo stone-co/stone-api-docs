@@ -7,7 +7,6 @@ date: 2020-09-17T18:00:00-03:00
 lastmod: 2020-09-17T18:00:00-03:00
 description: >
 ---
-### Como Emitir Um Comprovante
 
 Comprovantes informam sobre uma transação em detalhes, como fonte, destinatário e estado.
 
@@ -19,44 +18,27 @@ Comprovantes para extrato aceitam os parâmetros adicionais `start_datetime` e `
 
 ```http
 POST https://sandbox-api.openbank.stone.com.br/api/v1/receipts
-Content-Type: application/json
-x-stone-idempotency-key: "jwt_token"
-{
-    "resource_type": "external_transfer",
-    "resource_id": "2e3d6ed0-d442-41eb-8a3c-2a6d5da92dc9",
-    "start_datetime": "2020-12-31T00:00:00Z",
-    "end_datetime": "2021-01-01T00:00:00Z"
-}
-
-200 OK
 ```
 
 ---
 
-#### REQUEST BODY PARAMS
+##### **BODY PARAMS**
 
 ---
 
-##### resource_type
+**resource_type*** `string`
+<br>Allowed values: `external_transfer`, `internal_transfer`, `payment` e `statement`
 
-- Type: `string`
-- Allowed values: `external_transfer`, `internal_transfer`, `payment` e `statement`
+**resource_id*** `string`
+<br>Format: `UUID`
 
-##### resource_id
+**start_datetime** `string`
+<br>Format: `ISO8601 - "YYYY-MM-DDThh:mm:ssZ"`
+<br>Example: `"2021-01-01T00:00:00Z"`
 
-- Type: `UUID`
-
-##### start_datetime
-
-- Type: `Datetime`
-- Format: `ISO8601 - "YYYY-MM-DDThh:mm:ssZ"`
-- Example: `"2021-01-01T00:00:00Z"`
-
-##### end_datetime
-
-- Type: `Datetime`
-- Format: `ISO8601 - "YYYY-MM-DDThh:mm:ssZ"`
-- Example: `"2021-01-01T00:00:00Z"`
+**end_datetime** `string`
+<br>Format: `ISO8601 - "YYYY-MM-DDThh:mm:ssZ"`
+<br>Example: `"2021-01-01T00:00:00Z"`
 
 ---
 
@@ -64,14 +46,15 @@ x-stone-idempotency-key: "jwt_token"
 
 ---
 
-- x-stone-idempotency-key: `string`
+**x-stone-idempotency-key** `string`
 
 ---
 
-#### RESPONSE
+#### **Response**
 
----
+```JSON
+200 OK
+content-type: application/json
+```
 
-- Sucesso:
-  - 200 OK
-  - Retorna o PDF do comprovante
+Retorna o PDF do comprovante

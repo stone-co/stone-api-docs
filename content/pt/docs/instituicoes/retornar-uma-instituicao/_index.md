@@ -10,34 +10,29 @@ description: >
 ---
 
 ```http
-GET https://sandbox-api.openbank.stone.com.br/api/v1/institutions/<code>
-
-200 OK
+GET https://sandbox-api.openbank.stone.com.br/api/v1/institutions/code
 ```
 
 ---
 
-#### PATH PARAMS
+##### **PATH PARAMS**
 
 ---
 
-##### code
-
-- Type: `string`
-- Código da Instituição
-- Example: `197`
+**code*** `string`
+<br>Código da Instituição
+<br>Example: `197`
 
 ---
 
-#### RESPONSE
+#### **Response**
 
----
-
-- Sucesso:
-  - 200 OK
-  - Example:
-
-```json
+```JSON
+201 Created
+content-type: application/json
+```
+Body
+```JSON
 {
   "ispb_code": "16501555",
   "name": "Stone Pagamentos S.A.",

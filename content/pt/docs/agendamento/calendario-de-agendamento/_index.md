@@ -19,31 +19,26 @@ O campo `next_available_execution_date` representa o próximo dia disponível pa
 
 ```http
 GET https://sandbox-api.openbank.stone.com.br/api/v1/schedulings/calendar
-
-200 OK
 ```
 
 ---
 
-#### QUERY PARAMS
+##### **QUERY PARAMS**
 
 ---
 
-##### start
+**start** `string`
+<br>Data que define o início do intervalo no qual serão buscados dias não úteis.
+<br>Format: `yyyy-mm-dd`
 
-- Data que define o início do intervalo no qual serão buscados dias não úteis.
-- Format: `yyyy-mm-dd`
+**end** `string`
+<br>Data que define o fim do intervalo no qual serão buscados dias não úteis.
+<br>Format: `yyyy-mm-dd`
 
-##### end
-
-- Data que define o fim do intervalo no qual serão buscados dias não úteis.
-- Format: `yyyy-mm-dd`
-
-##### operation_type
-
-- Define qual é a operação relativa ao calendário desejado.
-- Format: `binary`
-- Allowed Values: `payment`, `external_tranfer` e `internal_transfer`
+**operation_type*** `string`
+<br>Define qual é a operação relativa ao calendário desejado.
+<br>Format: `binary`
+<br>Allowed Values: `payment`, `external_tranfer` e `internal_transfer`
 
 ---
 
@@ -51,20 +46,22 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/schedulings/calendar
 
 ---
 
-- If-None-Match: `string`
-  - Etag. Se for igual etag do conteúdo, a resposta será 304
+**If-None-Match** `string`
+<br>Etag. Se for igual etag do conteúdo, a resposta será 304
 
 ---
 
-#### RESPONSE
+#### **Response**
 
 ---
 
-- Sucesso:
-  - 200 OK
-  - Example:
+```JSON
+201 Created
+content-type: application/json
+```
+Body
 
-    ```json
+```JSON
         {
             "execution_limit_date": "2020-03-30",
             "next_available_execution_date": "2019-04-01",
@@ -83,4 +80,4 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/schedulings/calendar
                 }
             ]
         }
-      ```
+```
