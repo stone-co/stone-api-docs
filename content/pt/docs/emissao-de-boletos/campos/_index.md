@@ -14,22 +14,22 @@ updatedAt: "2020-10-20T15:04:35.254Z"
 |account_id	|Identificador da conta do beneficiário.|*String*
 |amount	|Valor do boleto bancário gerado, em centavos de reais.|*Integer*
 |barcode|	Código de barras.	|*String*
-|beneficiary	|Objeto com os dados do beneficiário. Veja os campos desse `object` [abaixo](/docs/emissao-de-boletos/4-campos/#campos-do-objeto-beneficiary).	|*Object*
+|beneficiary	|Objeto com os dados do beneficiário. Veja os campos desse `object` [abaixo](/docs/emissao-de-boletos/campos/#campos-do-objeto-beneficiary).	|*Object*
 |created_at	|Data e hora em que o boleto bancário foi gerado. Nesse caso nunca será `null`. Formato ISO8601 `"YYYY-MM-DDThh:mm:ssZ"`.	|*String*
-|created_by	|Identificador único da usuária ou aplicação que criou a transação, no formato user:UUID4 ou application:UUID4respectivamente. Nesse caso nunca será `null`.	|*String*
-|customer|Objeto com os dados do cliente que será informa como pagador no ato de registro do boleto. Veja os campos desse `object` [abaixo](/docs/emissao-de-boletos/4-campos/#campos-do-objeto-customer).		|*Object*
-|discount	|Objeto com os dados referentes ao desconto. Veja os campos desse `object` [abaixo](/docs/emissao-de-boletos/4-campos/#campos-do-objeto-discount).|*Object*
+|created_by	|Identificador único do usuário ou aplicação que criou a transação, no formato user:UUID4 ou application:UUID4respectivamente. Nesse caso nunca será `null`.	|*String*
+|customer|Objeto com os dados do cliente que será informa como pagador no ato de registro do boleto. Veja os campos desse `object` [abaixo](/docs/emissao-de-boletos/campos/#campos-do-objeto-customer).		|*Object*
+|discount	|Objeto com os dados referentes ao desconto. Veja os campos desse `object` [abaixo](/docs/emissao-de-boletos/campos/#campos-do-objeto-discount).|*Object*
 |expiration_date	|Data de vencimento do boleto bancário. Mesmo depois dessa data expirar o pagamento ainda pode ser feito. <br>Formato `"YYYY-MM-DD"`.	|*String*
 |fee	|Projeção da taxa que seria cobrada do beneficiário no ato de recebimento do pagamento caso o recebimento fosse agora. É atualizada com a taxa cobrada quando receber o pagamento. |	*Integer*
-|fee_metadata	|Objeto que identifica detalhes sobre a aplicação da taxa. Veja os campos desse `object` [abaixo](/docs/emissao-de-boletos/4-campos/#campos-do-objeto-fee_metadata).	|*Object*
-|fine	|Objeto com os dados referentes a multa. Veja os campos desse `object` [abaixo](/docs/emissao-de-boletos/4-campos/#campos-do-objeto-fine).	|*Object*
+|fee_metadata	|Objeto que identifica detalhes sobre a aplicação da taxa. Veja os campos desse `object` [abaixo](/docs/emissao-de-boletos/campos/#campos-do-objeto-fee_metadata).	|*Object*
+|fine	|Objeto com os dados referentes a multa. Veja os campos desse `object` [abaixo](/docs/emissao-de-boletos/campos/#campos-do-objeto-fine).	|*Object*
 |id	|Identificador único do boleto bancário, no formato UUID4.|	*String*
-|interest	|Objeto com os dados referentes aos juros. Veja os campos desse `object` [abaixo](/docs/emissao-de-boletos/4-campos/#campos-do-objeto-interest).	|*Object*
+|interest	|Objeto com os dados referentes aos juros. Veja os campos desse `object` [abaixo](/docs/emissao-de-boletos/campos/#campos-do-objeto-interest).	|*Object*
 |invoice_type	|Tipo de boleto bancário. Valores suportados: `proposal`, `deposit` e `bill_of_exchange`.	|*String*
 |issuance_date	|Data da emissão de boleto bancário. Formato `"YYYY-MM-DD"`.	|*String*
 |limit_date	|Data limite para pagamento do boleto bancário. Sempre igual ou maior a data de vencimento. Formato `"YYYY-MM-DD"`.	|*String*
 |our_number	|Número que identifica unicamente um boleto para uma conta frente a outras instituições.	|*String*
-|receiver| Objeto com os dados do sacador avalista. Veja os campos desse `object` [abaixo](/docs/emissao-de-boletos/4-campos/#campos-do-objeto-receiver).	|*Object*
+|receiver| Objeto com os dados do sacador avalista. Veja os campos desse `object` [abaixo](/docs/emissao-de-boletos/campos/#campos-do-objeto-receiver).	|*Object*
 |registered_at	|Data e hora de registro do boleto bancário. Formato ISO8601 `"YYYY-MM-DDThh:mm:ssZ"`.|	*String*
 |settled_at	|Data e hora em que o dinheiro do pagamento do boleto é depositado na conta do beneficiário. Formato ISO8601 <br>`"YYYY-MM-DDThh:mm:ssZ"`.	|*String*
 |status	|Status atual do boleto bancário, podendo ser um dentre os status à seguir: `CREATED`, `REGISTERED`, `SETTLED`, `CANCELLED` ou `EXPIRED`.	|*String*
@@ -64,7 +64,7 @@ updatedAt: "2020-10-20T15:04:35.254Z"
 
 |Chave|Descrição|Tipo
 |-----|---------|------
-|billing_exemption_participant	|Indica se a usuária possui alguma condição especial vigente.	|*Boolean*
+|billing_exemption_participant	|Indica se o usuário possui alguma condição especial vigente.	|*Boolean*
 |fee	|Projeção da taxa que seria cobrada no ato de recebimento do pagamento caso o recebimento fosse agora.	|*Integer*
 |max_free	|Indica o número total de boletos emitidos que podem ser liquidados sem que haja custos por mês.	|*Integer*
 |original_fee	|Indica a taxa original do item para a essa conta.	|*Integer*
