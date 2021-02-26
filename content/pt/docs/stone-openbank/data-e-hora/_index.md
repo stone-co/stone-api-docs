@@ -14,7 +14,7 @@ Representação de datas e horários.
 
 Para evitar problemas, sempre mandamos as datas em [UTC](https://pt.wikipedia.org/wiki/Tempo_Universal_Coordenado) e anotamos essa informação na string codificada.
 
-{{< alert title="UTC" >}}
+{{% pageinfo %}}
 [UTC](https://pt.wikipedia.org/wiki/Tempo_Universal_Coordenado) (Coordinated Universal Time), como o próprio nome diz, é coordenado internacionalmente. O horário de Brasília é atrasado 3 horas em relação a esse horário. Tenha isso em mente sempre que for gerar um token ou fazer algum agendamento!
-{{< /alert >}}
+{{% /pageinfo %}}
 

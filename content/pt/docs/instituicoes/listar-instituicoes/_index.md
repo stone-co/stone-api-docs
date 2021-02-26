@@ -10,21 +10,18 @@ description: >
 ---
 ```http
 GET https://sandbox-api.openbank.stone.com.br/api/v1/institutions
-
-200 OK
 ```
 
 ---
 
-#### RESPONSE
+#### **Response**
 
----
-
-- Sucesso:
-  - 200 OK
-  - Example:
-
-```json
+```JSON
+201 Created
+content-type: application/json
+```
+Body
+```JSON
 [
   {
     "ispb_code": "16501555",

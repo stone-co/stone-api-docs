@@ -24,6 +24,10 @@ Nossa API usa como retorno os [códigos HTTP](https://www.w3.org/Protocols/rfc26
 | 422    | Entidade não processável. Não é uma ação válida para os dados enviados.                  |
 | 500    | Erro interno do servidor, tente sua requisição novamente.                                |
 
-{{< alert title="Identificador da Requisição" >}}
-O cabeçalho da resposta sempre inclui um campo identificador da requisição, chamado `x-request-id`. Este valor deve ser enviado sempre que precisar de suporte, já que ele nos permite encontrar a chamada no nosso sistema e verificar o que possa ter dado errado.
-{{< /alert >}}
+
+<br><br>
+
+{{% pageinfo %}}
+**Identificador da Requisição**
+<br>O cabeçalho da resposta sempre inclui um campo identificador da requisição, chamado `x-request-id`. Este valor deve ser enviado sempre que precisar de suporte, já que ele nos permite encontrar a chamada no nosso sistema e verificar o que possa ter dado errado.
+{{% /pageinfo %}}

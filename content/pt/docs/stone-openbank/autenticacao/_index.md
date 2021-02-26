@@ -2,6 +2,8 @@
 title: "Autenticação"
 slug: "autenticação-1"
 hidden: false
+weight: 2
+draft: false
 createdAt: "2019-07-23T18:56:58.292Z"
 updatedAt: "2020-05-13T16:47:34.859Z"
 ---
@@ -20,7 +22,7 @@ A seguir, juntamos alguns desses padrões para simplificar a vida da desenvolved
 
 A nossa API só aceita chamadas autenticadas, ou seja, chamadas cujo sujeito da ação conseguimos identificar.
 
-Caso ainda não tenha realizado o procedimento para obter seu token de acesso, por favor siga o passo a passo descrito na página **[Autenticação](https://docs.openbank.stone.com.br/docs/autenticacao-guides)** de nossos Guias.
+Caso ainda não tenha realizado o procedimento para obter seu token de acesso, por favor siga o passo a passo descrito na página **[Autenticação](/docs/guias/integracao/autenticacao/)** de nossos Guias.
 
 Caso tenha em mãos seu token de acesso, já é possível realizar chamadas autenticadas.
 
