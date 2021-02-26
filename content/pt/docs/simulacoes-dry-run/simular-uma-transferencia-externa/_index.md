@@ -14,7 +14,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/dry_run/external_transfers
 
 ---
 
-##### BODY PARAMS
+**BODY PARAMS**
 
 ---
 
@@ -62,7 +62,7 @@ Formato: `yyyy-mm-dd`
 
 ---
 
-##### HEADERS
+**HEADERS**
 
 ---
 

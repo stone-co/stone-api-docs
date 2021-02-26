@@ -13,7 +13,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/dry_run/payments
 
 ---
 
-##### BODY PARAMS
+**BODY PARAMS**
 
 ---
 
@@ -28,7 +28,7 @@ Código de barras do documento.
 Identificador da conta pagadora
 
 ---
-##### HEADERS
+**HEADERS**
 
 ---
 

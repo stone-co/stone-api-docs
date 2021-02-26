@@ -18,7 +18,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/users/signup
 
 ---
 
-##### BODY PARAMS
+**BODY PARAMS**
 
 ---
 

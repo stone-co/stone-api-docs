@@ -16,7 +16,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/accounts
 
 ---
 
-##### QUERY PARAMS
+**QUERY PARAMS**
 
 ---
 

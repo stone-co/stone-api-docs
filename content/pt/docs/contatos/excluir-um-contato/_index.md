@@ -14,7 +14,7 @@ DELETE https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/cont
 
 ---
 
-##### PATH PARAMS
+**PATH PARAMS**
 
 ---
 

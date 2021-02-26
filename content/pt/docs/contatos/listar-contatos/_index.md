@@ -13,7 +13,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contact
 
 ---
 
-##### PATH PARAMS
+**PATH PARAMS**
 
 ---
 
@@ -23,7 +23,7 @@ Identificador da conta.
 
 ---
 
-##### QUERY PARAMS
+**QUERY PARAMS**
 
 ---
 

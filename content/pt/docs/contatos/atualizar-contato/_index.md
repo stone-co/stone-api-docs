@@ -13,7 +13,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contac
 
 ---
 
-##### PATH PARAMS
+**PATH PARAMS**
 
 ---
 
@@ -29,7 +29,7 @@ Identificador do contato.
 
 ---
 
-##### BODY PARAMS
+**BODY PARAMS**
 
 ---
 
@@ -57,7 +57,7 @@ Telefone do contato.
 
 ---
 
-##### HEADERS
+**HEADERS**
 
 ---
 
