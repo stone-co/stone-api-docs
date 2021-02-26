@@ -22,7 +22,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/payrolls
 
 {{% pageinfo %}}
 **Paginação**
-<br>Este endpoint utiliza paginação. Para mais informações, acesse [aqui](https://docs.openbank.stone.com.br/reference#paginação)
+<br>Este endpoint utiliza paginação. Para mais informações, acesse [aqui](/docs/stone-openbank/paginacao)
 {{% /pageinfo %}}
 
 
