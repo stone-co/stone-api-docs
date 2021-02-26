@@ -69,7 +69,7 @@ Abaixo vamos trazer os campos de cada tipo de transferência.
 
 | Chave | Descrição | Tipo |
 | ------ | ---------- |---------|
-|account|Objeto que representa a conta destino da transferência. Veja os campos desse objeto [abaixo](/docs/transferencias/2-o-objeto-transferencia/#campos-do-objeto-account).|_Object_
+|account|Objeto que representa a conta destino da transferência. Veja os campos desse objeto [abaixo](/docs/transferencias/o-objeto-transferencia/#campos-do-objeto-account).|_Object_
 |entity|Objeto que contem os dados do indivíduo ou companhia responsável pela conta. Veja os campos desse objeto [abaixo](/docs/transferencias/2-o-objeto-transferencia/#campos-do-objeto-entity).|_Object_
 
 

@@ -4,6 +4,7 @@ slug: "o-que-é-uma-transferência"
 draft: false
 weight: 1
 ---
+
 #### Conceito
 
 Oferecemos uma API de Transferências, na qual permite-se efetuar a movimentação de fundos entre contas bancárias, podendo ser:
@@ -11,7 +12,8 @@ Oferecemos uma API de Transferências, na qual permite-se efetuar a movimentaç�
 * Transferência interna: Transferência entre duas Contas Stone. O valor transferido é creditado instantaneamente na conta destinatária, independente do horário e dia da efetuação da transação.
 
 * Transferência externa: TED (Transferência Eletrônica Disponível) para outros bancos. Nos dias úteis, entre 6:30 e 17:23, a transação é processada de forma assíncrona e o valor é creditado na conta destino em poucas horas. Caso a operação seja efetuada fora do horário citado e/ou em dias não úteis, a transação será agendada automaticamente para o dia útil seguinte.
-[block:api-header]
+
+
 
 #### Status
 
@@ -19,9 +21,9 @@ Oferecemos uma API de Transferências, na qual permite-se efetuar a movimentaç�
 
 ![status_TED](/docs/transferencias/o-que-e-uma-transferencia/1b90b91-Transfrncia_Externa.png)
 
-A transferência externa criada pela parceira aguardará a [aprovação](https://docs.openbank.stone.com.br/docs/aprovacao-guides) do usuário da conta no estado `CREATED`. Essa transferência pode ser rejeitada pela usuária, concluindo no estado `REJECTED`, e não será efetuada. Caso ela seja uma transferência agendada, é possível que o prazo do agendamento expire antes dela obter aprovação, encerrando em `EXPIRED`.
+A transferência externa criada pela parceira aguardará a [aprovação](/docs/guias/integracao/aprovacao) do usuário da conta no estado `CREATED`. Essa transferência pode ser rejeitada pela usuário, concluindo no estado `REJECTED`, e não será efetuada. Caso ela seja uma transferência agendada, é possível que o prazo do agendamento expire antes dela obter aprovação, encerrando em `EXPIRED`.
 
-Caso ela seja agendada e aprovada dentro do prazo, seguirá para o estado `SCHEDULED`, e será efetuada  na data do agendamento. É importante observar que caso a criação da transferência externa, tanto pelo parceiro quanto pela usuária, seja feita fora do horário de 6:30 às 17:23, ela seguirá para um estado de `DELAYED_TO_NEXT_BUSINESS_DAY`, em que ela será agendada para a próxima janela de execução. É possível que a usuária cancele a transferência antes dela ser efetuada, encerrando no estado `CANCELLED`.
+Caso ela seja agendada e aprovada dentro do prazo, seguirá para o estado `SCHEDULED`, e será efetuada  na data do agendamento. É importante observar que caso a criação da transferência externa, tanto pelo parceiro quanto pelo usuário, seja feita fora do horário de 6:30 às 17:23, ela seguirá para um estado de `DELAYED_TO_NEXT_BUSINESS_DAY`, em que ela será agendada para a próxima janela de execução. É possível que o usuário cancele a transferência antes dela ser efetuada, encerrando no estado `CANCELLED`.
 
 Quando é o próprio usuário que cria a transação, o fluxo já se inicia no estado `APPROVED` ou `SCHEDULED`, caso tenha sido criada com agendamento. A transferência poderá falhar apenas caso não haja fundos e terminará no estado `FAILED`. Caso tenha sido aprovada e haja fundos, a Stone realizará a transferência para o banco externo, obtendo o estado `FINISHED`. Caso haja algum problema como, por exemplo, dados incorretos, ele será reembolsado e irá  finalizar no estado `REFUNDED`.
 
