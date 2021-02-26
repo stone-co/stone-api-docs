@@ -3,8 +3,8 @@ title: "Listar Transferências Internas"
 slug: "listar-transferências-internas"
 draft: false
 weight: 4
-createdAt: "2019-04-01T19:21:13.323Z"
-updatedAt: "2019-12-02T22:56:58.137Z"
+date: "2019-04-01T19:21:13.323Z"
+lastmod: "2019-12-02T22:56:58.137Z"
 ---
 ---
 ```http request

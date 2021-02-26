@@ -2,8 +2,8 @@
 title: "Testando a API"
 slug: "testando-a-api-guides"
 hidden: false
-createdAt: "2019-05-28T18:05:07.002Z"
-updatedAt: "2019-07-10T18:16:57.794Z"
+date: "2019-05-28T18:05:07.002Z"
+lastmod: "2019-07-10T18:16:57.794Z"
 weight: 4
 ---
 

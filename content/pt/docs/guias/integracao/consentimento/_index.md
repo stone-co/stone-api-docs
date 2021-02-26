@@ -2,8 +2,8 @@
 title: "Consentimento"
 slug: "consentimento-guides"
 hidden: false
-createdAt: "2019-05-28T18:05:24.742Z"
-updatedAt: "2020-12-29T13:36:51.381Z"
+date: "2019-05-28T18:05:24.742Z"
+lastmod: "2020-12-29T13:36:51.381Z"
 weight: 5
 ---
 
@@ -71,19 +71,19 @@ Gerar um token JWT de consentimento é parecido com o processo de gerar um token
 
 <br>
 
-| Campo         | Descrição                                       | Tipo                       |
-| --------------| ----------------------------------------------- |--------------------------- |
-| **Obrigatórios** |  |
-| type          | Será sempre "consent" neste caso. | _String_
-| clinet_id     | Será o ClientID da Aplicação Parceira. | _String_
-| redirect_uri  | A URI para redirecionamento após a ação do usuário. Esta URI foi informada previamente no cadastro da Aplicação Parceira. Caso seja enviada uma URI diferente, retornará erro. | _String_
-| session_metadata | Um objeto que contenha qualquer chave relevante para o parceiro identificar a sessão do usuário. Este valor estará presente na URI de redirecionamento e não pode ser nulo ou um mapa vazio. | _Objeto_
-| iss           | Usar o client_id da Aplicação. | _String_
-| iat           | Momento em que o token foi gerado. É um timestamp UTC. Exemplo: "iat": 1542235633. | _Int_
-| aud           | accounts-hubid@openbank.stone.com.br | _String_
-| jti           | Identificador único do token gerado. Normalmente se utiliza um UUID. | _String_
-| nbf           | É o momento em que o token passa a ser válido. Na maioria dos casos terá o mesmo valor que iat (issued at) pois queremos que ele esteja válido logo a partir do momento de geração. | _Int_
-| exp           | Momento de expiração do token em segundos desde o início da era UNIX (1970). É um timestamp UTC e não pode ser maior que 2 horas. Exemplo: "exp": 1542235633 | _Int_
+| Campo            | Descrição                                                                                                                                                                                    | Tipo     |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| **Obrigatórios** |                                                                                                                                                                                              |
+| type             | Será sempre "consent" neste caso.                                                                                                                                                            | _String_ |
+| clinet_id        | Será o ClientID da Aplicação Parceira.                                                                                                                                                       | _String_ |
+| redirect_uri     | A URI para redirecionamento após a ação do usuário. Esta URI foi informada previamente no cadastro da Aplicação Parceira. Caso seja enviada uma URI diferente, retornará erro.               | _String_ |
+| session_metadata | Um objeto que contenha qualquer chave relevante para o parceiro identificar a sessão do usuário. Este valor estará presente na URI de redirecionamento e não pode ser nulo ou um mapa vazio. | _Objeto_ |
+| iss              | Usar o client_id da Aplicação.                                                                                                                                                               | _String_ |
+| iat              | Momento em que o token foi gerado. É um timestamp UTC. Exemplo: "iat": 1542235633.                                                                                                           | _Int_    |
+| aud              | accounts-hubid@openbank.stone.com.br                                                                                                                                                         | _String_ |
+| jti              | Identificador único do token gerado. Normalmente se utiliza um UUID.                                                                                                                         | _String_ |
+| nbf              | É o momento em que o token passa a ser válido. Na maioria dos casos terá o mesmo valor que iat (issued at) pois queremos que ele esteja válido logo a partir do momento de geração.          | _Int_    |
+| exp              | Momento de expiração do token em segundos desde o início da era UNIX (1970). É um timestamp UTC e não pode ser maior que 2 horas. Exemplo: "exp": 1542235633                                 | _Int_    |
 
 <br>
 
@@ -134,11 +134,11 @@ Em ambos os casos, faremos um redirecionamento para a URI cadastrada no token. A
 
 <br>
 
-| Chave         | Valor                                           | 
-| --------------| ----------------------------------------------- |
-| session_metadata | Com os mesmos os valores de passados no token.
-| consent_result | Indica o resultado do pedido de consentimento e pode ter os seguintes valores: - "ignored" caso o usuário não dê consentimento, - "approved" caso ele dê o consentimento, - "already_granted" caso o consentimento desse recurso para essa aplicação já tenha sido dado anteriormente.
-| resource_id | Identificador do resource ao qual o consentimento foi dado. Só é retornado quando o resultado do consent é "approved".
+| Chave            | Valor                                                                                                                                                                                                                                                                                  |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| session_metadata | Com os mesmos os valores de passados no token.                                                                                                                                                                                                                                         |
+| consent_result   | Indica o resultado do pedido de consentimento e pode ter os seguintes valores: - "ignored" caso o usuário não dê consentimento, - "approved" caso ele dê o consentimento, - "already_granted" caso o consentimento desse recurso para essa aplicação já tenha sido dado anteriormente. |
+| resource_id      | Identificador do resource ao qual o consentimento foi dado. Só é retornado quando o resultado do consent é "approved".                                                                                                                                                                 |
 
 <br>
 

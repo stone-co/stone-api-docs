@@ -3,8 +3,8 @@ title: "Rejeitar um Pagamento"
 slug: "rejeitar-um-pagamento"
 draft: false
 weight: 3
-createdAt: "2019-04-01T19:45:56.253Z"
-updatedAt: "2019-12-02T22:56:58.163Z"
+date: "2019-04-01T19:45:56.253Z"
+lastmod: "2019-12-02T22:56:58.163Z"
 ---
 ---
 

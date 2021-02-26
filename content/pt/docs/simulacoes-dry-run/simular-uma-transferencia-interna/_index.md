@@ -2,81 +2,69 @@
 title: "Simular uma Transferência Interna"
 slug: "simular-uma-transferência-interna"
 hidden: false
-createdAt: "2018-10-19T20:57:05.070Z"
-updatedAt: "2019-12-02T22:56:58.216Z"
+date: 2018-10-19T20:57:05.070Z
+lastmod: 2019-12-02T22:56:58.216Z
 weight: 1
 ---
 
-
-```http 
+```http
 POST https://sandbox-api.openbank.stone.com.br/api/v1/dry_run/internal_transfers
 ```
----
-
-**BODY PARAMS**
 
 ---
 
-**amount***  `int32` 
+##### BODY PARAMS
+
+---
+
+**amount**  `int32`
 
 Valor da transferência em centavos de Real, ou seja, um real é igual a 100.
 
-<br>
-
 ---
 
-**account_id***  `string` 
+**account_id**  `string`
 
 Identificador da conta que está enviando a transferência.
 
-<br>
+---
+
+**target**  `object`
+
+- **account**  `object`
+  
+  - **account_code** `string`
+    Número da conta. Padrão: `^\d+$`
 
 ---
 
-**target***  `object`
-
-- **account***  `object`
-	
-	- **account_code*** `string`
-
-		Número da conta. Padrão: `^\d+$`
-
-
-<br>
-
----
-
-**description***  `string`
+**description**  `string`
 
 Descrição da transação. Essa descrição será exibida tanto no extrato de quem enviou quanto de quem recebeu (limite 200 caracteres).
 
-<br>
-
 ---
 
-**scheduled_to***  `string`
+**scheduled_to**  `string`
 
 Formato: `yyyy-mm-dd`
 
-<br>
+---
+
+##### HEADERS
 
 ---
 
-**HEADERS**
-
----
-
-**x-stone-idempotency-key***  `string`
+**x-stone-idempotency-key**  `string`
 
 Chave de idempotência.
 
-<br>
----
+--
 
-##### **Response**
+##### Response
 
-```JSON
-200 ok 
+```http
+200 ok
+content-type: application/json
 ```
 
 ```JSON

@@ -3,8 +3,8 @@ title: "Transferir para Contas Stone"
 slug: "transferir-para-contas-stone"
 draft: false
 weight: 3 
-createdAt: "2019-04-01T19:18:21.671Z"
-updatedAt: "2020-03-02T18:59:37.899Z"
+date: "2019-04-01T19:18:21.671Z"
+lastmod: "2020-03-02T18:59:37.899Z"
 ---
 
 Faz transferências monetárias para outra conta dentro da Stone. <br> 

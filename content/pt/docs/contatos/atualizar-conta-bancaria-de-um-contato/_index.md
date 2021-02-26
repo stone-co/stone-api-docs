@@ -2,84 +2,76 @@
 title: "Atualizar Conta Bancária de Um Contato"
 slug: "atualizar-conta-bancária-de-um-contato"
 hidden: false
-createdAt: "2019-04-01T20:12:36.094Z"
-updatedAt: "2019-12-02T22:56:58.190Z"
+date: 2019-04-01T20:12:36.094Z
+lastmod: 2019-12-02T22:56:58.190Z
 weight: 8
 ---
 
-
-
-```http 
+```http
 POST https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contacts/contact_id/bank_accounts/bank_account_id
 ```
----
-
-**PATH PARAMS**
 
 ---
 
-**account_id***  `string` 
+##### PATH PARAMS
+
+---
+
+**account_id**  `string`
 
 Identificador da conta.
 
 ---
 
-**contact_id***  `string` 
+**contact_id**  `string`
 
 Identificador do contato.
 
 ---
 
-**bank_account_id***  `string` 
+**bank_account_id**  `string`
 
 Identificador da conta bancária do contato.
 
+---
 
-<br>
+##### BODY PARAMS
 
 ---
 
-**BODY PARAMS**
-
----
-
-**account_code**  `string` 
+**account_code**  `string`
 
 Número da conta bancária.
 
 ---
 
-**branch_code**  `string` 
+**branch_code**  `string`
 
 Número da agência bancária.
 
 ---
 
-**institution_code**  `string` 
+**institution_code**  `string`
 
 Número da instituição.
 
+---
 
-<br>
+##### HEADERS
 
 ---
 
-**HEADERS**
-
----
-
-**x-stone-idempotency-key**  `string` 
+**x-stone-idempotency-key**  `string`
 
 Chave de idempotência.
 
-<br>
-
 ---
 
-##### **Response**
+##### Response
 
-```JSON
-200 ok 
+```http
+200 ok
+content-type: application/json
 ```
 
 ```JSON

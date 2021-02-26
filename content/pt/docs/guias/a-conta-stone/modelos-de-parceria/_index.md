@@ -2,8 +2,8 @@
 title: "Modelos de Parceria"
 slug: "modelos-de-parceria-guides"
 hidden: false
-createdAt: "2019-07-23T18:03:21.480Z"
-updatedAt: "2020-12-09T14:51:36.851Z"
+date: "2019-07-23T18:03:21.480Z"
+lastmod: "2020-12-09T14:51:36.851Z"
 weight: 2
 ---
 

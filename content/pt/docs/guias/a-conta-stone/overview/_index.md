@@ -2,8 +2,8 @@
 title: "Overview"
 slug: "overview-conta-stone-guides"
 hidden: false
-createdAt: "2019-07-23T17:59:45.919Z"
-updatedAt: "2020-12-29T14:00:48.704Z"
+date: "2019-07-23T17:59:45.919Z"
+lastmod: "2020-12-29T14:00:48.704Z"
 weight: 1
 ---
 

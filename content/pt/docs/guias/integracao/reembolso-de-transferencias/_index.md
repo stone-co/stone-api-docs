@@ -2,8 +2,8 @@
 title: "Reembolso de transferências"
 slug: "reembolso-de-transferencias"
 hidden: false
-createdAt: "2020-10-07T19:43:06.948Z"
-updatedAt: "2020-10-09T19:44:31.481Z"
+date: "2020-10-07T19:43:06.948Z"
+lastmod: "2020-10-09T19:44:31.481Z"
 weight: 8
 ---
 
@@ -58,20 +58,20 @@ Nesse caso, a transferência é retornada para a conta de origem, porém, caso a
 
 Ocorre somente em casos de transferências externas.
 
-| Código                  | Descrição                                           | 
-| ----------------------- | --------------------------------------------------- |
-| 0                       | Ocorreu um erro de processamento no sistema de origem durante a transferência.
-| 1                       | A conta destino é inexistente.
-| 2                       | A conta ou agência destino é inexistente.
-| 3                       | O documento do destino está incorreto.
-| 4                       | Conta destinatária do crédito inválida para o tipo de transação ou finalidade.
-| 5                       | Erro de processamento no sistema de origem durante a transferência.
-| 6                       | Transferência supera limite para o tipo de conta destino / Conta destinatária do crédito inválida para o tipo de transação ou finalidade.
-| 7                       | Não conformidade no pagamento. Exemplo: pagamento a um fornecedor com o valor diferente que o devido.
-| 8                       | Os dados informados estão incorretos: Código Identificador de Transferência Inválido / Campo obrigatório ausente / Formato do dado inválido / Agência não informada.
-| 9                       | CPF/CNPJ inapto junto à Receita Federal do Brasil.
-| 10                      | A instituição financeira do destino não é válida.
-| 11                      | A conta destino não pode ter mais de 13 dígitos para o tipo de conta escolhido. Por favor, confira os dados e tente novamente.
-| 12                      | Por solicitação de cliente da instituição participante recebedora.
-| 13                       | Devolução de ordem bancária pelo agente financeiro.
-| 14                       | Beneficiário não identificado - Documentos com código de barras.
+| Código | Descrição                                                                                                                                                            |
+| ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0      | Ocorreu um erro de processamento no sistema de origem durante a transferência.                                                                                       |
+| 1      | A conta destino é inexistente.                                                                                                                                       |
+| 2      | A conta ou agência destino é inexistente.                                                                                                                            |
+| 3      | O documento do destino está incorreto.                                                                                                                               |
+| 4      | Conta destinatária do crédito inválida para o tipo de transação ou finalidade.                                                                                       |
+| 5      | Erro de processamento no sistema de origem durante a transferência.                                                                                                  |
+| 6      | Transferência supera limite para o tipo de conta destino / Conta destinatária do crédito inválida para o tipo de transação ou finalidade.                            |
+| 7      | Não conformidade no pagamento. Exemplo: pagamento a um fornecedor com o valor diferente que o devido.                                                                |
+| 8      | Os dados informados estão incorretos: Código Identificador de Transferência Inválido / Campo obrigatório ausente / Formato do dado inválido / Agência não informada. |
+| 9      | CPF/CNPJ inapto junto à Receita Federal do Brasil.                                                                                                                   |
+| 10     | A instituição financeira do destino não é válida.                                                                                                                    |
+| 11     | A conta destino não pode ter mais de 13 dígitos para o tipo de conta escolhido. Por favor, confira os dados e tente novamente.                                       |
+| 12     | Por solicitação de cliente da instituição participante recebedora.                                                                                                   |
+| 13     | Devolução de ordem bancária pelo agente financeiro.                                                                                                                  |
+| 14     | Beneficiário não identificado - Documentos com código de barras.                                                                                                     |

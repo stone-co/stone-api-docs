@@ -2,8 +2,8 @@
 title: "Autenticação"
 slug: "autenticacao-guides"
 hidden: false
-createdAt: "2019-05-28T18:04:38.641Z"
-updatedAt: "2020-07-20T07:37:56.473Z"
+date: "2019-05-28T18:04:38.641Z"
+lastmod: "2020-07-20T07:37:56.473Z"
 weight: 3
 ---
 
@@ -96,16 +96,16 @@ Para conseguir se autenticar com sucesso, o desenvolvedor precisará colocar nos
 
 <br>
 
-| Nome        | Valor                                                                        |
-| ------------| ---------------------------------------------------------------------------- |
-| exp         | Tempo de expiração do token em segundos desde o início da era UNIX (1970). É UTC e não pode ser maior que 15 min. Ex: "exp": 1542235633 
-| nbf         | "Not before", ou seja, data a partir da qual o token é válido. É UTC. Ex: "nbf": 1542235633
-| aud         | Quem é a "audiência" deste token. No caso, é o nosso servidor de autenticação. Para o ambiente de Sandbox será: https://sandbox-accounts.openbank.stone.com.br/auth/realms/stone_bank . Para Produção será: https://accounts.openbank.stone.com.br/auth/realms/stone_bank
-| realm       | Qual é o "reino" das nossos usuários. Será sempre "stone_bank".
-| sub         | O sujeito referente ao token. Deve ser o ClientID enviado ao desenvolvedor pós-cadastro da Aplicação.
-| clientId    | Mesmo valor de sub, ou seja, o ClientID enviado ao desenvolvedor pós-cadastro da Aplicação.
-| jti         | Identificador único do token gerado. Normalmente se utiliza um UUID, mas não é obrigatório usar esse formato desde que a unicidade seja garantida. Mais informações.
-| iat         |Momento em que o token foi gerado. É UTC. Ex. "iat": 1542235633
+| Nome     | Valor                                                                                                                                                                                                                                                                     |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| exp      | Tempo de expiração do token em segundos desde o início da era UNIX (1970). É UTC e não pode ser maior que 15 min. Ex: "exp": 1542235633                                                                                                                                   |
+| nbf      | "Not before", ou seja, data a partir da qual o token é válido. É UTC. Ex: "nbf": 1542235633                                                                                                                                                                               |
+| aud      | Quem é a "audiência" deste token. No caso, é o nosso servidor de autenticação. Para o ambiente de Sandbox será: https://sandbox-accounts.openbank.stone.com.br/auth/realms/stone_bank . Para Produção será: https://accounts.openbank.stone.com.br/auth/realms/stone_bank |
+| realm    | Qual é o "reino" das nossos usuários. Será sempre "stone_bank".                                                                                                                                                                                                           |
+| sub      | O sujeito referente ao token. Deve ser o ClientID enviado ao desenvolvedor pós-cadastro da Aplicação.                                                                                                                                                                     |
+| clientId | Mesmo valor de sub, ou seja, o ClientID enviado ao desenvolvedor pós-cadastro da Aplicação.                                                                                                                                                                               |
+| jti      | Identificador único do token gerado. Normalmente se utiliza um UUID, mas não é obrigatório usar esse formato desde que a unicidade seja garantida. Mais informações.                                                                                                      |
+| iat      | Momento em que o token foi gerado. É UTC. Ex. "iat": 1542235633                                                                                                                                                                                                           |
 
 
 
@@ -146,12 +146,12 @@ Ex.:
 ```
 
 
-| Nome                  | Valor                                                                        |
-| --------------------- | ---------------------------------------------------------------------------- |
-| client_id             | É o valor enviado para o desenvolvedor pós-cadastro da Aplicação.
-| grant_type            | Será sempre "client_credentials".
-| client_assertion      | Aqui deve ser o token que o desenvolvedor gerou.
-| client_assertion_type | Sempre será urn:ietf:params:oauth:client-assertion-type:jwt-bearer, que é o que fecha o fluxo de client credentials para o servidor.
+| Nome                  | Valor                                                                                                                                |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| client_id             | É o valor enviado para o desenvolvedor pós-cadastro da Aplicação.                                                                    |
+| grant_type            | Será sempre "client_credentials".                                                                                                    |
+| client_assertion      | Aqui deve ser o token que o desenvolvedor gerou.                                                                                     |
+| client_assertion_type | Sempre será urn:ietf:params:oauth:client-assertion-type:jwt-bearer, que é o que fecha o fluxo de client credentials para o servidor. |
 
 <br>
 

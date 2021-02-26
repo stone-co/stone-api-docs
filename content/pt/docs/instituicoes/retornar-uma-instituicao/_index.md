@@ -15,23 +15,25 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/institutions/code
 
 ---
 
-##### **PATH PARAMS**
+##### PATH PARAMS
 
 ---
 
-**code*** `string`
-<br>Código da Instituição
-<br>Example: `197`
+**code** `string`
+
+Código da Instituição
+
+Example: `197`
 
 ---
 
-#### **Response**
+#### Response
 
-```JSON
+```http
 201 Created
 content-type: application/json
 ```
-Body
+
 ```JSON
 {
   "ispb_code": "16501555",

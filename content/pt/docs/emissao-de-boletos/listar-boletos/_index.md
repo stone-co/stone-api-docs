@@ -3,8 +3,8 @@ title: "Listar Boletos"
 slug: "listar-boletos"
 draft: false
 weight: 6
-createdAt: "2020-03-09T17:11:01.543Z"
-updatedAt: "2020-03-09T17:11:01.543Z"
+date: "2020-03-09T17:11:01.543Z"
+lastmod: "2020-03-09T17:11:01.543Z"
 ---
 ---
 ```http request

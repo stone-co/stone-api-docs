@@ -2,61 +2,50 @@
 title: "Listar Contatos"
 slug: "listar-contatos"
 hidden: false
-createdAt: "2019-04-01T20:03:25.687Z"
-updatedAt: "2019-12-02T22:56:58.181Z"
+date: 2019-04-01T20:03:25.687Z
+lastmod: 2019-12-02T22:56:58.181Z
 weight: 3
 ---
 
-
-
-```http 
+```http
 GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contacts
 ```
----
-
-**PATH PARAMS**
 
 ---
 
-**account_id***  `string` 
+##### PATH PARAMS
+
+---
+
+**account_id**  `string`
 
 Identificador da conta.
 
+---
 
-<br>
+##### QUERY PARAMS
 
 ---
 
-**QUERY PARAMS**
-
----
-
-**tax_id**  `string` 
+**tax_id**  `string`
 
 Filtra contatos pelo documento fornecido.
 
-<br>
-
-
-**account_code**  `string` 
+**account_code**  `string`
 
 Filtra contatos pelo código da conta fornecido.
 
-<br>
-
-
-**institution_code**  `string` 
+**institution_code**  `string`
 
 Filtra contatos pelo código da instituição fornecido.
 
-<br>
-
 ---
 
-##### **Response**
+##### Response
 
-```JSON
-200 ok 
+```http
+200 ok
+content-type: application/json
 ```
 
 ```JSON

@@ -2,8 +2,8 @@
 title: "Integrando na Prática"
 slug: "integrando-na-prática-guides"
 hidden: false
-createdAt: "2019-07-29T17:44:31.512Z"
-updatedAt: "2020-12-29T13:59:12.916Z"
+date: "2019-07-29T17:44:31.512Z"
+lastmod: "2020-12-29T13:59:12.916Z"
 ---
 
 ---

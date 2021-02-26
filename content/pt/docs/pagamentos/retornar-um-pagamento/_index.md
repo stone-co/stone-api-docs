@@ -2,8 +2,8 @@
 title: "Retornar Um Pagamento"
 slug: "retornar-um-pagamento"
 hidden: false
-createdAt: "2019-04-01T19:40:49.193Z"
-updatedAt: "2019-12-02T22:56:58.156Z"
+date: "2019-04-01T19:40:49.193Z"
+lastmod: "2019-12-02T22:56:58.156Z"
 weight: 5
 ---
 
