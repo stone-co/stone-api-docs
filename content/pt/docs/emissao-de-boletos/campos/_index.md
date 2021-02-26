@@ -3,11 +3,12 @@ title: "Campos"
 slug: "campos"
 draft: false
 weight: 4
-createdAt: "2020-04-26T21:06:22.337Z"
-updatedAt: "2020-10-20T15:04:35.254Z"
+date: "2020-04-26T21:06:22.337Z"
+lastmod: "2020-10-20T15:04:35.254Z"
 ---
 
 #### Boleto
+
 
 |Chave|Descrição|Tipo
 |-----|---------|------
@@ -35,32 +36,34 @@ updatedAt: "2020-10-20T15:04:35.254Z"
 |status	|Status atual do boleto bancário, podendo ser um dentre os status à seguir: `CREATED`, `REGISTERED`, `SETTLED`, `CANCELLED` ou `EXPIRED`.	|*String*
 |writable_line	|Código de barras traduzido em números.	|*String*
 
+
 <br>
 
 ##### Campos do objeto `beneficiary`
 
-|Chave|Descrição|Tipo
-|-----|---------|------
-|account_code|	Número da conta bancária.|	*String*
-|branch_code	|Número da agência da conta.	|*String*
-|document	|Número do documento do beneficiário sem pontos.	|*String*
-|document_type|	Tipo do documento do beneficiário. Pode ser 'cpf' ou 'cnpj'.	|*String*
-|legal_name	|É o nome que identifica o beneficiário para fins legais, administrativos e outros fins oficiais.	|*String*
-|trade_name	|Nome fantasia do beneficiário.	|*String*
+| Chave         | Descrição                                                                                        | Tipo     |
+| ------------- | ------------------------------------------------------------------------------------------------ | -------- |
+| account_code  | Número da conta bancária.                                                                        | *String* |
+| branch_code   | Número da agência da conta.                                                                      | *String* |
+| document      | Número do documento do beneficiário sem pontos.                                                  | *String* |
+| document_type | Tipo do documento do beneficiário. Pode ser 'cpf' ou 'cnpj'.                                     | *String* |
+| legal_name    | É o nome que identifica o beneficiário para fins legais, administrativos e outros fins oficiais. | *String* |
+| trade_name    | Nome fantasia do beneficiário.                                                                   | *String* |
 
 <br>
 
 ##### Campos do objeto `discount`
 
-|Chave|Descrição|Tipo
-|-----|---------|------
-|date	|Data até a qual o desconto deve ser aplicado.<br>Formato ISO8601 `"YYYY-MM-DD"`.	|*String*
-|value	|Valor percentual (%) do desconto que será aplicado ao boleto. O valor do deve ser maior que 0.0 e até 90.0. <br>Formato decimal. Ex: "20.0".	|*String*
+| Chave | Descrição                                                                                                                                    | Tipo     |
+| ----- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| date  | Data até a qual o desconto deve ser aplicado.<br>Formato ISO8601 `"YYYY-MM-DD"`.                                                             | *String* |
+| value | Valor percentual (%) do desconto que será aplicado ao boleto. O valor do deve ser maior que 0.0 e até 90.0. <br>Formato decimal. Ex: "20.0". | *String* |
 
 
 <br>
 
 ##### Campos do objeto `fee_metadata`
+
 
 |Chave|Descrição|Tipo
 |-----|---------|------
@@ -72,15 +75,16 @@ updatedAt: "2020-10-20T15:04:35.254Z"
 
 
 
+
 <br>
 
 
 ##### Campos do objeto `fine`
 
-|Chave|Descrição|Tipo
-|-----|---------|------
-|date	|Data que define o dia a partir do qual a multa deve ser aplicada ao boleto.<br>Formato ISO8601 `"YYYY-MM-DD"`.	|*String*
-|value	|Valor percentual (%) da multa que será aplicada ao boleto. O valor do deve ser maior que 0.0 e até 2.0.<br>Formato decimal. Ex: "2.0".	|*String*
+| Chave | Descrição                                                                                                                              | Tipo     |
+| ----- | -------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| date  | Data que define o dia a partir do qual a multa deve ser aplicada ao boleto.<br>Formato ISO8601 `"YYYY-MM-DD"`.                         | *String* |
+| value | Valor percentual (%) da multa que será aplicada ao boleto. O valor do deve ser maior que 0.0 e até 2.0.<br>Formato decimal. Ex: "2.0". | *String* |
 
 
 
@@ -89,10 +93,10 @@ updatedAt: "2020-10-20T15:04:35.254Z"
 
 ##### Campos do objeto `interest`
 
-|Chave|Descrição|Tipo
-|-----|---------|------
-|date	|Data que define o dia a partir do qual os juros passam a ser aplicados ao boleto.<br>Formato ISO8601 `"YYYY-MM-DD"`.	|*String*
-|value	|Valor percentual (%) dos juros que serão aplicados ao boleto. O valor do deve ser maior que 0.0 e até 2.0.<br>Formato decimal. Ex: "2.0".	|*String*
+| Chave | Descrição                                                                                                                                 | Tipo     |
+| ----- | ----------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| date  | Data que define o dia a partir do qual os juros passam a ser aplicados ao boleto.<br>Formato ISO8601 `"YYYY-MM-DD"`.                      | *String* |
+| value | Valor percentual (%) dos juros que serão aplicados ao boleto. O valor do deve ser maior que 0.0 e até 2.0.<br>Formato decimal. Ex: "2.0". | *String* |
 
 
 
@@ -101,12 +105,12 @@ updatedAt: "2020-10-20T15:04:35.254Z"
 
 ##### Campos do objeto `customer`
 
-|Chave|Descrição|Tipo
-|-----|---------|------
-|document	|Número do documento do pagador sem pontos.|	*String*
-|document_type	|Tipo do documento do pagador. Pode ser `CPF` ou `CNPJ`.	|*String*
-|legal_name|	É o nome que identifica o pagador para fins legais, administrativos e outros fins oficiais.|	*String*
-|trade_name	|Nome fantasia do pagador.|	*String*
+| Chave         | Descrição                                                                                   | Tipo     |
+| ------------- | ------------------------------------------------------------------------------------------- | -------- |
+| document      | Número do documento do pagador sem pontos.                                                  | *String* |
+| document_type | Tipo do documento do pagador. Pode ser `CPF` ou `CNPJ`.                                     | *String* |
+| legal_name    | É o nome que identifica o pagador para fins legais, administrativos e outros fins oficiais. | *String* |
+| trade_name    | Nome fantasia do pagador.                                                                   | *String* |
 
 
 
@@ -115,8 +119,8 @@ updatedAt: "2020-10-20T15:04:35.254Z"
 
 ##### Campos do objeto `receiver`
 
-|Chave|Descrição|Tipo
-|-----|---------|------
-|document	|Número do documento do sacador avalista.	|*String*
-|legal_name	|É o nome que identifica o sacado avalista para fins legais, administrativos e outros fins oficiais.	|*String*
+| Chave      | Descrição                                                                                           | Tipo     |
+| ---------- | --------------------------------------------------------------------------------------------------- | -------- |
+| document   | Número do documento do sacador avalista.                                                            | *String* |
+| legal_name | É o nome que identifica o sacado avalista para fins legais, administrativos e outros fins oficiais. | *String* |
 

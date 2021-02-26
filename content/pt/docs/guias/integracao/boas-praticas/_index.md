@@ -2,8 +2,8 @@
 title: "Boas Práticas"
 slug: "Boas-praticas-guides"
 hidden: false
-createdAt: "2019-05-21T20:10:39.696Z"
-updatedAt: "2020-06-02T17:07:48.164Z"
+date: "2019-05-21T20:10:39.696Z"
+lastmod: "2020-06-02T17:07:48.164Z"
 weight: 1
 ---
 

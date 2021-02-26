@@ -1,62 +1,63 @@
 ---
 title: "Estrutura de Transações no Extrato"
 slug: "estrutura-de-transacoes-no-extrato"
-createdAt: "2021-02-12T16:10:18.658Z"
+date: 2021-02-12T16:10:18.658Z
+lastmod: 2021-02-19T13:14:16.248Z
 weight: 1
 ---
 
 ---
+
 Veja as possíveis estruturas de cada transação que poderão imapactar o extrato.
 
-<br>
-
 ---
-##### Saldo bloqueado 
+
+##### Saldo bloqueado
 
 ```JSON
 {
-	"balance_blocked": {
-		"account_id": "ad55491e-c3da-4111-98fb-d74f171a31be",
-		"amount": -1000,
-		"balance_after": 3252,
-		"balance_before": 4252,
-		"created_at": "2020-08-14T16:15:25Z",
-		"id": "005d2837-c846-4719-bb17-48f3c40525e4",
-		"operation": "debit",
-		"operation_amount": 1000,
-		"reason": "Saldo bloqueado: Os valores foram bloqueados.Para entender melhor, entre em contato com a gente.",
-		"status": "FINISHED",
-		"type": "balance_blocked"
-	}
+   "balance_blocked": {
+      "account_id": "ad55491e-c3da-4111-98fb-d74f171a31be",
+      "amount": -1000,
+      "balance_after": 3252,
+      "balance_before": 4252,
+      "created_at": "2020-08-14T16:15:25Z",
+      "id": "005d2837-c846-4719-bb17-48f3c40525e4",
+      "operation": "debit",
+      "operation_amount": 1000,
+      "reason": "Saldo bloqueado: Os valores foram bloqueados.Para entender melhor, entre em contato com a gente.",
+      "status": "FINISHED",
+      "type": "balance_blocked"
+   }
 }
 ```
 
-##### Saldo desbloqueado 
+##### Saldo desbloqueado
 
 ```JSON
 {
-	"balance_unblocked": {            
-		"account_id":"ad55491e-c1da-4311-98fb-d74f171a31be",
-		"amount":36900,
-		"balance_after":6035000,
-		"balance_before":5998100,
-		"created_at":"2020-07-03T15:52:41Z",
-		"id":"01fcfd80-e979-4638-9db3-f3217d4cee7e",
-		"operation":"credit",
-		"operation_amount":36900,
-		"reason":"Saldo bloqueado: Os valores foram bloqueados. Para entender melhor, entre em contato com a gente.",
-		"status":"FINISHED",
-		"type":"balance_unblocked"
-	}
+    "balance_unblocked": {            
+       "account_id":"ad55491e-c1da-4311-98fb-d74f171a31be",
+       "amount":36900,
+       "balance_after":6035000,
+       "balance_before":5998100,
+       "created_at":"2020-07-03T15:52:41Z",
+       "id":"01fcfd80-e979-4638-9db3-f3217d4cee7e",
+       "operation":"credit",
+       "operation_amount":36900,
+       "reason":"Saldo bloqueado: Os valores foram bloqueados. Para entender melhor, entre em contato com a gente.",
+       "status":"FINISHED",
+       "type":"balance_unblocked"
+    }
 }
-
 ```
+
 ##### Transferência interna
 
 ```JSON
 {
-	"internal": {
-		"account_id":"ad55491e-c1da-4111-38fb-d74f171a31be",
+    "internal": {
+       "account_id":"ad55491e-c1da-4111-38fb-d74f171a31be",
          "amount":-18,
          "balance_after":4252,
          "balance_before":4270,
@@ -82,15 +83,16 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
          "scheduled_to":null,
          "status":"FINISHED",
          "type":"internal"
-	}
+    }
 }
 ```
+
 ##### Transferência externa
 
 ```JSON
 {
-	"external": {            
-		"account_id":"ad55391e-c1da-4111-98fb-d74f171a31be",
+    "external": {            
+       "account_id":"ad55391e-c1da-4111-98fb-d74f171a31be",
          "amount":-3252,
          "balance_after":0,
          "balance_before":3252,
@@ -122,15 +124,16 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
          "scheduled_to_requested":null,
          "status":"FINISHED",
          "type":"external"
-	}
+    }
 }
 ```
+
 ##### Devolução de transferência externa
 
 ```JSON
 {
-	"external_refund": {            
-		"account_id":"ad55491e-c1da-4131-98fb-d74f171a31be",
+    "external_refund": {            
+       "account_id":"ad55491e-c1da-4131-98fb-d74f171a31be",
          "amount":55,
          "balance_after":6027838,
          "balance_before":6027783,
@@ -159,16 +162,16 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
          "refunded_at":"2020-07-10T16:07:15Z",
          "status":"FINISHED",
          "type":"external_refund"
-	}
+    }
 }
-
 ```
+
 ##### Pagamento instantâneo
 
 ```JSON
 {
-	"instant_payment": {
-		"amount":-122,
+    "instant_payment": {
+       "amount":-122,
          "balance_after":1712342,
          "balance_before":1712464,
          "counter_party":{
@@ -184,15 +187,16 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
          "operation_id":"f6ecaf2d-636a-4646-9625-ee815ac67b8f",
          "status":"FINISHED",
          "type":"instant_payment"
-	}
+    }
 }
 ```
+
 ##### Liquidação de recebíveis de cartão
 
 ```JSON
 {
-	"card_payment": {            
-		"account_id":"ad55491e-c1da-4113-98fb-d74f171a31be",
+    "card_payment": {            
+       "account_id":"ad55491e-c1da-4113-98fb-d74f171a31be",
          "acquirer":"Stone",
          "amount":63386,
          "balance_after":64929715,
@@ -206,16 +210,16 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
          "operation":"credit",
          "status":"FINISHED",
          "type":"card_payment"
-	}	
+    }    
 }
-
 ```
+
 ##### Pagamento de boleto
 
 ```JSON
 {
-	"payment": {
-		 "account_id":"ad55491e-c1da-4111-98fb-d74f131a31be",
+    "payment": {
+        "account_id":"ad55491e-c1da-4111-98fb-d74f131a31be",
          "amount":-10000,
          "balance_after":5972000,
          "balance_before":5982000,
@@ -245,28 +249,29 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
             "total_added_value":0,
             "total_discounted_value":0,
             "updatable_value":true,
- 			"value":null,
-			"writable_line":"23793381286003131563371000063306183080000010000"
+          "value":null,
+         "writable_line":"23793381286003131563371000063306183080000010000"
            },
-			"fee_amount":0,
-			"id":"631e0e33-0b97-4039-8a0a-255e6b26332d",
-			"operation":"debit",
-			"operation_amount":10000,
-			"operation_id":"c38fa8a3-5e39-4fff-916d-437c6ff03a44",
-			"scheduled_at":null,
-			"scheduled_to":null,
-			"status":"FINISHED",
-			"type":"payment",
-       		"writable_line":"23793381286003131563371000063306183080000010000"
-	}
+         "fee_amount":0,
+         "id":"631e0e33-0b97-4039-8a0a-255e6b26332d",
+         "operation":"debit",
+         "operation_amount":10000,
+         "operation_id":"c38fa8a3-5e39-4fff-916d-437c6ff03a44",
+         "scheduled_at":null,
+         "scheduled_to":null,
+         "status":"FINISHED",
+         "type":"payment",
+            "writable_line":"23793381286003131563371000063306183080000010000"
+    }
 }
 ```
+
 ##### Devolução de pagamento
 
 ```JSON
 {
-	"payment_refund": {            
-		"account_id":"ad55491e-c1da-4111-98fb-d74f131a31be",
+    "payment_refund": {            
+       "account_id":"ad55491e-c1da-4111-98fb-d74f131a31be",
          "amount":15050,
          "balance_after":57387,
          "balance_before":42337,
@@ -297,7 +302,7 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
             "total_discounted_value":null,
             "updatable_value":null,
             "value":null,
-			"writable_line":"23790285059000000468001001163507780740000014000"
+         "writable_line":"23790285059000000468001001163507780740000014000"
          },
          "fee_amount":0,
          "id":"b7cbd538-f562-46e4-bc27-3dc6fc0c6e15",
@@ -308,35 +313,34 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
          "status":"FINISHED",
          "type":"payment_refund",
          "writable_line":"23790285059000000468001001163507780740000014000"
-    }	
+    }    
 }
-
 ```
 
-##### Empréstimos 
+##### Empréstimos
 
 ```JSON
 {
-	"loan_payments": {
-		"account_id":"477f8576-ca82-432b-be73-dc28cc6490c3",
-		"account_settlement_policy_retention":{
-			"account_settlement_policy_id":"b936a4aa-88e0-4d76-b214-045459e0b7ef",
-			"applied_retention_rules":{
-					"acquirer":null,
-					"card_network_code":null,
-					"card_type":null,
-					"desired_rule_amount":260,
-					"effective_rule_amount":260,
-					"is_prepayment":null,
-					"retained_portion":{
-						"coefficient":1,
-						"exponent":-2
+    "loan_payments": {
+       "account_id":"477f8576-ca82-432b-be73-dc28cc6490c3",
+       "account_settlement_policy_retention":{
+         "account_settlement_policy_id":"b936a4aa-88e0-4d76-b214-045459e0b7ef",
+         "applied_retention_rules":{
+                "acquirer":null,
+                "card_network_code":null,
+                "card_type":null,
+                "desired_rule_amount":260,
+                "effective_rule_amount":260,
+                "is_prepayment":null,
+                "retained_portion":{
+                  "coefficient":1,
+                  "exponent":-2
                     },
-               		"same_ownership":"allow",
-					"target_account_id":"010f38e5-df93-4f0a-bf09-6b28c752c087"
-			},
-			"retained_amount":26098,
-			"total_amount":200000
+                      "same_ownership":"allow",
+                "target_account_id":"010f38e5-df93-4f0a-bf09-6b28c752c087"
+         },
+         "retained_amount":26098,
+         "total_amount":200000
         },
         "amount":-26098,
         "balance_after":522433099,
@@ -345,9 +349,9 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
         "id":"7e289377-f49b-44c7-b301-b63073b734bc",
         "operation":"debit",
         "original_operation_entry":{
-			"amount":26099,
+         "amount":26099,
             "barcode":"19791845600000021000003020200528153400979684",
-			"barcode_payment_invoice_id":"d424397b-331c-47cc-9a9f-0feff6a2c339",
+         "barcode_payment_invoice_id":"d424397b-331c-47cc-9a9f-0feff6a2c339",
             "beneficiary":{
                "document":"91092573062",
                "document_type":"cpf",
@@ -357,22 +361,21 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
             "created_at":"2020-07-20T18:34:11Z",
             "invoice_type":"deposit",
             "operation":"credit",  
-			"writable_line":"19790000052020052815434039796847184560000002100"
+         "writable_line":"19790000052020052815434039796847184560000002100"
         },
         "original_operation_entry_type":"inbound_barcode_payment",
         "status":"FINISHED",
         "type":"loan_payment"
-	}
-}
-	
+    }
+} 
 ```
 
-##### Folha de Pagamento 
+##### Folha de Pagamento
 
 ```JSON
 {
-	"payroll": {            
-		"account_id":"ad55491e-c1da-4111-93fb-d74f171a31be",
+    "payroll": {            
+       "account_id":"ad55491e-c1da-4111-93fb-d74f171a31be",
          "amount":-100,
          "balance_after":5070,
          "balance_before":5170,
@@ -382,17 +385,16 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
          "operation_id":"43cdb491-5438-456b-8e8a-2ad801c02933",
          "status":"FINISHED",
          "type":"payroll"
-    }	
+    }    
 }
-
 ```
 
-##### Compra feita com Cartão Stone 
+##### Compra feita com Cartão Stone
 
 ```JSON
-{	
-	"outbound_stone_prepaid_card_payment": {            
-		"account_id":"ad55491e-c1da-4111-93fb-d74f171a31be",
+{    
+    "outbound_stone_prepaid_card_payment": {            
+       "account_id":"ad55491e-c1da-4111-93fb-d74f171a31be",
         "acquirer_code":"acquirer_code",
         "acquirer_name":null,
         "amount":-149,
@@ -415,7 +417,7 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
         "transaction_authorization":{
             "authorization_medium":"authorization_medium_2",
             "captured_value":{
-				"amount":149,
+             "amount":149,
                 "currency":"BRL"
             },
             "conversion_rate":"1.00",
@@ -423,22 +425,21 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
             "iof_fee":null,
             "pos_authorization_time":"2019-12-17T18:32:26",
             "value":{
-				"amount":149,
-				"currency":"BRL"
+             "amount":149,
+             "currency":"BRL"
             }
         },
         "type":"outbound_stone_prepaid_card_payment"
-    }	
+    }    
 }
-
 ```
 
-##### Devolução de compra feita com Cartão Stone 
+##### Devolução de compra feita com Cartão Stone
 
-```JSON 
+```JSON
 {
-	"outbound_stone_prepaid_card_payment_refund": {
-		"account_id":"ad55491e-c1da-4111-93fb-d74f171a31be",
+    "outbound_stone_prepaid_card_payment_refund": {
+       "account_id":"ad55491e-c1da-4111-93fb-d74f171a31be",
         "acquirer_code":"acquirer_code",
         "acquirer_name":null,
         "amount":149,
@@ -474,17 +475,16 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
             }
         },
         "type":"outbound_stone_prepaid_card_payment_refund"
-	}
-}
-	
+    }
+} 
 ```
 
 ##### Chargeback de uma compra feita com Cartão Stone
 
 ```JSON
 {
-	"outbound_stone_prepaid_card_payment_chargeback": {            
-		 "account_id":"ad55491e-c1da-4111-98fb-d34f171a31be",
+    "outbound_stone_prepaid_card_payment_chargeback": {            
+        "account_id":"ad55491e-c1da-4111-98fb-d34f171a31be",
          "acquirer_code":"acquirer_code",
          "acquirer_name":null,
          "amount":1,
@@ -528,17 +528,16 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
             }
         },
          "type":"outbound_stone_prepaid_card_payment_chargeback"
-    }	
+    }    
 }
-
 ```
 
 ##### Saque com Cartão Stone feito no Banco24Horas
 
 ```JSON
 {
-	"outbound_stone_prepaid_card_withdrawal": {
-		"account_id":"ad55491e-c1da-4131-98fb-d74f171a31be",
+    "outbound_stone_prepaid_card_withdrawal": {
+       "account_id":"ad55491e-c1da-4131-98fb-d74f171a31be",
          "acquirer_code":"acquirer_code",
          "acquirer_name":null,
          "amount":-239,
@@ -574,17 +573,16 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
             }
          },
          "type":"outbound_stone_prepaid_card_withdrawal"
-	}
+    }
 }
-	
 ```
 
 ##### Devolução de Saque feito no Banco24Horas
 
 ```JSON
 {
-	"outbound_stone_prepaid_card_withdrawal_refund": {            
-		 "account_id":"ad55491e-c1da-4111-38fb-d74f171a31be",
+    "outbound_stone_prepaid_card_withdrawal_refund": {            
+        "account_id":"ad55491e-c1da-4111-38fb-d74f171a31be",
          "acquirer_code":"acquirer_code",
          "acquirer_name":null,
          "amount":239,
@@ -620,17 +618,16 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
             }
          },
          "type":"outbound_stone_prepaid_card_withdrawal_refund"
-      }	
+      }    
 }
-
 ```
 
 ##### Recebimento de salário
 
 ```JSON
 {
-	"salary": {
-		"account_id":"ad55391e-c1da-4111-98fb-d74f171a31be",
+    "salary": {
+       "account_id":"ad55391e-c1da-4111-98fb-d74f171a31be",
          "amount":164,
          "balance_after":39215516,
          "balance_before":39215352,
@@ -652,17 +649,16 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
          "operation":"credit",
          "status":"FINISHED",
          "type":"salary"
-	}
+    }
 }
-	
 ```
 
 ##### Portabilidade de salário
 
-```JSON	
+```JSON
 {
-	"salary_portability": {            
-		"account_id":"ad55431e-c1da-4111-98fb-d74f171a31be" 
+    "salary_portability": {            
+       "account_id":"ad55431e-c1da-4111-98fb-d74f171a31be" 
         "amount":10000,
         "balance_after":5992000,
         "balance_before":5982000,
@@ -672,23 +668,22 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
                "branch_code":"1",
                "institution":"16501555", 
                "institution_name": "ITAÚ UNIBANCO S.A."
-			}
+         }
         "created_at":"2019-09-13T22:27:39Z",
         "id":"fff5eb35-63bb-44a9-9640-128c97606710",
         "operation": "debit"
         "status": "FINISHED"
         "type": "salary_portability"
-      }	
+      }    
 }
-
 ```
 
 ##### Devolução de salário pela intituição de portabilidade
 
 ```JSON
 {
-	"salary_portability_refund": {
-		"account_id":"477f8576-ca83-462b-be73-dc28cc6490c3",
+    "salary_portability_refund": {
+       "account_id":"477f8576-ca83-462b-be73-dc28cc6490c3",
         "amount":200,
         "balance_after":522283672,
         "balance_before":522283472,
@@ -707,7 +702,7 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
         "refund_reason_description":"Mensagem Inválida para o Tipo de Transação ou Finalidade.",
         "status":"FINISHED",
         "type":"salary_portability_refund"
-	}
+    }
 }
 ```
 
@@ -715,8 +710,8 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
 
 ```JSON
 {
-	"salary_portability_employer_refund": {            
-		 "amount":-200,
+    "salary_portability_employer_refund": {            
+        "amount":-200,
          "balance_after":522283472,
          "balance_before":522283672,
          "counter_party":{
@@ -731,8 +726,6 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
          "operation":"debit",
          "status":"FINISHED",
          "type":"salary_portability_employer_refund"
-    }	
+    }    
 }
-
 ```
-

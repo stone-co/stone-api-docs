@@ -2,8 +2,8 @@
 title: "Conta Stone SDK"
 slug: "conta-stone-sdk"
 hidden: false
-createdAt: "2019-11-19T14:32:50.860Z"
-updatedAt: "2019-11-19T22:48:16.424Z"
+date: "2019-11-19T14:32:50.860Z"
+lastmod: "2019-11-19T22:48:16.424Z"
 ---
 
 ---

@@ -2,8 +2,8 @@
 title: "Overview"
 slug: "overview-guides"
 hidden: false
-createdAt: "2019-05-28T17:56:16.830Z"
-updatedAt: "2021-02-01T22:49:07.329Z"
+date: "2019-05-28T17:56:16.830Z"
+lastmod: "2021-02-01T22:49:07.329Z"
 weight: 1
 ---
 

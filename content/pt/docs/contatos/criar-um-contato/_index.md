@@ -2,27 +2,24 @@
 title: "Criar Um Contato"
 slug: "criar-um-contato"
 hidden: false
-createdAt: "2019-04-01T20:01:02.396Z"
-updatedAt: "2019-12-02T22:56:58.179Z"
+date: 2019-04-01T20:01:02.396Z
+lastmod: 2019-12-02T22:56:58.179Z
 weight: 2
 ---
 
-
-```http 
+```http
 POST https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contacts
 ```
+
 ---
 
 **PATH PARAMS**
 
 ---
 
-**account_id***  `string` 
+**account_id**  `string`
 
 Identificador da conta.
-
-
-<br>
 
 ---
 
@@ -30,52 +27,39 @@ Identificador da conta.
 
 ---
 
-**name***  `string` 
+**name**  `string`
 
 Nome do contato.
 
-<br>
-
-
-**tax_id**  `string` 
+**tax_id**  `string`
 
 Documento do contato (CPF/CNPJ).
 
-<br>
-
-
-**email**  `string` 
+**email**  `string`
 
 E-mail do contato.
 
-<br>
-
-
-**mobile**  `string` 
+**mobile**  `string`
 
 Telefone do contato.
 
-<br>
-
 ---
-
 
 **HEADERS**
 
 ---
 
-**x-stone-idempotency-key**  `string` 
+**x-stone-idempotency-key**  `string`
 
 Chave de idempotência.
 
-<br>
-
 ---
 
-##### **Response**
+##### Response
 
-```JSON
-200 ok 
+```http
+200 ok
+content-type: application/json
 ```
 
 ```JSON

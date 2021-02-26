@@ -3,8 +3,8 @@ title: "Overview Emissão de Boletos"
 slug: "overview-emissao-boleto"
 draft: false
 weight: 1
-createdAt: "2020-03-30T07:01:34.376Z"
-updatedAt: "2020-12-23T13:10:22.067Z"
+date: "2020-03-30T07:01:34.376Z"
+lastmod: "2020-12-23T13:10:22.067Z"
 ---
 
 Nessa API, os boletos são separados em três grupos que apresentam regras de funcionamento diferentes: Depósito, Proposta e Cobrança. Veja abaixo os grupos e seus tipos.

@@ -3,8 +3,8 @@ title: "Emitir Boleto"
 slug: "emitir-boleto"
 draft: false
 weight: 5
-createdAt: "2020-01-16T19:14:55.374Z"
-updatedAt: "2020-12-21T20:31:32.971Z"
+date: "2020-01-16T19:14:55.374Z"
+lastmod: "2020-12-21T20:31:32.971Z"
 ---
 
 ---

@@ -3,8 +3,8 @@ title: "Criar pagamento de folha"
 slug: "criar-pagamento-de-folha"
 draft: false
 weight: 2
-createdAt: "2019-09-12T17:15:41.268Z"
-updatedAt: "2019-09-30T17:25:00.496Z"
+date: "2019-09-12T17:15:41.268Z"
+lastmod: "2019-09-30T17:25:00.496Z"
 ---
 ---
 

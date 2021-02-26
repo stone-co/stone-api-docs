@@ -2,8 +2,8 @@
 title: "Listar salários de uma folha"
 slug: "listar-salários-de-uma-folha"
 hidden: false
-createdAt: "2019-09-12T17:23:57.069Z"
-updatedAt: "2019-09-16T18:49:01.735Z"
+date: "2019-09-12T17:23:57.069Z"
+lastmod: "2019-09-16T18:49:01.735Z"
 ---
 ---
 

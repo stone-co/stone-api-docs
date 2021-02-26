@@ -3,8 +3,8 @@ title: "Retornar Uma Transferência Externa"
 slug: "retornar-uma-transferência-externa"
 draft: false
 weight: 9
-createdAt: "2019-04-01T19:33:33.090Z"
-updatedAt: "2019-12-02T22:56:58.146Z"
+date: "2019-04-01T19:33:33.090Z"
+lastmod: "2019-12-02T22:56:58.146Z"
 ---
 ```http request
 GET https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers/transfer_id

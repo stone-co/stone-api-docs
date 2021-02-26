@@ -3,8 +3,8 @@ title: "Listar Transferências Externas"
 slug: "listar-transferências-externas"
 draft: false
 weight: 8
-createdAt: "2019-04-01T19:31:32.470Z"
-updatedAt: "2019-12-02T22:56:58.144Z"
+date: "2019-04-01T19:31:32.470Z"
+lastmod: "2019-12-02T22:56:58.144Z"
 ---
 ```http request
 GET https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers

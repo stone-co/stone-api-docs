@@ -3,8 +3,8 @@ title: "Criar pedido de portabilidade de salário"
 slug: "criar-pedido-de-portabilidade"
 excerpt: "Cria um pedido de portabilidade de salário para uma conta"
 hidden: false
-createdAt: "2019-09-12T18:35:00.384Z"
-updatedAt: "2019-12-03T21:12:58.641Z"
+date: "2019-09-12T18:35:00.384Z"
+lastmod: "2019-12-03T21:12:58.641Z"
 weight: 1
 description: >
 ---

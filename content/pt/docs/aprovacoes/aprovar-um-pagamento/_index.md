@@ -3,8 +3,8 @@ title: "Aprovar um Pagamento"
 slug: "aprovar-um-pagamento"
 draft: false
 weight: 2
-createdAt: "2019-04-01T19:44:06.368Z"
-updatedAt: "2019-12-02T22:56:58.161Z"
+date: "2019-04-01T19:44:06.368Z"
+lastmod: "2019-12-02T22:56:58.161Z"
 ---
 ---
 
