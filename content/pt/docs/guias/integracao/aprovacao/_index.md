@@ -2,8 +2,8 @@
 title: "Aprovação"
 slug: "aprovacao-guides"
 hidden: false
-createdAt: "2019-06-05T19:57:11.014Z"
-updatedAt: "2019-06-12T21:07:47.163Z"
+date: "2019-06-05T19:57:11.014Z"
+lastmod: "2019-06-12T21:07:47.163Z"
 weight: 6
 ---
 

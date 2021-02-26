@@ -2,8 +2,8 @@
 title: "Listar Pagamentos"
 slug: "listar-pagamentos"
 hidden: false
-createdAt: "2019-04-01T19:38:57.844Z"
-updatedAt: "2019-12-02T22:56:58.154Z"
+date: "2019-04-01T19:38:57.844Z"
+lastmod: "2019-12-02T22:56:58.154Z"
 weight: 4
 ---
 

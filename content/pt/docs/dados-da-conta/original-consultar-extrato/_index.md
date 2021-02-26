@@ -3,8 +3,8 @@ title: "original-Consultar Extrato"
 slug: "original-consultar-extrato"
 hidden: true
 draft: true
-createdAt: "2018-12-10T14:35:21.601Z"
-updatedAt: "2019-02-21T20:18:22.067Z"
+date: "2018-12-10T14:35:21.601Z"
+lastmod: "2019-02-21T20:18:22.067Z"
 ---
 [block:callout]
 {

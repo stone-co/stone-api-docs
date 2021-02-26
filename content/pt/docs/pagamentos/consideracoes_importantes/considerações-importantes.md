@@ -2,8 +2,8 @@
 title: "Considerações Importantes"
 slug: "considerações-importantes"
 hidden: false
-createdAt: "2018-12-10T22:28:11.704Z"
-updatedAt: "2020-09-23T00:01:30.968Z"
+date: "2018-12-10T22:28:11.704Z"
+lastmod: "2020-09-23T00:01:30.968Z"
 weight: 7
 ---
 

@@ -4,21 +4,18 @@ slug: "autenticação-1"
 hidden: false
 weight: 2
 draft: false
-createdAt: "2019-07-23T18:56:58.292Z"
-updatedAt: "2020-05-13T16:47:34.859Z"
+date: 2020-05-07T18:06:16-03:00
+lastmod: 2020-09-21T18:00:00-03:00
 ---
 A nossa API é RESTful, e todas suas respostas são em JSON, nos endpoint base, por ambiente:
 
 - _Sandbox_: https://sandbox-api.openbank.stone.com.br
 - _Produção_: https://api.openbank.stone.com.br
 
-
 Seguimos alguns padrões para alguns tipos de dados em toda a nossa API.
 A seguir, juntamos alguns desses padrões para simplificar a vida da desenvolvedora.
 
-
 ### Realizando Chamadas Autenticadas
-
 
 A nossa API só aceita chamadas autenticadas, ou seja, chamadas cujo sujeito da ação conseguimos identificar.
 
@@ -30,10 +27,9 @@ Para isso, exigimos que nas [requisições HTTP](https://developer.mozilla.org/p
 
 Exemplo de cabeçalho de uma chamada autenticada:
 
+#### Header
 
-##### **Header**
-
-```text
+```http
 GET /api/v1/accounts HTTP/1.1
 Host: sandbox-api.openbank.stone.com.br
 User-Agent: Nome da aplicação

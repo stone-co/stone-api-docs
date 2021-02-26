@@ -3,8 +3,8 @@ title: "O Que é uma Aprovação"
 slug: "o-que-e-uma-aprovacao"
 draft: false
 weight: 1
-createdAt: "2019-02-20T19:40:01.649Z"
-updatedAt: "2019-05-20T15:30:54.085Z"
+date: "2019-02-20T19:40:01.649Z"
+lastmod: "2019-05-20T15:30:54.085Z"
 ---
 Os parceiros podem criar pagamentos de contas, de transferências internas e externas. A partir do momento que essas transações são criadas, elas passam a esperar a aprovação do dono da conta de pagamento. 
 
@@ -13,5 +13,7 @@ Ou seja, toda movimentação criada depende da aprovação do dono da conta de p
 
 {{% pageinfo %}}
 **Como testar?**
+
 <br>Para fazer a aprovação é necessário que o dono da conta se autentique e aprove a transação. Saiba como no tópico [*Como Integrar Com a API*](/docs/stone-openbank/overview#como-integrar-com-a-api) onde falamos sobre *Fazer a autenticação como usuário da conta em sandbox*.
+
 {{% /pageinfo %}}

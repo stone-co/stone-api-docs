@@ -3,8 +3,8 @@ title: "Aprovar uma Transferência Externa"
 slug: "aprovar-uma-transferência-externa"
 draft: false
 weight: 6
-createdAt: "2019-04-01T19:52:12.553Z"
-updatedAt: "2019-12-02T22:56:58.168Z"
+date: "2019-04-01T19:52:12.553Z"
+lastmod: "2019-12-02T22:56:58.168Z"
 ---
 ---
 

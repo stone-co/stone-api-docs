@@ -3,8 +3,8 @@ title: "old2_Objetos do Extrato"
 slug: "objetos-do-extrato-2"
 hidden: true
 draft: true
-createdAt: "2019-09-17T13:31:27.645Z"
-updatedAt: "2020-10-05T12:37:55.705Z"
+date: "2019-09-17T13:31:27.645Z"
+lastmod: "2020-10-05T12:37:55.705Z"
 ---
 [block:callout]
 {

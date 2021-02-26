@@ -3,8 +3,8 @@ title: "old_Objetos do extrato"
 slug: "objetos-do-extrato-1"
 hidden: true
 draft: true
-createdAt: "2020-03-09T22:16:07.755Z"
-updatedAt: "2020-08-13T18:33:56.204Z"
+date: "2020-03-09T22:16:07.755Z"
+lastmod: "2020-08-13T18:33:56.204Z"
 ---
 [block:api-header]
 {
