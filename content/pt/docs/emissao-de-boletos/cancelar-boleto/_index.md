@@ -11,7 +11,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoice/id
 ```
 ---
 
-#### QUERY PARAMS
+#### **QUERY PARAMS**
 ---
 **id*** `string`
 <br> Identificador do boleto que se quer cancelar.
@@ -32,7 +32,7 @@ Não será possível cancelar o boleto caso:
 
 <br> 
 
-##### **Response**
+#### **Response**
 
 ```JSON
 200 OK

@@ -13,7 +13,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/payments/payment_id
 ```
 ---
 
-**PATH PARAMS**
+#### **PATH PARAMS**
 
 ---
 
@@ -28,9 +28,9 @@ Identificador do pagamento.
 ##### **Response**
 
 ```JSON
-200 ok 
+200 OK
 ```
-
+Body
 ```JSON
 {
     "account_id": "8cbeb3d2-750f-4b14-81a1-143ad715c273",

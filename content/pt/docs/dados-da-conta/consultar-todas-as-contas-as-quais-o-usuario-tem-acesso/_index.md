@@ -37,7 +37,7 @@ Caso 'true', irá limitar a mostrar somente 50 contas, se for setado para 'false
 200 OK
 content-type: application/json
 ```
-
+Body
 ```JSON
 {
     "cursor": {

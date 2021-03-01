@@ -13,7 +13,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contac
 
 ---
 
-**PATH PARAMS**
+#### **PATH PARAMS**
 
 ---
 
@@ -33,9 +33,11 @@ Identificador do contato.
 
 Identificador da conta bancária do contato.
 
+<br>
+
 ---
 
-**BODY PARAMS**
+#### **BODY PARAMS**
 
 ---
 
@@ -57,7 +59,7 @@ Número da instituição.
 
 ---
 
-**HEADERS**
+#### **HEADERS**
 
 ---
 
@@ -65,15 +67,17 @@ Número da instituição.
 
 Chave de idempotência.
 
+<br>
+
 ---
 
-##### Response
+#### **Response**
 
 ```http
-200 ok
+200 OK
 content-type: application/json
 ```
-
+Body
 ```JSON
 {
   "id": "e43e3003-c587-4cb8-ab37-b374fe0d157f",

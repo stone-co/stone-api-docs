@@ -11,12 +11,12 @@ weight: 1
 
 <br>
 
-1. Será enviado pelo nosso time de parcerias o formulário para criação das [credenciais da sua aplicação](https://docs.openbank.stone.com.br/docs/cadastro-na-aplica%C3%A7%C3%A3o#credenciais-da-minha-aplica%C3%A7%C3%A3o).
+1. Será enviado pelo nosso time de parcerias o formulário para criação das [credenciais da sua aplicação](/docs/guias/integracao/cadastro-da-aplicacao/#credenciais-da-minha-aplicação).
 
 {{% pageinfo %}}
 **Atenção**
 
-Será necessário [gerar um par de chaves RSA 4096](/docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves) e compartilhar a **chave pública** conosco no formato .pem.
+Será necessário [gerar um par de chaves RSA 4096](/docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves) e compartilhar a **chave pública** conosco no formato PEM e extensão .pub
 
 {{% /pageinfo %}}
 
@@ -27,7 +27,7 @@ Será necessário [gerar um par de chaves RSA 4096](/docs/guias/integracao/cadas
 {{% pageinfo %}}
 **Chave Pública**
 
-A chave que deverá ser enviada para a Stone através do formulário é a **chave pública** e **não** a **chave privada**.
+A chave que deverá ser enviada para a Stone através do formulário é a **chave pública** e **não** a **chave privada**. Não queremos o arquivo .pem, mas sim o .pub
 
 {{% /pageinfo %}}
 
@@ -36,12 +36,12 @@ A chave que deverá ser enviada para a Stone através do formulário é a **chav
 
 #### **Credenciais da minha aplicação**
 
-O identificador que representa uma aplicação parceira na API Stone OpenBank é chamado de `cliend_id`. Ela é gerada pela Stone e é única. Ela será utilizada no processo de [autenticação](/docs/guias/integracao/autenticacao) junto a API identificando assim todos os requests provenientes dessa aplicação. 
+O identificador que representa uma aplicação parceira na API Stone OpenBank é chamado de `cliend_id`. Ele é gerada pela Stone e é único. Ele será utilizada no processo de [autenticação](/docs/guias/integracao/autenticacao) junto a API identificando assim todos os requests provenientes dessa aplicação. 
 
-Alguns processos da nossa API, como o próprio processo de [autenticação](/docs/guias/integracao/autenticacao), envolvem uma etapa de criptografia assimétrica, assim na hora da criação da `client_id` da sua aplicação atrelaremos a ela a chave pública fornecida por você. 
+Alguns processos da nossa API, como o próprio processo de [autenticação](/docs/guias/integracao/autenticacao), envolvem uma etapa de criptografia assimétrica, assim na hora da criação do `client_id` da sua aplicação atrelaremos a ele a chave pública fornecida por você. 
 
 Montamos um guia para te ajudar a gerar seu [par de chaves assimétricas](/docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves).
 
-Cada `client_id` tem também as as URIs de webhook e URI de redirect que serão configuradas de acordo com as informações fornecidas pelo parceiro.
+Cada `client_id` tem também as URIs de webhook e URI de redirect que serão configuradas de acordo com as informações fornecidas pelo parceiro.
 
 <br>

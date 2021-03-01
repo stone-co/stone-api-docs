@@ -22,7 +22,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers
 ```
 ---
 
-#### BODY PARAMS
+#### **BODY PARAMS**
 ---
 
 **amount*** `int32`
@@ -75,7 +75,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers
 
 <br>
 
-#### HEADERS
+#### **HEADERS**
 ---
 
 **x-stone-idempotency-key** `string`

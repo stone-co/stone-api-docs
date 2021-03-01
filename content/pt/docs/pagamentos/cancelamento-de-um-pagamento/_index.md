@@ -14,7 +14,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/payments/payment_id/cancel
 ```
 ---
 
-**PATH PARAMS**
+#### **PATH PARAMS**
 
 ---
 

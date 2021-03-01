@@ -12,7 +12,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices/id
 ```
 ---
 
-#### PATH PARAMS
+#### **PATH PARAMS**
 ---
 
 **id*** `string`
@@ -20,7 +20,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices/id
 
 <br>
 
-##### **Response**
+#### **Response**
 
 ```JSON
 200 OK

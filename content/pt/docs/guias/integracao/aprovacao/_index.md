@@ -18,3 +18,5 @@ A **Aprovação de uma Transação** tem como objetivo garantir que toda movimen
 No **Open Banking**, o parceiro pode criar uma transação na conta do usuário, mas esta só será efetuada se houver a aprovação do usuário dono da conta. Esse procedimento assegura ao dono da conta de que não haverá movimentação de seu dinheiro sem sua permissão, além de proteger a aplicação de eventuais erros, ataques ou bugs que iniciem transações não desejadas pelo usuário.
 
 O **Aprovador** é um aplicativo utilizado pelo usuário para realizar a autorização de transações criadas pelo parceiro. Além disso, através do aplicativo é possível manter um histórico de movimentação de saída de uma conta. Nesse histórico é possível visualizar os valores movimentados, o destino das movimentações e o usuário que autorizou as transações. É possível também utilizá-lo para realizar aprovações em lote, ou seja, aprovar um grande número de transações pendentes ao mesmo tempo.
+
+Além de aprovar transações pelo aplicativo **Aprovador Stone**, também é possível aprovar pelo aplicativo **Conta Stone**, no menu "Aprovar transações".

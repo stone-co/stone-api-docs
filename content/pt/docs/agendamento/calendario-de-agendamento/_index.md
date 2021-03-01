@@ -23,7 +23,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/schedulings/calendar
 
 ---
 
-##### **QUERY PARAMS**
+#### **QUERY PARAMS**
 
 ---
 
@@ -40,14 +40,19 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/schedulings/calendar
 <br>Format: `binary`
 <br>Allowed Values: `payment`, `external_tranfer` e `internal_transfer`
 
+<br>
+
 ---
 
-#### HEADERS
+#### **HEADERS**
 
 ---
 
 **If-None-Match** `string`
 <br>Etag. Se for igual etag do conteúdo, a resposta será 304
+
+<br>
+<br>
 
 ---
 

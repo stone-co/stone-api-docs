@@ -14,13 +14,13 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/institutions
 
 ---
 
-#### Response
+#### **Response**
 
 ```http
 201 Created
 content-type: application/json
 ```
-
+Body
 ```JSON
 [
   {

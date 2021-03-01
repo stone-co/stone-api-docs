@@ -45,7 +45,7 @@ No caso de `barcode_payment_invoice` também serão retornardos os campos `billi
 201 OK
 content-type: application/json
 ```
-
+Body
 ```JSON
 
 {

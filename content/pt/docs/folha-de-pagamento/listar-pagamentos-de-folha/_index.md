@@ -13,7 +13,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/payrolls
 ```
 ---
 
-##### **QUERY PARAMS**
+#### **QUERY PARAMS**
 
 ---
 
