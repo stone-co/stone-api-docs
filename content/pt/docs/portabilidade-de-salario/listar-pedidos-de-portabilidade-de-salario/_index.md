@@ -13,7 +13,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/salary_portabilities
 ```
 ---
 
-**QUERY PARAMS**
+#### **QUERY PARAMS**
 
 ---
 
@@ -66,12 +66,12 @@ Este endpoint utiliza paginação: [Link](https://docs.openbank.stone.com.br/ref
 ---
 
 
-##### **Response**
+#### **Response**
 
 ```JSON
-200 ok 
+200 OK 
 ```
-
+Body
 ```JSON
 {
   "cursor": {

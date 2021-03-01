@@ -31,7 +31,7 @@ Identificador da conta.
 201 OK
 content-type: application/json
 ```
-
+Body
 ```JSON
 {
   "cursor": {

@@ -13,7 +13,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contact
 
 ---
 
-**PATH PARAMS**
+#### **PATH PARAMS**
 
 ---
 
@@ -21,9 +21,11 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contact
 
 Identificador da conta.
 
+<br>
+
 ---
 
-**QUERY PARAMS**
+#### **QUERY PARAMS**
 
 ---
 
@@ -41,13 +43,13 @@ Filtra contatos pelo código da instituição fornecido.
 
 ---
 
-##### Response
+#### **Response**
 
 ```http
 200 ok
 content-type: application/json
 ```
-
+Body
 ```JSON
 [
   {

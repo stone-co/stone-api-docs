@@ -41,7 +41,7 @@ Abaixo vamos trazer os campos de cada tipo de transferência.
 | id | Identificador único da transação, no formato UUID4. | _String_ 
 | amount | Valor da transação, em centavos de Reais. | _Integer_
 | fee | Taxa da transação, em centavos de Reais.|_Integer_
-| target | Objeto com os dados de conta destino. Veja abaixo seus campos.| _Object_
+| target | Objeto com os dados de conta destino. Veja abaixo seus campos. Veja seus campos [aqui](/docs/transferencias/o-objeto-transferencia/#campos-do-objeto-target)| _Object_
 | created_at | Horário em que a transação foi criada, em formato ISO8601. Nesse caso nunca será `null`.|_String_
 | approved_at | Horário em que a transação foi aprovada, em formato ISO8601. Retorna `null` caso a transação não tenha sido aprovada em nenhum momento.|_String_
 | rejected_at | Horário em que a transação foi rejeitada, em formato ISO8601. Retorna `null` caso a transação não tenha sido rejeitada em nenhum momento.|_String_

@@ -13,7 +13,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/dry_run/payments
 
 ---
 
-**BODY PARAMS**
+#### **BODY PARAMS**
 
 ---
 
@@ -27,8 +27,10 @@ Código de barras do documento.
 
 Identificador da conta pagadora
 
+<br>
+
 ---
-**HEADERS**
+#### **HEADERS**
 
 ---
 
@@ -47,13 +49,13 @@ Chave de idempotência
 
 ---
 
-##### Response
+##### **Response**
 
 ```http
 200 ok
 content-type: application/json
 ```
-
+Body
 ```JSON
 {
     "account_id": "477f8576-ca82-462b-be73-dc28cc6490c3",

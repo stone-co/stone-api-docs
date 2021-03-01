@@ -12,7 +12,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/payrolls/payroll_id/salarie
 ```
 ---
 
-##### **PATH PARAMS**
+#### **PATH PARAMS**
 
 ---
 

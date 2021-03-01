@@ -13,7 +13,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/payrolls
 ```
 ---
 
-##### **BODY PARAMS**
+#### **BODY PARAMS**
 
 ---
 **account_id***  `string`

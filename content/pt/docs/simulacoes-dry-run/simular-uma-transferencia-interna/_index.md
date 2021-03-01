@@ -13,7 +13,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/dry_run/internal_transfers
 
 ---
 
-**BODY PARAMS**
+#### **BODY PARAMS**
 
 ---
 
@@ -48,9 +48,11 @@ Descrição da transação. Essa descrição será exibida tanto no extrato de q
 
 Formato: `yyyy-mm-dd`
 
+<br>
+
 ---
 
-**HEADERS**
+#### **HEADERS**
 
 ---
 
@@ -58,15 +60,15 @@ Formato: `yyyy-mm-dd`
 
 Chave de idempotência.
 
---
+<br>
 
-##### Response
+##### **Response**
 
 ```http
 200 ok
 content-type: application/json
 ```
-
+Body
 ```JSON
 {
   "amount": 12,

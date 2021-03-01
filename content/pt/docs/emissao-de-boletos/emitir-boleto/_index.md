@@ -13,7 +13,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
 ```
 ---
 
-#### BODY PARAMS
+#### **BODY PARAMS**
 ---
 
 **account_id*** `string`
@@ -83,7 +83,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
 
 
 
-#### HEADERS
+#### **HEADERS**
 ---
 **x-stone-idempotency-key** `string`
 <br>Chave de idempotência
@@ -97,7 +97,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
 
 <br>
 
-##### **Response**
+#### **Response**
 
 ```JSON
 200 OK

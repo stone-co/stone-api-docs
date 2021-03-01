@@ -40,7 +40,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/payments
 
 ---
 
-**BODY PARAMS**
+#### **BODY PARAMS**
 
 ---
 
@@ -68,7 +68,7 @@ Formato: `yyyy-mm-dd`
 
 ---
 
-**HEADERS**
+#### **HEADERS**
 
 ---
 
@@ -85,7 +85,7 @@ Chave de idempotencia.
 ```JSON
 202 Accepted 
 ```
-
+Body
 ```JSON
 {
     "account_id": "8cbeb3d2-750f-4b14-81a1-143ad715c273",

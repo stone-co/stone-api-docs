@@ -38,7 +38,7 @@ Note que a variável  _balance_  abaixo retorna um valor sem vírgulas, exemplo 
 200 OK
 content-type: application/json
 ```
-
+Body
 ```JSON
 {
     "balance": 9998,

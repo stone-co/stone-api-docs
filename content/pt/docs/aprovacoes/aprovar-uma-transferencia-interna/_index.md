@@ -13,7 +13,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers/interna
 ```
 ---
 
-##### **BODY PARAMS**
+#### **BODY PARAMS**
 
 ---
 
@@ -22,7 +22,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers/interna
 
 <br>
 
-##### **Response**
+#### **Response**
 
 ```JSON
 204 No Content

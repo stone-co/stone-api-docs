@@ -19,7 +19,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/salary_portabilities
 ```
 ---
 
-**BODY PARAMS**
+#### **BODY PARAMS**
 
 ---
 
@@ -51,12 +51,12 @@ ISPB ou código da instituição.
 
 ---
 
-##### **Response**
+#### **Response**
 
 ```JSON
 201 Created 
 ```
-
+Body
 ```JSON
 {
   "id": "51e761be-9038-4ba4-89e7-d07276b83e3f",

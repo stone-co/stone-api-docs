@@ -23,6 +23,9 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/stateme
 
 Identificador da Conta.
 
+<br> <br>
+
+
 **QUERY PARAMS**
 
 ---
@@ -85,7 +88,7 @@ O extrato é dividido por tipos de movimentação. É possível consultar qual f
 201 Created
 content-type: application/json
 ```
-
+Body
 ```JSON
 {
     "cursor": {

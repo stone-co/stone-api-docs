@@ -206,7 +206,7 @@ Utilizando seu `access_token` já é possível acessar as funcionalidades da API
 
 Através da API é possível, por exemplo, consultar a quais contas você tem acesso, tanto no caso de você ser uma aplicação parceira com consentimento para acessar contas, quanto no caso de você ser proprietário de alguma conta.
 
-Para isso, é preciso apenas consultar o endpoint [Consultar Todas Contas às Quais Se Tem Acesso](/docs/dados-da-conta/consultar-todas-as-contas-as-quais-o-usuario-tem-acesso), utilizando seu `access_token` no campo do botão `Try It`.
+Para isso, é preciso apenas consultar o endpoint [Consultar Todas Contas às Quais Se Tem Acesso](/docs/dados-da-conta/consultar-todas-as-contas-as-quais-o-usuario-tem-acesso), utilizando seu `access_token`.
 
 Outra forma de acessar esse endpoint é realizando uma chamada para nossa API, enviando seu `access_token` em um header. Abaixo podemos observar isso em um exemplo de função que poderia ser utilizada para realizar essa consulta.
 

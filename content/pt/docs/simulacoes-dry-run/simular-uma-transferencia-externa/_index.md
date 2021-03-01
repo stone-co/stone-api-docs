@@ -14,7 +14,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/dry_run/external_transfers
 
 ---
 
-**BODY PARAMS**
+#### **BODY PARAMS**
 
 ---
 
@@ -60,9 +60,12 @@ Identificador da conta.
 
 Formato: `yyyy-mm-dd`
 
+
+<br> 
+
 ---
 
-**HEADERS**
+#### **HEADERS**
 
 ---
 
@@ -72,13 +75,13 @@ Chave de idempotência.
 
 ---
 
-##### Response
+##### **Response**
 
 ```http
 202 Accepted
 content-type: application/json
 ```
-
+Body
 ```JSON
 {  
    "amount":16600,

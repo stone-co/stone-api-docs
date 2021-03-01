@@ -12,7 +12,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/payments
 ```
 ---
 
-**QUERY PARAMS**
+#### **QUERY PARAMS**
 
 ---
 
@@ -51,9 +51,9 @@ Limit de itens retornados.
 ##### **Response**
 
 ```JSON
-200 ok 
+200 OK 
 ```
-
+Body
 ```JSON
 {
     "cursor": {

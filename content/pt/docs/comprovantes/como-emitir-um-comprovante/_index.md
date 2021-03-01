@@ -22,7 +22,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/receipts
 
 ---
 
-##### **BODY PARAMS**
+#### **BODY PARAMS**
 
 ---
 
@@ -40,13 +40,18 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/receipts
 <br>Format: `ISO8601 - "YYYY-MM-DDThh:mm:ssZ"`
 <br>Example: `"2021-01-01T00:00:00Z"`
 
+
+<br><br>
+
 ---
 
-#### HEADERS
+#### **HEADERS**
 
 ---
 
 **x-stone-idempotency-key** `string`
+
+<br><br>
 
 ---
 

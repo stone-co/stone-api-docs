@@ -13,7 +13,7 @@ DELETE https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/cont
 
 ---
 
-**PATH PARAMS**
+#### **PATH PARAMS**
 
 ---
 
@@ -33,10 +33,12 @@ Identificador do contato.
 
 Identificador da conta bancária do contato.
 
+<br>
+
 ---
 
-##### Response
+#### **Response**
 
 ```http
-200 ok 
+200 OK
 ```

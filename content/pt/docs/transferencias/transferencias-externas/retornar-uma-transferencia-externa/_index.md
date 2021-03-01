@@ -11,7 +11,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers/transfer
 ```
 ---
 
-#### PATH PARAMS
+#### **PATH PARAMS**
 ---
 
 **transfer_id*** `string`
