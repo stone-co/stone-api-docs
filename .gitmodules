@@ -3,4 +3,4 @@
 	url = https://github.com/stone-co/dot.git
 [submodule "themes/docsy"]
 	path = themes/docsy
-	url = https://github.com/google/docsy.git
+	url = https://github.com/stone-co/docsy.git
