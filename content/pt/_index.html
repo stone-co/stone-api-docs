@@ -4,39 +4,49 @@ linkTitle = "Stone OpenBank"
 
 +++
 
-{{< blocks/cover title="Escreva o Banco do futuro. Uma linha de código por vez." image_anchor="top" height="full" color="primary" >}}
-<div class="mx-auto">
-	<a class="btn btn-lg btn-dark mr-3 mb-4" href="{{< relref "/docs" >}}">
-		Referência da API <i class="fas fa-arrow-alt-circle-right ml-2"></i>
-	</a>
-	<p class="lead mt-5">Saiba mais!</p>
-	{{< blocks/link-down color="light" >}}
+<link href="https://res.cloudinary.com/dunz5zfpt/raw/upload/fonts/SharonSans-Lt.woff2" rel="preload" as="font" crossorigin=""><link href="https://res.cloudinary.com/dunz5zfpt/raw/upload/fonts/SharonSans-Rg.woff2" rel="preload" as="font" crossorigin=""><link href="https://res.cloudinary.com/dunz5zfpt/raw/upload/fonts/SharonSans-Md.woff2" rel="preload" as="font" crossorigin=""><link href="https://res.cloudinary.com/dunz5zfpt/raw/upload/fonts/SharonSans-Bd.woff2" rel="preload" as="font" crossorigin="">
+
+{{< blocks/cover title="Escreva o Banco do futuro. Uma linha de código por vez." image_anchor="top" color="primary" >}}
+<div class="mx-auto d-flex align-items-center ">
+	<div>
+		<a class="btn btn-lg btn-primary" href="{{< relref "/docs" >}}">
+			Referência da API <i class="fas fa-arrow-alt-circle-right ml-2"></i>
+		</a>
+	</div>
+	<div>
+		{{< blocks/link-down color="light" >}}
+	</div>
 </div>
 {{< /blocks/cover >}}
 
-{{< blocks/section color="dark" >}}
-{{% blocks/feature icon="fas fa-sliders-h" title="Referência da API" %}}
-<a href="/docs">Conheça os endpoints da nossa API e seus contratos.</a>
+
+{{< blocks/section color="light" >}}
+
+{{% blocks/feature icon="fas fa-terminal" title="Referência da API" %}}
+<p>Conheça os endpoints da nossa API e seus contratos.</p>
+<a href="/docs" class="btn btn-lg btn-secondary">Ver Documentação</a>
 {{% /blocks/feature %}}
 
-{{% blocks/feature icon="fas fa-map-signs" title="Guias" %}}
-<a href="/docs/guias">Não sabe por onde começar? Dê uma olhada nesses guias preparados especialmente para você.</a>
-{{% /blocks/feature %}}
-
-{{% blocks/feature icon="fas fa-thumbtack" title="Avisos" %}}
-Em breve
-{{% /blocks/feature %}}
-
-{{% blocks/feature icon="fas fa-briefcase-medical" title="SDKs" %}}
-Em breve
-{{% /blocks/feature %}}
-
-{{% blocks/feature icon="fas fa-question-circle" title="FAQ" %}}
-Em breve
+{{% blocks/feature icon="fas fa-book-open" title="Guias" %}}
+<p>Não sabe por onde começar? Dê uma olhada nesses guias preparados especialmente para você.</p>
+<a href="/docs" class="btn btn-lg btn-secondary">Ir para o guia</a>
 {{% /blocks/feature %}}
 
 {{% blocks/feature icon="fas fa-heart" title="Parceiros" %}}
+<p>Quer entender mais dos nossos modelos de parceria? Sem problemas, fale com nosso time comercial!</p>
 <a href="https://app.pipefy.com/public/form/Qz4ptt_W?origem_do_lead=Formul%C3%A1rio%20comercial%20documenta%C3%A7%C3%A3o">Quero ser parceiro</a>
+{{% /blocks/feature %}}
+
+{{% blocks/feature icon="fas fa-envelope-open-text" title="Avisos" %}}
+<button href="#" disabled class="btn btn-lg btn-secondary">Em Breve</button>
+{{% /blocks/feature %}}
+
+{{% blocks/feature icon="fas fa-bullseye" title="SKDs" %}}
+<button href="#" disabled class="btn btn-lg btn-secondary">Em Breve</button>
+{{% /blocks/feature %}}
+
+{{% blocks/feature icon="far fa-question-circle" title="FAQ" %}}
+<button href="#" disabled class="btn btn-lg btn-secondary">Em Breve</button>
 {{% /blocks/feature %}}
 
 {{< /blocks/section >}}
