@@ -68,7 +68,7 @@ Gerar um token JWT de consentimento é parecido com o processo de gerar um token
 | exp              | Momento de expiração do token em segundos desde o início da era UNIX (1970). É um timestamp UTC e não pode ser maior que 2 horas. Exemplo: `\"exp\": 1542235633`                             | Int    |
 
 
-Observe que é preciso **assinar o token JWT com a chave privada da aplicação e o algoritmo RS256**, assim como é feito para o token de [autenticação](https://docs.openbank.stone.com.br/docs/autenticacao-guides). Dessa forma, neste token também é preciso incluir um header com as informações sobre o algoritmo de criptografia utilizado, entre outros metadados, como um id da chave utilizada. Por exemplo:
+Observe que é preciso **assinar o token JWT com a chave privada da aplicação e o algoritmo RS256**, assim como é feito para o token de [autenticação](https://docs.openbank.stone.com.br/docs/referencia-de-api/autenticacao-guides). Dessa forma, neste token também é preciso incluir um header com as informações sobre o algoritmo de criptografia utilizado, entre outros metadados, como um id da chave utilizada. Por exemplo:
 
 ```json5
 {
@@ -78,7 +78,7 @@ Observe que é preciso **assinar o token JWT com a chave privada da aplicação 
 ```
 
 {{< notice info >}}
-Apesar do ClientID ser o disponibilizado pela Stone ao parceiro no [Cadastro da Aplicação](https://docs.openbank.stone.com.br/docs/cadastro-da-aplicacao-guides) e o mesmo utilizado para montar o token de [autenticação](https://docs.openbank.stone.com.br/docs/autenticacao-guides#section-1-gerando-o-token-jwt), observe que o **nome do campo** para esse token é `client_id`, diferente de `clientId` utilizado no token de autenticação.
+Apesar do ClientID ser o disponibilizado pela Stone ao parceiro no [Cadastro da Aplicação](https://docs.openbank.stone.com.br/docs/cadastro-da-aplicacao-guides) e o mesmo utilizado para montar o token de [autenticação](https://docs.openbank.stone.com.br/docs/referencia-de-api/autenticacao-guides#section-1-gerando-o-token-jwt), observe que o **nome do campo** para esse token é `client_id`, diferente de `clientId` utilizado no token de autenticação.
 {{< /notice >}}
 
 Assim, um exemplo de claims para este token seria:

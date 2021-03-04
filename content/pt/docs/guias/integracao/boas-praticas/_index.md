@@ -66,6 +66,6 @@ Se isso ocorrer em um período curto demais pode ocasionar uma resposta `HTTP 42
 
 #### **Simulações (dry-run)**
 
-Nossos endpoints que envolvem operações financeiras suportam [Simulações (dry-run)](/docs/simulacoes-dry-run/), permitindo que o usuário visualize com antecedência o que vai acontecer nessa operação.
+Nossos endpoints que envolvem operações financeiras suportam [Simulações (dry-run)](/docs/referencia-de-api/simulacoes-dry-run/), permitindo que o usuário visualize com antecedência o que vai acontecer nessa operação.
 
-Em alguns casos, as Simulações permitem enriquecer os dados de uma operação, como, por exemplo o [Pagamento de Boletos](/docs/simulacoes-dry-run/simular-o-pagamento-de-um-documento/).
+Em alguns casos, as Simulações permitem enriquecer os dados de uma operação, como, por exemplo o [Pagamento de Boletos](/docs/referencia-de-api/simulacoes-dry-run/simular-o-pagamento-de-um-documento/).

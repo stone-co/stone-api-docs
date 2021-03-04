@@ -9,11 +9,11 @@ Faz transferências monetárias para outra instituição (TED). Não é permitid
 
 Caso a transferência seja criada em um dia não útil ou fora do horário de funcionamento de TEDs, a transferência será agendada automaticamente para o dia seguinte. Nesse caso seu status será `DELAYED_TO_NEXT_BUSINESS_DAY`, como também a flag `delayed_to_next_business_day = true`. O campo `scheduled_to_effective` conterá a data para a qual a TED foi agendada.
 
-A transferência também pode ser agendada através do campo `scheduled_to`. A data usada no campo `scheduled_to` deve estar entre a data `next_available_execution_date` e a data limite retornada no campo `execution_limit_date` da [API de calendário de agendamento](/docs/agendamento/calendario-de-agendamento/) chamada com o parâmetro `operation_type=external_transfer`. Caso a data escolhida seja menor do que `next_available_execution_date`, a transferência será executada imediatamente. Caso a data seja maior que `execution_limit_date` será retornado um erro 422.
+A transferência também pode ser agendada através do campo `scheduled_to`. A data usada no campo `scheduled_to` deve estar entre a data `next_available_execution_date` e a data limite retornada no campo `execution_limit_date` da [API de calendário de agendamento](/docs/referencia-de-api/agendamento/calendario-de-agendamento/) chamada com o parâmetro `operation_type=external_transfer`. Caso a data escolhida seja menor do que `next_available_execution_date`, a transferência será executada imediatamente. Caso a data seja maior que `execution_limit_date` será retornado um erro 422.
 
 Caso a data escolhida não seja um dia útil, a transferência será automaticamente agendada para o próximo dia útil depois do escolhido. O dia útil requisitado (que veio na request) e o efetivo (em que de fato o agendamento vai ocorrer) são representados pelos campos `scheduled_to_requested` e `scheduled_to_effective`.
 
-A data usada no campo `scheduled_to` deve obedecer a data limite retornada na [API de calendario de agendamento](/docs/agendamento/calendario-de-agendamento/). Caso contrário, será retornado um erro 422 na criação.
+A data usada no campo `scheduled_to` deve obedecer a data limite retornada na [API de calendario de agendamento](/docs/referencia-de-api/agendamento/calendario-de-agendamento/). Caso contrário, será retornado um erro 422 na criação.
 
 
 ---

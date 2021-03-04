@@ -27,7 +27,7 @@ Faça a sua primeira movimentação financeira de teste seguindo esses três pas
 
 
 Obtenha o seu *Access Token*, enviando um e-mail para nosso time de Parcerias através de parcerias@openbank.stone.com.br.
-Somente com o *Access Token* em mãos você consegue realizar as [autenticações](/docs/guias/integracao/autenticacao) necessárias para realizar as [chamadas](/docs/stone-openbank/) na **Stone Open Bank API**. 
+Somente com o *Access Token* em mãos você consegue realizar as [autenticações](/docs/guias/integracao/autenticacao) necessárias para realizar as [chamadas](/docs/referencia-de-api/stone-openbank/) na **Stone Open Bank API**. 
 
 O time de Parcerias do Stone Open Bank irá te enviar um formulário para preenchimento com os dados sobre seu projeto e posteriormente irá gerar um *ClientID*. Uma vez cadastrado e com o seu *ClientID* em mãos, você poderá realizar o processo de [autenticação da aplicação](/docs/guias/integracao/autenticacao), que permitirá que obtenha-se o *Access Token*. Este processo de [autenticação ](/docs/guias/integracao/autenticacao) consiste nas seguintes etapas: 
 
@@ -208,7 +208,7 @@ IRestResponse response = client.Execute(request);
 
 
 
-Caso queira saber mais sobre as chamadas disponíveis na nossa API, consulte nossos endpoints em [API Reference](/docs/stone-openbank/).
+Caso queira saber mais sobre as chamadas disponíveis na nossa API, consulte nossos endpoints em [API Reference](/docs/referencia-de-api/stone-openbank/).
 
 
 
@@ -260,7 +260,7 @@ Com a resposta gerada pela requisição da TED acima, você poderá elaborar uma
 {{% pageinfo %}}
 **Entenda mais sobre a Transfers API e a sua requisição de TED**
 
-Detalhes sobre a Transfers API se encontram na página [Transferir para Outros Bancos](/docs/transferencias/transferencias-externas/transferir-para-outros-bancos).
+Detalhes sobre a Transfers API se encontram na página [Transferir para Outros Bancos](/docs/referencia-de-api/transferencias/transferencias-externas/transferir-para-outros-bancos).
 {{% /pageinfo %}}
 
 

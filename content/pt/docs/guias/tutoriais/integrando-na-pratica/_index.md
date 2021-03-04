@@ -206,7 +206,7 @@ Utilizando seu `access_token` já é possível acessar as funcionalidades da API
 
 Através da API é possível, por exemplo, consultar a quais contas você tem acesso, tanto no caso de você ser uma aplicação parceira com consentimento para acessar contas, quanto no caso de você ser proprietário de alguma conta.
 
-Para isso, é preciso apenas consultar o endpoint [Consultar Todas Contas às Quais Se Tem Acesso](/docs/dados-da-conta/consultar-todas-as-contas-as-quais-o-usuario-tem-acesso), utilizando seu `access_token`.
+Para isso, é preciso apenas consultar o endpoint [Consultar Todas Contas às Quais Se Tem Acesso](/docs/referencia-de-api/dados-da-conta/consultar-todas-as-contas-as-quais-o-usuario-tem-acesso), utilizando seu `access_token`.
 
 Outra forma de acessar esse endpoint é realizando uma chamada para nossa API, enviando seu `access_token` em um header. Abaixo podemos observar isso em um exemplo de função que poderia ser utilizada para realizar essa consulta.
 
@@ -232,14 +232,14 @@ Observe que temos dois parâmetros na função `operational_accounts`: `access_t
 
 - `access_token` : É o resultado de uma autenticação bem sucedida. Sempre que uma aplicação parceira se autenticar receberá um token de acesso, cuja validade é informada em seus claims;
 
-- `pagination_params`: A maior parte dos nossos endpoints utilizam uma [paginação padrão](/docs/stone-openbank/paginacao). Isso permite realizar requisições HTTP de forma mais prática, além de poupar consumo de rede.
+- `pagination_params`: A maior parte dos nossos endpoints utilizam uma [paginação padrão](/docs/referencia-de-api/stone-openbank/paginacao). Isso permite realizar requisições HTTP de forma mais prática, além de poupar consumo de rede.
 
 E, por fim, obtem-se como resposta uma lista das contas às quais a aplicação tem acesso.
 
 {{% pageinfo %}}
 **Padrões da Nossa API**
 
-Seguimos alguns padrões para alguns tipos de dados em toda a nossa API. [Aqui](/docs/stone-openbank/data-e-hora) se encontram alguns destes padrões.
+Seguimos alguns padrões para alguns tipos de dados em toda a nossa API. [Aqui](/docs/referencia-de-api/stone-openbank/data-e-hora) se encontram alguns destes padrões.
 
 {{% /pageinfo %}}
 

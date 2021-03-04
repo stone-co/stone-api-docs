@@ -8,7 +8,7 @@ description: >
 
 ---
 
-Nossos endpoints seguem um padrão de mensagens. Toda mensagem de erro, por exemplo, seguirá o modelo "srn:error:xxx\" e um [código HTTP](/docs/stone-openbank/codigos-de-resposta/) apropriado para a falha.
+Nossos endpoints seguem um padrão de mensagens. Toda mensagem de erro, por exemplo, seguirá o modelo "srn:error:xxx\" e um [código HTTP](/docs/referencia-de-api/stone-openbank/codigos-de-resposta/) apropriado para a falha.
 
 Por exemplo:
 

@@ -77,7 +77,7 @@ Também repare que, quando se faz uma transferência de R$100,00, por exemplo, o
 {{% pageinfo %}}
 **Tipos diferentes de extratos**
 
-O extrato é dividido por tipos de movimentação. É possível consultar qual foi a movimentação pelo `type` da resposta. No exemplo acima, podemos notar que tivemos duas movimentações: uma transferência interna (`type:internal`) e uma transferência externa (`type:external`), ambas com campos de resposta diferentes. Veja neste [link](/docs/dados-da-conta/objetos-do-extrato/) para mais informações sobre o JSON Schema de cada tipo de operação.
+O extrato é dividido por tipos de movimentação. É possível consultar qual foi a movimentação pelo `type` da resposta. No exemplo acima, podemos notar que tivemos duas movimentações: uma transferência interna (`type:internal`) e uma transferência externa (`type:external`), ambas com campos de resposta diferentes. Veja neste [link](/docs/referencia-de-api/dados-da-conta/objetos-do-extrato/) para mais informações sobre o JSON Schema de cada tipo de operação.
 {{% /pageinfo %}}
 
 ---
