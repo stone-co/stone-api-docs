@@ -15,7 +15,7 @@ Abaixo vamos trazer os campos de cada tipo de transferência.
 | id                         | Identificador único da transação, no formato UUID4.                                                                                                                | _String_  |
 | amount                     | Valor da transação, em centavos de Reais.                                                                                                                          | _Integer_ |
 | fee                        | Taxa da transação, em centavos de Reais.                                                                                                                           | _Integer_ |
-| target                     | Objeto com os dados de conta destino. Veja [abaixo](/docs/referencia-de-api/transferencias/2-o-objeto-transferencia/#campos-do-objeto-target) seus campos.         | _Object_  |
+| target                     | Objeto com os dados de conta destino. Veja [abaixo](/docs/referencia-da-api/transferencias/2-o-objeto-transferencia/#campos-do-objeto-target) seus campos.         | _Object_  |
 | created_at                 | Horário em que a transação foi criada, em formato ISO8601. Nesse caso nunca será `null`.                                                                           | _String_  |
 | approved_at                | Horário em que a transação foi aprovada, em formato ISO8601. Retorna `null` caso a transação não tenha sido aprovada em nenhum momento.                            | _String_  |
 | rejected_at                | Horário em que a transação foi rejeitada, em formato ISO8601. Retorna `null` caso a transação não tenha sido rejeitada em nenhum momento.                          | _String_  |
@@ -41,7 +41,7 @@ Abaixo vamos trazer os campos de cada tipo de transferência.
 | id                           | Identificador único da transação, no formato UUID4.                                                                                                                            | _String_  |
 | amount                       | Valor da transação, em centavos de Reais.                                                                                                                                      | _Integer_ |
 | fee                          | Taxa da transação, em centavos de Reais.                                                                                                                                       | _Integer_ |
-| target                       | Objeto com os dados de conta destino. Veja abaixo seus campos. Veja seus campos [aqui](/docs/referencia-de-api/transferencias/o-objeto-transferencia/#campos-do-objeto-target) | _Object_  |
+| target                       | Objeto com os dados de conta destino. Veja abaixo seus campos. Veja seus campos [aqui](/docs/referencia-da-api/transferencias/o-objeto-transferencia/#campos-do-objeto-target) | _Object_  |
 | created_at                   | Horário em que a transação foi criada, em formato ISO8601. Nesse caso nunca será `null`.                                                                                       | _String_  |
 | approved_at                  | Horário em que a transação foi aprovada, em formato ISO8601. Retorna `null` caso a transação não tenha sido aprovada em nenhum momento.                                        | _String_  |
 | rejected_at                  | Horário em que a transação foi rejeitada, em formato ISO8601. Retorna `null` caso a transação não tenha sido rejeitada em nenhum momento.                                      | _String_  |
@@ -69,8 +69,8 @@ Abaixo vamos trazer os campos de cada tipo de transferência.
 
 | Chave   | Descrição                                                                                                                                                                                                    | Tipo     |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------- |
-| account | Objeto que representa a conta destino da transferência. Veja os campos desse objeto [abaixo](/docs/referencia-de-api/transferencias/o-objeto-transferencia/#campos-do-objeto-account).                       | _Object_ |
-| entity  | Objeto que contem os dados do indivíduo ou companhia responsável pela conta. Veja os campos desse objeto [abaixo](/docs/referencia-de-api/transferencias/2-o-objeto-transferencia/#campos-do-objeto-entity). | _Object_ |
+| account | Objeto que representa a conta destino da transferência. Veja os campos desse objeto [abaixo](/docs/referencia-da-api/transferencias/o-objeto-transferencia/#campos-do-objeto-account).                       | _Object_ |
+| entity  | Objeto que contem os dados do indivíduo ou companhia responsável pela conta. Veja os campos desse objeto [abaixo](/docs/referencia-da-api/transferencias/2-o-objeto-transferencia/#campos-do-objeto-entity). | _Object_ |
 
 
 <br>

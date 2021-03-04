@@ -10,7 +10,7 @@ draft: false
 
 O primeiro passo para a integração é obter o acesso ao nosso ambiente de Sandbox. Este ambiente reflete o de Produção e deve ser utilizado para testes.
 
-Utilizamos [OpenID Connect](https://openid.net/connect/) para a [autenticação](https://docs.openbank.stone.com.br/docs/referencia-de-api/autenticacao-guides) em nossa API. Para obter acesso e conseguir se autenticar em nossa API de Sandbox, siga os seguintes passos:
+Utilizamos [OpenID Connect](https://openid.net/connect/) para a [autenticação](https://docs.openbank.stone.com.br/docs/referencia-da-api/autenticacao-guides) em nossa API. Para obter acesso e conseguir se autenticar em nossa API de Sandbox, siga os seguintes passos:
 
 1. Solicite o ClientID preenchendo o [formulário](https://docs.google.com/forms/d/e/1FAIpQLSf_qlDh41jfthVn80v4S-HT40_Fr2wbkkGb-KuDrioEqepnXw/viewform).
 
@@ -18,7 +18,7 @@ Utilizamos [OpenID Connect](https://openid.net/connect/) para a [autenticação]
 
   *  _A URI de redirecionamento faz parte do fluxo [OAuth 2.0](https://oauth.net/2/)._
 
-2. Enviaremos o seu ClientID para o e-mail cadastrado. Com ele você conseguirá realizar o processo de [autenticação](https://docs.openbank.stone.com.br/docs/referencia-de-api/autenticacao-guides). Após a realização de testes através de nosso Sandbox e estiver pronto para a Homologação, entre em contato através de parcerias@openbank.stone.
+2. Enviaremos o seu ClientID para o e-mail cadastrado. Com ele você conseguirá realizar o processo de [autenticação](https://docs.openbank.stone.com.br/docs/referencia-da-api/autenticacao-guides). Após a realização de testes através de nosso Sandbox e estiver pronto para a Homologação, entre em contato através de parcerias@openbank.stone.
 
 Para entender qual [modelo de parceria](https://docs.openbank.stone.com.br/docs/padroes-e-definicoes-guides#section-modelos-de-parcerias) melhor se aplica a sua aplicação, pode ser necessário realizar algumas reuniões presenciais ou por vídeo com a gente.
 

@@ -14,6 +14,6 @@ Ou seja, toda movimentação criada depende da aprovação do dono da conta de p
 {{% pageinfo %}}
 **Como testar?**
 
-<br>Para fazer a aprovação é necessário que o dono da conta se autentique e aprove a transação. Saiba como no tópico [*Como Integrar Com a API*](/docs/referencia-de-api/stone-openbank/overview#como-integrar-com-a-api) onde falamos sobre *Fazer a autenticação como usuário da conta em sandbox*.
+<br>Para fazer a aprovação é necessário que o dono da conta se autentique e aprove a transação. Saiba como no tópico [*Como Integrar Com a API*](/docs/referencia-da-api/stone-openbank/overview#como-integrar-com-a-api) onde falamos sobre *Fazer a autenticação como usuário da conta em sandbox*.
 
 {{% /pageinfo %}}

@@ -9,7 +9,7 @@ weight: 3
 
 ---
 
-O Dry Run de pagamentos retorna, além do [Objeto Pagamento](/docs/referencia-de-api/pagamentos/o-objeto-pagamento/) em si, os Objetos [Barcode Details](#objeto-barcode-details) e [Details](#objeto-details).
+O Dry Run de pagamentos retorna, além do [Objeto Pagamento](/docs/referencia-da-api/pagamentos/o-objeto-pagamento/) em si, os Objetos [Barcode Details](#objeto-barcode-details) e [Details](#objeto-details).
 
 ### Objeto Barcode Details
 

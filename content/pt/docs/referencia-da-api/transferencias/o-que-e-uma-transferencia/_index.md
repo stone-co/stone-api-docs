@@ -19,7 +19,7 @@ Oferecemos uma API de Transferências, na qual permite-se efetuar a movimentaç�
 
 ##### Segue abaixo os status possíveis de uma **transferência externa**: 
 
-![status_TED](/docs/referencia-de-api/transferencias/o-que-e-uma-transferencia/1b90b91-Transfrncia_Externa.png)
+![status_TED](/docs/referencia-da-api/transferencias/o-que-e-uma-transferencia/1b90b91-Transfrncia_Externa.png)
 
 A transferência externa criada pela parceira aguardará a [aprovação](/docs/guias/integracao/aprovacao) do usuário da conta no estado `CREATED`. Essa transferência pode ser rejeitada pela usuário, concluindo no estado `REJECTED`, e não será efetuada. Caso ela seja uma transferência agendada, é possível que o prazo do agendamento expire antes dela obter aprovação, encerrando em `EXPIRED`.
 
@@ -33,7 +33,7 @@ Para a transferência interna o fluxo é similar. Neste caso não haverá o esta
 
 ##### Segue abaixo os status possíveis de uma **transferência interna**: 
 
-![status_TransfInterna](/docs/referencia-de-api/transferencias/o-que-e-uma-transferencia/0d9c77f-Transferncia_Interna.png)
+![status_TransfInterna](/docs/referencia-da-api/transferencias/o-que-e-uma-transferencia/0d9c77f-Transferncia_Interna.png)
 
 {{% pageinfo %}}
 No ambiente de _sandbox_, a API de transferência externa fica disponível de 6:30 às 17:23 todos os dias, inclusive nos fins de semana e feriados, para facilitar os testes.

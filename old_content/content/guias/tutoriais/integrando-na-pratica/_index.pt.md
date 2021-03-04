@@ -7,7 +7,7 @@ draft: false
 ---
 
 Neste tutorial vamos ver como:
-- Gerar o token de [autenticação](https://docs.openbank.stone.com.br/docs/referencia-de-api/autenticacao-guides);
+- Gerar o token de [autenticação](https://docs.openbank.stone.com.br/docs/referencia-da-api/autenticacao-guides);
 - Gerar o token e link de [consentimento](https://docs.openbank.stone.com.br/docs/consentimento-guides);
 - Operar em contas que já concederam acesso à aplicação parceira.
 
@@ -72,7 +72,7 @@ Para o token de autenticação, é preciso utilizar os claims descritos em [Aute
 
 #### 3. Montando o token de autenticação
 
-Inicialmente, é preciso consultar quais os claims específicos do token de autenticação na [documentação](https://docs.openbank.stone.com.br/docs/referencia-de-api/autenticacao-guides#section-claims).
+Inicialmente, é preciso consultar quais os claims específicos do token de autenticação na [documentação](https://docs.openbank.stone.com.br/docs/referencia-da-api/autenticacao-guides#section-claims).
 
 Através da função que construimos é possível gerar e assinar esse token de forma simples.
 

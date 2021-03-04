@@ -18,7 +18,7 @@ A Stone oferece dois modelos principais de parceria:
 
 ####  **API de Open Banking**
 
-Permite que o parceiro integre na [API](/docs/referencia-de-api/stone-openbank) para disponibilizar todas as funcionalidades da Conta Stone para o usuário por meio de sua Aplicação. Dessa forma, é possível oferecer ao usuário um serviço mais completo, agregando valor ao seu produto.
+Permite que o parceiro integre na [API](/docs/referencia-da-api/stone-openbank) para disponibilizar todas as funcionalidades da Conta Stone para o usuário por meio de sua Aplicação. Dessa forma, é possível oferecer ao usuário um serviço mais completo, agregando valor ao seu produto.
 
 O usuário interage com seu serviço através de uma interface de sua responsabilidade. 
 
