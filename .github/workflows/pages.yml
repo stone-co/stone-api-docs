@@ -48,3 +48,4 @@ jobs:
           PUBLISH_DIR: ./public
           emptyCommits: false
           commitMessage: ${{ github.event.head_commit.message }}
+          cname: docs.openbank.stone.com.br
