@@ -17,3 +17,49 @@ $blue: $primary;
 $enable-gradients: true;
 $enable-rounded: true;
 $enable-shadows: true;
+
+// Fonts
+
+@font-face {
+    font-family: 'Sharon Sans';
+    src: url('https://res.cloudinary.com/dunz5zfpt/raw/upload/fonts/SharonSans-Lt.woff2')
+        format('woff2'),
+      url('https://res.cloudinary.com/dunz5zfpt/raw/upload/fonts/SharonSans-Lt.woff')
+        format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Sharon Sans';
+    src: url('https://res.cloudinary.com/dunz5zfpt/raw/upload/fonts/SharonSans-Rg.woff2')
+        format('woff2'),
+      url('https://res.cloudinary.com/dunz5zfpt/raw/upload/fonts/SharonSans-Rg.woff')
+        format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Sharon Sans';
+    src: url('https://res.cloudinary.com/dunz5zfpt/raw/upload/fonts/SharonSans-Bd.woff2')
+        format('woff2'),
+      url('https://res.cloudinary.com/dunz5zfpt/raw/upload/fonts/SharonSans-Bd.woff')
+        format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Sharon Sans';
+    src: url('https://res.cloudinary.com/dunz5zfpt/raw/upload/fonts/SharonSans-Md.woff2')
+        format('woff2'),
+      url('https://res.cloudinary.com/dunz5zfpt/raw/upload/fonts/SharonSans-Md.woff')
+        format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
