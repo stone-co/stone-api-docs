@@ -16,9 +16,9 @@ Faça a sua primeira movimentação financeira de teste seguindo esses três pas
 
 **ClientID**
 
-Obtenha o seu *Access Token*, por meio deste [formulário](https://docs.google.com/forms/d/e/1FAIpQLSf_qlDh41jfthVn80v4S-HT40_Fr2wbkkGb-KuDrioEqepnXw/viewform). Somente com o *Access Token* em mãos você consegue realizar as [autenticações](https://docs.openbank.stone.com.br/docs/autenticacao-guides) necessárias para realizar as [chamadas](https://docs.openbank.stone.com.br/v1.0/reference) na **Stone Open Bank API**.
+Obtenha o seu *Access Token*, por meio deste [formulário](https://docs.google.com/forms/d/e/1FAIpQLSf_qlDh41jfthVn80v4S-HT40_Fr2wbkkGb-KuDrioEqepnXw/viewform). Somente com o *Access Token* em mãos você consegue realizar as [autenticações](https://docs.openbank.stone.com.br/docs/referencia-da-api/autenticacao-guides) necessárias para realizar as [chamadas](https://docs.openbank.stone.com.br/v1.0/reference) na **Stone Open Bank API**.
 
-Após o preenchimento do [formulário](https://docs.google.com/forms/d/e/1FAIpQLSf_qlDh41jfthVn80v4S-HT40_Fr2wbkkGb-KuDrioEqepnXw/viewform), o time de parcerias do Stone Open Bank irá gerar um *ClientID*. Uma vez cadastrado e com a seu *ClientID* em mãos, você poderá realizar o processo de [autenticação da aplicação](https://docs.openbank.stone.com.br/docs/autenticacao-guides), que permitirá que obtenha-se o *Acess Token*. Este processo de [autenticação ](https://docs.openbank.stone.com.br/docs/autenticacao-guides) consiste nas seguintes etapas:
+Após o preenchimento do [formulário](https://docs.google.com/forms/d/e/1FAIpQLSf_qlDh41jfthVn80v4S-HT40_Fr2wbkkGb-KuDrioEqepnXw/viewform), o time de parcerias do Stone Open Bank irá gerar um *ClientID*. Uma vez cadastrado e com a seu *ClientID* em mãos, você poderá realizar o processo de [autenticação da aplicação](https://docs.openbank.stone.com.br/docs/referencia-da-api/autenticacao-guides), que permitirá que obtenha-se o *Acess Token*. Este processo de [autenticação ](https://docs.openbank.stone.com.br/docs/referencia-da-api/autenticacao-guides) consiste nas seguintes etapas:
 
 **Geração de um token que contenha**
 
@@ -44,7 +44,7 @@ content-type x-www-form-urlencoded
 Obtido sucesso, o servidor retornará o *access_token* e o *refresh_token* da conta da Aplicação.
 {{< notice info >}}
 **O fluxo acima é um exemplo de como iniciar a sua integração com a Stone Open Bank API.**
-<br>Para detalhes sobre o processo de integração, consultar a página [Como Integrar com a API](https://docs.openbank.stone.com.br/docs/autenticacao-guides).
+<br>Para detalhes sobre o processo de integração, consultar a página [Como Integrar com a API](https://docs.openbank.stone.com.br/docs/referencia-da-api/autenticacao-guides).
 {{< /notice >}}
 
 #### 2 - Escolha a sua linguagem

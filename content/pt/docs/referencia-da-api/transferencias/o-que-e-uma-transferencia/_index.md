@@ -19,7 +19,7 @@ Oferecemos uma API de Transferências, na qual permite-se efetuar a movimentaç�
 
 ##### Segue abaixo os status possíveis de uma **transferência externa**: 
 
-![status_TED](/docs/transferencias/o-que-e-uma-transferencia/1b90b91-Transfrncia_Externa.png)
+![status_TED](/docs/referencia-da-api/transferencias/o-que-e-uma-transferencia/1b90b91-Transfrncia_Externa.png)
 
 A transferência externa criada pela parceira aguardará a [aprovação](/docs/guias/integracao/aprovacao) do usuário da conta no estado `CREATED`. Essa transferência pode ser rejeitada pela usuário, concluindo no estado `REJECTED`, e não será efetuada. Caso ela seja uma transferência agendada, é possível que o prazo do agendamento expire antes dela obter aprovação, encerrando em `EXPIRED`.
 
@@ -33,7 +33,7 @@ Para a transferência interna o fluxo é similar. Neste caso não haverá o esta
 
 ##### Segue abaixo os status possíveis de uma **transferência interna**: 
 
-![status_TransfInterna](/docs/transferencias/o-que-e-uma-transferencia/0d9c77f-Transferncia_Interna.png)
+![status_TransfInterna](/docs/referencia-da-api/transferencias/o-que-e-uma-transferencia/0d9c77f-Transferncia_Interna.png)
 
 {{% pageinfo %}}
 No ambiente de _sandbox_, a API de transferência externa fica disponível de 6:30 às 17:23 todos os dias, inclusive nos fins de semana e feriados, para facilitar os testes.
@@ -46,11 +46,11 @@ Falha é qualquer erro que ocorra entre a criação e a movimentação do dinhei
 
 A seguir listamos algumas das falhas possíveis para transações de transferência, tanto para interna quanto para externa.
 
-| Código | Descrição
-| ------ | ---------------------------------------------------------------------------------------- |
-| 0 | Ocorreu um erro durante a transferência. Por favor, tente novamente.
-| 1 | Saldo insuficiente.
-| 2 | A operação falhou por uma restrição em uma das contas.
+| Código | Descrição                                                            |
+| ------ | -------------------------------------------------------------------- |
+| 0      | Ocorreu um erro durante a transferência. Por favor, tente novamente. |
+| 1      | Saldo insuficiente.                                                  |
+| 2      | A operação falhou por uma restrição em uma das contas.               |
 
 
 #### Reembolsos em transferências
@@ -58,16 +58,16 @@ A seguir listamos algumas das falhas possíveis para transações de transferên
 **Reembolsos ocorrem apenas em transferências para outros bancos**, já que para transferências internas conferimos a existência da conta destino antes de realizar a transferência.<br>
 Abaixo listamos algumas das razões possíveis para ocorrer reembolsos, como também seus códigos correspondentes.
 
-| Código | Descrição
-| ------ | ---------------------------------------------------------------------------------------- |
-| 0 | Ocorreu um erro durante a transferência. Por favor, tente novamente.
-| 1 | A conta destino não existe mais. Por favor, entre em contato com o titular.
-| 2 | A agência ou conta do destino estão incorretas. Por favor, confira os dados e tente novamente.
-| 3 | O CPF/CNPJ do destino está incorreto. Por favor, confira os dados e tente novamente.
-| 4 | Mensagem Inválida para o Tipo de Transação ou Finalidade.
-| 5 | Ocorreu um problema devido ao grande volume de transações. Tente novamente.
-| 6 | A conta destino não está apta a receber o valor enviado. Por favor, entre em contato com o titular.
-| 7 | Não conformidade no pagamento.
-| 8 | Os dados informados estão incorretos. Por favor, confira e tente novamente.
-| 9 | CPF/CNPJ inapto junto à Receita Federal do Brasil.
-| 10 | Por solicitação de cliente da instituição participante recebedora.
+| Código | Descrição                                                                                           |
+| ------ | --------------------------------------------------------------------------------------------------- |
+| 0      | Ocorreu um erro durante a transferência. Por favor, tente novamente.                                |
+| 1      | A conta destino não existe mais. Por favor, entre em contato com o titular.                         |
+| 2      | A agência ou conta do destino estão incorretas. Por favor, confira os dados e tente novamente.      |
+| 3      | O CPF/CNPJ do destino está incorreto. Por favor, confira os dados e tente novamente.                |
+| 4      | Mensagem Inválida para o Tipo de Transação ou Finalidade.                                           |
+| 5      | Ocorreu um problema devido ao grande volume de transações. Tente novamente.                         |
+| 6      | A conta destino não está apta a receber o valor enviado. Por favor, entre em contato com o titular. |
+| 7      | Não conformidade no pagamento.                                                                      |
+| 8      | Os dados informados estão incorretos. Por favor, confira e tente novamente.                         |
+| 9      | CPF/CNPJ inapto junto à Receita Federal do Brasil.                                                  |
+| 10     | Por solicitação de cliente da instituição participante recebedora.                                  |

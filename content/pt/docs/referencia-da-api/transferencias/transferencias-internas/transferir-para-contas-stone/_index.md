@@ -9,7 +9,7 @@ lastmod: "2020-03-02T18:59:37.899Z"
 
 Faz transferências monetárias para outra conta dentro da Stone. <br> 
 
-A transferência pode ser agendada, através do campo `scheduled_to`. A data usada no campo `scheduled_to` deve estar entre a data `next_available_execution_date` e a data limite retornada no campo `execution_limit_date` da [API de caléndario de agendamento](/docs/agendamento/calendario-de-agendamento/) chamada com o parâmetro `operation_type=internal_transfer`. 
+A transferência pode ser agendada, através do campo `scheduled_to`. A data usada no campo `scheduled_to` deve estar entre a data `next_available_execution_date` e a data limite retornada no campo `execution_limit_date` da [API de caléndario de agendamento](/docs/referencia-da-api/agendamento/calendario-de-agendamento/) chamada com o parâmetro `operation_type=internal_transfer`. 
 
 Caso a data escolhida seja menor do que `next_available_execution_date`, a transferência será executada imediatamente. <br>
 Caso a data seja maior que `execution_limit_date`, será retornado um erro 422. 
