@@ -17,8 +17,17 @@ lastmod: "2020-10-24T00:14:01.560Z"
 | Data de vencimento  | Precisa ser igual ou maior que o dia atual e igual ou menor do que a limit_date. Caso seja um dia não útil o pagamento poderá ser feito até o próximo dia útil. |
 | Formato / Layout    | Hoje os dados do boleto são devolvidos no formato PDF através de um link.                                                                                       |
 
-
 <br>
+
+{{% pageinfo %}}
+**Atenção**
+
+O desconto em boleto não é valido para pagamentos feitos no final de semana! 
+
+{{% /pageinfo %}}
+
+
+
 <br>
 
 #### Variáveis por tipo de boleto
