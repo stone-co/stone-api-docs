@@ -93,7 +93,7 @@ A idempotência de webhooks deverá ser validada no campo 'x-stone-webhook-event
 | Campo                | Descrição                                                                                                                            |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | env                  | Especifica de qual ambiente partiu o evento. Valores possíveis: sandbox ou production.                                               |
-| event_type           | Especifica qual tipo de evento disparou a notificação. Veja os valores possíveis aqui.                                               |
+| event_type           | Especifica qual tipo de evento disparou a notificação. Veja os valores possíveis [aqui](/docs/guias/integracao/webhooks/#os-eventos-que-geram-notificações-são).                                               |
 | id                   | É o identificador da notificação.                                                                                                    |
 | event_notified_at    | É a hora em que a notificação está sendo enviada.                                                                                    |
 | event_happened_at    | É a hora em que o evento ocorreu.                                                                                                    |
