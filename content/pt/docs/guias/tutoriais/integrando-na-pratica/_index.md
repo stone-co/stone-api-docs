@@ -7,8 +7,6 @@ lastmod: "2020-12-29T13:59:12.916Z"
 ---
 
 ---
-a
-
 
 <br>
 
@@ -96,7 +94,7 @@ Para o token de autenticação, é preciso utilizar os claims descritos em [Aute
 #### **3. Montando o token de autenticação**
 
 
-Inicialmente, é preciso consultar quais os claims específicos do token de autenticação na [documentação](/docs/guias/integracao/autenticacao).
+Inicialmente, é preciso consultar quais os claims específicos do token de autenticação na [documentação](/docs/guias/integracao/autenticacao#claims).
 
 Através da função que construimos é possível gerar e assinar esse token de forma simples.
 
@@ -150,9 +148,9 @@ Para utilizar o token de acesso, é preciso apenas adicionar esse token em um ca
 #### **4. Montando o link de consentimento**
 
 
-Assim como para o token de autenticação, inicialmente consultamos quais os claims específicos do token de consentimento na [documentação](/docs/guias/integracao/consentimento) e, em seguida, utilizamos a função que construimos para gerar e assinar o token.
+Assim como para o token de autenticação, inicialmente consultamos quais os claims específicos do token de consentimento na [documentação](/docs/guias/integracao/consentimento#gerando-o-token) e, em seguida, utilizamos a função que construimos para gerar e assinar o token.
 
-Neste caso, vamos um pouco além da geração do token, utilizando uma função para montar o link de consentimento com os três parâmetros especificados na [documentação](/docs/guias/integracao/consentimento). 
+Neste caso, vamos um pouco além da geração do token, utilizando uma função para montar o link de consentimento com os três parâmetros especificados na [documentação](/docs/guias/integracao/consentimento#o-link-de-consentimento-deve-conter-três-parâmetros). 
 
 Resumindo o passo a passo para obter o link do consentimento, é preciso:
 
