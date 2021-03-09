@@ -15,21 +15,168 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
 #### **QUERY PARAMS**
 ---
 
-**account_id*** `string`
+**account_id** `string`
 <br> Identificador da conta.
 
 ---
-**before*** `string`
+**before** `string`
 <br> Cursor opaco da paginação.
 
 ---
-**after*** `string`
+**after** `string`
 <br> Cursor opaco da paginação.
 
 ---
-**limit*** `int32`
+**limit** `integer`
 <br> Limite de itens retornados.
 
+---
+**status** `string`
+<br> Valores Permitidos: CREATED, SETTLED, REGISTERED, EXPIRED, PENDING.
+
+---
+**amount** `integer`
+<br>
+
+---
+**issuance_date** `string`
+<br>
+
+---
+**expiration_date** `string`
+<br>
+
+---
+**settled_date** `string`
+<br>
+
+---
+**amount_lt** `integer`
+<br>
+
+---
+**amount_gt** `integer`
+<br>
+
+---
+**start_limit_date** `string`
+<br>
+
+---
+**end_limit_date** `string`
+<br>
+
+---
+**start_expiration_date** `string`
+<br>
+
+---
+**end_expiration_date** `string`
+<br>
+
+---
+**start_issuance_date** `string`
+<br>
+
+---
+**end_issuance_date** `string`
+<br>
+
+---
+**start_settled_date** `string`
+<br>
+
+---
+**end_settled_date** `string`
+<br>
+
+
+```Json
+{
+  "type": "object",
+  "properties": {
+    "account_id": {
+      "type": "string",
+      "required": true
+    },
+    "before": {
+      "type": "string"
+    },
+    "after": {
+      "type": "string"
+    },
+    "limit": {
+      "type": "integer"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "CREATED",
+        "SETTLED",
+        "REGISTERED",
+        "EXPIRED",
+        "PENDING"
+      ]
+    },
+    "amount": {
+      "type": "integer"
+    },
+    "issuance_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "expiration_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "settled_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "amount_lt": {
+      "type": "integer"
+    },
+    "amount_gt": {
+      "type": "integer"
+    },
+    "start_limit_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "end_limit_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "start_expiration_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "end_expiration_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "start_issuance_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "end_issuance_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "start_settled_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "end_settled_date": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "required": [
+    "account_id"
+  ]
+}
+```
 
 <br>
 
@@ -39,7 +186,9 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
 200 OK
 content-type: application/json
 ```
-Body
+
+##### Body
+
 ```JSON
 
 {
@@ -157,3 +306,25 @@ Body
        }
     ]
 }
+```
+<br>
+
+```JSON
+403 Forbidden
+```
+
+##### Body
+
+```Json
+{
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "srn:error:unauthorized"
+      ]
+    }
+  }
+}
+```
