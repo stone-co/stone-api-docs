@@ -149,28 +149,30 @@ Lembre-se de passar no header *x-stone-idempotency-key* um UUID, isso ajuda que 
 ##### **Schema**
 ---
 
-**Object:**
+**object:**
 
- - **document** `string`
+   - **user** `object`
 
- - **document_type** `string`
+     - **document** `string`
 
- - **full_name** `string`
+     - **document_type** `string`
 
- - **email** `string`
+     - **full_name** `string`
+
+     - **email** `string`
 
 
-**Organization:** `string` or `Object`
+   - **organization:** `string` or `Object`
 
- - **document** `string`
+     - **document** `string`
 
- - **document_type** `string`
+     - **document_type** `string`
 
- - **full_name** `string`
+     - **full_name** `string`
 
- - **email** `string`
+     - **email** `string`
 
- - **metadata** `object`
+     - **metadata** `object`
 
 ```Json
 {
@@ -286,36 +288,6 @@ Por ser uma chamada assíncrona temos como resposta o código de status 202 e o 
       "type": "string",
       "format": "uuid"
     }
-  }
-}
-```
-
-<br>
-
-#### **Send a Test Request**
----
-
-
-```http
-POST https://https://sandbox-api.openbank.stone.com.br/api/v1/applications/:client_id/signups
-```
-
-##### **Response Body**
-
-```Json
-{
-  "user": {
-    "document": "52762077044",
-    "document_type": "cpf",
-    "full_name": "Fulano da Silva",
-    "email": "any_valid_non_burner_email1231@gmail.com"
-  },
-  "organization": {
-    "document": "67946893000133",
-    "document_type": "cnpj"
-  },
-  "metadata": {
-    "id_salesperson": "12322"
   }
 }
 ```
