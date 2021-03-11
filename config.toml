@@ -113,7 +113,7 @@ url_latest_version = "https://stone-co.github.io/"
 algolia_docsearch = false
 
 # Enable Lunr.js offline search
-offlineSearch = false
+offlineSearch = true
 
 # User interface configuration
 [params.ui]
