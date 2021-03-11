@@ -7,8 +7,6 @@ lastmod: "2020-12-29T13:59:12.916Z"
 ---
 
 ---
-a
-
 
 <br>
 
@@ -96,7 +94,7 @@ Para o token de autenticação, é preciso utilizar os claims descritos em [Aute
 #### **3. Montando o token de autenticação**
 
 
-Inicialmente, é preciso consultar quais os claims específicos do token de autenticação na [documentação](/docs/guias/integracao/autenticacao).
+Inicialmente, é preciso consultar quais os claims específicos do token de autenticação na [documentação](/docs/guias/integracao/autenticacao#claims).
 
 Através da função que construimos é possível gerar e assinar esse token de forma simples.
 
@@ -150,9 +148,9 @@ Para utilizar o token de acesso, é preciso apenas adicionar esse token em um ca
 #### **4. Montando o link de consentimento**
 
 
-Assim como para o token de autenticação, inicialmente consultamos quais os claims específicos do token de consentimento na [documentação](/docs/guias/integracao/consentimento) e, em seguida, utilizamos a função que construimos para gerar e assinar o token.
+Assim como para o token de autenticação, inicialmente consultamos quais os claims específicos do token de consentimento na [documentação](/docs/guias/integracao/consentimento#gerando-o-token) e, em seguida, utilizamos a função que construimos para gerar e assinar o token.
 
-Neste caso, vamos um pouco além da geração do token, utilizando uma função para montar o link de consentimento com os três parâmetros especificados na [documentação](/docs/guias/integracao/consentimento). 
+Neste caso, vamos um pouco além da geração do token, utilizando uma função para montar o link de consentimento com os três parâmetros especificados na [documentação](/docs/guias/integracao/consentimento#o-link-de-consentimento-deve-conter-três-parâmetros). 
 
 Resumindo o passo a passo para obter o link do consentimento, é preciso:
 
@@ -206,7 +204,7 @@ Utilizando seu `access_token` já é possível acessar as funcionalidades da API
 
 Através da API é possível, por exemplo, consultar a quais contas você tem acesso, tanto no caso de você ser uma aplicação parceira com consentimento para acessar contas, quanto no caso de você ser proprietário de alguma conta.
 
-Para isso, é preciso apenas consultar o endpoint [Consultar Todas Contas às Quais Se Tem Acesso](/docs/dados-da-conta/consultar-todas-as-contas-as-quais-o-usuario-tem-acesso), utilizando seu `access_token`.
+Para isso, é preciso apenas consultar o endpoint [Consultar Todas Contas às Quais Se Tem Acesso](/docs/referencia-da-api/dados-da-conta/consultar-todas-as-contas-as-quais-o-usuario-tem-acesso), utilizando seu `access_token`.
 
 Outra forma de acessar esse endpoint é realizando uma chamada para nossa API, enviando seu `access_token` em um header. Abaixo podemos observar isso em um exemplo de função que poderia ser utilizada para realizar essa consulta.
 
@@ -232,14 +230,14 @@ Observe que temos dois parâmetros na função `operational_accounts`: `access_t
 
 - `access_token` : É o resultado de uma autenticação bem sucedida. Sempre que uma aplicação parceira se autenticar receberá um token de acesso, cuja validade é informada em seus claims;
 
-- `pagination_params`: A maior parte dos nossos endpoints utilizam uma [paginação padrão](/docs/stone-openbank/paginacao). Isso permite realizar requisições HTTP de forma mais prática, além de poupar consumo de rede.
+- `pagination_params`: A maior parte dos nossos endpoints utilizam uma [paginação padrão](/docs/referencia-da-api/stone-openbank/paginacao). Isso permite realizar requisições HTTP de forma mais prática, além de poupar consumo de rede.
 
 E, por fim, obtem-se como resposta uma lista das contas às quais a aplicação tem acesso.
 
 {{% pageinfo %}}
 **Padrões da Nossa API**
 
-Seguimos alguns padrões para alguns tipos de dados em toda a nossa API. [Aqui](/docs/stone-openbank/data-e-hora) se encontram alguns destes padrões.
+Seguimos alguns padrões para alguns tipos de dados em toda a nossa API. [Aqui](/docs/referencia-da-api/stone-openbank/data-e-hora) se encontram alguns destes padrões.
 
 {{% /pageinfo %}}
 

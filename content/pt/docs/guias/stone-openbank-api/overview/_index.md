@@ -40,7 +40,7 @@ Assim como nós pudemos criar o nosso aplicativo de conta em cima dessa API, voc
 
 <br>
 
-Com a [API](/docs/stone-openbank/) da Conta Stone você pode disponibilizar para os seus clientes:
+Com a [API](/docs/referencia-da-api/stone-openbank/) da Conta Stone você pode disponibilizar para os seus clientes:
 
 * Consulta de saldos e extratos;
 * Envio e recebimento de transferências tanto de outras Contas Stone como de outros bancos via TED;
