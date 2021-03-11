@@ -15,7 +15,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
 #### **QUERY PARAMS**
 ---
 
-**account_id** `string`
+**account_id*** `string`
 <br> Identificador da conta.
 
 ---
@@ -88,97 +88,9 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
 
 ---
 **end_settled_date** `string`
-<br>
-
-
-```Json
-{
-  "type": "object",
-  "properties": {
-    "account_id": {
-      "type": "string",
-      "required": true
-    },
-    "before": {
-      "type": "string"
-    },
-    "after": {
-      "type": "string"
-    },
-    "limit": {
-      "type": "integer"
-    },
-    "status": {
-      "type": "string",
-      "enum": [
-        "CREATED",
-        "SETTLED",
-        "REGISTERED",
-        "EXPIRED",
-        "PENDING"
-      ]
-    },
-    "amount": {
-      "type": "integer"
-    },
-    "issuance_date": {
-      "type": "string",
-      "format": "date"
-    },
-    "expiration_date": {
-      "type": "string",
-      "format": "date"
-    },
-    "settled_date": {
-      "type": "string",
-      "format": "date"
-    },
-    "amount_lt": {
-      "type": "integer"
-    },
-    "amount_gt": {
-      "type": "integer"
-    },
-    "start_limit_date": {
-      "type": "string",
-      "format": "date"
-    },
-    "end_limit_date": {
-      "type": "string",
-      "format": "date"
-    },
-    "start_expiration_date": {
-      "type": "string",
-      "format": "date"
-    },
-    "end_expiration_date": {
-      "type": "string",
-      "format": "date"
-    },
-    "start_issuance_date": {
-      "type": "string",
-      "format": "date"
-    },
-    "end_issuance_date": {
-      "type": "string",
-      "format": "date"
-    },
-    "start_settled_date": {
-      "type": "string",
-      "format": "date"
-    },
-    "end_settled_date": {
-      "type": "string",
-      "format": "date"
-    }
-  },
-  "required": [
-    "account_id"
-  ]
-}
-```
 
 <br>
+
 
 #### **Response**
 
