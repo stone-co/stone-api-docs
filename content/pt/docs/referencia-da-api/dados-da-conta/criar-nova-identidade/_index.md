@@ -1,7 +1,6 @@
 ---
 title: "Criar Nova Identidade"
 excerpt: "Cria um novo usuário e sua organização, caso não exista."
-hidden: false
 date: 2020-05-04T18:32:40-03:00
 lastmod: 2020-09-21T18:00:00-03:00
 weight: 1
@@ -24,7 +23,7 @@ O cadastro é feito de forma assíncrona de forma a permitir:
 
 
 ```http
-POST /applications/:client_id/signups
+POST https://sandbox-api.openbank.stone.com.br/api/v1/applications/:client_id/signups
 ```
 
 ---
@@ -35,7 +34,7 @@ POST /applications/:client_id/signups
 {{% pageinfo %}}
 **oauth2 - authorizationCode**
 
-A autencicação pública deve passar pelo nosso IAM Keycloak através do protocolo OpenID Connect e receber um token JWT.
+A autenticação pública deve passar pelo nosso IAM Keycloak através do protocolo OpenID Connect e receber um token JWT.
 
  - Flow: authorizationCode
  - Authorization URL: https://sandbox-accounts.openbank.stone.com.br
@@ -54,20 +53,11 @@ A autencicação pública deve passar pelo nosso IAM Keycloak através do protoc
 ---
 
 
-**client_id** `string`
+**client_id*** `string`
 
 ```Json
 {
-  "type": "object",
-  "properties": {
-    ":client_id": {
-      "type": "string",
-      "required": true
-    }
-  },
-  "required": [
-    ":client_id"
-  ]
+  "client_id": "7fc3a55f-b6a3-4b92-a07a-4166bg392341"
 }
 ```
 
@@ -82,16 +72,8 @@ A autencicação pública deve passar pelo nosso IAM Keycloak através do protoc
 
 ```Json
 {
-  "type": "object",
-  "properties": {
-    "x-stone-idempotency-key": {
-      "type": "string"
-    },
-    "x-stone-subject-token": {
-      "type": "string"
-    }
-  },
-  "required": []
+  "x-stone-idempotency-key": "25478963571458", 
+  "x-stone-subject-token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJhY2NvdW50cy1odWJpZEBvcGVuYmFuay5zdG9uZS5jb20uYnIiLCJuYmYiOjE2MTU0NzI9GjAsInNlc3Npb25fbWV0YWRhdGEiOnsiZW1wcmVzYVpXIjoxLCJjaGF2ZVpXIjoienciLCJwcm9kdWNhbyI6ZmFsc2V9LCJpc3MiOiJkODAzMDQ4ZC03MzA2LTQxNTYtYjNlMS1hNjlkMWNiZjQ3ODEiLCJyZWRpcmVjdF91cmkiOiJodHRwOi8vbG9jYWxob3N0Ojg1ODUvc3RvbmViYW5rL2NvbnNlbnRyZWRpcmVjdCIsInR5cGUiOiJjb25zZW50IiwiZXhwIjoxNjE1NDc5OTI5LCJpYWJ3OjE2MTU0NzI3MTksImp0aSI6Ijk0NTlmMjhhLTQ5NDEtNDA2Zi05YjExLWFmMjdhMWQ2MzEyMCJ9.SptDNxVKp5W_9B"
 }
 ```
 
@@ -124,8 +106,38 @@ Lembre-se de passar no header *x-stone-idempotency-key* um UUID, isso ajuda que 
 {{% /pageinfo %}}
 
 
-##### **Example**
+##### **Schema**
 ---
+
+**object:**
+
+   - **user*** `object`
+
+     - **document*** `string`
+
+     - **document_type*** `string`
+
+     - **full_name*** `string`
+
+     - **email*** `string`
+
+
+   - **organization:*** `string` or `Object`
+
+     - **document*** `string`
+
+     - **document_type*** `string`
+
+     - **full_name** `string`
+
+     - **email** `string`
+
+     - **metadata** `object`
+
+
+
+##### Example
+
 
 
 ```Json
@@ -146,104 +158,7 @@ Lembre-se de passar no header *x-stone-idempotency-key* um UUID, isso ajuda que 
 }
 ```
 
-##### **Schema**
----
 
-**object:**
-
-   - **user** `object`
-
-     - **document** `string`
-
-     - **document_type** `string`
-
-     - **full_name** `string`
-
-     - **email** `string`
-
-
-   - **organization:** `string` or `Object`
-
-     - **document** `string`
-
-     - **document_type** `string`
-
-     - **full_name** `string`
-
-     - **email** `string`
-
-     - **metadata** `object`
-
-```Json
-{
-  "type": "object",
-  "properties": {
-    "user": {
-      "type": "object",
-      "required": [
-        "document",
-        "document_type",
-        "full_name",
-        "email"
-      ],
-      "properties": {
-        "document": {
-          "type": "string",
-          "format": "cpf"
-        },
-        "document_type": {
-          "type": "string",
-          "enum": [
-            "cpf"
-          ]
-        },
-        "full_name": {
-          "type": "string"
-        },
-        "email": {
-          "type": "string",
-          "format": "email"
-        }
-      }
-    },
-    "organization": {
-      "type": [
-        "string",
-        "object"
-      ],
-      "required": [
-        "document",
-        "document_type"
-      ],
-      "properties": {
-        "document": {
-          "type": "string",
-          "format": "cnpj"
-        },
-        "document_type": {
-          "type": "string",
-          "enum": [
-            "cnpj"
-          ]
-        },
-        "full_name": {
-          "type": "string"
-        },
-        "email": {
-          "type": "string",
-          "format": "email"
-        }
-      }
-    },
-    "metadata": {
-      "type": "object"
-    }
-  },
-  "required": [
-    "user"
-  ]
-}
-```
 
 ##### **Responses**
 ---
@@ -259,8 +174,18 @@ Por ser uma chamada assíncrona temos como resposta o código de status 202 e o 
 {{% /pageinfo %}}
 
 
-##### **Example**
+##### **Schema**
 ---
+
+**Object:**
+
+ - **id*** `string`
+
+
+
+
+##### Example
+
 
 ```Json
 {
@@ -269,25 +194,4 @@ Por ser uma chamada assíncrona temos como resposta o código de status 202 e o 
 ```
 
 
-##### **Schema**
----
 
-**Object:**
-
- - **id** `string`
-
-
-```Json
- {
-  "type": "object",
-  "required": [
-    "id"
-  ],
-  "properties": {
-    "id": {
-      "type": "string",
-      "format": "uuid"
-    }
-  }
-}
-```
