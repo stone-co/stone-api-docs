@@ -46,7 +46,7 @@ url = "https://app.pipefy.com/public/form/Qz4ptt_W?origem_do_lead=Formul%C3%A1ri
 # logo is for all page
 logo = "stoneg.png"
 # logo white is for homepage logo, you can use colorful logo too...
-logo_white = "stonew.png"
+logo_white = "stone-open-banking.svg"
 # when logo is empty, it will show your site title
 
 # customize color

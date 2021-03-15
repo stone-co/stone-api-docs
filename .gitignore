@@ -2,3 +2,6 @@
 public
 resources
 node_modules
+
+# Exclude MacOS Desktop Services Store file
+.DS_Store

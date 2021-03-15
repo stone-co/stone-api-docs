@@ -53,7 +53,7 @@ anchor = "smart"
 
 [languages]
 [languages.pt]
-title = "Stone OpenBank"
+title = ""
 description = "Escreva o Banco do futuro. Uma linha de código por vez."
 languageName ="Português"
 # Weight used for sorting.
@@ -123,8 +123,8 @@ sidebar_menu_compact = false
 breadcrumb_disable = false
 #  Set to true to hide the sidebar search box (the top nav search box will still be displayed if search is enabled)
 sidebar_search_disable = false
-#  Set to false if you don't want to display a logo (/assets/icons/logo.svg) in the top nav bar
-navbar_logo = true
+#  Set to false if you don't want to display a logo (/assets/icons/stone-open-banking.svg) in the top nav bar
+navbar_logo = true 
 # Set to true to disable the About link in the site footer
 footer_about_disable = true
 
