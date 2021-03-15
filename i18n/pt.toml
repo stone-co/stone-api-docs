@@ -10,7 +10,7 @@ other = "Próximo"
 other = "Ler mais"
 
 [ui_search]
-other = "Buscar no site…"
+other = "Procurar…"
 
 # Used in sentences such as "Posted in News"
 [ui_in]
