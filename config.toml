@@ -1,5 +1,5 @@
 baseURL = "https://stone-co.github.io/"
-title = "Stone OpenBank"
+title = "Stone Openbank"
 
 enableRobotsTXT = true
 
@@ -53,7 +53,7 @@ anchor = "smart"
 
 [languages]
 [languages.pt]
-title = ""
+title = "Stone Openbank"
 description = "Escreva o Banco do futuro. Uma linha de código por vez."
 languageName ="Português"
 # Weight used for sorting.
