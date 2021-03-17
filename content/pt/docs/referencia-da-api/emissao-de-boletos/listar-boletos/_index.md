@@ -19,19 +19,78 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
 <br> Identificador da conta.
 
 ---
-**before*** `string`
+**before** `string`
 <br> Cursor opaco da paginação.
 
 ---
-**after*** `string`
+**after** `string`
 <br> Cursor opaco da paginação.
 
 ---
-**limit*** `int32`
+**limit** `integer`
 <br> Limite de itens retornados.
 
+---
+**status** `string`
+<br> Valores Permitidos: CREATED, SETTLED, REGISTERED, EXPIRED, PENDING.
+
+---
+**amount** `integer`
+<br>
+
+---
+**issuance_date** `string`
+<br>
+
+---
+**expiration_date** `string`
+<br>
+
+---
+**settled_date** `string`
+<br>
+
+---
+**amount_lt** `integer`
+<br>
+
+---
+**amount_gt** `integer`
+<br>
+
+---
+**start_limit_date** `string`
+<br>
+
+---
+**end_limit_date** `string`
+<br>
+
+---
+**start_expiration_date** `string`
+<br>
+
+---
+**end_expiration_date** `string`
+<br>
+
+---
+**start_issuance_date** `string`
+<br>
+
+---
+**end_issuance_date** `string`
+<br>
+
+---
+**start_settled_date** `string`
+<br>
+
+---
+**end_settled_date** `string`
 
 <br>
+
 
 #### **Response**
 
@@ -39,7 +98,9 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
 200 OK
 content-type: application/json
 ```
-Body
+
+##### Body
+
 ```JSON
 
 {
@@ -157,3 +218,25 @@ Body
        }
     ]
 }
+```
+<br>
+
+```JSON
+403 Forbidden
+```
+
+##### Body
+
+```Json
+{
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "srn:error:unauthorized"
+      ]
+    }
+  }
+}
+```
