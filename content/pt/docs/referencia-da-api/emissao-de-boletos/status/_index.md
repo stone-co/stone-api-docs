@@ -7,4 +7,4 @@ lastmod: "2020-08-31T13:08:45.014Z"
 ---
 Segue abaixo os status possíveis de um **boleto gerado**: 
 
-![status_boleto](/docs/emissao-de-boletos/status/048103f-Status_do_boleto.PNG)
+![status_boleto](/docs/referencia-da-api/emissao-de-boletos/status/status_do_boleto.PNG)
