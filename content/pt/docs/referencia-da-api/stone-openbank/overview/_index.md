@@ -15,7 +15,7 @@ Através da nossa API é possível ter funcionalidades de internet banking e de 
 
 #### O que é a Stone OpenBank API
 
-Aqui na Stone a gente acredita não apenas que o cliente tem razão, mas que ele **_é_** a nossa razão. Somos fiéis defensores da competição e acreditamos que isso melhora o mercado como um todo, o que, por sua vez, melhora a vida da nossa razão.
+Aqui na Stone a gente acredita não apenas que o **cliente** tem razão, mas que ele **é a nossa razão**. Somos fiéis defensores da competição e acreditamos que isso melhora o mercado como um todo, o que, por sua vez, melhora a vida da nossa razão.
 
 **Foi com base nesse sentimento pró-competição que montamos a Stone OpenBank API: a primeira API de Open Banking plugada diretamente no STR.**
 A [Conta Stone](/docs/guias/a-conta-stone/) é a nossa oferta para clientes PJ e PF, tanto para aqueles que já pertencem a base da Stone Adquirente, como para aqueles que utilizam outras adquirentes e buscam uma nova forma de se relacionar com sua conta.
@@ -28,12 +28,15 @@ Assim como nós pudemos criar o nosso aplicativo de conta em cima dessa API, voc
 
 Com a API da Conta Stone você pode disponibilizar para os seus clientes:
 
-* Consulta de saldos e extratos
-* Emissão de comprovantes
-* Envio e recebimento de transferências tanto de outras Contas Stone como de outros bancos via TED
-* Pagamento e emissão de boletos
-* Pagamento de concessionárias e tributos
-* Armazenar contatos favorecidos para envio de transferências para outros bancos
+* Consulta de saldos e extratos;
+* Emissão de comprovantes;
+* Envio e recebimento de transferências tanto de outras Contas Stone como de outros bancos via TED;
+* Pagamento e emissão de boletos;
+* Pagamento de concessionárias e tributos;
+* Cadastro de contatos favorecidos para envio de transferências para outros bancos;
+* Folha de Pagamento;
+* Link de Pagamento (Em breve);
+* Pix (Em breve).
 
 #### Como funciona a integração?
 
