@@ -53,7 +53,7 @@ anchor = "smart"
 
 [languages]
 [languages.pt]
-title = ""
+title = "Stone OpenBank"
 description = "Escreva o Banco do futuro. Uma linha de código por vez."
 languageName ="Português"
 # Weight used for sorting.
