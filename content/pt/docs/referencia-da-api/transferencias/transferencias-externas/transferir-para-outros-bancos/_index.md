@@ -46,7 +46,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers
 		<br>
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Número da agência. Padrão: `^\d{1,4}$`
 		<br><br>
-		 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**instituition_code** `string` _(obrigatório)_
+		 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**institution_code** `string` _(obrigatório)_
 		<br>
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Código ISPB da instituição ou número do banco. Padrão: `^(\d{8}|\d{3})$`.
 		<br><br>
