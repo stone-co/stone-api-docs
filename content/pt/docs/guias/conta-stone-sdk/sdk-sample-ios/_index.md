@@ -11,14 +11,11 @@ draft: false
 
 SDK de integração para iOS.
 
-<br>
-
 #### **Contato**
 ---
 
-Em caso de problemas abra uma [issue](https://github.com/stone-co/conta-stone-sdk-sample-ios/issues).
+Se durante a integração encontrar algum problema ou ponto de melhoria entre em contato com a gente através do Azendoo.
 
-<br>
 
 #### **Instalação**
 ---
@@ -27,6 +24,8 @@ Em caso de problemas abra uma [issue](https://github.com/stone-co/conta-stone-sd
 
 - iOS10.0
 - Xcode11.7
+
+<br>
 
 ##### **Configuração**
 
@@ -80,7 +79,7 @@ github "airbnb/lottie-ios" "3.1.6"
 github "airbnb/AloeStackView" "v1.2.0"
 ```
 
-<br>
+
 
 #### **USO**
 ---

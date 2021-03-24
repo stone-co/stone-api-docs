@@ -15,14 +15,13 @@ SDK de integração para Android.
 
 A Conta Stone SDK é responsável por todo o fluxo de login e Know Your Customer da [Stone Openbank API](/docs/guias/stone-openbank-api).
 
-<br>
 
 #### **Contato**
 ---
 
-Se durante a integração encontrar algum problema ou ponto de melhoria abra uma [issue](https://github.com/stone-co/conta-stone-sdk-sample-android/issues) neste repositório.
+Se durante a integração encontrar algum problema ou ponto de melhoria entre em contato com a gente através do Azendoo.
 
-<br>
+
 
 #### **Como funciona**
 ---
