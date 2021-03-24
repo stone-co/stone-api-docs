@@ -20,9 +20,9 @@ Segurança sempre foi um assunto complexo, principalmente por ter uma terminolog
 #### **Autenticação de Aplicativos Parceiros**
 
 
-Cada Aplicativo recebe um identificador exclusivo chamado *clientID* quando é criado. Esse ID não pode ser modificado e será usado no token de acesso do seu aplicativo quando chamar a API.
+Cada Aplicativo recebe um identificador exclusivo chamado [clientID](/docs/guias/integracao/cadastro-da-aplicacao/#credenciais-da-minha-aplicação) quando é criado. Esse ID não pode ser modificado e será usado no token de acesso do seu aplicativo quando chamar a API.
 
-Outra informação importante é o *par de chaves* do seu aplicativo, que deve ser mantida confidencial em todos os momentos. Se alguém obtiver acesso a sua chave privada, essa pessoa poderá acessar recursos protegidos em nome do seu aplicativo. Isso não pode acontecer sob hipótese alguma. 
+Outra informação importante é o [par de chaves](/docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves/) do seu aplicativo, que deve ser mantida confidencial em todos os momentos. Se alguém obtiver acesso a sua chave privada, essa pessoa poderá acessar recursos protegidos em nome do seu aplicativo. Isso não pode acontecer sob hipótese alguma. 
 
 O desenvolvedor deve usar essa chave privada para assinar os tokens enviados para a Stone e nos enviar a chave pública para verificarmos a assinatura.
 

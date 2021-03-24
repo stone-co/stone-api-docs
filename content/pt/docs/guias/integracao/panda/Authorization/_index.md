@@ -27,7 +27,7 @@ Caso não tenha uma aplicação criada em banking ainda, solicite a criação de
 
 Caso já tenha uma aplicação, é necessário solicitar que a sua aplicação seja definida como um `resource_server`.
 
-O objetivo de uma autorização é assegurar que o *subject* (pessoa ou aplicação autenticada) possa visualizar, alterar ou deletar um recurso. O fluxo começa no *front-end*, com um *request* cuja ação seja tanto de leitura quanto de escrita. Esse *request* precisa ser encaminhado para o serviço responsável por este recurso. Este serviço é chamado de `resource server`. Quando recebe uma requisição que demande autorização, o `resource server` deve perguntar ao panda se o *subject do token* tem ou não autorização para performar aquela ação.
+O objetivo de uma autorização é assegurar que o *subject* (pessoa ou aplicação autenticada) possa visualizar, alterar ou deletar um recurso. O fluxo começa no *front-end*, com um *request* cuja ação seja tanto de leitura quanto de escrita. Esse *request* precisa ser encaminhado para o serviço responsável por este recurso. Este serviço é chamado de `resource server`. Ao receber uma requisição que demande autorização, o `resource server` deve perguntar ao panda se o *subject do token* tem ou não autorização para performar aquela ação.
 
 
 <br>
