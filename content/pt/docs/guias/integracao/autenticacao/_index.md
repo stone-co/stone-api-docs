@@ -153,19 +153,96 @@ Ex.:
 | client_assertion      | Aqui deve ser o token que o desenvolvedor gerou.                                                                                     |
 | client_assertion_type | Sempre será urn:ietf:params:oauth:client-assertion-type:jwt-bearer, que é o que fecha o fluxo de client credentials para o servidor. |
 
-<br>
 
-Um exemplo de chamada de autenticação:
+##### **Examples**
 
 
+{{< alert title="Curl" >}}
+    
 ```JSON
 {
   curl -X POST https://sandbox-accounts.openbank.stone.com.br/auth/realms/stone_bank/protocol/openid-connect/token -H 'content-type: application/x-www-form-urlencoded' -d 'client_id=ID_EXEMPLO&grant_type=client_credentials&client_assertion_type=urn:ietf:params:oauth:client-assertion-type:jwt-bearer&client_assertion=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c'
 }
 ```
+{{< /alert >}}
+
+{{< alert title="Python" >}}
+    
+```python
+import jwt
+import time
+import requests
+import subprocess
+
+class AppData:
+  def __init__(self, client_id, base_url, base_auth_url, private_key):
+    self.client_id = client_id
+    self.base_url = base_url
+    self.base_auth_url = base_auth_url
+    self.private_key = private_key
+
+
+def getApplicationData():
+    return AppData(
+        'insira aqui seu client_id',
+        'https://sandbox-api.openbank.stone.com.br/api/v1',
+        'https://sandbox-accounts.openbank.stone.com.br',
+        private_key
+    )
+
+private_key = """-----BEGIN RSA PRIVATE KEY-----
+
+                Insira aqui sua private_key
+
+-----END RSA PRIVATE KEY-----"""
+
+
+def getToken():
+
+    app_data = getApplicationData()
+
+    base_url = f'{app_data.base_auth_url}/auth/realms/stone_bank'
+    auth_url = f'{base_url}/protocol/openid-connect/token'
+
+    payload = {
+        'exp': int(time.time()) + 3600,
+        'nbf': int(time.time()),
+        'aud': base_url,
+        'realm': 'stone_bank',
+        'sub': app_data.client_id,
+        'clientId': app_data.client_id,
+        'jti': str(time.time()),
+        'iat': int(time.time())
+    }
+
+    token = jwt.encode(payload, app_data.private_key, algorithm='RS256')
+
+    headers = {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'User-Agent': 'Insira aqui o Nome da Aplicação'
+    }
+
+    token_payload = {
+        'client_id': app_data.client_id,
+        'grant_type': 'client_credentials',
+        'client_assertion': token.decode(),
+        'client_assertion_type': 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer'
+    }
+
+    return requests.post(auth_url, data=token_payload, headers=headers)
+
+
+# COMENTAR PRA NÃO COPIAR O TOKEN
+response = getToken()
+access_token = response.json()['access_token']
+
+print (access_token)
+```
+{{< /alert >}}
+
 <br>
 
-Exemplo de resposta:
+##### **Response**
 
 
 ```JSON
@@ -206,7 +283,15 @@ Pronto! Com isto já é possível fazer uma chamada autenticada para a nossa API
 - _Sandbox_: https://sandbox-api.openbank.stone.com.br
 - _Produção_: https://api.openbank.stone.com.br
 
+
+{{% pageinfo %}}
+**Fluxo de Autorização**
+
+Para continuar com o fluxo de autorização, clique [aqui](/docs/guias/integracao/panda/authorization/#fluxo-de-autorização-de-challenge).
+{{% /pageinfo %}}
+
 <br>
+
 
 **Bem-vindo ao time de fintechs do futuro!**
 
