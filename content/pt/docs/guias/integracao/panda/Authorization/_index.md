@@ -65,7 +65,7 @@ Note que `required_types` indicará quais tipos de *credencial* o *subject* deve
 
 2) O próximo *request* deverá conter o `challenge_solution`.
 
-Pra montar o `challenge_solution` você deverá gerar um JWE, onde o valor decryptado seja um json no seguinte formato:
+Pra montar o `challenge_solution` você deverá gerar um JWE, onde o valor descriptografado seja um json no seguinte formato:
 
 ```Json
 {
@@ -110,7 +110,7 @@ Abaixo estão listados os types e o que cada um significa.
 ------------------------------------|---------------------------------------------------| ----------| -----------------------
 | srn:error:unauthenticated			| request_body.subject.token						| 401		| A sessão do subject não é válida. |
 | srn:error:bad_jwe_token			| request_body.subject.context.challenge_solution	| 403		| JWE (challenge_solution) é inválido. |
-| srn:error:unrecognized_key		| request_body.subject.context.challenge_solution	| 403		| JWE encryptado com chave incorreta. |
+| srn:error:unrecognized_key		| request_body.subject.context.challenge_solution	| 403		| JWE criptografado com chave incorreta. |
 | srn:error:wrong_challenge_solution| request_body.subject.context.challenge_solution	| 403		| ID do challenge não foi passado na solution. |
 | srn:error:bad_challenge_solution	| request_body.subject.context.challenge_solution	| 403		| A resposta do challenge está incorreta. |
 | srn:error:challenge_not_found		|request_body.subject.context.challenge_solution	| 403		| O id do challenge não corresponde a nenhum existente. |
