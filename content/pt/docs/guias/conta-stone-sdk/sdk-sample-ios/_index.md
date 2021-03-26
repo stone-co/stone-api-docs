@@ -22,10 +22,9 @@ Se durante a integração encontrar algum problema ou ponto de melhoria entre em
 
 ##### **Requisitos**
 
-- iOS10.0
-- Xcode11.7
+- iOS 10.0
+- Xcode 11.7
 
-<br>
 
 ##### **Configuração**
 
