@@ -145,6 +145,7 @@ Ex.:
 }
 ```
 
+##### **Glossário**
 
 | Nome                  | Valor                                                                                                                                |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
@@ -240,7 +241,6 @@ print (access_token)
 ```
 {{< /alert >}}
 
-<br>
 
 ##### **Response**
 
@@ -248,13 +248,6 @@ print (access_token)
 ```JSON
 {
     "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ijh3eWRUZGpzTEdYVSJ9.eyJqdGkiOiIzM2RlNjg2Mi1iYmVkLTQ3ZWYtYTY5Yi0wNDAzNTI0YTRhNGEiLCJleHAiOjE1NTkyNDg3OTUsIm5iZiI6MCwiaWF0IjoxNTU5MjQ3ODk1LCJpc3MiOiJodHRwczovL3NhbmRib3gtYWNjb3VudHMub3BlbmJhbmsuc3RvbmUuY29tLmJyL2F1dGgvcmVhbG1zL3N0b25lX2JhbmsiLCJzdWIiOiJjMWExZmE5NC0zOTc4LTRhNjgtODBlNy1mZWU2ZTkwNmNiMmUiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhZG1pbi1jbGkiLCJhdXRoX3RpbWUiOjAsInNlc3Npb25fc3RhdGUiOiJhN2YxN2QxMC1jMGY1LTQzMzItOWE5MC1lNDQxMTVmMWNlMGEiLCJhY3IiOiIxIiwic2NvcGUiOiJleHBlbmQ6dHJhbnNmZXJzOmludGVybmFsIGVudGl0eTpsZWdhbF93cml0ZSBlbnRpdHk6d3JpdGUgcHJpbmNpcGFsOmNvbnNlbnQgZW1haWwgZXhwZW5kOnRyYW5zZmVyczpleHRlcm5hbCBzdG9uZV9zdWJqZWN0X2lkIGV4cGVuZDpyZWFkIGV4cGVuZDpib2xldG9pc3N1YW5jZSBlbnRpdHk6cmVhZCBwcm9maWxlIHBheW1lbnRhY2NvdW50OiogZXhwZW5kOnBheW1lbnRzIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInN0b25lX3N1YmplY3RfaWQiOiJ1c2VyOjNmMDcwN2NiLWEyYzgtNDlhMS04NDc4LWFjMDg1MGY5Njc4MCIsIm5hbWUiOiJKb2FvIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiam9hby5leGVtcGxvQGVtYWlsLmNvbS5iciIsImdpdmVuX25hbWUiOiJKb2FvIiwiZW1haWwiOiJqb2FvLmV4ZW1wbG9AZW1haWwuY29tLmJyIn0.baf0-ZMg_IPtoReTpQBnMIYPjrLWFklPT7T1CGE2ecxfxt-a3h1CSdveK0Xd0f9FWna6obcSIonHn7HD0mJnxwBoIK8w6_cg_ODTS-l2jgGWVTl-jN41rdyTg5kgtTT6M3v02QJxTOfklo9mpW4tX8cZorx5vP_ykb5Kk186PGxYTJ9mGwQEuyrHl7-mc8aN7x10Ue7P_fk2Br43T2uR7LoFFIVM9I45p1hntZx-e59alleIuUqnZzk5Vo8knk67ZEJEAWOiigS0yyyy9gT3wqPypBYnoP3SMVws7e6lfKuZasCS58z8arJiYVQVgF6xSoQQdDBTY4I1_5kL-phmAA",
-    "expires_in": 900,
-    "refresh_expires_in": 1800,
-    "refresh_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ijh3eWRUZGpzTEdYVSJ9.eyJqdGkiOiIzM2RlNjg2Mi1iYmVkLTQ3ZWYtYTY5Yi0wNDAzNTI0YTRhNGEiLCJleHAiOjE1NTkyNDg3OTUsIm5iZiI6MCwiZW1haWxfdmVyaWZpZWQiOnRydWUsInN0b25lX3N1YmplY3RfaWQiOiJ1c2VyOjNmMDcwN2NiLWEyYzgtNDlhMS04NDc4LWFjMDg1MGY5Njc4MCIsIm5hbWUiOiJKb2FvIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiam9hby5leGVtcGxvQGVtYWlsLmNvbS5iciIsImdpdmVuX25hbWUiOiJKb2FvIiwiZW1haWwiOiJqb2FvLmV4ZW1wbG9AZW1haWwuY29tLmJyIn0.lRepHkrIfYgkU_t39rwMxVD8GlH2-_Kq1ri75wA7Z1HRwB0gIQuf_ytWA_eJ_Bk16ZRGWl210uTxHoDSqpF0fowtRjeGkcME19Ie2jLYCX_IZZEjPLZtpEoAQRF4PXbYA4getLN_u3jr6i5CjoLXXhUV0OdmE0IWIGGh7uJFcpioYMDk4iagCdVVnZea5qhoV4Gejbfd9QG2_Xx9JxLuxLAPAoE0Hr_EDlJ8YsCZjzz36HEwjjYJM-imFykHBilVATbq28PnQfSm7Y58i3ElVdy27h-xUfx1YOxteChFc3Xb_PBBK8LPxZDcbQD6RGq7Qs2aO0NtxuENpne9q-aOjA",
-    "token_type": "bearer",
-    "not-before-policy": 0,
-    "session_state": "a7f07d10-c0f5-4332-95f2-e44115f1ce0a",
-    "scope": "expend:transfers:internal entity:legal_write entity:write principal:consent email expend:transfers:external stone_subject_id expend:read expend:boletoissuance entity:read profile paymentaccount:* expend:payments"
 }
 ```
 
@@ -266,7 +259,7 @@ print (access_token)
 
 Se tudo deu certo no passo anterior, a resposta do servidor será um JSON com uma chave `access_token`, onde terá o valor de um token de sessão.
 
-Como falamos no início dos tópicos anteriores, para usar este token basta colocá-lo no header `Authorization` com o valor `Bearer ACCESS_TOKEN`. Aqui, o desenvolvedor deve substituir "ACCESS_TOKEN" pelo valor recebido.
+Como falamos no início dos tópicos anteriores, **para usar este token basta colocá-lo no header `Authorization` com o valor `Bearer ACCESS_TOKEN`**. Aqui, o desenvolvedor deve substituir "ACCESS_TOKEN" pelo valor recebido.
 
 
 
