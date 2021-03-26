@@ -18,7 +18,21 @@ Esse endpoint tem como finalidade autorizar *actions* de um *subject* sobre um d
 
 O objetivo de uma autorização é assegurar que o *subject* (pessoa ou aplicação autenticada) possa visualizar, alterar ou deletar um recurso. O fluxo começa no *front-end*, com um *request* cuja ação seja tanto de leitura quanto de escrita. Esse *request* precisa ser encaminhado para o serviço responsável por este recurso. Este serviço é chamado de `resource server`. Ao receber uma requisição que demande autorização, o `resource server` deve perguntar ao panda se o *subject do token* tem ou não autorização para performar aquela ação.
 
+
+
+#### **Glossário**
+---
 <br>
+
+| Termo 				| Definição																			|
+------------------------|-----------------------------------------------------------------------------------|
+| subject				| Quem deseja fazer a ação.     													|
+| action				| Ação a ser autorizada.        													|
+| resource				| Recurso que sofrerá a ação.   													|
+| resource_server 		| Serviço que faz a intermediação para a autorização que foi solicitada ao Panda.	|
+| request				| Pedido que um cliente realiza a um servidor.										|
+
+
 
 #### **Quem pode usar esse endpoint?**
 ---
@@ -115,20 +129,6 @@ Abaixo estão listados os types e o que cada um significa.
 | srn:error:bad_challenge_solution	| request_body.subject.context.challenge_solution	| 403		| A resposta do challenge está incorreta. |
 | srn:error:challenge_not_found		|request_body.subject.context.challenge_solution	| 403		| O id do challenge não corresponde a nenhum existente. |
 | srn:error:unauthorized			| –													| 403		| Subject não tem as permissões necessárias pra executar a ação. |
-
-
-<br>
-
-#### **Glossário**
----
-
-
-| Termo 				| Definição						|
-------------------------|-------------------------------|
-| subject				| Quem deseja fazer a ação.     |
-| action				| Ação a ser autorizada.        |
-| resource				| Recurso que sofrerá a ação.   |
-
 
 
 <br>
