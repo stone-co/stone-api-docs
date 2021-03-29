@@ -1,0 +1,28 @@
+{
+    "env": "sandbox",
+    "event_happened_at": "2021-03-18T18:27:12Z",
+    "event_notified_at": "2021-03-18T20:38:45Z",
+    "event_type": "sign_up_created",
+    "iat": 1616099925,
+    "id": "0d2b2f92-8307-48b1-8d8e-e82eab83a6c0",
+    "jti": "2pmokkfjl9ag7mf4bo02ka8d",
+    "nbf": 1616099925,
+    "target_data": {
+        "error": null,
+        "event_happened_at": "2021-03-18T18:27:12.953288",
+        "event_type": "sign_up_created",
+        "id": "b697b712-6b56-4249-b955-5557a83741b0",
+        "owner_document": "97194266083",
+        "owner_id": "user:45b3ef0d-1a12-47fc-a3a3-ab4c2c156e4c",
+        "owner_type": "user",
+        "request_id": "6ad1e1451e3211a07b777d26ca3d5951",
+        "resource_details": {},
+        "resource_type": "srn:resource:paymentaccount",
+        "status": "created",
+        "subject_id": "application:5e34d0cd-7379-4d47-b762-cc4957be422e",
+        "update_reason": null
+    },
+    "target_detail_uri": "https://sandbox-api.openbank.stone.com.br/api/v1/applications/application:5e34d0cd-7379-4d47-b762-cc4957be422e/signups/b697b712-6b56-4249-b955-5557a83741b0",
+    "target_id": "b697b712-6b56-4249-b955-5557a83741b0",
+    "target_type": "sign_up_request"
+}

@@ -246,3 +246,33 @@ No geral um evento, quando recepcionado com sucesso, é enviado apenas uma vez p
 Todo webhook gerado pela Stone leva consigo uma chave de idempotência enviada no campo `x-stone-webhook-event-id` do header. 
 
 É importante que essa chave seja sempre salva pela sua aplicação e que a cada novo evento você verifique a idempotência desse evento evitando processar duas vezes um mesmo evento.
+
+
+##### **Webhooks de abertura de conta**
+
+
+ **Conta aberta automaticamente:**
+
+| Tipo de Evento                               | Descrição                                               | Exemplo        |
+| -------------------------------------------- | --------------------------------------------------------|--------------- |
+| sign_up_created                              | Enviado quando é feito o pedido de abertura de conta.   | [A1](/docs/guias/integracao/webhooks/A1.json)                |
+| sign_up_status_updated                       | | [A2](/docs/guias/integracao/webhooks/A2.json)   |
+| sign_up_resource_details_updated             | Enviado quando os automatics checks são requisitados pra rodar e o status da conta fica como "created". | [A3](/docs/guias/integracao/webhooks/A3.json) |
+| sign_up_resource_details_updated             | Enviado quando os automatics checks foram preenchidos.  | [A4](/docs/guias/integracao/webhooks/A4.json) |
+| sign_up_resource_details_updated             | Enviado quando os automatics checks terminam de rodar.  | [A5](/docs/guias/integracao/webhooks/A5.json) |
+| sign_up_resource_details_updated             | | [A6](/docs/guias/integracao/webhooks/A6.json) |
+| sign_up_resource_details_updated             | Enviado quando os automatics checks são aprovados.      | [A7](/docs/guias/integracao/webhooks/A7.json) | 
+| sign_up_resource_details_updated             | | [A8](/docs/guias/integracao/webhooks/A8.json) |
+| sign_up_resource_details_updated             | | [A9](/docs/guias/integracao/webhooks/A9.json) |
+
+
+- **Conta não aberta automaticamente:**
+
+| Tipo de Evento                               | Descrição                                               | Exemplo        |
+| -------------------------------------------- | --------------------------------------------------------|--------------- |
+| sign_up_created                              | Enviado quando é feito o pedido de abertura de conta.   | [B1](/docs/guias/integracao/webhooks/B1.json)                |
+| sign_up_status_updated                       | | [B2](/docs/guias/integracao/webhooks/B2.json)                |
+| sign_up_resource_details_updated             | Enviado quando os automatics checks são requisitados pra rodar e o status da conta fica como "created". | [B3](/docs/guias/integracao/webhooks/B3.json)                |
+| sign_up_resource_details_updated             | Enviado quando os automatics checks foram preenchidos.  | [B4](/docs/guias/integracao/webhooks/B4.json)                |
+| sign_up_resource_details_updated             | | [B5](/docs/guias/integracao/webhooks/B5.json)                |                  
+| sign_up_resource_details_updated             | | [B6](/docs/guias/integracao/webhooks/B6.json)                |

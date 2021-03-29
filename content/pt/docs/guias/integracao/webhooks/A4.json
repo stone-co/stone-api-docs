@@ -1,0 +1,40 @@
+{
+    "env": "sandbox",
+    "event_happened_at": "2021-03-18T18:27:23Z",
+    "event_notified_at": "2021-03-18T20:38:46Z",
+    "event_type": "sign_up_resource_details_updated",
+    "iat": 1616099926,
+    "id": "52b97f1c-c09b-4f9a-a8fd-0117727bdba3",
+    "jti": "2pmokkhcpcd74q2cpc02sik5",
+    "nbf": 1616099926,
+    "target_data": {
+        "error": null,
+        "event_happened_at": "2021-03-18T18:27:23.153352",
+        "event_type": "sign_up_resource_details_updated",
+        "id": "b697b712-6b56-4249-b955-5557a83741b0",
+        "owner_document": "97194266083",
+        "owner_id": "user:45b3ef0d-1a12-47fc-a3a3-ab4c2c156e4c",
+        "owner_type": "user",
+        "request_id": "fa9264eb-b260-4678-9440-8dccb7a28f0d",
+        "resource_details": {
+            "account_status": "created",
+            "account_status_changed_at": "2021-03-18T18:27:23.141412",
+            "account_status_timestamp": "2021-03-18T18:27:15",
+            "user_automatic_checks_status": "requested",
+            "user_automatic_checks_status_changed_at": "2021-03-18T18:27:14.900276",
+            "user_automatic_checks_status_timestamp": "2021-03-18T18:27:14",
+            "user_email_verified": "false",
+            "user_email_verified_changed_at": "2021-03-18T18:27:14.900276",
+            "user_input_assessment_status": "requested",
+            "user_input_assessment_status_changed_at": "2021-03-18T18:27:14.900276",
+            "user_input_assessment_status_timestamp": "2021-03-18T18:27:14"
+        },
+        "resource_type": "srn:resource:paymentaccount",
+        "status": "kyc_analysis",
+        "subject_id": "application:5e34d0cd-7379-4d47-b762-cc4957be422e",
+        "update_reason": "account_created"
+    },
+    "target_detail_uri": "https://sandbox-api.openbank.stone.com.br/api/v1/applications/application:5e34d0cd-7379-4d47-b762-cc4957be422e/signups/b697b712-6b56-4249-b955-5557a83741b0",
+    "target_id": "b697b712-6b56-4249-b955-5557a83741b0",
+    "target_type": "sign_up_request"
+}
