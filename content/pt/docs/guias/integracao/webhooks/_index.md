@@ -26,51 +26,90 @@ A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) s
 
 {{% /pageinfo %}}
 
-
+<br>
 
 #### **Os eventos que geram notificações são:**
 
+
+##### **Emissão de Boleto:**
+
+
+| Tipo de Evento                               | Descrição                                                                 |
+| -------------------------------------------- | ------------------------------------------------------------------------- |
+| barcode_payment_invoice_created              | Representa a criação/emissão de um boleto.                                |
+| barcode_payment_invoice_registered           | Representa o registro de um boleto.                                       |
+| barcode_payment_invoice_payment_promissed    | Representa que o pagamento do boleto foi acolhido em alguma instituição.  |
+| barcode_payment_invoice_settled              | Representa que pagamento do boleto foi confirmado.                        |
+| cash_in_barcode_payment                      | Representa a entrada do valor do boleto na conta do beneficiário.         | 
+
+
+##### **Pagamento de Boleto:**
+
+| Tipo de Evento                               | Descrição                                                                 |
+| -------------------------------------------- | ------------------------------------------------------------------------- |
+| cash_in_payment_refund                       | Representa o reembolso de um pagamento mal sucedido.                      |
+| cash_out_payment                             | Representa a criação de um pagamento.                                     |
+| cash_out_payment_failed                      | Representa a falha na criação de um pagamento.                            |
+| cash_out_payment_scheduled                   | Representa o agendamento de um pagamento.                                 |
+| cash_out_payment_scheduled_failed            | Representa a falha no agendamento de um pagamento.                        |
+| cash_out_payment_approved                    | Representa a aprovação de um pagamento.                                   |
+| cash_out_payment_execution_started           | Representa o início da execução de um pagamento.                          |
+| cash_out_payment_cancelled                   | Representa o cancelamento de um pagamento.                                |
+| cash_out_payment_rejected                    | Representa a rejeição de um pagamento.                                    |
+| cash_out_payment_finished                    | Representa a finalização de um pagamento.                                 |
+| cash_out_payment_expired                     | Representa a expiração de um pagamento.                                   |
+
+
+##### **Transferência interna:**
+
 | Tipo de Evento                               | Descrição                                                                |
 | -------------------------------------------- | ------------------------------------------------------------------------ |
-| barcode_payment_invoice_created              | Representa a criação/emissão de um boleto.                               |
-| barcode_payment_invoice_registered           | Representa o registro de um boleto.                                      |
-| barcode_payment_invoice_payment_promissed    | Representa que o pagamento do boleto foi acolhido em alguma instituição. |
-| barcode_payment_invoice_settled              | Representa que pagamento do boleto foi confirmado.                       |
-| cash_in_barcode_payment                      | Representa a entrada do valor do boleto na conta do beneficiário.        |
-| cash_in_payment_refund                       | Representa o reembolso de um pagamento mal sucedido.                     |
-| cash_in_internal_transfer                    | Representa o recebimento de uma transferência interna.                   |
-| cash_in_external_transfer                    | Representa o recebimento de uma transferência externa.                   |
-| cash_in_external_transfer_refund             | Representa o reembolso de uma transferência externa mal sucedida.        |
-| cash_out_internal_transfer                   | Representa a criação de uma transferência interna.                       |
-| cash_out_internal_transfer_failed            | Representa a falha na criação de uma transferência interna.              |
-| cash_out_internal_transfer_scheduled         | Representa o agendamento de uma transferência interna.                   |
-| cash_out_internal_transfer_scheduled_failed  | Representa a falha no agendamento de uma transferência interna.          |
-| cash_out_internal_transfer_approved          | Representa a aprovação de uma transferência interna                      |
-| cash_out_internal_transfer_cancelled         | Representa o cancelamento de uma transferência interna                   |
-| cash_out_internal_transfer_rejected          | Representa a rejeição de uma transferência interna                       |
-| cash_out_internal_transfer_finished          | Representa a finalização de uma transferência interna                    |
-| cash_out_internal_transfer_expired           | Representa a expiração de uma transferência interna                      |
-| cash_out_external_transfer                   | Representa a criação de uma transferência externa.                       |
-| cash_out_external_transfer_failed            | Representa a falha na criação de uma transferência externa.              |
-| cash_out_external_transfer_scheduled         | Representa o agendamento de uma transferência externa.                   |
-| cash_out_external_transfer_scheduled_failed  | Representa a falha no agendamento de uma transferência externa.          |
-| cash_out_external_transfer_approved          | Representa a aprovação de uma transferência externa                      |
-| cash_out_external_transfer_execution_started | Representa o início da execução de uma transferência externa             |
-| cash_out_external_transfer_cancelled         | Representa o cancelamento de uma transferência externa                   |
-| cash_out_external_transfer_rejected          | Representa a rejeição de uma transferência externa                       |
-| cash_out_external_transfer_finished          | Representa a finalização de uma transferência externa                    |
-| cash_out_external_transfer_expired           | Representa a expiração de uma transferência externa                      |
-| cash_out_payment                             | Representa a criação de um pagamento.                                    |
-| cash_out_payment_failed                      | Representa a falha na criação de um pagamento.                           |
-| cash_out_payment_scheduled                   | Representa o agendamento de um pagamento.                                |
-| cash_out_payment_scheduled_failed            | Representa a falha no agendamento de um pagamento.                       |
-| cash_out_payment_approved                    | Representa a aprovação de um pagamento.                                  |
-| cash_out_payment_execution_started           | Representa o início da execução de um pagamento                          |
-| cash_out_payment_cancelled                   | Representa o cancelamento de um pagamento.                               |
-| cash_out_payment_rejected                    | Representa a rejeição de um pagamento.                                   |
-| cash_out_payment_finished                    | Representa a finalização de um pagamento.                                |
-| cash_out_payment_expired                     | Representa a expiração de um pagamento.                                  |
-| consent_requested                            | Representa a confirmação do pedido de consentimento por parte do user    |
+| cash_in_internal_transfer                    | Representa o recebimento de uma transferência interna.                   |  
+| cash_out_internal_transfer                   | Representa a criação de uma transferência interna.                       |  
+| cash_out_internal_transfer_failed            | Representa a falha na criação de uma transferência interna.              | 
+| cash_out_internal_transfer_scheduled         | Representa o agendamento de uma transferência interna.                   | 
+| cash_out_internal_transfer_scheduled_failed  | Representa a falha no agendamento de uma transferência interna.          | 
+| cash_out_internal_transfer_approved          | Representa a aprovação de uma transferência interna.                     | 
+| cash_out_internal_transfer_cancelled         | Representa o cancelamento de uma transferência interna.                  | 
+| cash_out_internal_transfer_rejected          | Representa a rejeição de uma transferência interna.                      | 
+| cash_out_internal_transfer_finished          | Representa a finalização de uma transferência interna.                   | 
+| cash_out_internal_transfer_expired           | Representa a expiração de uma transferência interna.                     |  
+
+
+##### **Transferência externa:**
+
+| Tipo de Evento                               | Descrição                                                                |
+| -------------------------------------------- | ------------------------------------------------------------------------ |
+| cash_in_external_transfer                    | Representa o recebimento de uma transferência externa.                   | 
+| cash_in_external_transfer_refund             | Representa o reembolso de uma transferência externa mal sucedida.        | 
+| cash_out_external_transfer                   | Representa a criação de uma transferência externa.                       | 
+| cash_out_external_transfer_failed            | Representa a falha na criação de uma transferência externa.              | 
+| cash_out_external_transfer_scheduled         | Representa o agendamento de uma transferência externa.                   | 
+| cash_out_external_transfer_scheduled_failed  | Representa a falha no agendamento de uma transferência externa.          | 
+| cash_out_external_transfer_approved          | Representa a aprovação de uma transferência externa.                     | 
+| cash_out_external_transfer_execution_started | Representa o início da execução de uma transferência externa.            | 
+| cash_out_external_transfer_cancelled         | Representa o cancelamento de uma transferência externa.                  | 
+| cash_out_external_transfer_rejected          | Representa a rejeição de uma transferência externa.                      | 
+| cash_out_external_transfer_finished          | Representa a finalização de uma transferência externa.                   | 
+| cash_out_external_transfer_expired           | Representa a expiração de uma transferência externa.                     |           
+
+
+##### **Consentimento:**
+
+| Tipo de Evento                               | Descrição                                                                |
+| -------------------------------------------- | ------------------------------------------------------------------------ |
+| consent_requested                            | Representa a confirmação do pedido de consentimento por parte do user.   |
+
+
+##### **Abertura de conta:**
+
+| Tipo de Evento                               | Descrição                                               | Exemplo        |
+| -------------------------------------------- | --------------------------------------------------------|--------------- |
+| sign_up_created                              | Enviado quando é feito o pedido de abertura de conta.   | [A1](/docs/guias/integracao/webhooks/A1.json)                |
+| sign_up_status_updated                       | Enviado quando é feito uma atualização dos dados na abertura da conta.        | [A2](/docs/guias/integracao/webhooks/A2.json)   |
+| sign_up_resource_details_updated             | Serão enviados diversos webhooks com este tipo de evento de acordo com a evolução da abertura de conta. Ex: `account_created`, `user_email_verified`, ....| [A3](/docs/guias/integracao/webhooks/A3.json) |
+
+
 
 <br>
 
@@ -85,7 +124,7 @@ x-stone-webhook-event-type: "cash_out_internal_transfer"
 
 A idempotência de webhooks deverá ser validada no campo 'x-stone-webhook-event-id' disponível no header.
 
-
+<br>
 
 #### **O payload das notificações segue a seguinte estrutura:**
 
@@ -247,32 +286,3 @@ Todo webhook gerado pela Stone leva consigo uma chave de idempotência enviada n
 
 É importante que essa chave seja sempre salva pela sua aplicação e que a cada novo evento você verifique a idempotência desse evento evitando processar duas vezes um mesmo evento.
 
-
-##### **Webhooks de abertura de conta**
-
-
- **Conta aberta automaticamente:**
-
-| Tipo de Evento                               | Descrição                                               | Exemplo        |
-| -------------------------------------------- | --------------------------------------------------------|--------------- |
-| sign_up_created                              | Enviado quando é feito o pedido de abertura de conta.   | [A1](/docs/guias/integracao/webhooks/A1.json)                |
-| sign_up_status_updated                       | | [A2](/docs/guias/integracao/webhooks/A2.json)   |
-| sign_up_resource_details_updated             | Enviado quando os automatics checks são requisitados pra rodar e o status da conta fica como "created". | [A3](/docs/guias/integracao/webhooks/A3.json) |
-| sign_up_resource_details_updated             | Enviado quando os automatics checks foram preenchidos.  | [A4](/docs/guias/integracao/webhooks/A4.json) |
-| sign_up_resource_details_updated             | Enviado quando os automatics checks terminam de rodar.  | [A5](/docs/guias/integracao/webhooks/A5.json) |
-| sign_up_resource_details_updated             | | [A6](/docs/guias/integracao/webhooks/A6.json) |
-| sign_up_resource_details_updated             | Enviado quando os automatics checks são aprovados.      | [A7](/docs/guias/integracao/webhooks/A7.json) | 
-| sign_up_resource_details_updated             | | [A8](/docs/guias/integracao/webhooks/A8.json) |
-| sign_up_resource_details_updated             | | [A9](/docs/guias/integracao/webhooks/A9.json) |
-
-
-- **Conta não aberta automaticamente:**
-
-| Tipo de Evento                               | Descrição                                               | Exemplo        |
-| -------------------------------------------- | --------------------------------------------------------|--------------- |
-| sign_up_created                              | Enviado quando é feito o pedido de abertura de conta.   | [B1](/docs/guias/integracao/webhooks/B1.json)                |
-| sign_up_status_updated                       | | [B2](/docs/guias/integracao/webhooks/B2.json)                |
-| sign_up_resource_details_updated             | Enviado quando os automatics checks são requisitados pra rodar e o status da conta fica como "created". | [B3](/docs/guias/integracao/webhooks/B3.json)                |
-| sign_up_resource_details_updated             | Enviado quando os automatics checks foram preenchidos.  | [B4](/docs/guias/integracao/webhooks/B4.json)                |
-| sign_up_resource_details_updated             | | [B5](/docs/guias/integracao/webhooks/B5.json)                |                  
-| sign_up_resource_details_updated             | | [B6](/docs/guias/integracao/webhooks/B6.json)                |
