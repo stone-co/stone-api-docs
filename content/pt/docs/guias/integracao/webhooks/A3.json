@@ -1,0 +1,41 @@
+{
+    "env": "sandbox",
+    "event_happened_at": "2021-03-18T18:25:29Z",
+    "event_notified_at": "2021-03-18T20:35:08Z",
+    "event_type": "sign_up_resource_details_updated",
+    "iat": 1616099708,
+    "id": "3da1c94d-ec8d-4fc7-9f85-ceee621e953f",
+    "jti": "2pmok7qudcia07l34402m5ua",
+    "nbf": 1616099708,
+    "target_data": {
+        "error": null,
+        "event_happened_at": "2021-03-18T18:25:29.832206",
+        "event_type": "sign_up_resource_details_updated",
+        "id": "d74b3ed7-110d-4ced-a3a6-c9fcaf782ab0",
+        "owner_document": "57639324041",
+        "owner_id": "user:5548aaed-a39d-4aff-8e69-ce20c06feb2b",
+        "owner_type": "user",
+        "request_id": "ae7f72c3b1c42a7f9b1a8e84b5a7cd37",
+        "resource_details": {
+            "account_status": "created",
+            "account_status_changed_at": "2021-03-18T18:19:40.927631",
+            "account_status_timestamp": "2021-03-18T18:19:31",
+            "user_automatic_checks_status": "requested",
+            "user_automatic_checks_status_changed_at": "2021-03-18T18:19:42.975070",
+            "user_automatic_checks_status_timestamp": "2021-03-18T18:19:42.975005",
+            "user_email_verified": "true",
+            "user_email_verified_changed_at": "2021-03-18T18:25:29.818586",
+            "user_email_verified_timestamp": "2021-03-18T18:25:13.390909",
+            "user_input_assessment_status": "requested",
+            "user_input_assessment_status_changed_at": "2021-03-18T18:19:42.944056",
+            "user_input_assessment_status_timestamp": "2021-03-18T18:19:42.944018"
+        },
+        "resource_type": "srn:resource:paymentaccount",
+        "status": "kyc_analysis",
+        "subject_id": "application:5e34d0cd-7379-4d47-b762-cc4957be422e",
+        "update_reason": "user_email_verified"
+    },
+    "target_detail_uri": "https://sandbox-api.openbank.stone.com.br/api/v1/applications/application:5e34d0cd-7379-4d47-b762-cc4957be422e/signups/d74b3ed7-110d-4ced-a3a6-c9fcaf782ab0",
+    "target_id": "d74b3ed7-110d-4ced-a3a6-c9fcaf782ab0",
+    "target_type": "sign_up_request"
+}

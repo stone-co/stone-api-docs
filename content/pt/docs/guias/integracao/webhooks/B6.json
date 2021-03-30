@@ -1,0 +1,40 @@
+{
+    "env": "sandbox",
+    "event_happened_at": "2021-03-19T13:03:59Z",
+    "event_notified_at": "2021-03-19T13:03:59Z",
+    "event_type": "sign_up_resource_details_updated",
+    "iat": 1616159039,
+    "id": "85a11aab-d8c6-499d-a1f0-f65a20904eae",
+    "jti": "2pms05bv3hipqsuvoo0ki7g5",
+    "nbf": 1616159039,
+    "target_data": {
+        "error": null,
+        "event_happened_at": "2021-03-19T13:03:59.803315",
+        "event_type": "sign_up_resource_details_updated",
+        "id": "10c3fca5-cf3c-4303-8901-02979b412c6b",
+        "owner_document": "59351277097",
+        "owner_id": "user:4f91a8ce-aad1-4235-a5c9-a77231137323",
+        "owner_type": "user",
+        "request_id": "25972804-0e09-41a9-ad0d-70d29d873f59",
+        "resource_details": {
+            "account_status": "empty",
+            "account_status_changed_at": "2021-03-19T13:03:55.829473",
+            "account_status_timestamp": "2021-03-19T13:03:55.829473",
+            "user_automatic_checks_status": "partially_rejected",
+            "user_automatic_checks_status_changed_at": "2021-03-19T13:03:59.761658",
+            "user_automatic_checks_status_timestamp": "2021-03-19T13:03:59.761597",
+            "user_email_verified": "false",
+            "user_email_verified_changed_at": "2021-03-19T13:03:55.829473",
+            "user_input_assessment_status": "requested",
+            "user_input_assessment_status_changed_at": "2021-03-19T13:03:59.718853",
+            "user_input_assessment_status_timestamp": "2021-03-19T13:03:59.718803"
+        },
+        "resource_type": "srn:resource:paymentaccount",
+        "status": "kyc_analysis",
+        "subject_id": "application:5e34d0cd-7379-4d47-b762-cc4957be422e",
+        "update_reason": "user_automatic_checks_status_updated"
+    },
+    "target_detail_uri": "https://sandbox-api.openbank.stone.com.br/api/v1/applications/application:5e34d0cd-7379-4d47-b762-cc4957be422e/signups/10c3fca5-cf3c-4303-8901-02979b412c6b",
+    "target_id": "10c3fca5-cf3c-4303-8901-02979b412c6b",
+    "target_type": "sign_up_request"
+}

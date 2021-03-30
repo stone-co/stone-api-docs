@@ -1,0 +1,40 @@
+{
+    "env": "sandbox",
+    "event_happened_at": "2021-03-18T18:27:25Z",
+    "event_notified_at": "2021-03-18T20:38:47Z",
+    "event_type": "sign_up_resource_details_updated",
+    "iat": 1616099927,
+    "id": "901c9b72-3869-4650-a7ab-3529eca0dd61",
+    "jti": "2pmokkic33a10vq3os02nfc7",
+    "nbf": 1616099927,
+    "target_data": {
+        "error": null,
+        "event_happened_at": "2021-03-18T18:27:25.180433",
+        "event_type": "sign_up_resource_details_updated",
+        "id": "b697b712-6b56-4249-b955-5557a83741b0",
+        "owner_document": "97194266083",
+        "owner_id": "user:45b3ef0d-1a12-47fc-a3a3-ab4c2c156e4c",
+        "owner_type": "user",
+        "request_id": "6ad1e1451e3211a07b777d26ca3d5951",
+        "resource_details": {
+            "account_status": "created",
+            "account_status_changed_at": "2021-03-18T18:27:23.141412",
+            "account_status_timestamp": "2021-03-18T18:27:15",
+            "user_automatic_checks_status": "answered",
+            "user_automatic_checks_status_changed_at": "2021-03-18T18:27:25.150398",
+            "user_automatic_checks_status_timestamp": "2021-03-18T18:27:25.150360",
+            "user_email_verified": "false",
+            "user_email_verified_changed_at": "2021-03-18T18:27:14.900276",
+            "user_input_assessment_status": "requested",
+            "user_input_assessment_status_changed_at": "2021-03-18T18:27:25.154372",
+            "user_input_assessment_status_timestamp": "2021-03-18T18:27:25.154335"
+        },
+        "resource_type": "srn:resource:paymentaccount",
+        "status": "kyc_analysis",
+        "subject_id": "application:5e34d0cd-7379-4d47-b762-cc4957be422e",
+        "update_reason": "user_input_assessment_status_updated"
+    },
+    "target_detail_uri": "https://sandbox-api.openbank.stone.com.br/api/v1/applications/application:5e34d0cd-7379-4d47-b762-cc4957be422e/signups/b697b712-6b56-4249-b955-5557a83741b0",
+    "target_id": "b697b712-6b56-4249-b955-5557a83741b0",
+    "target_type": "sign_up_request"
+}
