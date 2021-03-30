@@ -18,23 +18,8 @@ Esse endpoint tem como finalidade autorizar *actions* de um *subject* sobre um d
 
 O objetivo de uma autorização é assegurar que o *subject* (pessoa ou aplicação autenticada) possa visualizar, alterar ou deletar um recurso. O fluxo começa no *front-end*, com um *request* cuja ação seja tanto de leitura quanto de escrita. Esse *request* precisa ser encaminhado para o serviço responsável por este recurso. Este serviço é chamado de `resource server`. Ao receber uma requisição que demande autorização, o `resource server` deve perguntar ao panda se o *subject do token* tem ou não autorização para performar aquela ação.
 
-
-
-#### **Glossário**
----
 <br>
 
-| Termo 				| Definição																			|
-------------------------|-----------------------------------------------------------------------------------|
-| subject				| Quem deseja fazer a ação.     													|
-| action				| Ação a ser autorizada.        													|
-| resource_id			| Account_id.																		|
-| resource_type			| Tipo do Recurso. 																	|
-| resource				| Recurso que sofrerá a ação.   													|
-| resource_server 		| Responsável por gerenciar o domínio do recurso.									|
-| request				| Pedido que um cliente realiza a um servidor.										|
-
-<br>
 
 #### **Quem pode usar esse endpoint?**
 ---
@@ -53,6 +38,51 @@ Caso já tenha uma aplicação, é necessário solicitar que a sua aplicação s
 
 Você pode seguir o guia descrito [clicando aqui](/docs/guias/integracao/autenticacao).
 
+
+<br>
+
+#### **Glossário**
+---
+
+<br>
+
+| Termo                 | Definição                                                                         |
+------------------------|-----------------------------------------------------------------------------------|
+| subject               | Quem deseja fazer a ação.                                                         |
+| action                | Ação a ser autorizada.                                                            |
+| resource              | Recurso que sofrerá a ação.                                                       |
+| resource_server       | Responsável por gerenciar o domínio do recurso.                                   |
+| request               | Pedido que um cliente realiza a um servidor.                                      |
+
+<br>
+
+##### **Campos do objeto Action**
+
+| Campo                 | Descrição                                                     |
+------------------------|---------------------------------------------------------------|
+| context               | Objeto contendo o id e o tipo do recurso a ser autorizado.    |
+| name                  | Nome da Ação.                                                 |
+| resource_id           | Account_id.                                                   |
+| resource_type         | Tipo do Recurso.                                              |
+
+<br>
+
+##### **Campos do objeto Subject**
+
+| Campo                 | Descrição                                                                             |
+------------------------|---------------------------------------------------------------------------------------|
+| token                 | Sessão do usário. Deve ser o token presente no momento da requisição a ser autorizada.|
+| context               | Objeto contendo informações úteis sobre a sessão ativa.                               |
+
+<br>
+
+##### **Campos do objeto Context**
+
+| Campo                 | Descrição                                             |
+------------------------|-------------------------------------------------------|
+| request_hash          | Deve ser um hash do corpo da requisição.              |
+| user_agent            | O header de user_agent do subject.                    |
+| challenge_solution    | JWE com a solução do challenge (caso seja necessário).|
 
 <br>
 
@@ -88,14 +118,39 @@ Agora que geramos o token para acessar o endpoint, no passo anterior, segue exem
     "context": {}
 }
 ```
+<br>
+
+Caso a action não solicite challenge, a resposta do request será essa:
+
+
+
+##### **Response**
+
+
+```json
+{
+    "action": {
+        "name": "show_account_balance_public",
+        "response": null,
+        "status": "authorized"
+    },
+    "id": 2772275,
+    "optional_actions": []
+}
+```
+<br>
+
+Caso a action a ser autorizada demande *challenge*, o fluxo seguinte deverá ser seguido.
+
+<br>
 
 
 #### **Fluxo de autorização de challenge**
 ---
 
-Caso a action a ser autorizada demande *challenge*, o fluxo seguinte deverá ser seguido:
+<br>
 
-1) A primeira requisição (com o request body como descrito abaixo) retornará:
+1) A requisição que necessita do challenge retornará
 
 `status: 403`
 
@@ -112,6 +167,7 @@ Caso a action a ser autorizada demande *challenge*, o fluxo seguinte deverá ser
 
 Note que `required_types` indicará quais tipos de *credencial* o *subject* deverá preencher pra conseguir uma autorização. Alguns valores possíveis são: `login_password`, `pin` e `totp`.
 
+<br>
 
 2) O próximo *request* deverá conter o `challenge_solution`.
 
@@ -129,7 +185,7 @@ Para gerar o JWE você usará a chave com `"use": "enc"` exposta em `api/v1/disc
 
 Após a solução do *challenge*, você receberá a resposta indicando o status da autorização ou uma resposta com status 403 o problema na solução do *challenge* ou na falta de permissão do *subject*.
 
-
+<br>
 
 ##### **Como gerar um JWE**
 ---
@@ -145,109 +201,84 @@ Para gerar um token JWE (JWT criptografado) seguimos 3 passos:
 
 <br>
 
+Segue um exemplo de como gerar um JWE em Python:
+
+```python
+import requests
+import json
+from jwcrypto import jwe, jwk
+import sys
+
+
+def build_challenge_solution(challenge_id, typ, solution_value):
+  dic = {"challenge_id": challenge_id}
+  dic.update({typ: solution_value})
+  
+  return generate_jwe(json.dumps(dic))
+  
+
+def generate_jwe(payload):
+  key = get_public_key()
+  public_key = jwk.JWK()
+  public_key = public_key.from_json(json.dumps(key))
+
+  encrypted = jwe.JWE(payload.encode("utf-8"), recipient=public_key, protected={
+      "alg": "RSA-OAEP-256",
+      "enc": "A256GCM",
+      "kid": key["kid"],
+  })
+
+  return encrypted.serialize(compact=True)
+
+
+def get_public_key():
+  response = requests.get(
+      "https://sandbox-api.openbank.stone.com.br/api/v1/discovery/keys")
+
+  for key in response.json()["keys"]:
+      if key["use"] == "enc":
+          return key
+
+if __name__ == "__main__":
+  [challenge_id, typ, value] = sys.argv[1:]
+  solution = build_challenge_solution(challenge_id, typ, value)
+  print(solution)
+```
+
+##### **Response**
+
+A resposta será um token que será utilizado no challenge.
+
+```
+eyJhbGciOiJSU0EtT0FFUC0yNTYiLCJlbmMiOiJBMjU2R0NNIiwia2lkIjoiNjdkY2JhZTAtN2JlYi0xMWU5LTllZDUtMDI0MmFjMTEwMDAyIn0.FhyzgGAcmitGYoyzRxO9GhgQ-nMj1DK6gCREmnockGBxjbdPPae7CQPeVzgN50oqt2sK7tEmAMRQxBFAjfsa5bPQT2s-8s3a2M0S01cCwuQJCv43O3EFQoXGv113fGXobEzmyzGY6uAkc6Gmn1CdluN6NfNJIKnplk6GLpgUlrRIrkcEcgPUnJhvhavc-sNK8DUdAT9CaOHyrtZmAsfbmeMc5UdApcM6OJYz1R-4P_92Ygc3WCy2w7vpzwDpHq1z4EjzH7RT9Nxw20CZdi7BWZdgThBWQddikZETB41ghsO_6xOA7GorOl0bvYaSnHrZfVXdbMhltFnKy9WlA_BW66KO2UudkPjLL-SMcM2penwrPXqYMm7z0WIG3hmxH2xYw3TWjED1ZydNgsBH7s14QcAul3TrOS_obHyUrr753o30PTopuFmQesLzoUN0j1qJ6Xm-N2oXdjNEN7TBTXDhbUwgUZLnN_pjtfMT_iSF1imm93REX8w-5Z0rtQ03geORJ48s5ZCF3Gqgj3nKDBk7KLtEUWurpqRoop1EVEgP63ejTpX7kZgxjCAetSyH-pOvXJGZ8Z26Upmy1Rk50keagtr8vMY4raQVMALqWR_yPHiJFWWZNoLvT-3qKOYZS1x--UJP71JIEfeHq9dc-bD_nw_7s9OlqnGKSrQEjvopjY8.n1pAhTkp2N1DAcVE.3DjPqAzJ7SVVM9Tdd-w_UfyvGxtUOAtbQWIVSoz5v6iJ_lwDEkQf1a2EsBvIxTpNLVjdMu_HGFJTYJOmtlN0gM2VZ2YpEtzITw.C_WphE40TvNCXECOLCgGIw
+```
+<br>
+
 Segue exemplo de um fluxo de autorização incluindo o challenge:
+
+
 
 ```Json
 {
     "action": {
         "context": {
-            "resource_id": "id do recurso",
-            "resource_type": "tipo do recurso"
+            "resource_id": "<inserir resource_id>",
+            "resource_type": "srn:resource:user"
         },
-        "name": "nome da action configurada no admin"
+        "name": "authorize_action_with_challenge_public"
     },
     "subject": {
-        "token": "jwt da sessão a ser autorizada"
-    },
-    "context": {
-        "user_agent": "user agent",
-        "request_hash": "request hash",
-        "challenge_solution": "solução do challenge, caso seja necessário",
-        "user_ip": "ip do usuário",
-        "location": "jwe com lat e long do usuário no momento da autorização"
+        "token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJUUUY0c2p5RUJfRUthV0VfSkxEZExHMVlKYXVnNklTV0tQbEdEeG9qNzhjIn0.eyJqdGkiOiJhM2RhY2MyOC1mNDc0LTQ3YmQtYmNlNS1iNzU4YWEwYmE3YzYiLCJleHAiOjE2MTcxMTM5NzUsIm5iZiI6MCwiaWF0IjoxNjE3MTEzMDc1LCJpc3MiOiJodHRwczovL2xvZ2luLnNhbmRib3guc3RvbmUuY29tLmJyL2F1dGgvcmVhbG1zL3N0b25lX2FjY291bnQiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiZmMyMjM1ZjgtMzlhYy00Mzk1LTg5YmYtOGY1ZmIzZmU2OTZiIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiYWJjX3dlYkBvcGVuYmFuay5zdG9uZS5jb20uYnIiLCJhdXRoX3RpbWUiOjAsInNlc3Npb25fc3RhdGUiOiI1ZTA1ZTk0My1lYTdmLTRmOGQtODY4NS01MDFkMWVlYTYyZjgiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHBzOi8vc2FuZGJveC5jb250YS5zdG9uZS5jb20uYnIiLCJodHRwOi8vbG9jYWxob3N0OjMwMDAiLCJodHRwczovL3NhbmRib3gtZGFzaGJvYXJkLm9wZW5iYW5rLnN0b25lLmNvbS5iciIsImh0dHBzOi8vc2FuZGJveC5vcGVuYmFuay5zdG9uZS5jb20uYnIiXSwic2NvcGUiOiJlbnRpdHk6bGVnYWxfd3JpdGUgZW50aXR5OmxvYW46Y3JlYXRlIGludmVzdG1lbnQ6c3BhY2U6cmVhZCBjYXJkOnJlYWQgaW52ZXN0bWVudDpyZWFkIGVudGl0eTpyZWFkIHByaW5jaXBhbDpjb25zZW50IHBpeDplbnRyeSBpbnZlc3RtZW50OnNwYWNlOmRlcG9zaXQgc3RvbmVfc3ViamVjdF9pZCBlbnRpdHk6bG9hbjphY2NlcHQgcGF5bWVudGFjY291bnQ6KiBpbnZlc3RtZW50OnNwYWNlOndyaXRlIHJlY2VpdmFibGU6YWxsIGV4cGVuZDp0cmFuc2ZlcnM6ZXh0ZXJuYWwgc2FsYXJ5OnBvcnRhYmlsaXR5IGV4cGVuZDpwYXlyb2xscyBwaXg6ZW50cnlfY2xhaW0gcGl4OnBheW1lbnRfaW52b2ljZSBpbnZlc3RtZW50OnNwYWNlOmRlbGV0ZSBlbnRpdHk6d3JpdGUgcGF5bWVudGFjY291bnQ6cGF5bWVudGxpbmtzOndyaXRlIGV4cGVuZDpib2xldG9pc3N1YW5jZSBleHBlbmQ6cGF5bWVudHMgZW1haWwgaW52ZXN0bWVudDp3cml0ZSBzdG9uZV9hY2NvdW50cyBleHBlbmQ6cmVhZCBwcm9maWxlIGV4cGVuZDp0cmFuc2ZlcnM6aW50ZXJuYWwgcGl4OnBheW1lbnQgcGF5bWVudGFjY291bnQ6cGF5bWVudGxpbmtzOnJlYWQgZXhwZW5kOnBheW1lbnRsaW5rcyBjYXJkOndyaXRlIGludmVzdG1lbnQ6c3BhY2U6d2l0aGRyYXdhbCBleHBlbmQ6cGl4X3BheW1lbnQiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwic3RvbmVfc3ViamVjdF9pZCI6InVzZXI6ZGZmOTFiMTEtOTA1YS00YmYzLWFmZTYtMmQxZjgwYjYwMzYxIiwibmFtZSI6IkdhYnJpZWxhIEFicmV1IGRlIEFuZHJhZGUgR2FicmllbGEgQWJyZXUgZGUgQW5kcmFkZSIsInN0b25lX2FjY291bnRzIjoiZW5hYmxlZCIsInByZWZlcnJlZF91c2VybmFtZSI6ImdhYnJpZWxhLmFuZHJhZGVAc3RvbmUuY29tLmJyIiwiZ2l2ZW5fbmFtZSI6IkdhYnJpZWxhIEFicmV1IGRlIEFuZHJhZGUiLCJsb2NhbGUiOiJwdC1CUiIsImZhbWlseV9uYW1lIjoiR2FicmllbGEgQWJyZXUgZGUgQW5kcmFkZSIsImVtYWlsIjoiZ2FicmllbGEuYW5kcmFkZUBzdG9uZS5jb20uYnIifQ.Kf4A_cBnFucisXQYBmH4L70S64l8XQyvzOScqSIOqsG5TIZoX0SFNxjgV3dAi36jiMpZWBWasuWn9xbr1effGzsokGG8r0lvB0kKA4SP72bTSINkqwl3hRzKIRUz-hBPJKuKh6O02jpCaTwnjkpxwyAd7bwMvLrDb9Jqc_aDj_S2kuutzO22z9hV3ao79gDuVp_1N11KWMl1Ye2bnw2-3bBOWlaRjQTSL92KqJdNaGiOlra-xogfguDB8Pb8skJZZdwZBRbk3LcXgOUphrbhiqF0Qdi3VPppkix8o-pp6AytYvGhVyjsXqp-gEyOf4wxt-qSMDuXLnWxiKfantP3Hg",
+        "context": {
+            "request_hash": "123",
+            "user_agent": "postman",
+            "user_ip": "<inserir user_ip>",
+            "challenge_solution": "eyJhbGciOiJSU0EtT0FFUC0yNTYiLCJlbmMiOiJBMjU2R0NNIiwia2lkIjoiNjdkY2JhZTAtN2JlYi0xMWU5LTllZDUtMDI0MmFjMTEwMDAyIn0.FhyzgGAcmitGYoyzRxO9GhgQ-nMj1DK6gCREmnockGBxjbdPPae7CQPeVzgN50oqt2sK7tEmAMRQxBFAjfsa5bPQT2s-8s3a2M0S01cCwuQJCv43O3EFQoXGv113fGXobEzmyzGY6uAkc6Gmn1CdluN6NfNJIKnplk6GLpgUlrRIrkcEcgPUnJhvhavc-sNK8DUdAT9CaOHyrtZmAsfbmeMc5UdApcM6OJYz1R-4P_92Ygc3WCy2w7vpzwDpHq1z4EjzH7RT9Nxw20CZdi7BWZdgThBWQddikZETB41ghsO_6xOA7GorOl0bvYaSnHrZfVXdbMhltFnKy9WlA_BW66KO2UudkPjLL-SMcM2penwrPXqYMm7z0WIG3hmxH2xYw3TWjED1ZydNgsBH7s14QcAul3TrOS_obHyUrr753o30PTopuFmQesLzoUN0j1qJ6Xm-N2oXdjNEN7TBTXDhbUwgUZLnN_pjtfMT_iSF1imm93REX8w-5Z0rtQ03geORJ48s5ZCF3Gqgj3nKDBk7KLtEUWurpqRoop1EVEgP63ejTpX7kZgxjCAetSyH-pOvXJGZ8Z26Upmy1Rk50keagtr8vMY4raQVMALqWR_yPHiJFWWZNoLvT-3qKOYZS1x--UJP71JIEfeHq9dc-bD_nw_7s9OlqnGKSrQEjvopjY8.n1pAhTkp2N1DAcVE.3DjPqAzJ7SVVM9Tdd-w_UfyvGxtUOAtbQWIVSoz5v6iJ_lwDEkQf1a2EsBvIxTpNLVjdMu_HGFJTYJOmtlN0gM2VZ2YpEtzITw.C_WphE40TvNCXECOLCgGIw"
+        }
     }
 }
 ```
-
-
-
-##### **Glossário Request Body**
----
-
-
-##### **Action**
-
-| Campo 				| Descrição														|
-------------------------|---------------------------------------------------------------|
-| context				| Objeto contendo o id e o tipo do recurso a ser autorizado.    |
-| name 					| Nome da Ação.											        |
-
-
-##### **Subject**
-
-| Campo 				| Descrição																				|
-------------------------|---------------------------------------------------------------------------------------|
-| token					| Sessão do usário. Deve ser o token presente no momento da requisição a ser autorizada.|
-| context				| Objeto contendo informações úteis sobre a sessão ativa.								|
-
-
-##### **Context**
-
-| Campo 				| Descrição												|
-------------------------|-------------------------------------------------------|
-| request_hash			| Deve ser um hash do corpo da requisição.				|
-| user_agent			| O header de user_agent do subject.					|
-| challenge_solution	| JWE com a solução do challenge (caso seja necessário).|
-
-
 <br>
-
-##### **Schema**
----
-
-**object:**
-
-- **action** `object`
-
-	- **context** `object`
-
-     	- **resource_id** `string`
-
-     	- **resource_type** `string`
-
-    	- **name** `string`
-
-
-- **subject** `Object`
-
-	- **token** `string`
-
-	- **context** `object`
-
-		- **request_hash** `string`
-
- 		- **user_agent** `string`
-
- 		- **challeng_solution** `string`
-
- 		- **user_ip** `string`
-
- 		- **location** `string`
-
-
-- **optional_actions** `array[object]`
-
-    - **context** `object`
-
-   		- **resource_id** `string`
-
-   		- **resource_type** `string` 
-
-   		- **name** `string`
-
-
-<br>
-
 
 ##### **Responses**
 ---
@@ -264,14 +295,17 @@ Segue exemplo de um fluxo de autorização incluindo o challenge:
 		optional_actions: []
 }
 ```
+<br>
 
 #### **Tipos de erro**
 ---
+<br>
 
 Caso haja algum “problema” durante o processo de autorização, é importante checar o campo `"type"` retornado no response body. 
 
 Abaixo estão listados os types e o que cada um significa.
 
+<br>
 
 | Type 								| Campo a qual se refere 							| Status 	| Descrição				|
 ------------------------------------|---------------------------------------------------| ----------| -----------------------
