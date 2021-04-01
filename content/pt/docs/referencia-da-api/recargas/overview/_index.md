@@ -22,7 +22,25 @@ Para efetuar uma recarga o cliente precisa ter saldo suficiente em conta, a reca
 
 <br>
 
-### **Tipos de Recargas**
+#### **Glossário**
+---
+<br>
+
+Informações (Chave/Valor) que serão usadas nos fluxos de recargas.
+
+<br>
+
+
+| Chave                               | Valor                                                               |
+| ----------------------------------- | ------------------------------------------------------------------- |
+| account_id						  |	Client_id															|
+| amount							  |	Valor da recarga desejado.											|
+| cellphone							  | Número de celular que receberá a recarga 							|	
+| provider_id						  | Id da operadora. 													|
+
+<br>
+
+#### **Tipos de Recargas**
 ---
 
 <br>
@@ -39,6 +57,7 @@ Para efetuar uma recarga o cliente precisa ter saldo suficiente em conta, a reca
 - [**Meios de Transporte.**](/docs/referencia-da-api/recargas/recarga-de-meios-de-transporte/)
 
 
+<br>
 
 
 
