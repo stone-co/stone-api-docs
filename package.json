@@ -2,10 +2,10 @@
   "name": "stone-api-docs",
   "version": "1.0.0",
   "description": "docs for api documentation",
-  "dependencies": {},
   "devDependencies": {
-    "autoprefixer": "9.8.5",
-    "postcss-cli": "7.1.1"
+    "autoprefixer": "^9.8.6",
+    "postcss": "^7.0.34",
+    "postcss-cli": "^7.1.1"
   },
   "repository": {
     "type": "git",
