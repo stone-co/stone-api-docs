@@ -9,12 +9,18 @@ description: >
 ---
 
 ---
+<br>
 
-<Inserir aqui um overview de Recargas>
+Objetivo dessa documentação é pontuar as particularidades de cada tipo de recarga ofereceida na nossa API.
 
 
-<br> <br> <br>
+{{< alert title="Atenção" >}}
 
+Para efetuar uma recarga o cliente precisa ter saldo suficiente em conta, a recarga é cobrada logo após a confirmação.
+
+{{< /alert >}}
+
+<br>
 
 ### **Tipos de Recargas**
 ---
@@ -22,184 +28,25 @@ description: >
 <br>
 
 
+- [**Recarga de Celular;**](/docs/referencia-da-api/recargas/recarga-de-celular/)
 
-#### **Recarga de Celular**
+- [**Recarga de Jogos;**](/docs/referencia-da-api/recargas/recarga-de-jogos/)
 
-<br>
+- [**Conteúdo Digital;**](/docs/referencia-da-api/recargas/recarga-de-conteudo-digital/)
 
-##### **Listar todos os valores para o provedor**
+- [**TV por assinatura;**](/docs/referencia-da-api/recargas/recarga-de-tv-por-assinatura/)
 
-```http
-GET /api/v1/topups/mobile/values/{provider-id}/{cellphone}
-```
+- [**Meios de Transporte.**](/docs/referencia-da-api/recargas/recarga-de-meios-de-transporte/)
 
 
-##### **Listar todos os provedores para celular**
 
-```http
-GET /api/v1/topups/mobile/providers/{cellphone}
-```
 
 
-##### **Executar uma recarga de celular**
 
-```http
-POST /api/v1/topups/mobile/dry-run
-```
 
 
-##### **Confirmar uma recarga de celular**
 
-```http
-POST /api/v1/topups/mobile
-```
 
 
-<br> <br>
-
-
-
-#### **Recarga de Jogos**
-
-<br>
-
-##### **Listar todos os valores para o provedor**
-
-```http
-GET /api/v1/topups/games/values/{provider-id}
-```
-
-
-##### **Listar todos os provedores de jogos**
-
-```http
-GET /api/v1/topups/games/providers
-```
-
-
-##### **Executar uma recarga de jogos**
-
-```http
-POST /api/v1/topups/games/dry-run
-```
-
-
-##### **Confirmar uma recarga de jogos**
-
-```http
-POST /api/v1/topups/games
-```
-
-
-<br> <br>
-
-
-
-#### **Conteúdo Digital**
-
-<br>
-
-##### **Listar todos os valores para o provedor**
-
-```http
-GET /api/v1/topups/digital-content/values/{provider-id}
-```
-
-
-##### **Listar todos os provedores de conteúdo digital**
-
-```http
-GET /api/v1/topups/digital-content/providers
-```
-
-
-##### **Executar uma recarga de conteúdo digital**
-
-```http
-POST /api/v1/topups/digital-content/dry-run
-```
-
-
-##### **Confirme uma recarga de conteúdo digital**
-
-```http
-POST /api/v1/topups/digital-content
-```
-
-
-<br> <br>
-
-
-
-#### **TV por assinatura**
-
-
-<br>
-
-##### **Listar todos os valores para o provedor**
-
-```http
-GET /api/v1/topups/tv/values/{provider-id}
-```
-
-
-##### **Listar todos os provedores para a TV**
-
-```http
-GET /api/v1/topups/tv/providers
-```
-
-
-##### **Executar uma recarga para a TV**
-
-```http
-POST /api/v1/topups/tv/dry-run
-```
-
-
-##### **Confirme uma recarga para a TV**
-
-```http
-POST /api/v1/topups/tv
-```
-
-
-<br> <br>
-
-
-
-#### **Meios de Transporte**
-
-<br>
-
-##### **Listar todos os valores para o provedor**
-
-```http
-GET /api/v1/topups/transport/values/{provider-id}
-```
-
-
-##### **Listar todos os provedores para meios de Transporte**
-
-```http
-GET /api/v1/topups/transport/providers
-```
-
-
-##### **Executar uma recarga para meios de Transporte**
-
-```http
-POST /api/v1/topups/transport/dry-run
-```
-
-
-##### **Confirme uma recarga para a TV**
-
-```http
-POST /api/v1/topups/transport
-```
-
-
-<br>
 
 
