@@ -45,7 +45,9 @@ A resposta varia de acordo com o tipo de QR Code que você está lendo, que pode
 200 OK
 ```
 
+
 ```Json
+
 {
   "type": "static",
   "static": {
@@ -64,6 +66,7 @@ A resposta varia de acordo com o tipo de QR Code que você está lendo, que pode
 ```
 
 ```Json
+
 {
   "type": "dynamic",
   "dynamic": {
@@ -97,7 +100,9 @@ A resposta varia de acordo com o tipo de QR Code que você está lendo, que pode
 400
 ```
 
+
 ```Json
+
 {
   "type": "srn:error:bad_request"
 }
@@ -112,7 +117,9 @@ A resposta varia de acordo com o tipo de QR Code que você está lendo, que pode
 501
 ```
 
+
 ```Json
+
 {
   "type": "srn:error:brcode_not_supported"
 }

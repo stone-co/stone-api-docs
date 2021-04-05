@@ -6,18 +6,23 @@ weight: 2
 draft: false
 description: >
 	
+=======
+date: "2021-04-01T18:00:00-03:00"
+lastmod: "2021-04-01T18:00:00-03:00"
+weight: 2
+draft: false
+description: >
+
 ---
 
 ```http
 POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/outbound_pix_payments
 ```
 
+
 Esse endpoint foi idealizado para criar um Pix pendente de confirmação enviando os dados do destino ou uma chave Pix.
 
 Ao bater na API de criação de um pagamento, o body deve conter OU o campo key com uma chave Pix OU o campo target com os dados do destino.
-
-
-
 
 ##### **Header Request**
 
@@ -51,7 +56,10 @@ Ao bater na API de criação de um pagamento, o body deve conter OU o campo key 
     }
   }
 }
+
 ```
+
+
 
 ##### **Responses**
 
