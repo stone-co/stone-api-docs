@@ -33,6 +33,7 @@ O body deve conter a string do QRCode obtida a partir da imagem ou copia e cola.
 {
   "brcode": "00020126580014br.gov.bcb.pix0136123e4567-e12b-12d1-a456-4266554400005204000053039865802BR5913Fulano de Tal6008BRASILIA62070503***63041D3D"
 }
+```
 
 ##### **Responses**
 
@@ -44,7 +45,7 @@ A resposta varia de acordo com o tipo de QR Code que você está lendo, que pode
 200 OK
 ```
 
-```json
+```Json
 {
   "type": "static",
   "static": {
@@ -62,7 +63,7 @@ A resposta varia de acordo com o tipo de QR Code que você está lendo, que pode
 200 OK
 ```
 
-```json
+```Json
 {
   "type": "dynamic",
   "dynamic": {
@@ -96,7 +97,7 @@ A resposta varia de acordo com o tipo de QR Code que você está lendo, que pode
 400
 ```
 
-```json
+```Json
 {
   "type": "srn:error:bad_request"
 }
@@ -111,7 +112,7 @@ A resposta varia de acordo com o tipo de QR Code que você está lendo, que pode
 501
 ```
 
-```json
+```Json
 {
   "type": "srn:error:brcode_not_supported"
 }

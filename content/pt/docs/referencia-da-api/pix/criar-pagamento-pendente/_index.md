@@ -5,7 +5,7 @@ lastmod: 2021-04-01T18:00:00-03:00
 weight: 2
 draft: false
 description: >
-API para criar um Pix pendente de confirmação enviando os dados do destino ou uma chave Pix.
+	API para criar um Pix pendente de confirmação enviando os dados do destino ou uma chave Pix.
 ---
 
 ```http
@@ -47,6 +47,7 @@ Ao bater na API de criação de um pagamento, o body deve conter OU o campo key 
     }
   }
 }
+```
 
 ##### **Responses**
 
