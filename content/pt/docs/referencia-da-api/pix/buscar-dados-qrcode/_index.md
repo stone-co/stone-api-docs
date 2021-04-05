@@ -90,7 +90,9 @@ A resposta varia de acordo com o tipo de QR Code que você está lendo, que pode
   }
 }
 ```
-<br>
+
+
+
 ###### **Retornado quando o QRCode não pode ser obtido**
 
 ```http
@@ -103,7 +105,8 @@ A resposta varia de acordo com o tipo de QR Code que você está lendo, que pode
 }
 ```
 
-<br>
+
+
 ###### **Retornado quando o tipo do QRCode não foi suportado ainda**
 
 <br> Ex.: QRCode com vencimento, juros e multa.
