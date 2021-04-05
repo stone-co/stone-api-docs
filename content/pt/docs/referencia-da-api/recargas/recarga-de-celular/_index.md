@@ -136,7 +136,7 @@ GET /api/v1/topups/mobile/providers/{cellphone}
     ]
 }
 ```
-
+<br>
 
 ##### **2) Listar todos os valores para o provedor**
 
@@ -191,7 +191,7 @@ GET /api/v1/topups/mobile/values/{provider-id}/{cellphone}
     ]
 }
 ```
-
+<br>
 
 ##### **3) Executar uma recarga de celular**
 
@@ -233,6 +233,8 @@ POST /api/v1/topups/mobile/dry-run
     "cellphone": "21971592768"
 }
 ```
+
+<br>
 
 ##### **4) Confirmar uma recarga de celular**
 
