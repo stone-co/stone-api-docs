@@ -1,11 +1,12 @@
 ---
 title: "Criar um pagamento pendente"
 linkTitle: "Criar um pagamento pendente"
-lastmod: 2021-04-01T18:00:00-03:00
+date: "2021-04-01T18:00:00-03:00"
+lastmod: "2021-04-01T18:00:00-03:00"
 weight: 2
 draft: false
 description: >
-API para criar um Pix pendente de confirmação enviando os dados do destino ou uma chave Pix.
+    API para criar um Pix pendente de confirmação enviando os dados do destino ou uma chave Pix.
 ---
 
 ```http
