@@ -42,6 +42,7 @@ Na confirmação, o body pode conter opcionalmente os campos amount e descriptio
   "amount": 39511,
   "description": "some description"
 }
+```
 
 ##### **Responses**
 
