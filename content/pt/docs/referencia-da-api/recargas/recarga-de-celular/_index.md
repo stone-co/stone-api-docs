@@ -18,7 +18,7 @@ description: >
 
 1) Para efetuar a recarga de créditos para um celular é necessário que o cliente nos informe o **número de celular** desejado para a recarga. Com esse número, sugerimos a operadora mais provável desejada para a recarga, porém, também permitimos que o cliente escolha a operadora desejada.
 
-2) Após a **escolha da operadora**, o cliente seleciona o valor que deseja recarregar. Os valores oferecidos não são flexíveis e variam de acordo com a operadora.
+2) Após a **escolha da operadora**, o cliente seleciona o valor que deseja recarregar. 
 
 3) Ao confirmar a recarga, a Celcoin adiciona os créditos junto a operadora.
 
@@ -39,10 +39,21 @@ description: >
 - Surf Telecom.
 
 
+{{< alert title="Atenção" >}}
+
+<br>
+
+Os valores oferecidos para a recarga não são flexíveis e variam de acordo com a operadora.
+
+{{< /alert >}}
+
+
+
+
 <br>
 
 
-#### **Ações a serem executadas para recarga de celular**
+#### **Ações a serem executadas para recarga de Celular**
 ---
 
 <br>

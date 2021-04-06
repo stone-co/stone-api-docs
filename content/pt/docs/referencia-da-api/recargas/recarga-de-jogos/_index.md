@@ -16,7 +16,7 @@ description: >
 
 <br>
 
-1) Para efetuar a recarga de créditos para um jogo é necessário que o cliente selecione e escolha o plano/valor. Os valores oferecidos não são flexíveis e variam de acordo com o provedor.
+1) Para efetuar a recarga de créditos para um jogo é necessário que o cliente selecione e escolha o plano/valor. 
 
 2) Diferentemente da recarga de celular, após a confirmação da recarga para um jogo, retornamos o **código PIN** ao cliente.
 
@@ -41,10 +41,19 @@ description: >
 - Xbox Live (CSV).
 
 
+{{< alert title="Atenção" >}}
+
+<br>
+
+Os valores oferecidos para a recarga não são flexíveis e variam de acordo com a operadora.
+
+{{< /alert >}}
+
+
 <br>
 
 
-#### **Ações a serem executadas para recarga de celular**
+#### **Ações a serem executadas para recarga de Jogos**
 ---
 
 <br>

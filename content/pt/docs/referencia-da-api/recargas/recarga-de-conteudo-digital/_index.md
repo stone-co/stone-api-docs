@@ -47,7 +47,7 @@ Quanto ao Ifood a escolha do valor é flexível, com o mínimo de R$1,00 e máxi
 <br>
 
 
-#### **Ações a serem executadas para recarga de celular**
+#### **Ações a serem executadas para recarga de Conteúdo Digital**
 ---
 
 <br>
