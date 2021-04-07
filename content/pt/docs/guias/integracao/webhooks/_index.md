@@ -40,7 +40,9 @@ A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) s
 | barcode_payment_invoice_registered           | Representa o registro de um boleto.                                       |
 | barcode_payment_invoice_payment_promissed    | Representa que o pagamento do boleto foi acolhido em alguma instituição.  |
 | barcode_payment_invoice_settled              | Representa que pagamento do boleto foi confirmado.                        |
+| barcode_payment_invoice_expired              | Representa que o boleto está expirado.                                    |
 | cash_in_barcode_payment                      | Representa a entrada do valor do boleto na conta do beneficiário.         | 
+
 
 
 ##### **Pagamento de Boleto:**
