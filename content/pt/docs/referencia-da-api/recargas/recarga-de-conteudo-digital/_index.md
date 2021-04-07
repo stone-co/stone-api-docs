@@ -19,7 +19,7 @@ description: >
 
 1) Para efetuar a recarga de créditos para um Conteúdo Digital é necessário que o cliente selecione e escolha o plano/valor. 
 
-2) Diferentemente da recarga de celular, após a confirmação da recarga para um Conteúdo Digital, retornamos o **código PIN** ao cliente.
+2) Após a confirmação da recarga para um Conteúdo Digital, retornamos o **código PIN** ao cliente.
 
 3) Com o código PIN em mãos, **o cliente acessa o site/app do provedor** e resgata os céditos obtidos.
 
@@ -192,6 +192,8 @@ POST /api/v1/topups/digital-content/dry-run
 ```http
 POST /api/v1/topups/digital-content
 ```
+
+###### **Header request**
 
 
 ```Json

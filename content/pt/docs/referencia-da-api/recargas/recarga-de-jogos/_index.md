@@ -18,7 +18,7 @@ description: >
 
 1) Para efetuar a recarga de créditos para um jogo é necessário que o cliente selecione e escolha o plano/valor. 
 
-2) Diferentemente da recarga de celular, após a confirmação da recarga para um jogo, retornamos o **código PIN** ao cliente.
+2) Após a confirmação da recarga para um jogo, retornamos o **código PIN** ao cliente.
 
 3) Com o código PIN em mãos, **o cliente acessa o site/app do provedor** e resgata os céditos obtidos.
 

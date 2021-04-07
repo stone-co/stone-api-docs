@@ -33,10 +33,14 @@ Informações (Chave/Valor) que serão usadas nos fluxos de recargas.
 
 | Chave                               | Valor                                                               |
 | ----------------------------------- | ------------------------------------------------------------------- |
-| account_id						  |	Client_id															|
+| account_id						  |	id da conta de pagamento.															|
 | amount							  |	Valor da recarga desejado.											|
-| cellphone							  | Número de celular que receberá a recarga 							|	
+| cellphone							  | Número de celular que receberá a recarga. 							|	
 | provider_id						  | Id da operadora. 													|
+| client_code 						  | CPF ou Código do assinante do produto. 								|
+| product_quota 					  | Informação referente a quota do bilhete único de SP.				|
+| product_code 						  | Informação referente ao código do bilhete único de SP.
+
 
 <br>
 

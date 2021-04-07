@@ -159,9 +159,6 @@ GET /api/v1/topups/mobile/values/{provider-id}/{cellphone}
 
 ###### **Header request**
 
-```Json
-200 ok
-```
 
 ```Json
 {
