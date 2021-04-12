@@ -15,10 +15,12 @@ jobs:
   update_submodule:
     runs-on: ubuntu-20.04
     steps:
-      - name: "Update Submodule"
+      - name: "Clone repo"
         uses: actions/checkout@v2
         with:
           submodules: true
+
+      - name: "Update Theme"
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
@@ -27,6 +29,9 @@ jobs:
           git fetch
           git merge ${{ github.event.inputs.commit_sha }}
           cd ../..
+
+      - name: "Commit changes"
+        run: |
           git add themes
           git commit -m "feat: update ${{ github.event.inputs.from }} theme to ${{ github.event.inputs.version }}"
           git push
