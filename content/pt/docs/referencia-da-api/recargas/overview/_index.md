@@ -11,7 +11,7 @@ description: >
 ---
 <br>
 
-Objetivo dessa documentação é pontuar as particularidades de cada tipo de recarga ofereceida na nossa API.
+Objetivo dessa documentação é pontuar as particularidades de cada tipo de recarga oferecida na nossa API.
 
 
 {{< alert title="Atenção" >}}
@@ -33,9 +33,8 @@ Informações (Chave/Valor) que serão usadas nos fluxos de recargas.
 
 | Chave                               | Valor                                                               |
 | ----------------------------------- | ------------------------------------------------------------------- |
-| account_id						  |	id da conta de pagamento.															|
+| account_id						  |	id da conta de pagamento.															
 | amount							  |	Valor da recarga desejado.											|
-| cellphone							  | Número de celular que receberá a recarga. 							|	
 | provider_id						  | Id da operadora. 													|
 | client_code 						  | CPF ou Código do assinante do produto. 								|
 | product_quota 					  | Informação referente a quota do bilhete único de SP.				|
