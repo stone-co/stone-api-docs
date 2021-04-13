@@ -33,7 +33,7 @@ Informações (Chave/Valor) que serão usadas nos fluxos de recargas.
 
 | Chave                               | Valor                                                               |
 | ----------------------------------- | ------------------------------------------------------------------- |
-| account_id						  |	id da conta de pagamento.											|				
+| account_id						  |	Identificador da conta. 											|				
 | amount							  |	Valor da recarga desejado.											|
 | provider_id						  | Id da operadora. 													|
 | client_code 						  | CPF ou Código do assinante do produto. 								|
