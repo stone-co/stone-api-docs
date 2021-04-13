@@ -22,6 +22,7 @@ description: >
 
 3) Com o código PIN em mãos, **o cliente acessa o site/app do provedor** e resgata os créditos obtidos.
 
+
 <br>
 
 ##### **Provedores disponíveis**

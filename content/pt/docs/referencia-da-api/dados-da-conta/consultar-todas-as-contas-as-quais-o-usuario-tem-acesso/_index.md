@@ -11,7 +11,7 @@ weight: 4
 ---
 
 ```http
-GET https://sandbox-api.openbank.stone.com.br/api/accounts
+GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts
 ```
 
 ---

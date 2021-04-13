@@ -25,7 +25,7 @@ A Conta Stone SDK é o ponto de entrada para acesso às nossas SDKs de autentica
 Segue abaixo um diagrama de como funciona a comunicação entre esses três atores.
 
 
-![imagem_conta_stone_sdk_diagram](/docs/guias/conta-stone-sdk/conta-stone-sdk-diagram.png)
+![imagem_conta_stone_sdk_diagram](/docs/guias/conta-stone-sdk/overview/conta-stone-sdk-diagram.png)
 
 
 - Auth SDK - responsável por executar todo o processo de autenticação seguindo as diretrizes do [oAuth2](https://oauth.net/2/).
@@ -41,7 +41,7 @@ Segue abaixo um diagrama de como funciona a comunicação entre esses três ator
 #### **Como integrar com a SDK**
 
 
-Antes de começar a integração é necessário obter uma chave de acesso ao nosso repositório. Para obter esta chave, entre em contato com a gente [aqui](https://app.pipefy.com/public/form/Qz4ptt_W/?origem_do_lead=Documenta%C3%A7%C3%A3o). 
+Antes de começar a integração é necessário obter uma chave de acesso ao nosso repositório. Para obter esta chave, entre em contato com a gente [aqui](https://app.pipefy.com/public/form/Qz4ptt_W?origem_do_lead=%22Documenta%C3%A7%C3%A3o%22). 
 
 Para integrar com o **iOS**, acesse [aqui](/docs/guias/conta-stone-sdk/sdk-sample-ios).
 
