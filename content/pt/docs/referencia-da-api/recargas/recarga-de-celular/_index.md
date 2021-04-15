@@ -290,3 +290,14 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/mobile
 ```
 
 <br>
+
+{{< alert title="Status_code: 403" >}}
+
+<br>
+
+Caso receba como resposta o *status_code: 403*, [clique aqui](/docs/referencia-da-api/recargas/fluxo-challenge/) para ter acesso ao *fluxo de autorização do challenge* que deverá ser enviado no *Header* do *Request* (x-stone-challenge-solution). 
+
+{{< /alert >}}
+
+
+<br>

@@ -24,6 +24,28 @@ Para efetuar uma recarga o cliente precisa ter saldo suficiente em conta, a reca
 
 <br>
 
+
+
+#### **Tipos de Recargas**
+---
+
+<br>
+
+
+- [**Recarga para Celular;**](/docs/referencia-da-api/recargas/recarga-de-celular/)
+
+- [**Recarga para Jogos;**](/docs/referencia-da-api/recargas/recarga-de-jogos/)
+
+- [**Recarga para Conteúdo Digital;**](/docs/referencia-da-api/recargas/recarga-de-conteudo-digital/)
+
+- [**Recarga para TV por Assinatura;**](/docs/referencia-da-api/recargas/recarga-de-tv-por-assinatura/)
+
+- [**Recarga para Meios de Transporte.**](/docs/referencia-da-api/recargas/recarga-de-meios-de-transporte/)
+
+
+<br>
+
+
 #### **Glossário**
 ---
 <br>
@@ -35,7 +57,7 @@ Informações (Chave/Valor) que serão usadas nos fluxos de recargas.
 
 | Chave                               | Valor                                                               |
 | ----------------------------------- | ------------------------------------------------------------------- |
-| account_id						  |	id da conta de pagamento.											|				
+| account_id						  |	Identificador da conta.												|				
 | amount							  |	Valor da recarga desejado.											|
 | provider_id						  | Id da operadora. 													|
 | client_code 						  | CPF ou Código do assinante do produto. 								|
@@ -46,28 +68,6 @@ Informações (Chave/Valor) que serão usadas nos fluxos de recargas.
 
 
 <br>
-
-#### **Tipos de Recargas**
----
-
-<br>
-
-
-- [**Recarga de Celular;**](/docs/referencia-da-api/recargas/recarga-de-celular/)
-
-- [**Recarga de Jogos;**](/docs/referencia-da-api/recargas/recarga-de-jogos/)
-
-- [**Conteúdo Digital;**](/docs/referencia-da-api/recargas/recarga-de-conteudo-digital/)
-
-- [**TV por assinatura;**](/docs/referencia-da-api/recargas/recarga-de-tv-por-assinatura/)
-
-- [**Meios de Transporte.**](/docs/referencia-da-api/recargas/recarga-de-meios-de-transporte/)
-
-
-<br>
-
-
-
 
 
 
