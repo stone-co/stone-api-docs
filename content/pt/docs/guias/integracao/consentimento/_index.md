@@ -25,11 +25,11 @@ Toda vez que uma Aplicação faz um pedido de consentimento a um usuário, o mes
 
 Para realizar esse processo, o usuário precisa receber do sistema do parceiro um link que o direcione para uma página da Stone. Nessa página o usuário poderá escolher a quais contas de pagamento ele deseja conceder o acesso. Será necessário que o sistema do parceiro gere esse link, como descrito abaixo. O tempo de expiração do link deve ser de no máximo duas horas. 
 
-Caso o usuário **não acesse o link** disponibilizado dentro de seu intervalo de tempo de vida, ele irá expirar. Nesse caso não haverá a concessão do acesso e não será mais possível obtê-la através desse mesmo link, precisando gerar um novo. 
+Caso o usuário **não acesse o link** disponibilizado dentro de seu intervalo de tempo de vida, ele irá expirar. Nesse caso não haverá a concessão do acesso e não será mais possível obtê-lo através desse mesmo link, precisando gerar um novo. 
 
-Também é possível que o usuário acesse o link mas **não conceda o acesso**, ao escolher a opção *Ignorar*. Nesse caso o usuário será redirecionada para uma página do sistema do parceiro e não será possível para ele operar na conta do usuário. 
+Também é possível que o usuário acesse o link mas **não conceda o acesso**, ao escolher a opção *Ignorar*. Nesse caso o usuário será redirecionado para uma página do sistema do parceiro e não será possível para ele operar na conta do usuário. 
 
-Havendo a **concessão de acesso**, o usuário será redirecionada para uma página da Aplicação e o parceiro obterá as autorizações necessárias para operar na conta.
+Havendo a **concessão de acesso**, o usuário será redirecionado para uma página da Aplicação e o parceiro obterá as autorizações necessárias para operar na conta.
 
 O sistema do parceiro será informado do ocorrido para cada um desses três casos.
 
