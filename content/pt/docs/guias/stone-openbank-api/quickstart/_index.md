@@ -208,7 +208,7 @@ IRestResponse response = client.Execute(request);
 
 
 
-Caso queira saber mais sobre as chamadas disponíveis na nossa API, consulte nossos endpoints em [API Reference](/docs/referencia-da-api/stone-openbank/overview).
+Caso queira saber mais sobre as chamadas disponíveis na nossa API, consulte nossos endpoints em [API Reference](/docs/referencia-da-api/padroes-da-api/overview/).
 
 
 
