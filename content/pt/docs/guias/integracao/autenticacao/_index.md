@@ -276,15 +276,7 @@ Pronto! Com isto já é possível fazer uma chamada autenticada para a nossa API
 - _Sandbox_: https://sandbox-api.openbank.stone.com.br
 - _Produção_: https://api.openbank.stone.com.br
 
-
-{{% pageinfo %}}
-**Fluxo de Autorização**
-
-Para continuar com o fluxo de autorização, clique [aqui](/docs/guias/integracao/panda/authorization/#fluxo-de-autorização-de-challenge).
-{{% /pageinfo %}}
-
 <br>
-
 
 **Bem-vindo ao time de fintechs do futuro!**
 
