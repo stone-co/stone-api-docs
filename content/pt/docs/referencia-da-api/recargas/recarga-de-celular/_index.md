@@ -59,7 +59,7 @@ Os valores oferecidos para a recarga não são flexíveis e variam de acordo com
 
 <br>
 
-##### **1) Listar todos os provedores para celular**
+##### **1) Listar todos os provedores para Celular**
 
 ```http
 GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/mobile/providers/{cellphone}
@@ -204,7 +204,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/mobile/values/{provi
 ```
 <br>
 
-##### **3) Executar uma recarga de celular**
+##### **3) Simular uma recarga de Celular**
 
 ```http
 POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/mobile/dry-run
@@ -248,7 +248,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/mobile/dry-run
 
 <br>
 
-##### **4) Confirmar uma recarga de celular**
+##### **4) Executar uma recarga de Celular**
 
 ```http
 POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/mobile

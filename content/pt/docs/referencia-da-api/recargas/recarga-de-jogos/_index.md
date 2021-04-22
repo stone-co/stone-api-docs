@@ -59,7 +59,7 @@ Os valores oferecidos para a recarga não são flexíveis e variam de acordo com
 
 <br>
 
-##### **1) Listar todos os provedores de jogos**
+##### **1) Listar todos os provedores de Jogos**
 
 ```http
 GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/games/providers
@@ -170,113 +170,11 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/games/values/{provid
 }
 ```
 
-**- Name: PSN Store / id: 2147**
-
-```Json
-{
-    "product": [
-        {
-            "product_name": "R$ 30,00 - PlayStation Store",
-            "value": 3000
-        },
-        {
-            "product_name": "R$ 60,00 - PlayStation Store",
-            "value": 6000
-        },
-        {
-            "product_name": "R$ 100,00 - PlayStation Store",
-            "value": 10000
-        },
-        {
-            "product_name": "R$ 250,00 - PlayStation Store",
-            "value": 25000
-        }
-    ]
-}
-```
-
-**- Name: PS Plus / id: 2148**
-
-```Json
-{
-    "product": [
-        {
-            "product_name": "R$ 64,90 - PlayStation Plus 3 meses",
-            "value": 6490
-        },
-        {
-            "product_name": "R$ 149,90 - PlayStation Plus 12 meses",
-            "value": 14990
-        }
-    ]
-}
-```
-
-**- Name: Xbox Live Gold / id: 2125**
-
-```Json
-{
-    "product": [
-        {
-            "product_name": "R$ 85,99 - Xbox Live 3 meses",
-            "value": 8599
-        },
-        {
-            "product_name": "R$ 171,98 - Xbox Live 6 meses",
-            "value": 17198
-        },
-        {
-            "product_name": "R$ 199,00 - Xbox Live 12 meses",
-            "value": 19900
-        }
-    ]
-}
-```
-
-**- Name: Xbox Live (CSV) / id: 2149**
-
-```Json
-{
-    "product": [
-        {
-            "product_name": "R$ 5,00 - GC-Xbox LIVE Brazil",
-            "value": 500
-        },
-        {
-            "product_name": "R$ 10,00 - GC-Xbox LIVE Brazil",
-            "value": 1000
-        },
-        {
-            "product_name": "R$ 15,00 - GC-Xbox LIVE Brazil",
-            "value": 1500
-        },
-        {
-            "product_name": "R$ 20,00 - GC-Xbox LIVE Brazil",
-            "value": 2000
-        },
-        {
-            "product_name": "R$ 25,00 - GC-Xbox LIVE Brazil",
-            "value": 2500
-        },
-        {
-            "product_name": "R$ 40,00 - GC-Xbox LIVE Brazil",
-            "value": 4000
-        },
-        {
-            "product_name": "R$ 60,00 - GC-Xbox LIVE Brazil",
-            "value": 6000
-        },
-        {
-            "product_name": "R$ 70,00 - GC-Xbox LIVE Brazil",
-            "value": 7000
-        }
-    ]
-}
-```
+...
 
 <br>
 
-##### **3) Executar uma recarga de jogos**
+##### **3) Simular uma recarga de Jogos**
 
 ```http
 POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/games/dry-run
@@ -318,7 +216,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/games/dry-run
 
 <br>
 
-##### **4) Confirmar uma recarga de jogos**
+##### **4) Executar uma recarga de Jogos**
 
 ```http
 POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/games
