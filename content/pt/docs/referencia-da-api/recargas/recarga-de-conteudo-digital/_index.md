@@ -52,7 +52,7 @@ Quanto ao Ifood a escolha do valor é flexível, com o mínimo de R$1,00 e máxi
 
 <br>
 
-##### **1) Listar todos os provedores de conteúdo digital**
+##### **1) Listar todos os provedores de Conteúdo Digital**
 
 ```http
 GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/digital-content/providers
@@ -147,7 +147,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/digital-content/valu
 
 <br>
 
-##### **3) Executar uma recarga de conteúdo digital**
+##### **3) Simular uma recarga de Conteúdo Digital**
 
 ```http
 POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/digital-content/dry-run
@@ -190,7 +190,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/digital-content/dry
 
 <br>
 
-##### **4) Confirme uma recarga de conteúdo digital**
+##### **4) Executar uma recarga de Conteúdo Digital**
 
 ```http
 POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/digital-content

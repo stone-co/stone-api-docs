@@ -147,7 +147,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/transport/values/{pr
 
 <br>
 
-##### **3) Executar uma recarga para Meios de Transporte**
+##### **3) Simular uma recarga para Meios de Transporte**
 
 ```http
 POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/transport/dry-run
@@ -194,7 +194,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/transport/dry-run
 
 
 
-##### **4) Confirme uma recarga para Meios de Transporte**
+##### **4) Executar uma recarga para Meios de Transporte**
 
 ```http
 POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/transport

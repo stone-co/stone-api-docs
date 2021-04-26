@@ -154,128 +154,11 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/tv/values/{provider-
 }
 ```
 
-**- Name: Oi TV / id: 2140**
-
-```Json
-{
-    "product": [
-        {
-            "product_name": "START HD-15D R$ 44,90",
-            "value": 4490
-        },
-        {
-            "product_name": "MIX HD-15D R$ 59,90",
-            "value": 5990
-        },
-        {
-            "product_name": "START HD-30D R$ 69,90",
-            "value": 6990
-        },
-        {
-            "product_name": "MIX HD-30DR$ 94,90",
-            "value": 9490
-        }
-    ]
-}
-```
-
-**- Name: SKY TV / id: 2127**
-
-```Json
-{
-    "product": [
-        {
-            "product_name": "R$ 11,90 REC SMART - 3 DI",
-            "value": 1190
-        },
-        {
-            "product_name": "R$ 18,90 REC DIGITAL - 30",
-            "value": 1889
-        },
-        {
-            "product_name": "R$ 19,90 REC SMART - 7 DI",
-            "value": 1989
-        },
-        {
-            "product_name": "R$ 21,90 REC SMART3D + TL",
-            "value": 2190
-        },
-        {
-            "product_name": "R$ 33,90 REC NEW MASTER -",
-            "value": 3390
-        },
-        {
-            "product_name": "R$ 35,90 REC NEW MASTER 0",
-            "value": 3590
-        },
-        {
-            "product_name": "R$ 36,90 REC SMART - 15 D",
-            "value": 3690
-        },
-        {
-            "product_name": "R$ 44,90 REC SMART7D+ FUT",
-            "value": 4490
-        },
-        {
-            "product_name": "R$ 48,90 REC NEW MASTER 0",
-            "value": 4890
-        },
-        {
-            "product_name": "R$ 52,90 REC SMART 7D + C",
-            "value": 5290
-        },
-        {
-            "product_name": "R$ 55,90 REC NEW MASTER -",
-            "value": 5590
-        },
-        {
-            "product_name": "R$ 57,90 REC SMART15D+TLC",
-            "value": 5790
-        },
-        {
-            "product_name": "R$ 58,90 REC NEW MASTER 0",
-            "value": 5890
-        },
-        {
-            "product_name": "R$ 65,90 REC NEW MASTER 7",
-            "value": 6590
-        },
-        {
-            "product_name": "R$ 69,90 REC SMART15D+ FU",
-            "value": 6990
-        },
-        {
-            "product_name": "R$ 81,90 REC SMART 30D + ",
-            "value": 8190
-        },
-        {
-            "product_name": "R$ 84,90 REC SMART 30D + ",
-            "value": 8490
-        },
-        {
-            "product_name": "R$ 86,90 REC NEW MASTER- ",
-            "value": 8690
-        },
-        {
-            "product_name": "R$ 96,90 REC SMART30D+ FU",
-            "value": 9690
-        },
-        {
-            "product_name": "R$ 98,90 REC SMART - 60 D",
-            "value": 9890
-        },
-        {
-            "product_name": "R$ 142,80 REC DIGITAL 12 M",
-            "value": 14280
-        }
-    ]
-}
-```
-
+...
 
 <br>
 
-##### **3) Executar uma recarga para a TV**
+##### **3) Simular uma recarga para a TV**
 
 ```http
 POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/tv/dry-run
@@ -321,7 +204,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/tv/dry-run
 
 
 
-##### **4) Confirme uma recarga para a TV**
+##### **4) Executar uma recarga para a TV**
 
 ```http
 POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/tv

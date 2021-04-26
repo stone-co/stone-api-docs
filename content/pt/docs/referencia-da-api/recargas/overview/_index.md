@@ -61,8 +61,8 @@ Informações (Chave/Valor) que serão usadas nos fluxos de recargas.
 | amount							  |	Valor da recarga desejado.											|
 | provider_id						  | Id da operadora. 													|
 | client_code 						  | CPF ou Código do assinante do produto. 								|
-| product_quota 					  | Informação referente a quota do bilhete único de SP.				|
-| product_code 						  | Informação referente ao código do bilhete único de SP.				|
+| product_quota 					  | Informação referente a quota do bilhete único (SP).				|
+| product_code 						  | Informação referente ao código do bilhete único (SP).				|
 | x-stone-idempotency-key 			  | Valor exclusivo gerado pelo cliente que o servidor de recursos usa para reconhecer novas tentativas subsequentes da mesma solicitação. (Opcional) |
 
 
