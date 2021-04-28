@@ -9,7 +9,12 @@ weight: 10
 
 ---
 
+<br>
+
 ### Taxas
+---
+
+<br>
 
 | Chave                         | Descrição                                                                                                                                             | Tipo      |
 | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
@@ -22,13 +27,19 @@ weight: 10
 | remaining_free_transfers      | Só se aplica a `external_transfer`. Indica a número de TEDs grátis restantes no período.                                                              | _Integer_ |
 | remaining_free                | Só se aplica a `barcode_payment_invoice`. Indica o número restante de boletos gerados que podem ser pagos sem que haja custos no periódo.             | _Integer_ |
 
+<br>
+
 {{% pageinfo %}}
 **Emissão de boleto**
 
 A cobrança da taxa (`barcode_payment_invoice`) só é aplicada quando um boleto gerado é pago.
 {{% /pageinfo %}}
 
+<br>
+
 ### Tipos de taxas
+---
+<br>
 
 | Valor                                    | Descrição                                                                               |
 | ---------------------------------------- | --------------------------------------------------------------------------------------- |

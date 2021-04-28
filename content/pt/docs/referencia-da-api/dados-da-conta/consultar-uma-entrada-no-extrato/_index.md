@@ -13,25 +13,31 @@ weight: 9
 GET https://sandbox-api.openbank.stone.com.br/api/v1/statement/entries/entry_id
 ```
 
----
+<br>
 
 **PATH PARAMS**
 
 ---
 
-**entry_id**  `string`
+<br>
 
+**entry_id**  `string`<br>
 Identificador da entrada.
 
----
+<br>
 
 ##### Response
+---
 
 ```http
 201 OK
 content-type: application/json
 ```
-Body
+<br>
+
+##### Body
+---
+
 ```JSON
 
 {
