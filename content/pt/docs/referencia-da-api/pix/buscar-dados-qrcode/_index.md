@@ -16,7 +16,17 @@ A API para criação de um Pix é a mesma, independente se você deseja enviar u
 
 E esse é o objetivo desse endpoint.
 
-##### **Header Request**
+<br>
+
+#### **HEADERS**
+---
+
+**authorization*** `string`
+
+
+<br>
+
+Exemplo:
 
 ```Json
 {
@@ -24,20 +34,43 @@ E esse é o objetivo desse endpoint.
 }
 ```
 
-##### **Body Request**
+<br>
 
-O body deve conter a string do QRCode obtida a partir da imagem ou copia e cola.
+#### **BODY PARAMS**
+---
 
+O body deve conter a string do QRCode obtida a partir da imagem ou copia e cola. 
+Para QRCode do tipo dinâmico com multa, juros, desconto é necessário informar os campos `payment_date` e `owner_account`
+
+**brcode*** `string`
+
+**owner_account** `string` <br> Identificador do usuário da conta
+
+**payment_date** `string` 
+<br> Data de pagamento da cobrança com vencimento 
+<br>Format: YYYY/MM/DD
+
+
+<br>
+
+Body:
 
 ```json
 {
   "brcode": "00020126580014br.gov.bcb.pix0136123e4567-e12b-12d1-a456-4266554400005204000053039865802BR5913Fulano de Tal6008BRASILIA62070503***63041D3D"
 }
 ```
+<br>
+
+
+
+<br>
 
 ##### **Responses**
 
-A resposta varia de acordo com o tipo de QR Code que você está lendo, que pode ser um QR Code Estático, um QR Code Dinâmico de pagamento imediato ou um QR Code Dinâmico com multa, juros, desconto. Esse último ainda não é suportado, entra em vigor no Brasil em maio, já estamos nos finalmentes no desenvolvimento.
+A resposta varia de acordo com o tipo de QR Code que você está lendo, que pode ser um QR Code Estático, um QR Code Dinâmico de pagamento imediato ou um QR Code Dinâmico com multa, juros, desconto. Esse último ainda não é suportado, entra em vigor no Brasil em maio, já estamos desenvolvendo.
+
+<br>
 
 ###### **Payload retornado ao consultar um QR Code estático**
 
@@ -56,6 +89,8 @@ A resposta varia de acordo com o tipo de QR Code que você está lendo, que pode
   }
 }
 ```
+
+<br>
 
 ###### **Payload retornado ao consultar um QR Code dinâmico**
 
@@ -90,7 +125,7 @@ A resposta varia de acordo com o tipo de QR Code que você está lendo, que pode
   }
 }
 ```
-
+<br>
 
 
 ###### **Retornado quando o QRCode não pode ser obtido**
@@ -105,11 +140,10 @@ A resposta varia de acordo com o tipo de QR Code que você está lendo, que pode
 }
 ```
 
-
+<br>
 
 ###### **Retornado quando o tipo do QRCode não foi suportado ainda**
-
-<br> Ex.: QRCode com vencimento, juros e multa.
+Ex.: QRCode com vencimento, juros e multa.
 
 ```http
 501
