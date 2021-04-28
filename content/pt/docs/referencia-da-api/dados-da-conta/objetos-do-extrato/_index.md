@@ -8,44 +8,54 @@ weight: 7
 ---
 
 ---
+
+<br>
+
 O extrato mostra todos os tipos de transações que ocorreram em determinada conta de pagamento. 
 
 Cada transação é uma nova entrada no extrato e elas estão listadas abaixo com seus campos.
 
 Para ver a estrutura de cada transação, basta dar uma olhadinha [aqui](/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/estrutura-de-transacoes-no-extrato/).
 
+<br>
+
 ### Tipos de Transação
 
 Veja os possíveis valores para o campo `type`, sua descrição e as possíveis combinações com o campo `operation`.
 
-| Valores <br> `type`                            | Descrição <br>                                                                                                                                                                                      | Valores possíveis<br>`operation` |
-| ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| balance_blocked                                | Bloqueio de Saldo.                                                                                                                                                                                  | `credit` ou `debit`              |
-| balance_unblocked                              | Desbloqueio de Saldo.                                                                                                                                                                               | `credit`                         |
-| card_payment                                   | Liquidação de recebíveis de cartão recebido.                                                                                                                                                        | `credit`                         |
-| external                                       | Transferência externa. (TED)                                                                                                                                                                        | `credit` ou `debit`              |
-| external refund                                | Devolução de Transferência externa.                                                                                                                                                                 | `credit`                         |
-| instant_payment                                | Transação de Instant Payment / Qr Code.                                                                                                                                                             | `credit` ou `debit`              |
-| internal                                       | Transferência interna.                                                                                                                                                                              | `credit` ou `debit`              |
-| loan_payments                                  | Valor referente a um empréstimo/crédito                                                                                                                                                             | `credit` ou `debit`              |
-| outbound_stone_prepaid_card_payment            | Compra feita com Cartão Stone.                                                                                                                                                                      | `debit`                          |
-| outbound_stone_prepaid_card_payment_refund     | Devolução de compra com Cartão Stone.                                                                                                                                                               | `credit`                         |
-| outbound_stone_prepaid_card_payment_chargeback | Devolução do dinheiro ao usuário devido ao pedido de chagerback de uma compra feita com cartão Stone.                                                                                               | `credit`                         |
-| outbound_stone_prepaid_card_withdrawal         | Saque com Cartão Stone feito no Banco24Horas.                                                                                                                                                       | `debit`                          |
-| outbound_stone_prepaid_card_withdrawal_refund  | Devolução de Saque feito no Banco24Horas.                                                                                                                                                           | `credit`                         |
-| payment                                        | Pagamento de documento com código de barras.                                                                                                                                                        | `credit` ou `debit`              |
-| payment_refund                                 | Devolução do pagamento de documento com código de barras.                                                                                                                                           | `credit`                         |
-| payroll                                        | Folha de pagamento.                                                                                                                                                                                 | `debit`                          |
-| salary                                         | Recebimento de salário.                                                                                                                                                                             | `credit`                         |
-| salary_portability                             | Envio do salário para a outra instituição onde foi solicitada a portabilidade.                                                                                                                      | `debit`                          |
-| salary_portability_refund                      | Devolução de salário pela instituição cadastrada na portabilidade.                                                                                                                                  | `credit`                         |
-| salary_portability_employer_refund             | Devolução de salário do empregado para a instituição cadastrada na portabilidade. <br>(No caso de processamento do cancelamento da portabilidade, o empregado poderá receber nas duas instituições) | `debit`                          |
+<br>
+
+| Valores (`type`)                            | Descrição                                | Valores possíveis (`operation`)  |
+| --------------------------------------------| -----------------------------------------| ---------------------------------|
+| balance_blocked                             | Bloqueio de Saldo.                       | `credit` ou `debit`              |
+| balance_unblocked                           | Desbloqueio de Saldo.                    | `credit`                         |
+| card_payment                                | Liquidação de recebíveis de cartão recebido.  | `credit`                    |
+| external                                    | Transferência externa. (TED)             | `credit` ou `debit`              |
+| external refund                             | Devolução de Transferência externa.      | `credit`                         |
+| instant_payment                             | Transação de Instant Payment / Qr Code.  | `credit` ou `debit`              |
+| internal                                    | Transferência interna.                   | `credit` ou `debit`              |
+| loan_payments                               | Valor referente a um empréstimo/crédito. | `credit` ou `debit`              |
+| outbound_stone_prepaid_card_payment         | Compra feita com Cartão Stone.           | `debit`                          |
+| outbound_stone_prepaid_card_payment_refund  | Devolução de compra com Cartão Stone.    | `credit`                         |
+| outbound_stone_prepaid_card_payment_chargeback | Devolução do dinheiro ao usuário devido ao pedido de chagerback de uma compra feita com cartão Stone. | `credit`     |
+| outbound_stone_prepaid_card_withdrawal      | Saque com Cartão Stone feito no Banco24Horas. | `debit`                     |
+| outbound_stone_prepaid_card_withdrawal_refund  | Devolução de Saque feito no Banco24Horas.  | `credit`                    |
+| payment                                     | Pagamento de documento com código de barras.  | `credit` ou `debit`         |
+| payment_refund                              | Devolução do pagamento de documento com código de barras.  | `credit`       |
+| payroll                                     | Folha de pagamento.                      | `debit`                          |
+| salary                                      | Recebimento de salário.                  | `credit`                         |
+| salary_portability                          | Envio do salário para a outra instituição onde foi solicitada a portabilidade.                                | `debit`                          |
+| salary_portability_refund                   | Devolução de salário pela instituição cadastrada na portabilidade.| `credit`|
+| salary_portability_employer_refund          | Devolução de salário do empregado para a instituição cadastrada na portabilidade. <br>(No caso de processamento do cancelamento da portabilidade, o empregado poderá receber nas duas instituições) | `debit`                          |
 
 ---
+<br>
 
 ### Campos das Transações
 
 Todas as entradas do extrato tem alguns campos padrões, são eles:
+
+<br>
 
 
 | Chave          | Descrição                                                                                                                                                                     | Tipo      |
@@ -62,7 +72,11 @@ Todas as entradas do extrato tem alguns campos padrões, são eles:
 
 ---
 
+<br>
+
 Abaixo temos os campos que são utilizados em cada tipo de transação no extrato:
+
+<br>
 
 | Chave                               | Descrição                                                                                                                                                                                                          | Tipo      | Transação                                                                                                                                                                                                                                                                                                                   |
 | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -101,15 +115,22 @@ Abaixo temos os campos que são utilizados em cada tipo de transação no extrat
 | writable_line                       | Linha digitável de um boleto.                                                                                                                                                                                      | _String_  | `payment`, `payment_refund`                                                                                                                                                                                                                                                                                                 |
 
 ---
+<br>
 
-###### Campos do Objeto `counter_party`
+###### Campos do Objeto  (`counter_party`):
+
+<br>
 
 | Chave   | Descrição                                                                                                                              | Tipo     |
 | ------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------- |
 | account | Dados da conta destino. Veja seus campos [abaixo](/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/#campos-do-objeto-account) | _Object_ |
 | entity  | Dados Pessoais. Veja seus campos [abaixo](/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/#campos-do-objeto-entity-)         | _Object_ |
 
-###### Campos do Objeto `account`
+<br>
+
+###### Campos do Objeto (`account`):
+
+<br>
 
 | Chave            | Descrição                       | Tipo      |
 | ---------------- | ------------------------------- | --------- |
@@ -119,7 +140,11 @@ Abaixo temos os campos que são utilizados em cada tipo de transação no extrat
 | institution      | Código da instituição da conta. | _Integer_ |
 | institution_name | Nome da instituição da conta.   | _String_  |
 
-###### Campos do Objeto `entity` :
+<br>
+
+###### Campos do Objeto (`entity`):
+
+<br>
 
 | Chave         | Descrição                                    | Tipo      |
 | ------------- | -------------------------------------------- | --------- |
@@ -127,7 +152,11 @@ Abaixo temos os campos que são utilizados em cada tipo de transação no extrat
 | document_type | Tipo de documento do responsável da conta.   | _String_  |
 | name          | Nome do responsável da conta.                | _String_  |
 
-###### Campos do Objeto `account_settlement_policy_retention`
+<br>
+
+###### Campos do Objeto (`account_settlement_policy_retention`):
+
+<br>
 
 | Chave                        | Descrição                                                                                                                                                                       | Tipo      |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
@@ -136,7 +165,11 @@ Abaixo temos os campos que são utilizados em cada tipo de transação no extrat
 | retained_amount              | Valor dos juros.                                                                                                                                                                | _Integer_ |
 | total_amount                 | Valor total do empréstimo/crédito.                                                                                                                                              | _Integer_ |
 
-###### Campos do Objeto `applied_retention_rules`
+<br>
+
+###### Campos do Objeto (`applied_retention_rules`):
+
+<br>
 
 | Chave                 | Descrição                                                                                                                                                   | Tipo      |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
@@ -150,14 +183,22 @@ Abaixo temos os campos que são utilizados em cada tipo de transação no extrat
 | same_ownership        | Informa se o pagador pode ser da mesma instituição que o beneficiário.                                                                                      | _String_  |
 | target_account_id     | Identificador da conta que irá receber o empréstimo/crédito.                                                                                                | _String_  |
 
-###### Campos do Objeto `retained_portion`
+<br>
+
+###### Campos do Objeto (`retained_portion`):
+
+<br>
 
 | Chave       | Descrição                                                          | Tipo      |
 | ----------- | ------------------------------------------------------------------ | --------- |
 | coefficient | Valor do coeficiente para cálculo dos juros do empréstimo/crédito. | _Integer_ |
 | exponent    | Valor do expoente para cálculo dos juros do empréstimo/crédito.    | _Integer_ |
 
-###### Campos do Objeto `original_operation_entry`
+<br>
+
+###### Campos do Objeto (`original_operation_entry`):
+
+<br>
 
 | Chave                      | Descrição                                                                                                                                                       | Tipo      |
 | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
@@ -170,7 +211,11 @@ Abaixo temos os campos que são utilizados em cada tipo de transação no extrat
 | operation                  | Tipo de operação do empréstimo/crédito.                                                                                                                         | _String_  |
 | writable_line              | Linha digitável do empréstimo/crédito.                                                                                                                          | _String_  |
 
-###### Campos do Objeto `beneficiary`
+<br>
+
+###### Campos do Objeto (`beneficiary`):
+
+<br>
 
 | Chave         | Descrição                                             | Tipo     |
 | ------------- | ----------------------------------------------------- | -------- |
@@ -179,7 +224,12 @@ Abaixo temos os campos que são utilizados em cada tipo de transação no extrat
 | legal_name    | Nome completo ou razão social do beneficiário.        | _String_ |
 | trade_name    | Nome fantasia do beneficiário. Campo não obrigatório. | _String_ |
 
-###### Campos do Objeto `card_acceptor`
+
+<br>
+
+###### Campos do Objeto (`card_acceptor`):
+
+<br>
 
 | Chave   | Descrição                                                                                                     | Tipo     |
 | ------- | ------------------------------------------------------------------------------------------------------------- | -------- |
@@ -188,7 +238,11 @@ Abaixo temos os campos que são utilizados em cada tipo de transação no extrat
 | mcc     | Tipo de taxa que será aplicada à compra. <br>(Ex.: taxa de intercâmbio, taxa da rede do cartão, entre outras) | _String_ |
 | name    | Nome do dono do cartão.                                                                                       | _String_ |
 
-###### Campos do Objeto `transaction_authorization`
+<br>
+
+###### Campos do Objeto (`transaction_authorization`):
+
+<br>
 
 | Chave                  | Descrição                                                                                                                                                  | Tipo      |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
@@ -200,21 +254,33 @@ Abaixo temos os campos que são utilizados em cada tipo de transação no extrat
 | pos_authorization_time | Data da autorização.                                                                                                                                       | _String_  |
 | value                  | Dados do valor convertido pra BRL, com taxas. Veja seus campos [abaixo](/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/#campos-do-objeto-value) | _Object_  |
 
-###### Campos do Objeto `captured_value`
+<br>
+
+###### Campos do Objeto (`captured_value`):
+
+<br>
 
 | Chave    | Descrição                                                   | Tipo      |
 | -------- | ----------------------------------------------------------- | --------- |
 | amount   | Valor capturado no momento da compra via cartão, sem taxas. | _Integer_ |
 | currency | Moeda utilizada no momento da compra via cartão.            | _String_  |
 
-###### Campos do Objeto `value`
+<br>
+
+###### Campos do Objeto (`value`):
+
+<br>
 
 | Chave    | Descrição                                                       | Tipo      |
 | -------- | --------------------------------------------------------------- | --------- |
 | amount   | Valor total da compra convertido para BRL, com taxas incluídas. | _Integer_ |
 | currency | Moeda convertida para BRL.                                      | _String_  |
 
-###### Campos do Objeto `transaction_chargeback`
+<br>
+
+###### Campos do Objeto (`transaction_chargeback`):
+
+<br>
 
 | Chave           | Descrição                                                                                                                           | Tipo     |
 | --------------- | ----------------------------------------------------------------------------------------------------------------------------------- | -------- |
