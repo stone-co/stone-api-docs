@@ -1,5 +1,5 @@
 ---
-title: "Criar Nova Conta de Pagamento"
+title: "Criar Novo Pedido de Conta de Pagamento"
 excerpt: "Cria um novo usuário e sua organização, caso não exista."
 date: 2020-05-04T18:32:40-03:00
 lastmod: 2020-09-21T18:00:00-03:00
@@ -24,7 +24,7 @@ O cadastro é feito de forma assíncrona de forma a permitir:
 
 
 ```http
-POST https://sandbox-api.openbank.stone.com.br/api/v1/applications/global_id/signups
+POST https://sandbox-api.openbank.stone.com.br/api/v1/applications/{global_id}/signups
 ```
 
 <br>
