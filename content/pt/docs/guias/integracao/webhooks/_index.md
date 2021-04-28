@@ -96,6 +96,15 @@ A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) s
 | cash_out_external_transfer_expired           | Representa a expiração de uma transferência externa.                     |           
 
 
+##### **Pix:**
+
+| Tipo de Evento                | Descrição                                      |  
+| ----------------------------- | ---------------------------------------------- |
+| pix_outbound_payment_failed   | Representa a falha do envio de um Pix.         | 
+| pix_outbound_payment_settled  | Representa a finalização de um Pix.            |
+| pix_outbound_payment_refunded | Representa o reembolso de um Pix mal sucedido. |
+
+
 ##### **Consentimento:**
 
 | Tipo de Evento               | Descrição                                                                | Exemplo       | 
@@ -111,6 +120,8 @@ A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) s
 | sign_up_created                              | Enviado quando é feito o pedido de abertura de conta.   | [A1](/docs/guias/integracao/webhooks/A1.json)                |
 | sign_up_status_updated                       | Enviado quando é feito uma atualização dos dados na abertura da conta.        | [A2](/docs/guias/integracao/webhooks/A2.json)   |
 | sign_up_resource_details_updated             | Serão enviados diversos webhooks com este tipo de evento de acordo com a evolução da abertura de conta. Ex: `account_created`, `user_email_verified`, ....| [A3](/docs/guias/integracao/webhooks/A3.json) |
+
+
 
 
 
