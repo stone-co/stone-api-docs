@@ -103,75 +103,56 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/discovery/keys
 ```
 2- Extraia da resposta a chave que tenha como chave valor "use: enc", essa corresponde a chave para criptografar (enc/encrypt).
 
-3- Com essa chave utilize uma implementação de Javascript Object Signing and Encryption (JOSE) para criptografar o conteúdo a ser enviado na requisição.
-O conteúdo a ser criptografado segue o schema mencionado mais abaixo na documentação.
-Esse passo varia de acordo com a linguagem utilizada na sua implementação, abaixo oferecemos alguns exemplos.
+3- Usar uma biblioteca de criptografia passando o payload, a chave pública e o algoritmo utilizado, no caso, RSA-OAEP-256
+
+Segue um exemplo de como gerar um JWE em Python:
 
 <br>
 
 **Python**
 
 ```python
-  from jwcrypto import jwk, jwe
-  from jwcrypto.common import json_encode
+import requests
+import json
+from jwcrypto import jwe, jwk
+from jwcrypto.common import json_encode
+import sys
 
-  payload = json_encode({
+
+def generate_jwe(payload):
+  key = get_public_key()
+  public_key = jwk.JWK()
+  public_key = public_key.from_json(json.dumps(key))
+
+  encrypted = jwe.JWE(payload.encode("utf-8"), recipient=public_key, protected={
+      "alg": "RSA-OAEP-256",
+      "enc": "A256GCM",
+      "kid": key["kid"],
+  })
+
+  return encrypted.serialize(compact=True)
+
+
+def get_public_key():
+  response = requests.get(
+      "https://sandbox-api.openbank.stone.com.br/api/v1/discovery/keys")
+
+  for key in response.json()["keys"]:
+      if key["use"] == "enc":
+          return key
+
+payload = json_encode({
     'user': {
       'document': '44946137033',
       'document_type': 'cpf',
       'full_name': 'José da Silva',
-      'email': 'josesilva@example.com'
+      'email': 'gabriela.andrade+30@stone.com.br'
     }
   })
-
-  public_key = {} # chave extraída no passo 2
-  encoded_key = json_encode({
-    'alg': 'RSA-OAEP-256',
-    'enc': 'A256GCM',
-    'kid': public_key['kid']
-  })
-
-  # Instancia a chave
-  jwk_key = jwk.JWK(**public_key)
-
-  # Criptografa o payload do signup
-  jwetoken = jwe.JWE(payload, enc)
-  jwetoken.add_recipient(jwk_key)
-
-  # Converte a chave para o formato JWT compacto
-  jwe_body = jwetoken.serialize(compact=True)
+jwe = generate_jwe(payload)
+print(jwe)
 ```
 
-**Javascript**
-
-```javascript
-  import * as jose from 'node-jose'
-
-  payload = {
-    'user': {
-      'document': '44946137033',
-      'document_type': 'cpf',
-      'full_name': 'José da Silva',
-      'email': 'josesilva@example.com'
-    }
-  }
-
-  publicKey = {} # chave extraída no passo 2
-  
-  jwe_body = jose.JWK.asKey(publicKey).then(key =>
-      jose.JWE.createEncrypt(
-        {
-          format: 'compact',
-          fields: { alg: 'RSA-OAEP-256', enc: 'A256GCM' }
-        },
-        key
-      )
-        .update(jose.util.asBuffer(JSON.stringify(payload)))
-        .final()
-        .then(result => result)
-  )
-
-```
 
 ##### Exemplo de preenchimento do payload:
 
@@ -191,8 +172,6 @@ Esse passo varia de acordo com a linguagem utilizada na sua implementação, aba
 }
 ```
 
-
-4- Utilizamos o algoritmo de criptografia 'RSA-OAEP-256' com o método criptografia 'A256GCM' e o JWE deve ser enviado no formato compacto.
 
 <br>
 
