@@ -99,7 +99,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/discovery/keys
 ```
 2- Extraia da resposta a chave que tenha como chave valor "use: enc", essa corresponde a chave para criptografar (enc/encrypt).
 
-3- 3- Usar uma biblioteca de criptografia passando o payload (dados do usuário, veja abaixo no [Schema](/docs/referencia-da-api/dados-da-conta/criar-nova-conta-de-pagamento/#schema) ), a chave pública encontrada no item 2.
+3- Usar uma biblioteca de criptografia passando o payload (dados do usuário, veja abaixo no [Schema](/docs/referencia-da-api/dados-da-conta/criar-nova-conta-de-pagamento/#schema) ), a chave pública encontrada no item 2.
 
 Segue um exemplo de como gerar um JWE em Python:
 
