@@ -75,7 +75,7 @@ Para gerar o token [acesse aqui](/docs/guias/integracao/autenticacao).
 ---
 <br>
 
-Consiste nos dados do usuário e opcionalmente na organização que iremos cadastrar.
+Consiste no envio dos dados do usuário e opcionalmente da organização que iremos solicitar o pedido de criação de conta de pagamento.
 
 Como esse endpoint trafega dados sensíveis, é necessário criptografar a requisição enviando um JWE (JSON Web Encryption), este corresponde a um JWT criptografado.
 
@@ -99,7 +99,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/discovery/keys
 ```
 2- Extraia da resposta a chave que tenha como chave valor "use: enc", essa corresponde a chave para criptografar (enc/encrypt).
 
-3- Usar uma biblioteca de criptografia passando o payload, a chave pública e o algoritmo utilizado, no caso, RSA-OAEP-256
+3- 3- Usar uma biblioteca de criptografia passando o payload (dados do usuário, veja abaixo no [Schema](/docs/referencia-da-api/dados-da-conta/criar-nova-conta-de-pagamento/#schema) ), a chave pública encontrada no item 2.
 
 Segue um exemplo de como gerar um JWE em Python:
 
@@ -150,7 +150,7 @@ print(jwe)
 ```
 
 
-##### Exemplo de preenchimento do payload:
+##### Exemplo de preenchimento do payload com envio dos dados da organização:
 
 
 ```Json
