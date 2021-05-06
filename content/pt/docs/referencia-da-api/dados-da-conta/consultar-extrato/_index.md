@@ -18,9 +18,9 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/stateme
 **PATH PARAMS**
 
 ---
+<br>
 
-**account_id**  `string`
-
+**account_id**  `string`<br>
 Identificador da Conta.
 
 <br> <br>
@@ -32,39 +32,43 @@ Identificador da Conta.
 
 **limit**  `int32`
 
----
+<br>
 
-**before**  `string`
-
+**before**  `string`<br>
 Traz a página anterior ao cursor.
 
----
+<br>
 
-**after**  `string`
-
+**after**  `string`<br>
 Traz a página posterior ao cursor.
 
----
+<br>
 
-**start_datetime**  `string`
-
+**start_datetime**  `string`<br>
+Valor referente a data da transação.<br>
 Format: ISO8601 - "YYYY-MM-DDThh:mm:ssZ"
 
----
+<br>
 
-**end_datetime**  `string`
-
+**end_datetime**  `string`<br>
+Valor referente a data da transação.<br>
 Format: ISO8601 - "YYYY-MM-DDThh:mm:ssZ"
 
----
+<br>
 
-**type**  `string`
-
+**type**  `string`<br>
 Filtra o extrato por um ou mais tipos de registro.
 
 Valores possíveis: `internal`, `external`, `external_refund`, `payment`, `payment_refund`, `balance_block`, `card_payment`, `salary_portability`, `salary_portability_refund`, `salary_portability_employer_refund` e `instant_payment`.
 
-Para escolher mais de um type, basta incluir no final da requisição os types, exemplo:  `/statement?type[]=external&type[]=internal`
+Para escolher mais de um type, basta incluir no final da requisição os types.
+
+Exemplo:  
+
+- `/statement?type[]=external&type[]=internal`;
+- `/statement?operation=credit|debit`.
+
+<br>
 
 ---
 {{% pageinfo %}}
