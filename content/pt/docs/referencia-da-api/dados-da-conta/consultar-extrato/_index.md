@@ -13,7 +13,7 @@ weight: 8
 GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/statement
 ```
 
----
+<br>
 
 **PATH PARAMS**
 
@@ -23,12 +23,13 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/stateme
 **account_id**  `string`<br>
 Identificador da Conta.
 
-<br> <br>
+<br> 
 
 
 **QUERY PARAMS**
 
 ---
+<br>
 
 **limit**  `int32`
 
@@ -70,7 +71,8 @@ Exemplo:
 
 <br>
 
----
+<br>
+
 {{% pageinfo %}}
 **Valor da Operação**
 
@@ -84,15 +86,21 @@ Também repare que, quando se faz uma transferência de R$100,00, por exemplo, o
 O extrato é dividido por tipos de movimentação. É possível consultar qual foi a movimentação pelo `type` da resposta. No exemplo acima, podemos notar que tivemos duas movimentações: uma transferência interna (`type:internal`) e uma transferência externa (`type:external`), ambas com campos de resposta diferentes. Veja neste [link](/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/) para mais informações sobre o JSON Schema de cada tipo de operação.
 {{% /pageinfo %}}
 
----
+<br>
 
 ##### Response
+---
 
 ```http
 201 Created
 content-type: application/json
 ```
-Body
+<br>
+
+##### Body
+
+---
+
 ```JSON
 {
     "cursor": {
@@ -156,6 +164,17 @@ Body
 }
 ```
 
-Note que, na resposta acima, foram feitas duas transferências, uma interna e uma externa, ambas com as suas particularidades de retorno.
+<br>
 
-Em cada extrato há duas informações: {balance before} e {balance after}. O `_balance_before_` registra o saldo do usuário antes da operação, e o `_balance_after_` registra o saldo após a operação dado o `_balance_before_` menos o valor da operação.
+
+{{< alert title="Observação" >}}
+
+<br>
+
+Na resposta acima foram feitas duas transferências, uma interna e uma externa, ambas com as suas particularidades de retorno.
+
+Em cada extrato há duas informações: {balance before} e {balance after}. <br>
+O `_balance_before_` registra o saldo do usuário antes da operação, e o `_balance_after_` registra o saldo após a operação dado o `_balance_before_` menos o valor da operação.
+
+{{< /alert >}}
+

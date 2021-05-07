@@ -13,25 +13,30 @@ weight: 12
 GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/fees
 ```
 
----
+<br>
 
 **PATH PARAMS**
 
 ---
+<br>
 
-**account_id**  `string`
-
+**account_id**  `string`<br>
 Identificador da conta.
 
----
+<br>
 
 ##### Response
+---
 
 ```http
 201 OK
 content-type: application/json
 ```
-Body
+<br>
+
+##### Body
+---
+
 ```JSON
 {
   "cursor": {
