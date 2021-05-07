@@ -45,13 +45,13 @@ Traz a página posterior ao cursor.
 <br>
 
 **start_datetime**  `string`<br>
-Valor referente a data da transação.<br>
+Valor referente a data de criação da transação.<br>
 Format: ISO8601 - "YYYY-MM-DDThh:mm:ssZ"
 
 <br>
 
 **end_datetime**  `string`<br>
-Valor referente a data da transação.<br>
+Valor referente a data de criação da transação.<br>
 Format: ISO8601 - "YYYY-MM-DDThh:mm:ssZ"
 
 <br>
