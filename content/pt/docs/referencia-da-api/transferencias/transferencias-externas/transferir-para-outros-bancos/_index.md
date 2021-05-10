@@ -5,7 +5,13 @@ draft: false
 weight: 7
 ---
 
+---
+
+<br>
+
 Faz transferências monetárias para outra instituição (TED). Não é permitido realizar uma TED de uma conta Stone para outra conta Stone.
+
+<br>
 
 Caso a transferência seja criada em um dia não útil ou fora do horário de funcionamento de TEDs, a transferência será agendada automaticamente para o dia seguinte. Nesse caso seu status será `DELAYED_TO_NEXT_BUSINESS_DAY`, como também a flag `delayed_to_next_business_day = true`. O campo `scheduled_to_effective` conterá a data para a qual a TED foi agendada.
 
@@ -15,8 +21,10 @@ Caso a data escolhida não seja um dia útil, a transferência será automaticam
 
 A data usada no campo `scheduled_to` deve obedecer a data limite retornada na [API de calendario de agendamento](/docs/referencia-da-api/agendamento/calendario-de-agendamento/). Caso contrário, será retornado um erro 422 na criação.
 
+<br>
 
 ---
+
 ```http request
 POST https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers
 ```
@@ -24,6 +32,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers
 
 #### **BODY PARAMS**
 ---
+<br>
 
 **amount*** `int32`
 <br>Valor da transferência em centavos de Real, ou seja, um real fica 100.
@@ -77,6 +86,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers
 
 #### **HEADERS**
 ---
+<br>
 
 **x-stone-idempotency-key** `string`
 <br>Chave de idempotência

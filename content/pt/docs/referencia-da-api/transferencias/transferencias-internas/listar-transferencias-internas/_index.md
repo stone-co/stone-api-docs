@@ -14,6 +14,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers
 
 #### **QUERY PARAMS**
 ---
+<br>
 
 **account_id*** `string`
 <br>Identificador da conta.

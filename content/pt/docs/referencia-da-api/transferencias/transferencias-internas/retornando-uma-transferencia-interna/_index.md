@@ -7,13 +7,16 @@ date: "2019-04-01T19:23:33.248Z"
 lastmod: "2019-12-02T22:56:58.139Z"
 ---
 ---
+<br>
+
 ```http request
 GET https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers/transfer_id
 ```
----
+<br>
 
 #### **PATH PARAMS**
 ---
+<br>
 
 **transfer_id** `string`
 <br>Identificador da transferência.

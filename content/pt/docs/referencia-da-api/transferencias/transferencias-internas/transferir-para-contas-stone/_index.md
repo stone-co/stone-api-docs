@@ -7,7 +7,12 @@ date: "2019-04-01T19:18:21.671Z"
 lastmod: "2020-03-02T18:59:37.899Z"
 ---
 
+---
+<br>
+
 Faz transferências monetárias para outra conta dentro da Stone. <br> 
+
+<br>
 
 A transferência pode ser agendada, através do campo `scheduled_to`. A data usada no campo `scheduled_to` deve estar entre a data `next_available_execution_date` e a data limite retornada no campo `execution_limit_date` da [API de caléndario de agendamento](/docs/referencia-da-api/agendamento/calendario-de-agendamento/) chamada com o parâmetro `operation_type=internal_transfer`. 
 
@@ -24,6 +29,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers
 
 #### **BODY PARAMS**
 ---
+<br>
 
 **amount*** `int32`
 <br>Valor da transferência em centavos de Real, ou seja, um real fica 100.
@@ -53,6 +59,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers
 
 #### **HEADERS**
 ---
+<br>
 
 **x-stone-idempotency-key** `string`
 <br>Chave de idempotência
