@@ -8,6 +8,9 @@ description: >
 
 ---
 
+---
+<br>
+
 Todos os valores na API serão sempre inteiros e expressos em centavos de Reais.
 
 Assim, o valor de um real (R$1,00) ficaria: `100`.

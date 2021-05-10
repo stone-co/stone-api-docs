@@ -8,7 +8,13 @@ description: >
 
 ---
 
+---
+
+<br>
+
 Nossa API usa como retorno os [códigos HTTP](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) padrão para indicar tanto o sucesso de uma requisição, quanto para indicar falha. Pode-se utilizar a tabela abaixo como referência:
+
+<br>
 
 | Código | Significado                                                                              |
 | ------ | ---------------------------------------------------------------------------------------- |
@@ -29,5 +35,8 @@ Nossa API usa como retorno os [códigos HTTP](https://www.w3.org/Protocols/rfc26
 
 {{% pageinfo %}}
 **Identificador da Requisição**
-<br>O cabeçalho da resposta sempre inclui um campo identificador da requisição, chamado `x-request-id`. Este valor deve ser enviado sempre que precisar de suporte, já que ele nos permite encontrar a chamada no nosso sistema e verificar o que possa ter dado errado.
+
+<br>
+
+O cabeçalho da resposta sempre inclui um campo identificador da requisição, chamado `x-request-id`. Este valor deve ser enviado sempre que precisar de suporte, já que ele nos permite encontrar a chamada no nosso sistema e verificar o que possa ter dado errado.
 {{% /pageinfo %}}
