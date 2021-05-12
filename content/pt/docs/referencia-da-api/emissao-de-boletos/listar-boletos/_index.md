@@ -7,6 +7,8 @@ date: "2020-03-09T17:11:01.543Z"
 lastmod: "2020-03-09T17:11:01.543Z"
 ---
 ---
+
+
 ```http request
 GET https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
 ```
@@ -14,6 +16,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
 
 #### **QUERY PARAMS**
 ---
+<br>
 
 **account_id*** `string`
 <br> Identificador da conta.
@@ -36,15 +39,16 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
 
 ---
 **amount** `integer`
-<br>
+<br> Valor do boleto bancário gerado, em centavos de reais.
 
 ---
 **issuance_date** `string`
-<br>
+<br> Data da emissão de boleto bancário. Formato "YYYY-MM-DD".
 
 ---
 **expiration_date** `string`
-<br>
+<br> Data de vencimento do boleto bancário. Mesmo depois dessa data expirar o pagamento ainda pode ser feito.
+Formato "YYYY-MM-DD". 
 
 ---
 **settled_date** `string`
@@ -89,8 +93,17 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
 ---
 **end_settled_date** `string`
 
-<br>
 
+
+---
+**barcode**`string`
+<br> Código de barras.
+
+---
+**writable_line**`string`
+<br> Código de barras traduzidos em números.
+
+<br>
 
 #### **Response**
 
