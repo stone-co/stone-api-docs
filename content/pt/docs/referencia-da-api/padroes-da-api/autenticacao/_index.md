@@ -7,6 +7,10 @@ draft: false
 date: 2020-05-07T18:06:16-03:00
 lastmod: 2020-09-21T18:00:00-03:00
 ---
+
+---
+<br>
+
 A nossa API é RESTful, e todas suas respostas são em JSON, nos endpoint base, por ambiente:
 
 - _Sandbox_: https://sandbox-api.openbank.stone.com.br
@@ -15,7 +19,12 @@ A nossa API é RESTful, e todas suas respostas são em JSON, nos endpoint base, 
 Seguimos alguns padrões para alguns tipos de dados em toda a nossa API.
 A seguir, juntamos alguns desses padrões para simplificar a vida da desenvolvedora.
 
+<br>
+
 ### Realizando Chamadas Autenticadas
+---
+
+<br>
 
 A nossa API só aceita chamadas autenticadas, ou seja, chamadas cujo sujeito da ação conseguimos identificar.
 

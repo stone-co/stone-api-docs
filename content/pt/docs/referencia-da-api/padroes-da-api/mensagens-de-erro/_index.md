@@ -7,20 +7,24 @@ weight: 7
 description: >
 
 ---
+---
 
-Nossos endpoints seguem um padrão de mensagens. Toda mensagem de erro, por exemplo, seguirá o modelo "srn:error:xxx\" e um [código HTTP](/docs/referencia-da-api/stone-openbank/codigos-de-resposta/) apropriado para a falha.
+<br>
 
-Por exemplo:
+Nossos endpoints seguem um padrão de mensagens. Toda mensagem de erro, por exemplo, seguirá o modelo "srn:error:xxx\" e um [código HTTP](/docs/referencia-da-api/padroes-da-api/codigos-de-resposta/) apropriado para a falha.
+
+Exemplo:
 
 ```JSON
 {
     "type": "srn:error:target_account_not_found"
 }
 ```
+<br>
 
 Alguns endpoints têm uma resposta mais completa, entregando a mensagem de erro mencionada e mais detalhes.
 
-Por exemplo:
+Exemplo:
 
 ```JSON
 {

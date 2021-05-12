@@ -9,11 +9,19 @@ description: >
 
 ---
 
+---
+<br>
+
 **Sejam bem-vindos à seção de Referências da Stone OpenBank API.**
 
 Através da nossa API é possível ter funcionalidades de internet banking e de apps de banco no seu negócio!
 
+<br>
+
 #### O que é a Stone OpenBank API
+---
+
+<br>
 
 Aqui na Stone a gente acredita não apenas que o **cliente** tem razão, mas que ele **é a nossa razão**. Somos fiéis defensores da competição e acreditamos que isso melhora o mercado como um todo, o que, por sua vez, melhora a vida da nossa razão.
 
@@ -24,7 +32,11 @@ O Aplicativo da Conta Stone é mais um parceiro da Stone OpenBank API, usando ex
 
 Assim como nós pudemos criar o nosso aplicativo de conta em cima dessa API, você pode fazer o mesmo ou integrar as funcionalidades de automação bancária no seu negócio.
 
+<br>
+
 #### O que oferecemos?
+---
+<br>
 
 Com a API da Conta Stone você pode disponibilizar para os seus clientes:
 
@@ -38,7 +50,11 @@ Com a API da Conta Stone você pode disponibilizar para os seus clientes:
 * Link de Pagamento (Em breve);
 * Pix (Em breve).
 
+<br>
+
 #### Como funciona a integração?
+---
+<br>
 
 Por enquanto, ainda não estamos realizando on-board de parceiros em auto-serviço. Por isso, todos os interessados em firmar parcerias devem entrar em contato com o nosso time de parcerias seguindo os seguintes passos:
 
@@ -56,9 +72,14 @@ A Stone, com a ajuda do parceiro, vai realizar testes na Aplicação ainda em Sa
 
 Todo o processo para realização do cadastro se encontra descrito detalhadamente [aqui](/docs/guias/integracao/cadastro-da-aplicacao/).
 
+<br>
+
 #### Como integrar com a API
+---
+<br>
 
 Todos os processos e requerimentos para a utilização de nossa API se encontram descritros detalhadamente em nossa [Documentação](/docs/):
+
 
 #### [Quickstart](/docs/guias/stone-openbank-api/quickstart/)
 
