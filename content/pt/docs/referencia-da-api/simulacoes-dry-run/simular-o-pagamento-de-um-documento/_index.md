@@ -7,6 +7,8 @@ lastmod: 2020-06-04T00:43:25.396Z
 weight: 4
 ---
 
+---
+
 ```http
 POST https://sandbox-api.openbank.stone.com.br/api/v1/dry_run/payments
 ```
@@ -17,11 +19,14 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/dry_run/payments
 
 ---
 
+<br>
+
 **barcode**  `string`
 
 Código de barras do documento.
 
 ---
+<br>
 
 **account_id**  `string`
 
@@ -33,19 +38,24 @@ Identificador da conta pagadora
 #### **HEADERS**
 
 ---
+<br>
 
 **x-stone-idempotency-key**  `string`
 
 Chave de idempotência
 
+<br>
+
 ---
 
-###### Results Params
+##### Results Params
 
 | Chave                    | Descrição                                                                                                                                                              |
 | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | document_type            | Tipo do documento, podendo ser um dentre os valores à seguir: 'boleto' ou 'concessionaria'                                                                             |
 | payment_being_processed? | Indica se a Stone já recebeu uma solicitação de pagamento deste documento e ainda está processando a solicitação. Em caso de "true" não deve ser feito novo pagamento. |
+
+<br>
 
 ---
 
@@ -101,6 +111,8 @@ Body
         "total_added_value": null,
         "total_discounted_value": null,
         "updatable_value": null,
+        "unpayable_reason_code": null,
+        "unpayable_reason_description": null,
         "value": 2000,
         "writable_line": "846800000008737300480016102554660849071951908103"
     },

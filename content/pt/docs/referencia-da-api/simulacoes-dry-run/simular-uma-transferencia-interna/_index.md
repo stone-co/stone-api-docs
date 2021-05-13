@@ -6,6 +6,7 @@ date: 2018-10-19T20:57:05.070Z
 lastmod: 2019-12-02T22:56:58.216Z
 weight: 1
 ---
+---
 
 ```http
 POST https://sandbox-api.openbank.stone.com.br/api/v1/dry_run/internal_transfers
@@ -16,6 +17,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/dry_run/internal_transfers
 #### **BODY PARAMS**
 
 ---
+<br>
 
 **amount**  `int32`
 
@@ -23,11 +25,15 @@ Valor da transferência em centavos de Real, ou seja, um real é igual a 100.
 
 ---
 
+<br>
+
 **account_id**  `string`
 
 Identificador da conta que está enviando a transferência.
 
 ---
+
+<br>
 
 **target**  `object`
 
@@ -36,13 +42,17 @@ Identificador da conta que está enviando a transferência.
   - **account_code** `string`
     Número da conta. Padrão: `^\d+$`
 
+
 ---
+<br>
 
 **description**  `string`
 
 Descrição da transação. Essa descrição será exibida tanto no extrato de quem enviou quanto de quem recebeu (limite 200 caracteres).
 
 ---
+
+<br>
 
 **scheduled_to**  `string`
 
@@ -55,6 +65,8 @@ Formato: `yyyy-mm-dd`
 #### **HEADERS**
 
 ---
+
+<br>
 
 **x-stone-idempotency-key**  `string`
 
