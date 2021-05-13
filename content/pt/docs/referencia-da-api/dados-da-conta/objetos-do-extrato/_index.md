@@ -75,6 +75,7 @@ Todas as entradas do extrato tem alguns campos padrões, são eles:
 | status         | Status atual da transação. Varia de acordo com o tipo de transação. | `String`  |
 | id             | Identificador da transação que originou essa movimentação no extrato. | `String`  |
 
+
 ---
 
 <br>
@@ -118,6 +119,7 @@ Abaixo temos os campos que são utilizados em cada tipo de transação no extrat
 | details           | Dados sobre o pagamento de um boleto. Veja mais sobre esse campo aqui | _Object_  | `payment`, `payment_refund` |
 | scheduled_to      | Data para qual foi agendado o pagamento de um boleto. | _String_  | `payment` |
 | writable_line     | Linha digitável de um boleto. | _String_  | `payment`, `payment_refund` |
+
 
 ---
 <br>
