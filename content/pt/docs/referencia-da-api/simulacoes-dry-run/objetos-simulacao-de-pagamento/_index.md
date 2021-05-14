@@ -8,12 +8,20 @@ weight: 3
 ---
 
 ---
+<br>
 
 O Dry Run de pagamentos retorna, além do [Objeto Pagamento](/docs/referencia-da-api/pagamentos/o-objeto-pagamento/) em si, os Objetos [Barcode Details](#objeto-barcode-details) e [Details](#objeto-details).
 
+<br>
+
 ### Objeto Barcode Details
+---
+
+<br>
 
 O Objeto Barcode Details é composto por meio da extração das informações contidas no código de barras informado, dispondo-as nos seguintes campos:
+
+<br>
 
 | Chave           | Descrição                                                                 | Tipo      |
 | --------------- | ------------------------------------------------------------------------- | --------- |
@@ -24,7 +32,12 @@ O Objeto Barcode Details é composto por meio da extração das informações co
 | face_value      | Valor com o qual o documento foi criado e que consta do código de barras. | _Integer_ |
 | writable_line   | Código numérico que acompanha o código de barras.                         | _String_  |
 
+<br>
+
 ### Objeto Details
+---
+
+<br>
 
 O Objeto Details traz informações do status atual desse documento segundo sua fonte emissora, como juros, multas, horário limite de pagamento, entre outras. Veja todas as informações retornadas abaixo.
 
@@ -55,3 +68,5 @@ O Objeto Details traz informações do status atual desse documento segundo sua 
 | updatable_value        | Indica se é permitido alterar o valor do documento. Só disponível para document_type com valor concessionaria.                                                                       | _Boolean_ |
 | value                  | Valor atualizado já com descontos, multas e juros que se aplicam.                                                                                                                    | _Integer_ |
 | writable_line          | Código numérico que acompanha o código de barras.                                                                                                                                    | _String_  |
+| unpayable_reason_code  | Código que representa o motivo de estar impagável. | _String_	|
+| unpayable_reason_description | Descrição do motivo de estar impagável. | _String_	| 

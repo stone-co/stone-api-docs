@@ -6,7 +6,7 @@ date: 2018-10-19T20:57:05.070Z
 lastmod: 2019-12-02T22:56:58.216Z
 weight: 2
 ---
-
+---
 
 ```http
 POST https://sandbox-api.openbank.stone.com.br/api/v1/dry_run/external_transfers
@@ -18,17 +18,23 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/dry_run/external_transfers
 
 ---
 
+<br>
+
 **amount**  `int32`
 
 Valor da transferência em centavos de Real, ou seja, um real é igual a 100.
 
 ---
 
+<br>
+
 **account_id**  `string`
 
 Identificador da conta.
 
 ---
+
+<br>
 
 **target**  `object`
 
@@ -56,6 +62,8 @@ Identificador da conta.
 
 ---
 
+<br>
+
 **scheduled_to**  `string`
 
 Formato: `yyyy-mm-dd`
@@ -68,10 +76,13 @@ Formato: `yyyy-mm-dd`
 #### **HEADERS**
 
 ---
+<br>
 
 **x-stone-idempotency-key**  `string`
 
 Chave de idempotência.
+
+<br>
 
 ---
 
