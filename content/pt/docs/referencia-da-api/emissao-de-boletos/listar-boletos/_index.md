@@ -22,84 +22,123 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
 <br> Identificador da conta.
 
 ---
+<br>
+
 **before** `string`
 <br> Cursor opaco da paginação.
 
 ---
+<br>
+
 **after** `string`
 <br> Cursor opaco da paginação.
 
 ---
+<br>
+
 **limit** `integer`
 <br> Limite de itens retornados.
 
 ---
+<br>
+
 **status** `string`
 <br> Valores Permitidos: CREATED, SETTLED, REGISTERED, EXPIRED, PENDING.
 
 ---
+<br>
+
 **amount** `integer`
 <br> Valor do boleto bancário gerado, em centavos de reais.
 
 ---
+<br>
+
 **issuance_date** `string`
 <br> Data da emissão de boleto bancário. Formato "YYYY-MM-DD".
 
 ---
+<br>
+
 **expiration_date** `string`
 <br> Data de vencimento do boleto bancário. Mesmo depois dessa data expirar o pagamento ainda pode ser feito.
 Formato "YYYY-MM-DD". 
 
 ---
+<br>
+
 **settled_date** `string`
 <br>
 
 ---
+<br>
+
 **amount_lt** `integer`
 <br>
 
 ---
+<br>
+
 **amount_gt** `integer`
 <br>
 
 ---
+<br>
+
 **start_limit_date** `string`
 <br>
 
 ---
+<br>
+
 **end_limit_date** `string`
 <br>
 
 ---
+<br>
+
 **start_expiration_date** `string`
 <br>
 
 ---
+<br>
+
 **end_expiration_date** `string`
 <br>
 
 ---
+<br>
+
 **start_issuance_date** `string`
 <br>
 
 ---
+<br>
+
 **end_issuance_date** `string`
 <br>
 
 ---
+<br>
+
 **start_settled_date** `string`
 <br>
 
 ---
+<br>
+
 **end_settled_date** `string`
 
 
-
 ---
+<br>
+
 **barcode**`string`
 <br> Código de barras.
 
 ---
+<br>
+
 **writable_line**`string`
 <br> Código de barras traduzidos em números.
 
