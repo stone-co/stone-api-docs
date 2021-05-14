@@ -4,11 +4,18 @@ slug: "objeto-transferência"
 draft: false
 weight: 2
 ---
-Abaixo vamos trazer os campos de cada tipo de transferência.
 
 ---
+<br>
 
-#### Transferência Interna
+Abaixo vamos trazer os campos de cada tipo de transferência.
+
+<br>
+
+#### Transferência Interna:
+
+<br>
+
 
 | Chave                      | Descrição                                                                                                                                                          | Tipo      |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------- |
@@ -34,7 +41,9 @@ Abaixo vamos trazer os campos de cada tipo de transferência.
 
 <br>   
     
-#### Transferência Externa
+#### Transferência Externa:
+
+<br>
 
 | Chave                        | Descrição                                                                                                                                                                      | Tipo      |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------- |
@@ -65,7 +74,9 @@ Abaixo vamos trazer os campos de cada tipo de transferência.
 <br>
 
 
-##### Campos do objeto **target**
+##### Campos do objeto **target**:
+
+<br>
 
 | Chave   | Descrição                                                                                                                                                                                                    | Tipo     |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------- |
@@ -75,7 +86,9 @@ Abaixo vamos trazer os campos de cada tipo de transferência.
 
 <br>
 
-##### Campos do objeto **account**
+##### Campos do objeto **account**:
+
+<br>
 
 | Chave                   | Descrição                                                                                                                                                                                                                                                      | Tipo     |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
@@ -88,7 +101,9 @@ Abaixo vamos trazer os campos de cada tipo de transferência.
 
 <br>
 
-##### Campos do objeto **entity**
+##### Campos do objeto **entity**:
+
+<br>
 
 | Chave         | Descrição                                                                                                                                                                                                                          | Tipo     |
 | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
@@ -96,6 +111,7 @@ Abaixo vamos trazer os campos de cada tipo de transferência.
 | document      | Número do documento sem pontos da dona da conta alvo. **Apenas para transferência externa**.                                                                                                                                       | _String_ |
 | document_type | Tipo do documento da dona da conta alvo. Pode ser `cpf` ou `cnpj`. Utilizamos esse valor para distinguir o tipo de entidade da proprietária da conta entre pessoa física e pessoa jurídica. **Apenas para transferência externa**. | _String_ |
 
+<br>
 
 {{% pageinfo %}}
 A criação de transferências internas e externas estão sujeitas a um limite de `"amount": 999999999999999999`.

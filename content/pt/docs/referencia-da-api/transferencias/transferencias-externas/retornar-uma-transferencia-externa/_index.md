@@ -6,6 +6,10 @@ weight: 9
 date: "2019-04-01T19:33:33.090Z"
 lastmod: "2019-12-02T22:56:58.146Z"
 ---
+
+---
+<br>
+
 ```http request
 GET https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers/transfer_id
 ```
@@ -13,6 +17,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers/transfer
 
 #### **PATH PARAMS**
 ---
+<br>
 
 **transfer_id*** `string`
 <br>Identificador da transferência externa.
