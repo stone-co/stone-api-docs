@@ -6,7 +6,14 @@ weight: 3
 date: "2020-04-26T22:22:46.764Z"
 lastmod: "2020-10-24T00:14:01.560Z"
 ---
+
+---
+<br>
+
 #### Válidas para todos os tipos de boleto
+---
+
+<br>
 
 | Regras              | Todos os tipos                                                                                                                                                  |
 | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -19,10 +26,11 @@ lastmod: "2020-10-24T00:14:01.560Z"
 
 
 <br>
-<br>
 
 #### Variáveis por tipo de boleto
+---
 
+<br>
 
 | Regras                            | Depósito                                                                                                                                                                                                                                                                                                                                  | Proposta                                                                                                                                                                                                                                                                                                                                                         | Cobrança *(todos os tipos)*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -37,7 +45,7 @@ lastmod: "2020-10-24T00:14:01.560Z"
 | Múltiplos descontos               | Não suporta                                                                                                                                                                                                                                                                                                                               | Não suporta                                                                                                                                                                                                                                                                                                                                                      | É possível aplicar até 3 descontos a um boleto onde cada um terá sua data até a qual o desconto é válido.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | Sacador avalista<br> *(receiver)* | Não suporta                                                                                                                                                                                                                                                                                                                               | Quando um boleto é emitido em uma conta, mas o comprador final reconhece a compra em nome de outra empresa é possível usar o campo sacador avalista para apresentar o nome dessa empresa no boleto.<br>O beneficiário final não muda, ou seja, o valor do boleto será liquidado para a conta que o emitiu.<br>Funcionalidade comumente usada por subadquirentes. | Quando um boleto é emitido em uma conta, mas o comprador final reconhece a compra em nome de outra empresa é possível usar o campo sacador avalista para apresentar o nome da empresa que o comprador reconhe no boleto.<br>O beneficiário final não muda, ou seja, o valor do boleto será liquidado para a conta que o emitiu.<br>Funcionalidade comumente usada por subadquirentes.                                                                                                                                                                                                                                                        |
 ---
-
+<br>
 
 {{% pageinfo %}}
 **Atenção**

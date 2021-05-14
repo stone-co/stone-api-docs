@@ -14,6 +14,8 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/exports/barcode_payment_inv
 
 #### **PATH PARAMS**
 ---
+<br>
+
 **id*** `string`
 <br> Identificador do boleto.
 
