@@ -35,10 +35,14 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers
 <br>Valor da transferência em centavos de Real, ou seja, um real fica 100.
 
 ---
+<br>
+
 **account_id*** `string`
 <br>Identificador da conta que está enviando a transferência.
 
 ---
+<br>
+
 **target** `object`
 	<br>
 &nbsp; &nbsp; **account** `object`
@@ -48,10 +52,14 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Número da conta. Padrão: `^\d+$`
 	
 ---
+<br>
+
 **description** `string`
 <br>Descrição da transação. Essa descrição será exibida tanto no extrato de quem enviou quanto de quem recebeu (limite 200 caracteres).
 
 ---
+<br>
+
 **scheduled_to** `string`
 <br>Formato: `yyyy-mm-dd`
 

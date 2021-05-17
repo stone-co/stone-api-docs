@@ -20,18 +20,26 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers
 <br>Identificador da conta.
 
 ---
+<br>
+
 **before*** `string`
 <br>Cursor opaco da paginação.
 
 ---
+<br>
+
 **after*** `string`
 <br>Cursor opaco da paginação.
 
 ---
+<br>
+
 **limit*** `int32`
 <br>Limite de itens retornados.
 
 ---
+<br>
+
 **status*** `string`
 <br>Allowed values: `SCHEDULE`
 

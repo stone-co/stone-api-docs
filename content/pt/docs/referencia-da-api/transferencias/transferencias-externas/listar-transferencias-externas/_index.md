@@ -24,14 +24,20 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers
 <br>Identificador da conta.
 
 ---
+<br>
+
 **before*** `string`
 <br>Cursor opaco da paginação.
 
 ---
+<br>
+
 **after*** `string`
 <br>Cursor opaco da paginação.
 
 ---
+<br>
+
 **limit*** `int32`
 <br>Limite de itens retornados.
 
