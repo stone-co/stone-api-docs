@@ -7,6 +7,7 @@ lastmod: "2019-12-02T22:56:58.156Z"
 weight: 5
 ---
 
+---
 
 ```http 
 GET https://sandbox-api.openbank.stone.com.br/api/v1/payments/payment_id
@@ -16,6 +17,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/payments/payment_id
 #### **PATH PARAMS**
 
 ---
+<br>
 
 **payment_id***  `string` 
 
@@ -23,7 +25,7 @@ Identificador do pagamento.
 
 <br>
 
----
+
 
 ##### **Response**
 

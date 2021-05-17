@@ -8,6 +8,7 @@ lastmod: "2019-12-02T22:56:58.157Z"
 weight: 6
 ---
 
+---
 
 ```http 
 POST https://sandbox-api.openbank.stone.com.br/api/v1/payments/payment_id/cancel
@@ -17,12 +18,13 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/payments/payment_id/cancel
 #### **PATH PARAMS**
 
 ---
+<br>
 
 **payment_id***  `string` 
 
 <br>
 
----
+
 
 ##### **Response**
 

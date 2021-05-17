@@ -8,9 +8,13 @@ weight: 3
 description: >
 ---
 
+---
+
+<br>
+
 Usado para realizar pagamentos de boleto e concessionárias.
 
----
+
 <br>
 
 {{% pageinfo %}}
@@ -44,21 +48,24 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/payments
 
 ---
 
+<br>
+
 **barcode***  `string` 
 
 Código de barras do documento.
 
-<br>
-
 ---
+
+<br>
 
 **account_id***  `string` 
 
 Identificador da conta que irá pagar o documento.
 
-<br>
 
 ---
+
+<br>
 
 **scheduled_to***  `string` 
 
@@ -66,11 +73,12 @@ Formato: `yyyy-mm-dd`
 
 <br>
 
----
+
 
 #### **HEADERS**
 
 ---
+<br>
 
 **x-stone-idempotency-key***  `string`
 
@@ -78,7 +86,7 @@ Chave de idempotencia.
 
 
 <br>
----
+
 
 ##### **Response**
 
