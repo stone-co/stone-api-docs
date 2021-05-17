@@ -34,11 +34,15 @@ description: >
 - Oi TV;
 - SKY TV.
 
+<br>
+
 {{< alert title="Atenção" >}}
 
 <br>
 
-Para cada provedor, há um diferente **plano/valor** disponível.
+- Para cada provedor, há um diferente **plano/valor** disponível;
+
+- A liquidação da recarga poderá ser executada em até 24 horas, porém, costuma ser efetuada em questão de segundos.
 
 {{< /alert >}}
 

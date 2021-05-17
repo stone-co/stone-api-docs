@@ -41,12 +41,15 @@ description: >
 - Xbox Live;
 - Xbox Live (CSV).
 
+<br>
 
 {{< alert title="Atenção" >}}
 
 <br>
 
-Os valores oferecidos para a recarga não são flexíveis e variam de acordo com a operadora.
+- Os valores oferecidos para a recarga não são flexíveis e variam de acordo com a operadora;
+
+- O resgate dos créditos é feito ao informar o Código PIN retornado após a confirmação da recarga, a liquidação do crédito é executada no provedor em questão de segundos.
 
 {{< /alert >}}
 

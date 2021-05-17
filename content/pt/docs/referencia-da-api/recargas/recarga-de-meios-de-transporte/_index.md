@@ -52,13 +52,23 @@ O Fluxo de recarga se diferencia para os dois Provedores disponíveis:
 - Uber;
 - Bilhete Único de SP.
 
+<br>
+
 {{< alert title="Atenção" >}}
 
 <br>
 
-O valor escolhido para recarga do Provedor Uber, deverá estar entre R$1,00 e R$121,00.
+- **Uber**:
 
-O valor de recarga para o provedor Bilhete Único de SP varia de acordo com as quotas mínimas/máximas pré-estabelecidas. 
+    - O valor escolhido para recarga, deverá estar entre R$1,00 e R$121,00;
+    - A liquidação da recarga é executada no provedor em questão de segundos. O resgaste dos créditos é feito ao informar o Código PIN retornado após a confirmação da recarga. 
+
+<br>
+
+- **Bilhete único de SP**:
+
+    - O valor de recarga varia de acordo com as quotas mínimas/máximas pré-estabelecidas.
+    - O *BU* é recarregado após o cliente aproximar o cartão à catraca. 
 
 {{< /alert >}}
 
