@@ -5,8 +5,9 @@ lastmod: 2021-04-01T18:00:00-03:00
 weight: 1
 draft: false
 description: >
-  
+---  
 ---
+<br>
 
 ```http
 POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/outbound_pix_payments/brcode
@@ -20,6 +21,7 @@ E esse é o objetivo desse endpoint.
 
 #### **HEADERS**
 ---
+<br>
 
 **authorization*** `string`
 
@@ -38,9 +40,12 @@ Exemplo:
 
 #### **BODY PARAMS**
 ---
+<br>
 
 O body deve conter a string do QRCode obtida a partir da imagem ou copia e cola. 
 Para QRCode do tipo dinâmico com multa, juros, desconto é necessário informar os campos `payment_date` e `owner_account`
+
+<br>
 
 **brcode*** `string`
 
@@ -67,12 +72,17 @@ Body:
 <br>
 
 ##### **Responses**
+---
+
+<br>
 
 A resposta varia de acordo com o tipo de QR Code que você está lendo, que pode ser um QR Code Estático, um QR Code Dinâmico de pagamento imediato ou um QR Code Dinâmico com multa, juros, desconto. Esse último ainda não é suportado, entra em vigor no Brasil em maio, já estamos desenvolvendo.
 
 <br>
 
 ###### **Payload retornado ao consultar um QR Code estático**
+---
+
 
 ```http
 200 OK
@@ -93,6 +103,7 @@ A resposta varia de acordo com o tipo de QR Code que você está lendo, que pode
 <br>
 
 ###### **Payload retornado ao consultar um QR Code dinâmico**
+---
 
 ```http
 200 OK
@@ -129,6 +140,7 @@ A resposta varia de acordo com o tipo de QR Code que você está lendo, que pode
 
 
 ###### **Retornado quando o QRCode não pode ser obtido**
+---
 
 ```http
 400
@@ -143,6 +155,9 @@ A resposta varia de acordo com o tipo de QR Code que você está lendo, que pode
 <br>
 
 ###### **Retornado quando o tipo do QRCode não foi suportado ainda**
+---
+<br>
+
 Ex.: QRCode com vencimento, juros e multa.
 
 ```http

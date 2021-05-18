@@ -6,18 +6,26 @@ lastmod: "2021-04-01T18:00:00-03:00"
 weight: 2
 draft: false
 description: >
-
 ---
+---
+<br>
 
 ```http
 POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/outbound_pix_payments
 ```
+<br>
+
 Esse endpoint foi idealizado para criação de um Pix pendente de confirmação enviando os dados do destino ou uma chave Pix.
 
 Ou seja, com este endpoint é possível fazer um pix informando tanto o campo `key` como informando o campo `target`. 
 
+<br>
+
 {{% pageinfo %}}
 **CONSIDERAÇÕES IMPORTANTES**
+
+<br>
+
 - O campo `key` se torna obrigatório na presença do campo `transaction_id`.<br>
 - A ausência do campo `key`, que seria o envio de um Pix pela Chave Pix torna o campo `target`, que é o campo com os dados bancários do destino, **obrigatório**.<br>
 - É possivel criar um Pix somente informando o campo `account_id` sem precisar informar o campo `source`.<br>
@@ -28,6 +36,7 @@ Ou seja, com este endpoint é possível fazer um pix informando tanto o campo `k
 
 #### **HEADERS**
 ---
+<br>
 
 **authorization*** `string`
 
@@ -49,6 +58,7 @@ Exemplo:
 
 #### **BODY PARAMS**
 ---
+<br>
 
 **account_id*** `string`
 <br>Identificador da conta

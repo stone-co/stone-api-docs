@@ -5,14 +5,18 @@ lastmod: 2021-04-01T18:00:00-03:00
 weight: 3
 draft: false
 description: >
-
 ---
+---
+<br>
 
 ```http
 POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/otbound_pix_payments/{id}/actions/confirm
 ```
+<br>
 
 Na confirmação, o body pode conter opcionalmente os campos `amount` e `description`, caso eles não tenham sido preenchidos na criação.
+
+<br>
 
 {{% pageinfo %}}
 **CONSIDERAÇÕES IMPORTANTES**
@@ -24,6 +28,7 @@ Na confirmação, o body pode conter opcionalmente os campos `amount` e `descrip
 
 #### **HEADERS**
 ---
+<br>
 
 **authorization*** `string`
 
@@ -45,6 +50,7 @@ Exemplo:
 
 #### **PARAMETERS REQUEST**
 ---
+<br>
 
 **id*** `string`
 
@@ -52,6 +58,7 @@ Exemplo:
 
 #### **BODY REQUEST**
 ---
+<br>
 
 **amount** `integer`
 <br>Valor a ser transferido
