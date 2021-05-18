@@ -15,12 +15,16 @@ description: >
 
 O link é uma funcionalidade padrão da Conta Stone que é habilitada no momento em que o usuário é aprovado no KYC. 
 
+<br>
 
 {{% pageinfo %}}
 **Atenção**
 
-Cada Conta Stone estará apta a gerar e gerenciar seus próprios links de pagamentos, independentemente de ser de um usuário ou uma organização.
+<br>
 
+- Cada Conta Stone estará apta a gerar e gerenciar seus próprios links de pagamentos, independentemente de ser de um usuário ou uma organização.
+
+- A API de Linkde Pagamentos fica disponível todos os dias da semana, 24 horas por dia.
 {{% /pageinfo %}}
 
 <br>
