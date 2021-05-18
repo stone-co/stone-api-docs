@@ -10,6 +10,36 @@ lastmod: "2020-10-24T00:14:01.560Z"
 ---
 <br>
 
+{{< alert title="Atenção" >}}
+<br>
+
+- **API de Boletos**
+	
+	- Fica disponível para emissão todos os dias da semana, 24 horas por dia;
+	- O registro de boletos é automático, executado no momento da criação do boleto, pode demorar de 3 segundos a 15 minutos a depender do volume de boletos emitidos.
+
+<br>
+
+- **Liquidação de Boletos**
+	
+	- Para boletos emitidos e pagos na Stone terão a sua liquidação efetuada no mesmo dia. Boletos emitidos na Stone e pagos em outras instituições, serão liquidados em até D+2 dias úteis.
+
+<br>
+
+- **Baixa Manual de Boletos**
+	
+	- A API para baixa manual de boletos e concessionárias fica disponível 24/7;
+	- Baixa de boletos realizadas após às 23h50 ocorrerão no dia útil seguinte em que a operação foi realizada; 
+	- Baixa manual de concessionárias são realizadas entre 7h00 e 20h00, ou seja, baixas solicitadas após às 20h serão realizadas às 7h do dia seguinte.
+
+<br>
+
+{{< /alert >}}
+
+
+
+<br>
+
 #### Válidas para todos os tipos de boleto
 ---
 
