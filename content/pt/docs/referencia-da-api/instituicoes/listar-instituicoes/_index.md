@@ -8,18 +8,26 @@ date: 2020-09-17T18:00:00-03:00
 lastmod: 2020-09-17T18:00:00-03:00
 description: >
 ---
+
+---
+<br>
+
 ```http
 GET https://sandbox-api.openbank.stone.com.br/api/v1/institutions
 ```
 
----
+<br>
 
 #### **Response**
+---
+
 
 ```http
 201 Created
 content-type: application/json
 ```
+<br>
+
 Body
 ```JSON
 [
