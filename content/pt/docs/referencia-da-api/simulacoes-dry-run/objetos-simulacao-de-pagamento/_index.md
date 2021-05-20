@@ -119,6 +119,6 @@ O Objeto Details traz informações do status atual desse documento segundo sua 
 | 29				| Dívida Ativa da União.						|
 | 30				| Encargos Condominiais.						|
 | 31				| Cartão de Crédito.							|
-| 32				| Boleto Prposta.								|
+| 32				| Boleto Proposta.								|
 | 33				| Boleto de Depósito e Aporte.					|
 | 99				| Outros.										|
