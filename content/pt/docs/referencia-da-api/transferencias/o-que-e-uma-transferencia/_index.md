@@ -53,9 +53,11 @@ Para a transferência interna o fluxo é similar. Neste caso não haverá o esta
 
 <br>
 
-{{% pageinfo %}}
-No ambiente de _sandbox_, a API de transferência externa fica disponível de 6:30 às 17:23 todos os dias, inclusive nos fins de semana e feriados, para facilitar os testes.
-{{% /pageinfo %}}
+{{< alert title="Horário de funcionamento" >}}
+<br>
+
+No ambiente de _sandbox_, a API de transferência externa fica disponível de 6:30 às 17:23 todos os dias, inclusive nos fins de semana e feriados, para facilitar os testes.		
+{{< /alert >}}
 
 <br>
 

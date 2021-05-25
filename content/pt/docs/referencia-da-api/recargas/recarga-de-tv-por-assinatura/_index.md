@@ -36,13 +36,22 @@ description: >
 
 <br>
 
-{{< alert title="Atenção" >}}
+{{% pageinfo %}}
+**Atenção**
+
+Para cada provedor, há um diferente **plano/valor** disponível.
+
+
+{{% /pageinfo %}}
 
 <br>
 
-- Para cada provedor, há um diferente **plano/valor** disponível;
 
-- A liquidação da recarga poderá ser executada em até 24 horas, porém, costuma ser efetuada em questão de segundos.
+{{< alert title="Horário de funcionamento" >}}
+
+<br>
+
+A liquidação da recarga poderá ser executada em até 24 horas, porém, costuma ser efetuada em questão de segundos.
 
 {{< /alert >}}
 

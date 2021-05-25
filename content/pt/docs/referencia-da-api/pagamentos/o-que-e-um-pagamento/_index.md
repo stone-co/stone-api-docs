@@ -16,18 +16,16 @@ weight: 1
 
 Oferecemos uma API de Pagamentos, através da qual é possível efetuar o pagamento de contas com código de barras como, por exemplo, boletos, contas de luz, água, gás, IPTU, IPVA, entre outras.
 
+Nossa API suporta pagamentos de todos os boletos CIP e um grande número de concessionárias/tributos. A janela de pagamentos de concessionárias pode variar de acordo com a empresa emissora. Pagamentos processados após o horário limite imposto pelo emissor serão acolhidos no dia útil seguinte.
 
 <br>
 
-{{< alert title="Atenção" >}}
-
+{{< alert title="Horário de funcionamento" >}}
 <br>
 
-- A API de Pagamentos fica disponível todos os dias das 00h00 até 23h50. Boletos pagos após 23h50 serão acolhidos no dia útil seguinte;
-
-- Nossa API suporta pagamentos de todos os boletos CIP e um grande número de concessionárias/tributos. A janela de pagamentos de concessionárias pode variar de acordo com a empresa emissora. Pagamentos processados após o horário limite imposto pelo emissor serão acolhidos no dia útil seguinte.
-
+A API de Pagamentos fica disponível todos os dias das 00h00 até 23h50. Boletos pagos após 23h50 serão acolhidos no dia útil seguinte.		
 {{< /alert >}}
+
 
 <br>
 

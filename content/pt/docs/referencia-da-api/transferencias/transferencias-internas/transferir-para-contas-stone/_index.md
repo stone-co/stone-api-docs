@@ -19,7 +19,16 @@ A transferência pode ser agendada, através do campo `scheduled_to`. A data usa
 Caso a data escolhida seja menor do que `next_available_execution_date`, a transferência será executada imediatamente. <br>
 Caso a data seja maior que `execution_limit_date`, será retornado um erro 422. 
 
+<br>
+
+{{< alert title="Horário de funcionamento" >}}
+<br>
+
 A criação e o agendamento de transferências internas pode acontecer em qualquer dia (incluindo fins de semana e feriados) e em qualquer horário.
+{{< /alert >}}
+
+<br>
+
 
 ---
 ```http request

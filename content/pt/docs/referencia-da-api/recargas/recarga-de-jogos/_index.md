@@ -43,13 +43,20 @@ description: >
 
 <br>
 
-{{< alert title="Atenção" >}}
+{{% pageinfo %}}
+**Atenção**
+
+Os valores oferecidos para a recarga não são flexíveis e variam de acordo com a operadora.
+
+{{% /pageinfo %}}
 
 <br>
 
-- Os valores oferecidos para a recarga não são flexíveis e variam de acordo com a operadora;
+{{< alert title="Horário de funcionamento" >}}
 
-- O resgate dos créditos é feito ao informar o Código PIN retornado após a confirmação da recarga, a liquidação do crédito é executada no provedor em questão de segundos.
+<br>
+
+A liquidação é executada no provedor em questões de segundos. O resgate dos créditos é feito ao informar o Código PIN retornado após a confirmação da recarga.
 
 {{< /alert >}}
 

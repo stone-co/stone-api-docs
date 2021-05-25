@@ -35,15 +35,24 @@ description: >
 
 <br>
 
-{{< alert title="Atenção" >}}
+{{% pageinfo %}}
+**Atenção**
+
+Para o Spotify os valores oferecidos não são flexíveis;
+
+Quanto ao Ifood a escolha do valor é flexível, com o mínimo de R$1,00 e máximo de R$149,00.
+
+{{% /pageinfo %}}
 
 <br>
 
-- Para o Spotify os valores oferecidos não são flexíveis;
+{{< alert title="Horário de funcionamento" >}}
 
-- Quanto ao Ifood a escolha do valor é flexível, com o mínimo de R$1,00 e máximo de R$149,00;
+<br>
 
-- **Para ambos os provedores**, a liquidação da recarga é executada em questão de segundos. O resgaste dos créditos é feito ao informar o Código PIN retornado após a confirmação da recarga.
+
+A liquidação é executada no provedor em questões de segundos. O resgate dos créditos é feito ao informar o Código PIN retornado após a confirmação da recarga.
+
 
 {{< /alert >}}
 

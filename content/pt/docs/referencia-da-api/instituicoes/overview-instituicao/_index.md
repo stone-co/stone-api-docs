@@ -17,6 +17,14 @@ Esta API possibilita que haja a consulta de Instituições de Pagamento Autoriza
 
 <br>
 
+{{< alert title="Horário de funcionamento" >}}
+<br>
+
+Os pagamentos de ID (Instituição domicilio) são processados em dias úteis às 07h50 da manhã.
+{{< /alert >}}
+
+<br>
+
 #### Listar todas as instituições e bancos
 ---
 <br>
@@ -32,9 +40,3 @@ Possibilitamos que a aplicação parceira possa listar todas as Instituições e
 Possibilitamos também que haja a busca de apenas um Banco ou Instituição pelo código numérico. É necessário apenas que haja a inserção do seu código no header da requisição.
 
 <br>
-
-{{< alert title="Atenção" >}}
-<br>
-
-Os pagamentos de ID (Instituição domicilio) são processados em dias úteis às 07h50 da manhã.
-{{< /alert >}}

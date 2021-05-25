@@ -10,6 +10,15 @@ description: >
 
 <br>
 
+{{< alert title="Horário de funcionamento" >}}
+<br>
+
+A API de Link de Pagamentos fica disponível todos os dias da semana, 24 horas por dia.	
+{{< /alert >}}
+
+
+<br>
+
 ```http
 POST https://sandbox-api.openbank.stone.com.br/api/v1/payment_links/orders
 ```

@@ -8,10 +8,35 @@ lastmod: "2020-12-21T20:31:32.971Z"
 ---
 
 ---
+
+<br>
+
+{{< alert title="Horário de funcionamento" >}}
+
+<br>
+
+- **API de Boletos**
+  
+  Fica disponível para emissão todos os dias da semana, 24 horas por dia;
+  
+  O registro de boletos é automático, executado no momento da criação do boleto, pode demorar de 3 segundos a 15 minutos a depender do volume de boletos emitidos.
+
+<br>
+
+- **Liquidação de Boletos**
+  
+  Para boletos emitidos e pagos na Stone terão a sua liquidação efetuada no mesmo dia. Boletos emitidos na Stone e pagos em outras instituições, serão liquidados em até D+2 dias úteis.
+
+<br>
+
+{{< /alert >}}
+
+<br>
+
 ```http request
 POST https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
 ```
----
+<br>
 
 #### **BODY PARAMS**
 ---

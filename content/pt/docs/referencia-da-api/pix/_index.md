@@ -21,10 +21,17 @@ A integração com o Pix ainda está em Alpha, o que significa que temos um grup
 
 O Pix é a nova modalidade de pagamentos instantâneos do Banco Central, que entrou em vigor no Brasil inteiro no dia 16 de novembro de 2020. 
 
-**Através do Pix, é possível realizar transações bancárias 24 horas por dia, todos os dias do ano, incluindo finais de semana e feriados.**
-<br><br>
 Além de sua ampla grade de funcionamento e pequeno tempo de processamento, o Pix busca simplificar a experiência do usuário que consegue passar o dinheiro para outro participante informando apenas seu telefone, documento (CPF/CNPJ), seu email ou lendo um QR Code. Lembrando que também é possível fazer um Pix informando os dados bancários, como é feito em uma TED.
-<br> <br>
+
+<br>
+
+{{< alert title="Horário de funcionamento" >}}
+<br>
+
+A API de Pix fica disponível todos os dias da semana e 24 horas por dia, pois é uma modalidade de pagamento instantânea.	
+{{< /alert >}}
+
+<br>
 
 #### **Participantes do Pix**
 ---

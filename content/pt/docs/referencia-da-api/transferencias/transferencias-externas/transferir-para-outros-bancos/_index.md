@@ -13,13 +13,12 @@ Faz transferências monetárias para outra instituição (TED). Não é permitid
 
 <br>
 
+{{< alert title="Horário de funcionamento" >}}
+<br>
 
-{{% pageinfo %}}
-**Atenção**
+A **API de Transferência Externa** fica disponível em dias úteis, das 6h30 às 17h20, a transação é processada de forma assíncrona e o valor é creditado na conta destino em poucas horas.
+{{< /alert >}}
 
-A **API de Transferência Externa** fica disponível em dias úteis, das 6h30 às 17h20, a transação é processada de forma assíncrona e o valor é creditado na conta destino em poucas horas. .
-
-{{% /pageinfo %}}
 
 <br>
 
