@@ -12,6 +12,8 @@ weight: 3
 
 O Dry Run de pagamentos retorna, além do [Objeto Pagamento](/docs/referencia-da-api/pagamentos/o-objeto-pagamento/) em si, os Objetos [Barcode Details](#objeto-barcode-details) e [Details](#objeto-details).
 
+Como complemento, descrevemos os possíveis resultados para o campo [document_payment_type](#document_payment_type).
+
 <br>
 
 ### Objeto Barcode Details
@@ -41,11 +43,14 @@ O Objeto Barcode Details é composto por meio da extração das informações co
 
 O Objeto Details traz informações do status atual desse documento segundo sua fonte emissora, como juros, multas, horário limite de pagamento, entre outras. Veja todas as informações retornadas abaixo.
 
+<br>
+
 | Chave                  | Descrição                                                                                                                                                                            | Tipo      |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------- |
 | bank_name              | Nome da instituição que emitiu o documento.                                                                                                                                          | _String_  |
 | barcode                | Código de barras.                                                                                                                                                                    | _String_  |
 | discount_value         | Valor do desconto que está sendo aplicado ao boleto. Caso nenhum desconto esteja sendo aplicado vira null.                                                                           | _Integer_ |
+| document_payment_type  | Informa o código referente a título.					| _Integer_	|
 | document_type          | Informa o tipo de documento. Valores possíveis são: boleto e concessionaria.                                                                                                         | _String_  |
 | expiration_date        | Data de vencimento                                                                                                                                                                   | _String_  |
 | face_value             | Valor com o qual o documento foi criado e que consta do código de barras.                                                                                                            | _Integer_ |
@@ -70,3 +75,50 @@ O Objeto Details traz informações do status atual desse documento segundo sua 
 | writable_line          | Código numérico que acompanha o código de barras.                                                                                                                                    | _String_  |
 | unpayable_reason_code  | Código que representa o motivo de estar impagável. | _String_	|
 | unpayable_reason_description | Descrição do motivo de estar impagável. | _String_	| 
+
+<br>
+
+### Document_payment_type
+---
+
+<br>
+
+
+<br>
+
+| Domínio           | Descrição                                     |
+| ----------------- | --------------------------------------------- |
+| 1					| CH Cheque.									|
+| 2					| DM Duplicata Mercantil.						|
+| 3					| DMI Duplicata Mercantil Indicação.			|
+| 4					| DS Duplicata de Serviço.						|
+| 5					| DSI Duplicata de Serviço Indicação.			|
+| 6					| DR Duplicata Rural.							|
+| 7					| LC Letra de Câmbio.							|
+| 8					| NCC Nota de Crédito Comercial.				|
+| 9					| NCE Nota de Crédito Exportação.				|
+| 10				| NCI Nota de Crédito Industrial.				|
+| 11				| NCR Nota de Crédito Rural.					|
+| 12				| NP Nota Promissória.							|
+| 13				| NPR Nota Promissória Rural.					|
+| 14				| TM Triplicata Mercantil.						|
+| 15				| TS Triplicata de Serviço.						|
+| 16				| NS Nota de Seguro.							|
+| 17				| RC Recibo.									|
+| 18				| FAT Bloqueio.									|
+| 19				| ND Nota de Débito.							|
+| 20				| AP Apólice de Seguro.							|
+| 21				| ME Mensalidade Escolar.						|
+| 22				| PC Parcela de Consórcio.						|
+| 23				| NF Nota Fiscal.								|
+| 24				| DD Documento de Dívida.						|
+| 25				| Cédula de Produto Rural.						|				
+| 26				| Warrant.										|
+| 27				| Dívida Ativa de Estado.						|
+| 28				| Dívida Ativa do Município.					|
+| 29				| Dívida Ativa da União.						|
+| 30				| Encargos Condominiais.						|
+| 31				| Cartão de Crédito.							|
+| 32				| Boleto Proposta.								|
+| 33				| Boleto de Depósito e Aporte.					|
+| 99				| Outros.										|
