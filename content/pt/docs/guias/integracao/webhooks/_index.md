@@ -18,6 +18,7 @@ Ao enviar um webhook, esperamos receber uma resposta do range 200 que indica o s
 
 A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) sobre as quais ela opera dado o escopo de funcionalidades sobre o qual foi dado consentimento. Vale lembrar que os webhooks serão enviados independente se o evento for via API ou via APP.
 
+<br>
 
 {{% pageinfo %}}
 **Virada em Produção**
@@ -29,23 +30,27 @@ A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) s
 <br>
 
 #### **Os eventos que geram notificações são:**
-
+---
+<br>
 
 ##### **Emissão de Boleto:**
 
+<br>
 
 | Tipo de Evento                               | Descrição                                                                 |
 | -------------------------------------------- | ------------------------------------------------------------------------- |
-| barcode_payment_invoice_created              | Representa a criação/emissão de um boleto.                                |
-| barcode_payment_invoice_registered           | Representa o registro de um boleto.                                       |
-| barcode_payment_invoice_payment_promissed    | Representa que o pagamento do boleto foi acolhido em alguma instituição.  |
-| barcode_payment_invoice_settled              | Representa que pagamento do boleto foi confirmado.                        |
+| [barcode_payment_invoice_created](/docs/guias/integracao/webhooks/barcode_payment_invoice_created.json)              | Representa a criação/emissão de um boleto.                                |
+| [barcode_payment_invoice_registered](/docs/guias/integracao/webhooks/barcode_payment_invoice_registered.json)           | Representa o registro de um boleto.                                       |
+| [barcode_payment_invoice_payment_promissed](/docs/guias/integracao/webhooks/barcode_payment_invoice_payment_promissed.json)    | Representa que o pagamento do boleto foi acolhido em alguma instituição.  |
+| [barcode_payment_invoice_settled](/docs/guias/integracao/webhooks/barcode_payment_invoice_settled.json)              | Representa que pagamento do boleto foi confirmado.                        |
 | barcode_payment_invoice_expired              | Representa que o boleto está expirado.                                    |
-| cash_in_barcode_payment                      | Representa a entrada do valor do boleto na conta do beneficiário.         | 
+| [cash_in_barcode_payment](/docs/guias/integracao/webhooks/cash_in_barcode_payment.json)                      | Representa a entrada do valor do boleto na conta do beneficiário.         | 
 
-
+<br>
 
 ##### **Pagamento de Boleto:**
+
+<br>
 
 | Tipo de Evento                               | Descrição                                                                 |
 | -------------------------------------------- | ------------------------------------------------------------------------- |
@@ -61,8 +66,11 @@ A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) s
 | cash_out_payment_finished                    | Representa a finalização de um pagamento.                                 |
 | cash_out_payment_expired                     | Representa a expiração de um pagamento.                                   |
 
+<br>
 
 ##### **Transferência interna:**
+
+<br>
 
 | Tipo de Evento                               | Descrição                                                                |
 | -------------------------------------------- | ------------------------------------------------------------------------ |
@@ -77,8 +85,11 @@ A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) s
 | cash_out_internal_transfer_finished          | Representa a finalização de uma transferência interna.                   | 
 | cash_out_internal_transfer_expired           | Representa a expiração de uma transferência interna.                     |  
 
+<br>
 
 ##### **Transferência externa:**
+
+<br>
 
 | Tipo de Evento                               | Descrição                                                                |
 | -------------------------------------------- | ------------------------------------------------------------------------ |
@@ -93,10 +104,13 @@ A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) s
 | cash_out_external_transfer_cancelled         | Representa o cancelamento de uma transferência externa.                  | 
 | cash_out_external_transfer_rejected          | Representa a rejeição de uma transferência externa.                      | 
 | cash_out_external_transfer_finished          | Representa a finalização de uma transferência externa.                   | 
-| cash_out_external_transfer_expired           | Representa a expiração de uma transferência externa.                     |           
+| cash_out_external_transfer_expired           | Representa a expiração de uma transferência externa.                     |
 
+<br>
 
 ##### **Pix:**
+
+<br>
 
 | Tipo de Evento                | Descrição                                      |  
 | ----------------------------- | ---------------------------------------------- |
@@ -104,30 +118,34 @@ A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) s
 | pix_outbound_payment_settled  | Representa a finalização de um Pix.            |
 | pix_outbound_payment_refunded | Representa o reembolso de um Pix mal sucedido. |
 
+<br>
 
 ##### **Consentimento:**
 
-| Tipo de Evento               | Descrição                                                                | Exemplo       | 
-| -----------------------------| ------------------------------------------------------------------------ | --------------|
-| consent_requested            | Representa a confirmação do pedido de consentimento por parte do user.   | [consent_request](/docs/guias/integracao/webhooks/exemplo_consent_request.json) |
+<br>
 
+| Tipo de Evento               | Descrição                                                                |  
+| -----------------------------| ------------------------------------------------------------------------ | 
+| [consent_request](/docs/guias/integracao/webhooks/exemplo_consent_request.json) | Representa a confirmação do pedido de consentimento por parte do user.   |
 
+<br>
 
 ##### **Abertura de conta:**
 
-| Tipo de Evento                               | Descrição                                               | Exemplo        |
-| -------------------------------------------- | --------------------------------------------------------|--------------- |
-| sign_up_created                              | Enviado quando é feito o pedido de abertura de conta.   | [A1](/docs/guias/integracao/webhooks/A1.json)                |
-| sign_up_status_updated                       | Enviado quando é feito uma atualização dos dados na abertura da conta.        | [A2](/docs/guias/integracao/webhooks/A2.json)   |
-| sign_up_resource_details_updated             | Serão enviados diversos webhooks com este tipo de evento de acordo com a evolução da abertura de conta. Ex: `account_created`, `user_email_verified`, ....| [A3](/docs/guias/integracao/webhooks/A3.json) |
+<br>
 
-
-
+| Tipo de Evento                               | Descrição                                                                | 
+| -------------------------------------------- | ------------------------------------------------------------------------ |
+| [sign_up_created](/docs/guias/integracao/webhooks/A1.json)| Enviado quando é feito o pedido de abertura de conta.       | 
+| [sign_up_status_updated](/docs/guias/integracao/webhooks/A2.json) | Enviado quando é feito uma atualização dos dados na abertura da conta.        |
+| [sign_up_resource_details_updated](/docs/guias/integracao/webhooks/A3.json) | Serão enviados diversos webhooks com este tipo de evento de acordo com a evolução da abertura de conta. Ex: `account_created`, `user_email_verified`, ....|
 
 
 <br>
 
 #### **O header das notificações segue a seguinte estrutura:**
+---
+
 
 
 ```JSON
@@ -141,7 +159,9 @@ A idempotência de webhooks deverá ser validada no campo 'x-stone-webhook-event
 <br>
 
 #### **O payload das notificações segue a seguinte estrutura:**
+---
 
+<br>
 
 | Campo                | Descrição                                                                                                                            |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
@@ -156,7 +176,7 @@ A idempotência de webhooks deverá ser validada no campo 'x-stone-webhook-event
 | target_statement_uri | É o endereço da entrada no extrato referente ao recurso.                                                                             |
 | target_type          | É o tipo do recurso.                                                                                                                 |
 
-
+<br>
 
 
 {{% pageinfo %}}
@@ -166,7 +186,7 @@ A implementação não deve ser strict no parser do payload. Ao longo do tempo o
 
 {{% /pageinfo %}}
 
-
+<br>
 
 Exemplo:
 
@@ -214,9 +234,12 @@ Exemplo:
 <br>
 
 #### **Trabalhando com Webhooks**
-
+---
+<br>
 
 ##### **Webhooks Seguros**
+
+<br>
 
 Nossa API envia webhooks de forma segura para evitar que eles sejam abertos e/ou alterados. Isso é feito em duas etapas:
 
@@ -224,8 +247,11 @@ Nossa API envia webhooks de forma segura para evitar que eles sejam abertos e/ou
 - Ciframento do resultado usando a chave pública do destinatário.
 
 
+<br>
 
 ##### **Como eu posso abrir de forma segura o conteúdo de um webhook?**
+
+<br>
 
 Para poder visualizar o conteúdo de um webhook é necessário fazer o caminho inverso:
 
@@ -235,6 +261,9 @@ Para poder visualizar o conteúdo de um webhook é necessário fazer o caminho i
 <br>
 
 ##### **1 - Decifrar o conteúdo do webhook**
+---
+
+<br>
 
 O webhook irá chegar com um payload parecido com esse:
 
@@ -260,7 +289,9 @@ A chave a ser utilizada tem que ser a **chave privada** par da **chave pública*
 
 
 ##### **2 - Verificar a assinatura do token**
+---
 
+<br>
 
 Até este momento deciframos apenas um conteúdo que pode ser gerado por qualquer um que tenha acesso a chave pública da aplicação.
 
@@ -278,9 +309,11 @@ Veja [aqui](https://hexdocs.pm/joken_jwks/JokenJwks.DefaultStrategyTemplate.html
 
 O algoritmo que usamos será *sempre RS256*. Há uma lista de bibliotecas que tratam de assinatura de token em [jwt.io](https://jwt.io/). 
 
-
+<br>
 
 ##### **Segurança**
+
+<br>
 
 É importante seguir os dois passos aqui: tanto decifrar quanto verificar a assinatura. Isso irá garantir que não apenas geramos algo que não pode ser lido por alguém que *não possui* a chave pública quanto que nosso conteúdo foi assinado pela Stone. 
 
@@ -290,9 +323,11 @@ Sempre que em dúvida, consulte nossa API com os IDs dos dados no conteúdo do w
 
 Mais informações sobre JavaScript Object Signing and Encryption, como JWTs, JWEs, JWSs, [aqui](https://www.ca.com/pt/blog-latam/os-beneficios-de-jwtjwsjwe-no-designs-de-apis.html).
 
-
+<br>
 
 ##### **Webhooks idempotentes**
+
+<br>
 
 No geral um evento, quando recepcionado com sucesso, é enviado apenas uma vez pela Stone, mas é possível que em algum cenário extraordinário um webhook acabe sendo enviado mais de uma vez e por isso desenvolvemos uma lógica de idempotência de eventos. 
 

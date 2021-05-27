@@ -1,0 +1,50 @@
+{
+	"env": "sandbox",
+	"event_happened_at": "2021-05-20T15:02:21Z",
+	"event_notified_at": "2021-05-20T15:02:21Z",
+	"event_type": "barcode_payment_invoice_settled",
+	"iat": 1621522941,
+	"id": "a0455437-8555-44c7-a57a-17efc83d58fa",
+	"jti": "2q0ct1gnsp2qsg2nr00qvima",
+	"nbf": 1621522941,
+	"target_data": {
+		"account_id": "7e785e98-c859-46c6-9dc7-37ea522ceadf",
+		"amount": 2100,
+		"barcode": "19797863600000021000000011273991872762621830",
+		"beneficiary": {
+			"account_code": "88266374",
+			"branch_code": "1",
+			"document": "92961229022",
+			"document_type": "cpf",
+			"legal_name": "Nome do CPF 92961229022",
+			"trade_name": null
+		},
+		"created_at": "2021-05-20T14:31:57Z",
+		"created_by": "application:de4d224b-3f79-4b4d-8ff5-c1bc475830e5",
+		"customer": {
+			"document": "92961229022",
+			"document_type": "cpf",
+			"legal_name": "Nome do CPF 92961229022",
+			"trade_name": null
+		},
+		"discounts": [],
+		"expiration_date": "2021-05-30",
+		"expired_at": null,
+		"fee": 0,
+		"fine": null,
+		"id": "a0455437-8555-44c7-a57a-17efc83d58fa",
+		"interest": null,
+		"invoice_type": "deposit",
+		"issuance_date": "2021-05-20",
+		"limit_date": "2021-05-30",
+		"our_number": "11273991872762621830",
+		"receiver": null,
+		"registered_at": "2021-05-20T14:32:02Z",
+		"settled_at": "2021-05-20T15:02:21Z",
+		"status": "SETTLED",
+		"writable_line": "19790000051127399187427626218302786360000002100"
+	},
+	"target_detail_uri": "https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices/a0455437-8555-44c7-a57a-17efc83d58fa",
+	"target_id": "a0455437-8555-44c7-a57a-17efc83d58fa",
+	"target_type": "barcode_payment_invoice"
+}
