@@ -19,7 +19,16 @@ A transferência pode ser agendada, através do campo `scheduled_to`. A data usa
 Caso a data escolhida seja menor do que `next_available_execution_date`, a transferência será executada imediatamente. <br>
 Caso a data seja maior que `execution_limit_date`, será retornado um erro 422. 
 
+<br>
+
+{{< alert title="Horário de funcionamento" >}}
+<br>
+
 A criação e o agendamento de transferências internas pode acontecer em qualquer dia (incluindo fins de semana e feriados) e em qualquer horário.
+{{< /alert >}}
+
+<br>
+
 
 ---
 ```http request
@@ -35,10 +44,14 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers
 <br>Valor da transferência em centavos de Real, ou seja, um real fica 100.
 
 ---
+<br>
+
 **account_id*** `string`
 <br>Identificador da conta que está enviando a transferência.
 
 ---
+<br>
+
 **target** `object`
 	<br>
 &nbsp; &nbsp; **account** `object`
@@ -48,10 +61,14 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Número da conta. Padrão: `^\d+$`
 	
 ---
+<br>
+
 **description** `string`
 <br>Descrição da transação. Essa descrição será exibida tanto no extrato de quem enviou quanto de quem recebeu (limite 200 caracteres).
 
 ---
+<br>
+
 **scheduled_to** `string`
 <br>Formato: `yyyy-mm-dd`
 

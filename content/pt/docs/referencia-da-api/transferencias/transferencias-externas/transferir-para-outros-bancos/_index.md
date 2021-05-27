@@ -13,6 +13,15 @@ Faz transferências monetárias para outra instituição (TED). Não é permitid
 
 <br>
 
+{{< alert title="Horário de funcionamento" >}}
+<br>
+
+A **API de Transferência Externa** fica disponível em dias úteis, das 6h30 às 17h20, a transação é processada de forma assíncrona e o valor é creditado na conta destino em poucas horas.
+{{< /alert >}}
+
+
+<br>
+
 Caso a transferência seja criada em um dia não útil ou fora do horário de funcionamento de TEDs, a transferência será agendada automaticamente para o dia seguinte. Nesse caso seu status será `DELAYED_TO_NEXT_BUSINESS_DAY`, como também a flag `delayed_to_next_business_day = true`. O campo `scheduled_to_effective` conterá a data para a qual a TED foi agendada.
 
 A transferência também pode ser agendada através do campo `scheduled_to`. A data usada no campo `scheduled_to` deve estar entre a data `next_available_execution_date` e a data limite retornada no campo `execution_limit_date` da [API de calendário de agendamento](/docs/referencia-da-api/agendamento/calendario-de-agendamento/) chamada com o parâmetro `operation_type=external_transfer`. Caso a data escolhida seja menor do que `next_available_execution_date`, a transferência será executada imediatamente. Caso a data seja maior que `execution_limit_date` será retornado um erro 422.
@@ -38,10 +47,13 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers
 <br>Valor da transferência em centavos de Real, ou seja, um real fica 100.
 
 ---
+<br>
+
 **account_id*** `string`
 <br>Identificador da conta que está enviando a transferência.
 
 ---
+<br>
 
 **target** `object`
 	<br><br>
@@ -64,6 +76,8 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tipo de conta destino (verifique mais abaixo os tipos disponíveis).
 		
 ---
+<br>
+
 **entity** `object`
 	<br><br>
 		 &nbsp;&nbsp;**name** `string` _(obrigatório)_
@@ -79,6 +93,8 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers
 		&nbsp;&nbsp;Tipo do documento do dono da conta alvo. Pode ser `CPF` ou `CNPJ`.
 		
 ---
+<br>
+
 **scheduled_to** `string`
 <br>Formato: `yyyy-mm-dd`
 

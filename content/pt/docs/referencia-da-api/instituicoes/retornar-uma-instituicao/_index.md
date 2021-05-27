@@ -9,32 +9,39 @@ lastmod: 2020-09-17T18:00:00-03:00
 description: >
 ---
 
+---
+
+<br>
+
 ```http
 GET https://sandbox-api.openbank.stone.com.br/api/v1/institutions/code
 ```
 
----
+<br>
 
 #### **PATH PARAMS**
 
 ---
+<br>
 
-**code** `string`
-
+**code** `string`<br>
 Código da Instituição
 
 Example: `197`
 
 <br><br> 
 
----
+
 
 #### **Response**
+---
 
 ```http
 201 Created
 content-type: application/json
 ```
+<br>
+
 Body
 ```JSON
 {

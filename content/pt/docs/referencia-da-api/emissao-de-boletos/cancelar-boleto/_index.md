@@ -6,10 +6,30 @@ weight: 9
 
 ---
 ---
+
+<br>
+
+{{< alert title="Horário de funcionamento" >}}
+<br>
+
+- **Baixa Manual de Boletos**
+	
+	A API para baixa manual de boletos e concessionárias fica disponível 24/7;
+
+	Baixa de boletos realizadas após às 23h50 ocorrerão no dia útil seguinte em que a operação foi realizada; 
+	
+	Baixa manual de concessionárias são realizadas entre 7h00 e 20h00, ou seja, baixas solicitadas após às 20h serão realizadas às 7h do dia seguinte.
+
+<br>
+
+{{< /alert >}}
+
+<br>
+
 ```http request
 POST https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoice/id/cancel
 ```
----
+<br>
 
 #### **QUERY PARAMS**
 ---

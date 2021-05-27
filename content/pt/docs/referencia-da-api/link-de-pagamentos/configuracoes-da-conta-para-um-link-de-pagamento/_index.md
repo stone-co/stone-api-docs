@@ -12,6 +12,7 @@ description: >
 
 Cada Conta Stone possui sua própria configuração de criação de link de pagamento que limitam valor máximo permitido, configurações de checkout e outros parâmetros. 
 
+<br>
 
 {{% pageinfo %}}
 **Atenção**
@@ -20,13 +21,19 @@ Cada Conta Stone possui sua própria configuração de criação de link de paga
 
 {{% /pageinfo %}}
 
+<br>
+
 ---
 
 ```http
 GET https://sandbox-api.openbank.stone.com.br/api/v1/payment_links/{account_id}/config
 ```
+---
+
+<br>
 
 ##### Response
+
 
 ```Json
 {

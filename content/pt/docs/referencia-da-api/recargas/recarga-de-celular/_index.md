@@ -22,10 +22,11 @@ description: >
 
 3) Ao confirmar a recarga, adicionaremos os créditos junto a operadora.
 
-
+<br>
 
 ##### **Operadoras disponíveis**
 ---
+<br>
 
 - Claro;
 - Correios;
@@ -39,12 +40,23 @@ description: >
 - Claro Fixo;
 - Surf Telecom.
 
+<br>
 
-{{< alert title="Atenção" >}}
+
+{{% pageinfo %}}
+**Atenção**
+
+Os valores oferecidos para a recarga não são flexíveis e variam de acordo com a operadora.
+
+{{% /pageinfo %}}
 
 <br>
 
-Os valores oferecidos para a recarga não são flexíveis e variam de acordo com a operadora.
+{{< alert title="Horário de funcionamento" >}}
+
+<br>
+
+A liquidação da recarga poderá ser executada em até 24 horas, porém, costuma ser efetuada em questão de segundos.
 
 {{< /alert >}}
 

@@ -15,13 +15,7 @@ description: >
 
 O link é uma funcionalidade padrão da Conta Stone que é habilitada no momento em que o usuário é aprovado no KYC. 
 
-
-{{% pageinfo %}}
-**Atenção**
-
 Cada Conta Stone estará apta a gerar e gerenciar seus próprios links de pagamentos, independentemente de ser de um usuário ou uma organização.
-
-{{% /pageinfo %}}
 
 <br>
 

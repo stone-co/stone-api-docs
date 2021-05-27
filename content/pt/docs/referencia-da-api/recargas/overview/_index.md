@@ -14,11 +14,15 @@ description: >
 
 Objetivo dessa documentação é pontuar as particularidades de cada tipo de recarga oferecida na nossa API.
 
+Para efetuar uma recarga o cliente precisa ter saldo suficiente em conta, a recarga é cobrada logo após a confirmação;
 
+<br>
 
-{{< alert title="Atenção" >}}
+{{< alert title="Horário de funcionamento" >}}
 
-Para efetuar uma recarga o cliente precisa ter saldo suficiente em conta, a recarga é cobrada logo após a confirmação.
+<br>
+
+A API de Recargas fica disponível todos os dias da semana, 24 horas por dia!
 
 {{< /alert >}}
 

@@ -13,6 +13,7 @@ description: >
 ```http
 GET https://sandbox-api.openbank.stone.com.br/api/v1/payment_links/{account_id}/orders
 ```
+<br>
 
 ##### Response
 

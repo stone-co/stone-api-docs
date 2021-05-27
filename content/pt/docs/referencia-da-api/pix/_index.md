@@ -5,21 +5,37 @@ lastmod: 2021-03-31T18:00:00-03:00
 weight: 16
 draft: false
 description: >
-      
+---      
 ---
+<br>
+
 {{% pageinfo %}}
 A integração com o Pix ainda está em Alpha, o que significa que temos um grupo pequeno de parceiros testando a funcionalidade para que possamos fazer ajustes e então liberar para todos os parceiros.
 {{% /pageinfo %}}
 
+<br>
 
 #### **O que é o Pix?**
+---
+<br>
 
-O Pix é a nova modalidade de pagamentos instantâneos do Banco Central, que entrou em vigor no Brasil inteiro no dia 16 de novembro de 2020. Através do Pix, é possível realizar transações bancárias 24 horas por dia, todos os dias do ano, incluindo finais de semana e feriados.
-<br><br>
+O Pix é a nova modalidade de pagamentos instantâneos do Banco Central, que entrou em vigor no Brasil inteiro no dia 16 de novembro de 2020. 
+
 Além de sua ampla grade de funcionamento e pequeno tempo de processamento, o Pix busca simplificar a experiência do usuário que consegue passar o dinheiro para outro participante informando apenas seu telefone, documento (CPF/CNPJ), seu email ou lendo um QR Code. Lembrando que também é possível fazer um Pix informando os dados bancários, como é feito em uma TED.
-<br> <br>
+
+<br>
+
+{{< alert title="Horário de funcionamento" >}}
+<br>
+
+A API de Pix fica disponível todos os dias da semana e 24 horas por dia, pois é uma modalidade de pagamento instantânea.	
+{{< /alert >}}
+
+<br>
 
 #### **Participantes do Pix**
+---
+<br>
 
 O Pix tem quatro tipos de participantes principais:<br><br>
 - **Participante Direto (PSP direto)**: Instituição homologada junto ao Banco Central (BC) que fará o processamento do Pix junto aos sistemas do BC tanto do ponto de vista informacional, quanto do ponto de vista financeiro. Ou seja, além de ser responsável por toda a troca de informação com os sistemas do Pix, quando agindo como instituição do pagador será a instituição que enviará o dinheiro para o BC e quando agindo como instituição do recebedor receberá o dinheiro do BC. Fazendo um comparativo com o arranjo de cartões seria mais ou menos o equivalente a adquirência e o emissor dependendo se estamos agindo ao lado do recebedor ou do pagador respectivamente. <br>
@@ -30,6 +46,8 @@ O Pix tem quatro tipos de participantes principais:<br><br>
 
 
 #### **Status de um Pix**
+---
+<br>
 
 Os status possiveis são: `CREATED`, `CONFIRMED`, `FAILED`, `MONEY_RESERVED`, `REFUNDED` e `SETTLED`. A partir do momento que um Pix é criado, ele **nunca expira**.
 
@@ -43,17 +61,21 @@ Os status possiveis são: `CREATED`, `CONFIRMED`, `FAILED`, `MONEY_RESERVED`, `R
 
 - `REFUNDED` - Significa que o Pix que estava com o estado de `MONEY_RESERVED`, foi rejeitado ou devolvido.
 
-- `FAILED` - Significa que o Pix que estava com o estado de `CONFIRMED`, falhou no momento de reservar o dinheiro, podendo ser devido a falta de saldo do cliente, e portanto ele vai para o estado de `FAILED` e o fluxo da operação se encerra.
+- `FAILED` - Significa que o Pix que estava com o estado de `CONFIRMED`, falhou no momento de reservar o dinheiro, podendo ser devido a falta de saldo do cliente, e portanto ele vai para o estado de `FAILED` e o fluxo da operação se encerra.<br><br>
 
 
 #### **Fluxo para criação de um Pix**
+---
+<br>
 
 1. Realiza request através do [endpoint](/docs/referencia-da-api/pix/criar-pagamento-pendente/) /api/v1/pix/outbound_pix_payments enviando parâmetros validos. Este irá retornar uma resposta com os dados do Pix.
-2. Realiza request através do [endpoint](/docs/referencia-da-api/pix/confirmar-pagamento-pendente/) /api/v1/pix/outbound_pix_payments/{id}/actions/confirm informando o campo `id` retornado pela resposta do passo 1.
+2. Realiza request através do [endpoint](/docs/referencia-da-api/pix/confirmar-pagamento-pendente/) /api/v1/pix/outbound_pix_payments/{id}/actions/confirm informando o campo `id` retornado pela resposta do passo 1.<br><br>
 
 
 #### **Fluxo de criação de Pix através da leitura do QRCode**
+---
+<br>
 
 1. Realiza request através do [endpoint](/docs/referencia-da-api/pix/buscar-dados-qrcode/) /api/v1/outbound_pix_payments/brcode informando o QRCode através do campo `brcode`. Este irá retornar uma reposta com os dados do QRCode.
 2. Realiza request através do [endpoint](/docs/referencia-da-api/pix/criar-pagamento-pendente/) /api/v1/pix/outbound_pix_payments enviando parâmetros validos. Este irá retornar uma resposta com os dados do Pix.
-3. Realiza request através do [endpoint](/docs/referencia-da-api/pix/confirmar-pagamento-pendente/) /api/v1/pix/outbound_pix_payments/{id}/actions/confirm informando o campo `id` retornado pela resposta do passo 2.
+3. Realiza request através do [endpoint](/docs/referencia-da-api/pix/confirmar-pagamento-pendente/) /api/v1/pix/outbound_pix_payments/{id}/actions/confirm informando o campo `id` retornado pela resposta do passo 2.<br><br>

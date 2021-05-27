@@ -6,6 +6,7 @@ date: "2019-04-01T19:38:57.844Z"
 lastmod: "2019-12-02T22:56:58.154Z"
 weight: 4
 ---
+---
 
 ```http 
 GET https://sandbox-api.openbank.stone.com.br/api/v1/payments
@@ -16,29 +17,32 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/payments
 
 ---
 
+<br>
+
 **account_id***  `string` 
 
 Identificador da conta.
 
-<br>
 
 ---
+<br>
 
 **before***  `string` 
 
 Cursor opaco da paginação.
 
-<br>
 
 ---
+
+<br>
 
 **after***  `string` 
 
 Cursor opaco da paginação.
 
-<br>
 
 ---
+<br>
 
 **limit***  `int32` 
 
@@ -46,7 +50,6 @@ Limit de itens retornados.
 
 <br>
 
----
 
 ##### **Response**
 

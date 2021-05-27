@@ -8,6 +8,19 @@ lastmod: "2019-09-30T17:25:00.496Z"
 ---
 ---
 
+{{< alert title="Horário de funcionamento" >}}
+<br>
+
+A API de Folha de Pagamentos funciona em dias úteis, 24 horas por dia, ou seja, o salário é depositado no mesmo momento do pagamento.
+
+Para usuários com portabilidade de salário ativa, o salario só estará disponível na conta caso pago em dias úteis das 06h30 às 16h00, caso contrario o salario ficará disponível no próximo dia útil às 09h00. 
+
+{{< /alert >}}
+
+
+<br>
+
+
 ```http 
 POST https://sandbox-api.openbank.stone.com.br/api/v1/payrolls
 ```

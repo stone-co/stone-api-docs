@@ -11,6 +11,8 @@ description: >
 
 Para cancelar um link de pagamento, temos que fechar um pedido, o que vai passar a impedir que qualquer inclusão de item ou novas transações sejam feitas para aquele pedido específico.
 
+<br>
+
 {{% pageinfo %}}
 **Atenção**
 
@@ -23,8 +25,11 @@ No corpo da requisição deve ser sinalizada a alteração de status para _**can
 ```http
 PATCH https://sandbox-api.openbank.stone.com.br/api/v1/payment_links/orders/{order_id}/closed
 ```
+<br>
 
 ##### Body Request
+---
+<br>
 
 ```Json
 {
@@ -32,6 +37,7 @@ PATCH https://sandbox-api.openbank.stone.com.br/api/v1/payment_links/orders/{ord
 	"status": "canceled"
 }
 ```
+<br>
 
 ##### Response
 

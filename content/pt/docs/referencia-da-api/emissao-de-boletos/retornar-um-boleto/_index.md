@@ -7,10 +7,13 @@ date: "2020-03-06T17:19:19.691Z"
 lastmod: "2020-03-06T17:19:19.691Z"
 ---
 ---
+
+<br>
+
 ```http request
 GET https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices/id
 ```
----
+<br>
 
 #### **PATH PARAMS**
 ---
