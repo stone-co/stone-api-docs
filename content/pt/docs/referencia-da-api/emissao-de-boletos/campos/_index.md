@@ -78,7 +78,7 @@ lastmod: "2020-10-20T15:04:35.254Z"
 
 |Chave|Descrição|Tipo|Caracteres (min/max)|
 | --- | ------- | -- | -------------------|
-|billing_exemption_participant	|Indica se o usuário possui alguma condição especial vigente.	|*Boolean* | min: 1 / max: 1 |
+|billing_exemption_participant	|Indica se o usuário possui alguma condição especial vigente.	|*Boolean* | min: 4 / max: 5 |
 |fee	|Projeção da taxa que seria cobrada no ato de recebimento do pagamento caso o recebimento fosse agora.	|*Integer* | min: 0 / max: 4 |
 |max_free	|Indica o número total de boletos emitidos que podem ser liquidados sem que haja custos por mês.	|*Integer* | min: 0 / max: 2 |
 |original_fee	|Indica a taxa original do item para a essa conta.	|*Integer* | min: 0 / max: 4 |
