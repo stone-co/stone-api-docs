@@ -50,7 +50,7 @@ lastmod: "2020-10-20T15:04:35.254Z"
 
 |Chave|Descrição|Tipo|Caracteres (min/max)|
 | --- | ------- | -- | -------------------|
-| account_code  | Número da conta bancária.    | *String* | min:  / max:  |
+| account_code  | Número da conta bancária.    | *String* | min: 3 / max: 20 |
 | branch_code   | Número da agência da conta.  | *String* | min: 4 / max: 4 |
 | document      | Número do documento do beneficiário sem pontos.              | *String* | min: 11 / max: 14 |
 | document_type | Tipo do documento do beneficiário. Pode ser 'cpf' ou 'cnpj'. | *String* | min: 3 / max: 4  |
@@ -78,7 +78,7 @@ lastmod: "2020-10-20T15:04:35.254Z"
 
 |Chave|Descrição|Tipo|Caracteres (min/max)|
 | --- | ------- | -- | -------------------|
-|billing_exemption_participant	|Indica se o usuário possui alguma condição especial vigente.	|*Boolean* | min:  / max:  |
+|billing_exemption_participant	|Indica se o usuário possui alguma condição especial vigente.	|*Boolean* | min: 1 / max: 1 |
 |fee	|Projeção da taxa que seria cobrada no ato de recebimento do pagamento caso o recebimento fosse agora.	|*Integer* | min: 0 / max: 4 |
 |max_free	|Indica o número total de boletos emitidos que podem ser liquidados sem que haja custos por mês.	|*Integer* | min: 0 / max: 2 |
 |original_fee	|Indica a taxa original do item para a essa conta.	|*Integer* | min: 0 / max: 4 |
