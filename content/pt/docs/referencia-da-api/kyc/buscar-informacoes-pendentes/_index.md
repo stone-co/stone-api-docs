@@ -5,11 +5,15 @@ date: 2021-05-1731T11:30:00-03:00
 lastmod: 2021-05-1731T11:30:00-03:00
 weight: 1
 ---
+---
+
+<br>
 
 Nesse endpoint é possível verificar as informações de KYC que se encontram pendentes de resposta.
 
 A partir do _response_ desse endpoint, é possível verificar os _ids_ das informações que estão faltando para que possamos enviar os dados no endpoint para [responder o KYC](/docs/referencia-da-api/kyc/enviar-dados-do-usuario/).
 
+<br>
 
 ```http request
 GET https://sandbox-api.openbank.stone.com.br/api/v1/users/{id_do_usuario}/kyc/request
@@ -28,7 +32,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/users/{id_do_usuario}/kyc/r
 #### **Response**
 ---
 
-```html
+```Json
 200 OK
 ```
 
@@ -158,6 +162,8 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/users/{id_do_usuario}/kyc/r
     "user_id": "ef49c647-1dc9-47e8-a559-108cdf7e65a4"
 }
 ```
+<br>
+
 Próximo passo:
 
 #### [Consultar URL para envio da foto](/docs/referencia-da-api/kyc/consultar-url-para-foto/).

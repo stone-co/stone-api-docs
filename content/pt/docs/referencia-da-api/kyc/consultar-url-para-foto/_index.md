@@ -6,10 +6,15 @@ lastmod: 2021-05-1731T11:30:00-03:00
 weight: 2
 ---
 
+---
+
+<br>
+
 Nesse endpoint será informada a URL de cada uma das fotos enviadas de um usuário.
 
 Essa chamada deve ser realizada para cada foto que será enviada, por exemplo, na maioria dos casos é solicitada a foto da frente do documento, do verso do documento e de uma selfie com o documento, então esse endpoint, nesse caso, será chamado 3 vezes, cada um com o nome diferenciado do arquivo que será enviado.
 
+<br>
 
 ```http request
 POST https://sandbox-api.openbank.stone.com.br/api/v1/storage/{{image_name.jpg}}
@@ -20,6 +25,8 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/storage/{{image_name.jpg}}
 #### **HEADERS**
 ---
 
+<br>
+
 **authorization***
 <br>Bearer token
 
@@ -29,6 +36,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/storage/{{image_name.jpg}}
 
 #### **PATH PARAMS**
 ---
+<br>
 
 Nome da imagem que será enviado, no formato `.JPG`.
 
@@ -37,7 +45,7 @@ Nome da imagem que será enviado, no formato `.JPG`.
 #### **Response**
 ---
 
-```html
+```Json
 200 OK
 ```
 
@@ -53,10 +61,14 @@ Nome da imagem que será enviado, no formato `.JPG`.
     }
 }
 ```
+
+<br>
+
 A resposta do campo `public_url` deverá ser enviado no endpoint de [enviar os dados de um usuário](/docs/referencia-da-api/kyc/enviar-dados-do-usuario/).
 
 O campo `url` deverá ser usado no endpoint para enviar de fato a imagem, no endpoint [enviar fotos](/docs/referencia-da-api/kyc/enviar-fotos/). Esse campo contém as _Query Params_ desse endpoint.
 
+<br>
 
 Próximo passo:
 
