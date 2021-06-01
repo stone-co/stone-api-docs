@@ -5,10 +5,14 @@ date: 2021-05-1731T11:30:00-03:00
 lastmod: 2021-05-1731T11:30:00-03:00
 weight: 3
 ---
+---
+<br>
 
 Nesse endpoint serão enviadas as fotos do usuário necessários para realização da análise do KYC.
 
 Deverá ser um request do tipo `PUT` com o endereço recebido no campo `url` do endpoint de [Consultar URL para envio da foto](/docs/referencia-da-api/kyc/consultar-url-para-foto/).
+
+<br>
 
 Exemplo:
 
@@ -21,9 +25,12 @@ PUT https://storage.googleapis.com/sdb-inside-gateway-frontend-3727/dXNlcjo4YTZm
 
 #### **HEADERS**
 ---
-
-**Content-Type**: image/jpg
 <br>
+
+**Content-Type**: image/jpeg
+
+<br>
+
 **x-goog-acl**: public-read
 
 <br>
@@ -36,8 +43,12 @@ PUT https://storage.googleapis.com/sdb-inside-gateway-frontend-3727/dXNlcjo4YTZm
 **Expires***
 <br>Dado virá no campo `url` do endpoint de Consultar URL para envio da foto.
 
+<br>
+
 **GoogleAccessId***
 <br>Dado virá no campo `url` do endpoint de Consultar URL para envio da foto.
+
+<br>
 
 **Signature***
 <br>Dado virá no campo `url` do endpoint de Consultar URL para envio da foto.
@@ -45,8 +56,11 @@ PUT https://storage.googleapis.com/sdb-inside-gateway-frontend-3727/dXNlcjo4YTZm
 <br>
 
 
-#### **BODY PARAMS*
+#### **BODY PARAMS**
 ---
+
+<br>
+
 
 **photo*** `binary`
 
@@ -55,13 +69,13 @@ PUT https://storage.googleapis.com/sdb-inside-gateway-frontend-3727/dXNlcjo4YTZm
 #### **Response**
 ---
 
-```html
+```Json
 200 OK
 ```
 
 ---
 
-```html
+```Json
 400 Bad Request
 ```
 
@@ -74,6 +88,7 @@ PUT https://storage.googleapis.com/sdb-inside-gateway-frontend-3727/dXNlcjo4YTZm
 </Error>
 ```
 
+<br>
 
 Próximo passo:
 

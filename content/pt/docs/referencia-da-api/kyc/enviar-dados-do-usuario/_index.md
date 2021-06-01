@@ -6,8 +6,13 @@ lastmod: 2021-05-1731T11:30:00-03:00
 weight: 4
 ---
 
+---
+
+<br>
+
 Nesse endpoint serão solicitados os dados do usuário necessários para realização do envio dos mesmos para início da análise do KYC.
 
+<br>
 
 ```http request
 POST https://sandbox-api.openbank.stone.com.br/api/v1/users/{{user_id}}/kyc/answer
