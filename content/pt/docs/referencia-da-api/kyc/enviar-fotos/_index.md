@@ -27,8 +27,10 @@ PUT https://storage.googleapis.com/sdb-inside-gateway-frontend-3727/dXNlcjo4YTZm
 ---
 <br>
 
-**Content-Type**: image/jpg
+**Content-Type**: image/jpeg
+
 <br>
+
 **x-goog-acl**: public-read
 
 <br>
@@ -54,7 +56,7 @@ PUT https://storage.googleapis.com/sdb-inside-gateway-frontend-3727/dXNlcjo4YTZm
 <br>
 
 
-#### **BODY PARAMS*
+#### **BODY PARAMS**
 ---
 
 <br>
