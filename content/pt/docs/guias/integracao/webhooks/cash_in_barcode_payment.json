@@ -1,0 +1,59 @@
+{
+	"env": "sandbox",
+	"event_happened_at": "2021-05-20T15:02:21Z",
+	"event_notified_at": "2021-05-20T15:02:26Z",
+	"event_type": "cash_in_barcode_payment",
+	"iat": 1621522946,
+	"id": null,
+	"jti": "2q0ct1pqbef57p170g0k3kec",
+	"nbf": 1621522946,
+	"target_data": {
+		"account_id": "7e785e98-c859-46c6-9dc7-37ea522ceadf",
+		"amount": 2100,
+		"balance_after": 50740,
+		"balance_before": 48640,
+		"barcode": "19797863600000021000000011273991872762621830",
+		"barcode_payment_invoice_id": "a0455437-8555-44c7-a57a-17efc83d58fa",
+		"beneficiary": {
+			"document": "92961229022",
+			"document_type": "cpf",
+			"legal_name": "Nome do CPF 92961229022",
+			"trade_name": null
+		},
+		"capture": {
+			"branch_code": "0001",
+			"institution_ispb": "16501555",
+			"institution_name": "Stone Pagamentos S.A.",
+			"medium": "2"
+		},
+		"created_at": "2021-05-20T15:02:21Z",
+		"customer": {
+			"document": "92961229022",
+			"document_type": "cpf",
+			"legal_name": "Nome do CPF 92961229022",
+			"trade_name": null
+		},
+		"discounts": [],
+		"expiration_date": "2021-05-30",
+		"fee_amount": 0,
+		"id": "dbfd6136-6ac7-46d7-810e-c0f58d317ea4",
+		"invoice_payer": {
+			"document": "12409265707",
+			"document_type": "cpf"
+		},
+		"invoice_type": "deposit",
+		"issuance_date": "2021-05-20",
+		"limit_date": "2021-05-30",
+		"operation": "credit",
+		"operation_amount": 2100,
+		"status": "FINISHED",
+		"subtitle": null,
+		"title": "Dep\u00f3sito por boleto",
+		"type": "payment",
+		"writable_line": "19790000051127399187427626218302786360000002100"
+	},
+	"target_detail_uri": null,
+	"target_id": null,
+	"target_statement_uri": "https://sandbox-api.openbank.stone.com.br/api/v1/statement/entries/dbfd6136-6ac7-46d7-810e-c0f58d317ea4",
+	"target_type": "barcode_payment"
+}
