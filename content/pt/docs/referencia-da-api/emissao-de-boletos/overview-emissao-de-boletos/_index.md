@@ -221,3 +221,29 @@ Segue os campos possíveis para um boleto.
 | document   | Número do documento do sacador avalista.  | *String* | min: 11 / max: 14 |
 | legal_name | É o nome que identifica o sacado avalista para fins legais, administrativos e outros fins oficiais. | *String* | min: 1 / max: 50 |
 
+
+<br>
+
+<br>
+
+[Regras de Negócio](/docs/referencia-da-api/emissao-de-boletos/regras-de-negocio)
+
+<br>
+
+[Emitir Boleto](/docs/referencia-da-api/emissao-de-boletos/emitir-boleto)
+
+<br>
+
+[Listar Boletos](/docs/referencia-da-api/emissao-de-boletos/listar-boletos)
+
+<br>
+
+[Retornar um Boleto](/docs/referencia-da-api/emissao-de-boletos/retornar-um-boleto)
+
+<br>
+
+[Gerar PDF Boleto](/docs/referencia-da-api/emissao-de-boletos/gerar-boleto-pdf)
+
+<br>
+
+[Cancelar um Boleto](/docs/referencia-da-api/emissao-de-boletos/cancelar-boleto)
