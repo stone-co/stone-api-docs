@@ -10,7 +10,7 @@ description: >
 <br>
 
 ```http
-POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/otbound_pix_payments/{id}/actions/confirm
+POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/outbound_pix_payments/{id}/actions/confirm
 ```
 <br>
 
