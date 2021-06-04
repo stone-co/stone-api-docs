@@ -1,6 +1,8 @@
-# code owners padrão de todo o repositório:
-* @CalebeEmerick @pedroyremolo @erikacarvalho
+# code owners padrão para o repositório:
+* @CalebeEmerick @pedroyremolo @erikacarvalho @rca0
 
 
 # code owners padrão da pasta que contém o conteúdo:
 content/ @CalebeEmerick @agabiandrade @pedroyremolo @erikacarvalho
+
+.github/workflows/ @rca0

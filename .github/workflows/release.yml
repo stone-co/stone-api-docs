@@ -1,9 +1,11 @@
-name: hugo publish
+# publish at http://docs.openbank.stone.com.br/ or https://stone-co.github.io/
+
+name: release
 
 on:
   push:
-    branches:
-      - master
+    tags:
+      - 'v*.*.*'
 
 jobs:
   deploy:
@@ -17,7 +19,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.75.1'
+          hugo-version: '0.83.1'
           extended: true
 
       - name: Setup Node
@@ -39,6 +41,14 @@ jobs:
       - name: Build
         run: hugo
 
+      - name: Prepare tag
+        id: prepare_tag
+        if: startsWith(github.ref, 'refs/tags/')
+        run: |
+          TAG_NAME="${GITHUB_REF##refs/tags/}"
+          echo "::set-output name=tag_name::${TAG_NAME}"
+          echo "::set-output name=deploy_tag_name::deploy-${TAG_NAME}"
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
@@ -49,3 +59,7 @@ jobs:
           emptyCommits: false
           commitMessage: ${{ github.event.head_commit.message }}
           cname: docs.openbank.stone.com.br
+          tag_name: ${{ steps.prepare_tag.outputs.deploy_tag_name }}
+          tag_message: 'Deployment ${{ steps.prepare_tag.outputs.tag_name }}'
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
