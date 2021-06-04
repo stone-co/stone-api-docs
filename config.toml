@@ -1,4 +1,4 @@
-baseURL = "https://stone-co.github.io/"
+baseURL = "https://stone-co.github.io/sandbox"
 title = "Stone OpenBank"
 
 enableRobotsTXT = true
