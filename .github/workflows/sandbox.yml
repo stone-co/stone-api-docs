@@ -44,7 +44,7 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          deploy_key: ${{ secrets.GITHUB_TOKEN }}
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           EXTERNAL_REPOSITORY: stone-co/stone-co-sandbox.github.io
           PUBLISH_BRANCH: main
           PUBLISH_DIR: ./public
