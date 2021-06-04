@@ -152,7 +152,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
 
 <br>
 
-#### **Response**
+#### **Responses**
 
 ```JSON
 200 OK
@@ -221,3 +221,146 @@ Body
     "status": "CREATED",
     "writable_line": "19790000056313907246482159290061784560000002100"
 }
+```
+<br>
+
+
+```JSON
+201 Created
+```
+Body
+```JSON
+{
+  "account_id": "ec363b21-113f-44e9-8cc3-dfcdb3cc2dc3",
+  "amount": 2100,
+  "barcode": "19797845600000021000000063139072468215929006",
+  "beneficiary": {
+    "account_code": "1085737",
+    "branch_code": "1",
+    "document": "39809096038",
+    "document_type": "cpf",
+    "legal_name": "Pereira da Silva",
+    "trade_name": null
+  },
+  "created_at": "2020-07-27T18:25:38Z",
+  "created_by": "user:34a071d5-e1d4-4cb0-acf7-ca9b106fec65",
+  "customer": {
+    "document": "11121744590",
+    "document_type": "cpf",
+    "legal_name": "Pereira da Silva",
+    "trade_name": null
+  },
+  "discounts": [
+    {
+      "date": "2020-11-20",
+      "value": "0.1"
+    }
+  ],
+  "expiration_date": "2020-12-01",
+  "fee": 0,
+  "fee_metadata": {
+    "billing_exemption_participant": true,
+    "fee": 0,
+    "max_free": 5,
+    "original_fee": 200,
+    "remaining_free": 5
+  },
+  "fine": {
+    "date": "2021-01-02",
+    "value": "1"
+  },
+  "id": "172caf21-13de-4baa-9823-a21ac17ba8fa",
+  "interest": {
+    "date": "2021-01-02",
+    "value": "1"
+  },
+  "invoice_type": "bill_of_exchange",
+  "issuance_date": "2020-07-27",
+  "limit_date": "2021-02-01",
+  "our_number": "63139072468215929006",
+  "payer": {
+    "document": "11121740790",
+    "document_type": "cpf",
+    "legal_name": "Pereira da Silva",
+    "trade_name": null
+  },
+  "receiver": null,
+  "registered_at": null,
+  "settled_at": null,
+  "status": "CREATED",
+  "writable_line": "19790000056313907246482159290061784560000002100"
+}
+```
+<br>
+
+```JSON
+400 Bad Request
+```
+Body
+```JSON
+{
+  "reason": [
+    {
+      "error": "is invalid",
+      "path": [
+        "customer",
+        "trade_name"
+      ]
+    },
+    {
+      "error": "is invalid",
+      "path": [
+        "customer",
+        "legal_name"
+      ]
+    }
+  ],
+  "type": "srn:error:validation"
+}
+```
+<br>
+
+```JSON
+401 Unauthorized
+```
+Body
+```JSON
+{
+  "type": "srn:error:unauthenticated"
+}
+```
+<br>
+
+```JSON
+403 Forbidden
+```
+Body
+```JSON
+{
+  "type": "srn:error:unauthorized"
+}
+```
+<br>
+
+```JSON
+409 Conflict
+```
+Body
+```JSON
+{
+  "type": "srn:error:conflict"
+}
+```
+<br>
+
+```JSON
+422 Unprocessable Entity
+```
+Body
+```JSON
+{
+  "reason": "barcode_payment_invoice_bill_of_exchange is not ena bled on this account",
+  "type": "srn:error:product_not_enabled"
+}
+```
+<br>
