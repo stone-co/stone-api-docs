@@ -1,5 +1,5 @@
-baseURL = "https://stone-co.github.io/sandbox"
-sourceRelativeLinksEval = true
+baseURL = "https://stone-co.github.io"
+relativeURLs = true
 title = "Stone OpenBank"
 
 enableRobotsTXT = true

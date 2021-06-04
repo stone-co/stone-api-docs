@@ -39,7 +39,7 @@ jobs:
         run: npm ci
       
       - name: Build
-        run: hugo
+        run: hugo --baseURL="https://stone-co.github.io/sandbox"
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
