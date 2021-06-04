@@ -1,4 +1,4 @@
-# publish at http://docs.openbank.stone.com.br/stone-co-sandbox.github.io/ or https://stone-co-sandbox.github.io/
+# publish at http://docs.openbank.stone.com.br/sandbox/ or https://stone-co.github.io/sandbox/
 
 name: sandbox publish
 
@@ -45,11 +45,10 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          EXTERNAL_REPOSITORY: stone-co/stone-co-sandbox.github.io
+          EXTERNAL_REPOSITORY: stone-co/sandbox
           PUBLISH_BRANCH: main
           PUBLISH_DIR: ./public
           emptyCommits: false
           commitMessage: ${{ github.event.head_commit.message }}
-          cname: docs.openbank.stone.com.br
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
