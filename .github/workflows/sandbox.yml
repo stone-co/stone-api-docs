@@ -51,3 +51,5 @@ jobs:
           emptyCommits: false
           commitMessage: ${{ github.event.head_commit.message }}
           cname: docs.openbank.stone.com.br
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
