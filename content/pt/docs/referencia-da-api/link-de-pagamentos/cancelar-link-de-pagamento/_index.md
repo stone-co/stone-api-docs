@@ -22,12 +22,26 @@ No corpo da requisição deve ser sinalizada a alteração de status para _**can
 
 <br>
 
+---
+
 ```http
 PATCH https://sandbox-api.openbank.stone.com.br/api/v1/payment_links/orders/{order_id}/closed
 ```
+---
 <br>
 
-##### Body Request
+##### **HEADER**
+---
+
+```Json
+{
+    "authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI4d3NUd3BhYTRJWUZIYWV5ZFRubnRoRC1UaVlCaU9kanNmOGx6RUlMR1hVIn0.eyJqdGkiOiJiODQ0NDc4OS01ODE5LTQ4MTUtYjc1NC04MDU5NmMyYTg4MGYiLCJleHAiOjE2MTY2OTk5MjQsIm5iZiI6MCwiaWF0IjoxNjE2Njk5MDI0LCJpc3MiOiJodHRwczovL3NhbmRib3gtYWNjb3VudHMub3BlbmJhbmsuc3RvbmUuY29tLmJyL2F1dGgvcmVhbG1zL3N0b25lX2JhbmsiLCJzdWIiOiJhYzE5MGRmYy00YTBjLTQ5ODUtYmQwNi03NWE5Zjc3NjU0MTMiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiIwNjVlY2IwOC0yNDM5LTQwYzAtOGUxMy0yYjQzYzIxNzQzZTMiLCJhdXRoX3RpbWUiOjAsInNlc3Npb25fc3RhdGUiOiIwMjhlMjY3ZS0zMjYwLTQzNDMtODQ2ZS1hOTRkNzlmZTFjYWEiLCJhY3IiOiIxIiwic2NvcGUiOiJwYXltZW50YWNjb3VudDpwYXltZW50bGlua3M6d3JpdGUgcGF5bWVudGFjY291bnQ6Y29udGFjdDp3cml0ZSBlbnRpdHk6d3JpdGUgcGF5bWVudGFjY291bnQ6cmVhZCBwYXltZW50YWNjb3VudDp0cmFuc2ZlcnM6aW50ZXJuYWwgcGF5bWVudGFjY291bnQ6ZmVlczpyZWFkIHBheW1lbnRhY2NvdW50Omluc3RhbnRwYXltZW50IHBheW1lbnRhY2NvdW50OnBheW1lbnRzIHN0b25lX3N1YmplY3RfaWQgcGF5bWVudGFjY291bnQ6Y29udGFjdDpyZWFkIHNpZ251cDpwYXltZW50YWNjb3VudCBwYXltZW50YWNjb3VudDpib2xldG9pc3N1YW5jZSBwYXltZW50YWNjb3VudDpwYXltZW50bGlua3M6cmVhZCBwYXltZW50YWNjb3VudDpwYXlyb2xsczpyZWFkIHBheW1lbnRhY2NvdW50OnBheXJvbGxzOndyaXRlIHBheW1lbnRhY2NvdW50OnRyYW5zZmVyczpleHRlcm5hbCBlbnRpdHk6cmVhZCIsImNsaWVudElkIjoiMDY1ZWNiMDgtMjQzOS00MGMwLThlMTMtMmI0M2MyMTc0M2UzIiwiY2xpZW50SG9zdCI6IjEwLjEwLjEuMTQ5Iiwic3RvbmVfc3ViamVjdF9pZCI6ImFwcGxpY2F0aW9uOjA2NWVjYjA4LTI0MzktNDBjMC04ZTEzLTJiNDNjMjE3NDNlMyIsImNsaWVudEFkZHJlc3MiOiIxMC4xMC4xLjE0OSJ9.PlAhWLgC2W10H9emucF4obcJhwR92EogMNRIWUej4z-P-p3UaStYlaYd5Bfx4hl7da4ly62K1LEBI7LOqCFkbHMlnJfglp3dFS2M3iHZ571BNSmCff3wUiFy6zoHxFaKEUPy0V8e6mCQwFuapdIvDocA4Z4xYh049dWEwbJ2uevV3V_Q-RL3me8vykNTWGiT-dmyWvFN-XAq889_F1ZQskHsLz-ZtlrFw3XjitnLvEJbg9iyxVA7AuwnexBIQS4gU9QwMXcJjij9JowYbLu4ANUITXU01Jf5hxMYq1oSobOL3-RuGWJLoPOXkJyAbOm5hS15QgSuwp_qOU8VAEa3Yg"
+}
+```
+
+<br>
+
+##### BODY REQUEST
 ---
 <br>
 
@@ -43,140 +57,93 @@ PATCH https://sandbox-api.openbank.stone.com.br/api/v1/payment_links/orders/{ord
 
 ```Json
 {
-	"amount": 1000,
-	"checkouts": [{
-		"accepted_multi_payment_methods": [],
-		"accepted_payment_methods": [
-			"credit_card"
-		],
-		"amount": 1000,
-		"billing_address": {},
-		"billing_address_editable": true,
-
-		"created_at": "2020-05-15T02:06:14Z",
-		"credit_card": {
-			"authentication": {
-				"threed_secure": {},
-				"type": "none"
-			},
-			"capture": true,
-			"installments": [{
-					"number": 1,
-					"total": 1000
-				},
-				{
-					"number": 2,
-					"total": 1000
-				},
-				{
-					"number": 3,
-					"total": 1000
-				},
-				{
-					"number": 4,
-					"total": 1000
-				},
-				{
-					"number": 5,
-					"total": 1000
-				},
-				{
-					"number": 6,
-					"total": 1000
-
-				},
-				{
-					"number": 7,
-					"total": 1000
-				},
-				{
-					"number": 8,
-					"total": 1000
-				},
-				{
-					"number": 9,
-					"total": 1000
-				},
-				{
-					"number": 10,
-					"total": 1000
-				},
-				{
-					"number": 11,
-					"total": 1000
-				},
-				{
-					"number": 12,
-					"total": 1000
-				}
-			]
-		},
-		"currency": "BRL",
-		"customer": {
-			"created_at": "2020-05-07T23:33:15Z",
-			"delinquent": false,
-
-			"document": 12345678912,
-			"email": "gabriel@email.com",
-			"id": "cus_WVbg8Qkc0WIelO4k",
-			"name": "Gabriel Tavares",
-			"phones": {
-				"mobile_phone": {
-					"area_code": 21,
-					"country_code": 55,
-					"number": 987654321
-				}
-			},
-			"type": "individual",
-			"updated_at": "2020-05-15T02:02:24Z"
-		},
-		"customer_editable": true,
-		"expires_at": "2020-05-16T02:06:14Z",
-		"id": "chk_YMG51zkcyuWz9pXN",
-		"metadata": {},
-		"payment_url": "https://api.mundipagg.com/checkout/v1/orders/chk_YMG51zkcyuWz9pXN",
-		"shippable": false,
-		"skip_checkout_success_page": true,
-		"status": "open",
-		"success_url": "https://sandbox-link.openbank.stone.com.br/t/sucesso",
-		"updated_at": "2020-05-15T02:06:14Z"
-	}],
-	"closed": true,
-	"closed_at": "2020-05-15T18:54:35Z",
-	"code": "Y0PNSR8FOK",
-	"created_at": "2020-05-15T02:06:14Z",
-
-	"currency": "BRL",
-	"customer": {
-		"created_at": "2020-05-07T23:33:15Z",
-		"delinquent": false,
-		"document": 12345678912,
-		"email": "gabriel@email.com",
-		"id": "cus_WVbg8Qkc0WIelO4k",
-		"name": "Gabriel Tavares",
-		"phones": {
-			"mobile_phone": {
-				"area_code": 21,
-				"country_code": 55,
-				"number": 987654321
-			}
-		},
-		"type": "individual",
-		"updated_at": "2020-05-15T02:02:24Z"
-	},
-	"id": "or_djKAl9dacPfB7gBR",
-	"items": [{
-		"amount": 1000,
-		"created_at": "2020-05-15T02:06:14Z",
-		"description": "Camisa de malha 100% algodão - Tamanho G - Branca",
-		"id": "oi_BQWg5P2FLTlGn97z",
-		"quantity": 1,
-		"status": "active",
-		"type": "product",
-		"updated_at": "2020-05-15T02:06:14Z"
-	}],
-
-	"status": "canceled",
-	"updated_at": "2020-05-15T18:54:35Z"
+    "amount": 3000,
+    "checkouts": [
+        {
+            "accepted_multi_payment_methods": [],
+            "accepted_payment_methods": [
+                "credit_card"
+            ],
+            "amount": 3000,
+            "billing_address": {},
+            "billing_address_editable": true,
+            "created_at": "2021-06-08T16:54:31Z",
+            "credit_card": {
+                "authentication": {
+                    "threed_secure": {},
+                    "type": "none"
+                },
+                "capture": true,
+                "installments": [
+                    {
+                        "number": 1,
+                        "total": 1000
+                    },
+                    {
+                        "number": 2,
+                        "total": 1000
+                    },
+                    {
+                        "number": 3,
+                        "total": 1000
+                    }
+                ]
+            },
+            "currency": "BRL",
+            "customer": {
+                "created_at": "2021-06-08T16:54:31Z",
+                "delinquent": false,
+                "id": "cus_GvMY2zgS7c9xYOXD",
+                "name": "Bruno M R",
+                "phones": {},
+                "updated_at": "2021-06-08T16:54:31Z"
+            },
+            "customer_editable": true,
+            "expires_at": "2021-06-15T16:54:31Z",
+            "id": "chk_wM3RX3qceulyY6W9",
+            "metadata": {},
+            "payment_url": "https://stgapi.mundipagg.com/checkout/v1/orders/chk_wM3RX3qceulyY6W9",
+            "required_fields": [
+                "customer.email",
+                "customer.document",
+                "customer.mobile_phone",
+                "customer.name"
+            ],
+            "shippable": false,
+            "skip_checkout_success_page": true,
+            "status": "open",
+            "success_url": "https://sandbox-link.openbank.stone.com.br/sucesso",
+            "updated_at": "2021-06-08T16:54:31Z"
+        }
+    ],
+    "closed": true,
+    "closed_at": "2021-06-08T17:32:51Z",
+    "code": "8N5YAPFG2O",
+    "created_at": "2021-06-08T16:54:31Z",
+    "currency": "BRL",
+    "customer": {
+        "created_at": "2021-06-08T16:54:31Z",
+        "delinquent": false,
+        "id": "cus_GvMY2zgS7c9xYOXD",
+        "name": "Bruno M R",
+        "phones": {},
+        "updated_at": "2021-06-08T16:54:31Z"
+    },
+    "id": "or_ALbmn7RhjAfyzdW7",
+    "items": [
+        {
+            "amount": 3000,
+            "created_at": "2021-06-08T16:54:31Z",
+            "description": "Teste de Link de pagamento.",
+            "id": "oi_x05Y7aPBipcLobae",
+            "quantity": 1,
+            "status": "active",
+            "type": "product",
+            "updated_at": "2021-06-08T16:54:31Z"
+        }
+    ],
+    "session_id": "c14e3273-866e-419e-9d8e-ca1801dca662",
+    "status": "canceled",
+    "updated_at": "2021-06-08T17:32:51Z"
 }
 ```

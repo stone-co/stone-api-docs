@@ -28,6 +28,7 @@ Todo link de pagamento nasce como "_**Criado**_" e tem um tempo de expiração q
 Um link de pagamento que não tiver sido pago ou que não tenha sido expirado pode ser cancelado a qualquer momento, assumindo status de "_**Cancelado**_". Tanto a cobrança expirada quanto a cancelada terão o status da order como "_**Canceled**_". A forma inicial de identificar que
 é um caso ou outro é pelo campo closed.
 
+<br>
 
 ##### **Toda transação cancelada é fechada e depois cancelada**
 
@@ -37,7 +38,7 @@ Um link de pagamento que não tiver sido pago ou que não tenha sido expirado po
 	"closed": "true"
 }
 ```
-
+<br>
 
 ##### **Toda transação expirada se mantém aberta (closed: false), mas com status alterado para cancelado**
 
