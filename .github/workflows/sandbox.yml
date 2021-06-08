@@ -39,7 +39,7 @@ jobs:
         run: npm ci
       
       - name: Build
-        run: hugo --config config.sdb.toml
+        run: hugo --config config.sdb.toml -D
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
