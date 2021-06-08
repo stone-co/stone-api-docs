@@ -1,6 +1,6 @@
 ---
-title: "Sign-in"
-linkTitle: "Sign-in"
+title: "Sign-in (Draft)"
+linkTitle: "Sign-in (Draft)"
 date: 2021-06-08T16:40:00-03:00
 lastmod: 2021-06-08T16:40:00-03:00
 draft: true
@@ -58,6 +58,11 @@ Você pode seguir o guia descrito [clicando aqui](/docs/guias/integracao/autenti
 | challenge_id | Identificador do desafio/challenge.                                          |
 | challenge_response | Resposta do desafio/challenge para sign-in com dispositivo cadastrado. |
 | mobile_app_instance_id | Id retornado pelo firebase.                                        |
+| subject               | Quem deseja fazer a ação.                                           |
+| action                | Ação a ser autorizada.                                              |
+| resource              | Recurso que sofrerá a ação.                                         |
+| resource_server       | Responsável por gerenciar o domínio do recurso.                     |
+| request               | Pedido que um cliente realiza a um servidor.                        |
 
 <br>
 
@@ -146,7 +151,7 @@ Caso a action não solicite challenge, a resposta do request será essa:
 ```
 <br>
 
-Caso a action a ser autorizada demande *challenge*, o fluxo seguinte deverá ser seguido.
+Caso a action demande *challenge*, o fluxo seguinte deverá ser seguido.
 
 <br>
 
@@ -171,7 +176,7 @@ Caso a action a ser autorizada demande *challenge*, o fluxo seguinte deverá ser
 }
 ```
 
-Note que `required_types` indicará quais tipos de *credencial* o *subject* deverá preencher pra conseguir uma autorização. Alguns valores possíveis são: `login_password`, `pin` e `totp`.
+Note que `required_types` indicará quais tipos de *credencial* o *subject* deverá preencher pra conseguir realizar o signin. Alguns valores possíveis são: `login_password`, `pin` e `totp`.
 
 <br>
 
@@ -271,7 +276,7 @@ Segue exemplo de um fluxo de autorização incluindo o challenge:
             "resource_id": "<inserir resource_id>",
             "resource_type": "srn:resource:user"
         },
-        "name": "authorize_action_with_challenge_public"
+        "name": "action_name"
     },
     "subject": {
         "token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJUUUY0c2p5RUJfRUthV0VfSkxEZExHMVlKYXVnNklTV0tQbEdEeG9qNzhjIn0.eyJqdGkiOiJhM2RhY2MyOC1mNDc0LTQ3YmQtYmNlNS1iNzU4YWEwYmE3YzYiLCJleHAiOjE2MTcxMTM5NzUsIm5iZiI6MCwiaWF0IjoxNjE3MTEzMDc1LCJpc3MiOiJodHRwczovL2xvZ2luLnNhbmRib3guc3RvbmUuY29tLmJyL2F1dGgvcmVhbG1zL3N0b25lX2FjY291bnQiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiZmMyMjM1ZjgtMzlhYy00Mzk1LTg5YmYtOGY1ZmIzZmU2OTZiIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiYWJjX3dlYkBvcGVuYmFuay5zdG9uZS5jb20uYnIiLCJhdXRoX3RpbWUiOjAsInNlc3Npb25fc3RhdGUiOiI1ZTA1ZTk0My1lYTdmLTRmOGQtODY4NS01MDFkMWVlYTYyZjgiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHBzOi8vc2FuZGJveC5jb250YS5zdG9uZS5jb20uYnIiLCJodHRwOi8vbG9jYWxob3N0OjMwMDAiLCJodHRwczovL3NhbmRib3gtZGFzaGJvYXJkLm9wZW5iYW5rLnN0b25lLmNvbS5iciIsImh0dHBzOi8vc2FuZGJveC5vcGVuYmFuay5zdG9uZS5jb20uYnIiXSwic2NvcGUiOiJlbnRpdHk6bGVnYWxfd3JpdGUgZW50aXR5OmxvYW46Y3JlYXRlIGludmVzdG1lbnQ6c3BhY2U6cmVhZCBjYXJkOnJlYWQgaW52ZXN0bWVudDpyZWFkIGVudGl0eTpyZWFkIHByaW5jaXBhbDpjb25zZW50IHBpeDplbnRyeSBpbnZlc3RtZW50OnNwYWNlOmRlcG9zaXQgc3RvbmVfc3ViamVjdF9pZCBlbnRpdHk6bG9hbjphY2NlcHQgcGF5bWVudGFjY291bnQ6KiBpbnZlc3RtZW50OnNwYWNlOndyaXRlIHJlY2VpdmFibGU6YWxsIGV4cGVuZDp0cmFuc2ZlcnM6ZXh0ZXJuYWwgc2FsYXJ5OnBvcnRhYmlsaXR5IGV4cGVuZDpwYXlyb2xscyBwaXg6ZW50cnlfY2xhaW0gcGl4OnBheW1lbnRfaW52b2ljZSBpbnZlc3RtZW50OnNwYWNlOmRlbGV0ZSBlbnRpdHk6d3JpdGUgcGF5bWVudGFjY291bnQ6cGF5bWVudGxpbmtzOndyaXRlIGV4cGVuZDpib2xldG9pc3N1YW5jZSBleHBlbmQ6cGF5bWVudHMgZW1haWwgaW52ZXN0bWVudDp3cml0ZSBzdG9uZV9hY2NvdW50cyBleHBlbmQ6cmVhZCBwcm9maWxlIGV4cGVuZDp0cmFuc2ZlcnM6aW50ZXJuYWwgcGl4OnBheW1lbnQgcGF5bWVudGFjY291bnQ6cGF5bWVudGxpbmtzOnJlYWQgZXhwZW5kOnBheW1lbnRsaW5rcyBjYXJkOndyaXRlIGludmVzdG1lbnQ6c3BhY2U6d2l0aGRyYXdhbCBleHBlbmQ6cGl4X3BheW1lbnQiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwic3RvbmVfc3ViamVjdF9pZCI6InVzZXI6ZGZmOTFiMTEtOTA1YS00YmYzLWFmZTYtMmQxZjgwYjYwMzYxIiwibmFtZSI6IkdhYnJpZWxhIEFicmV1IGRlIEFuZHJhZGUgR2FicmllbGEgQWJyZXUgZGUgQW5kcmFkZSIsInN0b25lX2FjY291bnRzIjoiZW5hYmxlZCIsInByZWZlcnJlZF91c2VybmFtZSI6ImdhYnJpZWxhLmFuZHJhZGVAc3RvbmUuY29tLmJyIiwiZ2l2ZW5fbmFtZSI6IkdhYnJpZWxhIEFicmV1IGRlIEFuZHJhZGUiLCJsb2NhbGUiOiJwdC1CUiIsImZhbWlseV9uYW1lIjoiR2FicmllbGEgQWJyZXUgZGUgQW5kcmFkZSIsImVtYWlsIjoiZ2FicmllbGEuYW5kcmFkZUBzdG9uZS5jb20uYnIifQ.Kf4A_cBnFucisXQYBmH4L70S64l8XQyvzOScqSIOqsG5TIZoX0SFNxjgV3dAi36jiMpZWBWasuWn9xbr1effGzsokGG8r0lvB0kKA4SP72bTSINkqwl3hRzKIRUz-hBPJKuKh6O02jpCaTwnjkpxwyAd7bwMvLrDb9Jqc_aDj_S2kuutzO22z9hV3ao79gDuVp_1N11KWMl1Ye2bnw2-3bBOWlaRjQTSL92KqJdNaGiOlra-xogfguDB8Pb8skJZZdwZBRbk3LcXgOUphrbhiqF0Qdi3VPppkix8o-pp6AytYvGhVyjsXqp-gEyOf4wxt-qSMDuXLnWxiKfantP3Hg",
@@ -296,9 +301,9 @@ Segue exemplo de um fluxo de autorização incluindo o challenge:
 ```Json
 {
 	"action": {
-		"name": action_name,
+		"name": "action_name",
 		"status": "authorized",
-		optional_actions: []
+		"optional_actions": []
 }
 ```
 <br>
@@ -307,7 +312,7 @@ Segue exemplo de um fluxo de autorização incluindo o challenge:
 ---
 <br>
 
-Caso haja algum “problema” durante o processo de autorização, é importante checar o campo `"type"` retornado no response body. 
+Caso haja algum “problema” durante o processo de signin, é importante checar o campo `"type"` retornado no response body. 
 
 Abaixo estão listados os types e o que cada um significa.
 
