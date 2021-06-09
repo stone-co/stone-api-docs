@@ -15,12 +15,15 @@ e voilà - 🐭🪄 a mágica gopher acontece!
 Este é o repositório principal do site da documentação e todo o conteúdo deve ser adicionado aqui, mas existem
 outros dois repositórios relacionados ao projeto:
 
-1) Tema: o tema que utilizamos é baseado no tema [Dot](https://themes.gohugo.io/dot-hugo-documentation-theme/)
-e pode ser encontrado [nesse repositório aqui](https://github.com/stone-co/dot). Temos um fork para
+1) *Tema*: o tema que utilizamos é baseado no tema [Docsy](https://themes.gohugo.io/docsy/)
+e pode ser encontrado [nesse repositório aqui](https://github.com/stone-co/docsy). Temos um fork para
 que seja possível promovermos alterações diretamente no estilo que não seriam possíveis através do arquivo de
 configuração.
-2) Site: o código-fonte do site, que é gerado pelo código deste repositório + hugo, pode ser encontrado 
-[aqui](https://github.com/stone-co/stone-co.github.io).
+2) *Site Sandbox*: o código-fonte do site no ambiente de sandbox, que é gerado pelo código deste repositório + hugo, a cada 
+push na master, pode ser encontrado [aqui](https://github.com/stone-co/sandbox). Cumpre esclarecer que o ambiente de
+sandbox é usado como pré-produção
+3) *Site Produção*: o código-fonte do site, que é gerado pelo código deste repositório + hugo, a cada 
+nova tag de release, pode ser encontrado [aqui](https://github.com/stone-co/stone-co.github.io)
 
 ### Deploy
 
