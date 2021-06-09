@@ -136,10 +136,21 @@ A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) s
 
 | Tipo de Evento                               | Descrição                                                                | 
 | -------------------------------------------- | ------------------------------------------------------------------------ |
-| [sign_up_created](/docs/guias/integracao/webhooks/A1.json)| Enviado quando é feito o pedido de abertura de conta.       | 
-| [sign_up_status_updated](/docs/guias/integracao/webhooks/A2.json) | Enviado quando é feito uma atualização dos dados na abertura da conta.        |
-| [sign_up_resource_details_updated](/docs/guias/integracao/webhooks/A3.json) | Serão enviados diversos webhooks com este tipo de evento de acordo com a evolução da abertura de conta. Ex: `account_created`, `user_email_verified`, ....|
+| [sign_up_created](/docs/guias/integracao/webhooks/A1.json)| Representa o pedido de abertura de conta.       | 
+| [sign_up_status_updated](/docs/guias/integracao/webhooks/A2.json) | Representa quando há uma atualização dos dados na abertura da conta.        |
+| [sign_up_resource_details_updated](/docs/guias/integracao/webhooks/A3.json) | Representa o envio de diversos webhooks de acordo com a evolução da abertura de conta. Ex: `account_created`, `user_email_verified`, ....|
 
+<br>
+
+##### **Link de Pagamento:**
+
+<br>
+
+| Tipo de Evento                               | Descrição                                                                | 
+| -------------------------------------------- | ------------------------------------------------------------------------ |
+| [order_created](/docs/guias/integracao/webhooks/lp_order_created.json)| Representa a criação do link de pagamento. <br>Também é enviado um [segundo webhook](/docs/guias/integracao/webhooks/lp_order_created_status_pending.json) deste tipo que representa que o pagador executou o pagamento. <br>Neste caso, o campo `status` do webhook terá seu valor alterado para `pending`.              | 
+| [order_paid](/docs/guias/integracao/webhooks/lp_order_paid.json)| Representa o pagamento em si do link de pagamento.   |
+| [order_closed](/docs/guias/integracao/webhooks/lp_order_closed.json)|  Representa a finalização do link de pagamento.   |
 
 <br>
 
