@@ -10,7 +10,7 @@ description: >
 <br>
 
 ```http
-POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/outbound_pix_payments/brcode
+POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/outbound_pix_payments/brcodes
 ```
 
 A API para criação de um Pix é a mesma, independente se você deseja enviar um Pix via inserção manual de dados ou via chave. Se o pagamento for iniciado por meio da leitura de um QR Code, você vai precisar obter os dados do QR Code primeiro, para depois criar o Pix.

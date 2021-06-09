@@ -79,3 +79,10 @@ Os status possiveis são: `CREATED`, `CONFIRMED`, `FAILED`, `MONEY_RESERVED`, `R
 1. Realiza request através do [endpoint](/docs/referencia-da-api/pix/buscar-dados-qrcode/) /api/v1/outbound_pix_payments/brcode informando o QRCode através do campo `brcode`. Este irá retornar uma reposta com os dados do QRCode.
 2. Realiza request através do [endpoint](/docs/referencia-da-api/pix/criar-pagamento-pendente/) /api/v1/pix/outbound_pix_payments enviando parâmetros validos. Este irá retornar uma resposta com os dados do Pix.
 3. Realiza request através do [endpoint](/docs/referencia-da-api/pix/confirmar-pagamento-pendente/) /api/v1/pix/outbound_pix_payments/{id}/actions/confirm informando o campo `id` retornado pela resposta do passo 2.<br><br>
+
+
+#### **API Pix do BACEN**
+---
+<br>
+
+Para determinados casos, é possível utilizar a API de Pix do BACEN. Para acessá-la, clique [aqui](https://bacen.github.io/pix-api/index.html )
