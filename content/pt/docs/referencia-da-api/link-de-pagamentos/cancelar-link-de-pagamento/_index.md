@@ -30,6 +30,16 @@ PATCH https://sandbox-api.openbank.stone.com.br/api/v1/payment_links/orders/{ord
 ---
 <br>
 
+##### **PATH PARAMS**
+---
+
+<br>
+
+**order_id***  `string`<br>
+Identificador do link de pagamento.
+
+<br>
+
 ##### **HEADER**
 ---
 
@@ -41,7 +51,7 @@ PATCH https://sandbox-api.openbank.stone.com.br/api/v1/payment_links/orders/{ord
 
 <br>
 
-##### BODY REQUEST
+##### **BODY REQUEST**
 ---
 <br>
 
@@ -53,7 +63,8 @@ PATCH https://sandbox-api.openbank.stone.com.br/api/v1/payment_links/orders/{ord
 ```
 <br>
 
-##### Response
+##### **Response**
+---
 
 ```Json
 {

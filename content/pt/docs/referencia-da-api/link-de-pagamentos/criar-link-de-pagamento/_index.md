@@ -38,7 +38,56 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/payment_links/orders
 
 <br>
 
+##### **SCHEMA**
+---
+<br>
+
+* **account_id** `string`<br>
+Identificador da conta.
+<br>
+
+* **items**:
+	
+	* **amount** `integer`
+	
+	* **description** `string`
+	
+	* **quantity** `integer`
+
+<br>
+
+* **customer**:
+
+	* **name** `string`
+	
+<br>
+
+* **payments**:
+
+	* **amount** `integer`
+	* **payment_method** `string`
+	* **checkout**:
+
+		* **expires_in** `integer`
+		* **skip_checkout_success_page** `boolean`
+		* **billing_address_editable** `boolean`
+		* **customer_editable** `boolean`
+		* **accepted_payment_methods** `string`
+		* **accepted_multi_payment_methods** `string`
+		* **success_url** `string`
+
+		* **credit_card** 		
+			* **capture** `boolean`
+
+			* **installments** 
+				* **number** `integer`
+				* **total**  `integer`
+
+<br>	
+
+
 ##### **BODY REQUEST**
+---
 
 ```Json
 {
@@ -89,54 +138,8 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/payment_links/orders
 <br>
 
 
-##### **SCHEMA**
+##### **Response**
 ---
-<br>
-
-* **account_id** `string`<br>
-Identificador da conta.
-<br>
-
-* **items**:
-	
-	* **amount** `integer`
-	
-	* **description** `string`
-	
-	* **quantity** `integer`
-
-<br>
-
-* **customer**:
-
-	* **name** `string`
-	
-<br>
-
-* **payments**:
-
-	* **amount** `integer`
-	* **payment_method** `string`
-	* **checkout**:
-
-		* **expires_in** `integer`
-		* **skip_checkout_success_page** `boolean`
-		* **billing_address_editable** `boolean`
-		* **customer_editable** `boolean`
-		* **accepted_payment_methods** `string`
-		* **accepted_multi_payment_methods** `string`
-		* **success_url** `string`
-
-		* **credit_card** 		
-			* **capture** `boolean`
-
-			* **installments** 
-				* **number** `integer`
-				* **total**  `integer`
-
-<br>	
-
-##### Response
 
 ```Json
 {

@@ -24,11 +24,11 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/payment_links/{account_id}/
 
 <br>
 
-* **account_id**  `string`<br>
+**account_id***  `string`<br>
 Identificador da conta.
 
-* **order_id**  `string`<br>
-Código do Pedido.
+**order_id***  `string`<br>
+Identificador do link de pagamento.
 
 
 <br>
@@ -44,7 +44,8 @@ Código do Pedido.
 
 <br>
 
-##### Response
+##### **Response**
+---
 
 ```Json
 {
