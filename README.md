@@ -1,63 +1,81 @@
 # Documentação da API de OpenBank da Conta Stone
 
-O [site](https://stone-co.github.io/) com a documentação da nossa API de OpenBank usa 
-[Hugo](https://gohugo.io/), um framework open-source escrito em [Golang](https://go.dev/) para construção
-de sites estáticos.
+O [site](https://stone-co.github.io/) com a documentação da nossa API de OpenBank usa
+[Hugo](https://gohugo.io/), um framework open-source escrito em [Golang](https://go.dev/) para construção de sites
+estáticos.
 
-Seu funcionamento é simples: a usuária escolhe um [tema](https://themes.gohugo.io/), insere conteúdo em
-arquivos de formato __markdown__, edita um arquivo de configuração `.toml` para promover customizações
-e voilà - 🐭🪄 a mágica gopher acontece!
+Seu funcionamento é simples: a usuária escolhe um [tema](https://themes.gohugo.io/), insere conteúdo em arquivos de
+formato __markdown__, edita um arquivo de configuração `.toml` para promover customizações e voilà - 🐭🪄 a mágica
+gopher acontece!
 
 ## Visão geral do projeto
 
 ### Repositórios relacionados
 
-Este é o repositório principal do site da documentação e todo o conteúdo deve ser adicionado aqui, mas existem
-outros dois repositórios relacionados ao projeto:
+Este é o repositório principal do site da documentação e todo o conteúdo deve ser adicionado aqui, mas existem outros
+dois repositórios relacionados ao projeto:
 
 1) *Tema*: o tema que utilizamos é baseado no tema [Docsy](https://themes.gohugo.io/docsy/)
-e pode ser encontrado [nesse repositório aqui](https://github.com/stone-co/docsy). Temos um fork para
-que seja possível promovermos alterações diretamente no estilo que não seriam possíveis através do arquivo de
-configuração.
-2) *Site Sandbox*: o código-fonte do site no ambiente de sandbox, que é gerado pelo código deste repositório + hugo, a cada 
-push na master, pode ser encontrado [aqui](https://github.com/stone-co/sandbox). Cumpre esclarecer que o ambiente de
-sandbox é usado como pré-produção
-3) *Site Produção*: o código-fonte do site, que é gerado pelo código deste repositório + hugo, a cada 
-nova tag de release, pode ser encontrado [aqui](https://github.com/stone-co/stone-co.github.io)
+   e pode ser encontrado [nesse repositório aqui](https://github.com/stone-co/docsy). Temos um fork para que seja
+   possível promovermos alterações diretamente no estilo que não seriam possíveis através do arquivo de configuração. Em
+   nosso projeto, ele é consumido e referenciado como um submódulo git.
 
-### Deploy
+2) *Site Sandbox*: o código-fonte do site no ambiente de sandbox, que é gerado pelo código deste repositório + hugo, a
+   cada push na master, pode ser encontrado [aqui](https://github.com/stone-co/sandbox). Cumpre esclarecer que o
+   ambiente de sandbox é usado como pré-produção
 
-Temos uma [GitHub Action](https://github.com/stone-co/stone-api-docs/blob/master/.github/workflows/pages.yml)
-que desencadeia uma nova construção do site sempre que a branch master deste repositório é atualizada.
-Essa ação roda o Hugo e alimenta o repositório do site com a versão atualizada dele - o que, por sua vez,
-desencadeia a ação de atualização do site, que utiliza o [GitHub Pages](https://pages.github.com/).
+3) *Site Produção*: o código-fonte do site, que é gerado pelo código deste repositório + hugo, a cada nova tag de
+   release, pode ser encontrado [aqui](https://github.com/stone-co/stone-co.github.io)
 
-## Contribuindo
+### Contribuindo
 
-### Nomeando arquivos e diretórios
-A url do site vai ser baseada no nome dos diretórios que ficam sob o diretório `content`.
-Por isso, é importante que:
-    - espaços sejam representados por hífens
-    - acentos e pontuações não sejam utilizados
-    - os nomes sejam simples e representem aquilo que queremos ver na url
-    
+#### Nomeando arquivos e diretórios
+
+A url do site vai ser baseada no nome dos diretórios que ficam sob o diretório `content`. Por isso, é importante que:
+
+- espaços sejam representados por hífens
+- acentos e pontuações não sejam utilizados
+- os nomes sejam simples e representem aquilo que queremos ver na url
+
 Os artigos devem receber o nome `_index.pt.md` e devem estar dentro de uma pasta com o nome do título.
 
-### Seções da Home
-As seções da home precisam ter o tipo `docs` __(type : "docs")__ indicado em seus cabeçalhos.
-Além disso, precisam ter um ícone, que deve ser indicado no campo `icon` e pode ser escolhido
+#### Seções da Home
+
+As seções da home precisam ter o tipo `docs` __(type : "docs")__ indicado em seus cabeçalhos. Além disso, precisam ter
+um ícone, que deve ser indicado no campo `icon` e pode ser escolhido
 [aqui](https://themify.me/themify-icons), e uma descrição, que deve ser preenchida no campo
 `description`.
 
-### Ordem do conteúdo
-Se nenhuma providência for tomada, as seções e posts vão se organizar em ordem alfabética simples.
-Para impôr uma ordem intencional, é necessário preencher o campo `weight` do cabeçalho.
-O primeiro conteúdo que deve aparecer deve ter `weight` igual a 1, o segundo igual a 2, e assim
-por diante.
+#### Ordem do conteúdo
 
-### Escrevendo mensagens de commit
-As mensagens de commit devem seguir o [Guia de Estilo Git](https://github.com/stone-payments/stoneco-best-practices/blob/master/gitStyleGuide/README_pt.md#commits)
-da Stone.
+Se nenhuma providência for tomada, as seções e posts vão se organizar em ordem alfabética simples. Para impôr uma ordem
+intencional, é necessário preencher o campo `weight` do cabeçalho. O primeiro conteúdo que deve aparecer deve
+ter `weight` igual a 1, o segundo igual a 2, e assim por diante.
+
+#### Fluxo de Git
+
+Devemos seguir
+o [Guia de Estilo Git StoneCo](https://github.com/stone-payments/stoneco-best-practices/blob/master/gitStyleGuide/README_pt.md#commits)
+para abertura de branch, escrita de commit e abertura de pull requests, dentro do fluxo abaixo:
+
+![Flow](diagrama_git_flow.svg)
+
+### Deploy
+
+Conforme falado anteriormente, a documentação é disponibilizada em dois ambientes, Sandbox e Produção. A atualização
+desses ambientes ocorre por meio de duas GitHub Action's, uma para cada ambiente. Essas ações rodam o
+Hugo e alimentam o repositório de interesse (Sandbox ou Produção) do site com as alterações - o que, por sua vez, desencadeia a ação de
+atualização do site, que utiliza o [GitHub Pages](https://pages.github.com/).
+
+#### Em Sandbox
+
+Temos a [Action](https://github.com/stone-co/stone-api-docs/blob/master/.github/workflows/sandbox.yml)
+que desencadeia uma nova construção do site sempre que a branch master deste repositório é atualizada.
+
+#### Em Produção
+
+Temos a [Action](https://github.com/stone-co/stone-api-docs/blob/master/.github/workflows/release.yml)
+que desencadeia uma nova construção do site sempre que geramos uma tag de release.
 
 ## Usando Hugo
 
