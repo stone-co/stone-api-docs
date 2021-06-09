@@ -58,7 +58,7 @@ Devemos seguir
 o [Guia de Estilo Git StoneCo](https://github.com/stone-payments/stoneco-best-practices/blob/master/gitStyleGuide/README_pt.md#commits)
 para abertura de branch, escrita de commit e abertura de pull requests, dentro do fluxo abaixo:
 
-![Flow](diagrama_git_flow.svg)
+![Flow](docs/images/diagrama_git_flow.svg)
 
 ### Deploy
 
