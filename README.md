@@ -83,41 +83,45 @@ que desencadeia uma nova construção do site sempre que geramos uma tag de rele
 
 #### Windows
 
-Faça download do executável do Hugo [Windows 64 bits](https://github.com/gohugoio/hugo/releases/download/v0.64.0/hugo_0.64.0_Windows-64bit.zip) 
-     ou [Windows 32 bits](https://github.com/gohugoio/hugo/releases/download/v0.64.0/hugo_0.64.0_Windows-32bit.zip)
- (este executável não é um instalador, é necessário fazer a instalação manual)
-     
+Faça download do executável do
+Hugo [Windows 64 bits](https://github.com/gohugoio/hugo/releases/download/v0.64.0/hugo_0.64.0_Windows-64bit.zip)
+ou [Windows 32 bits](https://github.com/gohugoio/hugo/releases/download/v0.64.0/hugo_0.64.0_Windows-32bit.zip)
+(este executável não é um instalador, é necessário fazer a instalação manual)
+
 Descompacte o conteúdo do ZIP para a pasta `C:\Hugo\bin` (pode ser na pasta que preferir)
-     
-Copie o caminho onde está o executável `hugo.exe` para configurar seu sistema para reconhecer o comando Hugo. Para isso você deve configurar a variável de ambiente `PATH` seguindo os passos abaixo:
-     
+
+Copie o caminho onde está o executável `hugo.exe` para configurar seu sistema para reconhecer o comando Hugo. Para isso
+você deve configurar a variável de ambiente `PATH` seguindo os passos abaixo:
+
 > 1. Em Iniciar > Pesquisar, procure e selecione: Sistema (Painel de Controle)
 > 2. Clique no link Configurações avançadas do sistema.
 > 3. Clique em Variáveis de Ambiente. Na seção Variáveis do Sistema, localize a variável de ambiente `PATH` e selecione-a. Clique em Editar. Se a variável de ambiente `PATH` não existir, clique em Novo.
 > 4. Na janela Editar Variável de Sistema (ou Nova Variável de Sistema), especifique o valor (`C:\hugo\bin\`) da variável de ambiente `PATH`. Clique em OK. Feche todas as janelas restantes clicando em OK.
 > 5. Reabra o terminal e execute `$ hugo version`.
-     
+
 Outras formas de instalação podem ser encontradas [aqui](https://gohugo.io/getting-started/installing/#windows)
 
 #### Mac OS
 
-Sugerimos que seja usado o [Homebrew](https://brew.sh), mas no próprio site do Hugo há mais instruções ([aqui](https://gohugo.io/getting-started/installing/#macos)).
+Sugerimos que seja usado o [Homebrew](https://brew.sh), mas no próprio site do Hugo há mais
+instruções ([aqui](https://gohugo.io/getting-started/installing/#macos)).
 
 Comando para instalar com Homebrew: `$ brew install hugo`
-   
+
 #### Linux
-   
-Use o package manager da sua distro/de sua preferência, instruções adicionais [aqui](https://gohugo.io/getting-started/installing/#linux)
+
+Use o package manager da sua distro/de sua preferência, instruções
+adicionais [aqui](https://gohugo.io/getting-started/installing/#linux)
 
 ### Adicionando conteúdo
- 
-- Para criar um novo conteúdo (na prática, vai ser criado um arquivo __markdown__ que vai ser usado para gerar
-uma nova página __html__), deve-se digitar o seguinte comando:
 
-    `$ hugo new content/nome-da-secao/nome-do-artigo/_index.pt.md`
- 
+- Para criar um novo conteúdo (na prática, vai ser criado um arquivo __markdown__ que vai ser usado para gerar uma nova
+  página __html__), deve-se digitar o seguinte comando:
+
+  `$ hugo new content/nome-da-secao/nome-do-artigo/_index.pt.md`
+
 - Em seguida, editar o arquivo que foi criado e adicionar o conteúdo que desejar após o fim do cabeçalho
-(sinalizado por `---`). O arquivo estará em:
+  (sinalizado por `---`). O arquivo estará em:
     ``` 
     📂stone-api-docs    
     └──📂content    
@@ -127,24 +131,37 @@ uma nova página __html__), deve-se digitar o seguinte comando:
     ```
 
 - Cada artigo tem um campo no cabeçalho `draft`, que pode ter o valor `true` (caso seja ainda um rascunho)
-ou `false` (caso deva ser publicado). O default do campo é `true`, altere para `false` para sinalizar que
-o artigo deve ser publicado!
+  ou `false` (caso deva ser publicado). O default do campo é `true`, altere para `false` para sinalizar que o artigo
+  deve ser publicado!
 
 ### Rodando localmente
 
-É importante rodar localmente antes de submeter as suas contribuições para o repositório remoto para poder
-visualizar o site e verificar se não há erros na sua construção.
+Como o projeto necessita de git submodules para seu funcionamento, você deve inicia-los da seguinte forma:
+
+- Caso ainda não tenha clonado o projeto:
+    ```shell
+    $ git clone --recurse-submodules https://github.com/stone-co/stone-api-docs.git
+    ```
+
+- Caso já tenha clonado:
+    ```shell
+    $ git submodule update --init --recursive
+    ```
+
+É importante rodar localmente antes de submeter as suas contribuições para o repositório remoto para poder visualizar o
+site e verificar se não há erros na sua construção.
 
 - Digitar no terminal o seguinte comando:
+    ```shell
+    $ hugo server
+    ```
 
-    `$ hugo server`
-
-- Em seu navegador, visitar o endereço __localhost:1313__ (ou o endereço que for informado no próprio terminal
-após rodar o comando acima)
+- Em seu navegador, visitar o endereço __localhost:1313__ (ou o endereço que for informado no próprio terminal após
+  rodar o comando acima)
 
 - Para parar, apertar `Ctrl + C` no terminal
 
 --------
 
-Para mais informações sobre Hugo: [getting started do Hugo](https://gohugo.io/getting-started/quick-start/) e 
+Para mais informações sobre Hugo: [getting started do Hugo](https://gohugo.io/getting-started/quick-start/) e
 [oficina de sites estáticos com hugo](https://github.com/womenwhogocwb/oficina-hugo).
