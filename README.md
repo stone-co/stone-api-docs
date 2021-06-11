@@ -1,10 +1,10 @@
 # Documentação da API de OpenBank da Conta Stone
 
 O [site](https://stone-co.github.io/) com a documentação da nossa API de OpenBank usa
-[Hugo](https://gohugo.io/), um framework open-source escrito em [Golang](https://go.dev/) para construção de sites
+[Hugo](https://gohugo.io/), um framework _open-source_ escrito em [Golang](https://go.dev/) para construção de sites
 estáticos.
 
-Seu funcionamento é simples: a usuária escolhe um [tema](https://themes.gohugo.io/), insere conteúdo em arquivos de
+O seu funcionamento é simples: a usuária escolhe um [tema](https://themes.gohugo.io/), insere conteúdo em arquivos de
 formato __markdown__, edita um arquivo de configuração `.toml` para promover customizações e voilà - 🐭🪄 a mágica
 gopher acontece!
 
@@ -13,19 +13,20 @@ gopher acontece!
 ### Repositórios relacionados
 
 Este é o repositório principal do site da documentação e todo o conteúdo deve ser adicionado aqui, mas existem outros
-dois repositórios relacionados ao projeto:
+três repositórios relacionados ao projeto:
 
 1) *Tema*: o tema que utilizamos é baseado no tema [Docsy](https://themes.gohugo.io/docsy/)
    e pode ser encontrado [nesse repositório aqui](https://github.com/stone-co/docsy). Temos um fork para que seja
-   possível promovermos alterações diretamente no estilo que não seriam possíveis através do arquivo de configuração. Em
-   nosso projeto, ele é consumido e referenciado como um submódulo git.
+   possível promovermos alterações diretamente no estilo que não seriam possíveis através do arquivo de configuração.
+   No nosso projeto, ele é consumido e referenciado como um submódulo git.
 
-2) *Site Sandbox*: o código-fonte do site no ambiente de sandbox, que é gerado pelo código deste repositório + hugo, a
-   cada push na master, pode ser encontrado [aqui](https://github.com/stone-co/sandbox). Cumpre esclarecer que o
-   ambiente de sandbox é usado como pré-produção
+2) *Site Sandbox*: o código-fonte do site no ambiente de sandbox, que é gerado pelo código deste repositório + hugo a
+   cada push na branch master, pode ser encontrado [aqui](https://github.com/stone-co/sandbox). Importante ressaltar que
+   o ambiente de sandbox é usado como pré-produção, a única diferença entre os dois é que os artigos sinalizados como `draft`
+   serão publicados em sandbox.
 
-3) *Site Produção*: o código-fonte do site, que é gerado pelo código deste repositório + hugo, a cada nova tag de
-   release, pode ser encontrado [aqui](https://github.com/stone-co/stone-co.github.io)
+3) *Site Produção*: o código-fonte do site, que é gerado pelo código deste repositório + hugo a cada nova tag de
+   release, pode ser encontrado [aqui](https://github.com/stone-co/stone-co.github.io).
 
 ### Contribuindo
 
@@ -41,10 +42,21 @@ Os artigos devem receber o nome `_index.pt.md` e devem estar dentro de uma pasta
 
 #### Seções da Home
 
-As seções da home precisam ter o tipo `docs` __(type : "docs")__ indicado em seus cabeçalhos. Além disso, precisam ter
-um ícone, que deve ser indicado no campo `icon` e pode ser escolhido
-[aqui](https://themify.me/themify-icons), e uma descrição, que deve ser preenchida no campo
-`description`.
+As seções da home podem ser customizadas diretamente em `/content/pt/_index.html`, usando _blocks_ do tipo `feature`.
+Cada seção precisa ter:
+1. Um ícone, que deve ser escolhido em [Font Awesome](https://fontawesome.com/) {1}
+2. Um título {2}
+3. Descrição que aparecerá abaixo do título {3}
+4. Um botão de ação, com:
+    - Endereço para onde o botão levará {4.a} _obs: caso o link seja interno, deve ser usado o endereço relativo_
+    - Texto do botão {4.b}
+
+```gotemplate
+{{% blocks/feature icon="{1}" title="{2}" %}}
+<p>{3}</p><br>
+<a href="{4.a}" class="btn btn-lg btn-secondary">{4.b}</a>
+{{% /blocks/feature %}}
+```
 
 #### Ordem do conteúdo
 
@@ -54,28 +66,30 @@ ter `weight` igual a 1, o segundo igual a 2, e assim por diante.
 
 #### Fluxo de Git
 
-Devemos seguir
-o [Guia de Estilo Git StoneCo](https://github.com/stone-payments/stoneco-best-practices/blob/master/gitStyleGuide/README_pt.md#commits)
-para abertura de branch, escrita de commit e abertura de pull requests, dentro do fluxo abaixo:
+Mensagens de commit, nomes de branches e títulos de Pull Requests devem seguir os padrões informados no
+[Guia de Estilo Git da Stone](https://github.com/stone-payments/stoneco-best-practices/blob/master/gitStyleGuide/README_pt.md#commits).
+
+Para facilitar a colaboração, o fluxo de Git abaixo deve ser seguido:
 
 ![Flow](docs/images/diagrama_git_flow.svg)
 
 ### Deploy
 
-Conforme falado anteriormente, a documentação é disponibilizada em dois ambientes, Sandbox e Produção. A atualização
-desses ambientes ocorre por meio de duas GitHub Action's, uma para cada ambiente. Essas ações rodam o
-Hugo e alimentam o repositório de interesse (Sandbox ou Produção) do site com as alterações - o que, por sua vez, desencadeia a ação de
+A documentação é disponibilizada em dois ambientes: **Sandbox** e **Produção**. A atualização
+desses ambientes ocorre por meio de duas GitHub Actions, uma para cada ambiente. Essas ações rodam o
+Hugo e alimentam o repositório de interesse (Sandbox ou Produção) do site com as alterações - o que desencadeia a ação de
 atualização do site, que utiliza o [GitHub Pages](https://pages.github.com/).
 
 #### Em Sandbox
 
 Temos a [Action](https://github.com/stone-co/stone-api-docs/blob/master/.github/workflows/sandbox.yml)
-que desencadeia uma nova construção do site sempre que a branch master deste repositório é atualizada.
+que desencadeia uma nova construção do site sempre que a branch master deste repositório é atualizada. Em sandbox, usamos
+a flag `-D` para forçar os artigos que têm `draft: true` no cabeçalho a serem publicados.
 
 #### Em Produção
 
 Temos a [Action](https://github.com/stone-co/stone-api-docs/blob/master/.github/workflows/release.yml)
-que desencadeia uma nova construção do site sempre que geramos uma tag de release.
+que desencadeia uma nova construção do site sempre que geramos uma tag de release neste repositório.
 
 ## Usando Hugo
 
@@ -83,7 +97,7 @@ que desencadeia uma nova construção do site sempre que geramos uma tag de rele
 
 #### Windows
 
-Faça download do executável do
+Baixe o executável do
 Hugo [Windows 64 bits](https://github.com/gohugoio/hugo/releases/download/v0.64.0/hugo_0.64.0_Windows-64bit.zip)
 ou [Windows 32 bits](https://github.com/gohugoio/hugo/releases/download/v0.64.0/hugo_0.64.0_Windows-32bit.zip)
 (este executável não é um instalador, é necessário fazer a instalação manual)
@@ -110,10 +124,10 @@ Comando para instalar com Homebrew: `$ brew install hugo`
 
 #### Linux
 
-Use o package manager da sua distro/de sua preferência, instruções
-adicionais [aqui](https://gohugo.io/getting-started/installing/#linux)
+Use o _package manager_ da sua distro/de sua preferência, instruções adicionais
+[aqui](https://gohugo.io/getting-started/installing/#linux)
 
-### Adicionando conteúdo
+### Adicionando conteúdo com Hugo instalado
 
 - Para criar um novo conteúdo (na prática, vai ser criado um arquivo __markdown__ que vai ser usado para gerar uma nova
   página __html__), deve-se digitar o seguinte comando:
@@ -130,13 +144,14 @@ adicionais [aqui](https://gohugo.io/getting-started/installing/#linux)
              └──📄_index.pt.md
     ```
 
-- Cada artigo tem um campo no cabeçalho `draft`, que pode ter o valor `true` (caso seja ainda um rascunho)
+- Cada artigo tem um campo chamado `draft` no cabeçalho, que pode ter o valor `true` (caso seja ainda um rascunho)
   ou `false` (caso deva ser publicado). O default do campo é `true`, altere para `false` para sinalizar que o artigo
-  deve ser publicado!
+  deve ser publicado no ambiente de Produção. 
+  🚨 Mesmo que o campo `draft` tenha o valor `true`, **o artigo será publicado no ambiente de Sandbox!**
 
 ### Rodando localmente
 
-Como o projeto necessita de git submodules para seu funcionamento, você deve inicia-los da seguinte forma:
+Como o projeto necessita de git submodules para o seu funcionamento, você deve os iniciar da seguinte forma:
 
 - Caso ainda não tenha clonado o projeto:
     ```shell
@@ -148,15 +163,16 @@ Como o projeto necessita de git submodules para seu funcionamento, você deve in
     $ git submodule update --init --recursive
     ```
 
-É importante rodar localmente antes de submeter as suas contribuições para o repositório remoto para poder visualizar o
+⚠️ É importante rodar localmente antes de submeter as suas contribuições para o repositório remoto para poder visualizar o
 site e verificar se não há erros na sua construção.
 
 - Digitar no terminal o seguinte comando:
     ```shell
     $ hugo server
     ```
+    🔍 Obs: se você quiser forçar os _drafts_ a serem publicados, utilize a _flag_ `-D`
 
-- Em seu navegador, visitar o endereço __localhost:1313__ (ou o endereço que for informado no próprio terminal após
+- No seu navegador, visitar o endereço __localhost:1313__ (ou o endereço que for informado no próprio terminal após
   rodar o comando acima)
 
 - Para parar, apertar `Ctrl + C` no terminal
