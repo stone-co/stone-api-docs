@@ -71,7 +71,7 @@ Mensagens de commit, nomes de branches e títulos de Pull Requests devem seguir 
 
 Para facilitar a colaboração, o fluxo de Git abaixo deve ser seguido:
 
-![Flow](docs/images/diagrama_git_flow.svg)
+![Flow](docs/images/diagrama_git_flow.png)
 
 ### Deploy
 
