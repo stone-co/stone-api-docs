@@ -40,6 +40,11 @@ A url do site vai ser baseada no nome dos diretórios que ficam sob o diretório
 
 Os artigos devem receber o nome `_index.pt.md` e devem estar dentro de uma pasta com o nome do título.
 
+#### Imagem de Capa da Home
+
+É possível alterar facilmente a imagem de capa localizada na homepage do site. Para isso, basta inserir
+em `/content/pt/` uma imagem que contenha a palavra _background_ no nome (e.g `cover-background.jpg`).
+
 #### Seções da Home
 
 As seções da home podem ser customizadas diretamente em `/content/pt/_index.html`, usando _blocks_ do tipo `feature`.
