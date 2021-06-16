@@ -39,6 +39,7 @@ Ou seja, com este endpoint é possível fazer um pix informando tanto o campo `k
 <br>
 
 **authorization*** `string`
+<br> Bearer token de autenticação
 
 **x-stone-idempotency-key*** `string`
 <br>Chave de idempotência

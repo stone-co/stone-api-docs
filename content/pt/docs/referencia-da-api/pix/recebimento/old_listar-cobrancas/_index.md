@@ -1,6 +1,6 @@
 ---
-title: "Listar Cobranças"
-linkTitle: "Listar Cobranças"
+title: "Old_Listar Cobranças"
+linkTitle: "Old_Listar Cobranças"
 date: 2020-11-06T13:52:00-03:00
 lastmod: 2020-11-06T13:52:00-03:00
 weight: 4
