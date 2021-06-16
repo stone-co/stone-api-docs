@@ -1,6 +1,6 @@
 ---
-title: "Detalhe da Cobrança"
-linkTitle: "Detalhe da Cobrança"
+title: "Old_Detalhe da Cobrança"
+linkTitle: "Old_Detalhe da Cobrança"
 date: 2020-11-06T15:26:32-03:00
 lastmod: 2020-11-06T15:26:32-03:00
 weight: 3

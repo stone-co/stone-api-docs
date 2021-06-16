@@ -1,6 +1,6 @@
 ---
-title: "Gerar Cobrança"
-linkTitle: "Gerar Cobrança"
+title: "Old_Gerar Cobrança"
+linkTitle: "Old_Gerar Cobrança"
 date: 2020-11-06T13:55:15-03:00
 lastmod: 2020-11-06T13:55:15-03:00
 weight: 2
@@ -8,9 +8,8 @@ description: >
   
 ---
 
-##### **Request**
-```http request
-POST - /api/v1/pix_payment_invoices
+```http
+POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/pix_payment_invoices
 ```
 
 ##### **Headers**

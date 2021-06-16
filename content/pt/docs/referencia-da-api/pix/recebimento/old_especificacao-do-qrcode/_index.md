@@ -1,6 +1,6 @@
 ---
-title: "Especificação do QR Code"
-linkTitle: "Especificação do QR Code"
+title: "Old_Especificação do QR Code"
+linkTitle: "Old_Especificação do QR Code"
 date: 2020-11-06T15:07:33-03:00
 lastmod: 2020-11-06T15:07:33-03:00
 weight: 5

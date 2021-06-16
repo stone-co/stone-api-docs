@@ -31,6 +31,7 @@ Na confirmação, o body pode conter opcionalmente os campos `amount` e `descrip
 <br>
 
 **authorization*** `string`
+<br> Bearer token de autenticação
 
 **x-stone-idempotency-key*** `string`
 <br>Chave de idempotência

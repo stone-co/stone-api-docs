@@ -24,7 +24,7 @@ E esse é o objetivo desse endpoint.
 <br>
 
 **authorization*** `string`
-
+<br> Bearer token de autenticação
 
 <br>
 
