@@ -1,0 +1,7 @@
+{
+    // outros campos omitidos por simplicidade
+    "event_type": "pix_entries_key_created",
+    "target_data": {
+        "$ref": "pix_entry"
+    }
+}

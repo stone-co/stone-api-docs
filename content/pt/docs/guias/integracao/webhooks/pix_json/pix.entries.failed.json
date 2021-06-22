@@ -1,0 +1,7 @@
+{
+	...
+    "event_type": "pix_entries_failed",
+    "target_data": {
+        "$ref": "pix_entry"
+    }
+}

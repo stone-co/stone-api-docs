@@ -1,0 +1,7 @@
+{
+	...
+	"event_type": "pix_entries_claims_confirmed",
+	"target_data": {
+		"$ref": "pix_entry_claim"
+	}
+}

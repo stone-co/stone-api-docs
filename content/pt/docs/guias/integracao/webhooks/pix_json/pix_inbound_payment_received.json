@@ -1,0 +1,7 @@
+{
+    ...
+    "event_type": "pix_inbound_payment_received",
+    "target_data": {
+        "$ref": "inbound_pix_payment"
+    }
+}

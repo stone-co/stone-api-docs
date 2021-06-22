@@ -1,0 +1,7 @@
+{
+    ...
+    "event_type": "pix_invoice_payment_cancelled",
+    "target_data": {
+        "$ref": "pix_payment_invoice"
+    }
+}

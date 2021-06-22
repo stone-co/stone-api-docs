@@ -1,0 +1,7 @@
+{
+    ...
+    "event_type": "pix_refund_payment_money_reserved",
+    "target_data": {
+        "$ref": "pix_refund_payment"
+    }
+}
