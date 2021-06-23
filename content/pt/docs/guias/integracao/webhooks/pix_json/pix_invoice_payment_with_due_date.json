@@ -1,0 +1,325 @@
+{
+    "type": "object",
+    "title": "Pix cobrança com vencimento",
+    "description": "Representa um QR Code dinâmico com vencimento, multa, juros, desconto e abatimento",
+    "properties": {
+        "account_id": {
+            "type": "string",
+            "format": "uuid"
+        },
+        "additional_data": {
+            "type": "array",
+            "maxItems": 50,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 50
+                    },
+                    "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 200
+                    }
+                }
+            }
+        },
+        "amount": {
+            "type": "integer",
+            "minimum": 0
+        },
+        "beneficiary_address": {
+            "type": "object"
+        },
+        "beneficiary_entity": {
+            "type": "object"
+        },
+        "cancelled_at": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "date-time"
+        },
+        "created_at": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "created_by": {
+            "type": "string",
+            "pattern": "^(user|organization):(.+)"
+        },
+        "discount": {
+            "type": [
+                "object",
+                "null"
+            ],
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "fixed",
+                        "proportional"
+                    ]
+                },
+                "calculation_mode": {
+                    "type": "string",
+                    "enum": [
+                        "date",
+                        "period"
+                    ]
+                },
+                "period_discount": {
+                    "type": [
+                        "object",
+                        "null"
+                    ],
+                    "properties": {
+                        "fixed_value": {
+                            "type": [
+                                "integer",
+                                "null"
+                            ]
+                        },
+                        "proportional_value": {
+                            "type": "object",
+                            "properties": {
+                                "exponent": {
+                                    "type": "integer"
+                                },
+                                "coefficient": {
+                                    "type": "integer"
+                                }
+                            }
+                        }
+                    }
+                },
+                "date_discounts": {
+                    "type": "array",
+                    "maxItems": 3,
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "fixed_value": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ]
+                            },
+                            "proportional_value": {
+                                "type": "object",
+                                "properties": {
+                                    "exponent": {
+                                        "type": "integer"
+                                    },
+                                    "coefficient": {
+                                        "type": "integer"
+                                    }
+                                }
+                            },
+                            "date": {
+                                "type": "string",
+                                "format": "date"
+                            }
+                        },
+                        "required": [
+                            "date"
+                        ]
+                    }
+                }
+            },
+            "required": [
+                "type",
+                "calculation_mode"
+            ]
+        },
+        "expiration_date": {
+            "type": "string",
+            "format": "date"
+        },
+        "fine": {
+            "type": [
+                "object",
+                "null"
+            ],
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "fixed",
+                        "proportional"
+                    ]
+                },
+                "fixed_value": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ]
+                },
+                "proportional_value": {
+                    "type": "object",
+                    "properties": {
+                        "exponent": {
+                            "type": "integer"
+                        },
+                        "coefficient": {
+                            "type": "integer"
+                        }
+                    }
+                }
+            },
+            "required": [
+                "type"
+            ]
+        },
+        "id": {
+            "type": "string",
+            "format": "uuid"
+        },
+        "inbound_pix_payments": {
+            "type": "array",
+            "items": {
+                "$ref": "inbound_pix_payment"
+            }
+        },
+        "interest": {
+            "type": [
+                "object",
+                "null"
+            ],
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "fixed",
+                        "proportional"
+                    ]
+                },
+                "period": {
+                    "type": "string",
+                    "enum": [
+                        "day",
+                        "month",
+                        "year"
+                    ]
+                },
+                "fixed_value": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ]
+                },
+                "proportional_value": {
+                    "type": "object",
+                    "properties": {
+                        "exponent": {
+                            "type": "integer"
+                        },
+                        "coefficient": {
+                            "type": "integer"
+                        }
+                    }
+                }
+            },
+            "required": [
+                "type",
+                "period"
+            ]
+        },
+        "key": {
+            "type": "string"
+        },
+        "key_type": {
+            "type": "string",
+            "enum": [
+                "phone",
+                "email",
+                "random_key",
+                "cpf",
+                "cnpj"
+            ]
+        },
+        "location": {
+            "type": "string",
+            "format": "uri"
+        },
+        "only_business_days": {
+            "type": "boolean"
+        },
+        "paid_at": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "date-time"
+        },
+        "payment_limit_period_days": {
+            "type": "integer"
+        },
+        "reduction": {
+            "type": [
+                "object",
+                "null"
+            ],
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "fixed",
+                        "proportional"
+                    ]
+                },
+                "fixed_value": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ]
+                },
+                "proportional_value": {
+                    "type": "object",
+                    "properties": {
+                        "exponent": {
+                            "type": "integer"
+                        },
+                        "coefficient": {
+                            "type": "integer"
+                        }
+                    }
+                }
+            },
+            "required": [
+                "type"
+            ]
+        },
+        "request_for_payer": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "maxLength": 140
+        },
+        "request_id": {
+            "type": "string",
+            "format": "uuid"
+        },
+        "status": {
+            "type": "string",
+            "enum": [
+                "ACTIVE",
+                "CANCELLED",
+                "EXPIRED",
+                "PAID"
+            ]
+        },
+        "transaction_id": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9]{26,35}$"
+        },
+        "updated_at": {
+            "type": "string",
+            "format": "date-time"
+        }
+    }
+}

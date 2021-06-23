@@ -1,0 +1,130 @@
+{
+    "type": "object",
+    "title": "Pix payment invoice",
+    "description": "Representa um QR Code dinâmico imediato",
+    "properties": {
+        "id": {
+            "type": "string",
+            "format": "uuid"
+        },
+        "account_id": {
+            "type": "string",
+            "format": "uuid"
+        },
+        "key": {
+            "type": "string"
+        },
+        "key_type": {
+            "type": "string",
+            "enum": [
+                "phone",
+                "email",
+                "random_key",
+                "cpf",
+                "cnpj"
+            ]
+        },
+        "transaction_id": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9]{26,35}$"
+        },
+        "amount": {
+            "type": "integer",
+            "minimum": 0
+        },
+        "request_for_payer": {
+            "type": "string",
+            "maxLength": 140
+        },
+        "expiration": {
+            "type": "integer",
+            "exclusiveMinimum": 0
+        },
+        "location": {
+            "type": "string",
+            "format": "uri"
+        },
+        "request_id": {
+            "type": "string",
+            "format": "uuid"
+        },
+        "created_by": {
+            "type": "string",
+            "pattern": "^(user|organization):(.+)"
+        },
+        "created_at": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "paid_at": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "date-time"
+        },
+        "cancelled_at": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "date-time"
+        },
+        "updated_at": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "status": {
+            "type": "string",
+            "enum": [
+                "PAID",
+                "ACTIVE",
+                "EXPIRED",
+                "CANCELLED"
+            ]
+        },
+        "inbound_pix_payments": {
+            "type": "array",
+            "items": {
+                "$ref": "inbound_pix_payment"
+            }
+        },
+        "additional_data": {
+            "type": "array",
+            "maxItems": 50,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 50
+                    },
+                    "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 200
+                    }
+                }
+            }
+        },
+        "customer": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "document": {
+                    "type": "string"
+                },
+                "document_type": {
+                    "type": "string",
+                    "enum": [
+                        "cpf",
+                        "cnpj"
+                    ]
+                }
+            }
+        }
+    }
+}

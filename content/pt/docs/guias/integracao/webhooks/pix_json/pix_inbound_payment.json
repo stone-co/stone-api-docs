@@ -1,0 +1,225 @@
+{
+    "type": "object",
+    "title": "Pix inbound payment",
+    "description": "Representa um cash-in de Pix.",
+    "properties": {
+        "id": {
+            "type": "string",
+            "format": "uuid"
+        },
+        "account_id": {
+            "type": "string",
+            "format": "uuid"
+        },
+        "amount": {
+            "type": "integer",
+            "minimum": 0
+        },
+        "refunded_amount": {
+            "type": "integer",
+            "minimum": 0
+        },
+        "transaction_id": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9]+${26,35}"
+        },
+        "end_to_end_id": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string",
+            "maxLength": 140
+        },
+        "status": {
+            "type": "string",
+            "enum": [
+                "PENDING",
+                "SETTLED",
+                "REJECTED"
+            ]
+        },
+        "created_at": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "pix_payment_invoice": {
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "additional_information": {
+                    "type": "array",
+                    "maxItems": 50,
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string",
+                                "minLength": 1,
+                                "maxLength": 50
+                            },
+                            "value": {
+                                "type": "string",
+                                "minLength": 1,
+                                "maxLength": 200
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "pix_payment_invoice_with_due_date": {
+            "$ref": "pix_payment_invoice_with_due_date"
+        },
+        "pix_payment_static_invoice": {
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "additional_information": {
+                    "type": "string"
+                }
+            }
+        },
+        "source": {
+            "type": "object",
+            "properties": {
+                "account": {
+                    "type": "object",
+                    "properties": {
+                        "account_code": {
+                            "type": "string"
+                        },
+                        "account_type": {
+                            "type": "string"
+                        },
+                        "branch_code": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "entity": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "document": {
+                            "type": "string"
+                        },
+                        "document_type": {
+                            "type": "string",
+                            "enum": [
+                                "cpf",
+                                "cnpj"
+                            ]
+                        }
+                    }
+                },
+                "institution": {
+                    "type": "object",
+                    "properties": {
+                        "ispb": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "target": {
+            "type": "object",
+            "properties": {
+                "account": {
+                    "type": "object",
+                    "properties": {
+                        "account_code": {
+                            "type": "string"
+                        },
+                        "account_type": {
+                            "type": "string"
+                        },
+                        "branch_code": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "entity": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "document": {
+                            "type": "string"
+                        },
+                        "document_type": {
+                            "type": "string",
+                            "enum": [
+                                "cpf",
+                                "cnpj"
+                            ]
+                        }
+                    }
+                },
+                "institution": {
+                    "type": "object",
+                    "properties": {
+                        "ispb": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "fee": {
+            "type": "integer",
+            "minimum": 0
+        },
+        "fee_metadata": {
+            "type": "object",
+            "properties": {
+                "fee_type": {
+                    "type": "string"
+                },
+                "updated_at": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "charge_type": {
+                    "type": "string",
+                    "enum": [
+                        "fixed",
+                        "proportional"
+                    ]
+                },
+                "fixed_value": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "inserted_at": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "proportional_value": {
+                    "type": "object",
+                    "properties": {
+                        "exponent": {
+                            "type": "integer"
+                        },
+                        "coefficient": {
+                            "type": "integer"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
