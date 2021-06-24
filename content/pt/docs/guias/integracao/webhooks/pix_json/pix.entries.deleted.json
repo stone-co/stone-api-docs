@@ -1,0 +1,49 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string",
+            "format": "uuid"
+        },
+        "event_type": {
+            "type": "string",
+            "enum": "pix_entries_deleted"
+        },
+        "event_happened_at": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "event_notified_at": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "env": {
+            "type": "string",
+            "enum": [
+                "production",
+                "sandbox",
+                "homolog",
+                "test",
+                "development"
+            ]
+        },
+        "target_id": {
+            "type": "string",
+            "format": "uuid"
+        },
+        "target_type": {
+            "type": "string"
+        },
+        "target_statement_uri": {
+            "type": "string",
+            "format": "uri"
+        },
+        "target_detail_uri": {
+            "type": "string",
+            "format": "uri"
+        },
+        "target_data": {
+            "$ref": "pix_entry"
+        }
+    }
+}

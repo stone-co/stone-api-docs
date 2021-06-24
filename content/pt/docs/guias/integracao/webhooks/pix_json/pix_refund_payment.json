@@ -1,0 +1,80 @@
+{
+  "type": "object",
+  "title": "Refound inbound payment",
+  "description": "Representa uma devolução (cash-out) associada a um inbound payment (cash-in).",
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "return_id": {
+        "type": "string"
+    },
+    "account_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "request_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "created_by": {
+      "type": "string",
+      "pattern": "^(user|organization):(.+)"
+    },
+    "amount": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "reason": {
+      "type": "string",
+      "enum": [
+        "duplicated_payment",
+        "wrong_amount",
+        "institution_error",
+        "technical_error",
+        "cancellation_request",
+        "beneficiary_request",
+        "investigation_request",
+        "not_allowlisted",
+        "blocklisted",
+        "undue_payment",
+        "fraud",
+        "generic"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "PENDING",
+        "FAILED",
+        "MONEY_RESERVED",
+        "SETTLED",
+        "REVERSED"
+      ]
+    },
+    "money_reserved_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "settled_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "reversed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "failed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "inbound_pix_payment": {
+      "$ref": "inbound_pix_payment"
+    }
+  }
+}
