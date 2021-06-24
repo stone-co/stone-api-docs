@@ -117,15 +117,15 @@ A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) s
 
 | Tipo de Evento                																											    | Descrição                                                                   |
 | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| [pix.entries.key_created](/docs/guias/integracao/webhooks/pix_json/pix.entries.key_created.json)          									| Representa a criação de uma chave Pix.            |
-| [pix.entries.deleted](/docs/guias/integracao/webhooks/pix_json/pix.entries.deleted.json)               										| Representa a deleção de uma chave Pix.            |
-| [pix.entries.failed](/docs/guias/integracao/webhooks/pix_json/pix.entries.failed.json)             											| Representa a falha na criação de uma chave Pix.   |
-| [pix.entries.claims.waiting_resolution](/docs/guias/integracao/webhooks/pix_json/pix.entries.claims.waiting_resolution.json) 					| Representa que estamos aguardando a resposta da cliente sobre a claim (confirmação ou cancelamento).  |
-| [pix.entries.claims.confirmed](/docs/guias/integracao/webhooks/pix_json/pix.entries.claims.confirmed.json)         							| Representa que a cliente confirmou a claim, passando a chave para outra instituição.             |
-| [pix.entries.claims.automatically_confirmed_waiting_resolution](/docs/guias/integracao/webhooks/pix_json/pix.entries.claims.automatically_confirmed_waiting_resolution.json) | Representa que a reivRepresentação de posse foi automaticamente confirmada porque a cliente não respondeu no prazo de 7 dias corridos. |
-| [pix.entries.claims.automatically_confirmed](/docs/guias/integracao/webhooks/pix_json/pix.entries.claims.automatically_confirmed.json) 		| Representa que foi realizada a confirmação da reivRepresentação de posse automaticamente, porque a cliente não respondeu dentro dos 14 dias de prazo. Aqui a reivRepresentação não pode ser mais cancelada.  |
-| [pix.entries.claims.cancelled](/docs/guias/integracao/webhooks/pix_json/pix.entries.claims.cancelled.json)         							| Representa cancelamento da solicitação da claim por parte da cliente, mantendo a chave cadastrada na conta original. |
-| [pix.entries.claims.automatically_cancelled](/docs/guias/integracao/webhooks/pix_json/pix.entries.claims.automatically_cancelled.json) 		| Representa cancelamento automático da da solicitação de portabilidade, por falta de resposta da cliente nos 7 dias de prazo.   |
+| [pix_entries_key_created](/docs/guias/integracao/webhooks/pix_json/pix.entries.key_created.json)          									| Representa a criação de uma chave Pix.            |
+| [pix_entries_deleted](/docs/guias/integracao/webhooks/pix_json/pix.entries.deleted.json)               										| Representa a deleção de uma chave Pix.            |
+| [pix_entries_failed](/docs/guias/integracao/webhooks/pix_json/pix.entries.failed.json)             											| Representa a falha na criação de uma chave Pix.   |
+| [pix_entries_claims_waiting_resolution](/docs/guias/integracao/webhooks/pix_json/pix.entries.claims.waiting_resolution.json) 					| Representa que estamos aguardando a resposta da cliente sobre a claim (confirmação ou cancelamento).  |
+| [pix_entries_claims_confirmed](/docs/guias/integracao/webhooks/pix_json/pix.entries.claims.confirmed.json)         							| Representa que a cliente confirmou a claim, passando a chave para outra instituição.             |
+| [pix_entries_claims_automatically_confirmed_waiting_resolution](/docs/guias/integracao/webhooks/pix_json/pix.entries.claims.automatically_confirmed_waiting_resolution.json) | Representa que a reivRepresentação de posse foi automaticamente confirmada porque a cliente não respondeu no prazo de 7 dias corridos. |
+| [pix_entries_claims_automatically_confirmed](/docs/guias/integracao/webhooks/pix_json/pix.entries.claims.automatically_confirmed.json) 		| Representa que foi realizada a confirmação da reivRepresentação de posse automaticamente, porque a cliente não respondeu dentro dos 14 dias de prazo. Aqui a reivRepresentação não pode ser mais cancelada.  |
+| [pix_entries_claims_cancelled](/docs/guias/integracao/webhooks/pix_json/pix.entries.claims.cancelled.json)         							| Representa cancelamento da solicitação da claim por parte da cliente, mantendo a chave cadastrada na conta original. |
+| [pix_entries_claims_automatically_cancelled](/docs/guias/integracao/webhooks/pix_json/pix.entries.claims.automatically_cancelled.json) 		| Representa cancelamento automático da da solicitação de portabilidade, por falta de resposta da cliente nos 7 dias de prazo.   |
 | [pix_payment_invoice](/docs/guias/integracao/webhooks/pix_json/pix_payment_invoice.json)														| Representa um QR Code dinâmico imediato.						|
 | [pix_payment_invoice_with_due_date](/docs/guias/integracao/webhooks/pix_json/pix_payment_invoice_with_due_date.json)							| Representa um QR Code dinâmico com vencimento, multa, juros, desconto e abatimento.	|
 | [pix_invoice_payment_created](/docs/guias/integracao/webhooks/pix_json/pix_invoice_payment_created.json)       								| Representa a criação de um QR Code dinâmico. 	 			   	|
@@ -134,16 +134,16 @@ A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) s
 | [inbound_pix_payment](/docs/guias/integracao/webhooks/pix_json/inbound_pix_payment.json)														| Representa um cash-in de Pix.									|
 | [pix_inbound_payment_received](/docs/guias/integracao/webhooks/pix_json/pix_inbound_payment_received.json)         							| Representa o recebimento de um cash-in de Pix, podendo estar associada a um QR Code estatático, dinâmico imediato ou dinâmico com vencimento. Essa associação será representada pela presença de um dos seguintes atributos dentro do target_data: - `pix_payment_invoice` - Invoice dinâmica imediata; - `pix_payment_static_invoice` - Invoice estática; - `pix_payment_invoice_with_due_date` - Invoice dinâmica com vencimento, multa, juros, desconto e abatimento.  |
 | [pix_refund_payment](/docs/guias/integracao/webhooks/pix_json/pix_refund_payment.json)										| Representa uma devolução (cash-out) associada a um inbound payment (cash-in).		|
-| [pix.inbound_payment.refund.created](/docs/guias/integracao/webhooks/pix_json/pix.inbound_payment.refund.created.json)   						| Representa a criação de uma devolução associada a uma transação Pix. Lembrando que estamos falando da devolução (cash-out) de um cash-in.  |
-| [pix.inbound_payment.refund.failed](/docs/guias/integracao/webhooks/pix_json/pix.inbound_payment.refund.failed.json)    						| Representa que houve falha na criação da devolução (cash-out) de um cash-in de Pix.    |
-| [pix.inbound_payment.refund.money_reserved](/docs/guias/integracao/webhooks/pix_json/pix.inbound_payment.refund.money_reserved.json) 			| Representa a reserva de dinheiro (impacto no saldo da cliente) após à criação com sucesso de uma devolução (cash-out) de um cash-in de Pix.    |
-| [pix.inbound_payment.refund.settled](/docs/guias/integracao/webhooks/pix_json/pix.inbound_payment.refund.settled.json)   						| Representa que a devolução (cash-out) de um cash-in de Pix foi realizada com sucesso.            |
-| [pix.inbound_payment.refund.reversed](/docs/guias/integracao/webhooks/pix_json/pix.inbound_payment.refund.reversed.json)  					| Representa que a devolução (cash-out) de um cash-in de Pix foi rejeitada.                     |
-| pix.outbound_payment.created         | Representa a criação de um cash-out de Pix.  |
-| pix.outbound_payment.money_reserved  | Representa a reserva de dinheiro (impacto no saldo da cliente) após à criação com sucesso de um cash-out de Pix. |
-| pix.outbound_payment.failed          | Representa a falha na criação de um cash-out de Pix.         |
-| pix.outbound_payment.settled         | Representa a liquidação com sucesso de um cash-out de Pix.   |
-| pix.outbound_payment.refunded        | Representa a devolução de um cash-out de Pix.   	          |
+| [pix_inbound_payment_refund_created](/docs/guias/integracao/webhooks/pix_json/pix.inbound_payment.refund.created.json)   						| Representa a criação de uma devolução associada a uma transação Pix. Lembrando que estamos falando da devolução (cash-out) de um cash-in.  |
+| [pix_inbound_payment_refund_failed](/docs/guias/integracao/webhooks/pix_json/pix.inbound_payment.refund.failed.json)    						| Representa que houve falha na criação da devolução (cash-out) de um cash-in de Pix.    |
+| [pix_inbound_payment_refund_money_reserved](/docs/guias/integracao/webhooks/pix_json/pix.inbound_payment.refund.money_reserved.json) 			| Representa a reserva de dinheiro (impacto no saldo da cliente) após à criação com sucesso de uma devolução (cash-out) de um cash-in de Pix.    |
+| [pix_inbound_payment_refund_settled](/docs/guias/integracao/webhooks/pix_json/pix.inbound_payment.refund.settled.json)   						| Representa que a devolução (cash-out) de um cash-in de Pix foi realizada com sucesso.            |
+| [pix_inbound_payment_refund_reversed](/docs/guias/integracao/webhooks/pix_json/pix.inbound_payment.refund.reversed.json)  					| Representa que a devolução (cash-out) de um cash-in de Pix foi rejeitada.                     |
+| pix_outbound_payment_created         | Representa a criação de um cash-out de Pix.  |
+| pix_outbound_payment_money_reserved  | Representa a reserva de dinheiro (impacto no saldo da cliente) após à criação com sucesso de um cash-out de Pix. |
+| pix_outbound_payment_failed          | Representa a falha na criação de um cash-out de Pix.         |
+| pix_outbound_payment_settled         | Representa a liquidação com sucesso de um cash-out de Pix.   |
+| pix_outbound_payment_refunded        | Representa a devolução de um cash-out de Pix.   	          |
 
 <br>
 
