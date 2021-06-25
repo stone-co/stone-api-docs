@@ -89,3 +89,9 @@ Body:
 ```http
 204 OK
 ```
+
+```http
+400 Bad Request
+```
+
+Acontece quando o id enviado não se conforma ao padrão UUID.
