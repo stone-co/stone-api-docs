@@ -35,5 +35,5 @@ Essa estrutura é usada com a fórmula
 
 $$percentage = coeficient*10^{exponent}$$
 
-Utilizamos a convenção que 100% = 1, então por exemplo, 70% pode ser representado como
-coeficient = 7 e exponent = -1.
+Por definição 100% = 100 * (1/100) = 1. De forma análoga, 70% pode ser representado como
+`coefficient = 70, exponent = -2`, ou como `coefficient = 7, exponent = -1`
