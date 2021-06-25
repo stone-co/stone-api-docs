@@ -10,7 +10,7 @@ weight: 4
 
 ---
 
-```http
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts
 ```
 
@@ -33,12 +33,12 @@ Caso 'true', irá limitar a mostrar somente 50 contas, se for setado para 'false
 
 ##### Response
 
-```http
+```
 200 OK
 content-type: application/json
 ```
 Body
-```JSON
+```json
 {
     "cursor": {
         "after": null,

@@ -11,34 +11,34 @@ description: >
 
 ##### **Request**
 
-```http request
+```
 GET /api/v1/pix/:account_id/entry_claims/:claim_id
 ```
 
 ##### **Response**
 
-```http request
+```
 200 OK
 ```
 Body
-```text
+```json
 {
   "id": "40346adc-74f3-4c4e-8275-73ba78993491",
-  “claim_type”: “portability”,
+  "claim_type": "portability",
   "status": "waiting_resolution",
   "origin": "external",
   "origin_ispb": "1234567890",
-  “created_at”: "“2020- 09-27T03:00:00Z”,
-  “updated_at”: "2020-09-27T06:00:00Z", 
-  “expires_at”: "2020-09-30T03:00:00Z",
+  "created_at": "2020- 09-27T03:00:00Z",
+  "updated_at": "2020-09-27T06:00:00Z", 
+  "expires_at": "2020-09-30T03:00:00Z",
   "beneficiary_account": {
-     "branch_code": “0001”,
+     "branch_code": "0001",
      "account_code": "00016583",
      "account_type": "CC",
      "opened_at": "2019-11-18T03:00:00Z"
   },
   "beneficiary_entity": {
-     "name": “0001”,
+     "name": "0001",
      "document_type": "cpf",
      "document": "13152256685"
   },

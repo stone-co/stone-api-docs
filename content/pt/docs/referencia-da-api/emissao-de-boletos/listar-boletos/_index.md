@@ -10,7 +10,7 @@ lastmod: "2020-03-09T17:11:01.543Z"
 
 <br>
 
-```http request
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
 ```
 <br>
@@ -147,14 +147,14 @@ Formato "YYYY-MM-DD".
 
 #### **Response**
 
-```JSON
+```json
 200 OK
 content-type: application/json
 ```
 
 ##### Body
 
-```JSON
+```json
 
 {
     "cursor": {
@@ -274,7 +274,7 @@ content-type: application/json
 ```
 <br>
 
-```JSON
+```json
 403 Forbidden
 ```
 

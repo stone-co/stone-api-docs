@@ -11,7 +11,7 @@ description: >
 Através desse endpoint será possível consultar um Pix recebido através do end_to_end_id. Segue padrão definido pelo Banco Central.
 
 
-```http request
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/pix/{{e2eid}}
 ```
 <br>
@@ -36,7 +36,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/pix/{{e2eid}}
 <br>
 Exemplo:
 
-```JSON
+```json
 {
   "type": "object",
   "properties": {
@@ -55,11 +55,11 @@ Exemplo:
 ##### **Response**
 ---
 
-```JSON
+```json
 200 OK
 ```
 
-```JSON
+```json
 {
   "devolucoes": [
     {

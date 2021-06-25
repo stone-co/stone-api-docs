@@ -11,7 +11,7 @@ description: >
 Através desse endpoint será possível listar as cobranças com validade por Pix.
 
 
-```http request
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/cobv
 ```
 <br>
@@ -50,7 +50,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/cobv
 
 Exemplo:
 
-```JSON
+```json
 {
   "type": "object",
   "properties": {
@@ -92,11 +92,11 @@ Exemplo:
 ##### **Response**
 ---
 
-```JSON
+```json
 200 OK
 ```
 
-```JSON
+```json
     {
       "calendario": {
         "criacao": "2021-03-19T22:04:24.209571Z",

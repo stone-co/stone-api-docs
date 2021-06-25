@@ -26,7 +26,7 @@ weight: 9
 
 <br>
 
-```http request
+```
 POST https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices/id/cancel
 ```
 <br>

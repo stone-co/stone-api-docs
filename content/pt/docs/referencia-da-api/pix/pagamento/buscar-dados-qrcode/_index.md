@@ -9,7 +9,7 @@ description: >
 ---
 <br>
 
-```http
+```
 POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/outbound_pix_payments/brcodes
 ```
 
@@ -84,7 +84,7 @@ A resposta varia de acordo com o tipo de QR Code que você está lendo, que pode
 ---
 
 
-```http
+```
 200 OK
 ```
 
@@ -105,7 +105,7 @@ A resposta varia de acordo com o tipo de QR Code que você está lendo, que pode
 ###### **Payload retornado ao consultar um QR Code dinâmico**
 ---
 
-```http
+```
 200 OK
 ```
 
@@ -142,7 +142,7 @@ A resposta varia de acordo com o tipo de QR Code que você está lendo, que pode
 ###### **Retornado quando o QRCode não pode ser obtido**
 ---
 
-```http
+```
 400
 ```
 
@@ -160,7 +160,7 @@ A resposta varia de acordo com o tipo de QR Code que você está lendo, que pode
 
 Ex.: QRCode com vencimento, juros e multa.
 
-```http
+```
 501
 ```
 

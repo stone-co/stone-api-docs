@@ -8,7 +8,7 @@ description: >
   
 ---
 
-```http
+```
 POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/pix_payment_invoices
 ```
 
@@ -42,9 +42,11 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/pix_payment_invoices
 ```
 
 ##### **Response**
-```text
+```html
 201 CREATED
+```
 
+```json
 {
    "id": "54071fc2-8068-4b26-bed7-be112228ed98",
    "account_id": "fa7da52c-784d-4bd1-a3cb-db98bda9222d",
@@ -55,12 +57,12 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/pix_payment_invoices
    "request_for_payer": "Preencha o tamanho da camisa",
    "expiration": 86400,
    "created_at": "2020-08-19T13:49:43Z",
-   "created_by": "user:54071fc2-8068-4b26-bed7-be112228ed98"
+   "created_by": "user:54071fc2-8068-4b26-bed7-be112228ed98",
    "revision": 0,
    "location": "pix.stone.com.br/pix/1dd7f893-a58e-4172-8702-8dc33e21a403",
    "status": "ACTIVE",
    "customer": {
-     "name": "Fulano da Silva"
+     "name": "Fulano da Silva",
      "document": "18894559890"
    },
    "additional_data": [

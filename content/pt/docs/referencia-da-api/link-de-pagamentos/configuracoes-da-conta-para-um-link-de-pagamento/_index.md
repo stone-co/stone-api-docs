@@ -25,7 +25,7 @@ Cada Conta Stone possui sua própria configuração de criação de link de paga
 
 ---
 
-```http
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/payment_links/{account_id}/config
 ```
 ---

@@ -11,7 +11,7 @@ lastmod: "2019-12-02T22:56:58.144Z"
 
 <br>
 
-```http request
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers
 ```
 ---
@@ -46,12 +46,12 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers
 
 ##### **Response**
 
-```JSON
+```json
 200 OK
 content-type: application/json
 ```
 Body
-```JSON
+```json
 {
   "cursor": {
     "after": null,

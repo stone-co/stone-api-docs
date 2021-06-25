@@ -103,7 +103,7 @@ O Fluxo de recarga se diferencia para os dois Provedores disponíveis:
 
 ##### **1) Listar todos os provedores para Meios de Transporte**
 
-```http
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/transport/providers
 ```
 
@@ -142,7 +142,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/transport/providers
 
 ##### **2) Listar todos os valores para o provedor**
 
-```http
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/transport/values/{provider-id}
 ```
 
@@ -178,7 +178,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/transport/values/{pr
 
 ##### **3) Simular uma recarga para Meios de Transporte**
 
-```http
+```
 POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/transport/dry-run
 ```
 
@@ -225,7 +225,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/transport/dry-run
 
 ##### **4) Executar uma recarga para Meios de Transporte**
 
-```http
+```
 POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/transport
 ```
 

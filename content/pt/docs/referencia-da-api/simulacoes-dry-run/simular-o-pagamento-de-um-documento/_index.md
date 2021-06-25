@@ -9,7 +9,7 @@ weight: 4
 
 ---
 
-```http
+```
 POST https://sandbox-api.openbank.stone.com.br/api/v1/dry_run/payments
 ```
 
@@ -61,12 +61,12 @@ Chave de idempotência
 
 ##### **Response**
 
-```http
+```
 200 ok
 content-type: application/json
 ```
 Body
-```JSON
+```json
 {
     "account_id": "79d8449d-94f7-454d-9a37-6f053748058f",
     "amount": 15000,

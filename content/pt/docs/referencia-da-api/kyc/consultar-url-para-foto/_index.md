@@ -16,7 +16,7 @@ Essa chamada deve ser realizada para cada foto que será enviada, por exemplo, n
 
 <br>
 
-```http request
+```
 POST https://sandbox-api.openbank.stone.com.br/api/v1/storage/{{image_name.jpg}}
 ```
 

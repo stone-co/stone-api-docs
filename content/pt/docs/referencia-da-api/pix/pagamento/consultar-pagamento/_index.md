@@ -11,7 +11,7 @@ description: >
 ---
 <br>
 
-```http
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/pix/{id}/
 ```
 <br>
@@ -47,7 +47,7 @@ Exemplo:
 
 #### **Responses**
 
-```http
+```
 200 OK
 ```
 
@@ -109,7 +109,7 @@ Os possíveis estados do pagamento retornado, que vem no campo `status` são:
 
 <br>
 
-```http
+```
 400 Bad Request
 ```
 

@@ -10,7 +10,7 @@ lastmod: "2019-04-29T20:22:41.964Z"
 ---
 <br>
 
-```http request
+```
 POST https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers/id/cancel
 ```
 ---
@@ -28,5 +28,5 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers/id/canc
 
 ##### **Response**
 
-```JSON
+```json
 204 No Content

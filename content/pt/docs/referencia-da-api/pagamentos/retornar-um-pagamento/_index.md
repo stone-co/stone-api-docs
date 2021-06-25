@@ -9,7 +9,7 @@ weight: 5
 
 ---
 
-```http 
+``` 
 GET https://sandbox-api.openbank.stone.com.br/api/v1/payments/payment_id
 ```
 ---
@@ -29,11 +29,11 @@ Identificador do pagamento.
 
 ##### **Response**
 
-```JSON
+```json
 200 OK
 ```
 Body
-```JSON
+```json
 {
     "account_id": "8cbeb3d2-750f-4b14-81a1-143ad715c273",
     "amount": 100,

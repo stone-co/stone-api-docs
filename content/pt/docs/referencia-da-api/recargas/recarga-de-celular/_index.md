@@ -73,7 +73,7 @@ A liquidação da recarga poderá ser executada em até 24 horas, porém, costum
 
 ##### **1) Listar todos os provedores para Celular**
 
-```http
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/mobile/providers/{cellphone}
 ```
 
@@ -166,7 +166,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/mobile/providers/{ce
 ##### **2) Listar todos os valores para o provedor**
 
 
-```http
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/mobile/values/{provider-id}/{cellphone}
 ```
 
@@ -218,7 +218,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/mobile/values/{provi
 
 ##### **3) Simular uma recarga de Celular**
 
-```http
+```
 POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/mobile/dry-run
 ```
 
@@ -262,7 +262,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/mobile/dry-run
 
 ##### **4) Executar uma recarga de Celular**
 
-```http
+```
 POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/mobile
 ```
 

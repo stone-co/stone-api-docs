@@ -12,7 +12,7 @@ Nossos endpoints seguem um padrão de mensagens. Toda mensagem de erro, por exem
 
 Por exemplo:
 
-```JSON
+```json
 {
     "type": "srn:error:target_account_not_found"
 }
@@ -22,7 +22,7 @@ Alguns endpoints têm uma resposta mais completa, entregando a mensagem de erro 
 
 Por exemplo:
 
-```JSON
+```json
 {
     "errors": [
         {

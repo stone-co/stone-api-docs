@@ -12,7 +12,7 @@ description: >
 ---
 <br>
 
-```http
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/institutions
 ```
 
@@ -22,14 +22,14 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/institutions
 ---
 
 
-```http
+```
 201 Created
 content-type: application/json
 ```
 <br>
 
 Body
-```JSON
+```json
 [
   {
     "ispb_code": "16501555",

@@ -10,7 +10,7 @@ description: >
 ---
 <br>
 
-```http
+```
 POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/outbound_pix_payments
 ```
 <br>
@@ -147,7 +147,7 @@ Body:
 
 ##### **Responses**
 
-```http
+```
 201 OK
 ```
 
@@ -213,11 +213,11 @@ Body:
 
 ---
 
-```JSON
+```json
 422 Unprocessable Entity
 ```
 Body
-```JSON
+```json
 {
   "type": "srn:error:key_not_found"
 }
@@ -228,7 +228,7 @@ Acontece quando a chave passada não está cadastrada no DICT.
 <br>
 
 Body
-```JSON
+```json
 {
   "type": "srn:error:target_account_not_found"
 }
@@ -240,7 +240,7 @@ Pagamentos para contas externas inexistentes podem ser criados mas falharão ap�
 <br>
 
 Body
-```JSON
+```json
 {
   "type": "srn:error:cannot_transfer_to_source_account"
 }
@@ -251,7 +251,7 @@ Acontece quando o alvo da transferência é a conta que está enviando a transfe
 <br>
 
 Body
-```JSON
+```json
 {
   "type": "srn:error:invoice_amount_differs"
 }
@@ -263,7 +263,7 @@ Acontece quando a transferência está relacionada a uma cobrança criada por um
 <br>
 
 Body
-```JSON
+```json
 {
   "type": "srn:error:invoice_expired"
 }
@@ -274,7 +274,7 @@ Acontece quando a transferência está relacionada a uma cobrança criada por um
 <br>
 
 Body
-```JSON
+```json
 {
   "type": "srn:error:invoice_paid"
 }

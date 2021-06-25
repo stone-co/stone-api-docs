@@ -10,7 +10,7 @@ lastmod: "2020-03-06T17:19:19.691Z"
 
 <br>
 
-```http request
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices/id
 ```
 <br>
@@ -26,12 +26,12 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices/id
 
 #### **Response**
 
-```JSON
+```json
 200 OK
 content-type: application/json
 ```
 Body
-```JSON
+```json
 
 {
           "account_id":"8cbeb3d2-750f-4b14-81a1-143ad715c273",

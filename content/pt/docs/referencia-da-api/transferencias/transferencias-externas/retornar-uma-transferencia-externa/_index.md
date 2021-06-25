@@ -10,7 +10,7 @@ lastmod: "2019-12-02T22:56:58.146Z"
 ---
 <br>
 
-```http request
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers/transfer_id
 ```
 ---
@@ -28,12 +28,12 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers/transfer
 
 ##### **Response**
 
-```JSON
+```json
 200 OK
 content-type: application/json
 ```
 Body
-```JSON
+```json
 {
     "amount": 100,
     "approval_expired_at": null,

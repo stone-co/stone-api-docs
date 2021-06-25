@@ -14,7 +14,7 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
 
 ##### Saldo bloqueado
 
-```JSON
+```json
 {
    "balance_blocked": {
       "account_id": "ad55491e-c3da-4111-98fb-d74f171a31be",
@@ -34,7 +34,7 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
 
 ##### Saldo desbloqueado
 
-```JSON
+```json
 {
     "balance_unblocked": {            
        "account_id":"ad55491e-c1da-4311-98fb-d74f171a31be",
@@ -54,7 +54,7 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
 
 ##### Transferência interna
 
-```JSON
+```json
 {
     "internal": {
        "account_id":"ad55491e-c1da-4111-38fb-d74f171a31be",
@@ -89,7 +89,7 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
 
 ##### Transferência externa
 
-```JSON
+```json
 {
     "external": {            
        "account_id":"ad55391e-c1da-4111-98fb-d74f171a31be",
@@ -130,7 +130,7 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
 
 ##### Devolução de transferência externa
 
-```JSON
+```json
 {
     "external_refund": {            
        "account_id":"ad55491e-c1da-4131-98fb-d74f171a31be",
@@ -168,7 +168,7 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
 
 ##### Pagamento instantâneo
 
-```JSON
+```json
 {
     "instant_payment": {
        "amount":-122,
@@ -193,7 +193,7 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
 
 ##### Liquidação de recebíveis de cartão
 
-```JSON
+```json
 {
     "card_payment": {            
        "account_id":"ad55491e-c1da-4113-98fb-d74f171a31be",
@@ -216,7 +216,7 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
 
 ##### Pagamento de boleto
 
-```JSON
+```json
 {
     "payment": {
         "account_id":"ad55491e-c1da-4111-98fb-d74f131a31be",
@@ -268,7 +268,7 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
 
 ##### Devolução de pagamento
 
-```JSON
+```json
 {
     "payment_refund": {            
        "account_id":"ad55491e-c1da-4111-98fb-d74f131a31be",
@@ -319,7 +319,7 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
 
 ##### Empréstimos
 
-```JSON
+```json
 {
     "loan_payments": {
        "account_id":"477f8576-ca82-432b-be73-dc28cc6490c3",
@@ -372,7 +372,7 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
 
 ##### Folha de Pagamento
 
-```JSON
+```json
 {
     "payroll": {            
        "account_id":"ad55491e-c1da-4111-93fb-d74f171a31be",
@@ -391,7 +391,7 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
 
 ##### Compra feita com Cartão Stone
 
-```JSON
+```json
 {    
     "outbound_stone_prepaid_card_payment": {            
        "account_id":"ad55491e-c1da-4111-93fb-d74f171a31be",
@@ -436,7 +436,7 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
 
 ##### Devolução de compra feita com Cartão Stone
 
-```JSON
+```json
 {
     "outbound_stone_prepaid_card_payment_refund": {
        "account_id":"ad55491e-c1da-4111-93fb-d74f171a31be",
@@ -481,7 +481,7 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
 
 ##### Chargeback de uma compra feita com Cartão Stone
 
-```JSON
+```json
 {
     "outbound_stone_prepaid_card_payment_chargeback": {            
         "account_id":"ad55491e-c1da-4111-98fb-d34f171a31be",
@@ -534,7 +534,7 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
 
 ##### Saque com Cartão Stone feito no Banco24Horas
 
-```JSON
+```json
 {
     "outbound_stone_prepaid_card_withdrawal": {
        "account_id":"ad55491e-c1da-4131-98fb-d74f171a31be",
@@ -579,7 +579,7 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
 
 ##### Devolução de Saque feito no Banco24Horas
 
-```JSON
+```json
 {
     "outbound_stone_prepaid_card_withdrawal_refund": {            
         "account_id":"ad55491e-c1da-4111-38fb-d74f171a31be",
@@ -624,7 +624,7 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
 
 ##### Recebimento de salário
 
-```JSON
+```json
 {
     "salary": {
        "account_id":"ad55391e-c1da-4111-98fb-d74f171a31be",
@@ -655,7 +655,7 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
 
 ##### Portabilidade de salário
 
-```JSON
+```json
 {
     "salary_portability": {            
        "account_id":"ad55431e-c1da-4111-98fb-d74f171a31be" 
@@ -680,7 +680,7 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
 
 ##### Devolução de salário pela intituição de portabilidade
 
-```JSON
+```json
 {
     "salary_portability_refund": {
        "account_id":"477f8576-ca83-462b-be73-dc28cc6490c3",
@@ -708,7 +708,7 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
 
 ##### Devolução de salário pela intituição de portabilidade (Em casos de cancelamento)
 
-```JSON
+```json
 {
     "salary_portability_employer_refund": {            
         "amount":-200,
