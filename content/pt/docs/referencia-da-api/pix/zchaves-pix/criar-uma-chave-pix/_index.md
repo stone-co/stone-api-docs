@@ -13,18 +13,18 @@ Esse médodo deve ser usado quando o dado a ser usado como identificador da Chav
 
 ##### **Request**
 
-```http request
+```http
 POST /api/v1/pix/:account_id/entries
 content-type: application/json
 ```
 Body
-```text
+```json
 {
-  "key": “+5510998765432”, 
-  "key_type": “phone”, 
-  "participant_ispb": “1234567890”,
+  "key": "+5510998765432", 
+  "key_type": "phone", 
+  "participant_ispb": "1234567890",
   "beneficiary_account": {
-     "branch_code": “0001”,
+     "branch_code": "0001",
      "account_code": "00016583",
      "account_type": "CC",
      "created_at": "2019-11-18T03:00:00Z"
@@ -32,7 +32,7 @@ Body
   "beneficiary_entity": {
      "name":"Maria Clara Gomes",
      "document_type": "cpf",
-     "document": “13152256685”
+     "document": "13152256685"
   }
 }
 ```
@@ -40,16 +40,36 @@ Body
 
 ##### **Response**
 
-```http request
+```http
 202 ACCEPTED
 content-type: application/json
 ```
 Body
-```text
+```json
 {
-  "id": “cee2f003-95a0-433f-a785-b933a5832531”
+  "id": "cee2f003-95a0-433f-a785-b933a5832531"
 }
 ```
+
+---
+
+```http
+400 BAD REQUEST
+```
+
+---
+
+```http
+422 DOMAIN ERROR
+```
+
+Body
+```json
+{
+  "type": "srn:error:already_exists"
+}
+```
+Acontece quando a chave já foi criada
 <br> <br> 
 
 
