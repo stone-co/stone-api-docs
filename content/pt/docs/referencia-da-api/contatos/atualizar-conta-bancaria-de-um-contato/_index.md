@@ -3,7 +3,7 @@ title: "Atualizar Conta Bancária de Um Contato"
 slug: "atualizar-conta-bancária-de-um-contato"
 hidden: false
 date: 2019-04-01T20:12:36.094Z
-lastmod: 2019-12-02T22:56:58.190Z
+lastmod: 2021-06-25T20:01:46.027Z
 weight: 8
 ---
 
@@ -47,6 +47,11 @@ Número da conta bancária.
 
 ---
 
+**account_type**  `string`
+
+Tipo da conta bancária.
+
+---
 **branch_code**  `string`
 
 Número da agência bancária.
@@ -59,6 +64,11 @@ Número da instituição.
 
 ---
 
+**pix_key**  `string`
+
+Chave Pix do contato.
+
+---
 #### **HEADERS**
 
 ---
@@ -83,6 +93,8 @@ Body
   "id": "e43e3003-c587-4cb8-ab37-b374fe0d157f",
   "branch_code": "1234",
   "institution_code": "197",
-  "account_code": "4567864"
+  "account_code": "4567864",
+  "account_type": "PG",
+  "pix_key": null
 }
 ```

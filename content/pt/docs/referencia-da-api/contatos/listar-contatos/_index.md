@@ -3,7 +3,7 @@ title: "Listar Contatos"
 slug: "listar-contatos"
 hidden: false
 date: 2019-04-01T20:03:25.687Z
-lastmod: 2019-12-02T22:56:58.181Z
+lastmod: 2021-06-25T20:01:46.027Z
 weight: 3
 ---
 
@@ -41,6 +41,9 @@ Filtra contatos pelo código da conta fornecido.
 
 Filtra contatos pelo código da instituição fornecido.
 
+**pix_key**  `string`
+
+Filtra contatos pela chave Pix fornecida.
 ---
 
 #### **Response**
@@ -56,9 +59,11 @@ Body
     "bank_accounts": [
       {
         "account_code": "35746698",
+        "account_type": "PG",
         "branch_code": "00001",
         "id": "1ede2f26-28cd-462b-a7ea-429960c8480b",
-        "institution_code": "197"
+        "institution_code": "197",
+        "pix_key": null
       }
     ],
     "email": "contactemail@empresaxyz.com",
@@ -71,9 +76,19 @@ Body
     "bank_accounts": [
       {
         "account_code": "883841975",
+        "account_type": "PG",
         "branch_code": "0001",
         "id": "5b332a1b-57ef-4398-bb9c-79011cc6c58e",
-        "institution_code": "197"
+        "institution_code": "197",
+        "pix_key": null
+      },
+      {
+        "account_code": null,
+        "account_type": null,
+        "branch_code": null,
+        "id": "779351b1-4827-4498-9516-c7871254d514",
+        "institution_code": null,
+        "pix_key": "345b96ef-9c35-46bc-aab1-c38740c205e2"
       }
     ],
     "email": "tyson@huber.com",
