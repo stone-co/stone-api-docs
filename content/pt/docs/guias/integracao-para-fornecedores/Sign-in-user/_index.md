@@ -70,7 +70,7 @@ Você pode seguir o guia descrito [clicando aqui](/docs/guias/integracao/autenti
 **Atenção!**
 Os campos (assertion+assertion_response) e (challenge_id + challenge_response) são mutualmente exclusivos, apenas a presença de um dos pares é aceita.
 
-Para criar o JWE, basta obter as chaves no endpoint /api/v1/discovery/keys, e usar a que possuir a propriedade “use” com valor “enc”. Veja mais [aqui](/docs/guias/integracao-para-fornecedores/sign-in-user/#como-gerar-um-jwe)
+Para criar o JWE, basta obter as chaves no endpoint /api/v1/discovery/keys, e usar a que possuir a propriedade "use" com valor "enc". Veja mais [aqui](/docs/guias/integracao-para-fornecedores/sign-in-user/#como-gerar-um-jwe)
 {{% /pageinfo %}}
 
 <br>
@@ -206,7 +206,7 @@ Para gerar um token JWE (JWT criptografado) seguimos 3 passos:
 
 1) Escrever o conteúdo a ser criptografado (payload). 
 
-2) Buscar a chave pública da Stone, no endpoint /api/v1/discovery/keys, cujo campo “use” seja igual a “enc”;
+2) Buscar a chave pública da Stone, no endpoint /api/v1/discovery/keys, cujo campo "use" seja igual a "enc";
 
 3) Usar uma biblioteca de criptografia passando o payload, a chave pública e o algoritmo utilizado, no caso, RSA-OAEP-256
 
@@ -312,7 +312,7 @@ Segue exemplo de um fluxo de autorização incluindo o challenge:
 ---
 <br>
 
-Caso haja algum “problema” durante o processo de signin, é importante checar o campo `"type"` retornado no response body. 
+Caso haja algum "problema" durante o processo de signin, é importante checar o campo `"type"` retornado no response body. 
 
 Abaixo estão listados os types e o que cada um significa.
 

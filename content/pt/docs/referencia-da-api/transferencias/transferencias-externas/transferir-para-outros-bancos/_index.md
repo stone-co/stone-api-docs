@@ -113,17 +113,17 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers
 {{% pageinfo %}}
 **Request Body**<br>
 O corpo da requisição deve conter todos os dados da transferência.<br>
-Observe que os "0"s que prefixam o `account_code` são removidos. Por exemplo, “00012345” é armazenado como “12345” e vai ser retornado assim nas APIs de consulta.<br>
+Observe que os "0"s que prefixam o `account_code` são removidos. Por exemplo, "00012345" é armazenado como "12345" e vai ser retornado assim nas APIs de consulta.<br>
 Essa transformação é aplicada pela API antes dos dados serem armazenados.
 {{% /pageinfo %}}
 {{% pageinfo %}}
 **Tipos de conta ( target.account.account_type )**
 <br>Através deste campo, é possível enviar o tipo de conta destino. Os valores aceitos são:
-<br>“CC” - Conta Corrente
-<br>“CD” - Conta de Depósito
-<br>“CG” - Conta garantida
-<br>“PG” - Conta de Pagamento
-<br>“PP” - Poupança
+<br>"CC" - Conta Corrente
+<br>"CD" - Conta de Depósito
+<br>"CG" - Conta garantida
+<br>"PG" - Conta de Pagamento
+<br>"PP" - Poupança
 <br><br>Este campo possui regras especiais para utilização:
 <br>Se o tipo de conta for PG, a agência (branch_code) é removida.
 <br>Se o tipo de conta for CC ou nulo, mas o número da conta (account_code) possuir mais de 13 dígitos, o tipo de conta é convertido para PG e a agência (branch_code) é removida.
