@@ -1,8 +1,8 @@
 ---
 title: "Criar um pagamento pendente"
 linkTitle: "Criar um pagamento pendente"
-date: "2021-04-01T18:00:00-03:00"
-lastmod: "2021-04-01T18:00:00-03:00"
+date: 2021-04-01T18:00:00-03:00
+lastmod: 2021-06-25T14:28:33-03:00
 weight: 2
 draft: false
 description: >

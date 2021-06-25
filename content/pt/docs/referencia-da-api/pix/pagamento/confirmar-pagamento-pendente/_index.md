@@ -1,7 +1,7 @@
 ---
 title: "Confirmar um pagamento pendente"
 linkTitle: "Confirmar um pagamento pendente"
-lastmod: 2021-04-01T18:00:00-03:00
+lastmod: 2021-06-25T14:28:33-03:00
 weight: 3
 draft: false
 description: >
