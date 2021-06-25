@@ -9,7 +9,7 @@ lastmod: "2019-12-02T22:56:58.139Z"
 ---
 <br>
 
-```http request
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers/transfer_id
 ```
 <br>
@@ -26,12 +26,12 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers/transfer
 
 ##### **Response**
 
-```JSON
+```json
 200 OK
 content-type: application/json
 ```
 Body
-```JSON
+```json
 {
     "amount": 100,
     "approval_expired_at": null,

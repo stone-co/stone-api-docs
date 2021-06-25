@@ -33,7 +33,7 @@ lastmod: "2020-12-21T20:31:32.971Z"
 
 <br>
 
-```http request
+```
 POST https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
 ```
 <br>
@@ -154,12 +154,12 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
 
 #### **Responses**
 
-```JSON
+```json
 200 OK
 content-type: application/json
 ```
 Body
-```JSON
+```json
 
 {
 	"account_id": "ec363b21-113f-44e9-8cc3-dfcdb3cc2dc3",
@@ -225,11 +225,11 @@ Body
 <br>
 
 
-```JSON
+```json
 201 Created
 ```
 Body
-```JSON
+```json
 {
   "account_id": "ec363b21-113f-44e9-8cc3-dfcdb3cc2dc3",
   "amount": 2100,
@@ -293,11 +293,11 @@ Body
 ```
 <br>
 
-```JSON
+```json
 400 Bad Request
 ```
 Body
-```JSON
+```json
 {
   "reason": [
     {
@@ -320,44 +320,44 @@ Body
 ```
 <br>
 
-```JSON
+```json
 401 Unauthorized
 ```
 Body
-```JSON
+```json
 {
   "type": "srn:error:unauthenticated"
 }
 ```
 <br>
 
-```JSON
+```json
 403 Forbidden
 ```
 Body
-```JSON
+```json
 {
   "type": "srn:error:unauthorized"
 }
 ```
 <br>
 
-```JSON
+```json
 409 Conflict
 ```
 Body
-```JSON
+```json
 {
   "type": "srn:error:conflict"
 }
 ```
 <br>
 
-```JSON
+```json
 422 Unprocessable Entity
 ```
 Body
-```JSON
+```json
 {
   "reason": "barcode_payment_invoice_bill_of_exchange is not ena bled on this account",
   "type": "srn:error:product_not_enabled"

@@ -29,7 +29,7 @@ Exemplo de cabeçalho de uma chamada autenticada:
 
 #### Header
 
-```http
+```
 GET /api/v1/accounts HTTP/1.1
 Host: sandbox-api.openbank.stone.com.br
 User-Agent: Nome da aplicação

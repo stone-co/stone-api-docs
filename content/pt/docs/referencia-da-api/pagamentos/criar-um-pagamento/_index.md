@@ -38,7 +38,7 @@ A criação e o agendamento de pagamentos pode acontecer em qualquer dia (inclui
 ---
 
 
-```http 
+``` 
 POST https://sandbox-api.openbank.stone.com.br/api/v1/payments
 ```
 
@@ -90,11 +90,11 @@ Chave de idempotencia.
 
 ##### **Response**
 
-```JSON
+```json
 202 Accepted 
 ```
 Body
-```JSON
+```json
 {
     "account_id": "8cbeb3d2-750f-4b14-81a1-143ad715c273",
     "amount": 100,

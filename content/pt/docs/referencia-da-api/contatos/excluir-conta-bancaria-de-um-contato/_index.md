@@ -7,7 +7,7 @@ lastmod: 2019-12-02T22:56:58.192Z
 weight: 9
 ---
 
-```http
+```
 DELETE https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contacts/contact_id/bank_accounts/bank_account_id
 ```
 
@@ -39,6 +39,6 @@ Identificador da conta bancária do contato.
 
 #### **Response**
 
-```http
+```
 200 OK
 ```

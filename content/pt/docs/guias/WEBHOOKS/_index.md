@@ -195,7 +195,7 @@ A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) s
 
 
 
-```JSON
+```json
 x-stone-webhook-event-id: "930bbd6d-0c7a-4fe4-8b50-4b82a20cb847"
 x-stone-webhook-event-type: "cash_out_internal_transfer"
 ```
@@ -238,7 +238,7 @@ A implementação não deve ser strict no parser do payload. Ao longo do tempo o
 Exemplo:
 
 
-```JSON
+```json
 {
    "env":"sandbox",
    "event_type":"cash_in_internal_transfer",
@@ -316,7 +316,7 @@ Para poder visualizar o conteúdo de um webhook é necessário fazer o caminho i
 O webhook irá chegar com um payload parecido com esse:
 
 
-```JSON
+```json
 {
   "encrypted_body": "xxxxxxxxxxxxxx conteúdo cifrado"
 }
@@ -422,13 +422,13 @@ Caso tenha dificuldade para identificar algum webhook enviado pela Stone na URI 
 
 Para acessar, basta fazer o comando abaixo, lembrando que no _header_ deve ser enviado o Bearer token no campo `authorization` e o client_id é o id da sua aplicação, passado pelo time de integração.
 
-```html
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/applications/application:{{client_id}}/webhooks
 ```
 
 **Exemplo de Response**
 
-```JSON
+```json
     {
         "client_id": "application:de4d224b-3f79-4b4d-8ff5-c1bc475830e5",
         "created_at": "2021-06-02T19:40:24Z",

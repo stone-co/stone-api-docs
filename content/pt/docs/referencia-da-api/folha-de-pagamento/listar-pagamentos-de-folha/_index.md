@@ -8,7 +8,7 @@ lastmod: "2019-09-16T19:01:55.439Z"
 ---
 ---
 
-```http 
+``` 
 GET https://sandbox-api.openbank.stone.com.br/api/v1/payrolls
 ```
 ---
@@ -30,12 +30,12 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/payrolls
 
 #### **Response**
 
-```JSON
+```json
 200 OK
 content-type: application/json
 ```
 Body
-```JSON
+```json
 {
   "cursor": {
     "after": null,

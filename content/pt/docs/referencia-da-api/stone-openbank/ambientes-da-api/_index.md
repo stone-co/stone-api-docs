@@ -20,7 +20,7 @@ Usuárias criadas em ambiente de Sandbox não existem em Produção, e vice-vers
 
 É destinado à testes e pode ser acessado pelo endpoint:
 
-```http request
+```
 https://sandbox-api.openbank.stone.com.br.
 ```
 <br>
@@ -28,6 +28,6 @@ https://sandbox-api.openbank.stone.com.br.
 ### Ambiente de Produção
 
 É onde ocorrem transações em contas reais e pode ser acessado pelo endpoint:
-```http request
+```
 https://api.openbank.stone.com.br.
 ```

@@ -92,11 +92,11 @@ Exemplo:
 ##### **Response**
 ---
 
-```JSON
+```json
 200 OK
 ```
 
-```JSON
+```json
     {
       "calendario": {
         "criacao": "2021-03-19T22:04:24.209571Z",

@@ -8,7 +8,7 @@ weight: 7
 ---
 
 
-```http
+```
 POST https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contacts/contact_id/bank_accounts
 ```
 
@@ -81,12 +81,12 @@ Chave de idempotência.
 
 #### **Response**
 
-```http
+```
 200 OK
 content-type: application/json
 ```
 Body
-```JSON
+```json
 {
   "account_code": "4567864",
   "account_type": "PG",

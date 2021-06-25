@@ -24,7 +24,7 @@ No corpo da requisição deve ser sinalizada a alteração de status para _**can
 
 ---
 
-```http
+```
 PATCH https://sandbox-api.openbank.stone.com.br/api/v1/payment_links/orders/{order_id}/closed
 ```
 ---

@@ -10,20 +10,22 @@ description: >
 ---
 
 ##### **Request**
-```http request
+```
 DELETE /api/v1/pix_payment_invoices/:id
 ```
 
 ##### **Response**
 Cobrança cancelada com sucesso
-```text
+```
 204 NO CONTENT
 ```
 
 PIX Já foi pago e não pode ser mais cancelado
 ```text
-422
+422 DOMAIN ERROR
+```
 
+```json
 {
   "type": "srn:error:already_paid"
 }

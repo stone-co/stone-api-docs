@@ -8,7 +8,7 @@ lastmod: "2019-12-02T22:56:58.168Z"
 ---
 ---
 
-```http 
+```
 POST https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers/external_transfer_id/approve
 ```
 ---
@@ -24,5 +24,6 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers/externa
 
 #### **Response**
 
-```JSON
+```
 204 No Content
+```

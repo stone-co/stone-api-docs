@@ -31,7 +31,7 @@ A criação e o agendamento de transferências internas pode acontecer em qualqu
 
 
 ---
-```http request
+```
 POST https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers
 ```
 ---
@@ -98,12 +98,12 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers
 
 ##### **Response**
 
-```JSON
+```json
 202 Accepted
 content-type: application/json
 ```
 Body
-```JSON
+```json
 
 {
     "amount": 100,

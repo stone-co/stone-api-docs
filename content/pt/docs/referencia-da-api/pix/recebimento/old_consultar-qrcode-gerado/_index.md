@@ -10,14 +10,16 @@ description: >
 ---
 
 ##### **Request**
-```http request
+```
 GET /api/v1/pix_payment_invoices/:id
 ```
 
 ##### **Response**
-```text
+```
 200 OK
+```
 
+```json
 {
    "id": "54071fc2-8068-4b26-bed7-be112228ed98",
    "account_id": "fa7da52c-784d-4bd1-a3cb-db98bda9222d",
