@@ -66,7 +66,7 @@ Para gerar um token JWE (JWT criptografado) seguimos 3 passos:
 
 1) Escrever o conteúdo a ser criptografado (payload). 
 
-2) Buscar a chave pública da Stone, no endpoint /api/v1/discovery/keys, cujo campo “use” seja igual a “enc”;
+2) Buscar a chave pública da Stone, no endpoint /api/v1/discovery/keys, cujo campo "use" seja igual a "enc";
 
 3) Usar uma biblioteca de criptografia passando o payload, a chave pública e o algoritmo utilizado, no caso, RSA-OAEP-256
 

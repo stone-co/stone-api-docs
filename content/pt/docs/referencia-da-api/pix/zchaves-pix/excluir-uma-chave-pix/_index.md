@@ -31,7 +31,7 @@ Body
      "account_type": "CC",
      "opened_at": "2019-11-18T03:00:00Z"
   },
-  "reason": "user_requested”
+  "reason": "user_requested"
 }
 ```
 <br> <br> 
