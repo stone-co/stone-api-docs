@@ -9,7 +9,7 @@ weight: 8
 
 ---
 
-```http
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/statement
 ```
 
@@ -92,7 +92,7 @@ O extrato é dividido por tipos de movimentação. É possível consultar qual f
 ##### Response
 ---
 
-```http
+```
 201 Created
 content-type: application/json
 ```
@@ -102,7 +102,7 @@ content-type: application/json
 
 ---
 
-```JSON
+```json
 {
     "cursor": {
         "after": null,

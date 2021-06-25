@@ -17,16 +17,16 @@ No caso de PSPs diretos e indiretos existem situações em que é necessária a 
 
 ##### **Request**
 
-```http request
+```
 DELETE /api/v1/pix/:account_id/entries/:id
 ```
 Body
-```text
+```json
 {
-  "key_type": “phone”,
-  "participant_ispb": “1234567890”,
+  "key_type": "phone",
+  "participant_ispb": "1234567890",
   "beneficiary_account": {
-     "branch_code": “0001”,
+     "branch_code": "0001",
      "account_code": "00016583",
      "account_type": "CC",
      "opened_at": "2019-11-18T03:00:00Z"
@@ -38,14 +38,14 @@ Body
 
 ##### **Response**
 
-```http request
+```
 202 ACCEPTED
 content-type: application/json
 ```
 Body
-```text
+```json
 {
-  "id": “4b612bce-f964-11ea-adc1-0242ac120002”
+  "id": "4b612bce-f964-11ea-adc1-0242ac120002"
 }
 ```
 <br> <br> 
@@ -56,16 +56,16 @@ Serão disparados webhooks quando o status da solicitação sofrer alterações.
 
 As seguintes informações virão no campo `target_data`.
 
-```text
+```json
 {
-  "id": “4b612bce-f964-11ea-adc1-0242ac120002”
-  “key”: “+5510998765432”,
-  “key_type”: "phone"
-  “key_status”: “deleted”,
-  “beneficiary_id”: “bad7ab7e-f95d-11ea-adc1-0242ac120002”,
-   "created_at": “20200- 09-18T03:00:00Z”,
-   "error_description": “”,
-   "status": “accepted"
+  "id": "4b612bce-f964-11ea-adc1-0242ac120002",
+  "key": "+5510998765432",
+  "key_type": "phone",
+  "key_status": "deleted",
+  "beneficiary_id": "bad7ab7e-f95d-11ea-adc1-0242ac120002",
+   "created_at": "20200- 09-18T03:00:00Z",
+   "error_description": "",
+   "status": "accepted"
 }
 ```
 <br> <br> 

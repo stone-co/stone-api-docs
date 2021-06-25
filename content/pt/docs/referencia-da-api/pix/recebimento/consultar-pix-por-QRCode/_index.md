@@ -11,7 +11,7 @@ description: >
 Através desse endpoint será possível consultar QRCodes com vencimento e valores monetários calculados. Segue padrões definidos pelo BACEN.
 
 
-```http request
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/pix/{{id}}
 ```
 <br>
@@ -52,11 +52,11 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/pix/{{id}}
 ##### **Response**
 ---
 
-```JSON
+```json
 200 OK
 ```
 
-```JSON
+```json
 {
   "calendario": {
     "apresentacao": "2021-03-26T20:35:33Z",
@@ -98,11 +98,11 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/pix/{{id}}
 
 ---
 
-```JSON
+```json
 400 Bad Request
 ```
 
-```JSON
+```json
 {
   "type": "https://pix.bcb.gov.br/api/v2/error/PixConsultaInvalida",
   "title": "Consulta Pix Inválida",
@@ -113,11 +113,11 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/pix/{{id}}
 
 ---
 
-```JSON
+```json
 404 Not found
 ```
 
-```JSON
+```json
 {
   "type": "https://pix.bcb.gov.br/api/v2/error/PixNaoEncontrado",
   "title": "Não Encontrado",

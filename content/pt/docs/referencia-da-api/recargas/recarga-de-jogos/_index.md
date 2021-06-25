@@ -71,7 +71,7 @@ A liquidação é executada no provedor em questões de segundos. O resgate dos 
 
 ##### **1) Listar todos os provedores de Jogos**
 
-```http
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/games/providers
 ```
 
@@ -126,7 +126,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/games/providers
 
 ##### **2) Listar todos os valores para o provedor**
 
-```http
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/games/values/{provider-id}
 ```
 
@@ -186,7 +186,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/games/values/{provid
 
 ##### **3) Simular uma recarga de Jogos**
 
-```http
+```
 POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/games/dry-run
 ```
 
@@ -228,7 +228,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/games/dry-run
 
 ##### **4) Executar uma recarga de Jogos**
 
-```http
+```
 POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/games
 ```
 ###### **Header request**

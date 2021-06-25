@@ -8,7 +8,7 @@ weight: 4
 ---
 ---
 
-```http 
+``` 
 GET https://sandbox-api.openbank.stone.com.br/api/v1/payments
 ```
 ---
@@ -53,11 +53,11 @@ Limit de itens retornados.
 
 ##### **Response**
 
-```JSON
+```json
 200 OK 
 ```
 Body
-```JSON
+```json
 {
     "cursor": {
         "after": null,

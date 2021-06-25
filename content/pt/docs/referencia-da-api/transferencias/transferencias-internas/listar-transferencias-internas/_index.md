@@ -7,7 +7,7 @@ date: "2019-04-01T19:21:13.323Z"
 lastmod: "2019-12-02T22:56:58.137Z"
 ---
 ---
-```http request
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers
 ```
 ---
@@ -48,12 +48,12 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers
 
 ##### **Response**
 
-```JSON
+```json
 200 OK
 content-type: application/json
 ```
 Body
-```JSON
+```json
 {
     "cursor": {
         "after": null,

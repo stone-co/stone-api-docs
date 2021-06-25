@@ -13,7 +13,7 @@ Esse médodo deve ser usado quando o dado a ser usado como identificador da Chav
 
 ##### **Request**
 
-```http
+```
 POST /api/v1/pix/:account_id/entries
 content-type: application/json
 ```
@@ -40,7 +40,7 @@ Body
 
 ##### **Response**
 
-```http
+```
 202 ACCEPTED
 content-type: application/json
 ```
@@ -53,13 +53,13 @@ Body
 
 ---
 
-```http
+```
 400 BAD REQUEST
 ```
 
 ---
 
-```http
+```
 422 DOMAIN ERROR
 ```
 
@@ -79,13 +79,13 @@ Serão disparados webhooks quando o status da solicitação sofrer alterações.
 
 As seguintes informações virão no campo `target_data`.
 
-```text
+```json
 {
   "id": "cee2f003-95a0-433f-a785-b933a5832531",
   "request_id": uuid(),
   "key": "+5510998765432",
   "key_type": "phone",
-  "key_status": "active”,
+  "key_status": "active",
   "beneficiary_id": "bad7ab7e-f95d-11ea-adc1-0242ac120002",
   "created_at": "20200-09-18T03:00:00Z",
   "error_description": "",

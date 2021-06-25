@@ -41,7 +41,7 @@ Para montar os tokens, tenha em mãos o seu `redirect_uri` cadastrado, o seu Cli
 
 Aqui vamos importar as bibliotecas que vamos utilizar e definir algumas constantes.
 
-```JSON
+```python
 import jwt
 import time
 import requests
@@ -61,7 +61,7 @@ Armazenamos a chave privada no arquivo `private.pem` e preparamos uma função p
 Lembrando que se trata de um processo de criptografia assimétrica. Neste processo, o desenvolvedor assina o token com sua chave privada e a Stone utiliza a chave pública compartilhada com a gente para verificar que realmente foi a aplicação parceira quem gerou o token.
 
 
-```JSON
+```python
 def generate_token(claims):
     with open("private.pem", "r") as key_file:
         token = jwt.encode(claims, key_file.read(), algorithm='RS256')
@@ -74,7 +74,7 @@ Agora podemos assinar qualquer conjunto de claims e o resultado será um JWT.
 É possível utilizar claims arbitrários para testar essa funcionalidade:
 
 
-```JSON
+```python
 >>> generate_token({"claim": "qualquer"})
 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJjbGFpbSI6InF1YWxxdWVyIn0.hUGnpB5pI38TbQy8XDjXMmFTLWvYjk98UaTELfkJmHU0EK9-ZOTzSSNKdqOB0puGHr2xMRXta6WZLQmkRqJCVHSA6zsIdW0ABJiPaHXVOHFidq7iGZAbZtgHBf6b3ctko7OGxfLDJGedH3gYVh9i_tJ3S0kWpvLS7yMqNgwyHI4ZJecmL-qYD30FgrhGqyMK3LCxId7O_T6_QOisaLe_XXstXUnm82qvDh7iMZPqhV39V_CxnLl6CVZp2IfdQ3i8LAmtqaxhYSTODwBj47zOm_4bhfOcMO91LxY3wWW8fU7Qr8hyiUHqayBTiLRYqEGet_esQ_rrVFOn0F3tU0eWSA'
 ```
@@ -103,7 +103,7 @@ Esse token será enviado para a Stone através de uma chamada para nosso servido
 O `access_token` também é do tipo JWT, e funciona como uma chave de acesso para todas requisições na API.
 
 
-```JSON
+```python
 def auth_claims():
     now = int(time.time())
     return {
@@ -159,7 +159,7 @@ Resumindo o passo a passo para obter o link do consentimento, é preciso:
 3. Montar o link.
 
 
-```JSON
+```python
 def consent_claims():
     now = int(time.time())
     return {
@@ -209,7 +209,7 @@ Para isso, é preciso apenas consultar o endpoint [Consultar Todas Contas às Qu
 Outra forma de acessar esse endpoint é realizando uma chamada para nossa API, enviando seu `access_token` em um header. Abaixo podemos observar isso em um exemplo de função que poderia ser utilizada para realizar essa consulta.
 
 
-```JSON
+```python
 def operational_accounts(access_token, pagination_params={}):
     url = f"{API_URL}/accounts"
     params = {"paginate": "true", **pagination_params}
@@ -254,7 +254,7 @@ Assim como no caso anterior e de forma padrão para nossos endpoints, para acess
 O exemplo a seguir foi construído considerando uma aplicação com acesso a pelo menos duas contas, e que a primeira conta tem saldo suficiente para a transferência.
 
 
-```JSON
+```python
 def internal_transfer(token, params):
     url = f'{API_URL}/internal_transfers'
 
@@ -288,7 +288,7 @@ Ocorrendo tudo bem, você receberá como retorno as informações da transferên
 
 {{< alert title="Success" >}}
 
-```JSON
+```json
 {
   "amount": 1000,
   "approval_expired_at": null,
@@ -326,7 +326,7 @@ Ocorrendo tudo bem, você receberá como retorno as informações da transferên
 
 {{< alert title="Failure" >}}
 
-```JSON
+```json
 {"type": "srn:error:not_enough_funds"}
 ```
 {{< /alert >}}

@@ -7,7 +7,7 @@ lastmod: 2019-12-02T22:56:58.183Z
 weight: 4
 ---
 
-```http
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contacts/contact_id
 ```
 
@@ -33,12 +33,12 @@ Identificador do contato.
 
 #### **Response**
 
-```http
+```
 200 ok
 content-type: application/json
 ```
 Body
-```JSON
+```json
 {
   "bank_accounts": [
     {

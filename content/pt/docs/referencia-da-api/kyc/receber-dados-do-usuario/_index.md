@@ -10,7 +10,7 @@ draft: true
 Nesse endpoint serão solicitados os dados do usuário necessários para realização do envio dos mesmos para início da análise do KYC.
 
 
-```http request
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/screens/home/web
 ```
 <br>

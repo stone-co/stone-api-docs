@@ -11,7 +11,7 @@ description: >
 Através desse endpoint será possível criar cobranças Pix com vencimento.
 
 
-```http request
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/pix_payment_invoices_with_due_date
 ```
 <br>
@@ -105,7 +105,7 @@ Representação de porcentagem, dada a seguinte fórmula: `coefficient * 10^expo
 
 Exemplo:
 
-```JSON
+```json
 {
   "type": "object",
   "properties": {
@@ -378,11 +378,11 @@ Exemplo:
 ##### **Response**
 ---
 
-```JSON
+```json
 200 OK
 ```
 
-```JSON
+```json
 {
   "account_id": "477f8576-ca82-462b-be73-dc28cc6490c3",
   "additional_data": [
@@ -442,11 +442,11 @@ Exemplo:
 
 ---
 
-```JSON
+```json
 400 Bad Request
 ```
 
-```JSON
+```json
 {
   "reason": [
     {
@@ -468,11 +468,11 @@ Exemplo:
 
 ---
 
-```JSON
+```json
 401 Unauthorized
 ```
 
-```JSON
+```json
 {
   "type": "srn:error:unauthorized"
 }
@@ -480,11 +480,11 @@ Exemplo:
 
 ---
 
-```JSON
+```json
 403 Forbidden
 ```
 
-```JSON
+```json
 {
   "type": "srn:error:unauthenticated"
 }
@@ -492,11 +492,11 @@ Exemplo:
 
 ---
 
-```JSON
+```json
 409 Conflict
 ```
 
-```JSON
+```json
 {
   "type": "srn:error:idempotency_conflict"
 }
@@ -504,11 +504,11 @@ Exemplo:
 
 ---
 
-```JSON
+```json
 422 Unprocessable
 ```
 
-```JSON
+```json
 {
   "reason": [
     {

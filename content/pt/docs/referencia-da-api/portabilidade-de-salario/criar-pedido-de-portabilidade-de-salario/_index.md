@@ -14,7 +14,7 @@ description: >
 ---
 
 
-```http 
+``` 
 POST https://sandbox-api.openbank.stone.com.br/api/v1/salary_portabilities
 ```
 ---
@@ -53,11 +53,11 @@ ISPB ou código da instituição.
 
 #### **Response**
 
-```JSON
+```json
 201 Created 
 ```
 Body
-```JSON
+```json
 {
   "id": "51e761be-9038-4ba4-89e7-d07276b83e3f",
   "created_by": "user:51e761be-9038-4ba4-89e7-d07276b83e3f",
@@ -76,11 +76,11 @@ Body
 
 ---
 
-```JSON
+```json
 400 Bad Request 
 ```
 
-```JSON
+```json
 {
     "reason": [
         {
@@ -109,11 +109,11 @@ Body
 ---
 
 
-```JSON
+```json
 403 Forbidden 
 ```
 
-```JSON
+```json
 {
     "challenge": null,
     "details": {

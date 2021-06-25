@@ -18,7 +18,7 @@ Para todos os endpoints, o formato esperado para o `content_type` é sempre `app
 Abaixo temos um exemplo de uma requisição válida para a API em Sandbox, utilizando a ferramenta `curl`:
 
 
-```JSON
+```json
 curl --request GET \ 
   
   --url https://sandbox-api.openbank.stone.com.br/api/v1/institutions/197
@@ -27,7 +27,7 @@ curl --request GET \
 
 O retorno das chamadas na API será, por padrão, um objeto do tipo JSON. A chamada anterior tem a seguinte resposta:
 
-```JSON
+```json
 {
   "ispb_code":"16501555",
   "name":"Stone Pagamentos S.A.",
@@ -40,7 +40,7 @@ O retorno das chamadas na API será, por padrão, um objeto do tipo JSON. A cham
 A chamada abaixo é usada para enviar uma TED. Nesse caso, adicionamos como _headers_ o tipo de conteúdo como sendo `application/json` e a autenticação via `Bearer token`, como discutida na sessão de autenticação. 
 
 
-```JSON
+```json
 curl --request POST \
   
   --url https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers \
@@ -51,7 +51,7 @@ curl --request POST \
 
 Essas requisições geram respostas, conforme podemos ver abaixo:
 
-```JSON
+```json
 {  
    "amount":16600,
    "approval_expired_at":null,

@@ -8,7 +8,7 @@ lastmod: "2019-12-02T22:56:58.166Z"
 ---
 ---
 
-```http 
+```
 POST https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers/internal_transfer_id/reject
 ```
 ---
@@ -24,5 +24,6 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers/interna
 
 #### **Response**
 
-```JSON
+```
 204 No Content
+```

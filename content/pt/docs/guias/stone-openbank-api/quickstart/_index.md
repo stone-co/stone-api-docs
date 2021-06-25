@@ -99,7 +99,7 @@ Para realizar uma movimentação de TED teste, por exemplo, você pode fazer uma
 
 {{< alert title="cURL" >}}
 
-```JSON
+```
 curl --request POST \ 
   
   --url https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers \
@@ -115,7 +115,7 @@ curl --request POST \
 
 {{< alert title="Ruby" >}}
 
-```JSON
+```ruby
 require 'uri'
 require 'net/http'
 
@@ -138,7 +138,7 @@ puts response.read_body
 
 {{< alert title="JavaScript" >}}
 
-```JSON
+```js
 var data = JSON.stringify({
   "amount": 10050,
   "target": {
@@ -177,7 +177,7 @@ xhr.send(data);
 
 {{< alert title="Python" >}}
 
-```JSON
+```python
 import requests
 
 url = "https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers"
@@ -196,7 +196,7 @@ print(response.text)
 
 {{< alert title="C#" >}}
 
-```JSON
+```c#
 var client = new RestClient("https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers");
 var request = new RestRequest(Method.POST);
 request.AddHeader("authorization", "Bearer {token}");
@@ -228,7 +228,7 @@ Com a resposta gerada pela requisição da TED acima, você poderá elaborar uma
 É utilizada a requisição citada 3º passo, tendo como resposta o seguinte JSON:
 
 
-```JSON
+```json
 {
   "amount": 10050,
   "approved_at": "2018-10-08T22:13:51Z",

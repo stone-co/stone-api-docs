@@ -14,7 +14,7 @@ Nesse endpoint serão solicitados os dados do usuário necessários para realiza
 
 <br>
 
-```http request
+```
 POST https://sandbox-api.openbank.stone.com.br/api/v1/users/{{user_id}}/kyc/answer
 ```
 <br>
@@ -101,7 +101,7 @@ Ex: ef49c647-1dc9-58e8-a559-108cdf7e65a4
 #### **Response**
 ---
 
-```http
+```
 200 OK
 ```
 

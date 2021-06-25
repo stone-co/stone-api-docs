@@ -8,7 +8,7 @@ lastmod: "2019-12-02T22:56:58.161Z"
 ---
 ---
 
-```http 
+```
 POST https://sandbox-api.openbank.stone.com.br/api/v1/payments/payment_id/approve
 ```
 ---
@@ -24,5 +24,6 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/payments/payment_id/approv
 
 ##### **Response**
 
-```JSON
+```
 204 No Content
+```

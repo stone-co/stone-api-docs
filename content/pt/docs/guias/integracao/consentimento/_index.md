@@ -90,7 +90,7 @@ Gerar um token JWT de consentimento é parecido com o processo de gerar um token
 Observe que é preciso **assinar o token JWT com a chave privada da aplicação e o algoritmo RS256**, assim como é feito para o token de [autenticação](/docs/guias/integracao/autenticacao). Dessa forma, neste token também é preciso incluir um header com as informações sobre o algoritmo de criptografia utilizado, entre outros metadados, como um id da chave utilizada. Por exemplo:
 
 
-```JSON
+```json
 {
   "alg": "RS256",
   "typ": "JWT"
@@ -107,7 +107,7 @@ Apesar do ClientID ser o disponibilizado pela Stone ao parceiro no [Cadastro da 
 
 Assim, um exemplo de claims para este token seria:
 
-```JSON
+```json
 {
   "type": "consent",
   "client_id": "MY CLIENT ID", 
