@@ -205,3 +205,79 @@ Body:
 }
 ```
 
+---
+
+```json
+400 Bad Request
+```
+
+---
+
+```JSON
+422 Unprocessable Entity
+```
+Body
+```JSON
+{
+  "type": "srn:error:key_not_found"
+}
+```
+
+Acontece quando a chave passada não está cadastrada no DICT.
+
+<br>
+
+Body
+```JSON
+{
+  "type": "srn:error:target_account_not_found"
+}
+```
+
+Acontece quando o alvo da transferência é uma conta interna, e essa conta interna não existe.
+Pagamentos para contas externas inexistentes podem ser criados mas falharão após a confirmação.
+
+<br>
+
+Body
+```JSON
+{
+  "type": "srn:error:cannot_transfer_to_source_account"
+}
+```
+
+Acontece quando o alvo da transferência é a conta que está enviando a transferência. Por que você está fazendo isso?
+
+<br>
+
+Body
+```JSON
+{
+  "type": "srn:error:invoice_amount_differs"
+}
+```
+
+Acontece quando a transferência está relacionada a uma cobrança criada por uma conta interna, e o valor enviado não corresponde ao valor informado pela cobrança.
+
+
+<br>
+
+Body
+```JSON
+{
+  "type": "srn:error:invoice_expired"
+}
+```
+
+Acontece quando a transferência está relacionada a uma cobrança criada por uma conta interna, e a cobrança expirou.
+
+<br>
+
+Body
+```JSON
+{
+  "type": "srn:error:invoice_paid"
+}
+```
+
+Acontece quando a transferência está relacionada a uma cobrança criada por uma conta interna, e a cobrança já foi paga.
