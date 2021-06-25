@@ -9,6 +9,8 @@ description: >
   Entenda como funcionam as Chaves PIX!
 ---
 
+<br>
+
 ## O que é uma Chave PIX
 
 No arranjo do PIX os usuários, tanto pagadores quanto recebedores, precisam se cadastrar no DICT (Diretório de Identificadores de Contas Transacionais) para criar sua(s) chave(s) PIX. 
