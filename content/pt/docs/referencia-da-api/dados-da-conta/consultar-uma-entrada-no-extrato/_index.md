@@ -9,7 +9,7 @@ weight: 9
 
 ---
 
-```http
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/statement/entries/entry_id
 ```
 
@@ -29,7 +29,7 @@ Identificador da entrada.
 ##### Response
 ---
 
-```http
+```
 201 OK
 content-type: application/json
 ```
@@ -38,7 +38,7 @@ content-type: application/json
 ##### Body
 ---
 
-```JSON
+```json
 
 {
     "amount": -5400,

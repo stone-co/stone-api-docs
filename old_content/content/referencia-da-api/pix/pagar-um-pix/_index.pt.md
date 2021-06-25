@@ -14,11 +14,13 @@ O Pagamento de um PIX pode ser feito através da inserção dos dados completos 
 #### Inserção dos dados completos do recebedor:
 
 ##### Exemplo de requisição:
-```textmate
+```
 POST /api/v1/pix_payments
 authorization: subject application:participante
 content-type: application/json
+```
 
+```json
 {
   "tx_id": "0899c742038a4c00bf4c63260c61dbff",
   "amount": 1000,
@@ -39,8 +41,11 @@ content-type: application/json
 ```
 
 ##### Exemplo de resposta:
-```textmate
+```
 201 CREATED
+```
+
+```json
 {
   "tx_id": "0899c742038a4c00bf4c63260c61dbff",
   "created_at": "2020-08-19T13:49:43.094436Z",

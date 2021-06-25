@@ -34,7 +34,7 @@ A data usada no campo `scheduled_to` deve obedecer a data limite retornada na [A
 
 ---
 
-```http request
+```
 POST https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers
 ```
 ---
@@ -145,12 +145,12 @@ Essa transformação é aplicada pela API antes dos dados serem armazenados.
 
 ##### **Response**
 
-```JSON
+```json
 202 Accepted
 content-type: application/json
 ```
 Body
-```JSON
+```json
 {
     "amount": 100,
     "approval_expired_at": null,

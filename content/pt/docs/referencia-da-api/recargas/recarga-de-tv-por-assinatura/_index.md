@@ -68,7 +68,7 @@ A liquidação da recarga poderá ser executada em até 24 horas, porém, costum
 
 ##### **1) Listar todos os provedores para a TV**
 
-```http
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/tv/providers
 ```
 
@@ -111,7 +111,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/tv/providers
 
 ##### **2) Listar todos os valores para o provedor**
 
-```http
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/tv/values/{provider-id}
 ```
 
@@ -173,7 +173,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/tv/values/{provider-
 
 ##### **3) Simular uma recarga para a TV**
 
-```http
+```
 POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/tv/dry-run
 ```
 
@@ -219,7 +219,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/tv/dry-run
 
 ##### **4) Executar uma recarga para a TV**
 
-```http
+```
 POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/tv
 ```
 

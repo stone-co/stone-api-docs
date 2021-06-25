@@ -16,7 +16,7 @@ Comprovantes podem ser gerados apenas para transferências em estados de sucesso
 
 Comprovantes para extrato aceitam os parâmetros adicionais `start_datetime` e `end_datetime` para especificar o intervalo de tempo cujas entradas serão levadas em consideração ao gerar o comprovante.
 
-```http
+```
 POST https://sandbox-api.openbank.stone.com.br/api/v1/receipts
 ```
 
@@ -57,7 +57,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/receipts
 
 #### **Response**
 
-```JSON
+```
 200 OK
 content-type: application/json
 ```

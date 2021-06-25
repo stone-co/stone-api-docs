@@ -9,7 +9,7 @@ weight: 6
 
 ---
 
-```http
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/balance
 ```
 
@@ -34,12 +34,12 @@ Note que a variável  _balance_  abaixo retorna um valor sem vírgulas, exemplo 
 
 ##### Response
 
-```http
+```
 200 OK
 content-type: application/json
 ```
 Body
-```JSON
+```json
 {
     "balance": 9998,
     "blocked_balance": 0,

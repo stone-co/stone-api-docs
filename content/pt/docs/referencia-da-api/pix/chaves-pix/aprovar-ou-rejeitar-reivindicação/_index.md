@@ -39,7 +39,7 @@ Ai receber uma reivindicação será disparado o seguinte webhook:
 
 ##### **Request**
 
-```http
+```
 POST /api/v1/pix/:account_id/entry_claims/:claim_id/actions/:action {approve|reject}
 content-type: application/json
 ```
@@ -47,7 +47,7 @@ content-type: application/json
 
 ##### **Response**
 
-```http
+```
 202 ACCEPTED
 ```
 
@@ -61,7 +61,7 @@ Body
 
 ---
 
-```http
+```
 422 DOMAIN ERROR
 ```
 

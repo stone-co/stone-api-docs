@@ -8,7 +8,7 @@ weight: 1
 ---
 ---
 
-```http
+```
 POST https://sandbox-api.openbank.stone.com.br/api/v1/dry_run/internal_transfers
 ```
 
@@ -76,12 +76,12 @@ Chave de idempotência.
 
 ##### **Response**
 
-```http
+```
 200 ok
 content-type: application/json
 ```
 Body
-```JSON
+```json
 {
   "amount": 12,
   "approval_expired_at": null,

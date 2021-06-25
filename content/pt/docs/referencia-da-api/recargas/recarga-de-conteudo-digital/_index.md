@@ -67,7 +67,7 @@ A liquidação é executada no provedor em questões de segundos. O resgate dos 
 
 ##### **1) Listar todos os provedores de Conteúdo Digital**
 
-```http
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/digital-content/providers
 ```
 
@@ -106,7 +106,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/digital-content/prov
 
 ##### **2) Listar todos os valores para o provedor**
 
-```http
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/digital-content/values/{provider-id}
 ```
 
@@ -162,7 +162,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/digital-content/valu
 
 ##### **3) Simular uma recarga de Conteúdo Digital**
 
-```http
+```
 POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/digital-content/dry-run
 ```
 
@@ -205,7 +205,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/digital-content/dry
 
 ##### **4) Executar uma recarga de Conteúdo Digital**
 
-```http
+```
 POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/digital-content
 ```
 

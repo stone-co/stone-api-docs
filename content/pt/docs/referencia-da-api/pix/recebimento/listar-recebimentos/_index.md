@@ -100,11 +100,11 @@ Exemplo:
 ##### **Response**
 ---
 
-```JSON
+```json
 200 OK
 ```
 
-```JSON
+```json
 {
   "parametros": {
     "account_id": "477f8576-ca82-462b-be73-dc28cc6490c3",

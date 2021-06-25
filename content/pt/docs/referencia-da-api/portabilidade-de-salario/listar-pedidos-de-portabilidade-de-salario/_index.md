@@ -8,7 +8,7 @@ weight: 2
 ---
 
 
-```http 
+``` 
 GET https://sandbox-api.openbank.stone.com.br/api/v1/salary_portabilities
 ```
 ---
@@ -68,11 +68,11 @@ Este endpoint utiliza paginação: [Link](https://docs.openbank.stone.com.br/ref
 
 #### **Response**
 
-```JSON
+```json
 200 OK 
 ```
 Body
-```JSON
+```json
 {
   "cursor": {
     "after": null,
@@ -114,11 +114,11 @@ Body
 
 ---
 
-```JSON
+```json
 400 Bad Request 
 ```
 
-```JSON
+```json
 {
   
 }
@@ -126,7 +126,7 @@ Body
 
 ---
 
-```JSON
+```json
 403 Forbbiden 
 ```
 

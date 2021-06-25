@@ -9,7 +9,7 @@ weight: 3
 
 ---
 
-```http
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id
 ```
 
@@ -33,12 +33,12 @@ A primeira coisa que faremos antes de lhe dar acesso a dados de uma conta é ver
 
 ##### Response
 
-```http
+```
 200 OK
 content-type: application/json
 ```
 Body
-```JSON
+```json
 { 
     "account_code": "403881",
     "branch_code": "1",

@@ -23,7 +23,7 @@ O cadastro é feito de forma assíncrona de forma a permitir:
 
 
 
-```http
+```
 POST https://sandbox-api.openbank.stone.com.br/api/v1/applications/{global_id}/signups
 ```
 
@@ -44,7 +44,7 @@ Identifica o tipo e o identificador de um recurso.<br>
 Para aplicações o global_id corresponde a "application:CLIENT_ID", onde CLIENT_ID é o id da aplicação.
 
 
-```Json
+```json
 {
    "global_id": "application:7fc3a55f-b6a3-4b92-a07a-4166bg392341"
 }
@@ -61,7 +61,7 @@ Para aplicações o global_id corresponde a "application:CLIENT_ID", onde CLIENT
 **authorization** `string`<br>
 Para gerar o token [acesse aqui](/docs/guias/integracao/autenticacao).
 
-```Json
+```json
 {
   "x-stone-idempotency-key": "25478963571458", 
   "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJhY2NvdW50cy1odWJpZEBvcGVuYmFuay5zdG9uZS5jb20uYnIiLCJuYmYiOjE2MTU0NzI9GjAsInNlc3Npb25fbWV0YWRhdGEiOnsiZW1wcmVzYVpXIjoxLCJjaGF2ZVpXIjoienciLCJwcm9kdWNhbyI6ZmFsc2V9LCJpc3MiOiJkODAzMDQ4ZC03MzA2LTQxNTYtYjNlMS1hNjlkMWNiZjQ3ODEiLCJyZWRpcmVjdF91cmkiOiJodHRwOi8vbG9jYWxob3N0Ojg1ODUvc3RvbmViYW5rL2NvbnNlbnRyZWRpcmVjdCIsInR5cGUiOiJjb25zZW50IiwiZXhwIjoxNjE1NDc5OTI5LCJpYWJ3OjE2MTU0NzI3MTksImp0aSI6Ijk0NTlmMjhhLTQ5NDEtNDA2Zi05YjExLWFmMjdhMWQ2MzEyMCJ9.SptDNxVKp5W_9B" 
@@ -81,7 +81,7 @@ Como esse endpoint trafega dados sensíveis, é necessário criptografar a requi
 
 O corpo da requisição terá o formato:
 
-```Json
+```json
 {
     "jwe": "jwe_body"
 }
@@ -94,7 +94,7 @@ O corpo da requisição terá o formato:
 
 1- Requisite as chaves de criptografia:
  
-```http 
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/discovery/keys
 ```
 2- Extraia da resposta a chave que tenha como chave valor "use: enc", essa corresponde a chave para criptografar (enc/encrypt).
@@ -208,7 +208,7 @@ print(jwe)
 ##### **Responses**
 ---
 
-```Json
+```json
 202 Accepted
 ```
 
@@ -223,7 +223,7 @@ Por ser uma chamada assíncrona temos como resposta o código de status 202 e o 
 ##### Example
 
 
-```Json
+```json
 {
   "id": "9c6197d8-4b76-422c-ba81-11fb1ca97313"
 }

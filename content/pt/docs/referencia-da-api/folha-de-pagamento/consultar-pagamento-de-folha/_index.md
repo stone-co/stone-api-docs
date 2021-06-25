@@ -8,7 +8,7 @@ lastmod: "2019-09-12T17:25:16.438Z"
 ---
 ---
 
-```http 
+``` 
 GET https://sandbox-api.openbank.stone.com.br/api/v1/payrolls/payroll_id
 ```
 ---
@@ -23,12 +23,12 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/payrolls/payroll_id
 
 #### **Response**
 
-```JSON
+```json
 200 OK
 content-type: application/json
 ```
 Body
-```JSON
+```json
 {
   "account_id": "477f8576-ca82-462b-be73-dc28cc6490c3",
   "amount": 100,
