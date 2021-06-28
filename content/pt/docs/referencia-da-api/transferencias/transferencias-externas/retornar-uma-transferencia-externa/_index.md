@@ -28,7 +28,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers/transfer
 
 ##### **Response**
 
-```json
+```
 200 OK
 content-type: application/json
 ```

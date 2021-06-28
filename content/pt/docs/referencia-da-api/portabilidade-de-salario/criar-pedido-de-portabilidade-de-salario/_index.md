@@ -53,7 +53,7 @@ ISPB ou código da instituição.
 
 #### **Response**
 
-```json
+```
 201 Created 
 ```
 Body
@@ -76,7 +76,7 @@ Body
 
 ---
 
-```json
+```
 400 Bad Request 
 ```
 
@@ -109,7 +109,7 @@ Body
 ---
 
 
-```json
+```
 403 Forbidden 
 ```
 

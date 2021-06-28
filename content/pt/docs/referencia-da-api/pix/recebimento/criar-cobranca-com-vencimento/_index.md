@@ -378,7 +378,7 @@ Exemplo:
 ##### **Response**
 ---
 
-```json
+```
 200 OK
 ```
 
@@ -442,7 +442,7 @@ Exemplo:
 
 ---
 
-```json
+```
 400 Bad Request
 ```
 
@@ -468,7 +468,7 @@ Exemplo:
 
 ---
 
-```json
+```
 401 Unauthorized
 ```
 
@@ -480,7 +480,7 @@ Exemplo:
 
 ---
 
-```json
+```
 403 Forbidden
 ```
 
@@ -492,7 +492,7 @@ Exemplo:
 
 ---
 
-```json
+```
 409 Conflict
 ```
 
@@ -504,7 +504,7 @@ Exemplo:
 
 ---
 
-```json
+```
 422 Unprocessable
 ```
 

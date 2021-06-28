@@ -13,7 +13,7 @@ description: >
 
 Nossas APIs usam um padrão de paginação por cursor. O retorno possui o seguinte formato:
 
-```json
+```js
 {
  cursor: {
     after: "string | null",

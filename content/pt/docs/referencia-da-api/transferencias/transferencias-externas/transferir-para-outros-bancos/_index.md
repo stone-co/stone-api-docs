@@ -145,7 +145,7 @@ Essa transformação é aplicada pela API antes dos dados serem armazenados.
 
 ##### **Response**
 
-```json
+```
 202 Accepted
 content-type: application/json
 ```

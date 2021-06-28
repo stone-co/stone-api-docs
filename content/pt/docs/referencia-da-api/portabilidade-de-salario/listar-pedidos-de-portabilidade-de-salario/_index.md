@@ -68,7 +68,7 @@ Este endpoint utiliza paginação: [Link](https://docs.openbank.stone.com.br/ref
 
 #### **Response**
 
-```json
+```
 200 OK 
 ```
 Body
@@ -114,7 +114,7 @@ Body
 
 ---
 
-```json
+```
 400 Bad Request 
 ```
 
@@ -126,7 +126,7 @@ Body
 
 ---
 
-```json
+```
 403 Forbbiden 
 ```
 
