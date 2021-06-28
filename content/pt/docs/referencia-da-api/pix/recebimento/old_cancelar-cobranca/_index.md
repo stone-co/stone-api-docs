@@ -21,7 +21,7 @@ Cobrança cancelada com sucesso
 ```
 
 PIX Já foi pago e não pode ser mais cancelado
-```text
+```
 422 DOMAIN ERROR
 ```
 

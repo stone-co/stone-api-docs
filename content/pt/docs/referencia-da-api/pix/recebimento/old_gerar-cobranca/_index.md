@@ -43,7 +43,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/pix_payment_invoices
 ```
 
 ##### **Response**
-```html
+```
 201 CREATED
 ```
 

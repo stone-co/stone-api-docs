@@ -27,7 +27,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers/id/canc
 
 ##### **Response**
 
-```json
+```
 204 No Content
 content-type: application/json
 ```
