@@ -28,8 +28,8 @@ GET /api/v1/pix_payment_invoices
 
 ```json
 {
-  cursor: {
-    before: null,
+  "cursor": {
+    "before": null,
     after: "c2hvcnQ",
     limit: 100
   },

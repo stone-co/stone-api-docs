@@ -100,7 +100,7 @@ Exemplo:
 ##### **Response**
 ---
 
-```json
+```
 200 OK
 ```
 
@@ -210,7 +210,7 @@ Exemplo:
 
 <br>
 
-```json
+```
 400 Bad Request
 ```
 
@@ -225,7 +225,7 @@ Exemplo:
 
 <br>
 
-```json
+```
 403 Forbidden
 ```
 

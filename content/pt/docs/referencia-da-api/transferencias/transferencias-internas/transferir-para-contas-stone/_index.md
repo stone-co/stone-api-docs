@@ -98,7 +98,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers
 
 ##### **Response**
 
-```json
+```
 202 Accepted
 content-type: application/json
 ```

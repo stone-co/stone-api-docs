@@ -55,7 +55,7 @@ Exemplo:
 ##### **Response**
 ---
 
-```json
+```
 200 OK
 ```
 

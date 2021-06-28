@@ -99,7 +99,7 @@ Para realizar uma movimentação de TED teste, por exemplo, você pode fazer uma
 
 {{< alert title="cURL" >}}
 
-```
+```shell
 curl --request POST \ 
   
   --url https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers \
@@ -262,5 +262,4 @@ Com a resposta gerada pela requisição da TED acima, você poderá elaborar uma
 
 Detalhes sobre a Transfers API se encontram na página [Transferir para Outros Bancos](/docs/referencia-da-api/transferencias/transferencias-externas/transferir-para-outros-bancos).
 {{% /pageinfo %}}
-
 
