@@ -31,7 +31,7 @@ O recebimento dos dados iniciais pela Stone pode ser feito via aplicativo ([iOS]
 <br>
 
 
-##### KYC (Know Your Customer)
+##### **KYC (Know Your Customer)**
 
 Como somos regulados pelo Banco Central, temos a responsabilidade de realizar uma análise de documentos e procedimentos chamados KYC (Know Your Customer). Essa análise é realizada com cuidado internamente para evitar fraudes, principalmente falsidade ideológica. 
 
@@ -45,7 +45,7 @@ Para plataformas que queiram oferecer o processo de abertura de conta Stone de m
 <br>
 
 
-##### Identificador
+##### **Identificador**
 
 Em nossa modelagem de conta de pagamento, utilizamos dois conceitos para refletir as etapas mencionadas acima: 
 

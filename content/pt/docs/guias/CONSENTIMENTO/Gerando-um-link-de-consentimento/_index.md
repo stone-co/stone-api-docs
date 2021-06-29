@@ -17,7 +17,7 @@ Seguindo os parâmetros descritos abaixo, você deverá enviar o link ao usuári
 
 <br>
 
-##### **<ins>Parâmetros do link de consentimento</ins>**
+##### **Parâmetros do link de consentimento**
 
 O link de consentimento deverá conter três parâmetros:
 - client_id: o ClientID recebido pelo desenvolvedor pós-cadastro;
@@ -38,7 +38,7 @@ Assim como fizemos o processo de gerar um Token de Acesso autenticado, também s
 
 <br>
 
-##### **<ins>Especificações do JWT para pedir consentimento</ins>**
+##### **Especificações do JWT para pedir consentimento**
 
 <br>
 

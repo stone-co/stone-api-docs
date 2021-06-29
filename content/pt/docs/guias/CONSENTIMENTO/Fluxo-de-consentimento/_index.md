@@ -14,7 +14,7 @@ A partir da abertura de conta realizada pelo usuário, uma plataforma poderá so
 
 Após gerar e enviar o Link ao usuário, poderão acontecer três situações, das quais o parceiro será notificado:
 
-###### **<ins>Usuário acessa o link e dá consentimento ao parceiro</ins>**
+###### **Usuário acessa o link e dá consentimento ao parceiro**
 
 Ao acessar o link, o usuário será direcionado para um página da Stone em que irá escolher a quais contas de pagamento ele deseja conceder acesso ao parceiro. Ele também poderá verificar a quais escopos o parceiro passará a ter acesso após dar consentimento. Uma vez dado o consentimento, o usuário deverá ser direcionado de volta a uma página do parceiro. 
 
@@ -31,7 +31,7 @@ Veja abaixo um exemplo de permissão concedida:
 
 <br>
 
-###### **<ins>Usuário acessa o link e não dá consentimento ao parceiro</ins>**
+###### **Usuário acessa o link e não dá consentimento ao parceiro**
 
 <br>
 
@@ -55,7 +55,7 @@ Quando o consent_result é `approved` é enviado também o webhook consent_reque
 
 <br>
 
-###### **<ins>Usuário ignora o link </ins>**
+###### **Usuário ignora o link**
 
 <br>
 
