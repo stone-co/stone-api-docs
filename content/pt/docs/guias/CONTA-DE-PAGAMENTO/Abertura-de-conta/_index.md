@@ -40,7 +40,7 @@ Nesse processo, solicitamos algumas informações além dos dados já enviados p
 
 
 Com todas as validações feitas e aprovadas, o usuário terá sua conta aberta e pronta para uso.
-Para plataformas que queiram oferecer o processo de abertura de conta Stone de maneira integrada, o envio das informações iniciais poderá ser feito usando nossa API. Já para recebimento dos dados de KYC, será necessário o uso da nossa SDK - detalhada na [seção exclusiva]() sobre suas funcionalidades e usos.  
+Para plataformas que queiram oferecer o processo de abertura de conta Stone de maneira integrada, o envio das informações iniciais poderá ser feito usando nossa API. Já para recebimento dos dados de KYC, será necessário o uso da nossa SDK - detalhada na [seção exclusiva](/docs/guias/sdk/overview/) sobre suas funcionalidades e usos.  
 
 <br>
 
