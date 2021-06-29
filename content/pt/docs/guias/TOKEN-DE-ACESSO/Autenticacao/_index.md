@@ -14,7 +14,7 @@ Para realizar o processo de Autenticação, você deverá enviar uma requisiçã
 
 Uma vez que o token seja válido e tenha sido autenticado em nosso servidor, enviaremos como resposta o Access Token, ou seja, o seu Token de Acesso. <br><br>
 
-##### <ins>Padrões utilizados na Autenticação</ins>
+##### **Padrões utilizados na Autenticação**
 
 Para facilitar ao máximo a integração com nossa API, escolhemos padrões estabelecidos no mercado para realização do processo de autenticação - descritos abaixo. 
 
@@ -22,9 +22,9 @@ Para facilitar ao máximo a integração com nossa API, escolhemos padrões esta
 
 **OpenID Connect** é uma camada de identidade construída em cima do OAuth 2.0 que permite a fácil verificação da identidade do usuário, bem como a capacidade de obter informações básicas de perfil do provedor de identidade - no nosso caso, a Conta Stone. <br><br>
 
-##### <ins>Especificações do JWT para realizar autenticação</ins>
+##### **Especificações do JWT para realizar autenticação**
 
-A [chamada]() é realizada através do método POST com as informações abaixo:
+A [chamada](/docs/guias/token-de-acesso/chamada-autenticada/) é realizada através do método POST com as informações abaixo:
 
 **Header**<br>Na nossa API, usaremos sempre o algoritmo RS256. Este algoritmo especificado nesta RFC usa criptografia “RSASSA-PKCS1-v1_5 com SHA-256”. 
 Abaixo você encontrará um exemplo de header.
