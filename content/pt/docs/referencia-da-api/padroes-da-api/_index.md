@@ -1,6 +1,6 @@
 ---
-title: "Padrões da API"
-linkTitle: "Padrões da API"
+title: "PADRÕES DA API"
+linkTitle: "PADRÕES DA API"
 date: 2020-05-13T18:00:00-03:00
 lastmod: 2020-09-21T18:00:00-03:00
 weight: 1

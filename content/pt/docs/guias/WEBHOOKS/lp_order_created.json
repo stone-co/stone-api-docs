@@ -1,0 +1,98 @@
+{
+    "env": "sandbox",
+    "event_happened_at": "2021-06-04T12:56:42Z",
+    "event_notified_at": "2021-06-04T12:57:18Z",
+    "event_type": "order_created",
+    "iat": 1622811438,
+    "id": "9e8962f6-c68c-4e5d-829d-5ed7ae25504a",
+    "jti": "2q2m4ptfkbdjagj0b814ptu5",
+    "nbf": 1622811438,
+    "target_data": {
+        "amount": 1000,
+        "checkouts": [{
+            "accepted_multi_payment_methods": [],
+            "accepted_payment_methods": [
+                "credit_card"
+            ],
+            "amount": 1000,
+            "billing_address": {},
+            "billing_address_editable": "true",
+            "created_at": "2021-06-04T12:56:42",
+            "credit_card": {
+                "authentication": {
+                    "threed_secure": {},
+                    "type": "none"
+                },
+                "capture": "true",
+                "installments": [{
+                        "number": 1,
+                        "total": 1000
+                    },
+                    {
+                        "number": 2,
+                        "total": 1000
+                    },
+                    {
+                        "number": 3,
+                        "total": 1000
+                    }
+                ]
+            },
+            "currency": "BRL",
+            "customer": {
+                "created_at": "2021-06-04T12:56:42",
+                "delinquent": "false",
+                "id": "cus_jrpVaNHLETkLYdxD",
+                "name": "Tia Gabi",
+                "phones": {},
+                "updated_at": "2021-06-04T12:56:42"
+            },
+            "customer_editable": "true",
+            "expires_at": "2021-06-11T12:56:42",
+            "id": "chk_wAYa2Df3jTXj1RBz",
+            "metadata": {},
+            "payment_url": "https://stgapi.mundipagg.com/checkout/v1/orders/chk_wAYa2Df3jTXj1RBz",
+            "required_fields": [
+                "customer.email",
+                "customer.document",
+                "customer.mobile_phone",
+                "customer.name"
+            ],
+            "shippable": "false",
+            "skip_checkout_success_page": "true",
+            "status": "open",
+            "success_url": "https://sandbox-link.openbank.stone.com.br/sucesso",
+            "updated_at": "2021-06-04T12:56:42"
+        }],
+        "closed": "false",
+        "code": "4PRRA0AZE6",
+        "created_at": "2021-06-04T12:56:42",
+        "currency": "BRL",
+        "customer": {
+            "created_at": "2021-06-04T12:56:42",
+            "delinquent": "false",
+            "id": "cus_jrpVaNHLETkLYdxD",
+            "name": "Tia Gabi",
+            "phones": {},
+            "updated_at": "2021-06-04T12:56:42"
+        },
+        "id": "or_5OA7n7os6SbanXl4",
+        "items": [{
+            "amount": 1000,
+            "created_at": "2021-06-04T12:56:42",
+            "description": "Teste",
+            "id": "oi_OebnjJPuJ5SJKnXN",
+            "quantity": 1,
+            "status": "active",
+            "type": "product",
+            "updated_at": "2021-06-04T12:56:42"
+        }],
+        "session_id": "211f1701-34bf-475f-967b-5200c6455a87",
+        "status": "pending",
+        "updated_at": "2021-06-04T12:56:42"
+    },
+    "target_detail_uri": "https://sandbox-api.openbank.stone.com.br/api/v1/payment_links/7e785e98-c859-46c6-9dc7-37ea522ceadf/orders/or_5OA7n7os6SbanXl4",
+    "target_id": "or_5OA7n7os6SbanXl4",
+    "target_statement_uri": null,
+    "target_type": "payment_links"
+}
