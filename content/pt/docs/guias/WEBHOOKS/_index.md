@@ -329,7 +329,7 @@ A chave a ser utilizada tem que ser a **chave privada** par da **chave pública*
 
 Um exemplo para decodificar o webhook pode ser verificado no código em Python abaixo:
 
-```json
+```python
 from jwcrypto import jwk, jwe
 from jwcrypto.common import json_encode
 import jwt
