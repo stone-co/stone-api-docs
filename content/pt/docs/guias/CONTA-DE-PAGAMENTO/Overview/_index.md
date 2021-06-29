@@ -18,7 +18,7 @@ Através de uma conta de pagamento você tem acesso a serviços financeiros sem 
 <br>Além disso, toda a gestão da conta pode ser feita online, simplificando atividades do dia a dia. Inclusive, para abrir uma conta, você não precisa se deslocar até uma agência. Mesmo assim, se precisar de alguém para te ajudar, a Stone está disponível para contato.
 
 
-Caso você ainda não possua uma conta para movimentar por meio do seu Token de Acesso, você pode realizar o processo de [Abertura de Conta]() pelo nosso App (disponível em [iOS](https://apps.apple.com/br/app/stone/id1438680035) e [Android](https://play.google.com/store/apps/details?id=co.stone.banking.mobile.flagship&hl=pt_BR&gl=US)). Esse processo também deve ser feito caso você seja uma plataforma e deseje oferecer abertura de conta Stone aos seus clientes, pois também precisaremos do seu perfil cadastrado aqui. 
+Caso você ainda não possua uma conta para movimentar por meio do seu Token de Acesso, você pode realizar o processo de [Abertura de Conta](/docs/guias/conta-de-pagamento/abertura-de-conta/) pelo nosso App (disponível em [iOS](https://apps.apple.com/br/app/stone/id1438680035) e [Android](https://play.google.com/store/apps/details?id=co.stone.banking.mobile.flagship&hl=pt_BR&gl=US)). Esse processo também deve ser feito caso você seja uma plataforma e deseje oferecer abertura de conta Stone aos seus clientes, pois também precisaremos do seu perfil cadastrado aqui. 
 
 
 O processo de abertura de conta pode ser resumido em duas etapas que serão detalhadas a seguir:<br>
