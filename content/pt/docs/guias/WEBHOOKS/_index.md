@@ -43,12 +43,12 @@ A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) s
 
 | Tipo de Evento                               | Descrição                                                                 |
 | :-------------------------------------------- | :------------------------------------------------------------------------- |
-| [barcode_payment_invoice_created](/docs/guias/webhooks/barcode_payment_invoice_created.json/?target=_blank)              | Representa a criação/emissão de um boleto.                                |
-| [barcode_payment_invoice_registered](/docs/guias/webhooks/barcode_payment_invoice_registered.json)           | Representa o registro de um boleto.                                       |
-| [barcode_payment_invoice_payment_promissed](/docs/guias/webhooks/barcode_payment_invoice_payment_promissed.json)    | Representa que o pagamento do boleto foi acolhido em alguma instituição.  |
-| [barcode_payment_invoice_settled](/docs/guias/webhooks/barcode_payment_invoice_settled.json)              | Representa que pagamento do boleto foi confirmado.                        |
-| [barcode_payment_invoice_expired](/docs/guias/webhooks/barcode_payment_invoice_expired.json)              | Representa que o boleto está expirado.                                    |
-| [cash_in_barcode_payment](/docs/guias/webhooks/cash_in_barcode_payment.json)                      | Representa a entrada do valor do boleto na conta do beneficiário.         | 
+| [barcode_payment_invoice_created](barcode_payment_invoice_created.json)              | Representa a criação/emissão de um boleto.                                |
+| [barcode_payment_invoice_registered](barcode_payment_invoice_registered.json)           | Representa o registro de um boleto.                                       |
+| [barcode_payment_invoice_payment_promissed](barcode_payment_invoice_payment_promissed.json)    | Representa que o pagamento do boleto foi acolhido em alguma instituição.  |
+| [barcode_payment_invoice_settled](barcode_payment_invoice_settled.json)              | Representa que pagamento do boleto foi confirmado.                        |
+| [barcode_payment_invoice_expired](barcode_payment_invoice_expired.json)              | Representa que o boleto está expirado.                                    |
+| [cash_in_barcode_payment](cash_in_barcode_payment.json)                      | Representa a entrada do valor do boleto na conta do beneficiário.         | 
 
 <br>
 
@@ -121,28 +121,28 @@ A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) s
 
 | Tipo de Evento                																											    | Descrição                                                                   |
 | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| [pix_entries_key_created](/docs/guias/WEBHOOKS/pix_json/pix.entries.key_created.json)          									| Representa a criação de uma chave Pix.            |
-| [pix_entries_deleted](/docs/guias/WEBHOOKS/pix_json/pix.entries.deleted.json)               										| Representa a deleção de uma chave Pix.            |
-| [pix_entries_failed](/docs/guias/WEBHOOKS/pix_json/pix.entries.failed.json)             											| Representa a falha na criação de uma chave Pix.   |
-| [pix_entries_claims_waiting_resolution](/docs/guias/WEBHOOKS/pix_json/pix.entries.claims.waiting_resolution.json) 					| Representa que estamos aguardando a resposta da cliente sobre a claim (confirmação ou cancelamento).  |
-| [pix_entries_claims_confirmed](/docs/guias/WEBHOOKS/pix_json/pix.entries.claims.confirmed.json)         							| Representa que a cliente confirmou a claim, passando a chave para outra instituição.             |
-| [pix_entries_claims_automatically_confirmed_waiting_resolution](/docs/guias/WEBHOOKS/pix_json/pix.entries.claims.automatically_confirmed_waiting_resolution.json) | Representa que a reivindicação de posse foi automaticamente confirmada porque a cliente não respondeu no prazo de 7 dias corridos. |
-| [pix_entries_claims_automatically_confirmed](/docs/guias/WEBHOOKS/pix_json/pix.entries.claims.automatically_confirmed.json) 		| Representa que foi realizada a confirmação da reivindicação de posse automaticamente, porque a cliente não respondeu dentro dos 14 dias de prazo. Aqui a reivindicação não pode ser mais cancelada.  |
-| [pix_entries_claims_cancelled](/docs/guias/WEBHOOKS/pix_json/pix.entries.claims.cancelled.json)         							| Representa cancelamento da solicitação da claim por parte da cliente, mantendo a chave cadastrada na conta original. |
-| [pix_entries_claims_automatically_cancelled](/docs/guias/WEBHOOKS/pix_json/pix.entries.claims.automatically_cancelled.json) 		| Representa cancelamento automático da da solicitação de portabilidade, por falta de resposta da cliente nos 7 dias de prazo.   |
-| [pix_payment_invoice](/docs/guias/WEBHOOKS/pix_json/pix_payment_invoice.json)														| Representa um QR Code dinâmico imediato.						|
-| [pix_payment_invoice_with_due_date](/docs/guias/WEBHOOKS/pix_json/pix_payment_invoice_with_due_date.json)							| Representa um QR Code dinâmico com vencimento, multa, juros, desconto e abatimento.	|
-| [pix_invoice_payment_created](/docs/guias/WEBHOOKS/pix_json/pix_invoice_payment_created.json)       								| Representa a criação de um QR Code dinâmico. 	 			   	|
-| [pix_invoice_payment_cancelled](/docs/guias/WEBHOOKS/pix_json/pix_invoice_payment_cancelled.json)        							| Representa o cancelamento de um QR Code dinâmico.     		|
-| [pix_invoice_payment_paid](/docs/guias/WEBHOOKS/pix_json/pix_invoice_payment_paid.json)          									| Representa o pagamento com sucesso de um QR Code dinâmico.    |
-| [inbound_pix_payment](/docs/guias/WEBHOOKS/pix_json/inbound_pix_payment.json)														| Representa um cash-in de Pix.	|
-| [pix_inbound_payment_received](/docs/guias/WEBHOOKS/pix_json/pix_inbound_payment_received.json)         							| Representa o recebimento de um cash-in de Pix, podendo estar associada a um QR Code estatático, dinâmico imediato ou dinâmico com vencimento. Essa associação será representada pela presença de um dos seguintes atributos dentro do target_data: <br>- `pix_payment_invoice` : Invoice dinâmica imediata; <br>- `pix_payment_static_invoice` : Invoice estática; <br>- `pix_payment_invoice_with_due_date` : Invoice dinâmica com vencimento, multa, juros, desconto e abatimento.  |
-| [pix_refund_payment](/docs/guias/WEBHOOKS/pix_json/pix_refund_payment.json)										| Representa uma devolução (cash-out) associada a um inbound payment (cash-in).		|
-| [pix_inbound_payment_refund_created](/docs/guias/WEBHOOKS/pix_json/pix.inbound_payment.refund.created.json)   						| Representa a criação de uma devolução associada a uma transação Pix. Lembrando que estamos falando da devolução (cash-out) de um cash-in.  |
-| [pix_inbound_payment_refund_failed](/docs/guias/WEBHOOKS/pix_json/pix.inbound_payment.refund.failed.json)    						| Representa que houve falha na criação da devolução (cash-out) de um cash-in de Pix.    |
-| [pix_inbound_payment_refund_money_reserved](/docs/guias/WEBHOOKS/pix_json/pix.inbound_payment.refund.money_reserved.json) 			| Representa a reserva de dinheiro (impacto no saldo da cliente) após à criação com sucesso de uma devolução (cash-out) de um cash-in de Pix.    |
-| [pix_inbound_payment_refund_settled](/docs/guias/WEBHOOKS/pix_json/pix.inbound_payment.refund.settled.json)   						| Representa que a devolução (cash-out) de um cash-in de Pix foi realizada com sucesso.            |
-| [pix_inbound_payment_refund_reversed](/docs/guias/WEBHOOKS/pix_json/pix.inbound_payment.refund.reversed.json)  					| Representa que a devolução (cash-out) de um cash-in de Pix foi rejeitada.                     |
+| [pix_entries_key_created](pix_json/pix.entries.key_created.json)          									| Representa a criação de uma chave Pix.            |
+| [pix_entries_deleted](pix_json/pix.entries.deleted.json)               										| Representa a deleção de uma chave Pix.            |
+| [pix_entries_failed](pix_json/pix.entries.failed.json)             											| Representa a falha na criação de uma chave Pix.   |
+| [pix_entries_claims_waiting_resolution](pix_json/pix.entries.claims.waiting_resolution.json) 					| Representa que estamos aguardando a resposta da cliente sobre a claim (confirmação ou cancelamento).  |
+| [pix_entries_claims_confirmed](pix_json/pix.entries.claims.confirmed.json)         							| Representa que a cliente confirmou a claim, passando a chave para outra instituição.             |
+| [pix_entries_claims_automatically_confirmed_waiting_resolution](pix_json/pix.entries.claims.automatically_confirmed_waiting_resolution.json) | Representa que a reivindicação de posse foi automaticamente confirmada porque a cliente não respondeu no prazo de 7 dias corridos. |
+| [pix_entries_claims_automatically_confirmed](pix_json/pix.entries.claims.automatically_confirmed.json) 		| Representa que foi realizada a confirmação da reivindicação de posse automaticamente, porque a cliente não respondeu dentro dos 14 dias de prazo. Aqui a reivindicação não pode ser mais cancelada.  |
+| [pix_entries_claims_cancelled](pix_json/pix.entries.claims.cancelled.json)         							| Representa cancelamento da solicitação da claim por parte da cliente, mantendo a chave cadastrada na conta original. |
+| [pix_entries_claims_automatically_cancelled](pix_json/pix.entries.claims.automatically_cancelled.json) 		| Representa cancelamento automático da da solicitação de portabilidade, por falta de resposta da cliente nos 7 dias de prazo.   |
+| [pix_payment_invoice](pix_json/pix_payment_invoice.json)														| Representa um QR Code dinâmico imediato.						|
+| [pix_payment_invoice_with_due_date](pix_json/pix_payment_invoice_with_due_date.json)							| Representa um QR Code dinâmico com vencimento, multa, juros, desconto e abatimento.	|
+| [pix_invoice_payment_created](pix_json/pix_invoice_payment_created.json)       								| Representa a criação de um QR Code dinâmico. 	 			   	|
+| [pix_invoice_payment_cancelled](pix_json/pix_invoice_payment_cancelled.json)        							| Representa o cancelamento de um QR Code dinâmico.     		|
+| [pix_invoice_payment_paid](pix_json/pix_invoice_payment_paid.json)          									| Representa o pagamento com sucesso de um QR Code dinâmico.    |
+| [inbound_pix_payment](pix_json/inbound_pix_payment.json)														| Representa um cash-in de Pix.	|
+| [pix_inbound_payment_received](pix_json/pix_inbound_payment_received.json)         							| Representa o recebimento de um cash-in de Pix, podendo estar associada a um QR Code estatático, dinâmico imediato ou dinâmico com vencimento. Essa associação será representada pela presença de um dos seguintes atributos dentro do target_data: <br>- `pix_payment_invoice` : Invoice dinâmica imediata; <br>- `pix_payment_static_invoice` : Invoice estática; <br>- `pix_payment_invoice_with_due_date` : Invoice dinâmica com vencimento, multa, juros, desconto e abatimento.  |
+| [pix_refund_payment](pix_json/pix_refund_payment.json)										| Representa uma devolução (cash-out) associada a um inbound payment (cash-in).		|
+| [pix_inbound_payment_refund_created](pix_json/pix.inbound_payment.refund.created.json)   						| Representa a criação de uma devolução associada a uma transação Pix. Lembrando que estamos falando da devolução (cash-out) de um cash-in.  |
+| [pix_inbound_payment_refund_failed](pix_json/pix.inbound_payment.refund.failed.json)    						| Representa que houve falha na criação da devolução (cash-out) de um cash-in de Pix.    |
+| [pix_inbound_payment_refund_money_reserved](pix_json/pix.inbound_payment.refund.money_reserved.json) 			| Representa a reserva de dinheiro (impacto no saldo da cliente) após à criação com sucesso de uma devolução (cash-out) de um cash-in de Pix.    |
+| [pix_inbound_payment_refund_settled](pix_json/pix.inbound_payment.refund.settled.json)   						| Representa que a devolução (cash-out) de um cash-in de Pix foi realizada com sucesso.            |
+| [pix_inbound_payment_refund_reversed](pix_json/pix.inbound_payment.refund.reversed.json)  					| Representa que a devolução (cash-out) de um cash-in de Pix foi rejeitada.                     |
 | pix_outbound_payment_created         | Representa a criação de um cash-out de Pix.  |
 | pix_outbound_payment_money_reserved  | Representa a reserva de dinheiro (impacto no saldo da cliente) após à criação com sucesso de um cash-out de Pix. |
 | pix_outbound_payment_failed          | Representa a falha na criação de um cash-out de Pix.         |
@@ -157,7 +157,7 @@ A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) s
 
 | Tipo de Evento               | Descrição                                                                |  
 | -----------------------------| ------------------------------------------------------------------------ | 
-| [consent_request](/docs/guias/webhooks/exemplo_consent_request.json) | Representa a confirmação do pedido de consentimento por parte do user.   |
+| [consent_request](exemplo_consent_request.json) | Representa a confirmação do pedido de consentimento por parte do user.   |
 
 <br>
 
@@ -167,9 +167,9 @@ A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) s
 
 | Tipo de Evento                               | Descrição                                                                | 
 | -------------------------------------------- | ------------------------------------------------------------------------ |
-| [sign_up_created](/docs/guias/webhooks/A1.json)| Representa o pedido de abertura de conta.       | 
-| [sign_up_status_updated](/docs/guias/webhooks/A2.json) | Representa quando há uma atualização dos dados na abertura da conta.        |
-| [sign_up_resource_details_updated](/docs/guias/webhooks/A3.json) | Representa o envio de diversos webhooks de acordo com a evolução da abertura de conta. Ex: `account_created`, `user_email_verified`, ....|
+| [sign_up_created](A1.json)| Representa o pedido de abertura de conta.       | 
+| [sign_up_status_updated](A2.json) | Representa quando há uma atualização dos dados na abertura da conta.        |
+| [sign_up_resource_details_updated](A3.json) | Representa o envio de diversos webhooks de acordo com a evolução da abertura de conta. Ex: `account_created`, `user_email_verified`, ....|
 
 <br>
 
@@ -179,9 +179,9 @@ A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) s
 
 | Tipo de Evento                               | Descrição                                                                | 
 | -------------------------------------------- | ------------------------------------------------------------------------ |
-| [order_created](/docs/guias/webhooks/lp_order_created.json)| Representa a criação do link de pagamento. <br>Também é enviado um [segundo webhook](/docs/guias/webhooks/lp_order_created_status_pending.json) deste tipo que representa que o pagador executou o pagamento. <br>Neste caso, o campo `status` do webhook terá seu valor alterado para `pending`.              | 
-| [order_paid](/docs/guias/webhooks/lp_order_paid.json)| Representa o pagamento em si do link de pagamento.   |
-| [order_closed](/docs/guias/webhooks/lp_order_closed.json)|  Representa a finalização do link de pagamento.   |
+| [order_created](lp_order_created.json)| Representa a criação do link de pagamento. <br>Também é enviado um [segundo webhook](lp_order_created_status_pending.json) deste tipo que representa que o pagador executou o pagamento. <br>Neste caso, o campo `status` do webhook terá seu valor alterado para `pending`.              | 
+| [order_paid](lp_order_paid.json)| Representa o pagamento em si do link de pagamento.   |
+| [order_closed](lp_order_closed.json)|  Representa a finalização do link de pagamento.   |
 
 <br>
 
@@ -208,7 +208,7 @@ A idempotência de webhooks deverá ser validada no campo 'x-stone-webhook-event
 | Campo                | Descrição                                                                                                                            |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | env                  | Especifica de qual ambiente partiu o evento. Valores possíveis: sandbox ou production.                                               |
-| event_type           | Especifica qual tipo de evento disparou a notificação. Veja os valores possíveis [aqui](/docs/guias/webhooks/#os-eventos-que-geram-notificações-são). |
+| event_type           | Especifica qual tipo de evento disparou a notificação. Veja os valores possíveis [aqui](#os-eventos-que-geram-notificações-são). |
 | id                   | É o identificador da notificação.                                                                                                    |
 | event_notified_at    | É a hora em que a notificação está sendo enviada.                                                                                    |
 | event_happened_at    | É a hora em que o evento ocorreu.                                                                                                    |
