@@ -32,7 +32,7 @@ Um link de pagamento que não tiver sido pago ou que não tenha sido expirado po
 
 ##### **Toda transação cancelada é fechada e depois cancelada**
 
-```Json
+```json
 {
 	"status": "Canceled",
 	"closed": "true"
@@ -42,7 +42,7 @@ Um link de pagamento que não tiver sido pago ou que não tenha sido expirado po
 
 ##### **Toda transação expirada se mantém aberta (closed: false), mas com status alterado para cancelado**
 
-```Json
+```json
 {
 	"status": "canceled",
 	"closed": "false"

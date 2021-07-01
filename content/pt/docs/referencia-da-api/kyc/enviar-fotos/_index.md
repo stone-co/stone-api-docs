@@ -69,17 +69,17 @@ PUT https://storage.googleapis.com/sdb-inside-gateway-frontend-3727/dXNlcjo4YTZm
 #### **Response**
 ---
 
-```Json
+```
 200 OK
 ```
 
 ---
 
-```Json
+```
 400 Bad Request
 ```
 
-```json
+```xml
 <?xml version='1.0' encoding='UTF-8'?>
 <Error>
 <Code>ExpiredToken</Code>
