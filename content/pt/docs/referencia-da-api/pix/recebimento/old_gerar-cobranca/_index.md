@@ -14,14 +14,14 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/pix_payment_invoices
 ```
 
 ##### **Headers**
-```text
+```
 "authorization": subject application:participante
 "content-type": application/json
 "x-stone-idempotency-key": string
 ```
 
 ##### **Body**
-```text
+```
 {
   "account_id": uuid() # ID da conta da participante,
   "key": <string>, # chave do dict

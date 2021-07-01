@@ -14,7 +14,7 @@ description: >
 ![Imagem 2](https://user-images.githubusercontent.com/11000135/98400393-b31ec280-2042-11eb-9c51-0deb65dcc0a1.png)
 
 ##### **Sequência de caracteres correspondente ao payload do QR Code dinâmico**
-```text
+```
 000201
 010212
 2674
