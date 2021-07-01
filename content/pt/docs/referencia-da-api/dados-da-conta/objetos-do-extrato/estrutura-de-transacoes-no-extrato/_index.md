@@ -658,23 +658,24 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
 ```json
 {
     "salary_portability": {            
-       "account_id":"ad55431e-c1da-4111-98fb-d74f171a31be" 
+       "account_id":"ad55431e-c1da-4111-98fb-d74f171a31be", 
         "amount":10000,
         "balance_after":5992000,
         "balance_before":5982000,
         "counter_party": {
-            "account":{
-               "account_code":"473603",
-               "branch_code":"1",
-               "institution":"16501555", 
-               "institution_name": "ITAÚ UNIBANCO S.A."
-         }
+          "account": {
+            "account_code": "473603",
+            "branch_code": "1",
+            "institution": "16501555",
+            "institution_name": "ITAÚ UNIBANCO S.A."
+          }
+        },
         "created_at":"2019-09-13T22:27:39Z",
         "id":"fff5eb35-63bb-44a9-9640-128c97606710",
-        "operation": "debit"
-        "status": "FINISHED"
+        "operation": "debit",
+        "status": "FINISHED",
         "type": "salary_portability"
-      }    
+      } 
 }
 ```
 
