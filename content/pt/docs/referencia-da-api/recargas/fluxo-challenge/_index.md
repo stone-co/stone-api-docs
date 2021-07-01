@@ -25,7 +25,7 @@ Esse fluxo só será solicitado caso você esteja tentando fazer uma transação
 
 - `status: 403`
 
-```Json
+```json
 {
 	"challenge": {
 		"id": id,
@@ -44,9 +44,10 @@ Note que `required_types` indicará quais tipos de *credencial* o *subject* deve
 
 Pra montar o `challenge_solution` você deverá gerar um JWE, onde o valor descriptografado seja um json no seguinte formato:
 
-```Json
+```json
 {
-	"challenge_id": challenge_id, "pin": pin
+    "challenge_id": challenge_id,
+    "pin": pin
 }
 ```
 
