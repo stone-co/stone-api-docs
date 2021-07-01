@@ -176,7 +176,8 @@ Pra montar o `challenge_solution` você deverá gerar um JWE, onde o valor descr
 
 ```json
 {
-	"challenge_id": challenge_id, "pin": pin
+    "challenge_id": challenge_id,
+    "pin": pin
 }
 ```
 
@@ -290,10 +291,11 @@ Segue exemplo de um fluxo de autorização incluindo o challenge:
 
 ```json
 {
-	"action": {
-		"name": action_name,
-		"status": "authorized",
-		optional_actions: []
+    "action": {
+      "name": action_name,
+      "status": "authorized",
+      "optional_actions": []
+    }
 }
 ```
 <br>

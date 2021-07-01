@@ -10,7 +10,7 @@ description: >
 
 Nossas APIs usam um padrão de paginação por cursor. O retorno possui o seguinte formato:
 
-```json
+```js
 {
  cursor: {
     after: "string | null",
@@ -23,14 +23,14 @@ Nossas APIs usam um padrão de paginação por cursor. O retorno possui o seguin
 
 Como funciona: deve-se informar o limite de items para a paginação, passando o parâmetro **?limit=10**. Na resposta dessa query, será retornado as hashs referente ao cursor no momento da resposta, ex.:
 
-```json
+```js
 {
  cursor: {
- after: "ASsa987fqw",
- before: "null",
- limit: "10"
+     after: "ASsa987fqw", 
+     before: "null", 
+     limit: "10"
  },
- data: [];
+ data: [],
 }
 ```
 
