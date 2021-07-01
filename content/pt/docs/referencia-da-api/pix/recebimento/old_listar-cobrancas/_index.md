@@ -16,7 +16,7 @@ GET /api/v1/pix_payment_invoices
 ```
 
 ##### **Filtros possíveis**
-```text
+```
 - "account_id" - string (obrigatório)
 - "key": string
 - "transaction_id": string
