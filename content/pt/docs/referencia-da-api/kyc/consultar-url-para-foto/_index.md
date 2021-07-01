@@ -45,7 +45,7 @@ Nome da imagem que será enviado, no formato `.JPG`.
 #### **Response**
 ---
 
-```Json
+```
 200 OK
 ```
 

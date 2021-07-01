@@ -153,7 +153,7 @@ print(jwe)
 ##### Exemplo de preenchimento do payload com envio dos dados da organização:
 
 
-```Json
+```json
 {
   "user": {
     "document": "52762077044",
@@ -208,7 +208,7 @@ print(jwe)
 ##### **Responses**
 ---
 
-```json
+```
 202 Accepted
 ```
 
