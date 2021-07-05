@@ -12,6 +12,10 @@ description: >
 ---
 <br>
 
+### Overview
+---
+<br>
+
 A ocorrência de certos eventos pode ser importante em diversos fluxos na integração de uma aplicação com a API Stone Open Banking. Por isso, utilizamos webhooks para notificar as aplicações integradas da ocorrência destes eventos.
 
 Para sua utilização, é preciso que a aplicação tenha cadastrado no [formulário](/docs/guias/stone-open-banking/quickstart-de-integracao/#testes-em-sandbox) a URI para a qual enviaremos um POST com os dados do evento. A aplicação deverá estar preparada para lidar com cada evento de forma adequada.
@@ -33,8 +37,9 @@ A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) s
 
 <br>
 
-#### **Os eventos que geram notificações são:**
+### Eventos que geram notificações
 ---
+
 <br>
 
 ##### **Emissão de Boleto:**
@@ -185,7 +190,7 @@ A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) s
 
 <br>
 
-#### **O header das notificações segue a seguinte estrutura:**
+### Estrutura do header das notificações
 ---
 
 
@@ -200,7 +205,7 @@ A idempotência de webhooks deverá ser validada no campo 'x-stone-webhook-event
 
 <br>
 
-#### **O payload das notificações segue a seguinte estrutura:**
+### Estrutura do payload das notificações
 ---
 
 <br>
@@ -275,8 +280,9 @@ Exemplo:
 
 <br>
 
-#### **Trabalhando com Webhooks**
+### Trabalhando com Webhooks
 ---
+
 <br>
 
 ##### **Webhooks Seguros**
@@ -407,7 +413,8 @@ Todo webhook gerado pela Stone leva consigo uma chave de idempotência enviada n
 
 <br>
 
-##### **Endpoint para verificar webhooks enviados**
+### Endpoint para verificar webhooks enviados
+---
 
 <br>
 
