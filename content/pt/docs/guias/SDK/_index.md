@@ -26,11 +26,7 @@ A Conta Stone SDK funciona como ponto de entrada para os três processos abaixo:
 
 [//]: <> (Aprovação (Approver SDK): Responsável por realizar aprovações ou reprovações de transações)
 
-Após obter o seu [Token de Acesso](/docs/guias/token-de-acesso/overview/), caso deseje usar nossa SDK e disponibilizar as etapas acima descritas aos seus usuários, siga os próximos passos para instalação do kit:
-
-##### [Integração iOS](/docs/guias/sdk/integracao-ios/)
-
-##### [Integração Android](/docs/guias/sdk/integracao-android/)
+Após obter o seu [Token de Acesso]({{< relref "/docs/guias/token-de-acesso">}}), caso deseje usar nossa SDK e disponibilizar as etapas acima descritas aos seus usuários, siga os próximos passos para instalação do kit para [iOS]({{< relref "/docs/guias/sdk/#integração-ios">}}) e [Android]({{< relref "/docs/guias/sdk/#integração-android" >}}).
 
 <br>
 

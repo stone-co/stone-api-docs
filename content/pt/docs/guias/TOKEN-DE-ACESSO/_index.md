@@ -10,7 +10,7 @@ description: >
 ---
 <br>
 
-### Overview
+## Overview
 ---
 
 <br>
@@ -28,30 +28,30 @@ Para receber esse Token de Acesso, será necessário que você gere um  JWT loca
 {{< alert >}}
 Header: é um objeto JSON que define informações sobre o tipo do token (typ) - nesse caso JWT - e o algoritmo de criptografia usado em sua assinatura (alg) - no nosso caso usamos sempre o RS256. 
 
-Payload: é um objeto JSON com as Claims (informações /alegações) da entidade tratada. São as informações que o JWT carrega, tipicamente a data de expiração do token ("EXPiration date"), quem gerou aquele token ("ISSuer"), quando ("Instanciated AT"), quem deve consumi-lo ("AUDience"), e o que mais for necessário entre as partes — como por exemplo um ID de usuário. Para esta etapa, você precisará de um ClientID, ou seja, o identificador recebido após realização do [Cadastro da sua Aplicação](/docs/guias/token-de-acesso/cadastro-da-aplicacao/) com a Stone. <br>Além disso, você deverá preencher os Claims conforme nosso processo de [Autenticação](/docs/guias/token-de-acesso/autenticacao/). 
+Payload: é um objeto JSON com as Claims (informações /alegações) da entidade tratada. São as informações que o JWT carrega, tipicamente a data de expiração do token ("EXPiration date"), quem gerou aquele token ("ISSuer"), quando ("Instanciated AT"), quem deve consumi-lo ("AUDience"), e o que mais for necessário entre as partes — como por exemplo um ID de usuário. Para esta etapa, você precisará de um ClientID, ou seja, o identificador recebido após realização do [Cadastro da sua Aplicação]({{< relref "/docs/guias/token-de-acesso/#cadastro-da-aplicação">}}) com a Stone. <br>Além disso, você deverá preencher os Claims conforme nosso processo de [Autenticação]({{< relref "/docs/guias/token-de-acesso/#autenticação">}}). 
 
-Signature: É a assinatura única de cada token que é gerada a partir de um algoritmo de criptografia e tem seu corpo com base no header, no payload e na chave secreta definida pela aplicação. A assinatura é que vai garantir a integridade do token, se ele foi modificado e se realmente foi gerado por você. Para essa etapa, você já deve ter [gerado um par de chaves](/docs/guias/token-de-acesso/gerar-chaves-de-acesso/). 
+Signature: É a assinatura única de cada token que é gerada a partir de um algoritmo de criptografia e tem seu corpo com base no header, no payload e na chave secreta definida pela aplicação. A assinatura é que vai garantir a integridade do token, se ele foi modificado e se realmente foi gerado por você. Para essa etapa, você já deve ter [gerado um par de chaves]({{< relref "/docs/guias/token-de-acesso/#gerar-chaves-de-acesso">}}). 
 {{< /alert >}}
 
 
-Após a geração do token local formado acima, é preciso fazer uma chamada para o nosso servidor de [Autenticação](/docs/guias/token-de-acesso/autenticacao/) para que a gente faça a validação e retorne o Token de Acesso.
+Após a geração do token local formado acima, é preciso fazer uma chamada para o nosso servidor de [Autenticação]({{< relref "/docs/guias/token-de-acesso/#autenticação">}}) para que a gente faça a validação e retorne o Token de Acesso.
 
 Provido com o Token de Acesso (token que já foi autenticado), você poderá acessar os endpoints da aplicação, que antes estavam restritos. Para realizar esse acesso, é preciso informar esse token no header Authorization da requisição e, por convenção, após a palavra Bearer. 
 
 Em seguida, vamos te guiar para realizar as seguintes etapas para obtenção do seu Token de Acesso:
 
-[Gerar um par de chaves de acesso](/docs/guias/token-de-acesso/gerar-chaves-de-acesso/)
+[Gerar um par de chaves de acesso]({{< relref "/docs/guias/token-de-acesso/#gerar-chaves-de-acesso">}})
 
-[Cadastrar  sua Aplicação](/docs/guias/token-de-acesso/cadastro-da-aplicacao/)
+[Cadastrar  sua Aplicação]({{< relref "/docs/guias/token-de-acesso/#cadastro-da-aplicação">}})
 
-[Fazer a Autenticação](/docs/guias/token-de-acesso/autenticacao/)
+[Fazer a Autenticação]({{< relref "/docs/guias/token-de-acesso/#autenticação">}})
 
-[Realizar Chamada Autenticada](/docs/guias/token-de-acesso/chamada-autenticada/)
+[Realizar Chamada Autenticada]({{< relref "/docs/guias/token-de-acesso/#chamada-autenticada">}})
 
 
 <br>
 
-### Gerar Chaves de acesso
+## Gerar Chaves de acesso
 ---
 
 <br>
@@ -71,19 +71,19 @@ Linux: é uma ferramenta padrão que já vem instalada em quase todas as distrib
 
 MacOS: há algumas formas de instalar, sendo o uso da ferramenta “brew” um dos mais simples. 
 
-Windows: É possível adquirí-la através da [Página de Download](https://slproweb.com/products/Win32OpenSSL.html), e obter detalhes sobre o processo de instalação através do [Tutorial de Instalação](https://tecadmin.net/install-openssl-on-windows/). Após a instalação, você deve acrescentar o caminho do programa na variável PATH e adicionar mais uma variável OPENSSL_CONF para o arquivo openssl.cfg, que normalmente vai ser C:\Program Files\OpenSSL-Win64\bin\openssl.cfg. Atente-se para ajustar o caminho para o local onde você instalou a ferramenta.
+Windows: É possível adquirí-la através da [Página de Download](https://slproweb.com/products/Win32OpenSSL.html), e obter detalhes sobre o processo de instalação através do [Tutorial de Instalação](https://tecadmin.net/install-openssl-on-windows/). Após a instalação, você deve acrescentar o caminho do programa na variável PATH e adicionar mais uma variável OPENSSL_CONF para o arquivo openssl.cfg, que normalmente vai ser "C:\Program Files\OpenSSL-Win64\bin\openssl.cfg". Atente-se para ajustar o caminho para o local onde você instalou a ferramenta.
 {{< /alert >}}
 
-Agora você já pode gerar o seu par de chaves. A chave pública será solicitada pelo nosso time durante a integração. Nós deixamos a chave pública guardada de forma segura e usaremos para validar o seu token num processo de criptografia assimétrica. A chave que deverá ser enviada para Stone através do formulário de integração é sempre a chave pública (arquivo .pub).<br><br>
+Agora você já pode gerar o seu par de chaves. A chave pública será solicitada pelo nosso time durante a integração. Nós deixamos a chave pública guardada de forma segura e usaremos para validar o seu token num processo de criptografia assimétrica. <br>**A chave que deverá ser enviada para Stone através do formulário de integração é sempre a chave pública (arquivo .pub).**<br><br>
 
 **Atenção!**  
 <br>Você nunca deve compartilhar a chave privada (arquivo.pem)! A chave privada deve ser armazenada de forma segura por você. <br>Em posse da sua chave privada, qualquer aplicação pode decodificar a assinatura e verificar se ela é válida. <br> Por isso destacamos a importância de manter essa informação em segredo.
 
-Depois de obter seu par de chaves, você está pronto para iniciar conosco o [Cadastro da Aplicação](/docs/guias/token-de-acesso/cadastro-da-aplicacao/). 
+Depois de obter seu par de chaves, você está pronto para iniciar conosco o [Cadastro da Aplicação]({{< relref "/docs/guias/token-de-acesso/#cadastro-da-aplicação">}}). 
 
 <br>
 
-### Cadastro da Aplicação
+## Cadastro da Aplicação
 ---
 
 <br>
@@ -94,27 +94,26 @@ O ClientID será usado no processo de Autenticação, permitindo a identificaç�
 
 Para obter um ClientID, você deverá entrar em [contato](https://app.pipefy.com/public/form/Qz4ptt_W/?origem_do_lead=Documenta%C3%A7%C3%A3o) com nosso time comercial. Em seguida, pediremos algumas informações para cadastrar sua aplicação. Neste formulário, será necessário enviar ao time da Stone:
 
-1. A sua [chave pública](/docs/guias/token-de-acesso/gerar-chaves-de-acesso/) - que será atrelada ao cadastro da sua aplicação
-2. Uma URI de Redirect - precisamos de um local público para redirecionarmos o usuário final depois que ele aprovar ou reprovar o [Consentimento](/docs/guias/consentimento/overview/) de acesso à sua plataforma. Caso você esteja fazendo a integração para acesso à sua própria conta, pode desconsiderar essa etapa. 
+1. A sua [chave pública]({{< relref "/docs/guias/token-de-acesso/#gerar-chaves-de-acesso">}}) - que será atrelada ao cadastro da sua aplicação
+2. Uma URI de Redirect - precisamos de um local público para redirecionarmos o usuário final depois que ele aprovar ou reprovar o [Consentimento]({{< relref "/docs/guias/consentimento/#overview">}}) de acesso à sua plataforma. Caso você esteja fazendo a integração para acesso à sua própria conta, pode desconsiderar essa etapa. 
 3. Uma URI de Webhooks - Precisamos de um local público para enviar mudanças de estado das contas para aplicações. Essa URI irá receber as informações das Webhooks para seu processamento.
 4. Sua Linguagem de desenvolvimento - Nossa infraestrutura disponibiliza uma API RESTful com respostas em JSON.
 
 Após o recebimento de todas as informações e cadastro da sua aplicação, enviaremos o seu ClientID por e-mail. 
 
-Atenção! O ClientID será enviado para o e-mail identificado no formulário como dono da aplicação. Caso você queira movimentar a sua própria conta, este e-mail deverá ser o mesmo cadastrado no momento de [abertura da Conta](/docs/guias/conta-de-pagamento/abertura-de-conta/).
+Atenção! O ClientID será enviado para o e-mail identificado no formulário como dono da aplicação. Caso você queira movimentar a sua própria conta, este e-mail deverá ser o mesmo cadastrado no momento de [abertura da Conta]({{< relref "/docs/guias/conta-de-pagamento/#abertura-de-conta">}}).
 
-Pronto! Com seu ClientID em mãos, você já pode realizar o processo de [Autenticação](/docs/guias/token-de-acesso/autenticacao/). 
+Pronto! Com seu ClientID em mãos, você já pode realizar o processo de [Autenticação]({{< relref "/docs/guias/token-de-acesso/#autenticação">}}). 
 
 <br>
 
-### Autenticação
+## Autenticação
 ---
 
-<br>
 
 <br>
 
-Para realizar o processo de Autenticação, você deverá enviar uma requisição ao nosso servidor contendo um JWT. O JWT enviado deverá conter as credenciais da sua aplicação ([ClientID](/docs/guias/token-de-acesso/cadastro-da-aplicacao/)) e deverá ser assinado com a chave privada. Ao receber o request, faremos o processo de validação do token enviado, pois já teremos recebido e armazenado a sua chave pública.
+Para realizar o processo de Autenticação, você deverá enviar uma requisição ao nosso servidor contendo um JWT. O JWT enviado deverá conter as credenciais da sua aplicação ([ClientID]({{< relref "/docs/guias/token-de-acesso/#cadastro-da-aplicação">}}) e deverá ser assinado com a chave privada. Ao receber o request, faremos o processo de validação do token enviado, pois já teremos recebido e armazenado a sua chave pública.
 
 Uma vez que o token seja válido e tenha sido autenticado em nosso servidor, enviaremos como resposta o Access Token, ou seja, o seu Token de Acesso. <br><br>
 
@@ -128,31 +127,7 @@ Para facilitar ao máximo a integração com nossa API, escolhemos padrões esta
 
 ##### **Especificações do JWT para realizar autenticação**
 
-A [chamada](/docs/guias/token-de-acesso/chamada-autenticada/) é realizada através do método POST com as informações abaixo:
-
-**Header**<br>Na nossa API, usaremos sempre o algoritmo RS256. Este algoritmo especificado nesta RFC usa criptografia “RSASSA-PKCS1-v1_5 com SHA-256”. 
-Abaixo você encontrará um exemplo de header.
-
-```JSON
-{
-  "alg": "RS256",
-  "typ": "JWT"
-}
-```
-
-A chamada é com o método POST com o header Content-Type e User-Agent. <br>O Content-Type informado deve ser x-www-form-urlencoded (o mesmo usado por submissão de formulários HTML) e o header User-Agent deve estar habilitado. Verifique o exemplo abaixo:
-
-```JSON
-{
-  "user-agent": "Nome da aplicação",
-  "content-type": "application/x-www-form-urlencoded"
-}
-```
-<br>
-
-**Payload** <br>É um objeto JSON que trará as informações que usaremos para verificar a autenticidade da chamada e retornar o Token de acesso. É necessário enviar o campo ClientID, o campo  grant_type que será um campo de valor fixo (client_credentials), o campo `client_assertion` que será o token gerado localmente citado acima e por último o campo `client_assertion_type` que também terá seu valor fixo (urn:ietf:params:oauth:client-assertion-type:jwt-bearer), fechando o fluxo de client credentials para o servidor.
-
-Para conseguir se autenticar com sucesso, você deverá preencher os claims com os seguintes valores:
+Primeiramente temos que gerar um token JWT local para conseguir se autenticar com sucesso. Esse token deverá ser preenchido com os claims com os seguintes valores:
 
 | Nome | Valor |
 | ---- | ----- |
@@ -165,9 +140,35 @@ Para conseguir se autenticar com sucesso, você deverá preencher os claims com 
 | jti | Identificador único do token gerado. Normalmente se utiliza um UUID, mas não é obrigatório usar esse formato desde que a unicidade seja garantida. [Mais informações](https://tools.ietf.org/html/rfc7519#section-4.1.7) |
 | iat | Momento em que o token foi gerado. É UTC. Ex. "iat": 1542235633 |
 
+Após gerar esse token localmente, partiremos para receber o access_token e realizar as [chamadas autenticadas]({{< relref "/docs/guias/token-de-acesso/#chamada-autenticada">}}).
+
+O request para receber o access_token é realizado através do método POST com as informações abaixo:
+<br><br>
+
+**Header**<br>Na nossa API, usaremos sempre o algoritmo **RS256**. Este algoritmo especificado nesta RFC usa criptografia “RSASSA-PKCS1-v1_5 com SHA-256”. 
+Abaixo você encontrará um exemplo de header.
+
+```JSON
+{
+  "alg": "RS256",
+  "typ": "JWT"
+}
+```
+
+A chamada é com o método **POST** com o header **Content-Type** e **User-Agent**. <br>O **Content-Type** informado deve ser **x-www-form-urlencoded** (o mesmo usado por submissão de formulários HTML) e o header **User-Agent** deve estar habilitado com o nome da sua aplicação. Verifique o exemplo abaixo:
+
+```JSON
+{
+  "user-agent": "Nome da aplicação",
+  "content-type": "application/x-www-form-urlencoded"
+}
+```
 <br>
+
+**Payload** <br>É um objeto JSON que trará as informações que usaremos para verificar a autenticidade da chamada e retornar o Token de acesso. É necessário enviar o campo `ClientID`, o campo `grant_type` que será um campo de valor fixo (**client_credentials**), o campo `client_assertion` que será o token gerado localmente citado acima e por último o campo `client_assertion_type` que também terá seu valor fixo (**urn:ietf:params:oauth:client-assertion-type:jwt-bearer**), fechando o fluxo de client credentials para o servidor.
+
 <br>
-Esta chamada deverá ser realizada nas seguintes URLs (por ambiente):
+Este request deverá ser realizado nas seguintes URLs (por ambiente):
 <br><br>
 
 | Ambiente | Endpoint de Acesso |
@@ -177,17 +178,19 @@ Esta chamada deverá ser realizada nas seguintes URLs (por ambiente):
 
 
 
-Você deverá receber como resposta um JSON com uma chave, ou seja, o seu Token de Acesso, que permitirá que você faça [Chamadas Autenticadas](/docs/guias/token-de-acesso/chamada-autenticada/).
+Você deverá receber como resposta um JSON com uma chave, ou seja, o seu Token de Acesso, que permitirá que você faça [Chamadas Autenticadas]({{< relref "/docs/guias/token-de-acesso/#chamada-autenticada">}}).
 
 
 <br>
 
-### Chamada autenticada
+## Chamada autenticada
 ---
 
-<br>
 
-Após realizar o processo de [Autenticação](/docs/guias/token-de-acesso/autenticacao/) e receber como resposta o seu Token de Acesso, basta colocá-lo no header Authorization. Você irá usar o valor recebido para preenchimento do  Bearer ACCESS_TOKEN.
+
+Após realizar o processo de [Autenticação]({{< relref "/docs/guias/token-de-acesso/#autenticação">}}) e receber como resposta o seu Token de Acesso, basta colocá-lo no header Authorization. Você irá usar o valor recebido para preenchimento do Bearer ACCESS_TOKEN de todas as chamadas realizadas em nossa API.
+
+Além do Token de acesso, é necessário preencher sempre no header o campo **User-Agent** que deve estar habilitado com o nome da sua aplicação.
 
 Para realizar chamadas autenticadas em nossa API, disponibilizamos as seguintes URLs: <br><br>
 
@@ -206,6 +209,6 @@ O access_token possui duração de 15 minutos e você deve utilizar esse mesmo t
 {{% /pageinfo %}}
 
 
-A seguir, vamos te guiar pela seção [Conta de Pagamento](/docs/guias/conta-de-pagamento/), onde você poderá entender mais sobre as características do nosso negócio e sobre o processo de abertura de conta.
+A seguir, vamos te guiar pela seção [Conta de Pagamento]({{< relref "/docs/guias/conta-de-pagamento">}}), onde você poderá entender mais sobre as características do nosso negócio e sobre o processo de abertura de conta.
 
 

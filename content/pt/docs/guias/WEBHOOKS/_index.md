@@ -18,7 +18,7 @@ description: >
 
 A ocorrência de certos eventos pode ser importante em diversos fluxos na integração de uma aplicação com a API Stone Open Banking. Por isso, utilizamos webhooks para notificar as aplicações integradas da ocorrência destes eventos.
 
-Para sua utilização, é preciso que a aplicação tenha cadastrado no [formulário](/docs/guias/stone-open-banking/quickstart-de-integracao/#testes-em-sandbox) a URI para a qual enviaremos um POST com os dados do evento. A aplicação deverá estar preparada para lidar com cada evento de forma adequada.
+Para sua utilização, é preciso que a aplicação tenha cadastrado no [formulário]({{< relref "/docs/guias/stone-open-banking/#testes-em-sandbox">}}) a URI para a qual enviaremos um POST com os dados do evento. A aplicação deverá estar preparada para lidar com cada evento de forma adequada.
 
 Ao enviar um webhook, esperamos receber uma resposta do range 200 que indica o sucesso no recebimento dessa notificação por parte da sua aplicação. Caso a resposta seja um código diferente do range 200, encaramos como falha no recebimento do webhook e repetimos o envio até receber um sucesso ou batermos o número máximo de 50 tentativas no envio de um evento.
 Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um padrão de horários de tentativas.

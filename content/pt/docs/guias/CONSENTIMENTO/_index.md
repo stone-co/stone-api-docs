@@ -35,14 +35,14 @@ Ao acessar o link, o usuário será direcionado para um página da Stone em que 
 
 Veja abaixo um exemplo da tela de pedido de consentimento que será disponibilizada ao cliente:
 
-![solicitacao-consentimento](/docs/guias/CONSENTIMENTO/Fluxo-de-consentimento/solicitacao-de-consentimento.png)
+![solicitacao-consentimento](solicitacao-de-consentimento.png)
 
 <br>
 Veja abaixo um exemplo de permissão concedida:
 
-![consentimento-aprovado](/docs/guias/CONSENTIMENTO/Fluxo-de-consentimento/consentimento-aprovado.png)
+![consentimento-aprovado](consentimento-aprovado.png)
 
-<br>Ao clicar no botão "Ok, entendi" o usuário será redirecionado para uma página da aplicação parceira, cujo endereço foi definido no [Cadastro da Aplicação](/docs/guias/token-de-acesso/cadastro-da-aplicacao/).
+<br>Ao clicar no botão "Ok, entendi" o usuário será redirecionado para uma página da aplicação parceira, cujo endereço foi definido no [Cadastro da Aplicação]({{< relref "/docs/guias/token-de-acesso/#cadastro-da-aplicação">}}).
 
 <br>
 
