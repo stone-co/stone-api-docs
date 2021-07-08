@@ -10,7 +10,7 @@ description: >
 ---
 <br>
 
-### Overview
+## Overview
 ---
 <br>
 
@@ -21,7 +21,7 @@ Para instituições que desejem pedir consentimento a usuários da Conta Stone, 
 
 <br>
 
-### Fluxo de Consentimento
+## Fluxo de Consentimento
 ---
 <br>
 
@@ -79,7 +79,7 @@ O link de consentimento tem validade de 2 horas após a sua geração. Caso o us
 
 <br>
 
-### Gerando Link de Consentimento
+## Gerando Link de Consentimento
 ---
 <br>
 

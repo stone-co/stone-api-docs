@@ -10,7 +10,7 @@ description: >
 ---
 <br>
 
-### Overview
+## Overview
 
 No Open Banking, uma plataforma poderá criar uma transação na conta do usuário, mas esta só será efetuada se houver a aprovação do usuário dono da conta. Esse procedimento assegura ao dono da conta que não haverá movimentação de seu dinheiro sem sua permissão, além de proteger a aplicação de eventuais erros, ataques ou bugs que iniciem transações não desejadas pelo usuário.
 
@@ -18,7 +18,7 @@ A Aprovação de uma Transação tem como objetivo garantir que toda movimentaç
 
 <br>
 
-### Aprovando uma transação
+## Aprovando uma transação
 
 <br>
 

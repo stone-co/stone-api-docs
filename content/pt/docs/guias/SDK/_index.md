@@ -11,7 +11,7 @@ description: >
 
 <br>
 
-### Overview
+## Overview
 ---
 <br>
 
@@ -30,7 +30,7 @@ Após obter o seu [Token de Acesso]({{< relref "/docs/guias/token-de-acesso">}})
 
 <br>
 
-### Integração Android
+## Integração Android
 ---
 <br>
 
@@ -290,7 +290,7 @@ contaStoneSdk.getSession(
 
 <br>
 
-### Integração iOS
+## Integração iOS
 ---
 <br>
 

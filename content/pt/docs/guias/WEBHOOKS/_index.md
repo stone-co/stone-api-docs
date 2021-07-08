@@ -12,7 +12,7 @@ description: >
 ---
 <br>
 
-### Overview
+## Overview
 ---
 <br>
 
@@ -190,7 +190,7 @@ A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) s
 
 <br>
 
-### Estrutura do header das notificações
+## Estrutura do header das notificações
 ---
 
 
@@ -205,7 +205,7 @@ A idempotência de webhooks deverá ser validada no campo 'x-stone-webhook-event
 
 <br>
 
-### Estrutura do payload das notificações
+## Estrutura do payload das notificações
 ---
 
 <br>
@@ -280,12 +280,12 @@ Exemplo:
 
 <br>
 
-### Trabalhando com Webhooks
+## Trabalhando com Webhooks
 ---
 
 <br>
 
-##### **Webhooks Seguros**
+### **Webhooks Seguros**
 
 <br>
 
@@ -401,7 +401,7 @@ Mais informações sobre JavaScript Object Signing and Encryption, como JWTs, JW
 
 <br>
 
-##### **Webhooks idempotentes**
+### **Webhooks idempotentes**
 
 <br>
 
@@ -413,7 +413,7 @@ Todo webhook gerado pela Stone leva consigo uma chave de idempotência enviada n
 
 <br>
 
-### Endpoint para verificar webhooks enviados
+## Endpoint para verificar webhooks enviados
 ---
 
 <br>
