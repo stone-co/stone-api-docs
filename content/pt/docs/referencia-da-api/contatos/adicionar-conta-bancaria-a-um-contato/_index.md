@@ -3,7 +3,7 @@ title: "Adicionar Conta Bancária a Um Contato"
 slug: "adicionar-conta-bancária-a-um-contato"
 hidden: false
 date: 2019-04-01T20:10:46.029Z
-lastmod: 2019-12-02T22:56:58.188Z
+lastmod: 2021-06-25T20:01:46.027Z
 weight: 7
 ---
 
@@ -42,6 +42,12 @@ Número da conta.
 
 ---
 
+**account_type**  `string`
+
+Tipo da conta bancária.
+
+---
+
 **branch_code**  `string`
 
 Número da agência bancária.
@@ -52,10 +58,15 @@ Número da agência bancária.
 
 Número da instituição.
 
+---
+
+**pix_key**  `string`
+
+Chave Pix do contato.
+
 <br>
 
 ---
-
 #### **HEADERS**
 
 ---
@@ -78,8 +89,10 @@ Body
 ```JSON
 {
   "account_code": "4567864",
+  "account_type": "PG",
   "branch_code": "1234",
   "id": "9145a75a-f86b-4cc5-bcfe-64b658c610b6",
-  "institution_code": "00000000"
+  "institution_code": "00000000",
+  "pix_key": null
 }
 ```
