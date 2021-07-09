@@ -27,7 +27,7 @@ x-stone-idempotency-key: string()
 
 ```textmate
 {
-   "key": string() | null no caso de RANDOM_KEY,
+   "key": string() | `null` no caso de RANDOM_KEY,
    "key_type": "PHONE", # "CPF" | "CNPJ" | "PHONE" | "EMAIL" | "RANDOM_KEY"
    "account_id": uuid(), # conta do participante indireto | cliente stone
    "participant_ispb": ispb_do_particiapnte(),
@@ -37,12 +37,12 @@ x-stone-idempotency-key: string()
      "account_code": "0007654321",
      "account_type": "CACC" | "SLRY" | "SVGS" (cacc - conta corrente, slry - conta salário, svgs)),
      "opened_at": "2019-11-18T03:00:00Z" data de abertura da conta no ISPB
-   } | null # null ou ignorado em caso do type ser "stone_account"
+   } | null # `null` ou ignorado em caso do type ser "stone_account"
    "customer_entity": {
      "name":"fulano de tal",
      "document_type": "cpf" | "cnpj",
      "document": cpf() | cnpj(),
-   } | null # null ou ignorado em caso do type ser "stone_account"
+   } | null # `null` ou ignorado em caso do type ser "stone_account"
 }
 ```
 
