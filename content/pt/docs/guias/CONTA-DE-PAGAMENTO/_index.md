@@ -18,11 +18,11 @@ Somos uma Instituição de Pagamentos emissora de moeda eletrônica autorizada p
 <br>Nesse tipo de conta, os recursos devem ser depositados previamente, ou seja, oferecemos uma conta do tipo pré-paga aos nossos clientes. Dessa forma, não haverá geração de fatura nem saldo negativo.
 
 
-Através de uma conta de pagamento você tem acesso a serviços financeiros sem precisar ir a um banco. É possível fazer e receber Pix, TEDs, como também realizar o pagamento de boletos e outros serviços básicos de uma conta corrente. 
+Através de uma conta de pagamento, você tem acesso a serviços financeiros sem precisar ir a um banco. É possível fazer e receber Pix, TEDs, como também realizar o pagamento de boletos e outros serviços básicos de uma conta corrente. 
 <br>Além disso, toda a gestão da conta pode ser feita online, simplificando atividades do dia a dia. Inclusive, para abrir uma conta, você não precisa se deslocar até uma agência. Mesmo assim, se precisar de alguém para te ajudar, a Stone está disponível para contato.
 
 
-Caso você ainda não possua uma conta para movimentar por meio do seu Token de Acesso, você pode realizar o processo de [Abertura de Conta]({{< relref "/docs/guias/conta-de-pagamento/#abertura-de-conta">}}) pelo nosso App (disponível em [iOS](https://apps.apple.com/br/app/stone/id1438680035) e [Android](https://play.google.com/store/apps/details?id=co.stone.banking.mobile.flagship&hl=pt_BR&gl=US)). Esse processo também deve ser feito caso você seja uma plataforma e deseje oferecer abertura de conta Stone aos seus clientes, pois também precisaremos do seu perfil cadastrado aqui. 
+Caso ainda não possua uma conta para movimentar por meio do seu Token de Acesso, você pode realizar o processo de [Abertura de Conta]({{< relref "/docs/guias/conta-de-pagamento/#abertura-de-conta">}}) pelo nosso App (disponível para [iOS](https://apps.apple.com/br/app/stone/id1438680035) e [Android](https://play.google.com/store/apps/details?id=co.stone.banking.mobile.flagship&hl=pt_BR&gl=US)). Esse processo também deve ser feito caso você seja uma plataforma e deseje oferecer abertura de conta Stone aos seus clientes, pois também precisaremos do seu perfil cadastrado aqui. 
 
 
 O processo de abertura de conta pode ser resumido em duas etapas que serão detalhadas a seguir:<br>
@@ -45,13 +45,13 @@ O processo de abertura de conta será iniciado quando o usuário preencher os da
 
 
 O recebimento dos dados iniciais pela Stone pode ser feito via aplicativo ([iOS](https://apps.apple.com/br/app/stone/id1438680035) e [Android](https://play.google.com/store/apps/details?id=co.stone.banking.mobile.flagship&hl=pt_BR&gl=US)) com o usuário dono da conta realizando o processo de preenchimento diretamente pelo app ou pode ser feito por API, caso você seja uma plataforma e queira oferecer o [processo de abertura de conta Stone]({{< relref "/docs/referencia-da-api/dados-da-conta/criar-nova-conta-de-pagamento/">}}) em seu produto. 
-<br>Caso escolhe realizar o processo por API, após o recebimento dos dados cadastrais, faremos uma primeira validação e, em seguida, iremos disparar um e-mail para criação de senha de acesso pelo usuário. 
+<br>Caso escolha realizar o processo por API, após o recebimento dos dados cadastrais, faremos uma primeira validação e, em seguida, iremos disparar um e-mail para criação de senha de acesso pelo usuário. 
 
 
-**Credenciais**: A identidade é acessada através das credenciais do usuário, como, por exemplo, um e-mail e uma senha. Hoje essas credenciais dão acesso apenas ao perfil do usuário na Stone, e não estão relacionadas às credenciais usadas por outros serviços que podem estar integrados à Conta Stone, como o Guiabolso, por exemplo. Entretanto, o objetivo é que no futuro a identidade na Stone funcione como uma conta de usuário no Google ou no Facebook, por exemplo. A partir de um único conjunto de credenciais ser possível se conectar à vários serviços.
+**Credenciais**: A identidade é acessada através das credenciais do usuário, como, por exemplo, um e-mail e uma senha. Hoje essas credenciais dão acesso apenas ao perfil do usuário na Stone e não estão relacionadas às credenciais usadas por outros serviços que podem estar integrados à Conta Stone, como o Guiabolso, por exemplo. Entretanto, o objetivo é que no futuro a identidade na Stone funcione como uma conta de usuário no Google ou no Facebook, por exemplo. A partir de um único conjunto de credenciais, será possível se conectar a vários serviços.
 
 
-**Pronto!** Com e-mail validado e senha criada o usuário já pode realizar o processo de KYC (Know Your Customer).
+**Pronto!** Com e-mail validado e senha criada, o usuário já pode realizar o processo de KYC (Know Your Customer).
 
 <br>
 
