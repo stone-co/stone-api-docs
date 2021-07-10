@@ -16,7 +16,7 @@ description: >
 ---
 <br>
 
-A ocorrência de certos eventos pode ser importante em diversos fluxos na integração de uma aplicação com a API Stone Open Banking. Por isso, utilizamos webhooks para notificar as aplicações integradas da ocorrência destes eventos.
+A ocorrência de certos eventos pode ser importante em diversos fluxos na integração de uma aplicação com a API Stone Open Banking. Por isso, utilizamos webhooks para notificar as aplicações integradas da ocorrência desses eventos.
 
 Para sua utilização, é preciso que a aplicação tenha cadastrado no [formulário]({{< relref "/docs/guias/stone-open-banking/#testes-em-sandbox">}}) a URI para a qual enviaremos um POST com os dados do evento. A aplicação deverá estar preparada para lidar com cada evento de forma adequada.
 
@@ -24,14 +24,14 @@ Ao enviar um webhook, esperamos receber uma resposta do range 200 que indica o s
 Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um padrão de horários de tentativas.
 
 A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) sobre as quais ela opera dado o escopo de funcionalidades disponíveis na sua aplicação e também recebem os eventos relacionados às contas sobre as quais foi dado consentimento. 
-<br>Vale lembrar que os webhooks serão enviados independente se o evento for via API ou via APP.
+<br>Vale lembrar que os webhooks serão enviados independente se o evento for via API ou via app.
 
 <br>
 
 {{% pageinfo %}}
 **Virada em Produção**
 
-É imprescindível que a aplicação esteja recebendo e tratando de forma adequada todos os tipos de webhook referente as funcionalidades que implementou.
+É imprescindível que a aplicação esteja recebendo e tratando de forma adequada todos os tipos de webhook referentes às funcionalidades que implementou.
 
 {{% /pageinfo %}}
 
@@ -51,7 +51,7 @@ A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) s
 | [barcode_payment_invoice_created](barcode_payment_invoice_created.json)              | Representa a criação/emissão de um boleto.                                |
 | [barcode_payment_invoice_registered](barcode_payment_invoice_registered.json)           | Representa o registro de um boleto.                                       |
 | [barcode_payment_invoice_payment_promissed](barcode_payment_invoice_payment_promissed.json)    | Representa que o pagamento do boleto foi acolhido em alguma instituição.  |
-| [barcode_payment_invoice_settled](barcode_payment_invoice_settled.json)              | Representa que pagamento do boleto foi confirmado.                        |
+| [barcode_payment_invoice_settled](barcode_payment_invoice_settled.json)              | Representa que o pagamento do boleto foi confirmado.                        |
 | [barcode_payment_invoice_expired](barcode_payment_invoice_expired.json)              | Representa que o boleto está expirado.                                    |
 | [cash_in_barcode_payment](cash_in_barcode_payment.json)                      | Representa a entrada do valor do boleto na conta do beneficiário.         | 
 
@@ -63,7 +63,7 @@ A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) s
 
 | Tipo de Evento                               | Descrição                                                                 |
 | -------------------------------------------- | ------------------------------------------------------------------------- |
-| cash_in_payment_refund                       | Representa o reembolso de um pagamento mal sucedido.                      |
+| cash_in_payment_refund                       | Representa o reembolso de um pagamento malsucedido.                      |
 | cash_out_payment                             | Representa a criação de um pagamento.                                     |
 | cash_out_payment_failed                      | Representa a falha na criação de um pagamento.                            |
 | cash_out_payment_scheduled                   | Representa o agendamento de um pagamento.                                 |
@@ -103,7 +103,7 @@ A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) s
 | Tipo de Evento                               | Descrição                                                                |
 | -------------------------------------------- | ------------------------------------------------------------------------ |
 | cash_in_external_transfer                    | Representa o recebimento de uma transferência externa.                   | 
-| cash_in_external_transfer_refund             | Representa o reembolso de uma transferência externa mal sucedida.        | 
+| cash_in_external_transfer_refund             | Representa o reembolso de uma transferência externa malsucedida.        | 
 | cash_out_external_transfer                   | Representa a criação de uma transferência externa.                       | 
 | cash_out_external_transfer_failed            | Representa a falha na criação de uma transferência externa.              | 
 | cash_out_external_transfer_scheduled         | Representa o agendamento de uma transferência externa.                   | 
@@ -134,22 +134,22 @@ A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) s
 | [pix_entries_claims_automatically_confirmed_waiting_resolution](pix_json/pix.entries.claims.automatically_confirmed_waiting_resolution.json) | Representa que a reivindicação de posse foi automaticamente confirmada porque a cliente não respondeu no prazo de 7 dias corridos. |
 | [pix_entries_claims_automatically_confirmed](pix_json/pix.entries.claims.automatically_confirmed.json) 		| Representa que foi realizada a confirmação da reivindicação de posse automaticamente, porque a cliente não respondeu dentro dos 14 dias de prazo. Aqui a reivindicação não pode ser mais cancelada.  |
 | [pix_entries_claims_cancelled](pix_json/pix.entries.claims.cancelled.json)         							| Representa cancelamento da solicitação da claim por parte da cliente, mantendo a chave cadastrada na conta original. |
-| [pix_entries_claims_automatically_cancelled](pix_json/pix.entries.claims.automatically_cancelled.json) 		| Representa cancelamento automático da da solicitação de portabilidade, por falta de resposta da cliente nos 7 dias de prazo.   |
+| [pix_entries_claims_automatically_cancelled](pix_json/pix.entries.claims.automatically_cancelled.json) 		| Representa cancelamento automático da solicitação de portabilidade, por falta de resposta da cliente nos 7 dias de prazo.   |
 | [pix_payment_invoice](pix_json/pix_payment_invoice.json)														| Representa um QR Code dinâmico imediato.						|
 | [pix_payment_invoice_with_due_date](pix_json/pix_payment_invoice_with_due_date.json)							| Representa um QR Code dinâmico com vencimento, multa, juros, desconto e abatimento.	|
 | [pix_invoice_payment_created](pix_json/pix_invoice_payment_created.json)       								| Representa a criação de um QR Code dinâmico. 	 			   	|
 | [pix_invoice_payment_cancelled](pix_json/pix_invoice_payment_cancelled.json)        							| Representa o cancelamento de um QR Code dinâmico.     		|
 | [pix_invoice_payment_paid](pix_json/pix_invoice_payment_paid.json)          									| Representa o pagamento com sucesso de um QR Code dinâmico.    |
 | [inbound_pix_payment](pix_json/inbound_pix_payment.json)														| Representa um cash-in de Pix.	|
-| [pix_inbound_payment_received](pix_json/pix_inbound_payment_received.json)         							| Representa o recebimento de um cash-in de Pix, podendo estar associada a um QR Code estatático, dinâmico imediato ou dinâmico com vencimento. Essa associação será representada pela presença de um dos seguintes atributos dentro do target_data: <br>- `pix_payment_invoice` : Invoice dinâmica imediata; <br>- `pix_payment_static_invoice` : Invoice estática; <br>- `pix_payment_invoice_with_due_date` : Invoice dinâmica com vencimento, multa, juros, desconto e abatimento.  |
+| [pix_inbound_payment_received](pix_json/pix_inbound_payment_received.json)         							| Representa o recebimento de um cash-in de Pix, podendo estar associado a um QR Code estatático, dinâmico imediato ou dinâmico com vencimento. Essa associação será representada pela presença de um dos seguintes atributos dentro do target_data: <br>- `pix_payment_invoice`: Invoice dinâmica imediata; <br>- `pix_payment_static_invoice`: Invoice estática; <br>- `pix_payment_invoice_with_due_date`: Invoice dinâmica com vencimento, multa, juros, desconto e abatimento.  |
 | [pix_refund_payment](pix_json/pix_refund_payment.json)										| Representa uma devolução (cash-out) associada a um inbound payment (cash-in).		|
 | [pix_inbound_payment_refund_created](pix_json/pix.inbound_payment.refund.created.json)   						| Representa a criação de uma devolução associada a uma transação Pix. Lembrando que estamos falando da devolução (cash-out) de um cash-in.  |
 | [pix_inbound_payment_refund_failed](pix_json/pix.inbound_payment.refund.failed.json)    						| Representa que houve falha na criação da devolução (cash-out) de um cash-in de Pix.    |
-| [pix_inbound_payment_refund_money_reserved](pix_json/pix.inbound_payment.refund.money_reserved.json) 			| Representa a reserva de dinheiro (impacto no saldo da cliente) após à criação com sucesso de uma devolução (cash-out) de um cash-in de Pix.    |
+| [pix_inbound_payment_refund_money_reserved](pix_json/pix.inbound_payment.refund.money_reserved.json) 			| Representa a reserva de dinheiro (impacto no saldo da cliente) após a criação com sucesso de uma devolução (cash-out) de um cash-in de Pix.    |
 | [pix_inbound_payment_refund_settled](pix_json/pix.inbound_payment.refund.settled.json)   						| Representa que a devolução (cash-out) de um cash-in de Pix foi realizada com sucesso.            |
 | [pix_inbound_payment_refund_reversed](pix_json/pix.inbound_payment.refund.reversed.json)  					| Representa que a devolução (cash-out) de um cash-in de Pix foi rejeitada.                     |
 | pix_outbound_payment_created         | Representa a criação de um cash-out de Pix.  |
-| pix_outbound_payment_money_reserved  | Representa a reserva de dinheiro (impacto no saldo da cliente) após à criação com sucesso de um cash-out de Pix. |
+| pix_outbound_payment_money_reserved  | Representa a reserva de dinheiro (impacto no saldo da cliente) após a criação com sucesso de um cash-out de Pix. |
 | pix_outbound_payment_failed          | Representa a falha na criação de um cash-out de Pix.         |
 | pix_outbound_payment_settled         | Representa a liquidação com sucesso de um cash-out de Pix.   |
 | pix_outbound_payment_refunded        | Representa a devolução de um cash-out de Pix.   	          |
@@ -174,7 +174,7 @@ A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) s
 | -------------------------------------------- | ------------------------------------------------------------------------ |
 | [sign_up_created](A1.json)| Representa o pedido de abertura de conta.       | 
 | [sign_up_status_updated](A2.json) | Representa quando há uma atualização dos dados na abertura da conta.        |
-| [sign_up_resource_details_updated](A3.json) | Representa o envio de diversos webhooks de acordo com a evolução da abertura de conta. Ex: `account_created`, `user_email_verified`, ....|
+| [sign_up_resource_details_updated](A3.json) | Representa o envio de diversos webhooks de acordo com a evolução da abertura de conta. Exemplo: `account_created`, `user_email_verified`, ....|
 
 <br>
 
@@ -184,7 +184,7 @@ A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) s
 
 | Tipo de Evento                               | Descrição                                                                | 
 | -------------------------------------------- | ------------------------------------------------------------------------ |
-| [order_created](lp_order_created.json)| Representa a criação do link de pagamento. <br>Também é enviado um [segundo webhook](lp_order_created_status_pending.json) deste tipo que representa que o pagador executou o pagamento. <br>Neste caso, o campo `status` do webhook terá seu valor alterado para `pending`.              | 
+| [order_created](lp_order_created.json)| Representa a criação do link de pagamento. <br>Também é enviado um [segundo webhook](lp_order_created_status_pending.json) desse tipo que representa que o pagador executou o pagamento. <br>Nesse caso, o campo `status` do webhook terá seu valor alterado para `pending`.              | 
 | [order_paid](lp_order_paid.json)| Representa o pagamento em si do link de pagamento.   |
 | [order_closed](lp_order_closed.json)|  Representa a finalização do link de pagamento.   |
 
@@ -217,7 +217,7 @@ A idempotência de webhooks deverá ser validada no campo 'x-stone-webhook-event
 | id                   | É o identificador da notificação.                                                                                                    |
 | event_notified_at    | É a hora em que a notificação está sendo enviada.                                                                                    |
 | event_happened_at    | É a hora em que o evento ocorreu.                                                                                                    |
-| target_data          | Objeto com as informações detalhadas do recurso que gerou o evento. Apesar de ter campo variáveis sempre conterá o campo account_id. |
+| target_data          | Objeto com as informações detalhadas do recurso que gerou o evento. Apesar de ter campos variáveis, sempre conterá o campo account_id. |
 | target_detail_uri    | É o endereço onde se pode consultar os detalhes do recurso.                                                                          |
 | target_id            | É o identificador do recurso que gerou o evento.                                                                                     |
 | target_statement_uri | É o endereço da entrada no extrato referente ao recurso.                                                                             |
@@ -229,7 +229,7 @@ A idempotência de webhooks deverá ser validada no campo 'x-stone-webhook-event
 {{% pageinfo %}}
 **Inclusão de campos**
 
-A implementação não deve ser strict no parser do payload. Ao longo do tempo os payloads podem sofrer a inclusão de campos.
+A implementação não deve ser strict no parser do payload. Ao longo do tempo, os payloads podem sofrer a inclusão de campos.
 
 {{% /pageinfo %}}
 
@@ -282,7 +282,6 @@ Exemplo:
 
 ## Trabalhando com Webhooks
 ---
-
 <br>
 
 ### **Webhooks Seguros**
@@ -301,7 +300,7 @@ Nossa API envia webhooks de forma segura para evitar que eles sejam abertos e/ou
 
 <br>
 
-Para poder visualizar o conteúdo de um webhook é necessário fazer o caminho inverso:
+Para poder visualizar o conteúdo de um webhook, é necessário fazer o caminho inverso:
 
 1. **Decifrar o conteúdo do webhook** usando sua chave privada. O resultado é um token JWT assinado com a nossa chave;
 2. **Verificar a assinatura do token** com a nossa chave pública.
@@ -313,7 +312,7 @@ Para poder visualizar o conteúdo de um webhook é necessário fazer o caminho i
 
 <br>
 
-O webhook irá chegar com um payload parecido com esse:
+O webhook irá chegar com um payload parecido com este:
 
 
 ```JSON
@@ -324,7 +323,7 @@ O webhook irá chegar com um payload parecido com esse:
 
 O valor do campo "encrypted_body" é um token no formato JWE (JSON Web Encryption) compacto. Esse formato é um padrão e várias linguagens possuem bibliotecas prontas para ele.
 
-O algoritmo utilizado é: **RSA-OAEP-256** com **A256GCM**. Para decifrar o conteúdo é necessário uma biblioteca que suporte estes algoritmos como:
+O algoritmo utilizado é: **RSA-OAEP-256** com **A256GCM**. Para decifrar o conteúdo, é necessária uma biblioteca que suporte esses algoritmos como:
 
 - [JavaScript](https://github.com/square/js-jose)
 - [Java](https://bitbucket.org/b_c/jose4j/wiki/Home)
@@ -369,7 +368,7 @@ subprocess.run('pbcopy', universal_newlines=True, input=jwt_parsed)
 
 <br>
 
-Até este momento deciframos apenas um conteúdo que pode ser gerado por qualquer um que tenha acesso a chave pública da aplicação.
+Até este momento, deciframos apenas um conteúdo que pode ser gerado por qualquer um que tenha acesso à chave pública da aplicação.
 
 Nós utilizamos a assinatura do conteúdo em token JWS (JSON Web Signing) compacto como uma outra camada de verificação de segurança no conteúdo do webhook.
 
@@ -377,9 +376,9 @@ Esse token possui em seus "claims" (alegações) o conteúdo do webhook. Para ga
 
 As chaves públicas da Stone estão publicadas [aqui](https://sandbox-api.openbank.stone.com.br/api/v1/discovery/keys).
 
-Repare que cada chave possui um *kid* (key ID) e um *use* (sig ou enc). O token JWS possui um header que diz qual é o id da chave usada para assiná-lo. Assim, é necessário, em primeiro lugar, garantir que o token foi assinado com uma chave que está publicada pela Stone. 
+Repare que cada chave possui um *kid* (key ID) e um *use* (sig ou enc). O token JWS possui um header que diz qual é o ID da chave usada para assiná-lo. Assim, é necessário, em primeiro lugar, garantir que o token foi assinado com uma chave que está publicada pela Stone. 
 
-Para não ter que buscar a nossa chave pública a cada validação de assinatura, você pode salvar nossa chave do seu lado (por exemplo, através de um cache), de forma que caso aconteça algum erro na validação você volte a consultar o nosso serviço para buscar a chave pública mais atual. Assim você desonera  sua aplicação sem perder a resiliência a mudanças de chave do nosso lado.
+Para não ter que buscar a nossa chave pública a cada validação de assinatura, você pode salvar nossa chave do seu lado (por exemplo, através de um cache), de forma que, caso aconteça algum erro na validação, você volte a consultar o nosso serviço para buscar a chave pública mais atual. Assim você desonera  sua aplicação sem perder a resiliência a mudanças de chave do nosso lado.
 
 Veja [aqui](https://hexdocs.pm/joken_jwks/JokenJwks.DefaultStrategyTemplate.html#content) as melhores práticas para fazer essa implementação. 
 
@@ -393,9 +392,9 @@ O algoritmo que usamos será *sempre RS256*. Há uma lista de bibliotecas que tr
 
 É importante seguir os dois passos aqui: tanto decifrar quanto verificar a assinatura. Isso irá garantir que não apenas geramos algo que não pode ser lido por alguém que *não possui* a chave pública quanto que nosso conteúdo foi assinado pela Stone. 
 
-Também aconselhamos cuidado na configuração do cliente que irá consultar as nossas chaves. Certifique-se que ele não está vulnerável a servidores intermediários propositalmente mal configurados. Um exemplo comum é um servidor configurado para protocolos conhecidamente falhos.
+Também aconselhamos cuidado na configuração do cliente que irá consultar as nossas chaves. Certifique-se de que ele não está vulnerável a servidores intermediários propositalmente mal configurados. Um exemplo comum é um servidor configurado para protocolos conhecidamente falhos.
 
-Sempre que em dúvida, consulte nossa API com os IDs dos dados no conteúdo do webhook.
+Sempre que estiver em dúvida, consulte nossa API com os IDs dos dados no conteúdo do webhook.
 
 Mais informações sobre JavaScript Object Signing and Encryption, como JWTs, JWEs, JWSs, [aqui](https://www.ca.com/pt/blog-latam/os-beneficios-de-jwtjwsjwe-no-designs-de-apis.html).
 
@@ -409,7 +408,7 @@ No geral um evento, quando recepcionado com sucesso, é enviado apenas uma vez p
 
 Todo webhook gerado pela Stone leva consigo uma chave de idempotência enviada no campo `x-stone-webhook-event-id` do header. 
 
-É importante que essa chave seja sempre salva pela sua aplicação e que a cada novo evento você verifique a idempotência desse evento evitando processar duas vezes um mesmo evento.
+É importante que essa chave seja sempre salva pela sua aplicação e que a cada novo evento você verifique a idempotência desse evento, evitando processar duas vezes um mesmo evento.
 
 <br>
 
@@ -420,7 +419,7 @@ Todo webhook gerado pela Stone leva consigo uma chave de idempotência enviada n
 
 Caso tenha dificuldade para identificar algum webhook enviado pela Stone na URI indicada para receber webhooks, disponibilizamos um endpoint que traz todos os webhooks já enviados para a sua aplicação.
 
-Para acessar, basta fazer o comando abaixo, lembrando que no _header_ deve ser enviado o Bearer token no campo `authorization` e o client_id é o id da sua aplicação, passado pelo time de integração.
+Para acessar, basta fazer o comando abaixo, lembrando que no _header_ deve ser enviado o Bearer token no campo `authorization` e que o client_id é o id da sua aplicação, passado pelo time de integração.
 
 ```html
 GET https://sandbox-api.openbank.stone.com.br/api/v1/applications/application:{{client_id}}/webhooks
