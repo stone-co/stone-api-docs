@@ -1,15 +1,14 @@
 ---
-title: "Valores Percentuais"
-linkTitle: "Valores Percentuais"
-date: 2021-06-25T10:52:05-03:00
-lastmod: 2021-06-25T10:52:05-03:00
-weight: 5
+title: "Valores"
+linkTitle: "Valores"
+date: 2021-07-12T11:20:05-03:00
+lastmod: 2021-07-12T11:20:05-03:00
+weight: 4
 description: >
 
 ---
 
----
-<br>
+## Valores Percentuais
 
 Alguns endpoints precisam receber ou retornar valores percentuais. Para evitar problemas de
 representação e de arredondamento, convencionamos de usar uma estrutura pra evitar
@@ -37,3 +36,11 @@ $$percentage = coeficient*10^{exponent}$$
 
 Por definição 100% = 100 * (1/100) = 1. De forma análoga, 70% pode ser representado como
 `coefficient = 70, exponent = -2`, ou como `coefficient = 7, exponent = -1`
+
+---
+
+## Valores Financeiros
+
+Todos os valores na API serão sempre inteiros e expressos em centavos de Reais.
+
+Assim, o valor de um real (R$1,00) ficaria: `100`.
