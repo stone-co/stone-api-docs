@@ -10,15 +10,13 @@ weight: 1
 ---
 
 
-#### **Tokens JWT**
+## Tokens JWT
 
 Tokens JWT são dados sensíveis, assim como senhas ou dados de cartões de crédito. Por isso, é de extrema importância manusear e armazenar esses dados corretamente.
 
 
 
-
-
-#### **Não armazene tokens no *local storage***
+## Não armazene tokens em *local storage*
 
 O armazenamento local de um Browser não é um lugar seguro para se armazenar dados sensíveis. Dados armazenados no local storage podem:
 
@@ -26,14 +24,13 @@ O armazenamento local de um Browser não é um lugar seguro para se armazenar da
 * Ser vulneráveis a Cross-Site Scripting.
 
 
-
-#### **Caso um backend esteja disponível**
+## Caso um backend esteja disponível
 
 Se sua Aplicação tem um backend disponível, os tokens devem ser manuseados server-side.
 
 
 
-#### **Caso um backend não esteja disponível**
+## Caso um backend não esteja disponível
 
 Se sua Aplicação é uma Single Page Application, a Aplicação deve requisitar os tokens e armazená-los em memória sem nenhuma persistência. Faça as chamadas de API usando os tokens armazenados em memória.
 
@@ -41,9 +38,9 @@ Para outros casos, informações sobre boas práticas com Tokens JWT estão disp
 
 
 
-#### **Idempotência**
+## Idempotência
 
-Nossos endpoints que envolvem operações financeiras suportam [Idempotência](https://pt.wikipedia.org/wiki/Idempot%C3%AAncia). Existe a possibilidade de ocorrer operações duplicadas, como, por exemplo, com a queda de conexão 3G durante a realização de uma operação. Para evitar que a mesma operação ocorra mais de uma vez no nosso sistema, sempre envie o cabeçalho de Idempotência (x-stone-idempotency-key).
+Nossos endpoints que envolvem operações financeiras suportam [Idempotência](https://pt.wikipedia.org/wiki/Idempot%C3%AAncia). Existe a possibilidade de ocorrer operações duplicadas, como, por exemplo, com a queda de conexão 3G durante a realização de uma operação. Para evitar que a mesma operação ocorra mais de uma vez no nosso sistema, sempre envie o cabeçalho de Idempotência (`x-stone-idempotency-key`).
 
 
 {{% pageinfo %}}
@@ -64,8 +61,8 @@ Se isso ocorrer em um período curto demais pode ocasionar uma resposta `HTTP 42
 
 
 
-#### **Simulações (dry-run)**
+## **Simulações (dry-run)**
 
-Nossos endpoints que envolvem operações financeiras suportam [Simulações (dry-run)](/docs/referencia-da-api/simulacoes-dry-run/), permitindo que o usuário visualize com antecedência o que vai acontecer nessa operação.
+Nossos endpoints que envolvem operações financeiras suportam [Simulações (dry-run)]({{< relref "/docs/referencia-da-api/simulacoes-dry-run/">}}), permitindo que o usuário visualize com antecedência o que vai acontecer nessa operação.
 
-Em alguns casos, as Simulações permitem enriquecer os dados de uma operação, como, por exemplo o [Pagamento de Boletos](/docs/referencia-da-api/simulacoes-dry-run/simular-o-pagamento-de-um-documento/).
+Em alguns casos, as Simulações permitem enriquecer os dados de uma operação, como, por exemplo o [Pagamento de Boletos]({{< relref "/docs/referencia-da-api/simulacoes-dry-run/simular-o-pagamento-de-um-documento/">}}).
