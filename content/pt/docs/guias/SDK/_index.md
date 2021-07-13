@@ -64,19 +64,19 @@ Antes de começar a integração é necessário obter uma chave de acesso ao rep
 
 No arquivo `build.gradle` do projeto adicione a URL do repositório e substitua o `{access-key}` pela chave fornecida.
 
-```python
+```kotlin
 maven { url "https://packagecloud.io/priv/${access-key}/Stone/stoneid/maven2"}
 ```
 
 Também é preciso adicionar o Jetpack, pois usamos algumas libs que estão disponíveis neste repositório.
 
-```python
+```kotlin
 maven { url 'https://jitpack.io' }
 ```
 
 Importe a dependência da Conta Stone SDK.
 
-```python
+```kotlin
 implementation 'co.stone:conta:${latest_version}'
 ```
 
@@ -91,7 +91,7 @@ Sincronize o projeto e pronto, já é possível utilizar a Conta Stone SDK!
 
 Uma vez que a dependência foi importada o passo seguinte da integração é inicializar a SDK no seu app, para isso é necessário especificar os parâmetros abaixo.
 
-```python
+```kotlin
 private val environment = Environment.Sandbox
 
  ContaStone.initialize(
@@ -142,7 +142,7 @@ private val environment = Environment.Sandbox
 
 Para iniciar o fluxo de autenticação e verificação de KYC é necessário chamar o método abaixo.
 
-```python
+```kotlin
 contaStoneSdk.startAuthAndVerificationFlowForResult(
             context = this,
             params = VerificationParams(
@@ -172,7 +172,7 @@ Este método inicia a Activity principal da SDK e executa os fluxos internos de 
 
 Ao finalizar o fluxo de autenticação e verificação a SDK emite um resultado para o app informando o desfecho do fluxo. Segue abaixo um exemplo de como tratar o resultado emitido pela Conta Stone SDK e o que cada um significa.
 
-```python
+```kotlin
  override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
          super.onActivityResult(requestCode, resultCode, data)
          if (requestCode == LOGIN_RC) {
@@ -197,7 +197,7 @@ Ao finalizar o fluxo de autenticação e verificação a SDK emite um resultado 
 
 Para deslogar o usuário podemos fazer uma chamada para o método de logout seguindo o exemplo abaixo.
 
-```python
+```kotlin
 contaStoneSdk.logout {
             if (it != null) {
                 toast("Error on logout. Try again!")
@@ -214,7 +214,7 @@ Quando a exception é nula o logout ocorreu com sucesso, quando não, algum erro
 
 A authSDK é responsável por todo o processo de autenticação incluindo a adição do token no header das chamadas para a API do Stone Openbank. Para isso a SDK fornece um `OkHttpClient` configurado que pode ser utilizado nas chamadas HTTP do seu app. Este client possui [certificate pinning](https://owasp.org/www-community/controls/Certificate_and_Public_Key_Pinning) com os certificados da API do Stone OpenBank e é possível acessá-lo chamando o método `contaStone.auth().client()`.
 
-```python
+```kotlin
 private fun performAuthenticatedRequest() {
         val httpService = HttpService.BankingGatewaySandbox
         val client = contaStoneSdk.auth().getOkHttpClient(httpService)
@@ -250,7 +250,7 @@ private fun performAuthenticatedRequest() {
 
 Para conseguir iniciar o aprovador é necessário fazer a chamada conforme o exemplo abaixo:
 
-```python
+```kotlin
 contaStoneSdk.startApproverForResult(
                         source = this,
                         requestCode = APPROVER_RQ,
@@ -260,7 +260,7 @@ contaStoneSdk.startApproverForResult(
 
 Para recuperar o `loggedAccount` a Conta Stone SDK disponibiliza a sessão do usuário logado com todas as informações que o `LoggedAccount` precisa:
 
-```python
+```kotlin
 contaStoneSdk.getSession(
                 onComplete = { result ->
                     when (result) {
@@ -332,7 +332,7 @@ Antes de começar a usar o ContaStoneSDK é necessário seguir alguns procedimen
 6. Logo abaixo em `Framework Search Paths`, adicione a entrada `$(PROJECT_DIR)/Frameworks/ContaStoneSDK.framework/Frameworks/` no modo recursivo.
 7. Em `Build Phases` adicione um novo script chamado "Sign" (Em Build Phases, clique sinal de "mais" e selecione New Run Script Phase).
 
-```python
+```swift
 pushd ${TARGET_BUILD_DIR}/${PRODUCT_NAME}.app/Frameworks/ContaStoneSDK.framework/Frameworks
 
 for EACH in *.framework; do
@@ -346,7 +346,7 @@ popd
 
 8. Adicione dependências:
 
-```python
+```swift
 // Cocoapods
 
 pod 'Alamofire', '4.8.2'
@@ -370,7 +370,7 @@ github "airbnb/AloeStackView" "v1.2.0"
 
 ###### **Configurando o AppDelegate**
 
-```python
+```swift
 import UIKit
 import ContaStoneSDK
 
@@ -400,7 +400,7 @@ extension AppDelegate: ContaStoneDelegate {
 
 ###### **Autenticação**
 
-```python
+```swift
 import UIKit
 import ContaStoneSDK
 
@@ -417,7 +417,7 @@ class ViewController: UIViewController {
 
 ###### **Logout**
 
-```python
+```swift
 import UIKit
 import ContaStoneSDK
 
@@ -430,7 +430,7 @@ class ViewController: UIViewController {
 <!---
 ##### **Aprovador**
 
-```python
+```swift
 	var approverCoordinator: ApproverCoordinator?
 
 	func showApprover() {
@@ -446,7 +446,7 @@ class ViewController: UIViewController {
 
 ###### **Requisições**
 
-```python
+```swift
 class ViewController: UIViewController {
 	func fetchBalance() {
 	   let id = ContaStone.currentAcount.id
