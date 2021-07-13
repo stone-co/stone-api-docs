@@ -1,9 +1,10 @@
 ---
-title: "Consultar Pix recebido pelo end_to_end_id"
-linkTitle: "Consultar Pix recebido pelo end_to_end_id"
+title: "Consultar Pix recebido pelo end_to_end_id (Draft)"
+linkTitle: "Consultar Pix recebido pelo end_to_end_id (Draft)"
 date: 2021-06-16T15:17:00-03:00
 lastmod: 2021-06-16T15:17:00-03:00
 weight: 4
+draft: true
 description: >
   
 ---

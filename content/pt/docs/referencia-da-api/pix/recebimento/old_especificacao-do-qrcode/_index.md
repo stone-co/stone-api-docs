@@ -4,6 +4,7 @@ linkTitle: "Old_Especificação do QR Code"
 date: 2020-11-06T15:07:33-03:00
 lastmod: 2020-11-06T15:07:33-03:00
 weight: 5
+draft: true
 description: >
    
 ---

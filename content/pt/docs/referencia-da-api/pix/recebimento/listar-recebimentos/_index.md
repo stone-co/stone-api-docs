@@ -8,10 +8,10 @@ description: >
   
 ---
 
-Através desse endpoint será possível listar todos os Pix recebidos na conta. Segue padrões definidos pelo Banco Central.
+Através desse endpoint será possível listar todos os Pix recebidos na conta. Esse endpoint segue os padrões definidos pelo Banco Central.
 
 
-```http request
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/pix
 ```
 <br>
@@ -53,7 +53,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/pix
 
 Exemplo:
 
-```JSON
+```json
 {
   "type": "object",
   "properties": {
@@ -210,11 +210,11 @@ Exemplo:
 
 <br>
 
-```JSON
+```
 400 Bad Request
 ```
 
-```JSON
+```json
 {
   "type": "https://pix.bcb.gov.br/api/v2/error/PixConsultaInvalida",
   "title": "Consulta Pix Inválida",
@@ -225,11 +225,11 @@ Exemplo:
 
 <br>
 
-```JSON
+```
 403 Forbidden
 ```
 
-```JSON
+```json
 {
   "type": "https://pix.bcb.gov.br/api/v2/error/AcessoNegado",
   "title": "Acesso Negado",

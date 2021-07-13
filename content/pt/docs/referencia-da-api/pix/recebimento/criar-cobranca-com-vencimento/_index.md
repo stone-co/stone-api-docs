@@ -3,15 +3,17 @@ title: "Criar Cobranças com Validade"
 linkTitle: "Criar Cobranças com Validade"
 date: 2021-06-16T15:17:00-03:00
 lastmod: 2021-06-16T15:17:00-03:00
+draft: false
 weight: 4
 description: >
   
 ---
+<br>
+Através desse endpoint será possível criar cobranças Pix com vencimento através de um QRCode ou Pix copia e cola.
+<br>
+<br>
 
-Através desse endpoint será possível criar cobranças Pix com vencimento.
-
-
-```http request
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/pix_payment_invoices_with_due_date
 ```
 <br>
@@ -45,7 +47,7 @@ Tamanho: min 1 / max 200
 **amount** `integer`
 
 **customer** `object`<br>
-**document*** `string` <br>
+**document*** `string`<br>
 **name*** `string` <br>
 
 **expiration_date*** `string`
@@ -103,9 +105,9 @@ Representação de porcentagem, dada a seguinte fórmula: `coefficient * 10^expo
 **exponent*** `integer`
 
 
-Exemplo:
+Schema:
 
-```JSON
+```json
 {
   "type": "object",
   "properties": {
@@ -378,11 +380,11 @@ Exemplo:
 ##### **Response**
 ---
 
-```JSON
+```
 200 OK
 ```
 
-```JSON
+```json
 {
   "account_id": "477f8576-ca82-462b-be73-dc28cc6490c3",
   "additional_data": [
@@ -442,11 +444,11 @@ Exemplo:
 
 ---
 
-```JSON
+```
 400 Bad Request
 ```
 
-```JSON
+```json
 {
   "reason": [
     {
@@ -468,11 +470,11 @@ Exemplo:
 
 ---
 
-```JSON
+```
 401 Unauthorized
 ```
 
-```JSON
+```json
 {
   "type": "srn:error:unauthorized"
 }
@@ -480,11 +482,11 @@ Exemplo:
 
 ---
 
-```JSON
+```
 403 Forbidden
 ```
 
-```JSON
+```json
 {
   "type": "srn:error:unauthenticated"
 }
@@ -492,11 +494,11 @@ Exemplo:
 
 ---
 
-```JSON
+```
 409 Conflict
 ```
 
-```JSON
+```json
 {
   "type": "srn:error:idempotency_conflict"
 }
@@ -504,11 +506,11 @@ Exemplo:
 
 ---
 
-```JSON
+```
 422 Unprocessable
 ```
 
-```JSON
+```json
 {
   "reason": [
     {
