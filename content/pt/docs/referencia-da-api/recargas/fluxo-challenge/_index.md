@@ -25,7 +25,7 @@ Esse fluxo só será solicitado caso você esteja tentando fazer uma transação
 
 - `status: 403`
 
-```Json
+```json
 {
 	"challenge": {
 		"id": id,
@@ -44,9 +44,10 @@ Note que `required_types` indicará quais tipos de *credencial* o *subject* deve
 
 Pra montar o `challenge_solution` você deverá gerar um JWE, onde o valor descriptografado seja um json no seguinte formato:
 
-```Json
+```json
 {
-	"challenge_id": challenge_id, "pin": pin
+    "challenge_id": challenge_id,
+    "pin": pin
 }
 ```
 
@@ -66,7 +67,7 @@ Para gerar um token JWE (JWT criptografado) seguimos 3 passos:
 
 1) Escrever o conteúdo a ser criptografado (payload). 
 
-2) Buscar a chave pública da Stone, no endpoint /api/v1/discovery/keys, cujo campo “use” seja igual a “enc”;
+2) Buscar a chave pública da Stone, no endpoint /api/v1/discovery/keys, cujo campo "use" seja igual a "enc";
 
 3) Usar uma biblioteca de criptografia passando o payload, a chave pública e o algoritmo utilizado, no caso, RSA-OAEP-256
 

@@ -7,7 +7,7 @@ lastmod: "2019-09-16T18:49:01.735Z"
 ---
 ---
 
-```http 
+``` 
 GET https://sandbox-api.openbank.stone.com.br/api/v1/payrolls/payroll_id/salaries
 ```
 ---
@@ -29,12 +29,12 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/payrolls/payroll_id/salarie
 
 #### **Response**
 
-```JSON
+```json
 200 OK
 content-type: application/json
 ```
 Body
-```JSON
+```json
 {
   "cursor": {
     "after": null,

@@ -21,7 +21,7 @@ Para usuários com portabilidade de salário ativa, o salario só estará dispon
 <br>
 
 
-```http 
+``` 
 POST https://sandbox-api.openbank.stone.com.br/api/v1/payrolls
 ```
 ---
@@ -47,12 +47,12 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/payrolls
 
 #### **Response**
 
-```JSON
+```json
 202 Accepted
 content-type: application/json
 ```
 Body
-```JSON
+```json
 {
   "account_id": "477f8576-ca82-462b-be73-dc28cc6490c3",
   "amount": 100,

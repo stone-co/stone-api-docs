@@ -60,10 +60,10 @@ Para obter o seu Access Token, será necessário gerar um par de chaves RSA 4096
 Embora existam vários métodos para criação de pares de chaves público e privada, a ferramenta OpenSSL de código aberto é uma das mais usadas, por isso, recomendamos o seu uso.
 
 Em todas as plataformas disponíveis - Linux, MacOS e Windows, os comandos do OpenSSL são iguais: <br>
-
-    openssl genrsa -out mykey.pem 4096
-    openssl rsa -in mykey.pem -pubout > mykey.pub
-
+```shell
+   $ openssl genrsa -out mykey.pem 4096
+   $ openssl rsa -in mykey.pem -pubout > mykey.pub
+```
 Algumas dicas importantes: 
 
 {{< alert >}}
@@ -148,7 +148,7 @@ O request para receber o access_token é realizado através do método POST com 
 **Header**<br>Na nossa API, usaremos sempre o algoritmo **RS256**. Este algoritmo especificado nesta RFC usa criptografia “RSASSA-PKCS1-v1_5 com SHA-256”. 
 Abaixo você encontrará um exemplo de header.
 
-```JSON
+```json
 {
   "alg": "RS256",
   "typ": "JWT"
@@ -157,7 +157,7 @@ Abaixo você encontrará um exemplo de header.
 
 A chamada é com o método **POST** com o header **Content-Type** e **User-Agent**. <br>O **Content-Type** informado deve ser **x-www-form-urlencoded** (o mesmo usado por submissão de formulários HTML) e o header **User-Agent** deve estar habilitado com o nome da sua aplicação. Verifique o exemplo abaixo:
 
-```JSON
+```json
 {
   "user-agent": "Nome da aplicação",
   "content-type": "application/x-www-form-urlencoded"

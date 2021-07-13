@@ -26,7 +26,7 @@ weight: 9
 
 <br>
 
-```http request
+```
 POST https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices/id/cancel
 ```
 <br>
@@ -65,12 +65,12 @@ Não será possível cancelar o boleto caso:
 
 #### **Response**
 
-```JSON
+```
 200 OK
 content-type: application/json
 ```
 Body
-```JSON
+```json
 
 { }
 

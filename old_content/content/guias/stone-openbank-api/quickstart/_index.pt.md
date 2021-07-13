@@ -61,7 +61,7 @@ A **Stone Open Bank** disponibiliza sua infraestrutura por meio de uma [API REST
 Depois de se cadastrar, pegar o seu token de teste e escolher a sua linguagem já é possível começar a movimentar a sua conta de teste! Para realizar uma movimentação de TED teste, por exemplo, você pode fazer uma chamada na **Stone Open Bank API**. Pode-se observar um exemplo de chamada teste abaixo:
 
 ##### cURL
-```cURL
+```shell
 curl --request POST \
   --url https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers \
   --header 'Content-Type: application/json' \

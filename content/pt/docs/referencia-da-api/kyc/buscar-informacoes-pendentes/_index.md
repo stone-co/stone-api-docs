@@ -15,7 +15,7 @@ A partir do _response_ desse endpoint, é possível verificar os _ids_ das infor
 
 <br>
 
-```http request
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/users/{id_do_usuario}/kyc/request
 ```
 <br>
@@ -32,7 +32,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/users/{id_do_usuario}/kyc/r
 #### **Response**
 ---
 
-```Json
+```
 200 OK
 ```
 

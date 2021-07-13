@@ -14,12 +14,14 @@ Para receber um PIX via QR Code, a cliente precisa ter a sua chave aleatória ca
 #### Criação de um QR Code
 
 ##### Exemplo de requisição:
-```textmate
+```
 POST /api/v1/pix_payment_invoices
 authorization: subject application:participante
 content-type: application/json
 x-stone-idempotency-key: string()
+```
 
+```
 {
   "amount": integer(),
   "expiration": integer() | null, # valor em segundos, campo é opcional!
@@ -37,13 +39,16 @@ x-stone-idempotency-key: string()
 ```
 
 ##### Exemplo de resposta:
-```textmate
+```
 201 CREATED
+```
+
+```json
 {
    "id": "54071fc2-8068-4b26-bed7-be112228ed98",
    "amount": 1000,
    "created_at": "2020-08-19T13:49:43.094436Z",
-   "created_by": "user:54071fc2-8068-4b26-bed7-be112228ed98"
+   "created_by": "user:54071fc2-8068-4b26-bed7-be112228ed98",
    "revision": 0,
    "data_url": "https://api.openbank.stone.com.br/pix/{{jti()}}" 
 
@@ -53,25 +58,28 @@ x-stone-idempotency-key: string()
 #### Consulta de um QR code gerado:
 
 ##### Exemplo de requisição:
-```textmate
+```
 GET /api/v1/pix_payment_invoices/:id
 authorization: subject application:participante
 content-type: application/json
 ```
 ##### Exemplo de resposta:
-```textmate
+```
 200 OK
+```
+
+```json
 {
    "id": "54071fc2-8068-4b26-bed7-be112228ed98",
    "amount": 1000,
    "created_at": "2020-08-19T13:49:43.094436Z",
-   "created_by": "user:54071fc2-8068-4b26-bed7-be112228ed98"
+   "created_by": "user:54071fc2-8068-4b26-bed7-be112228ed98",
    "revision": 0,
    "data_url": "https://api.openbank.stone.com.br/pix/{{jti()}}" 
 }
 ```
 ##### Exemplo de requisição de uma lista paginada:
-```textmate
+```
 GET /api/v1/pix_payment_invoices?filter={
   customer_random_key: string(), 
   created_at: datetime(), 
@@ -84,7 +92,7 @@ content-type: application/json
 ```
 
 ##### Exemplo de resposta:
-```textmate
+```
 200 OK
 
 {{ lista paginada de resultados }}

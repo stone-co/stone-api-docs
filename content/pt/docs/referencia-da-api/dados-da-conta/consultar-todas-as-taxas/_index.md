@@ -9,7 +9,7 @@ weight: 12
 
 ---
 
-```http
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/fees
 ```
 
@@ -28,7 +28,7 @@ Identificador da conta.
 ##### Response
 ---
 
-```http
+```
 201 OK
 content-type: application/json
 ```
@@ -37,7 +37,7 @@ content-type: application/json
 ##### Body
 ---
 
-```JSON
+```json
 {
   "cursor": {
     "after": null,

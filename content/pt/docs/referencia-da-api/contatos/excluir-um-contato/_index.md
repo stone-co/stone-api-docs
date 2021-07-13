@@ -8,7 +8,7 @@ weight: 6
 ---
 
 
-```http
+```
 DELETE https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contacts/contact_id
 ```
 
@@ -34,6 +34,6 @@ Identificador do contato.
 
 #### **Response**
 
-```http
+```
 200 OK 
 ```

@@ -18,14 +18,14 @@ As chaves podem ser:
 - Chave aleatória - código identificador que permite o recebimento do PIX por meio de QRCodes
 
 ##### Exemplo de requisição:
-```textmate
+```
 POST /api/v1/pix_entries
 authorization: subject application:participante
 content-type: application/json
 x-stone-idempotency-key: string()
 ```
 
-```textmate
+```
 {
    "key": string() | null no caso de RANDOM_KEY,
    "key_type": "PHONE", # "CPF" | "CNPJ" | "PHONE" | "EMAIL" | "RANDOM_KEY"
@@ -47,7 +47,7 @@ x-stone-idempotency-key: string()
 ```
 
 ##### Exemplo de resposta:
-```textmate
+```
 202 CONTINUE
 content-type: application/json
 {
@@ -57,7 +57,7 @@ content-type: application/json
 ```
 
 ##### Webhook:
-```textmate
+```
 {
    "input": {
      key: uuid(),

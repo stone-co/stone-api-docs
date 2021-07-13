@@ -10,7 +10,7 @@ weight: 6
 
 ---
 
-```http 
+``` 
 POST https://sandbox-api.openbank.stone.com.br/api/v1/payments/payment_id/cancel
 ```
 ---
@@ -28,6 +28,6 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/payments/payment_id/cancel
 
 ##### **Response**
 
-```JSON
+```json
 204 No Content 
 ```

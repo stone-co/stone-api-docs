@@ -15,7 +15,7 @@ Provê um conjunto de informações para acompanhar o pedido de cadastro da cont
 
 ---
 
-```http
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/applications/:client_id/signups/:sign_up_request_id
 ```
 
@@ -63,7 +63,7 @@ A autenticação pública deve passar pelo nosso IAM Keycloak através do protoc
 ##### **Responses**
 ---
 
-```Json
+```json
 200 ok 
 ```
 
@@ -159,7 +159,7 @@ A autenticação pública deve passar pelo nosso IAM Keycloak através do protoc
 
 ##### Example
 
-```Json
+```json
 {
   "error": null,
   "id": "ea3c66b7-e8cb-46b8-a140-bd6f33738380",

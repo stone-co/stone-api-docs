@@ -7,7 +7,7 @@ lastmod: 2019-12-02T22:56:58.185Z
 weight: 5
 ---
 
-```http
+```
 POST https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contacts/contact_id
 ```
 
@@ -73,12 +73,12 @@ Chave de idempotência.
 
 #### **Response**
 
-```http
+```
 200 ok
 content-type: application/json
 ```
 Body
-```JSON
+```json
 {
   "bank_accounts": [],
   "email": null,

@@ -10,7 +10,7 @@ lastmod: "2020-03-09T17:11:01.543Z"
 
 <br>
 
-```http request
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
 ```
 <br>
@@ -147,14 +147,14 @@ Formato "YYYY-MM-DD".
 
 #### **Response**
 
-```JSON
+```
 200 OK
 content-type: application/json
 ```
 
 ##### Body
 
-```JSON
+```json
 
 {
     "cursor": {
@@ -173,7 +173,7 @@ content-type: application/json
              "document":"98146856000174",
              "document_type":"cnpj",
              "legal_name":"Sr. Mirella",
-             "trade_name":NULL
+             "trade_name":null
           },
           "created_at":"2020-03-10T15:03:34Z",
           "created_by":"user:380f9969-8946-4f88-a781-be8b7efc1f90",
@@ -208,11 +208,11 @@ content-type: application/json
              "document":"98146856000174",
              "document_type":"cnpj",
              "legal_name":"Sr. Mirella",
-             "trade_name":NULL
+             "trade_name":null
           },
           "receiver": null,
           "registered_at":"2020-03-10T15:03:34Z",
-          "settled_at":NULL,
+          "settled_at":null,
           "status":"REGISTERED",
           "writable_line":"19790000052020031015703344761550581910000002000"
        },
@@ -226,7 +226,7 @@ content-type: application/json
              "document":"98146856000174",
              "document_type":"cnpj",
              "legal_name":"Sr. Mirella",
-             "trade_name":NULL
+             "trade_name":null
           },
           "created_at":"2020-03-10T15:03:34Z",
           "created_by":"user:380f9969-8946-4f88-a781-be8b7efc1f90",
@@ -261,11 +261,11 @@ content-type: application/json
              "document":"98146856000174",
              "document_type":"cnpj",
              "legal_name":"Sr. Mirella",
-             "trade_name":NULL
+             "trade_name":null
           },
           "receiver": null,
           "registered_at":"2020-03-10T15:03:34Z",
-          "settled_at":NULL,
+          "settled_at":null,
           "status":"REGISTERED",
           "writable_line":"19790000052020031015703344761550581910000002000"
        }
@@ -274,13 +274,13 @@ content-type: application/json
 ```
 <br>
 
-```JSON
+```
 403 Forbidden
 ```
 
 ##### Body
 
-```Json
+```json
 {
   "type": "object",
   "properties": {

@@ -29,7 +29,7 @@ Para isso exigimos que nas [requisições HTTP](https://developer.mozilla.org/pt
 
 Exemplo de cabeçalho de uma chamada autenticada:
 
-```json5
+```
 GET /api/v1/accounts HTTP/1.1
 Host: sandbox-api.openbank.stone.com.br
 User-Agent: curl/7.61.1
@@ -103,9 +103,9 @@ Esta chamada será nas seguintes URLs (por ambiente):
 A chamada é com o método `POST` com o header  `Content-Type`  e `User-Agent`.  O `Content-Type` informado deve ser `x-www-form-urlencoded` (o mesmo usado por submissão de formulários HTML) e o header `User-Agent` deve estar habilitado.
 
 Ex.:
-```json5
-"user-agent": "Nome da aplicação",
-"content-type": "application/x-www-form-urlencoded"
+```
+"User-Agent": "Nome da aplicação",
+"Content-Type": "application/x-www-form-urlencoded"
 ```
 
 | Nome                  | Valor                                                                                                                                    |
@@ -117,7 +117,7 @@ Ex.:
 
 Um exemplo de chamada de autenticação:
 
-```json5
+```shell
 curl -X POST https://sandbox-accounts.openbank.stone.com.br/auth/realms/stone_bank/protocol/openid-connect/token -H 'content-type: application/x-www-form-urlencoded' 
 -d 'client_id=ID_EXEMPLO&grant_type=client_credentials&client_assertion_type=urn:ietf:params:oauth:client-assertion-type:jwt-bearer&client_assertion=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c'
 ```

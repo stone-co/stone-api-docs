@@ -19,23 +19,23 @@ Disponível para os tipos: `phone`e `email`.
 
 ##### **Request**
 
-```http request
+```
 POST /api/v1/pix/:account_id/entry_claims
 ```
 Body
-```text
+```json
 {
-  "key_type": “phone”, 
-  “claim_type”: “portability”,
-  "participant_ispb": “1234567890”,
+  "key_type": "phone", 
+  "claim_type": "portability",
+  "participant_ispb": "1234567890",
   "beneficiary_account": {
-     "branch_code": “0001”,
+     "branch_code": "0001",
      "account_code": "00016583",
      "account_type": "CC",
      "opened_at": "2019-11-18T03:00:00Z"
   },
   "beneficiary_entity": {
-     "name": “0001”,
+     "name": "0001",
      "document_type": "cpf",
      "document": "13152256685"
   }
@@ -45,14 +45,14 @@ Body
 
 ##### **Response**
 
-```http request
+```
 202 ACCEPTED
 ```
 Body
-```text
+```json
 {
-  "claim_id": “6c8e9fb9-1416-434d-9933-a36fb3ad7a8c”,
-  "claim_type": “portability”
+  "claim_id": "6c8e9fb9-1416-434d-9933-a36fb3ad7a8c",
+  "claim_type": "portability"
 }
 ```
 <br> <br> 
@@ -64,7 +64,7 @@ Serão disparados webhooks quando o status da reivindicação sofrer alteraçõe
 
 As seguintes informações virão no campo `target_data`.
 
-```text
+```json
 {
   "claim_id": "6c8e9fb9-1416-434d-9933-a36fb3ad7a8c",
   "status": "open"

@@ -11,7 +11,7 @@ description: >
 
 Este endpoint lista todas as operações agendadas que não foram liquidadas até o momento da consulta.
 
-```http
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/{id}/schedulings
 ```
 
@@ -62,12 +62,12 @@ Traz a página posterior ao cursor.
 
 <br> **Transferência interna**
 
-```JSON
+```
 200 OK
 content-type: application/json
 ```
 
-```JSON
+```json
 {
     "cursor": {
         "after": null,
@@ -104,12 +104,12 @@ content-type: application/json
 
 <br> **Transferência externa**
 
-```JSON
+```
 200 OK
 content-type: application/json
 ```
 
-```JSON
+```json
 {
     "cursor": {
         "after": null,
@@ -149,12 +149,12 @@ content-type: application/json
 
 <br> **Pagamento**
 
-```JSON
+```json
 200 OK
 content-type: application/json
 ```
 
-```JSON
+```json
 {
     "cursor": {
         "after": null,
@@ -189,12 +189,12 @@ content-type: application/json
 ---
 ##### **Mensagens de erro**
 
-```JSON
+```
 400 Bad Request
 content-type: application/json
 ```
 
-```JSON
+```json
 {
     "path": "limit",
     "type": "srn:error:invalid_cursor"
@@ -202,12 +202,12 @@ content-type: application/json
 ```
 ---
 
-```JSON
+```
 403 Forbidden
 content-type: application/json
 ```
 
-```JSON
+```json
 {
     "type": "srn:error:unauthorized"
 }

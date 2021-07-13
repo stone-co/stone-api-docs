@@ -17,7 +17,7 @@ O campo `execution_limit_date` representa o limite para o qual um agendamento po
 
 O campo `next_available_execution_date` representa o próximo dia disponível para agendamento.
 
-```http
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/schedulings/calendar
 ```
 
@@ -60,13 +60,13 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/schedulings/calendar
 
 ---
 
-```JSON
+```
 201 Created
 content-type: application/json
 ```
 Body
 
-```JSON
+```json
         {
             "execution_limit_date": "2020-03-30",
             "next_available_execution_date": "2019-04-01",

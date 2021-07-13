@@ -7,7 +7,7 @@ lastmod: 2021-06-25T20:01:46.027Z
 weight: 3
 ---
 
-```http
+```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contacts
 ```
 
@@ -48,12 +48,12 @@ Filtra contatos pela chave Pix fornecida.
 
 #### **Response**
 
-```http
+```
 200 ok
 content-type: application/json
 ```
 Body
-```JSON
+```json
 [
   {
     "bank_accounts": [

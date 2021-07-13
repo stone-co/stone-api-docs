@@ -10,24 +10,26 @@ description: >
 
 ##### **Request**
 
-```http request
+```
 GET /api/v1/pix_payment_invoices
 ```
 
 ##### **Filtros possíveis**
-```text
+```
 - "account_id" - string (obrigatório)
 - "key": string
 - "transaction_id": string
 ```
 
 ##### **Response**
-```text
+```
 200 OK
+```
 
+```json
 {
-  cursor: {
-    before: null,
+  "cursor": {
+    "before": null,
     after: "c2hvcnQ",
     limit: 100
   },
@@ -51,7 +53,7 @@ GET /api/v1/pix_payment_invoices
       "location": "pix.stone.com.br/pix/1dd7f893-a58e-4172-8702-8dc33e21a403",
       "status": "ACTIVE",
       "customer": {
-        "name": "Fulano da Silva"
+        "name": "Fulano da Silva",
         "document": "18894559890"
       },
       "additional_data": [
