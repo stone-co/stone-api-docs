@@ -1,12 +1,11 @@
 ---
 title: "Mensagens De Erro"
 linkTitle: "Mensagens De Erro"
-date: 2020-05-01T18:34:12-03:00
-lastmod: 2020-09-21T18:00:00-03:00
-weight: 7
+date: 2021-07-12T11:20:05-03:00
+lastmod: 2021-07-12T11:20:05-03:00
+weight: 6
 description: >
 
----
 ---
 
 <br>

@@ -1,12 +1,10 @@
 ---
 title: "Códigos De Resposta"
 linkTitle: "Códigos De Resposta"
-date: 2020-05-02T18:33:23-03:00
-lastmod: 2020-09-21T18:00:00-03:00
-weight: 6
+date: 2021-07-12T11:20:05-03:00
+lastmod: 2021-07-12T11:20:05-03:00
+weight: 5
 description: >
-
----
 
 ---
 

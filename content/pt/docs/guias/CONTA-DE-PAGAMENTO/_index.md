@@ -37,7 +37,7 @@ O processo de abertura de conta pode ser resumido em duas etapas que serão deta
 
 ### **Envio de Dados Cadastrais**
 
-O processo de abertura de conta será iniciado quando o usuário preencher os dados básicos de cadastro para criação de sua identidade na Stone. A identidade é o perfil do usuário na Stone e será gerido sempre por nós. Os dados solicitados nesta etapa serão Nome Completo, CPF, CNPJ, Razão Social e E-mail. 
+O processo de abertura de conta será iniciado quando o usuário preencher os dados básicos de cadastro para criação de sua identidade na Stone. A identidade é o perfil do usuário na Stone e será gerida sempre por nós. Os dados solicitados nesta etapa serão Nome Completo, CPF, CNPJ, Razão Social e E-mail. 
 
 
 **Atenção!**
@@ -76,8 +76,10 @@ Em nossa modelagem de conta de pagamento, utilizamos dois conceitos para refleti
 
 |  |   |
 | ------- | -------------------------- |
-| user_id | Identificador que se refere ao seu perfil na Stone contendo informações cadastrais como nome, sobrenome e CPF ou CNPJ. |
-| account_id | Identificador que se refere à sua conta na Stone, contendo dados da sua conta de pagamento. |
+| user_id | Identificador que se refere à sua pessoa física (PF) na Stone contendo informações cadastrais como nome, sobrenome e CPF. |
+| organization_id | Identificador que se refere à sua pessoa jurídica (PJ) na Stone contendo informações cadastrais como faturamento mensal e CNPJ. |
+| account_id | Identificador que se refere a sua conta na Stone, contendo dados da sua conta de pagamento. |
+
 
 
 

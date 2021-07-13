@@ -16,6 +16,19 @@ description: >
 GET https://sandbox-api.openbank.stone.com.br/api/v1/institutions
 ```
 
+---
+
+#### **PATH PARAMS**
+
+---
+
+**context**  `string`
+<br> Pode ser "spi", "str", ou "all". O default se nada for passado é "str".
+
+* "str" - Retornamos as instituições participantes do STR. Útil para operaçõs de TED
+* "spi" - Retornamos as instituições participantes do SPI. Útil para operaçõs de PIX
+* "all" - Retornamos todas as instituições
+
 <br>
 
 #### **Response**
@@ -23,7 +36,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/institutions
 
 
 ```http
-201 Created
+200 Ok
 content-type: application/json
 ```
 <br>
