@@ -195,7 +195,7 @@ A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) s
 
 
 
-```json
+```
 x-stone-webhook-event-id: "930bbd6d-0c7a-4fe4-8b50-4b82a20cb847"
 x-stone-webhook-event-type: "cash_out_internal_transfer"
 ```
@@ -429,52 +429,53 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/applications/application:{{
 **Exemplo de Response**
 
 ```json
-    {
-        "client_id": "application:de4d224b-3f79-4b4d-8ff5-c1bc475830e5",
-        "created_at": "2021-06-02T19:40:24Z",
-        "data": {
-            "env": "sandbox",
-            "event_happened_at": "2021-06-02T19:40:23Z",
-            "event_notified_at": "2021-06-02T19:40:24Z",
-            "event_type": "cash_out_internal_transfer_finished",
-            "id": "7919b78a-630e-4ad4-bb12-91eec729175d",
-            "target_data": {
-                "account_id": "6745bdf0-7647-40cd-8666-d78bb15fbd38",
-                "amount": 4000,
-                "approval_expired_at": null,
-                "approved_at": "2021-06-02T19:40:23Z",
-                "approved_by": "user:24017c13-1f9d-44e4-b4af-007f695cece3",
-                "batch_id": null,
-                "cancelled_at": null,
-                "cancelled_by": null,
-                "created_at": "2021-06-02T19:40:23Z",
-                "created_by": "user:24017c13-1f9d-44e4-b4af-007f695cece3",
-                "description": "",
-                "failed_at": null,
-                "failure_reason_code": null,
-                "failure_reason_description": null,
-                "fee": 0,
-                "finished_at": "2021-06-02T19:40:23Z",
-                "id": "7919b78a-630e-4ad4-bb12-91eec729175d",
-                "rejected_at": null,
-                "rejected_by": null,
-                "scheduled_to": null,
-                "settled_at": "2021-06-02T19:40:23Z",
-                "status": "FINISHED",
-                "target": {
-                    "account": {
-                        "account_code": "55382931"
-                    },
-                    "entity": {
-                        "name": ""
-                    }
-                },
-                "target_account_code": "55382931",
-                "target_account_owner_name": ""
-            },
-            "target_detail_uri": "https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers/7919b78a-630e-4ad4-bb12-91eec729175d",
-            "target_id": "7919b78a-630e-4ad4-bb12-91eec729175d",
-            "target_statement_uri": null,
-            "target_type": "internal_transfer_finished"
+{
+  "client_id": "application:de4d224b-3f79-4b4d-8ff5-c1bc475830e5",
+  "created_at": "2021-06-02T19:40:24Z",
+  "data": {
+    "env": "sandbox",
+    "event_happened_at": "2021-06-02T19:40:23Z",
+    "event_notified_at": "2021-06-02T19:40:24Z",
+    "event_type": "cash_out_internal_transfer_finished",
+    "id": "7919b78a-630e-4ad4-bb12-91eec729175d",
+    "target_data": {
+      "account_id": "6745bdf0-7647-40cd-8666-d78bb15fbd38",
+      "amount": 4000,
+      "approval_expired_at": null,
+      "approved_at": "2021-06-02T19:40:23Z",
+      "approved_by": "user:24017c13-1f9d-44e4-b4af-007f695cece3",
+      "batch_id": null,
+      "cancelled_at": null,
+      "cancelled_by": null,
+      "created_at": "2021-06-02T19:40:23Z",
+      "created_by": "user:24017c13-1f9d-44e4-b4af-007f695cece3",
+      "description": "",
+      "failed_at": null,
+      "failure_reason_code": null,
+      "failure_reason_description": null,
+      "fee": 0,
+      "finished_at": "2021-06-02T19:40:23Z",
+      "id": "7919b78a-630e-4ad4-bb12-91eec729175d",
+      "rejected_at": null,
+      "rejected_by": null,
+      "scheduled_to": null,
+      "settled_at": "2021-06-02T19:40:23Z",
+      "status": "FINISHED",
+      "target": {
+        "account": {
+          "account_code": "55382931"
+        },
+        "entity": {
+          "name": ""
         }
+      },
+      "target_account_code": "55382931",
+      "target_account_owner_name": ""
+    },
+    "target_detail_uri": "https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers/7919b78a-630e-4ad4-bb12-91eec729175d",
+    "target_id": "7919b78a-630e-4ad4-bb12-91eec729175d",
+    "target_statement_uri": null,
+    "target_type": "internal_transfer_finished"
+  }
+}
 ```

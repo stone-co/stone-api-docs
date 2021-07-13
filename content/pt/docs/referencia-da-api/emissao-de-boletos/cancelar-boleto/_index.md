@@ -65,12 +65,12 @@ Não será possível cancelar o boleto caso:
 
 #### **Response**
 
-```JSON
+```
 200 OK
 content-type: application/json
 ```
 Body
-```JSON
+```json
 
 { }
 
