@@ -10,7 +10,7 @@ weight: 3
 ---
 <br>
 
-O Dry Run de pagamentos retorna, além do [Objeto Pagamento](/docs/referencia-da-api/pagamentos/o-objeto-pagamento/) em si, os Objetos [Barcode Details](#objeto-barcode-details) e [Details](#objeto-details).
+O Dry Run de pagamentos retorna, além do [Objeto Pagamento]({{< relref "/docs/referencia-da-api/pagamentos/o-objeto-pagamento/">}}) em si, os Objetos [Barcode Details](#objeto-barcode-details) e [Details](#objeto-details).
 
 Como complemento, descrevemos os possíveis resultados para o campo [document_payment_type](#document_payment_type).
 
@@ -52,13 +52,13 @@ O Objeto Details traz informações do status atual desse documento segundo sua 
 | discount_value         | Valor do desconto que está sendo aplicado ao boleto. Caso nenhum desconto esteja sendo aplicado vira `null`.                                                                           | _Integer_ |
 | document_payment_type  | Informa o código referente a título.					| _Integer_	|
 | document_type          | Informa o tipo de documento. Valores possíveis são: boleto e concessionaria.                                                                                                         | _String_  |
-| expiration_date        | Data de vencimento                                                                                                                                                                   | _String_  |
-| face_value             | Valor com o qual o documento foi criado e que consta do código de barras.                                                                                                            | _Integer_ |
-| fine_value             | Valor da multa que está sendo aplicada ao boleto. Caso nenhuma multa esteja sendo aplicada vira `null`.                                                                                | _Integer_ |
-| interest_value         | Valor dos juros que estão sendo aplicados ao boleto. Caso não haja juros aplicados vira `null`.                                                                                        | _Integer_ |
-| max_value              | Valor máximo que será aceito no pagamento deste documento.                                                                                                                           | _Integer_ |
-| min_value              | Valor mínimo que será aceito no pagamento deste documento.                                                                                                                           | _Integer_ |
-| payer_cpf_cnpj         | Número do documento do pagador sem pontos.                                                                                                                                           | _String_  |
+| expiration_date        | Data de vencimento    | _String_  |
+| face_value             | Valor com o qual o documento foi criado e que consta do código de barras.        | _Integer_ |
+| fine_value             | Valor da multa que está sendo aplicada ao boleto. Caso nenhuma multa esteja sendo aplicada vira `null`.     | _Integer_ |
+| interest_value         | Valor dos juros que estão sendo aplicados ao boleto. Caso não haja juros aplicados vira `null`.            | _Integer_ |
+| max_value              | Valor máximo que será aceito no pagamento deste documento.                        | _Integer_ |
+| min_value              | Valor mínimo que será aceito no pagamento deste documento.                 | _Integer_ |
+| payer_cpf_cnpj         | Número do documento do pagador sem pontos.                     | _String_  |
 | payer_legal_name       | É o nome que identifica o pagador para fins legais, administrativos e outros fins oficiais.                                                                                          | _String_  |
 | payer_trade_name       | Nome fantasia do pagador.                                                                                                                                                            | _String_  |
 | payment_end_time       | Horário até o qual o pagamento é possível em um dia útil. Respeita o payment_limit_date. Formato hh:mm:ss.                                                                           | _String_  |
@@ -75,6 +75,9 @@ O Objeto Details traz informações do status atual desse documento segundo sua 
 | writable_line          | Código numérico que acompanha o código de barras.                                                                                                                                    | _String_  |
 | unpayable_reason_code  | Código que representa o motivo de estar impagável. | _String_	|
 | unpayable_reason_description | Descrição do motivo de estar impagável. | _String_	| 
+| accepts_partial_payment | Indica se o boleto aceita pagamento parcial                       | _Boolean_ |
+| number_of_partials | Indica quantas vezes o boleto pode ser pago, se o número for 99 significa que o número de vezes é ilimitado | _Integer_ |
+
 
 <br>
 

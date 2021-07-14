@@ -91,7 +91,7 @@ Body
         "divergent_amount_auth_type": 3,
         "interest_value": 0,
         "updatable_value": null,
-        "min_value": 15000,
+        "min_value": 8000,
         "payer_cpf_cnpj": "11725907020",
         "payment_limit_date": "2021-05-27",
         "writable_line": "19790000052530097937108880416287686330000015000",
@@ -121,7 +121,9 @@ Body
         "fine_date": null,
         "max_value": 15000,
         "expiration_date": "2021-05-27",
-        "recipient_cpf_cnpj": "11725907020"
+        "recipient_cpf_cnpj": "11725907020",
+        "accepts_partial_payment": true,
+        "number_of_partials": 2
     },
     "failed_at": null,
     "failure_reason_code": null,
