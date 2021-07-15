@@ -1,40 +1,51 @@
 ---
-title: "Listar"
-linkTitle: "Listar"
-date: 2020-09-17T18:00:00-03:00
-lastmod: 2020-09-17T18:00:00-03:00
-weight: 6
+title: "Listar chaves Pix"
+linkTitle: "Listar chaves Pix"
+date: 2021-07-15T14:00:00-03:00
+lastmod: 2021-07-15T14:00:00-03:00
+weight: 1
 draft: false
 description: >
 
 ---
+<br>
 
-##### **Request**
+Para listar as chaves de uma conta, você deve utilizar o endpoint abaixo:
 
-```http request
-GET /api/v1/pix/:account_id/entries
 ```
-Parâmetros para query. 
-```text
-- "participant_ispb" *(obrigatório para participantes indiretos)
-- "beneficiary_entity_name"
-- "beneficiary_entity_document_type"
-- "beneficiary_entity_document"
-- "beneficiary_account_branch_code"
-- "beneficiary_account_account_code"
-- "beneficiary_account_account_type"
-- "beneficiary_account_created_at"
-- "status"
+GET /api/v1/pix/{{account_id}}/entries
 ```
+##### **HEADERS**
+---
+
+**x-stone-idempotency-key** `string`
+<br>Chave de idempotência
+
+**authorization** `string`
+<br> Bearer Token
+
+**User-Agent** `string`
+<br>Nome da sua aplicacão
+
+<br>
+
+##### **QUERY PARAMS**
+---
+
+**account_id** `string`
+<br> Identificador da conta
 <br> <br> 
 
-##### **Response**
-
-```http request
+##### **RESPONSE**
+---
+```
 200 OK
 ```
-Body
-```text
+<br>
+
+**Body**
+
+```json
 {
   "cursor: {},
   "data": [

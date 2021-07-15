@@ -1,14 +1,14 @@
 ---
-title: "Criar"
-linkTitle: "Criar"
-date: 2020-09-17T18:00:00-03:00
-lastmod: 2020-09-17T18:00:00-03:00
-weight: 3
-draft: false
+title: "Criar chaves (Draft)"
+linkTitle: "Criar chaves (Draft)"
+date: 2021-07-15T15:00:00-03:00
+lastmod: 2021-07-15T15:00:00-03:00
+weight: 2
+draft: true
 description: >
 
 ---
-Esse médodo deve ser usado quando o dado a ser usado como identificador da Chave PIX ainda não foi cadastrado junto ao DICT ou o cadastro já está inativo. Em casos em que o dado já está sendo utilizado em uma Chave PIX ativa deve ser feita uma [reivindicação](https://stone-co.github.io/docs/pix/chaves-pix/reivindicar/) da Chave PIX. 
+Esse médodo deve ser usado quando o dado a ser usado como identificador da Chave PIX ainda não foi cadastrado junto ao DICT ou o cadastro já está inativo. Em casos em que o dado já está sendo utilizado em uma Chave Pix ativa deve ser feita uma [reivindicação](https://stone-co.github.io/docs/pix/chaves-pix/reivindicar/) da Chave PIX. 
 <br><br>
 
 ##### **Request**
