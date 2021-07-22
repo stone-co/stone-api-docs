@@ -9,13 +9,19 @@ description: >
 ---
 ---
 
-
-
 ```http
 POST https://https://sandbox-api.openbank.stone.com.br/api/v1/users/signin
 ```
 
-Esse endpoint tem como finalidade realizar o sign-in de um usuário.
+Esse endpoint tem como finalidade realizar o sign-in de um usuário. O sign-in é a operação de autenticação que tem como resultado um *access token* necessário em outras chamadas dos nossos serviços.
+
+O sign-in possui um fluxo de interação com vários passos possíveis para confirmar a autenticação:
+
+- Identificação de um dispositivo
+- Validação de CAPTCHA (Completely Automated Test to tell Computers and Humans Apart)
+- Fatores de autenticação (senha, OTP - One Time Password, dispositivo cadastrado)
+
+O fluxo terá respostas diferentes dependendo da configuração de cada usuário. Se o usuário possui apenas senha como credencial, então será feita uma única chamada. Se o usuário tiver OTP, serão feitas duas chamadas. Se tiver dispositivo cadastrado podem haver mais de duas chamadas.
 
 <br>
 
@@ -23,50 +29,68 @@ Esse endpoint tem como finalidade realizar o sign-in de um usuário.
 #### **Quem pode usar esse endpoint?**
 ---
 
-Apenas `client applications` identificadas como `resource_server` podem solicitar sign-in por esse endpoint. 
-
-Caso não tenha uma aplicação criada em banking ainda, solicite a criação de uma por [aqui](https://app.pipefy.com/public/form/Qz4ptt_W/?origem_do_lead=Documenta%C3%A7%C3%A3o). 
-
-Caso já tenha uma aplicação, é necessário solicitar que a sua aplicação seja definida como um `resource_server`.
-
+Apenas `client applications` que o time cadastra para login de usuários. É um fluxo de exceção e não um modelo de parcerias.
 
 <br>
 
-#### **Como gero o token do header para acessar esse endpoint?**
----
+#### **Fazendo chamadas para o endpoint de sign in**
 
-Você pode seguir o guia descrito [clicando aqui](/docs/guias/integracao/autenticacao).
+O fluxo a seguir é necessário para todas as chamadas no endpoint de *sign in* (`POST {{ambiente}}/api/v1/users/signin`):
 
+- A aplicação cliente (aplicativo ou website) primeiro busca nossas chaves no endpoint `{{ambiente}}/api/v1/discovery/keys`
+- Itera pelo resultado e pega qualquer chave que tenha o campo `use` com o valor `enc` (encryption)
+- Monta o ***corpo da requisição*** (detalhes abaixo)
+- Cifra o conteúdo usando JWE (JSON Web Encryption)
+- Faz o POST para `{{ambiente}}/api/v1/users/signin` com o JWE dentro de um objeto JSON com o seguinte formato:
 
-<br>
+```json
+{
+  "jwe": "{{conteudo do JWE gerado aqui}}"
+}
+```
+
+#### **Fluxo de sign-in quando o usuário possui apenas senha cadastrada**
+
+A primeira chamada ao endpoint deve ter o seguinte ***corpo de requisição***:
+
+```json
+{
+  "client_id": id da aplicação cliente pedindo a autenticação de usuário,
+  "username": email,
+  "password": senha do usuário,
+  "scope": opcional(scopes de OAuth extra),
+  "captcha": valor da solução de captcha
+}
+```
 
 #### **Glossário**
 ---
 
 <br>
+| Termo                    | Definição                                                              |
+| ------------------------ | --------------------------------------------------------------------   |
+| client_id                | Id da aplicação autorizada pelo Panda.                                 |
+| scope                    | Lista de escopos requisitada para o token.                             |
+| username                 | Email do usuário.                                                      |
+| password                 | Senha do usuário.                                                      |
+| totp                     | Time-base One-Time Password (token do two factor authentication).      |
+| captcha                  | Resposta do captcha retornada pelo reCAPTCHA do Google.                |
+| assertion                | Identificador da asserção.                                             |
+| assertion_response       | Resposta da asserção para sign-in com dispositivo cadastrado.          |
+| challenge_id             | Identificador do desafio/challenge.                                    |
+| challenge_response       | Resposta do desafio/challenge para sign-in com dispositivo cadastrado. |
+| mobile_app_instance_id   | Id retornado pelo firebase.                                            |
+| subject                  | Quem deseja fazer a ação.                                              |
+| action                   | Ação a ser autorizada.                                                 |
+| resource                 | Recurso que sofrerá a ação.                                            |
+| resource_server          | Responsável por gerenciar o domínio do recurso.                        |
+| request                  | Pedido que um cliente realiza a um servidor.                           |
 
-| Termo                 | Definição                                                           |
-------------------------|-------------------------------------------------------------------- |
-| client_id             | Id da aplicação autorizada pelo Panda.                              |
-| scope | Lista de escopos requisitada para o token.                                          |
-| username | Email do usuário.                                                                |
-| password | Senha do usuário.                                                                |
-| totp | Time-base One-Time Password (token do two factor authentication).                    |
-| captcha | Resposta do captcha retornada pelo reCAPTCHA do Google.                           |
-| assertion | Identificador da asserção.                                                      |
-| assertion_response | Resposta da asserção para sign-in com dispositivo cadastrado.          |
-| challenge_id | Identificador do desafio/challenge.                                          |
-| challenge_response | Resposta do desafio/challenge para sign-in com dispositivo cadastrado. |
-| mobile_app_instance_id | Id retornado pelo firebase.                                        |
-| subject               | Quem deseja fazer a ação.                                           |
-| action                | Ação a ser autorizada.                                              |
-| resource              | Recurso que sofrerá a ação.                                         |
-| resource_server       | Responsável por gerenciar o domínio do recurso.                     |
-| request               | Pedido que um cliente realiza a um servidor.                        |
 
 <br>
 
 {{% pageinfo %}}
+
 **Atenção!**
 Os campos (assertion+assertion_response) e (challenge_id + challenge_response) são mutualmente exclusivos, apenas a presença de um dos pares é aceita.
 
