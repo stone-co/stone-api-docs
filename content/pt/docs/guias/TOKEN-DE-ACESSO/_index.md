@@ -139,6 +139,7 @@ Primeiramente, temos que gerar um token JWT local para conseguir fazer a autenti
 | clientId | Mesmo valor de sub, ou seja, o ClientID enviado ao desenvolvedor após o cadastro da aplicação. |
 | jti | Identificador único do token gerado. Normalmente se utiliza um UUID, mas não é obrigatório usar esse formato desde que a unicidade seja garantida. [Mais informações](https://tools.ietf.org/html/rfc7519#section-4.1.7). |
 | iat | Momento em que o token foi gerado. É UTC. Exemplo: "iat": 1542235633 |
+| iss | Mesmo valor de sub e clientId, ou seja, o ClientID enviado ao desenvolvedor após o cadastro da aplicação. |
 
 Após gerar esse token localmente, partiremos para receber o access_token e realizar as [chamadas autenticadas]({{< relref "/docs/guias/token-de-acesso/#chamada-autenticada">}}).
 
