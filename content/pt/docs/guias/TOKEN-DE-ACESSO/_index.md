@@ -213,3 +213,17 @@ O access_token possui duração de 15 minutos e você deve utilizar esse mesmo t
 A seguir, vamos te guiar pela seção [Conta de Pagamento]({{< relref "/docs/guias/conta-de-pagamento">}}), onde você poderá entender mais sobre as características do nosso negócio e sobre o processo de abertura de conta.
 
 
+## Collection do Postman
+---
+
+Para ajudar na realização das chamadas autenticadas, disponibilizamos alguns endpoints e códigos prontos!
+
+Você pode baixar clicando nos links abaixo:
+
+- <a href="link-para-consentimento.zip" download="Link de consentimento">Código em JS para geração do link de consentimento</a>
+- <a href="get_token_p parceiros.zip" download="Token de autenticação">Código em Python para geração do token de autenticação</a>
+- <a href="Criar-conta-Stone.zip" download="Criação de conta">Código em Python para pedido de criação para contas Stone</a>
+- <a href="Criar_Pagamentos.zip" download="Criar_Pagamentos">Collection do Postman para criar Pagamentos</a>
+- <a href="Emissao_Boletos.zip" download="Emissao_Boletos">Collection do Postman para Emissao de Boletos</a>
+- <a href="Pix_out.zip" download="Pix_out">Collection do Postman para realização de Pix</a>
+- <a href="Transferencias.zip" download="Transferências">Collection do Postman para Transferências</a>
