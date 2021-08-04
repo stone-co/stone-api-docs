@@ -3,7 +3,7 @@ title: "Consultar Pix recebido por QRCode"
 linkTitle: "Consultar Pix recebido por QRCode"
 date: 2021-06-16T15:17:00-03:00
 lastmod: 2021-06-16T15:17:00-03:00
-weight: 4
+weight: 1
 description: >
   
 ---

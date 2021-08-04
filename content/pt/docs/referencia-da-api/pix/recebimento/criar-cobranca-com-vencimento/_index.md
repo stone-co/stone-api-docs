@@ -4,7 +4,7 @@ linkTitle: "Criar Cobranças com Validade"
 date: 2021-06-16T15:17:00-03:00
 lastmod: 2021-06-16T15:17:00-03:00
 draft: false
-weight: 4
+weight: 2
 description: >
   
 ---
@@ -14,7 +14,7 @@ Através desse endpoint será possível criar cobranças Pix com vencimento atra
 <br>
 
 ```
-GET https://sandbox-api.openbank.stone.com.br/api/v1/pix_payment_invoices_with_due_date
+POST https://sandbox-api.openbank.stone.com.br/api/v1/pix_payment_invoices_with_due_date
 ```
 <br>
 
