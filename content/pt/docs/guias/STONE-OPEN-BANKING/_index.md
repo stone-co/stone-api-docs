@@ -1,8 +1,8 @@
 ---
 title: "STONE OPEN BANKING"
 linkTitle: "STONE OPEN BANKING"
-date: 2021-06-28T09:00:00-03:00
-lastmod: 2021-06-28T09:00:00-03:00
+date: 2021-08-05T15:40:00-03:00
+lastmod: 2021-08-05T15:40:00-03:00
 weight: 1
 draft: false
 
@@ -19,7 +19,7 @@ description: >
 **Seja bem-vindo à documentação de Open Banking da Stone!**
 <br>
 
-O Open Banking, ou sistema financeiro aberto, é a possibilidade de clientes de produtos e serviços financeiros permitirem o compartilhamento de suas informações entre diferentes instituições autorizadas pelo Banco Central e a movimentação de suas contas bancárias a partir de diferentes plataformas e não apenas pelo aplicativo ou site do banco, de forma segura, ágil e conveniente.
+Segundo o Banco Central, o Open Banking / Open Finance, ou sistema financeiro aberto, é a possibilidade de clientes de produtos e serviços financeiros permitirem o compartilhamento de suas informações entre diferentes instituições autorizadas pelo Banco Central e a movimentação de suas contas bancárias a partir de diferentes plataformas e não apenas pelo aplicativo ou site do banco, de forma segura, ágil e conveniente.
 
 Como na Stone somos fiéis defensores da competição e temos o cliente como nossa razão de existir, acreditamos na revolução proporcionada por esse sistema e construímos a primeira API de Open Banking plugada diretamente no coração do STR. Acreditamos que nosso produto poderá gerar novos modelos de negócios, dar maior controle e transparência, além de permitir automatizações e ganho de eficiência para as empresas. 
 
