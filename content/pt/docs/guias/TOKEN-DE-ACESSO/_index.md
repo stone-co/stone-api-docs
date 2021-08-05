@@ -227,3 +227,5 @@ Você pode baixar clicando nos links abaixo:
 - <a href="Emissao_Boletos.zip" download="Emissao_Boletos">Collection do Postman para Emissao de Boletos</a>
 - <a href="Pix_out.zip" download="Pix_out">Collection do Postman para realização de Pix</a>
 - <a href="Transferencias.zip" download="Transferências">Collection do Postman para Transferências</a>
+- <a href="Dados_da_Conta.zip" download="Dados da Conta">Collection do Postman para Dados da Conta (inclui extrato)</a>
+- <a href="Simulacoes(dry-run).zip" download="Dry-run">Collection do Postman para Simulações(Dry-run)</a>
