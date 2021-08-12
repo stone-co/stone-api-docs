@@ -229,3 +229,5 @@ Você pode baixar clicando nos links abaixo:
 - <a href="Transferencias.zip" download="Transferências">Collection do Postman para Transferências</a>
 - <a href="Dados_da_Conta.zip" download="Dados da Conta">Collection do Postman para Dados da Conta (inclui extrato)</a>
 - <a href="Simulacoes(dry-run).zip" download="Dry-run">Collection do Postman para Simulações(Dry-run)</a>
+- <a href="Comprovantes.zip" download="Comprovantes">Collection do Postman para emissão de Comprovantes</a>
+- <a href="Link_de_pagamento.zip" download="Link de Pagamento">Collection do Postman para Link de Pagamento</a>
