@@ -90,10 +90,10 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
 <br>
 
 <br> &nbsp;&nbsp;&nbsp;&nbsp;**date** `string`
-<br> &nbsp;&nbsp;&nbsp;&nbsp;Data até a qual o desconto deve ser aplicado. Formato ISO8601 `"YYYY-MM-DD"`. Só é aceito no tipo de cobrança.
+<br> &nbsp;&nbsp;&nbsp;&nbsp;Data até a qual o desconto deve ser aplicado. Formato ISO8601 `"YYYY-MM-DD"`. É aceito nos tipos de proposta e cobrança.
 <br>
 <br> &nbsp;&nbsp;&nbsp;&nbsp;**value** `string`
-<br> &nbsp;&nbsp;&nbsp;&nbsp;Valor percentual (%) do desconto que será aplicado ao boleto. O valor do deve ser maior que 0.0 e até 90.0. Formato decimal. Ex: "20.0". Só é aceito no tipo de cobrança.
+<br> &nbsp;&nbsp;&nbsp;&nbsp;Valor percentual (%) do desconto que será aplicado ao boleto. O valor do deve ser maior que 0.0 e até 90.0. Formato decimal. Ex: "20.0". É aceito nos tipos de proposta e cobrança.
 
 ---
 <br>
