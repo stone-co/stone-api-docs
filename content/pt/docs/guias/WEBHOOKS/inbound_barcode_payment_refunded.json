@@ -1,0 +1,19 @@
+{
+    "id": "79aa875e-ec6e-4e60-934e-14d0ddef0d5b",
+    "amount": 5000,
+    "barcode": "19791870700000050000000056674365784533668026",
+    "failed_at": "2021-08-02T22:58:55.295851",
+    "account_id": "43bd2391-7d20-5fd3-8fa7-045d27c1118b",
+    "event_type": "inbound_barcode_payment_refunded",
+    "received_at": "2021-08-02T22:58:54.194942",
+    "movement_date": "2021-08-02",
+    "receiver_ispb": "16501555",
+    "refund_reason": "Beneficiário com CPF/CNPJ divergente do cadastro no banco emissor.",
+    "capture_medium": "debit",
+    "cpf_cnpj_payer": "11921740590",
+    "receiver_compe": "197",
+    "capture_channel": "internet",
+    "event_happened_at": "2021-08-02T22:58:54.604434",
+    "capture_branch_code": "0001",
+    "operational_discharge_type": "total_intrabank_settlement"
+}
