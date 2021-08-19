@@ -1,8 +1,8 @@
 ---
 title: "WEBHOOKS"
 linkTitle: "WEBHOOKS"
-date: 2021-06-28T09:00:00-03:00
-lastmod: 2021-06-28T09:00:00-03:00
+date: 2021-08-19T12:38:00-03:00
+lastmod: 2021-08-19T12:38:00-03:00
 weight: 6
 draft: false
 description: >
@@ -54,6 +54,7 @@ A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) s
 | [barcode_payment_invoice_settled](barcode_payment_invoice_settled.json)              | Representa que o pagamento do boleto foi confirmado.                        |
 | [barcode_payment_invoice_expired](barcode_payment_invoice_expired.json)              | Representa que o boleto está expirado.                                    |
 | [cash_in_barcode_payment](cash_in_barcode_payment.json)                      | Representa a entrada do valor do boleto na conta do beneficiário.         | 
+| [inbound_barcode_payment_refunded](inbound_barcode_payment_refunded.json)            | Representa que o pagamento do boleto foi devolvido.         |
 
 <br>
 
