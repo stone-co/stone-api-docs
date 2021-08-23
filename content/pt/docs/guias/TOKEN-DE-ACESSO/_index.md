@@ -224,10 +224,11 @@ Você pode baixar clicando nos links abaixo:
 - <a href="get_token_p parceiros.zip" download="Token de autenticação">Código em Python para geração do token de autenticação</a>
 - <a href="Criar-conta-Stone.zip" download="Criação de conta">Código em Python para pedido de criação para contas Stone</a>
 - <a href="Criar_Pagamentos.zip" download="Criar_Pagamentos">Collection do Postman para criar Pagamentos</a>
-- <a href="Emissao_Boletos.zip" download="Emissao_Boletos">Collection do Postman para Emissao de Boletos</a>
 - <a href="Pix_out.zip" download="Pix_out">Collection do Postman para realização de Pix</a>
 - <a href="Transferencias.zip" download="Transferências">Collection do Postman para Transferências</a>
 - <a href="Dados_da_Conta.zip" download="Dados da Conta">Collection do Postman para Dados da Conta (inclui extrato)</a>
 - <a href="Simulacoes(dry-run).zip" download="Dry-run">Collection do Postman para Simulações(Dry-run)</a>
 - <a href="Comprovantes.zip" download="Comprovantes">Collection do Postman para emissão de Comprovantes</a>
 - <a href="Link_de_pagamento.zip" download="Link de Pagamento">Collection do Postman para Link de Pagamento</a>
+- <a href="Recargas.zip" download="Recargas">Collection do Postman para Recargas</a>
+- <a href="Boletos.zip" download="Boletos">Collection do Postman para Boletos</a>
