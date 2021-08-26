@@ -2,7 +2,7 @@
 title: "Estrutura de Transações no Extrato"
 slug: "estrutura-de-transacoes-no-extrato"
 date: 2021-02-12T16:10:18.658Z
-lastmod: 2021-02-19T13:14:16.248Z
+lastmod: 2021-08-26T10:28:16.248Z
 weight: 1
 ---
 
@@ -730,3 +730,40 @@ Veja as possíveis estruturas de cada transação que poderão imapactar o extra
     }    
 }
 ```
+
+##### Envio de um Pix
+
+```json
+{
+   "account_id": "7e785e98-c859-46c6-9dc7-37ea522ceadf",
+   "amount": -1000,
+   "balance_after": 47188,
+   "balance_before": 48188,
+   "counterparty_agent": {
+      "entity": {
+         "name": "Gabriela Abreu",
+         "document": "12409265707",
+         "document_type": "cpf"
+      },
+      "institution": {
+         "name": "BANCO SANTANDER (BRASIL) S.A.",
+         "compe": "033",
+         "ispb": "90400888"
+      },
+      "account": {
+         "account_type": "CC",
+         "branch_code": "4208",
+         "account_code": "10022294"
+      }
+   },
+   "created_at": "2021-08-25T13:23:49Z",
+   "fee_amount": 0,
+   "id": "7a076c8a-2522-4603-b36e-7bd90fc85389",
+   "operation": "debit",
+   "operation_amount": 1000,
+   "operation_id": "b5c2354c-91a0-4837-bb15-7f88fcd9d4c5",
+   "status": "FINISHED",
+   "subtitle": "Pix",
+   "title": "Gabriela Abreu",
+   "type": "outbound_pix_payment"
+}
