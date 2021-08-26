@@ -4,7 +4,7 @@ slug: "overview-emissao-boleto"
 draft: false
 weight: 1
 date: "2020-03-30T07:01:34.376Z"
-lastmod: "2020-12-23T13:10:22.067Z"
+lastmod: "2021-08-26T11:48:22.067Z"
 ---
 ---
 <br>
@@ -225,26 +225,35 @@ Segue os campos possíveis para um boleto.
 
 <br>
 
-<br>
+### Webhooks
 
-[Regras de Negócio](/docs/referencia-da-api/emissao-de-boletos/regras-de-negocio)
-
-<br>
-
-[Emitir Boleto](/docs/referencia-da-api/emissao-de-boletos/emitir-boleto)
+Para visualizar as notificações enviadas a cada etapa de uma emissão de boleto, basta acessar [aqui]({{< relref "/docs/guias/webhooks/#emissão-de-boleto">}})
 
 <br>
+<br>
 
-[Listar Boletos](/docs/referencia-da-api/emissao-de-boletos/listar-boletos)
+Próximos tópicos referente à Emissão de Boletos: 
 
 <br>
 
-[Retornar um Boleto](/docs/referencia-da-api/emissao-de-boletos/retornar-um-boleto)
+[Regras de Negócio]({{< relref "/docs/referencia-da-api/emissao-de-boletos/regras-de-negocio">}})
 
 <br>
 
-[Gerar PDF Boleto](/docs/referencia-da-api/emissao-de-boletos/gerar-boleto-pdf)
+[Emitir Boleto]({{< relref "/docs/referencia-da-api/emissao-de-boletos/emitir-boleto">}})
 
 <br>
 
-[Cancelar um Boleto](/docs/referencia-da-api/emissao-de-boletos/cancelar-boleto)
+[Listar Boletos]({{< relref "/docs/referencia-da-api/emissao-de-boletos/listar-boletos">}})
+
+<br>
+
+[Retornar um Boleto]({{< relref "/docs/referencia-da-api/emissao-de-boletos/retornar-um-boleto">}})
+
+<br>
+
+[Gerar PDF Boleto]({{< relref "/docs/referencia-da-api/emissao-de-boletos/gerar-boleto-pdf">}})
+
+<br>
+
+[Cancelar um Boleto]({{< relref "/docs/referencia-da-api/emissao-de-boletos/cancelar-boleto">}})
