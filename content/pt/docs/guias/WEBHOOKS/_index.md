@@ -2,7 +2,7 @@
 title: "WEBHOOKS"
 linkTitle: "WEBHOOKS"
 date: 2021-06-28T09:00:00-03:00
-lastmod: 2021-08-19T12:38:00-03:00
+lastmod: 2021-08-26T11:00:00-03:00
 weight: 6
 draft: false
 description: >
@@ -59,22 +59,22 @@ A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) s
 
 <br>
 
-##### **Pagamento de Boleto:**
+##### **Pagamento de Boletos, Contas e Tributos:**
 
 <br>
 
 | Tipo de Evento                               | Descrição                                                                 |
 | -------------------------------------------- | ------------------------------------------------------------------------- |
 | cash_in_payment_refund                       | Representa o reembolso de um pagamento malsucedido.                      |
-| cash_out_payment                             | Representa a criação de um pagamento.                                     |
+| [cash_out_payment](cash_out_payment.json)                             | Representa a criação de um pagamento.                                     |
 | cash_out_payment_failed                      | Representa a falha na criação de um pagamento.                            |
 | cash_out_payment_scheduled                   | Representa o agendamento de um pagamento.                                 |
 | cash_out_payment_scheduled_failed            | Representa a falha no agendamento de um pagamento.                        |
-| cash_out_payment_approved                    | Representa a aprovação de um pagamento.                                   |
-| cash_out_payment_execution_started           | Representa o início da execução de um pagamento.                          |
+| [cash_out_payment_approved](cash_out_payment_approved.json)                    | Representa a aprovação de um pagamento.                                   |
+| [cash_out_payment_execution_started](cash_out_payment_execution_started.json)           | Representa o início da execução de um pagamento.                          |
 | cash_out_payment_cancelled                   | Representa o cancelamento de um pagamento.                                |
 | cash_out_payment_rejected                    | Representa a rejeição de um pagamento.                                    |
-| cash_out_payment_finished                    | Representa a finalização de um pagamento.                                 |
+| [cash_out_payment_finished](cash_out_payment_finished.json) | Representa a finalização de um pagamento.                  |
 | cash_out_payment_expired                     | Representa a expiração de um pagamento.                                   |
 
 <br>
@@ -128,30 +128,30 @@ A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) s
 
 | Tipo de Evento                																											    | Descrição                                                                   |
 | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| [pix_entries_key_created](pix_json/pix.entries.key_created.json)          									| Representa a criação de uma chave Pix.            |
-| [pix_entries_deleted](pix_json/pix.entries.deleted.json)               										| Representa a deleção de uma chave Pix.            |
-| [pix_entries_failed](pix_json/pix.entries.failed.json)             											| Representa a falha na criação de uma chave Pix.   |
-| [pix_entries_claims_waiting_resolution](pix_json/pix.entries.claims.waiting_resolution.json) 					| Representa que estamos aguardando a resposta da cliente sobre a claim (confirmação ou cancelamento).  |
-| [pix_entries_claims_confirmed](pix_json/pix.entries.claims.confirmed.json)         							| Representa que a cliente confirmou a claim, passando a chave para outra instituição.             |
-| [pix_entries_claims_automatically_confirmed_waiting_resolution](pix_json/pix.entries.claims.automatically_confirmed_waiting_resolution.json) | Representa que a reivindicação de posse foi automaticamente confirmada porque a cliente não respondeu no prazo de 7 dias corridos. |
-| [pix_entries_claims_automatically_confirmed](pix_json/pix.entries.claims.automatically_confirmed.json) 		| Representa que foi realizada a confirmação da reivindicação de posse automaticamente, porque a cliente não respondeu dentro dos 14 dias de prazo. Aqui a reivindicação não pode ser mais cancelada.  |
-| [pix_entries_claims_cancelled](pix_json/pix.entries.claims.cancelled.json)         							| Representa cancelamento da solicitação da claim por parte da cliente, mantendo a chave cadastrada na conta original. |
-| [pix_entries_claims_automatically_cancelled](pix_json/pix.entries.claims.automatically_cancelled.json) 		| Representa cancelamento automático da solicitação de portabilidade, por falta de resposta da cliente nos 7 dias de prazo.   |
-| [pix_payment_invoice](pix_json/pix_payment_invoice.json)														| Representa um QR Code dinâmico imediato.						|
-| [pix_payment_invoice_with_due_date](pix_json/pix_payment_invoice_with_due_date.json)							| Representa um QR Code dinâmico com vencimento, multa, juros, desconto e abatimento.	|
-| [pix_invoice_payment_created](pix_json/pix_invoice_payment_created.json)       								| Representa a criação de um QR Code dinâmico. 	 			   	|
-| [pix_invoice_payment_cancelled](pix_json/pix_invoice_payment_cancelled.json)        							| Representa o cancelamento de um QR Code dinâmico.     		|
-| [pix_invoice_payment_paid](pix_json/pix_invoice_payment_paid.json)          									| Representa o pagamento com sucesso de um QR Code dinâmico.    |
-| [inbound_pix_payment](pix_json/inbound_pix_payment.json)														| Representa um cash-in de Pix.	|
-| [pix_inbound_payment_received](pix_json/pix_inbound_payment_received.json)         							| Representa o recebimento de um cash-in de Pix, podendo estar associado a um QR Code estatático, dinâmico imediato ou dinâmico com vencimento. Essa associação será representada pela presença de um dos seguintes atributos dentro do target_data: <br>- `pix_payment_invoice`: Invoice dinâmica imediata; <br>- `pix_payment_static_invoice`: Invoice estática; <br>- `pix_payment_invoice_with_due_date`: Invoice dinâmica com vencimento, multa, juros, desconto e abatimento.  |
-| [pix_refund_payment](pix_json/pix_refund_payment.json)										| Representa uma devolução (cash-out) associada a um inbound payment (cash-in).		|
-| [pix_inbound_payment_refund_created](pix_json/pix.inbound_payment.refund.created.json)   						| Representa a criação de uma devolução associada a uma transação Pix. Lembrando que estamos falando da devolução (cash-out) de um cash-in.  |
-| [pix_inbound_payment_refund_failed](pix_json/pix.inbound_payment.refund.failed.json)    						| Representa que houve falha na criação da devolução (cash-out) de um cash-in de Pix.    |
-| [pix_inbound_payment_refund_money_reserved](pix_json/pix.inbound_payment.refund.money_reserved.json) 			| Representa a reserva de dinheiro (impacto no saldo da cliente) após a criação com sucesso de uma devolução (cash-out) de um cash-in de Pix.    |
-| [pix_inbound_payment_refund_settled](pix_json/pix.inbound_payment.refund.settled.json)   						| Representa que a devolução (cash-out) de um cash-in de Pix foi realizada com sucesso.            |
-| [pix_inbound_payment_refund_reversed](pix_json/pix.inbound_payment.refund.reversed.json)  					| Representa que a devolução (cash-out) de um cash-in de Pix foi rejeitada.                     |
-| pix_outbound_payment_created         | Representa a criação de um cash-out de Pix.  |
-| pix_outbound_payment_money_reserved  | Representa a reserva de dinheiro (impacto no saldo da cliente) após a criação com sucesso de um cash-out de Pix. |
+| [pix_entries_key_created](pix_entries_key_created.json)          									| Representa a criação de uma chave Pix.            |
+| [pix_entries_deleted](pix.entries.deleted.json)               										| Representa a deleção de uma chave Pix.            |
+| [pix_entries_failed](pix.entries.failed.json)             											| Representa a falha na criação de uma chave Pix.   |
+| [pix_entries_claims_waiting_resolution](pix.entries.claims.waiting_resolution.json) 					| Representa que estamos aguardando a resposta da cliente sobre a claim (confirmação ou cancelamento).  |
+| [pix_entries_claims_confirmed](pix.entries.claims.confirmed.json)         							| Representa que a cliente confirmou a claim, passando a chave para outra instituição.             |
+| [pix_entries_claims_automatically_confirmed_waiting_resolution](pix.entries.claims.automatically_confirmed_waiting_resolution.json) | Representa que a reivindicação de posse foi automaticamente confirmada porque a cliente não respondeu no prazo de 7 dias corridos. |
+| [pix_entries_claims_automatically_confirmed](pix.entries.claims.automatically_confirmed.json) 		| Representa que foi realizada a confirmação da reivindicação de posse automaticamente, porque a cliente não respondeu dentro dos 14 dias de prazo. Aqui a reivindicação não pode ser mais cancelada.  |
+| [pix_entries_claims_cancelled](pix.entries.claims.cancelled.json)         							| Representa cancelamento da solicitação da claim por parte da cliente, mantendo a chave cadastrada na conta original. |
+| [pix_entries_claims_automatically_cancelled](pix.entries.claims.automatically_cancelled.json) 		| Representa cancelamento automático da solicitação de portabilidade, por falta de resposta da cliente nos 7 dias de prazo.   |
+| [pix_payment_invoice](pix_payment_invoice.json)														| Representa um QR Code dinâmico imediato.						|
+| [pix_payment_invoice_with_due_date](pix_payment_invoice_with_due_date.json)							| Representa um QR Code dinâmico com vencimento, multa, juros, desconto e abatimento.	|
+| [pix_invoice_payment_created](pix_invoice_payment_created.json)       								| Representa a criação de um QR Code dinâmico. 	 			   	|
+| [pix_invoice_payment_cancelled](pix_invoice_payment_cancelled.json)        							| Representa o cancelamento de um QR Code dinâmico.     		|
+| [pix_invoice_payment_paid](pix_invoice_payment_paid.json)          									| Representa o pagamento com sucesso de um QR Code dinâmico.    |
+| [inbound_pix_payment](inbound_pix_payment.json)														| Representa um cash-in de Pix.	|
+| [pix_inbound_payment_received](pix_inbound_payment_received.json)         							| Representa o recebimento de um cash-in de Pix, podendo estar associado a um QR Code estatático, dinâmico imediato ou dinâmico com vencimento. Essa associação será representada pela presença de um dos seguintes atributos dentro do target_data: <br>- `pix_payment_invoice`: Invoice dinâmica imediata; <br>- `pix_payment_static_invoice`: Invoice estática; <br>- `pix_payment_invoice_with_due_date`: Invoice dinâmica com vencimento, multa, juros, desconto e abatimento.  |
+| [pix_refund_payment](pix_refund_payment.json)										| Representa uma devolução (cash-out) associada a um inbound payment (cash-in).		|
+| [pix_inbound_payment_refund_created](pix.inbound_payment.refund.created.json)   						| Representa a criação de uma devolução associada a uma transação Pix. Lembrando que estamos falando da devolução (cash-out) de um cash-in.  |
+| [pix_inbound_payment_refund_failed](pix.inbound_payment.refund.failed.json)    						| Representa que houve falha na criação da devolução (cash-out) de um cash-in de Pix.    |
+| [pix_inbound_payment_refund_money_reserved](pix.inbound_payment.refund.money_reserved.json) 			| Representa a reserva de dinheiro (impacto no saldo da cliente) após a criação com sucesso de uma devolução (cash-out) de um cash-in de Pix.    |
+| [pix_inbound_payment_refund_settled](pix.inbound_payment.refund.settled.json)   						| Representa que a devolução (cash-out) de um cash-in de Pix foi realizada com sucesso.            |
+| [pix_inbound_payment_refund_reversed](pix.inbound_payment.refund.reversed.json)  					| Representa que a devolução (cash-out) de um cash-in de Pix foi rejeitada.                     |
+| [pix_outbound_payment_created](pix_outbound_payment_created.json)         | Representa a criação de um cash-out de Pix.  |
+| [pix_outbound_payment_money_reserved](pix_outbound_payment_money_reserved.json)  | Representa a reserva de dinheiro (impacto no saldo da cliente) após a criação com sucesso de um cash-out de Pix. |
 | pix_outbound_payment_failed          | Representa a falha na criação de um cash-out de Pix.         |
 | pix_outbound_payment_settled         | Representa a liquidação com sucesso de um cash-out de Pix.   |
 | pix_outbound_payment_refunded        | Representa a devolução de um cash-out de Pix.   	          |
