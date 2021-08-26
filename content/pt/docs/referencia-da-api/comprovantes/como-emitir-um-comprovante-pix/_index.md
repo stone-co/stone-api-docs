@@ -49,7 +49,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/exports/receipts
 
 ```
 200 OK
-content-type: application/json
+content-type: application/pdf
 ```
 
 Retorna o PDF do comprovante
