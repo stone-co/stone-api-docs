@@ -40,7 +40,7 @@ Segue abaixo os estados possíveis de um **pagamento**:
 
 <br>
 
-![Imagem 1](/docs/referencia-da-api/pagamentos/o-que-e-um-pagamento/estados_pagamento.png)
+![Imagem 1](./estados_pagamento.png)
 
 <br>
 
