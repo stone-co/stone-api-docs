@@ -3,14 +3,14 @@ title: "Objetos da Simulação de Pagamento"
 slug: "objetos-simulação-de-pagamento"
 hidden: false
 date: 2020-04-14T14:26:24.270Z
-lastmod: 2020-05-01T01:03:24.621Z
+lastmod: 2021-08-26T12:35:24.621Z
 weight: 3
 ---
 
 ---
 <br>
 
-O Dry Run de pagamentos retorna, além do [Objeto Pagamento]({{< relref "/docs/referencia-da-api/pagamentos/o-objeto-pagamento/">}}) em si, os Objetos [Barcode Details](#objeto-barcode-details) e [Details](#objeto-details).
+O Dry Run de pagamentos retorna, além do [Objeto Pagamento]({{< relref "/docs/referencia-da-api/pagamentos/overview/#o-objeto-pagamento">}}) em si, os Objetos [Barcode Details](#objeto-barcode-details) e [Details](#objeto-details).
 
 Como complemento, descrevemos os possíveis resultados para o campo [document_payment_type](#document_payment_type).
 
