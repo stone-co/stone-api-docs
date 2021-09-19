@@ -4,7 +4,7 @@ slug: "overview-emissao-boleto"
 draft: false
 weight: 1
 date: "2020-03-30T07:01:34.376Z"
-lastmod: "2021-08-26T11:48:22.067Z"
+lastmod: "2021-09-19T10:06:22.067Z"
 ---
 ---
 <br>
@@ -17,7 +17,7 @@ Nessa API, os boletos são separados em três grupos que apresentam regras de fu
 ---
 <br>
 
-Tem como objetivo fazer um deposito na conta pelo próprio dono da conta. 
+Boleto criado para depositar dinheiro na conta em que ele foi emitido. 
 
 Tipo (type):
 - `deposit`
@@ -29,7 +29,7 @@ Tipo (type):
 
 <br>
 
-Tem como objetivo apresentar uma proposta a um terceiro. Não tem caráter de cobrança.
+Boleto emitido antes da prestação de um serviço ou da entrega de um produto, como uma oferta, sendo o seu pagamento considerado o aceite da negociação. Também pode ser usado como proposta de um contrato e como convite para uma associação. Como ele é facultativo, o seu não pagamento não dará causa a protesto, cobranças e/ou inclusão em cadastros restritivos. Possibilita inclusão de desconto para pagamento do boleto antes do vencimento.
 
 Tipo (type):
 - `proposal`
@@ -42,15 +42,15 @@ Tipo (type):
 <br>
 
 
-Tem como objetivo cobrar um terceiro. Tem caráter oficial de cobrança. Existem tipos de cobrança específicos de acordo com atividade que está originando a cobrança. Abaixo veremos a lista dos tipos disponíveis. <br>
+Boleto para cobrar por um serviço prestado, por um produto entregue ou para o pagamento de uma dívida de uma obrigação legal. Possibilita a inclusão de descontos, juros e multa. Abaixo temos os dois tipos de cobrança disponíveis.
 Importante ressaltar que pode haver restrição de habilitação de um determinado tipo para uma conta de acordo com as atividades listadas para esse CNPJ em seu registro ofical (CNAE).
 
 Tipo (type):
 - `bill_of_exchange`
-A duplicata mercantil é especifica para cobranças advindas de vendas de produtos. 
+<br>A duplicata mercantil para cobranças de uma forma geral. 
 
 - `tuition_payment`
-Específico  para cobranças advindas de mensalidades escolares.
+<br>Específico para cobranças advindas de mensalidades escolares (recorrência).
 
 <br>
 

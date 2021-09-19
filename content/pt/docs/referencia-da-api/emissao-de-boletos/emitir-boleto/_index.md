@@ -4,7 +4,7 @@ slug: "emitir-boleto"
 draft: false
 weight: 5
 date: "2020-01-16T19:14:55.374Z"
-lastmod: "2020-12-21T20:31:32.971Z"
+lastmod: "2021-09-19T10:15:32.971Z"
 ---
 
 ---
@@ -61,7 +61,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
 <br>
 
 **limit_date** `string`
-<br>Data limite para pagamento do boleto bancário. Deve ser igual ou maior que data de vencimento. Se não informada, será usada a `expiration_date`.
+<br>Data limite para pagamento do boleto bancário. Deve ser igual à data de vencimento para boletos de depósito e proposta. Para boletos de cobrança, deve ser igual ou maior que a data de vencimento. Se não informada, será usada a `expiration_date`. Os boletos que forem pagos após a data limite serão devolvidos.
 
 ---
 <br>
