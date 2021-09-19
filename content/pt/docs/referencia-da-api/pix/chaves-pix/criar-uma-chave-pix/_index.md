@@ -1,23 +1,43 @@
 ---
-title: "Criar chaves (Draft)"
-linkTitle: "Criar chaves (Draft)"
-date: 2021-07-15T15:00:00-03:00
-lastmod: 2021-07-15T15:00:00-03:00
+title: "Criar chaves Pix"
+linkTitle: "Criar chaves Pix"
+date: 2021-08-12T19:00:00-03:00
+lastmod: 2021-08-12T19:00:00-03:00
 weight: 2
-draft: true
+draft: false
 description: >
 
 ---
-Esse médodo deve ser usado quando o dado a ser usado como identificador da Chave PIX ainda não foi cadastrado junto ao DICT ou o cadastro já está inativo. Em casos em que o dado já está sendo utilizado em uma Chave Pix ativa deve ser feita uma [reivindicação](https://stone-co.github.io/docs/pix/chaves-pix/reivindicar/) da Chave PIX. 
-<br><br>
-
-##### **Request**
+<br>
 
 ```
-POST /api/v1/pix/:account_id/entries
-content-type: application/json
+POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/{{account_id}}/entries
 ```
-Body
+<br>
+
+##### **HEADERS**
+---
+
+**x-stone-idempotency-key** `string`
+<br>Chave de idempotência
+
+**authorization** `string`
+<br> Bearer Token
+
+**User-Agent** `string`
+<br>Nome da sua aplicacão
+
+<br>
+
+##### **QUERY PARAMS**
+---
+
+**account_id** `string`
+<br> Identificador da conta
+<br> <br> 
+
+##### **BODY PARAMS**
+
 ```json
 {
   "key": "+5510998765432", 
@@ -44,6 +64,7 @@ Body
 202 ACCEPTED
 content-type: application/json
 ```
+
 Body
 ```json
 {
@@ -72,24 +93,3 @@ Body
 Acontece quando a chave já foi criada
 <br> <br> 
 
-
-##### **Webhook**
-
-Serão disparados webhooks quando o status da solicitação sofrer alterações. Veja [aqui](https://stone-co.github.io/docs/pix/chaves-pix/status/#status-das-solicita%C3%A7%C3%B5es-cria%C3%A7%C3%A3o-e-exclus%C3%A3o) os possíveis status para uma solicitação.
-
-As seguintes informações virão no campo `target_data`.
-
-```json
-{
-  "id": "cee2f003-95a0-433f-a785-b933a5832531",
-  "request_id": uuid(),
-  "key": "+5510998765432",
-  "key_type": "phone",
-  "key_status": "active",
-  "beneficiary_id": "bad7ab7e-f95d-11ea-adc1-0242ac120002",
-  "created_at": "20200-09-18T03:00:00Z",
-  "error_description": "",
-  "status": "accepted"
-}
-```
-<br> <br> 
