@@ -2,7 +2,7 @@
 title: "Criar QRCode Estático"
 linkTitle: "Criar QRCode Estático"
 date: 2021-08-04T15:19:30-03:00
-lastmod: 2021-08-04T15:19:30-03:00
+lastmod: 2021-09-19T09:04:30-03:00
 draft: false
 weight: 3
 description: >

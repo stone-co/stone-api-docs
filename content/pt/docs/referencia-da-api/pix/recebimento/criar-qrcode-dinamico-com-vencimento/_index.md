@@ -1,10 +1,11 @@
 ---
-title: "Criar Cobranças com Validade"
-linkTitle: "Criar Cobranças com Validade"
+title: "Criar QRCode Dinâmico com Validade"
+linkTitle: "Criar QRCode Dinâmico com Validade"
+slug: "criar-qrcode-dinamico-com-validade"
 date: 2021-06-16T15:17:00-03:00
-lastmod: 2021-06-16T15:17:00-03:00
+lastmod: 2021-09-19T09:02:00-03:00
 draft: false
-weight: 2
+weight: 7
 description: >
   
 ---
