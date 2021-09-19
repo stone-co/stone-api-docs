@@ -34,348 +34,134 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/pix_payment_invoices_with_
 ---
 <br>
 
-**transaction_id*** `string`
-<br>Validação: "^[a-zA-Z0-9]{26,35}$"
+**account_id*** `string`
+<br>Identificador da conta que irá receber o valor pago.
 
-**account_id** `string`
+**additional_data** `object` 
 
-**additional_data** `object` <br>
-**name*** `string` <br>
-Tamanho: min 1 / max 50
-**value*** `string` <br>
-Tamanho: min 1 / max 200
+&nbsp;&nbsp;&nbsp;&nbsp;**name** `string`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Tamanho: min 1 / max 50
+<br>&nbsp;&nbsp;&nbsp;&nbsp;**value** `string`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Tamanho: min 1 / max 200
 
 **amount** `integer`
 
-**customer** `object`<br>
-**document*** `string`<br>
-**name*** `string` <br>
+**customer*** `object` 
+
+&nbsp;&nbsp;&nbsp;&nbsp;**document** `string`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;**name** `string`
+
+**discount** `object`
+
+&nbsp;&nbsp;&nbsp;&nbsp;**type** `string` 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Valores aceitos: `fixed`, `proportional`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;**calculation_mode** `string`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Valores aceitos: `date`, `period`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;**period_discount** `object`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**fixed_value** `integer`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Se type:fixed.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**proportional** `object`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Se type:proportional. Representação de porcentagem, dada a seguinte fórmula: `coefficient * 10^exponent`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**coefficient** `integer`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**exponent** `integer`
 
 **expiration_date*** `string`
 <br>Format: date
 
-**key*** `string`
-
-**request_for_payer** `string`
-
-**payment** `integer`
-
-**only_business_days** `boolean`
-
 **fine** `object`
-**type** `string` <br>
-Valores aceitos: `fixed`, `proportional` <br>
-**fixed_value** `integer`
-**proportional_value** `object` <br>
-Representação de porcentagem, dada a seguinte fórmula: `coefficient * 10^exponent`<br>
-**coefficient*** `integer`
-**exponent*** `integer`
 
-**reduction** `object`
-**type** `string` <br>
-Valores aceitos: `fixed`, `proportional` <br>
-**fixed_value** `integer`
-**proportional_value** `object` <br>
-Representação de porcentagem, dada a seguinte fórmula: `coefficient * 10^exponent`<br>
-**coefficient*** `integer`
-**exponent*** `integer`
+&nbsp;&nbsp;&nbsp;&nbsp;**type** `string`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Valores aceitos: `fixed`, `proportional` 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;**fixed_value** `integer`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Se type:fixed.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;**proportional_value** `object` 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Se type:proportional. Representação de porcentagem, dada a seguinte fórmula: `coefficient * 10^exponent`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**coefficient** `integer`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**exponent** `integer`
 
 **interest** `object`
-**type** `string` <br>
-Valores aceitos: `fixed`, `proportional` <br>
-**period** `string` <br>
-Valores aceitos: `day`, `month`, `year` <br>
-**fixed_value** `integer`
-**proportional_value** `object` <br>
-Representação de porcentagem, dada a seguinte fórmula: `coefficient * 10^exponent`<br>
-**coefficient*** `integer`
-**exponent*** `integer`
 
-**discount** `object`
-**type** `string` <br>
-Valores aceitos: `fixed`, `proportional` <br>
-**calculation_mode** `string` <br>
-Valores aceitos: `date`, `period` <br>
-**period_discount** `object`
-**date_discounts** `object`
-**date** `string`
-**fixed_value** `integer`
-**proportional** `object` <br>
-Representação de porcentagem, dada a seguinte fórmula: `coefficient * 10^exponent`<br>
-**coefficient*** `integer`
-**exponent*** `integer`
+&nbsp;&nbsp;&nbsp;&nbsp;**type** `string`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Valores aceitos: `fixed`, `proportional`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;**period** `string`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Valores aceitos: `day`, `month`, `year`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;**fixed_value** `integer`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Se type:fixed.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;**proportional_value** `object`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Se type:proportional. Representação de porcentagem, dada a seguinte fórmula: `coefficient * 10^exponent`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**coefficient** `integer`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**exponent** `integer`
 
+**key*** `string`
 
-Schema:
+**only_business_days** `boolean`
+<br>Aceia true or false para pagamento somente em dias úteis
+
+**payment_limit_period_days** `integer`
+<br>Informa por quanto tempo o QRCode estará válido.
+
+**reduction** `object`
+
+&nbsp;&nbsp;&nbsp;&nbsp;**type** `string`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Valores aceitos: `fixed`, `proportional` 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;**fixed_value** `integer`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Se type:fixed.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;**proportional_value** `object` 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Se type:proportional. Representação de porcentagem, dada a seguinte fórmula: `coefficient * 10^exponent`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**coefficient** `integer`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**exponent** `integer`
+
+**request_for_payer** `string`
+<br>Descrição opcional do QRCode.
+
+**transaction_id*** `string`
+<br>Validação: "^[a-zA-Z0-9]{26,35}$"
+
+<br>
+Exemplo:
 
 ```json
 {
-  "type": "object",
-  "properties": {
-    "transaction_id": {
-      "type": "string",
-      "pattern": "^[a-zA-Z0-9]{26,35}$"
-    },
-    "account_id": {
-      "type": "string",
-      "format": "uuid"
-    },
-    "additional_data": {
-      "type": [
-        "array",
-        "null"
-      ],
-      "maxItems": 50,
-      "items": {
-        "type": "object",
-        "required": [
-          "name",
-          "value"
-        ],
-        "properties": {
-          "name": {
-            "type": "string",
-            "minLength": 1,
-            "maxLength": 50
-          },
-          "value": {
-            "type": "string",
-            "minLength": 1,
-            "maxLength": 200
-          }
-        }
-      }
-    },
-    "amount": {
-      "type": "integer"
-    },
-    "customer": {
-      "type": "object",
-      "required": [
-        "document",
-        "name"
-      ],
-      "properties": {
-        "document": {
-          "type": "string"
-        },
-        "name": {
-          "type": "string"
-        }
-      }
-    },
-    "expiration_date": {
-      "type": "string",
-      "format": "date"
-    },
-    "key": {
-      "type": "string"
-    },
-    "request_for_payer": {
-      "type": [
-        "string",
-        "null"
-      ]
-    },
-    "payment_limit_pediod_days": {
-      "type": "integer"
-    },
-    "only_business_days": {
-      "type": "boolean"
-    },
-    "fine": {
-      "type": "object",
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "fixed",
-            "proportional"
-          ]
-        },
-        "fixed_value": {
-          "type": [
-            "integer",
-            "null"
-          ]
-        },
-        "proportional_value": {
-          "type": "object",
-          "title": "Porcentagem",
-          "required": [
-            "coefficient",
-            "exponent"
-          ],
-          "description": "Representação de porcentagem, dada a seguinte fórmula: `coefficient * 10^exponent`",
-          "properties": {
-            "coefficient": {
-              "type": "integer"
-            },
-            "exponent": {
-              "type": "integer"
-            }
-          }
-        }
-      }
-    },
-    "reduction": {
-      "type": "object",
-      "required": [
-        "type"
-      ],
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "fixed",
-            "proportional"
-          ]
-        },
-        "fixed_value": {
-          "type": [
-            "integer",
-            "null"
-          ]
-        },
-        "proportional_value": {
-          "type": "object",
-          "title": "Porcentagem",
-          "required": [
-            "coefficient",
-            "exponent"
-          ],
-          "description": "Representação de porcentagem, dada a seguinte fórmula: `coefficient * 10^exponent`",
-          "properties": {
-            "coefficient": {
-              "type": "integer"
-            },
-            "exponent": {
-              "type": "integer"
-            }
-          }
-        }
-      }
-    },
-    "interest": {
-      "type": "object",
-      "required": [
-        "type",
-        "period"
-      ],
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "fixed",
-            "proportional"
-          ]
-        },
-        "period": {
-          "type": "string",
-          "enum": [
-            "day",
-            "month",
-            "year"
-          ]
-        },
-        "fixed_value": {
-          "type": [
-            "integer",
-            "null"
-          ]
-        },
-        "proportional_value": {
-          "type": "object",
-          "title": "Porcentagem",
-          "required": [
-            "coefficient",
-            "exponent"
-          ],
-          "description": "Representação de porcentagem, dada a seguinte fórmula: `coefficient * 10^exponent`",
-          "properties": {
-            "coefficient": {
-              "type": "integer"
-            },
-            "exponent": {
-              "type": "integer"
-            }
-          }
-        }
-      }
-    },
-    "discount": {
-      "type": "object",
-      "required": [
-        "type",
-        "calculation_mode"
-      ],
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "fixed",
-            "proportional"
-          ]
-        },
-        "calculation_mode": {
-          "type": "string",
-          "enum": [
-            "date",
-            "period"
-          ]
-        },
-        "period_discount": {
-          "type": [
-            "object",
-            "null"
-          ]
-        },
-        "date_discounts": {
-          "type": [
-            "object",
-            "null"
-          ],
-          "properties": {
-            "date": {
-              "type": "string",
-              "format": "date"
-            },
-            "fixed_value": {
-              "type": [
-                "integer",
-                "null"
-              ]
-            },
-            "proportional": {
-              "type": "object",
-              "title": "Porcentagem",
-              "required": [
-                "coefficient",
-                "exponent"
-              ],
-              "description": "Representação de porcentagem, dada a seguinte fórmula: `coefficient * 10^exponent`",
-              "properties": {
-                "coefficient": {
-                  "type": "integer"
-                },
-                "exponent": {
-                  "type": "integer"
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  },
-  "required": [
-    "transaction_id",
-    "customer",
-    "expiration_date",
-    "key"
-  ]
+	"account_id": "{{account_id}}",
+	"additional_data": [{
+		"name": "Título",
+		"value": "Descrição"
+	}],
+	"amount": 15,
+	"customer": {
+		"document": "14423692724",
+		"document_type": "cpf",
+		"name": "John Doe"
+	},
+	"discount": {
+		"calculation_mode": "period",
+		"period_discount": {
+			"fixed_value": 60
+		},
+		"type": "fixed"
+	},
+	"expiration_date": "2021-06-15",
+	"fine": {
+		"fixed_value": 100,
+		"type": "fixed"
+	},
+	"interest": {
+		"fixed_value": 50,
+		"period": "day",
+		"type": "fixed"
+	},
+	"key": "4e4bb64d-d17c-4c53-a51b-44f06e28be06",
+	"only_business_days": false,
+	"payment_limit_period_days": 15,
+	"reduction": {
+		"fixed_value": 100,
+		"type": "fixed"
+	},
+	"request_for_payer": "do something",
+	"transaction_id": "2b99dae0492c425c969e7768a91b2f3d"
 }
 ```
+
 <br>
 
 ##### **Response**
