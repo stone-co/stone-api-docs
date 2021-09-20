@@ -1,7 +1,7 @@
 ---
 title: "Confirmar um pagamento pendente"
 linkTitle: "Confirmar um pagamento pendente"
-lastmod: 2021-06-25T14:28:33-03:00
+lastmod: 2021-09-20T15:45:21-03:00
 weight: 3
 draft: false
 description: >
@@ -15,6 +15,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/outbound_pix_payments/
 <br>
 
 Na confirmação, o body pode conter opcionalmente os campos `amount` e `description`, caso eles não tenham sido preenchidos na criação.
+Além disso, também é possível adicionar o contato do pagamento realizado à lista de contatos da conta. Para isso, basta enviar a flag `add_target_to_contacts` com o valor `true`. Lembrando que este campo também é opcional.
 
 <br>
 
@@ -67,6 +68,9 @@ Exemplo:
 **description** `string`
 <br>Descrição do pagamento
 
+**add_target_to_contacts** `boolean`
+<br>Flag para adicionar um contato
+
 <br>
 
 Body:
@@ -74,7 +78,8 @@ Body:
 ```json
 {
   "amount": 39511,
-  "description": "some description"
+  "description": "some description",
+  "add_target_to_contacts": true
 }
 ```
 
