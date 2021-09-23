@@ -1,10 +1,10 @@
 ---
 title: "Criar Um Pagamento"
 slug: "criar-um-pagamento"
-hidden: false
+draft: false
 date: "2019-06-04T19:16:40.905Z"
-lastmod: "2020-04-28T15:16:04.117Z"
-weight: 3
+lastmod: "2021-09-23T15:16:04.117Z"
+weight: 2
 description: >
 ---
 
@@ -67,7 +67,7 @@ Identificador da conta que irá pagar o documento.
 
 <br>
 
-**scheduled_to***  `string` 
+**scheduled_to**  `string` 
 
 Formato: `yyyy-mm-dd`
 
