@@ -71,7 +71,15 @@ Identificador da conta que irá pagar o documento.
 
 Formato: `yyyy-mm-dd`
 
+---
+
 <br>
+
+**amount** `integer`
+
+O valor a ser pago, caso o boleto possa ser pago com um valor divergente ao valor total.
+<br>Para consultar o valor a ser pago, sugerimos que realize uma simulação de pagamento [aqui]({{< relref "/docs/referencia-da-api/simulacoes-dry-run/simular-o-pagamento-de-um-documento/">}}) e verifique o valor mínimo e máximo aceito para o pagamento em questão.
+<br>Caso não tenha alteração do valor total do pagamento, basta não enviar o campo `amount`.
 
 
 
