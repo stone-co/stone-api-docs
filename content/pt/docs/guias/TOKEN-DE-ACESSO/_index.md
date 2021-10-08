@@ -166,7 +166,7 @@ A chamada é com o método **POST**, com os headers **Content-Type** e **User-Ag
 ```
 <br>
 
-**Payload** <br>É um objeto JSON que trará as informações que usaremos para verificar a autenticidade da chamada e retornar o Token de Acesso. É necessário enviar o campo `ClientID`, o campo `grant_type`, que será um campo de valor fixo (**client_credentials**), o campo `client_assertion`, que será o token gerado localmente citado acima, e por último o campo `client_assertion_type`, que também terá seu valor fixo (**urn:ietf:params:oauth:client-assertion-type:jwt-bearer**), fechando o fluxo de client credentials para o servidor.
+**Payload** <br>É um objeto JSON que trará as informações que usaremos para verificar a autenticidade da chamada e retornar o Token de Acesso. É necessário enviar o campo `client_id`, o campo `grant_type`, que será um campo de valor fixo (**client_credentials**), o campo `client_assertion`, que será o token gerado localmente citado acima, e por último o campo `client_assertion_type`, que também terá seu valor fixo (**urn:ietf:params:oauth:client-assertion-type:jwt-bearer**), fechando o fluxo de client credentials para o servidor.
 
 <br>
 Esse request deverá ser realizado nas seguintes URLs (por ambiente):
