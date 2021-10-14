@@ -4,7 +4,7 @@ slug: "emitir-boleto"
 draft: false
 weight: 5
 date: "2020-01-16T19:14:55.374Z"
-lastmod: "2021-09-19T10:15:32.971Z"
+lastmod: "2021-10-14T10:07:32.971Z"
 ---
 
 ---
@@ -25,7 +25,7 @@ lastmod: "2021-09-19T10:15:32.971Z"
 
 - **Liquidação de Boletos**
   
-  Para boletos emitidos e pagos na Stone terão a sua liquidação efetuada no mesmo dia. Boletos emitidos na Stone e pagos em outras instituições, serão liquidados em até D+2 dias úteis.
+Boletos emitidos e pagos na Stone terão a sua liquidação efetuada no mesmo dia. Já boletos emitidos na Stone e pagos em outras instituições, serão liquidados pela <a href="https://www.cip-bancos.org.br/SitePages/Home.aspx" target="_blank">CIP (Câmara Interbancária de Pagamentos)</a> em até D+2 dias úteis e o crédito na conta do cliente ocorrerá no mesmo dia do recebimento da liquidação.
 
 <br>
 
