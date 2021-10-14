@@ -4,7 +4,7 @@ slug: "regras-de-negócio"
 draft: false
 weight: 3
 date: "2020-04-26T22:22:46.764Z"
-lastmod: "2021-09-19T10:15:32.971Z"
+lastmod: "2021-10-14T09:48:32.971Z"
 ---
 
 ---
@@ -52,6 +52,6 @@ lastmod: "2021-09-19T10:15:32.971Z"
 {{% pageinfo %}}
 **Atenção**
 
-Desconto em boleto não é valido para pagamentos realizados no final de semana.
+Quando a data limite de pagamento com desconto cai em um dia não útil, como em um fim de semana, o desconto ainda será válido para pagamentos no próximo dia útil.
 
 {{% /pageinfo %}}
