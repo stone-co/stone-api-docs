@@ -2,7 +2,7 @@
 title: "Criar chaves Pix"
 linkTitle: "Criar chaves Pix"
 date: 2021-08-12T19:00:00-03:00
-lastmod: 2021-08-12T19:00:00-03:00
+lastmod: 2021-10-14T09:26:00-03:00
 weight: 2
 draft: false
 description: >
@@ -36,29 +36,47 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/{{account_id}}/entries
 <br> Identificador da conta
 <br> <br> 
 
+<br>
+
 ##### **BODY PARAMS**
+---
+<br>
+
+**- Para criar uma chave aleatória**
+
 
 ```json
 {
-  "key": "+5510998765432", 
-  "key_type": "phone", 
-  "participant_ispb": "1234567890",
-  "beneficiary_account": {
-     "branch_code": "0001",
-     "account_code": "00016583",
-     "account_type": "CC",
-     "created_at": "2019-11-18T03:00:00Z"
-  },
-  "beneficiary_entity": {
-     "name":"Maria Clara Gomes",
-     "document_type": "cpf",
-     "document": "13152256685"
-  }
+    "key": "",
+    "key_type": "random_key",
+    "participant_ispb": "16501555"
 }
 ```
 <br> <br> 
 
+**- Para criar uma chave de documento**
+
+
+```json
+{
+    "key": "número-do-documento",
+    "key_type": "cpf-ou-cnpj",
+    "participant_ispb": "16501555"
+}
+```
+Ex: 
+```json
+{
+    "key": "12409265707",
+    "key_type": "cpf",
+    "participant_ispb": "16501555"
+}
+```
+
+
+<br> <br> 
 ##### **Response**
+---
 
 ```
 202 ACCEPTED
