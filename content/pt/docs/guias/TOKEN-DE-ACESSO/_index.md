@@ -23,7 +23,7 @@ O JWT é um padrão (RFC-7519) de mercado que define como transmitir e armazenar
 
 <br>
 <br>
-Para receber esse Token de Acesso, será necessário que você gere um JWT local, com suas partes em base64 já decodificadas e que deverá ser formado por três seções:
+Para receber esse Token de Acesso, será necessário que você gere um JWT local, com suas partes em base64 já codificadas e que deverá ser formado por três seções:
 
 {{< alert >}}
 **Header:** é um objeto JSON que define informações sobre o tipo do token (typ) - nesse caso JWT - e o algoritmo de criptografia usado em sua assinatura (alg) - no nosso caso usamos sempre o RS256. 
