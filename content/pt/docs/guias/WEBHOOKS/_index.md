@@ -398,7 +398,7 @@ Também aconselhamos cuidado na configuração do cliente que irá consultar as 
 
 Sempre que estiver em dúvida, consulte nossa API com os IDs dos dados no conteúdo do webhook.
 
-Mais informações sobre JavaScript Object Signing and Encryption, como JWTs, JWEs, JWSs, [aqui](https://www.ca.com/pt/blog-latam/os-beneficios-de-jwtjwsjwe-no-designs-de-apis.html).
+Mais informações sobre JavaScript Object Signing and Encryption, como JWTs, JWEs, JWSs, [aqui](https://auth0.com/resources/ebooks/jwt-handbook).
 
 <br>
 
