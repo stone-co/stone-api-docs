@@ -72,7 +72,7 @@ Para plataformas que queiram oferecer o processo de abertura de conta Stone de m
 
 ### **Identificador**
 
-Em nossa modelagem de conta de pagamento, utilizamos dois conceitos para refletir as etapas mencionadas acima: 
+Em nossa modelagem de conta de pagamento, utilizamos três conceitos para refletir as etapas mencionadas acima: 
 
 |  |   |
 | ------- | -------------------------- |
