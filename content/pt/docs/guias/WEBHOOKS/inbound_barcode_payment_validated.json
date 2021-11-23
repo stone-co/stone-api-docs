@@ -1,0 +1,17 @@
+{
+    "account_id": "43bd2391-7d20-5fd3-8fa7-045d27c1118b",
+    "amount": 5000,
+    "barcode": "19791870700000050000000056674365784533668026",
+    "capture_branch_code": "0001",
+    "capture_channel": "internet",
+    "capture_medium": "debit",
+    "cpf_cnpj_payer": "11921740590",
+    "event_happened_at": "2021-08-02T22:58:54.604434",
+    "event_type": "inbound_barcode_payment_validated",
+    "id": "d67b2cfc-d13b-4480-8db9-55e171429e46",
+    "movement_date": "2021-08-02",
+    "operational_discharge_type": "total_intrabank_settlement"
+    "payment_invoice_id": "793a5f1a-0881-4209-9c35-53e0546f22fb",
+    "received_at": "2021-08-02T22:58:54.194942",
+    "receiver_ispb": "16501555"
+}
