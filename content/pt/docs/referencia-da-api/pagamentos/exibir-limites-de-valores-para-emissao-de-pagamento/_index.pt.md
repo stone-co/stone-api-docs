@@ -19,7 +19,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices/li
 
 <br>
 
-**account_id\*** `string`
+**account_id*** `string`
 
 Identificador da conta.
 
