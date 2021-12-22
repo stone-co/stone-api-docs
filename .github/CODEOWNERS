@@ -3,7 +3,7 @@
 
 
 # code owners padrão da pasta que contém o conteúdo:
-content/ @CalebeEmerick @agabiandrade @pedroyremolo @erikacarvalho
+content/ @CalebeEmerick @carolina0silva @agabiandrade @pedroyremolo @erikacarvalho
 
 # code owners padrão da pasta que contém as github actions
 .github/workflows/ @rca0 @strund3r
