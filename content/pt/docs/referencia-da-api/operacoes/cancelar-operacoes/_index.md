@@ -72,7 +72,6 @@ Tipos de operações que podem ser canceladas:
 
 **- Para aprovar um pagamento Pix**
 
-
 ```json
 {
   "action": "cancel_only",
@@ -83,7 +82,6 @@ Tipos de operações que podem ser canceladas:
 }
 
 ```
-
 
 <br> <br> 
 ##### **Response**

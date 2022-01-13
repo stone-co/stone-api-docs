@@ -27,11 +27,9 @@ Os tipos de operação podem ser:
 - `pix_payment` (Pix)
 - `refund_for_pix_payment` (Devolução de um Pix)
 
-
 ---
 
 #### **PATH PARAMS**
-
 ---
 
 **account_id**  `string`
@@ -47,9 +45,7 @@ Identificador da transação.
 ---
 
 #### **QUERY PARAMS**
-
 ---
-
 
 **type**  `string`
 

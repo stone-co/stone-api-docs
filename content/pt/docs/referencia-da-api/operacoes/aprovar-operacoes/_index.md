@@ -71,7 +71,6 @@ Tipos de operações que podem ser aprovadas:
 
 **- Para aprovar um pagamento Pix**
 
-
 ```json
 {
   "action": "approve_only",
@@ -82,9 +81,6 @@ Tipos de operações que podem ser aprovadas:
 }
 
 ```
-
-
-
 <br> <br> 
 ##### **Response**
 ---
