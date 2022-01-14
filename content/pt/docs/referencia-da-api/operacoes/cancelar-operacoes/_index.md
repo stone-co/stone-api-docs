@@ -10,7 +10,7 @@ description: >
 ---
 <br>
 
-Este endpoint exibe cancela em lote operações pendentes de aprovação e/ou operações agendadas para uma conta.
+Este endpoint realiza o cancelamento em lote operações pendentes de aprovação e/ou operações agendadas para uma conta.
 
 ```
 POST https://sandbox-api.openbank.stone.com.br/api/v1/account/{account_id}/operations/actions/cancel
@@ -70,7 +70,7 @@ Tipos de operações que podem ser canceladas:
 
 <br>
 
-**- Para aprovar um pagamento Pix**
+**- Para cancelar um pagamento Pix**
 
 ```json
 {
