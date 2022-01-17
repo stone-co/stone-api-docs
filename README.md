@@ -49,6 +49,7 @@ em `/content/pt/` uma imagem que contenha a palavra _background_ no nome (e.g `c
 
 As seções da home podem ser customizadas diretamente em `/content/pt/_index.html`, usando _blocks_ do tipo `feature`.
 Cada seção precisa ter:
+
 1. Um ícone, que deve ser escolhido em [Font Awesome](https://fontawesome.com/) {1}
 2. Um título {2}
 3. Descrição que aparecerá abaixo do título {3}
@@ -141,7 +142,8 @@ Use o _package manager_ da sua distro/de sua preferência, instruções adiciona
 
 - Em seguida, editar o arquivo que foi criado e adicionar o conteúdo que desejar após o fim do cabeçalho
   (sinalizado por `---`). O arquivo estará em:
-    ``` 
+
+    ```text
     📂stone-api-docs    
     └──📂content    
        └──📂nome-da-secao
@@ -151,7 +153,7 @@ Use o _package manager_ da sua distro/de sua preferência, instruções adiciona
 
 - Cada artigo tem um campo chamado `draft` no cabeçalho, que pode ter o valor `true` (caso seja ainda um rascunho)
   ou `false` (caso deva ser publicado). O default do campo é `true`, altere para `false` para sinalizar que o artigo
-  deve ser publicado no ambiente de Produção. 
+  deve ser publicado no ambiente de Produção.
   🚨 Mesmo que o campo `draft` tenha o valor `true`, **o artigo será publicado no ambiente de Sandbox!**
 
 ### Rodando localmente
@@ -159,22 +161,26 @@ Use o _package manager_ da sua distro/de sua preferência, instruções adiciona
 Como o projeto necessita de git submodules para o seu funcionamento, você deve os iniciar da seguinte forma:
 
 - Caso ainda não tenha clonado o projeto:
+
     ```shell
-    $ git clone --recurse-submodules https://github.com/stone-co/stone-api-docs.git
+    git clone --recurse-submodules https://github.com/stone-co/stone-api-docs.git
     ```
 
 - Caso já tenha clonado:
+
     ```shell
-    $ git submodule update --init --recursive
+    git submodule update --init --recursive
     ```
 
-⚠️ É importante rodar localmente antes de submeter as suas contribuições para o repositório remoto para poder visualizar o
+É importante rodar localmente antes de submeter as suas contribuições para o repositório remoto para poder visualizar o
 site e verificar se não há erros na sua construção.
 
 - Digitar no terminal o seguinte comando:
+
     ```shell
-    $ hugo server
+    hugo server
     ```
+
     🔍 Obs: se você quiser forçar os _drafts_ a serem publicados, utilize a _flag_ `-D`
 
 - No seu navegador, visitar o endereço __localhost:1313__ (ou o endereço que for informado no próprio terminal após

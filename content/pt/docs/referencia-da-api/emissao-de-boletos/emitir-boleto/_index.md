@@ -131,10 +131,38 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
 <br> &nbsp;&nbsp;&nbsp;&nbsp;**document** `string`
 <br> &nbsp;&nbsp;&nbsp;&nbsp;Número do documento do sacador avalista.
 
+---
+<br>
+
+**address** `object`
+<br>
+
+<br> &nbsp;&nbsp;&nbsp;&nbsp;**city** `string` _(obrigatório)_
+<br> &nbsp;&nbsp;&nbsp;&nbsp;Cidade do beneficiário do boleto.
+<br>
+<br> &nbsp;&nbsp;&nbsp;&nbsp;**country** `string` _(obrigatório)_
+<br> &nbsp;&nbsp;&nbsp;&nbsp;País do beneficiário do boleto.
+<br>
+<br> &nbsp;&nbsp;&nbsp;&nbsp;**extra** `string`
+<br> &nbsp;&nbsp;&nbsp;&nbsp;Complemento do endereço do beneficiário.
+<br>
+<br> &nbsp;&nbsp;&nbsp;&nbsp;**neighborhood** `string` _(obrigatório)_
+<br> &nbsp;&nbsp;&nbsp;&nbsp;Bairro do beneficiário do boleto.
+<br>
+<br> &nbsp;&nbsp;&nbsp;&nbsp;**postal_code** `string` _(obrigatório)_
+<br> &nbsp;&nbsp;&nbsp;&nbsp;CEP do beneficiário do boleto.
+<br>
+<br> &nbsp;&nbsp;&nbsp;&nbsp;**state** `string` _(obrigatório)_
+<br> &nbsp;&nbsp;&nbsp;&nbsp;UF do beneficiário do boleto.
+<br>
+<br> &nbsp;&nbsp;&nbsp;&nbsp;**street** `string` _(obrigatório)_
+<br> &nbsp;&nbsp;&nbsp;&nbsp;Logradouro do beneficiário do boleto.
+<br>
+<br> &nbsp;&nbsp;&nbsp;&nbsp;**street_number** `string`
+<br> &nbsp;&nbsp;&nbsp;&nbsp;Número do logradouro do beneficiário do boleto.
+<br>
 
 <br><br>
-
-
 
 #### **HEADERS**
 ---
@@ -167,6 +195,16 @@ Body
     "barcode": "19797845600000021000000063139072468215929006",
     "beneficiary": {
       "account_code": "1085737",
+      "address": {
+        "city": "Rio de Janeiro",
+        "country": "Brazil",
+        "extra": null,
+        "neighborhood": "Centro",
+        "postal_code": "20021-290",
+        "state": "RJ",
+        "street": "Rua do Passeio",
+        "street_number": "38"
+      },
       "branch_code": "1",
       "document": "39809096038",
       "document_type": "cpf",
