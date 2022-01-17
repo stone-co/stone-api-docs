@@ -203,7 +203,7 @@ Body
         "postal_code": "20021-290",
         "state": "RJ",
         "street": "Rua do Passeio",
-        "street_number": "38"
+        "street_number": null
       },
       "branch_code": "1",
       "document": "39809096038",
