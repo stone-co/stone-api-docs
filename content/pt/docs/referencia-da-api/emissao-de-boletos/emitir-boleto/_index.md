@@ -144,7 +144,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
 <br> &nbsp;&nbsp;&nbsp;&nbsp;País do beneficiário do boleto.
 <br>
 <br> &nbsp;&nbsp;&nbsp;&nbsp;**extra** `string`
-<br> &nbsp;&nbsp;&nbsp;&nbsp;Complemento do endereço do beneficiário.
+<br> &nbsp;&nbsp;&nbsp;&nbsp;Complemento do endereço do beneficiário do boleto.
 <br>
 <br> &nbsp;&nbsp;&nbsp;&nbsp;**neighborhood** `string` _(obrigatório)_
 <br> &nbsp;&nbsp;&nbsp;&nbsp;Bairro do beneficiário do boleto.
