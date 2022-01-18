@@ -44,8 +44,6 @@ A API de Recargas fica disponível todos os dias da semana, 24 horas por dia!
 
 - [**Recarga para TV por Assinatura;**](/docs/referencia-da-api/recargas/recarga-de-tv-por-assinatura/)
 
-- [**Recarga para Meios de Transporte.**](/docs/referencia-da-api/recargas/recarga-de-meios-de-transporte/)
-
 
 <br>
 
@@ -65,8 +63,6 @@ Informações (Chave/Valor) que serão usadas nos fluxos de recargas.
 | amount							  |	Valor da recarga desejado.											|
 | provider_id						  | Id da operadora. 													|
 | client_code 						  | CPF ou Código do assinante do produto. 								|
-| product_quota 					  | Informação referente a quota do bilhete único (SP).				|
-| product_code 						  | Informação referente ao código do bilhete único (SP).				|
 | x-stone-idempotency-key 			  | Valor exclusivo gerado pelo cliente que o servidor de recursos usa para reconhecer novas tentativas subsequentes da mesma solicitação. (Opcional) |
 
 
