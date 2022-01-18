@@ -84,6 +84,8 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/games/providers
 }
 ```
 
+* x-stone-idempotency-key é opcional, para mais informações consulte o [Overview](/docs/referencia-da-api/recargas/overview/#glossário).
+
 ###### **Response**
 
 ```
@@ -121,6 +123,24 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/games/providers
 }
 ```
 
+##### **Possíveis casos de erro ao listar provedores**
+
+##### **401 - Unauthorized**
+Caso o cliente não tenha realizado a autenticação.
+```json
+{
+    "type": "srn:error:unauthenticated"
+}
+```
+
+##### **403 - Forbidden**
+Caso o cliente não tenha permissão para listar os provedores.
+```json
+{
+  "type": "srn:error:forbidden"
+}
+```
+
 
 <br>
 
@@ -138,6 +158,8 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/games/values/{provid
     "x-stone-idempotency-key": "0001"
 }
 ```
+
+* x-stone-idempotency-key é opcional, para mais informações consulte o [Overview](/docs/referencia-da-api/recargas/overview/#glossário).
 
 ###### **Responses**
 
@@ -180,7 +202,33 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/games/values/{provid
 }
 ```
 
-...
+##### **Possíveis casos de erro ao listar valores para o provedor**
+
+##### **400 - Bad Request**
+
+Caso o cliente tenha passado letras no lugar dos números no id do provedor, por exemplo.
+
+```json
+{
+  "type": "srn:error:invalid_params"
+}
+```
+
+##### **401 - Unauthorized**
+Caso o cliente não tenha realizado a autenticação.
+```json
+{
+    "type": "srn:error:unauthenticated"
+}
+```
+
+##### **403 - Forbidden**
+Caso o cliente não tenha permissão para listar os valores para o provedor.
+```json
+{
+  "type": "srn:error:forbidden"
+}
+```
 
 <br>
 
@@ -198,6 +246,8 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/games/dry-run
     "x-stone-idempotency-key": "0001"
 }
 ```
+
+* x-stone-idempotency-key é opcional, para mais informações consulte o [Overview](/docs/referencia-da-api/recargas/overview/#glossário).
 
 ###### **Body Request**
 
@@ -223,6 +273,40 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/games/dry-run
 }
 ```
 
+##### **Possíveis casos de erro ao simular recarga**
+##### **400 - Bad Request**
+
+Caso o cliente tenha passado um valor inválido:
+
+```json
+{
+   "type": "srn:error:invalid_amount",
+   "title": "Given amount is less than or equal to zero"
+}
+```
+
+Caso o cliente não tenha saldo suficiente para realizar a transação:
+
+```json
+{
+    "type": "srn:error:not_enough_funds"
+}
+```
+
+Caso o cliente tenha passado letras no lugar dos números no valor da recarga, por exemplo.
+
+```json
+{
+  "type": "srn:error:invalid_params"
+}
+```
+##### **403 - Forbidden**
+Caso o cliente não tenha permissão para realizar a simulação de recarga.
+```json
+{
+  "type": "srn:error:forbidden"
+}
+```
 
 <br>
 
@@ -240,6 +324,9 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/games
     "x-stone-challenge-solution": "81080d67-aac9-415b-868f-4403243201d3"
 }
 ```
+
+* x-stone-idempotency-key é opcional, para mais informações consulte o [Overview](/docs/referencia-da-api/recargas/overview/#glossário).
+* x-stone-challenge-solution é obrigatório,[clique aqui](/docs/referencia-da-api/recargas/fluxo-challenge/) para ter acesso ao *fluxo de autorização do challenge*
 
 ###### **Body Request**
 
@@ -263,6 +350,41 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/games
     "receipt": "          PROTOCOLO 0002751870\n1          06/04/2021        14:42\nTERM 228005 AGENTE 228005 AUTE 04926\n----------------------------------------\nAUTO 978079                            \n<VIA1>\nESTE CUPOM NAO TEM VALOR FISCAL\nPRODUTO: XBOX LIVE (CSV)\nVALOR: R$  5,00\nPIN: 6365-4427-6400-1327\nSERIE: 00000000\n\nCOMO RESGATAR O CODIGO XBOX:\nVISITE XBOX.COM/REDEEMCODE\nDIGITE O CODIGO DESTE RECIBO E COMECE A \nUSAR!\n\nAPOS O USO, INUTILIZE ESTE CUPOM\nIS2B - INTEGRATED SOLUTIONS TO BUSINESS\n\n\n\n\n</VIA1>----------------------------------------\n\n",
     "transaction_id": "58a3e84d-c33c-4681-bd41-855c56f27eb9",
     "pin": "6365-4427-6400-1327"
+}
+```
+
+##### **Possíveis casos de erro ao realizar recarga**
+##### **400 - Bad Request**
+
+Caso o cliente tenha passado um valor inválido:
+
+```json
+{
+  "type": "srn:error:invalid_amount",
+  "title": "Given amount is less than or equal to zero"
+}
+```
+
+Caso o cliente não tenha saldo suficiente para realizar a transação:
+
+```json
+{
+  "type": "srn:error:not_enough_funds"
+}
+```
+
+Caso o cliente tenha passado letras no lugar dos números no valor da recarga, por exemplo.
+
+```json
+{
+  "type": "srn:error:invalid_params"
+}
+```
+##### **403 - Forbidden**
+Caso o cliente não tenha permissão para realizar a recarga.
+```json
+{
+  "type": "srn:error:forbidden"
 }
 ```
 
