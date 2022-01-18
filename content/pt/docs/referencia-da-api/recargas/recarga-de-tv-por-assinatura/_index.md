@@ -17,7 +17,7 @@ description: >
 <br>
 
 
-1) Para efetuar a recarga de créditos para uma Tv por Assinatura é necessário que o cliente nos informe o **CPF** ou **Código do Assinante** e escolha o **provedor**. 
+1) Para efetuar a recarga de créditos para uma Tv por Assinatura é necessário que o cliente nos informe o **CPF** ou **Código do Assinante** e escolha o **provedor**.
 
 2) Após a confirmação, a Celcoin adiciona os créditos junto ao provedor.
 
@@ -81,6 +81,8 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/tv/providers
 }
 ```
 
+* x-stone-idempotency-key é opcional, para mais informações consulte o [Overview](/docs/referencia-da-api/recargas/overview/#glossário).
+
 ###### **Response**
 
 ```
@@ -89,20 +91,38 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/tv/providers
 
 ```json
 {
-    "providers": [
-        {
-            "name": "Claro TV",
-            "id": 2126
-        },
-        {
-            "name": "Oi TV",
-            "id": 2140
-        },
-        {
-            "name": "SKY TV",
-            "id": 2127
-        }
-    ]
+  "providers": [
+    {
+      "name": "Claro TV",
+      "id": 2126
+    },
+    {
+      "name": "Oi TV",
+      "id": 2140
+    },
+    {
+      "name": "SKY TV",
+      "id": 2127
+    }
+  ]
+}
+```
+
+##### **Possíveis casos de erro ao listar provedores**
+
+##### **401 - Unauthorized**
+Caso o cliente não tenha realizado a autenticação.
+```json
+{
+    "type": "srn:error:unauthenticated"
+}
+```
+
+##### **403 - Forbidden**
+Caso o cliente não tenha permissão para listar os provedores.
+```json
+{
+  "type": "srn:error:forbidden"
 }
 ```
 
@@ -124,6 +144,8 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/tv/values/{provider-
 }
 ```
 
+* x-stone-idempotency-key é opcional, para mais informações consulte o [Overview](/docs/referencia-da-api/recargas/overview/#glossário).
+
 ###### **Responses**
 
 ```
@@ -134,40 +156,68 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/tv/values/{provider-
 
 ```json
 {
-    "product": [
-        {
-            "product_name": "R$ 18,00 - INICIAL 30d",
-            "value": 1800
-        },
-        {
-            "product_name": "R$ 36,00 - LIGHT 15d",
-            "value": 3600
-        },
-        {
-            "product_name": "R$ 55,00 - MIX 15d",
-            "value": 5500
-        },
-        {
-            "product_name": "R$ 58,00 - LIGHT 30d",
-            "value": 5800
-        },
-        {
-            "product_name": "R$ 80,00 - TOP 15d",
-            "value": 8000
-        },
-        {
-            "product_name": "R$ 86,00 - MIX 30d",
-            "value": 8600
-        },
-        {
-            "product_name": "R$ 109,00 - TOP 30d",
-            "value": 10900
-        }
-    ]
+  "product": [
+    {
+      "product_name": "R$ 18,00 - INICIAL 30d",
+      "value": 1800
+    },
+    {
+      "product_name": "R$ 36,00 - LIGHT 15d",
+      "value": 3600
+    },
+    {
+      "product_name": "R$ 55,00 - MIX 15d",
+      "value": 5500
+    },
+    {
+      "product_name": "R$ 58,00 - LIGHT 30d",
+      "value": 5800
+    },
+    {
+      "product_name": "R$ 80,00 - TOP 15d",
+      "value": 8000
+    },
+    {
+      "product_name": "R$ 86,00 - MIX 30d",
+      "value": 8600
+    },
+    {
+      "product_name": "R$ 109,00 - TOP 30d",
+      "value": 10900
+    }
+  ]
 }
 ```
 
-...
+##### **Possíveis casos de erro ao listar valores para o provedor**
+
+##### **400 - Bad Request**
+
+Caso o cliente tenha passado letras no lugar dos números no id do provedor, por exemplo.
+
+```json
+{
+  "type": "srn:error:invalid_params"
+}
+```
+
+##### **401 - Unauthorized**
+
+Caso o cliente não tenha realizado a autenticação.
+
+```json
+{
+  "type": "srn:error:unauthenticated"
+}
+```
+
+##### **403 - Forbidden**
+Caso o cliente não tenha permissão para listar os valores para o provedor.
+```json
+{
+  "type": "srn:error:forbidden"
+}
+```
 
 <br>
 
@@ -185,6 +235,9 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/tv/dry-run
 	"x-stone-idempotency-key": "0001"
 }
 ```
+
+* x-stone-idempotency-key é opcional, para mais informações consultae o [Overview](/docs/referencia-da-api/recargas/overview/#glossário).
+
 
 ###### **Body Request**
 
@@ -205,16 +258,51 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/tv/dry-run
 
 ```json
 {
-    "amount": 10900,
-    "account_id": "e4043bb5-542b-46f6-bcbc-0e63d37e1c47",
-    "provider_id": "2126",
-    "client_code": "10036389709"
+  "amount": 10900,
+  "account_id": "e4043bb5-542b-46f6-bcbc-0e63d37e1c47",
+  "provider_id": "2126",
+  "client_code": "10036389709"
 }
 ```
 
+##### **Possíveis casos de erro ao simular recarga**
+##### **400 - Bad Request**
+
+Caso o cliente tenha passado um valor inválido:
+
+```json
+{
+  "type": "srn:error:invalid_amount",
+  "title": "Given amount is less than or equal to zero"
+}
+```
+
+Caso o cliente não tenha saldo suficiente para realizar a transação:
+
+```json
+{
+  "type": "srn:error:not_enough_funds"
+}
+```
+
+Caso o cliente tenha passado letras no lugar dos números no valor da recarga, por exemplo.
+
+```json
+{
+  "type": "srn:error:invalid_params"
+}
+```
+##### **403 - Forbidden**
+
+Caso o cliente não tenha permissão para realizar a simulação de recarga.
+
+```json
+{
+  "type": "srn:error:forbidden"
+}
+```
 
 <br>
-
 
 
 ##### **4) Executar uma recarga para a TV**
@@ -233,6 +321,9 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/tv
     "x-stone-challenge-solution": "81080d67-aac9-415b-868f-4403243201d3"
 }
 ```
+
+* x-stone-idempotency-key é opcional, para mais informações consulte o [Overview](/docs/referencia-da-api/recargas/overview/#glossário).
+* x-stone-challenge-solution é obrigatório, [clique aqui](/docs/referencia-da-api/recargas/fluxo-challenge/) para ter acesso ao *fluxo de autorização do challenge*
 
 ###### **Body Request**
 
@@ -257,6 +348,41 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/tv
     "receipt": "          PROTOCOLO 0006463141\n1          07/04/2021        09:48\nTERM 228005 AGENTE 228005 AUTE 07295\n----------------------------------------\nAUTO 979250                     RECARGA\n\nPRODUTO: OI TV\nASSINANTE: 10036389706\nTELEFONE:  11 941497981\nNSU OPERADORA: 610761\nDATA:  07/04/2021 09:48\nVALOR: R$  44,90\n\nVIVO TURBO: INTERNET + LIGACOES E SMS\nILIMITADOS PARA VIVO (CEL E FIXO, USANDO\nO 15)APENAS R$9,99 POR SEMANA. LIGUE\n*9003 E CADASTRE SE!\n----------------------------------------\n\n",
     "transaction_id": "7b367d74-f2b8-4088-8329-6426816ff995",
     "pin": ""
+}
+```
+
+##### **Possíveis casos de erro ao realizar recarga**
+##### **400 - Bad Request**
+
+Caso o cliente tenha passado um valor inválido:
+
+```json
+{
+  "type": "srn:error:invalid_amount",
+  "title": "Given amount is less than or equal to zero"
+}
+```
+
+Caso o cliente tenha passado um número de celular inválido ou letras no lugar dos números, por exemplo.
+
+```json
+{
+  "type": "srn:error:invalid_params"
+}
+```
+
+Caso o cliente não tenha saldo suficiente para realizar a transação:
+
+```json
+{
+  "type": "srn:error:not_enough_funds"
+}
+```
+##### **403 - Forbidden**
+Caso o cliente não tenha permissão para realizar a recarga.
+```json
+{
+  "type": "srn:error:forbidden"
 }
 ```
 
