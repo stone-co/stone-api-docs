@@ -80,6 +80,8 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/digital-content/prov
 }
 ```
 
+* x-stone-idempotency-key é opcional, para mais informações consulte o [Overview](/docs/referencia-da-api/recargas/overview/#glossário).
+
 ###### **Response**
 
 ```
@@ -88,16 +90,35 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/digital-content/prov
 
 ```json
 {
-    "providers": [
-        {
-            "name": "Ifood",
-            "id": 2153
-        },
-        {
-            "name": "Spotify",
-            "id": 2141
-        }
-    ]
+  "providers": [
+    {
+      "name": "Ifood",
+      "id": 2153
+    },
+    {
+      "name": "Spotify",
+      "id": 2141
+    }
+  ]
+}
+```
+
+
+
+##### **Possíveis casos de erro ao listar provedores**
+##### **401 - Unauthorized**
+Caso o cliente não tenha realizado a autenticação.
+```json
+{
+  "type": "srn:error:unauthenticated"
+}
+```
+
+##### **403 - Forbidden**
+Caso o cliente não tenha permissão para listar os provedores.
+```json
+{
+  "type": "srn:error:forbidden"
 }
 ```
 
@@ -119,6 +140,8 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/digital-content/valu
 }
 ```
 
+* x-stone-idempotency-key é opcional, para mais informações consulte o [Overview](/docs/referencia-da-api/recargas/overview/#glossário).
+
 ###### **Responses**
 
 ```
@@ -129,20 +152,20 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/digital-content/valu
 
 ```json
 {
-    "product": [
-        {
-            "product_name": "Spotify Pin 17 BRL",
-            "value": 1700
-        },
-        {
-            "product_name": "Spotify Pin 50 BRL",
-            "value": 5000
-        },
-        {
-            "product_name": "Spotify Pin 100 BRL",
-            "value": 10000
-        }
-    ]
+  "product": [
+    {
+      "product_name": "Spotify Pin 17 BRL",
+      "value": 1700
+    },
+    {
+      "product_name": "Spotify Pin 50 BRL",
+      "value": 5000
+    },
+    {
+      "product_name": "Spotify Pin 100 BRL",
+      "value": 10000
+    }
+  ]
 }
 ```
 
@@ -150,11 +173,39 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/digital-content/valu
 
 ```json
 {
-    "product": [
-        {
-            "value": 1000
-        }
-    ]
+  "product": [
+    {
+      "value": 1000
+    }
+  ]
+}
+```
+
+##### **Possíveis casos de erro ao listar valores para o provedor**
+
+##### **400 - Bad Request**
+
+Caso o cliente tenha passado letras no lugar dos números no id do provedor, por exemplo.
+
+```json
+{
+  "type": "srn:error:invalid_params"
+}
+```
+
+##### **401 - Unauthorized**
+Caso o cliente não tenha realizado a autenticação.
+```json
+{
+  "type": "srn:error:unauthenticated"
+}
+```
+
+##### **403 - Forbidden**
+Caso o cliente não tenha permissão para listar os valores para o provedor.
+```json
+{
+  "type": "srn:error:forbidden"
 }
 ```
 
@@ -166,7 +217,6 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/digital-content/valu
 POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/digital-content/dry-run
 ```
 
-
 ###### **Header request**
 
 ```json
@@ -175,6 +225,8 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/digital-content/dry
 	"x-stone-idempotency-key": "0001"
 }
 ```
+
+* x-stone-idempotency-key é opcional, para mais informações consulte o [Overview](/docs/referencia-da-api/recargas/overview/#glossário).
 
 ###### **Body Request**
 
@@ -194,12 +246,46 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/digital-content/dry
 
 ```json
 {
-    "amount": 5000,
-    "account_id": "e4043bb5-542b-46f6-bcbc-0e63d37e1c47",
-    "provider_id": "2141"
+  "amount": 5000,
+  "account_id": "e4043bb5-542b-46f6-bcbc-0e63d37e1c47",
+  "provider_id": "2141"
 }
 ```
 
+##### **Possíveis casos de erro ao simular recarga**
+
+##### **400 - Bad Request**
+
+Caso o cliente tenha passado um valor inválido:
+
+```json
+{
+   "type": "srn:error:invalid_amount",
+   "title": "Given amount is less than or equal to zero"
+}
+```
+Caso o cliente não tenha saldo suficiente para realizar a transação:
+
+```json
+{
+    "type": "srn:error:not_enough_funds"
+}
+```
+
+Caso o cliente tenha passado letras no lugar dos números no valor da recarga, por exemplo.
+
+```json
+{
+  "type": "srn:error:invalid_params"
+}
+```
+##### **403 - Forbidden**
+Caso o cliente não tenha permissão para realizar a simulação de recarga.
+```json
+{
+  "type": "srn:error:forbidden"
+}
+```
 
 <br>
 
@@ -219,6 +305,9 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/digital-content
     "x-stone-challenge-solution": "81080d67-aac9-415b-868f-4403243201d3"
 }
 ```
+
+* x-stone-idempotency-key é opcional, para mais informações consulte o [Overview](/docs/referencia-da-api/recargas/overview/#glossário).
+* x-stone-challenge-solution é obrigatório,[clique aqui](/docs/referencia-da-api/recargas/fluxo-challenge/) para ter acesso ao *fluxo de autorização do challenge*
 
 ###### **Body Request**
 
@@ -242,6 +331,41 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/digital-content
     "receipt": "          PROTOCOLO 0002751870\n1          06/04/2021        15:27\nTERM 228005 AGENTE 228005 AUTE 07642\n----------------------------------------\nAUTO 978142                            \n<VIA1>\nESTE CUPOM NAO TEM VALOR FISCAL\nPRODUTO: SPOTIFY\nVALOR: R$  50,00\nPIN: 6365-4427-6400-1327\nSERIE: 00000000\n\nCOMO RESGATAR OS CREDITOS SPOTIFY:\n1. VISITE SPOTIFY.COM/REDEEM\n2. INFORME O PIN DESTE RECIBO\n3. VALIDADE: 12 MESES\nINFORMACOES: WWW.SPOTIFY.COM/GIFT-CARD\n\nAPOS O USO, INUTILIZE ESTE CUPOM\nIS2B - INTEGRATED SOLUTIONS TO BUSINESS\n\n\n\n\n</VIA1>----------------------------------------\n\n",
     "transaction_id": "b6cb2b73-0e30-4a93-9de6-31201628df79",
     "pin": "6365-4427-6400-1327"
+}
+```
+
+##### **Possíveis casos de erro ao realizar recarga**
+##### **400 - Bad Request**
+
+Caso o cliente tenha passado um valor inválido:
+
+```json
+{
+  "type": "srn:error:invalid_amount",
+  "title": "Given amount is less than or equal to zero"
+}
+```
+
+Caso o cliente não tenha saldo suficiente para realizar a transação:
+
+```json
+{
+  "type": "srn:error:not_enough_funds"
+}
+```
+
+Caso o cliente tenha passado letras no lugar dos números no valor da recarga, por exemplo.
+
+```json
+{
+  "type": "srn:error:invalid_params"
+}
+```
+##### **403 - Forbidden**
+Caso o cliente não tenha permissão para realizar a recarga.
+```json
+{
+  "type": "srn:error:forbidden"
 }
 ```
 
