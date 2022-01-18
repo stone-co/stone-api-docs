@@ -85,13 +85,14 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/mobile/providers/{ce
     "x-stone-idempotency-key": "0001"
 }
 ```
+* x-stone-idempotency-key é opcional, para mais informações consulte o [Overview](/docs/referencia-da-api/recargas/overview/#glossário).
 
 ###### **Response**
 
 ```
 200 ok
 ```
-
+Exemplo com um celular da operadora Tim:
 ```json
 {
     "possible_provider": {
@@ -117,12 +118,15 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/mobile/providers/{ce
                 "value": 5000
             },
             {
+                "value": 6000
+            },
+            {
                 "value": 10000
             }
         ]
     },
     "other_providers": [
-        {
+      {
             "name": "Claro",
             "id": 2087
         },
@@ -147,7 +151,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/mobile/providers/{ce
             "id": 2090
         },
         {
-            "name": "Nextel",
+            "name": "Claro nxt",
             "id": 2098
         },
         {
@@ -161,6 +165,34 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/mobile/providers/{ce
     ]
 }
 ```
+
+##### **Possíveis casos de erro ao listar provedores**
+##### **400 - Bad Request**
+
+Caso o cliente tenha passado um número de celular inválido ou letras no lugar dos números, por exemplo.
+
+```json
+{
+  "type": "srn:error:invalid_params"
+}
+```
+
+##### **401 - Unauthorized**
+Caso o cliente não tenha realizado a autenticação.
+```json
+{
+    "type": "srn:error:unauthenticated"
+}
+```
+
+##### **403 - Forbidden**
+Caso o cliente não tenha permissão para listar os provedores.
+```json
+{
+  "type": "srn:error:forbidden"
+}
+```
+
 <br>
 
 ##### **2) Listar todos os valores para o provedor**
@@ -180,13 +212,14 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/mobile/values/{provi
     "x-stone-idempotency-key": "0001"
 }
 ```
+* x-stone-idempotency-key é opcional, para mais informações consulte o [Overview](/docs/referencia-da-api/recargas/overview/#glossário).
 
 ###### **Response**
 
 ```
 200 ok
 ```
-
+Exemplo com um celular da operadora Tim:
 ```json
 {
     "product": [
@@ -209,11 +242,42 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/topups/mobile/values/{provi
             "value": 5000
         },
         {
+            "value": 6000
+        },
+        {
             "value": 10000
         }
     ]
 }
 ```
+
+##### **Possíveis casos de erro ao listar valores para o provedor**
+##### **400 - Bad Request**
+
+Caso o cliente tenha passado um número de celular inválido ou letras no lugar dos números, por exemplo.
+
+```json
+{
+  "type": "srn:error:invalid_params"
+}
+```
+
+##### **401 - Unauthorized**
+Caso o cliente não tenha realizado a autenticação.
+```json
+{
+    "type": "srn:error:unauthenticated"
+}
+```
+
+##### **403 - Forbidden**
+Caso o cliente não tenha permissão para listar os valores para o provedor.
+```json
+{
+  "type": "srn:error:forbidden"
+}
+```
+
 <br>
 
 ##### **3) Simular uma recarga de Celular**
@@ -231,6 +295,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/mobile/dry-run
     "x-stone-idempotency-key": "0001"
 }
 ```
+* x-stone-idempotency-key é opcional, para mais informações consulte o [Overview](/docs/referencia-da-api/recargas/overview/#glossário).
 
 ###### **Body Request**
 
@@ -258,6 +323,50 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/mobile/dry-run
 }
 ```
 
+##### **Possíveis casos de erro ao simular recarga**
+##### **400 - Bad Request**
+
+Caso o cliente tenha passado um valor de recarga inválido:
+
+```json
+{
+   "type": "srn:error:invalid_amount",
+   "title": "Given amount is less than or equal to zero"
+}
+```
+
+Caso o cliente tenha passado um número de celular inválido ou letras no lugar dos números, por exemplo.
+
+```json
+{
+  "type": "srn:error:invalid_params"
+}
+```
+
+Caso o cliente não tenha saldo suficiente para realizar a transação:
+
+```json
+{
+    "type": "srn:error:not_enough_funds"
+}
+```
+
+##### **401 - Unauthorized**
+Caso o cliente não tenha realizado a autenticação.
+```json
+{
+    "type": "srn:error:unauthenticated"
+}
+```
+
+##### **403 - Forbidden**
+Caso o cliente não tenha permissão para realizar a simulação de recarga.
+```json
+{
+  "type": "srn:error:forbidden"
+}
+```
+
 <br>
 
 ##### **4) Executar uma recarga de Celular**
@@ -275,6 +384,8 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/mobile
     "x-stone-challenge-solution": "81080d67-aac9-415b-868f-4403243201d3"
 }
 ```
+* x-stone-idempotency-key é opcional, para mais informações consulte o [Overview](/docs/referencia-da-api/recargas/overview/#glossário).
+* x-stone-challenge-solution é obrigatório, [clique aqui](/docs/referencia-da-api/recargas/fluxo-challenge/) para ter acesso ao *fluxo de autorização do challenge*
 
 ###### **Body Request**
 
@@ -298,6 +409,49 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/topups/mobile
     "id": "d909dee9-a834-4d35-926f-7939890e9b17",
     "receipt": "          PROTOCOLO 0006450144\n1          01/04/2021        17:37\nTERM 228005 AGENTE 228005 AUTE 05430\n----------------------------------------\nAUTO 975886                     RECARGA\n\nPRODUTO: CLARO\nTELEFONE:  11 941497981\nNSU OPERADORA: 610761\nDATA:  01/04/2021 17:37\nVALOR: R$  10,00\n\nVIVO TURBO: INTERNET + LIGACOES E SMS\nILIMITADOS PARA VIVO (CEL E FIXO, USANDO\nO 15)APENAS R$9,99 POR SEMANA. LIGUE\n*9003 E CADASTRE SE!\n----------------------------------------\n\n",
     "transaction_id": "aeac8eea-ebac-45c5-b429-5a3781b949ce"
+}
+```
+##### **Possíveis casos de erro ao realizar recarga**
+##### **400 - Bad Request**
+
+Caso o cliente tenha passado um valor de recarga inválido:
+
+```json
+{
+  "type": "srn:error:invalid_amount",
+  "title": "Given amount is less than or equal to zero"
+}
+```
+
+Caso o cliente tenha passado um número de celular inválido ou letras no lugar dos números, por exemplo.
+
+```json
+{
+  "type": "srn:error:invalid_params"
+}
+```
+
+Caso o cliente não tenha saldo suficiente para realizar a transação:
+
+```json
+{
+  "type": "srn:error:not_enough_funds"
+}
+```
+
+##### **401 - Unauthorized**
+Caso o cliente não tenha realizado a autenticação.
+```json
+{
+    "type": "srn:error:unauthenticated"
+}
+```
+
+##### **403 - Forbidden**
+Caso o cliente não tenha permissão para realizar a recarga.
+```json
+{
+  "type": "srn:error:forbidden"
 }
 ```
 
