@@ -22,7 +22,7 @@ lastmod: "2021-10-14T09:48:32.971Z"
 | Registro            | O registro de boletos é automático e feito em até alguns poucos minutos após sua emissão.                                                                       |
 | Baixa final         | Um boleto não pago sofrerá baixa automática sete dias após sua data limite.                                                                                     |
 | Baixa por pagamento | Ao ser pago o boleto sofrerá baixa automática, impedindo novos pagamentos desse mesmo documento.                                                                |
-| Baixa solicitada    | Quando o amissor solicita a baixa de um boleto que ainda não foi pago e não chegou a data limite.                                                               |
+| Baixa solicitada    | Quando o emissor solicita a baixa de um boleto que ainda não foi pago e não chegou a data limite.                                                               |
 | Data de vencimento  | Precisa ser igual ou maior que o dia atual e igual ou menor do que a limit_date. Caso seja um dia não útil o pagamento poderá ser feito até o próximo dia útil. |
 | Formato / Layout    | Hoje os dados do boleto são devolvidos no formato PDF através de um link.                                                                                       |
 
