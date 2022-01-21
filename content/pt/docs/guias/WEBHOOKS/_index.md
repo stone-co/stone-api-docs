@@ -16,7 +16,7 @@ description: >
 ---
 <br>
 
-A ocorrência de certos eventos pode ser importante em diversos fluxos na integração de uma aplicação com a API Stone Open Banking. Por isso, utilizamos webhooks para notificar as aplicações integradas da ocorrência desses eventos.
+A ocorrência de certos eventos pode ser importante em diversos fluxos na integração de uma aplicação com a Stone API Banking. Por isso, utilizamos webhooks para notificar as aplicações integradas da ocorrência desses eventos.
 
 Para sua utilização, é preciso que a aplicação tenha cadastrado no [formulário]({{< relref "/docs/guias/stone-open-banking/#testes-em-sandbox">}}) a URI para a qual enviaremos um POST com os dados do evento. A aplicação deverá estar preparada para lidar com cada evento de forma adequada.
 

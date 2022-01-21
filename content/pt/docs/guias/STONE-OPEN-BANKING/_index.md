@@ -1,6 +1,6 @@
 ---
-title: "STONE OPEN BANKING"
-linkTitle: "STONE OPEN BANKING"
+title: "STONE API BANKING"
+linkTitle: "STONE API BANKING"
 date: 2021-08-05T15:40:00-03:00
 lastmod: 2021-08-05T15:40:00-03:00
 weight: 1
@@ -16,14 +16,14 @@ description: >
 
 <br>
 
-**Seja bem-vindo à documentação de Open Banking da Stone!**
+**Seja bem-vindo à documentação da API de Banking da Stone!**
 <br>
 
 Segundo o Banco Central, o Open Banking / Open Finance, ou sistema financeiro aberto, é a possibilidade de clientes de produtos e serviços financeiros permitirem o compartilhamento de suas informações entre diferentes instituições autorizadas pelo Banco Central e a movimentação de suas contas bancárias a partir de diferentes plataformas e não apenas pelo aplicativo ou site do banco, de forma segura, ágil e conveniente.
 
-Como na Stone somos fiéis defensores da competição e temos o cliente como nossa razão de existir, acreditamos na revolução proporcionada por esse sistema e construímos a primeira API de Open Banking plugada diretamente no coração do STR. Acreditamos que nosso produto poderá gerar novos modelos de negócios, dar maior controle e transparência, além de permitir automatizações e ganho de eficiência para as empresas. 
+Como na Stone somos fiéis defensores da competição e temos o cliente como nossa razão de existir, acreditamos na revolução proporcionada por esse sistema e construímos a primeira API de Banking plugada diretamente no coração do STR. Acreditamos que nosso produto poderá gerar novos modelos de negócios, dar maior controle e transparência, além de permitir automatizações e ganho de eficiência para as empresas. 
 
-A partir da integração e do uso da API Stone Open Banking, você poderá movimentar a sua própria conta Stone por meio de uma API RESTful com todas as funcionalidades de cash-in e cash-out. Caso você tenha uma plataforma, também poderá solicitar acesso a contas terceiras para disponibilizar funcionalidades financeiras e agregar ainda mais valor ao seu produto. É claro que para acessar e iniciar transações em contas terceiras, será preciso obter o Consentimento do usuário dono da conta, um conceito essencial para o bom funcionamento do Open Banking.
+A partir da integração e do uso da API Stone Banking, você poderá movimentar a sua própria conta Stone por meio de uma API RESTful com todas as funcionalidades de cash-in e cash-out. Caso você tenha uma plataforma, também poderá solicitar acesso a contas terceiras para disponibilizar funcionalidades financeiras e agregar ainda mais valor ao seu produto. É claro que para acessar e iniciar transações em contas terceiras, será preciso obter o Consentimento do usuário dono da conta, um conceito essencial para o bom funcionamento do Open Banking.
 
 Nesta documentação, você pode explorar todos os produtos e funcionalidades que a nossa API oferece! Além disso, como todas as chamadas em nossa API deverão ser autenticadas para identificação do sujeito de cada ação, vamos detalhar como funciona o acesso via token. 
 <br>

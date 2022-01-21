@@ -10,23 +10,23 @@ description: >
 <br>
 <br>
 
-**Sejam bem-vindos à seção de Referências da Stone OpenBank API.**
+**Sejam bem-vindos à seção de Referências da API de Banking da Stone.**
 
 Através da nossa API é possível ter funcionalidades de internet banking e de apps de banco no seu negócio!
 
 <br>
 
-## O que é a Stone OpenBank API
+## O que é a Stone API Banking
 ---
 
 <br>
 
 Aqui na Stone a gente acredita não apenas que o **cliente** tem razão, mas que ele **é a nossa razão**. Somos fiéis defensores da competição e acreditamos que isso melhora o mercado como um todo, o que, por sua vez, melhora a vida da nossa razão.
 
-**Foi com base nesse sentimento pró-competição que montamos a Stone OpenBank API: a primeira API de Open Banking plugada diretamente no STR.**
+**Foi com base nesse sentimento pró-competição que montamos a Stone API Banking: a primeira API de Banking plugada diretamente no STR.**
 A [Conta Stone]({{< relref "/docs/guias/conta-de-pagamento/" >}}) é a nossa oferta para clientes PJ e PF, tanto para aqueles que já pertencem a base da Stone Adquirente, como para aqueles que utilizam outras adquirentes e buscam uma nova forma de se relacionar com sua conta.
   
-O Aplicativo da Conta Stone é mais um parceiro da Stone OpenBank API, usando exatamente os mesmos acessos e APIs descritos nesse documento. \"Eat your own dogfood\" aplicado na prática.
+O Aplicativo da Conta Stone é mais um parceiro da Stone API Banking, usando exatamente os mesmos acessos e APIs descritos nesse documento. \"Eat your own dogfood\" aplicado na prática.
 
 Assim como nós pudemos criar o nosso aplicativo de conta em cima dessa API, você pode fazer o mesmo ou integrar as funcionalidades de automação bancária no seu negócio.
 

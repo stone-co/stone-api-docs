@@ -14,7 +14,7 @@ description: >
 ---
 
 <br>
-Para realizar chamadas na API Stone Open Banking, será necessário ter em mãos um Token de Acesso ou Access Token. 
+Para realizar chamadas na API Stone API Banking, será necessário ter em mãos um Token de Acesso ou Access Token. 
 <br>O Token de Acesso gerado será no formato JWT e funcionará como uma chave de acesso para todas as requisições na API. 
 
 <br>
