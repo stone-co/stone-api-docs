@@ -23,7 +23,7 @@ Através da nossa API é possível ter funcionalidades de internet banking e de 
 
 Aqui na Stone a gente acredita não apenas que o **cliente** tem razão, mas que ele **é a nossa razão**. Somos fiéis defensores da competição e acreditamos que isso melhora o mercado como um todo, o que, por sua vez, melhora a vida da nossa razão.
 
-**Foi com base nesse sentimento pró-competição que montamos a Stone API Banking: a primeira API de Banking plugada diretamente no STR.**
+**Foi com base nesse sentimento pró-competição que montamos a Stone Banking API: a primeira API de Banking plugada diretamente no STR.**
 A [Conta Stone]({{< relref "/docs/guias/conta-de-pagamento/" >}}) é a nossa oferta para clientes PJ e PF, tanto para aqueles que já pertencem a base da Stone Adquirente, como para aqueles que utilizam outras adquirentes e buscam uma nova forma de se relacionar com sua conta.
   
 O Aplicativo da Conta Stone é mais um parceiro da Stone API Banking, usando exatamente os mesmos acessos e APIs descritos nesse documento. \"Eat your own dogfood\" aplicado na prática.
