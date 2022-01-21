@@ -12,7 +12,7 @@ description: >
 
 <br>
 
-Usado para realizar pagamentos de boleto e concessionárias.i
+Usado para realizar pagamentos de boleto e concessionárias.
 
 
 <br>
