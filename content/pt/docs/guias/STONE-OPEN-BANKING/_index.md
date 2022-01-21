@@ -1,6 +1,6 @@
 ---
-title: "STONE API BANKING"
-linkTitle: "STONE API BANKING"
+title: "STONE BANKING API"
+linkTitle: "STONE BANKING API"
 date: 2021-08-05T15:40:00-03:00
 lastmod: 2021-08-05T15:40:00-03:00
 weight: 1
