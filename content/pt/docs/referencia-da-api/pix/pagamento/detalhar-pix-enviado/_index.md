@@ -70,6 +70,7 @@ Body:
     "refunded_amount": 0,
     "request_id": "661c820e7d3a6bc9f9a1c8c8be62559f",
     "settled_at": null,
+    "scheduled_to": null,
     "source": {
         "account": {
             "account_code": "88266374",
@@ -115,6 +116,8 @@ Os possíveis estados do pagamento retornado, que vem no campo `status` são:
 - `MONEY_RESERVED`: O pagamento foi aprovado, o dinheiro saiu da conta mas ainda não foi concluído.
 - `REFUNDED`: O pagamento foi rejeitado pelo outro banco.
 - `SETTLED`: O pagamento foi concluído com sucesso.
+- `SCHEDULED`: O pagamento foi agendado com sucesso.
+- `CANCELLED`: O pagamento agendado foi cancelado.
 
 <br>
 

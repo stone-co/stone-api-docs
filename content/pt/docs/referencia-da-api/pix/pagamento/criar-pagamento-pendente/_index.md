@@ -30,6 +30,7 @@ Ou seja, com este endpoint é possível fazer um pix informando tanto o campo `k
 - A ausência do campo `key`, que seria o envio de um Pix pela Chave Pix torna o campo `target`, que é o campo com os dados bancários do destino, **obrigatório**.<br>
 - É possivel criar um Pix somente informando o campo `account_id` sem precisar informar o campo `source`.<br>
 - Após a criação do Pix através desse endpoint é necessário confirmar o mesmo através do [endpoint](/docs/referencia-da-api/pix/confirmar-pagamento-pendente/) `/api/v1/pix/outbound_pix_payments/{id}/actions/confirm`. Caso o Pix não seja confirmado, ele permanece no status de `CREATED` até ser confirmado.
+- No caso de criação de um Pix utilizando a chave, os dados da `account` do `target` não serão retornados na resposta. Além disso, o campo do `document` do `target` será mascarado caso seja do tipo "cpf".
 {{% /pageinfo %}}
 
 <br>
@@ -81,6 +82,10 @@ Exemplo:
 <br>Chave identificadora da contraparte
 <br>Tamanho mínimo: 0
 <br>Tamanho máximo: 77
+
+**scheduled_to** `date`
+<br>Data do agendamento
+<br>Formato: YYYY-MM-DD
 
 **source** <br>Dados do pagador
   <br>&nbsp;&nbsp;&nbsp;&nbsp;**entity**
@@ -169,6 +174,7 @@ Body:
   "refunded_amount": 0,
   "request_id": "1017dbdd97871b98eeaf1c650a20aa15",
   "settled_at": null,
+  "scheduled_to": null,
   "source": {
     "account": {
       "account_code": "34",
