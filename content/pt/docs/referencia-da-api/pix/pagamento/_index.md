@@ -27,4 +27,4 @@ O Pagamento de um Pix pode ser feito através da inserção dos dados completos 
 
 1. Realiza request através do [endpoint]({{< relref "/docs/referencia-da-api/pix/pagamento/buscar-dados-qrcode/">}}) /api/v1/outbound_pix_payments/brcode informando o QRCode através do campo `brcode`. Este irá retornar uma reposta com os dados do QRCode.
 2. Realiza request através do [endpoint]({{< relref "/docs/referencia-da-api/pix/pagamento/criar-pagamento-pendente/">}}) /api/v1/pix/outbound_pix_payments enviando parâmetros validos. Este irá retornar uma resposta com os dados do Pix.
-3. Realiza request através do [endpoint]({{< relref "/docs/referencia-da-api/pix/pagamento/confirmar-pagamento-pendente/">}}) /api/v1/pix/outbound_pix_payments/{id}/actions/confirm informando o campo `id` retornado pela resposta desse passo 2.<br><br
+3. Realiza request através do [endpoint]({{< relref "/docs/referencia-da-api/pix/pagamento/confirmar-pagamento-pendente/">}}) /api/v1/pix/outbound_pix_payments/{id}/actions/confirm informando o campo `id` retornado pela resposta desse passo 2.<br><br>

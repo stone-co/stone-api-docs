@@ -59,6 +59,10 @@ Os status possiveis são: `CREATED`, `CONFIRMED`, `FAILED`, `MONEY_RESERVED`, `R
 
 - `SETTLED` - Significa que o Pix que estava com o estado de `MONEY_RESERVED`, foi finalizado e liquidamos o dinheiro reservado na conta gráfica da operação.
 
+- `SCHEDULED` - Significa que o Pix está agendado.
+
+- `CANCELLED` - Significa que um Pix que foi agendado foi cancelado, encerrando a operação.
+
 - `REFUNDED` - Significa que o Pix que estava com o estado de `MONEY_RESERVED`, foi rejeitado ou devolvido.
 
 - `FAILED` - Significa que o Pix que estava com o estado de `CONFIRMED`, falhou no momento de reservar o dinheiro, podendo ser devido a falta de saldo do cliente, e portanto ele vai para o estado de `FAILED` e o fluxo da operação se encerra.<br><br>
@@ -82,7 +86,7 @@ Para determinados casos, é possível utilizar a API de Pix do BACEN. Para acess
 
 | Chave                        | Tipo  | Descrição                                                              | Regra de negócio        |
 | ---------------------------- | -------------- | -------------------------------------------------------- | ------------------------------ |
-| key_Type | String | Indica o tipo de chave que será criada.<br>Valores possíveis: `CNPJ`, `CPF`, `phone`, `email` e `random_key`. | Obrigatório
+| key_type | String | Indica o tipo de chave que será criada.<br>Valores possíveis: `CNPJ`, `CPF`, `phone`, `email` e `random_key`. | Obrigatório
 | key | String | É onde deve ser informado o dado do usuário a ser usado como chave no caso de chaves do tipo celular, documento ou e-mail. <br> No caso de telefone deverá ser informado no  formato internacional. Ex.: “+5521912345678”. | Obrigatório nos tipos `CNPJ`, `CPF`, `phone` e `email`. |
 | account_id | String | Identificador da Conta Stone de quem está chamando a API. | Obrigatório |
 | participant_ispb | String | Código ISPB do participante. | Obrigatório nos casos de em que campo `beneficiary_type` for `external_account`. |
