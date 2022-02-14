@@ -49,7 +49,7 @@ O Pix tem quatro tipos de participantes principais:<br><br>
 ---
 <br>
 
-Os status possiveis são: `CREATED`, `CONFIRMED`, `FAILED`, `MONEY_RESERVED`, `REFUNDED` e `SETTLED`. A partir do momento que um Pix é criado, ele **nunca expira**.
+Os status possiveis são: `CREATED`, `CONFIRMED`, `FAILED`, `MONEY_RESERVED`, `REFUNDED`, `SETTLED`, `SCHEDULED` e `CANCELLED`. A partir do momento que um Pix é criado, ele **nunca expira**.
 
 - `CREATED` -  Significa que o Pix foi criado e está aguardando confirmação.
 
