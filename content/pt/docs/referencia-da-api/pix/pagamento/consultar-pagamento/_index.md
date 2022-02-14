@@ -113,4 +113,4 @@ Os possíveis estados do pagamento retornado, que vem no campo `status` são:
 400 Bad Request
 ```
 
-Acontece quando o id enviado não se conforma ao padrão UUID.
+Acontece quando o id enviado não está em conformidade com o padrão UUID.
