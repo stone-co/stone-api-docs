@@ -104,7 +104,8 @@ https://sandbox-api.openbank.stone.com.br/api/v1/pix/477f8576-ca82-462b-be73-dc2
 
 ```json
 {
-    "type": "srn:error:invalid account_id path param"
+    "reason": [{"error": "is invalid", "path": ["account_id"]}],
+    "type": "srn:error:validation"
 }
 ```
 

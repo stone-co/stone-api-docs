@@ -1,23 +1,23 @@
 ---
-title: "Relato de Infração recebido"
-linkTitle: "Relato de infração recebido"
+title: "Relato de Infração"
+linkTitle: "Relato de Infração"
 date: 2022-02-11T14:00:00-03:00
 lastmod: 2022-02-11T14:00:00-03:00
 weight: 3
 draft: false
 description: >
-  Veja como listar e fechar relatos de infrações recebidos
+  Veja como utilizar Relatos de Infrações
 ---
 
 ## O que é um Relato de Infração
 ---
-Relatos de infração servem para reportar transações sob suspeita de fraude. Podem ser feitas tanto pelo participante debitado quanto pelo creditado na transação.
+Um Relato de Infração serve para reportar uma transação sob suspeita de fraude. Pode ser feita tanto pelo participante debitado quanto pelo creditado na transação.
 <br><br>
-Os relatos tem dois motivos(InfractionType), que é de preenchimento obrigatório, são eles, fraude(fraud) e associada a uma solicitação de devolução(refund_request). Depois de criado, o relato deve ser reconhecido pela outra parte da transação (acknowledge) e, após análise, fechado (close) concordando (AGREED) ou discordando (DISAGREED) da infração.
+Os relatos tem três motivos (type) que é de preenchimento obrigatório. São eles, fraude (fraud), associada a uma solicitação de devolução (refund_request) e para fluxo de cancelamento de devolução (refund_cancelled). Depois de criado, o relato deve ser reconhecido pela outra parte da transação e, após análise, deve fechar a análise como aceito (accepted) ou rejeitado (rejected).
 <br><br>
 O criador do relato pode cancelá-lo a qualquer momento, mesmo depois de fechado.
 <br><br>
-Relatos de infração são criados a partir do identificador da transação realizada no SPI (EndToEndId). O prazo máximo para relatar infração em uma transação é de 80 dias após a data da transação questionada. A resolução do relato com desfecho de concordando (AGREED) ou discordando (DISAGREED) da infração deve ser no prazo máximo de 7 dias corridos da data de sua abertura.
+Relatos de infração são criados a partir do identificador da transação realizada no SPI (end_to_end_id ou refund_id). O prazo máximo para relatar infração em uma transação é de 80 dias após a data da transação questionada. A resolução do relato com desfecho de ac (AGREED) ou discordando (DISAGREED) da infração deve ser no prazo máximo de 7 dias corridos da data de sua abertura.
 <br><br>
 Cada participante deve realizar polling periódico na lista de relatos para verificar se existem novos relatos em que é parte. O recebimento do relato não implica em concordância. 
 <br><br>
@@ -31,7 +31,7 @@ Se for cancelado, o relato deixa de ser contabilizado em REPORTED_FRAUDS durante
 <br>
 
 
-## Campos do relato de infração
+## Campos do Relato de Infração
 ---
 
 <br>
