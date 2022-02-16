@@ -39,6 +39,8 @@ Se for cancelado, o relato deixa de ser contabilizado em REPORTED_FRAUDS durante
 | Campo                        | Tipo  | Descrição                                                              | Regra de negócio        |
 | ---------------------------- | -------------- | -------------------------------------------------------- | ------------------------------ |
 
+| id | String | Identificador do registro no domínio Stone. | Obrigatório. |
+
 | end_to_end_id | String | Identificador ponta a ponta do pagamento que está sendo relatado uma infração. | Ou end_to_end_id ou refund_id deve estar preenchido. |
 
 | refund_id | String | Identificador ponta a ponta da devolução que está sendo relatado uma infração. | Ou end_to_end_id ou refund_id deve estar preenchido. |
