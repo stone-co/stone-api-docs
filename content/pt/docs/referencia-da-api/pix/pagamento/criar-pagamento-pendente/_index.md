@@ -31,6 +31,7 @@ Ou seja, com este endpoint é possível fazer um pix informando tanto o campo `k
 - É possivel criar um Pix somente informando o campo `account_id` sem precisar informar o campo `source`.<br>
 - Após a criação do Pix através desse endpoint é necessário confirmar o mesmo através do [endpoint](/docs/referencia-da-api/pix/confirmar-pagamento-pendente/) `/api/v1/pix/outbound_pix_payments/{id}/actions/confirm`. Caso o Pix não seja confirmado, ele permanece no status de `CREATED` até ser confirmado.
 - No caso de criação de um Pix utilizando a chave, os dados da `account` do `target` não serão retornados na resposta. Além disso, o campo do `document` do `target` será mascarado caso seja do tipo "cpf".
+- Para criar um agendamento de Pix, basta enviar o campo `scheduled_to` com uma data superior ao dia atual.
 {{% /pageinfo %}}
 
 <br>
