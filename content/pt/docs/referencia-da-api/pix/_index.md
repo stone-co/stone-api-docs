@@ -1,19 +1,12 @@
 ---
-title: "PIX (Beta)"
-linkTitle: "PIX (Beta)"
+title: "PIX"
+linkTitle: "PIX"
 lastmod: 2021-03-31T18:00:00-03:00
 weight: 16
 draft: false
 description: >
 ---      
 ---
-<br>
-
-{{% pageinfo %}}
-A integração com o Pix ainda está em Alpha, o que significa que temos um grupo pequeno de parceiros testando a funcionalidade para que possamos fazer ajustes e então liberar para todos os parceiros.
-{{% /pageinfo %}}
-
-<br>
 
 ## O que é o Pix?
 ---
