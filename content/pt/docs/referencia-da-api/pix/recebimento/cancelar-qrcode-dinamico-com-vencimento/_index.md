@@ -1,6 +1,6 @@
 ---
-title: "Cancelar QRCode Dinâmico"
-linkTitle: "Listar QRCode Dinâmico"
+title: "Cancelar QRCode Dinâmico com data de vencimento"
+linkTitle: "Listar QRCode Dinâmico com data de vencimento"
 date: 2022-02-18T14:00:00-03:00
 lastmod: 2022-02-18T14:08:00-03:00
 weight: 8
