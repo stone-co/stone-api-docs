@@ -8,12 +8,13 @@ description: >
   
 ---
 
-Através desse endpoint será possível fechar um relato de infração.
+Através desse endpoint será possível que um participante indireto possa fechar um relato de infração.
 
 
 ```
 POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/{{account_id}}/infractions_reports/{{id}}/actions/{{analysis_result}}
 <br>
+```
 
 ##### **HEADERS**
 ---
@@ -26,7 +27,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/{{account_id}}/infract
 
 <br>
 
-##### **QUERY PATH**
+##### **PATH PARAMS**
 ---
 <br>
 
@@ -37,11 +38,13 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/{{account_id}}/infract
 <br>Identificador do relato
 
 **analysis_result*** `string`
-<br>Resultado da análise
+<br>Resultado da análise: aqui deverá ser preenchido o valor accepted ou rejected
 
 ##### **BODY PARAMS**
 ---
 <br>
+**analysis_details** `string`
+<br> Detalhes da análise
 
 **- Para fechar um relato de infração**
 
@@ -52,13 +55,13 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/{{account_id}}/infract
 }
 
 <br> <br> 
+```
 
 ##### **Response**
 ---
 
 ```
 204 OK
-```
 ```
 
 <br>
