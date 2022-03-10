@@ -13,7 +13,7 @@ description: >
 Este endpoint realiza o cancelamento em lote operações pendentes de aprovação e/ou operações agendadas para uma conta.
 
 ```
-POST https://sandbox-api.openbank.stone.com.br/api/v1/account/{account_id}/operations/actions/cancel
+POST https://sandbox-api.openbank.stone.com.br/api/v1/accounts/{account_id}/operations/actions/cancel
 ```
 
 Existem 2 ações possíveis nessa API:
@@ -27,7 +27,7 @@ Tipos de operações que podem ser canceladas:
 - `external_transfer` (TED)
 - `internal_transfer` (Pagamento Interno)
 - `barcode_payment` (Pagamento de Boleto)
-- `pix_payment` (Pix)
+- `pix_payment` (Pix)(Beta)
 - `refund_for_pix_payment` (Devolução de um Pix)
 
 <br>
@@ -51,7 +51,7 @@ Tipos de operações que podem ser canceladas:
 
 **account_id** `string`
 <br> Identificador da conta
-<br> <br> 
+<br> <br>
 
 <br>
 
@@ -78,12 +78,12 @@ Tipos de operações que podem ser canceladas:
   "operations": [{
       "id": "b14bd4ba-4476-43ef-baf6-58c8524830b3/",
       "type": "pix_payment"
-  }]   
+  }]
 }
 
 ```
 
-<br> <br> 
+<br> <br>
 ##### **Response**
 ---
 

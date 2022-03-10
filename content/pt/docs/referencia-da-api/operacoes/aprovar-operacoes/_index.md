@@ -13,7 +13,7 @@ description: >
 Este endpoint realiza a aprovação em lote de operações pendentes para uma conta.
 
 ```
-POST https://sandbox-api.openbank.stone.com.br/api/v1/account/{account_id}/operations/actions/approve
+POST https://sandbox-api.openbank.stone.com.br/api/v1/accounts/{account_id}/operations/actions/approve
 ```
 
 Existem 2 ações possíveis nessa API:
@@ -51,7 +51,7 @@ Tipos de operações que podem ser aprovadas:
 
 **account_id** `string`
 <br> Identificador da conta
-<br> <br> 
+<br> <br>
 
 <br>
 
@@ -77,11 +77,11 @@ Tipos de operações que podem ser aprovadas:
   "operations": [{
       "id": "b14bd4ba-4476-43ef-baf6-58c8524830b3/",
       "type": "pix_payment"
-  }]   
+  }]
 }
 
 ```
-<br> <br> 
+<br> <br>
 ##### **Response**
 ---
 
