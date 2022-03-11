@@ -108,6 +108,17 @@ Body
   "type": "srn:error:already_exists"
 }
 ```
+
 Acontece quando a chave já foi criada
+
+<br>
+
+Body
+```json
+{
+  "type": "srn:error:entries_limit_reached"
+}
+```
+Acontece quando o limite de chaves para a conta foi atingido
 <br> <br> 
 

@@ -13,7 +13,7 @@ Esse endpoint deve ser chamado para detalhar uma chave Pix. <br><br>
 
 
 ```
-GET /api/v1/pix/{{account_id}}/entries/{{id}}?participant_ispb=xxxx
+GET /api/v1/pix/{{account_id}}/entries/{{id}}
 ```
 ##### **HEADERS**
 ---
@@ -39,18 +39,6 @@ GET /api/v1/pix/{{account_id}}/entries/{{id}}?participant_ispb=xxxx
 <br> Identificador da chave a ser deletada. Caso não saiba o `id` da chave, liste as chaves da conta por esse [endpoint]({{< relref "/docs/referencia-da-api/pix/chaves-pix/listar-chaves-pix/">}}) e pegue o `id`.
 <br><br>
 
-Parâmetros (filtros) para a query: 
-- "participant_ispb" *(obrigatório para participantes indiretos)
-- "beneficiary_entity_name"
-- "beneficiary_entity_document_type"
-- "beneficiary_entity_document"
-- "beneficiary_account_branch_code"
-- "beneficiary_account_account_code"
-- "beneficiary_account_account_type"
-- "beneficiary_account_created_at"
-- "status"
-<br><br>
-
 ##### **RESPONSE**
 ---
 
@@ -62,7 +50,7 @@ Parâmetros (filtros) para a query:
 **Body**
 ```json
 {
-  "id": d990cc41-e514-4343-a84c-80c677102b17,
+  "id": "d990cc41-e514-4343-a84c-80c677102b17",
   "key": “+5510998765432”, 
   "key_type": "phone", 
   "key_status": "active",
@@ -81,14 +69,14 @@ Parâmetros (filtros) para a query:
   }, 
   "events": [
     {
-      "id": 38963369-533c-42aa-a49e-b5369ff4bd52,
+      "id": "38963369-533c-42aa-a49e-b5369ff4bd52",
       "created_at": "20200-09-18T03:00:00Z",
       "type": "created",
       "from_status": null,
       "to_status": "active"
     },
     {
-      "id": 7eb6ee15-1485-468a-ad38-411320878815,
+      "id": "7eb6ee15-1485-468a-ad38-411320878815",
       "created_at": “20200-09-22T03:00:00Z”,
       "type": "deleted",
       "from_status": "active",
