@@ -1,18 +1,18 @@
 ---
-title: "PIX"
-linkTitle: "PIX"
+title: "Pix"
+linkTitle: "Pix"
 lastmod: 2021-03-31T18:00:00-03:00
 weight: 16
 draft: false
 description: >
----      
+---
 ---
 
 ## O que é o Pix?
 ---
 <br>
 
-O Pix é a nova modalidade de pagamentos instantâneos do Banco Central, que entrou em vigor no Brasil inteiro no dia 16 de novembro de 2020. 
+O Pix é a nova modalidade de pagamentos instantâneos do Banco Central, que entrou em vigor no Brasil inteiro no dia 16 de novembro de 2020.
 
 Além de sua ampla grade de funcionamento e pequeno tempo de processamento, o Pix busca simplificar a experiência do usuário que consegue passar o dinheiro para outro participante informando apenas seu telefone, documento (CPF/CNPJ), seu email ou lendo um QR Code. Lembrando que também é possível fazer um Pix informando os dados bancários, como é feito em uma TED.
 
@@ -21,7 +21,7 @@ Além de sua ampla grade de funcionamento e pequeno tempo de processamento, o Pi
 {{< alert title="Horário de funcionamento" >}}
 <br>
 
-A API de Pix fica disponível todos os dias da semana e 24 horas por dia, pois é uma modalidade de pagamento instantânea.	
+A API de Pix fica disponível todos os dias da semana e 24 horas por dia, pois é uma modalidade de pagamento instantânea.
 {{< /alert >}}
 
 <br>
@@ -89,10 +89,10 @@ Para determinados casos, é possível utilizar a API de Pix do BACEN. Para acess
 | beneficiary_id  | String | Id do beneficiário.  | - |
 | id | String | Identificador da requisição que pode ser para uma criação de chave ou uma remoção de chave. | - |
 | status | String | Status da requisição.  | - |
-| erro_description | String | Descreve especificamente qual foi o erro na criação da Chave PIX.  | Só é retornado quando o staus é `rejected`. |
-| reason | String  | Razão da solicitação de remoção de uma Chave PIX. Valores possíveis são:`user_requested”, `account_closured`, `entry_inactivity`, `reconciliation`ou `fraud`. `entry_inactivity`deve ser usado quando por algum motivo a chave usada não está mais ativa, como um email ativo que foi desabilitado ou um CPF que foi inativado. | - |
-| key_status | String  | Status da Chave PIX. Os possíveis valores são: `active`, `deleted`. | - |
-| created_at | Datetime | Datetime de criação da Chave PIX.<br> Formato: "2019-11-18T03:00:00Z".  | - |
+| erro_description | String | Descreve especificamente qual foi o erro na criação da Chave Pix.  | Só é retornado quando o staus é `rejected`. |
+| reason | String  | Razão da solicitação de remoção de uma Chave Pix. Valores possíveis são:`user_requested”, `account_closured`, `entry_inactivity`, `reconciliation`ou `fraud`. `entry_inactivity`deve ser usado quando por algum motivo a chave usada não está mais ativa, como um email ativo que foi desabilitado ou um CPF que foi inativado. | - |
+| key_status | String  | Status da Chave Pix. Os possíveis valores são: `active`, `deleted`. | - |
+| created_at | Datetime | Datetime de criação da Chave Pix.<br> Formato: "2019-11-18T03:00:00Z".  | - |
 | claim_id | String | Identificador da reivindicação. | - |
 | claim_type | String | Especifica o tipo de solicitação. | - |
 | approval_response | Boolean | Indica se deseja aprovar a solicitação (`true`) ou rejeitar a solicitação (`false`). | - |

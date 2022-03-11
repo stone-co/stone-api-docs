@@ -1,15 +1,15 @@
 ---
-title: "Pagar um PIX"
+title: "Pagar um Pix"
 date: 2020-09-14T18:16:35-03:00
 lastmod: 2020-09-14T18:16:35-03:00
 weight: "4"
 draft: false
 ---
 {{< notice info >}}
-Beta: O PIX ainda está em beta, o que significa que temos um grupo pequeno testando a funcionalidade para que então possamos liberar para todos.
+Beta: O Pix ainda está em beta, o que significa que temos um grupo pequeno testando a funcionalidade para que então possamos liberar para todos.
 {{< /notice >}}
 
-O Pagamento de um PIX pode ser feito através da inserção dos dados completos do recebedor, por meio da inserção de uma chave PIX ou pela leitura de um QR code.
+O Pagamento de um Pix pode ser feito através da inserção dos dados completos do recebedor, por meio da inserção de uma chave Pix ou pela leitura de um QR code.
 
 #### Inserção dos dados completos do recebedor:
 

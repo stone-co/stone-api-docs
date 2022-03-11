@@ -1,15 +1,15 @@
 ---
-title: "Receber um PIX via QR Code"
+title: "Receber um Pix via QR Code"
 date: 2020-09-14T18:15:48-03:00
 lastmod: 2020-09-14T18:15:48-03:00
 weight: "3"
 draft: false
 ---
 {{< notice info >}}
-Beta: O PIX ainda está em beta, o que significa que temos um grupo pequeno testando a funcionalidade para que então possamos liberar para todos.
+Beta: O Pix ainda está em beta, o que significa que temos um grupo pequeno testando a funcionalidade para que então possamos liberar para todos.
 {{< /notice >}}
 
-Para receber um PIX via QR Code, a cliente precisa ter a sua chave aleatória cadastrada na instituição participante.
+Para receber um Pix via QR Code, a cliente precisa ter a sua chave aleatória cadastrada na instituição participante.
 
 #### Criação de um QR Code
 
@@ -50,7 +50,7 @@ x-stone-idempotency-key: string()
    "created_at": "2020-08-19T13:49:43.094436Z",
    "created_by": "user:54071fc2-8068-4b26-bed7-be112228ed98",
    "revision": 0,
-   "data_url": "https://api.openbank.stone.com.br/pix/{{jti()}}" 
+   "data_url": "https://api.openbank.stone.com.br/pix/{{jti()}}"
 
 }
 ```
@@ -75,15 +75,15 @@ content-type: application/json
    "created_at": "2020-08-19T13:49:43.094436Z",
    "created_by": "user:54071fc2-8068-4b26-bed7-be112228ed98",
    "revision": 0,
-   "data_url": "https://api.openbank.stone.com.br/pix/{{jti()}}" 
+   "data_url": "https://api.openbank.stone.com.br/pix/{{jti()}}"
 }
 ```
 ##### Exemplo de requisição de uma lista paginada:
 ```
 GET /api/v1/pix_payment_invoices?filter={
-  customer_random_key: string(), 
-  created_at: datetime(), 
-  customer_type: string(), 
+  customer_random_key: string(),
+  created_at: datetime(),
+  customer_type: string(),
   account_id: uuid(),
   jti: string()
 }
