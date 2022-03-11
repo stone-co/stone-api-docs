@@ -108,7 +108,6 @@ Body
   "type": "srn:error:already_exists"
 }
 ```
-
 Acontece quando a chave já foi criada
 
 <br>

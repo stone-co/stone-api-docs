@@ -143,23 +143,19 @@ Body
 ```
 
 Body
-
 ```json
 {
   "type": "srn:error:already_updated"
 }
 ```
-
 Acontece quando a chave já está atualizada com base nos parâmetros enviados
 <br>
 
 Body
-
 ```json
 {
   "type": "srn:error:already_updated"
 }
 ```
-
 Acontece quando a chave está com um status diferente de `key_created`.
 <br><br>
