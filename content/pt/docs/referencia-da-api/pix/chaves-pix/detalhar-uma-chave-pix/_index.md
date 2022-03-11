@@ -51,13 +51,13 @@ GET /api/v1/pix/{{account_id}}/entries/{{id}}
 ```json
 {
   "id": "d990cc41-e514-4343-a84c-80c677102b17",
-  "key": “+5510998765432”, 
+  "key": "+5510998765432", 
   "key_type": "phone", 
   "key_status": "active",
   "account_id": "968cc34d-d827-448b-ac1b-e6e29836a160",
-  "participant_ispb": “1234567890”,
+  "participant_ispb": "1234567890",
   "beneficiary_account": {
-     "branch_code": “0001”,
+     "branch_code": "0001",
      "account_code": "00016583",
      "account_type": "CC",
      "created_at": "2019-11-18T03:00:00Z"
@@ -65,7 +65,7 @@ GET /api/v1/pix/{{account_id}}/entries/{{id}}
   "beneficiary_entity": {
      "name":"Maria Clara Gomes",
      "document_type": "cpf",
-     "document": “13152256685”
+     "document": "13152256685"
   }, 
   "events": [
     {
@@ -77,7 +77,7 @@ GET /api/v1/pix/{{account_id}}/entries/{{id}}
     },
     {
       "id": "7eb6ee15-1485-468a-ad38-411320878815",
-      "created_at": “20200-09-22T03:00:00Z”,
+      "created_at": "20200-09-22T03:00:00Z",
       "type": "deleted",
       "from_status": "active",
       "to_status": "deleted"
