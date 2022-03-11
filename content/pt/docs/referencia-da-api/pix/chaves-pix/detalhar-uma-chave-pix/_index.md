@@ -29,7 +29,7 @@ GET /api/v1/pix/{{account_id}}/entries/{{id}}
 
 <br>
 
-##### **QUERY PARAMS**
+##### **PATH PARAMS**
 ---
 
 **account_id** `string`
