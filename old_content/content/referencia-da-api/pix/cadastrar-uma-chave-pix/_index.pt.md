@@ -1,21 +1,21 @@
 ---
-title: "Cadastrar uma Chave PIX"
+title: "Cadastrar uma Chave Pix"
 date: 2020-09-14T18:14:34-03:00
 lastmod: 2020-09-14T18:14:34-03:00
 weight: "2"
 draft: false
 ---
 {{< notice info >}}
-Beta: O PIX ainda está em beta, o que significa que temos um grupo pequeno testando a funcionalidade para que então possamos liberar para todos.
+Beta: O Pix ainda está em beta, o que significa que temos um grupo pequeno testando a funcionalidade para que então possamos liberar para todos.
 {{< /notice >}}
 
-A chave PIX é um identificador que vincula uma conta ao arranjo de pagamentos instantâneos, permitindo o recebimento de um PIX. As Chaves PIX poderão ser cadastradas a partir do dia 05 de outubro.
+A chave Pix é um identificador que vincula uma conta ao arranjo de pagamentos instantâneos, permitindo o recebimento de um Pix. As Chaves Pix poderão ser cadastradas a partir do dia 05 de outubro.
 
 As chaves podem ser:
 - Telefone celular;
 - CNPJ/CPF;
 - E-mail;
-- Chave aleatória - código identificador que permite o recebimento do PIX por meio de QRCodes
+- Chave aleatória - código identificador que permite o recebimento do Pix por meio de QRCodes
 
 ##### Exemplo de requisição:
 ```

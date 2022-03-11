@@ -26,7 +26,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/institutions
 <br> Pode ser "spi", "str", ou "all". O default se nada for passado é "str".
 
 * "str" - Retornamos as instituições participantes do STR. Útil para operaçõs de TED
-* "spi" - Retornamos as instituições participantes do SPI. Útil para operaçõs de PIX
+* "spi" - Retornamos as instituições participantes do SPI. Útil para operaçõs de Pix
 * "all" - Retornamos todas as instituições
 
 <br>

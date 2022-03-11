@@ -6,7 +6,7 @@ lastmod: 2020-11-06T15:16:43-03:00
 weight: 6
 draft: true
 description: >
-  
+
 ---
 
 ##### **Request**
@@ -20,7 +20,7 @@ Cobrança cancelada com sucesso
 204 NO CONTENT
 ```
 
-PIX Já foi pago e não pode ser mais cancelado
+Pix Já foi pago e não pode ser mais cancelado
 ```
 422 DOMAIN ERROR
 ```
