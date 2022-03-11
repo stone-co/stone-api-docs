@@ -9,8 +9,7 @@ description: >
 ---
 <br>
 
-Através do seguinte endpoint, será possível que um participante indireto feche um relato de infração. Para fechar um relato, este deve possuir os seguintes requisitos: ser um relato recebido (direction: inbound) e estar pendente (status: pending). O relato também deve ser fechado em um prazo de 7 dias.
-
+Através do seguinte endpoint, será possível que um participante indireto feche um relato de infração. Para fechar um relato, este deve possuir os seguintes requisitos: ser um relato recebido (`direction: inbound`) e estar pendente (`status: pending`). O relato também deve ser fechado em um prazo de 7 dias.
 
 ```
 POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/{{account_id}}/infractions_reports/{{id}}/actions/{{analysis_result}}
