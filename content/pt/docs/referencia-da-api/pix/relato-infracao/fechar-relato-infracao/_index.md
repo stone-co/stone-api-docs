@@ -7,14 +7,17 @@ weight: 9
 description: >
   
 ---
+<br>
 
-Através desse endpoint será possível que um participante indireto possa fechar um relato de infração.
+Através do seguinte endpoint, será possível que um participante indireto feche um relato de infração. Para fechar um relato, este deve possuir os seguintes requisitos: ser um relato recebido (direction: inbound) e estar pendente (status: pending). O relato também deve ser fechado em um prazo de 7 dias.
 
 
 ```
 POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/{{account_id}}/infractions_reports/{{id}}/actions/{{analysis_result}}
-<br>
+
 ```
+
+<br>
 
 ##### **HEADERS**
 ---
@@ -29,7 +32,6 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/{{account_id}}/infract
 
 ##### **PATH PARAMS**
 ---
-<br>
 
 **account_id*** `string`
 <br>Identificador da conta
@@ -38,15 +40,19 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/{{account_id}}/infract
 <br>Identificador do relato
 
 **analysis_result*** `string`
-<br>Resultado da análise: aqui deverá ser preenchido o valor accepted ou rejected
+<br>Resultado da análise: aqui deverá ser preenchido com um dos valores `accepted` ou `rejected`
+
+<br>
 
 ##### **BODY PARAMS**
 ---
-<br>
-**analysis_details** `string`
+
+**analysis_details** `string` `Opcional` `Tamanho máximo de 2000 caracteres`
 <br> Detalhes da análise
 
-**- Para fechar um relato de infração**
+<br>
+
+##### **Request body**
 
 
 ```json
@@ -54,8 +60,8 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/{{account_id}}/infract
     "analysis_details": "detalhes da análise"
 }
 
-<br> <br> 
 ```
+<br> <br> 
 
 ##### **Response**
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Relato de Infração"
+title: "Relato de Infração (Beta)"
 linkTitle: "Relato de Infração"
 date: 2022-02-11T14:00:00-03:00
 lastmod: 2022-02-11T14:00:00-03:00
