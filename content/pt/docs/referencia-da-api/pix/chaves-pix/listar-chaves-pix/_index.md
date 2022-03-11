@@ -29,11 +29,19 @@ GET /api/v1/pix/{{account_id}}/entries
 
 <br>
 
-##### **QUERY PARAMS**
+##### **PATH PARAMS**
 ---
 
 **account_id** `string`
 <br> Identificador da conta
+<br> <br>
+
+##### **QUERY PARAMS**
+---
+
+**status** `string`
+
+<br> Valores permitidos: `key_created`, `portability_claimed`, `ownership_claimed`, `failed` ou `deleted`
 <br> <br> 
 
 ##### **RESPONSE**
