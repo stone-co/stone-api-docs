@@ -39,9 +39,13 @@ GET /api/v1/pix/{{account_id}}/entries
 ##### **QUERY PARAMS**
 ---
 
-**status** `string`
+**status** `array` `string`
 
 <br> Valores permitidos: `key_created`, `portability_claimed`, `ownership_claimed`, `failed` ou `deleted`
+
+Exemplo:  
+
+- `/api/v1/pix/{{account_id}}/entries?status[]=key_created&status[]=failed`;
 <br> <br> 
 
 ##### **RESPONSE**
