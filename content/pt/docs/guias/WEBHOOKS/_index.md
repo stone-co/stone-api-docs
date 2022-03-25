@@ -53,7 +53,8 @@ A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) s
 | [barcode_payment_invoice_payment_promissed](barcode_payment_invoice_payment_promissed.json)    | Representa que o pagamento do boleto foi acolhido em alguma instituição.  |
 | [inbound_barcode_payment_validated](inbound_barcode_payment_validated.json)   | Representa que o pagamento do boleto emitido foi aceito na instituição. |
 | [barcode_payment_invoice_settled](barcode_payment_invoice_settled.json)       | Representa que o pagamento do boleto foi confirmado e liquidado.        |
-| [barcode_payment_invoice_expired](barcode_payment_invoice_expired.json)              | Representa que o boleto está expirado.                                    |
+| [barcode_payment_invoice_expired](barcode_payment_invoice_expired.json)              | Representa que o boleto está expirado.
+| [barcode_payment_invoice_cancelled](barcode_payment_invoice_cancelled.json)              | Representa que o boleto está cancelado.                                      |
 | [cash_in_barcode_payment](cash_in_barcode_payment.json)                      | Representa a entrada do valor do boleto na conta do beneficiário.         | 
 | [inbound_barcode_payment_refunded](inbound_barcode_payment_refunded.json)            | Representa que o pagamento do boleto foi devolvido.         |
 
