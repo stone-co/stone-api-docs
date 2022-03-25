@@ -61,7 +61,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
 <br>
 
 **limit_date** `string`
-<br>Data limite para pagamento do boleto bancário. Deve ser igual à data de vencimento para boletos de depósito e proposta. Para boletos de cobrança, deve ser igual ou maior que a data de vencimento. Se não informada, será usada a `expiration_date`. Os boletos que forem pagos após a data limite serão devolvidos.
+<br>Data limite para pagamento do boleto bancário. Deve ser igual à data de vencimento para boletos de depósito e proposta. Para boletos de cobrança, deve ser maior que a data de vencimento. Se não informada, será usada a expiration_date, nos boletos de depósito e de proposta. Os boletos que forem pagos após a data limite serão devolvidos.
 
 ---
 <br>
@@ -77,6 +77,8 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
 <br> &nbsp;&nbsp;&nbsp;&nbsp;**document** `string` _(obrigatório)_
 <br> &nbsp;&nbsp;&nbsp;&nbsp;Número do documento do pagador sem pontos. Não é obrigatório no tipo `deposit`.
 <br>
+<br> &nbsp;&nbsp;&nbsp;&nbsp;**document_type** `string` _(opcional)_
+<br>
 <br> &nbsp;&nbsp;&nbsp;&nbsp;**legal_name** `string` _(obrigatório)_
 <br> &nbsp;&nbsp;&nbsp;&nbsp;É o nome que identifica o pagador para fins legais, administrativos e outros fins oficiais. Não é obrigatório no tipo `deposit`.
 <br>
@@ -90,7 +92,7 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
 <br>
 
 <br> &nbsp;&nbsp;&nbsp;&nbsp;**date** `string`
-<br> &nbsp;&nbsp;&nbsp;&nbsp;Data até a qual o desconto deve ser aplicado. Formato ISO8601 `"YYYY-MM-DD"`. É aceito nos tipos de proposta e cobrança.
+<br> &nbsp;&nbsp;&nbsp;&nbsp;Data até a qual o desconto deve ser aplicado. Formato ISO8601 `"YYYY-MM-DD"`. É aceito nos boletos de proposta e de cobrança.
 <br>
 <br> &nbsp;&nbsp;&nbsp;&nbsp;**value** `string`
 <br> &nbsp;&nbsp;&nbsp;&nbsp;Valor percentual (%) do desconto que será aplicado ao boleto. O valor deve ser maior que 0.0 e até 90.0. Formato decimal. Ex: "20.0". É aceito nos tipos de proposta e cobrança.
@@ -102,10 +104,10 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
 <br>
 
 <br> &nbsp;&nbsp;&nbsp;&nbsp;**date** `string` _(obrigatório)_
-<br> &nbsp;&nbsp;&nbsp;&nbsp;Data que define o dia a partir do qual a multa deve ser aplicada ao boleto. Caso não seja infromada será consiederada a data de validdade. Só é aceito no tipo de cobrança.
+<br> &nbsp;&nbsp;&nbsp;&nbsp;Data que define o dia a partir do qual a multa deve ser aplicada ao boleto. Caso não seja infromada será consiederada a data de validdade. Só é aceito no boleto de cobrança.
 <br>
 <br> &nbsp;&nbsp;&nbsp;&nbsp;**value** `string` _(obrigatório)_
-<br> &nbsp;&nbsp;&nbsp;&nbsp;Valor percentual (%) da multa que será aplicada ao boleto. O valor do deve ser maior que 0.0 e até 2.0. Formato decimal. Ex: "2.0". Só é aceito no tipo de cobrança.
+<br> &nbsp;&nbsp;&nbsp;&nbsp;Valor percentual (%) da multa que será aplicada ao boleto. O valor do deve ser maior que 0.0 e até 2.0. Formato decimal. Ex: "2.0". Só é aceito no boleto de cobrança.
 
 ---
 <br>
@@ -114,10 +116,10 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
 <br>
 
 <br> &nbsp;&nbsp;&nbsp;&nbsp;**date** `string` _(obrigatório)_
-<br> &nbsp;&nbsp;&nbsp;&nbsp;Data que define o dia a partir do qual os juros passam a ser aplicados ao boleto. Só é aceito no tipo de cobrança.
+<br> &nbsp;&nbsp;&nbsp;&nbsp;Data que define o dia a partir do qual os juros passam a ser aplicados ao boleto. Só é aceito no boleto de cobrança.
 <br>
 <br> &nbsp;&nbsp;&nbsp;&nbsp;**value** `string` _(obrigatório)_
-<br> &nbsp;&nbsp;&nbsp;&nbsp;Valor parcentual (%) dos juros que será aplicado ao boleto por mês. O valor do deve ser maior que 0.0 e até 1.0. Formato decimal. Ex: "1.0". Só é aceito no tipo de cobrança.
+<br> &nbsp;&nbsp;&nbsp;&nbsp;Valor parcentual (%) dos juros que será aplicado ao boleto por mês. O valor do deve ser maior que 0.0 e até 1.0. Formato decimal. Ex: "1.0". Só é aceito no boleto de cobrança.
 
 ---
 <br>

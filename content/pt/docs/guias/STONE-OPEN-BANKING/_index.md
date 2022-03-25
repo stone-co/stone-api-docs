@@ -38,9 +38,7 @@ Para iniciar, confira um passo a passo da nossa integração abaixo aqui no [Qui
 
 Para realizar chamadas em nossa API, primeiro precisamos que você preencha este <a href="https://app.pipefy.com/public/form/Qz4ptt_W/?origem_do_lead=Documenta%C3%A7%C3%A3o" target="_blank">formulário</a>.
 
-Nosso time de parcerias entrará em contato em até 24 horas para entender seu modelo de negócio e te apresentar a proposta mais adequada.
-
-Você também receberá um contrato para formalização da parceria.
+Assim que possível o nosso time de parcerias entrará em contato.
 
 Por enquanto, ainda não estamos realizando onboarding de parceiros em autosserviço, mas queremos liberar isso em breve! 
 <br>
