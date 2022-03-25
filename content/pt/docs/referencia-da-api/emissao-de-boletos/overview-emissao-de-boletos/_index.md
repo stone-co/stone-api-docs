@@ -60,7 +60,7 @@ Tipo (type):
 
 Segue abaixo os status possíveis de um **boleto gerado**: 
 
-![status_boleto](/docs/referencia-da-api/emissao-de-boletos/overview-emissao-de-boletos/status_2.jpg)
+![status_boleto](status_2.jpg)
 
 
 <br>
