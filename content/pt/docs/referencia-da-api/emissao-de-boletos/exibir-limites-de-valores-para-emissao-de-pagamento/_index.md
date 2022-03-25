@@ -30,9 +30,7 @@ Identificador da conta.
 
 ##### **Response**
 
-```json
-200 OK
-```
+`200 OK`
 
 Body
 
