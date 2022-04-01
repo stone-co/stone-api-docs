@@ -1,10 +1,11 @@
 ---
 title: "Cancelar Operações em Lote"
 slug: "cancelar-operacoes"
+hidden: true
 date: 2022-01-13T18:00:00.687Z
 lastmod: 2022-01-13T18:00:00.687Z
 weight: 2
-draft: false
+draft: true
 description: >
 
 ---
