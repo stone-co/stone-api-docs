@@ -1,10 +1,11 @@
 ---
 title: "Detalhe de Operações"
 slug: "detalhes-operacoes"
-hidden: false
+hidden: true
 date: 2022-01-13T18:00:00.687Z
 lastmod: 2022-01-13T18:00:00.687Z
 weight: 3
+draft: true
 ---
 
 <br>
