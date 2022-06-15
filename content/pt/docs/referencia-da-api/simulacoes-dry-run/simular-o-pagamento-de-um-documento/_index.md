@@ -7,57 +7,128 @@ lastmod: 2020-06-04T00:43:25.396Z
 weight: 4
 ---
 
----
-
-```
+```shell
 POST https://sandbox-api.openbank.stone.com.br/api/v1/dry_run/payments
 ```
 
+#### **HEADERS**
+
 ---
+
+**Authorization** `string` _(obrigatório)_
+
+Bearer token de autenticação
+
+**x-stone-idempotency-key**  `string` _(obrigatório)_
+
+Chave de idempotência
 
 #### **BODY PARAMS**
 
 ---
 
-<br>
-
-**barcode**  `string`
+**barcode**  `string` _(obrigatório)_
 
 Código de barras do documento.
 
----
-<br>
-
-**account_id**  `string`
+**account_id**  `string` _(obrigatório)_
 
 Identificador da conta pagadora
 
-<br>
+##### **RESULT PARAMS**
+
+| Chave                      | Descrição                                                                                                                                                                | Tipo      | Regra de Negócio |
+|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|------------------|
+| account_id                 | Identificador da conta pagadora                                                                                                                                          | _String_  | Obrigatório      |
+| amount                     | Valor do pagamento                                                                                                                                                       | _Integer_ | Obrigatório      |
+| barcode                    | Código de barras do pagamento                                                                                                                                            | _String_  | Obrigatório      |
+| barcode_details            | Informações extraídas do código de barras                                                                                                                                | _Object_  | Obrigatório      |
+| details                    | Informações acerca do status do pagamento de acordo com a sua fonte emissora                                                                                             | _Object_  | Obrigatório      |
+| payment_being_processed?   | Indica se a Stone já recebeu uma solicitação de pagamento deste  documento e ainda está processando a solicitação. Em caso de “true” não  deve ser feito novo pagamento. | _Boolean_ | Obrigatório      |
+
+###### Objeto BarcodeDetails
+
+| Chave           | Descrição                                                                | Tipo      | Regra de negócio |
+|-----------------|--------------------------------------------------------------------------|-----------|------------------|
+| bank_code       | Código numérico da instituição que emitiu o documento                    | _String_  |                  |
+| bank_name       | Nome da instituição que emitiu o documento                               | _String_  |                  |
+| barcode         | Código de barras do documento                                            | _String_  |                  |
+| expiration_date | Data de vencimento do documento                                          | _Date_    |                  |
+| face_value      | Valor com o qual o documento foi criado e que consta no código de barras | _Integer_ |                  |
+| writable_line   | Código numerico que acompanha o codigo de barras                         | _String_  |                  |
+
+###### Objeto Details
+
+| Chave                  | Descrição                                                                                                                                                                            | Tipo      | Regra de Negócio |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------- |------------------|
+| bank_name              | Nome da instituição que emitiu o documento.                                                                                                                                          | _String_  |                  |
+| barcode                | Código de barras.                                                                                                                                                                    | _String_  |                  |
+| discount_value         | Valor do desconto que está sendo aplicado ao boleto. Caso nenhum desconto esteja sendo aplicado vira `null`.                                                                         | _Integer_ |
+| document_payment_type  | Informa o código referente a título.                                                                                                                                                 | _Integer_ |
+| document_type          | Informa o tipo de documento. Valores possíveis são: boleto e concessionaria.                                                                                                         | _String_  |
+| expiration_date        | Data de vencimento                                                                                                                                                                   | _String_  |
+| face_value             | Valor com o qual o documento foi criado e que consta do código de barras.                                                                                                            | _Integer_ |
+| fine_value             | Valor da multa que está sendo aplicada ao boleto. Caso nenhuma multa esteja sendo aplicada vira `null`.                                                                              | _Integer_ |
+| interest_value         | Valor dos juros que estão sendo aplicados ao boleto. Caso não haja juros aplicados vira `null`.                                                                                      | _Integer_ |
+| max_value              | Valor máximo que será aceito no pagamento deste documento.                                                                                                                           | _Integer_ |
+| min_value              | Valor mínimo que será aceito no pagamento deste documento.                                                                                                                           | _Integer_ |
+| payer_cpf_cnpj         | Número do documento do pagador sem pontos.                                                                                                                                           | _String_  |
+| payer_legal_name       | É o nome que identifica o pagador para fins legais, administrativos e outros fins oficiais.                                                                                          | _String_  |
+| payer_trade_name       | Nome fantasia do pagador.                                                                                                                                                            | _String_  |
+| payment_end_time       | Horário até o qual o pagamento é possível em um dia útil. Respeita o payment_limit_date. Formato hh:mm:ss.                                                                           | _String_  |
+| payment_limit_date     | Data limite para pagamento do documento. Formato ISO8601 "YYYY-MM-DD".                                                                                                               | _String_  |
+| payment_start_time     | Horário a partir do qual o pagamento é possível em um dia útil. Respeita o payment_limit_date. Formato hh:mm:ss.                                                                     | _String_  |
+| recipient_cpf_cnpj     | Número do documento do beneficiário sem pontos.                                                                                                                                      | _String_  |
+| recipient_name         | Nome do beneficiário.                                                                                                                                                                | _String_  |
+| settlement_date        | Data em que o dinheiro do pagamento do boleto é depositado na conta do beneficiário. Formato ISO8601 "YYYY-MM-DDThh:mm:ssZ". Caso o boleto ainda não tenha sido pago voltará `null`. | _String_  |
+| status                 | Status atual do documento na sua instituição emissora. Valores possíveis: payable, paid ou unpayable.                                                                                | _String_  |
+| total_added_value      | Total que foi adicionado ao valor original do documento decorrente de juros e multas.                                                                                                | _Integer_ |
+| total_discounted_value | Total que foi abatido do valor originial do documento decorrente de descontos.                                                                                                       | _Integer_ |
+| updatable_value        | Indica se é permitido alterar o valor do documento. Só disponível para document_type com valor concessionaria.                                                                       | _Boolean_ |
+| value                  | Valor atualizado já com descontos, multas e juros que se aplicam.                                                                                                                    | _Integer_ |
+| writable_line          | Código numérico que acompanha o código de barras.                                                                                                                                    | _String_  |
+| unpayable_reason_code  | Código que representa o motivo de estar impagável.                                                                                                                                   | _String_  |
 
 ---
-#### **HEADERS**
 
----
-<br>
+###### Tipos de document_payment_type
 
-**x-stone-idempotency-key**  `string`
-
-Chave de idempotência
-
-<br>
-
----
-
-##### Results Params
-
-| Chave                    | Descrição                                                                                                                                                              |
-| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| document_type            | Tipo do documento, podendo ser um dentre os valores à seguir: 'boleto' ou 'concessionaria'                                                                             |
-| payment_being_processed? | Indica se a Stone já recebeu uma solicitação de pagamento deste documento e ainda está processando a solicitação. Em caso de "true" não deve ser feito novo pagamento. |
-
-<br>
-
----
+| Domínio           | Descrição                                     |
+| ----------------- | --------------------------------------------- |
+| 1                 | CH Cheque                                     |
+| 2					| DM Duplicata Mercantil.						|
+| 3					| DMI Duplicata Mercantil Indicação.			|
+| 4					| DS Duplicata de Serviço.						|
+| 5					| DSI Duplicata de Serviço Indicação.			|
+| 6					| DR Duplicata Rural.							|
+| 7					| LC Letra de Câmbio.							|
+| 8					| NCC Nota de Crédito Comercial.				|
+| 9					| NCE Nota de Crédito Exportação.				|
+| 10				| NCI Nota de Crédito Industrial.				|
+| 11				| NCR Nota de Crédito Rural.					|
+| 12				| NP Nota Promissória.							|
+| 13				| NPR Nota Promissória Rural.					|
+| 14				| TM Triplicata Mercantil.						|
+| 15				| TS Triplicata de Serviço.						|
+| 16				| NS Nota de Seguro.							|
+| 17				| RC Recibo.									|
+| 18				| FAT Bloqueio.									|
+| 19				| ND Nota de Débito.							|
+| 20				| AP Apólice de Seguro.							|
+| 21				| ME Mensalidade Escolar.						|
+| 22				| PC Parcela de Consórcio.						|
+| 23				| NF Nota Fiscal.								|
+| 24				| DD Documento de Dívida.						|
+| 25				| Cédula de Produto Rural.						|
+| 26				| Warrant.										|
+| 27				| Dívida Ativa de Estado.						|
+| 28				| Dívida Ativa do Município.					|
+| 29				| Dívida Ativa da União.						|
+| 30				| Encargos Condominiais.						|
+| 31				| Cartão de Crédito.							|
+| 32				| Boleto Proposta.								|
+| 33				| Boleto de Depósito e Aporte.					|
+| 99				| Outros.										|
 
 ##### **Response**
 
@@ -68,62 +139,67 @@ content-type: application/json
 Body
 ```json
 {
-    "account_id": "79d8449d-94f7-454d-9a37-6f053748058f",
-    "amount": 15000,
+    "account_id": "87ec3cb5-884e-492f-ae46-4e2c92a2e359",
+    "amount": 5000000,
     "approval_expired_at": null,
-    "approved_at": "2021-05-20T17:58:59Z",
-    "approved_by": "user:893c0cfb-166f-4233-a97d-02c5943cebe0",
-    "barcode": "19796863300000150000000025300979370888041628",
+    "approved_at": "2022-06-15T14:50:28Z",
+    "approved_by": "user:9d213bde-d468-41ea-a502-348ddf7fa573",
+    "barcode": "19792912500050000000000075096336954691269269",
     "barcode_details": {
         "bank_code": "197",
-        "bank_name": "STONE PAGAMENTOS S.A.",
-        "barcode": "19796863300000150000000025300979370888041628",
-        "expiration_date": "2021-05-27",
-        "face_value": 15000,
-        "writable_line": "19790000052530097937108880416287686330000015000"
+        "bank_name": "STONE IP S.A.",
+        "barcode": "19792912500050000000000075096336954691269269",
+        "expiration_date": "2022-10-01",
+        "face_value": 5000000,
+        "writable_line": "19790000057509633695546912692699291250005000000"
     },
     "cancelled_at": null,
     "cancelled_by": null,
-    "created_at": "2021-05-20T17:58:59Z",
-    "created_by": "user:893c0cfb-166f-4233-a97d-02c5943cebe0",
+    "created_at": "2022-06-15T14:50:28Z",
+    "created_by": "user:9d213bde-d468-41ea-a502-348ddf7fa573",
     "details": {
-        "payer_trade_name": "E",
-        "divergent_amount_auth_type": 3,
-        "interest_value": 0,
-        "updatable_value": null,
-        "min_value": 8000,
-        "payer_cpf_cnpj": "11725907020",
-        "payment_limit_date": "2021-05-27",
-        "writable_line": "19790000052530097937108880416287686330000015000",
-        "total_discounted_value": null,
-        "barcode": "19796863300000150000000025300979370888041628",
-        "accepts_partial_payment": false,
-        "interest_date": null,
-        "status": "payable",
-        "recipient_name": "Nome do CPF 11725907020",
-        "payment_end_time": null,
-        "discounts": [{
-            "date": null
-        }],
-        "bank_name": null,
-        "discount_value": 0,
-        "fine_value": 0,
-        "document_payment_type": "33",
-        "total_added_value": null,
-        "unpayable_reason_code": null,
-        "value": 15000,
+        "value": null,
+        "min_value": null,
+        "max_value": null,
         "unpayable_reason_description": null,
-        "payer_legal_name": "Nome do CPF 11725907020",
+        "unpayable_reason_details": null,
+        "barcode": "19792912500050000000000075096336954691269269",
+        "expiration_date": null,
+        "total_added_value": null,
+        "payment_limit_date": null,
         "payment_start_time": null,
-        "face_value": 15000,
-        "document_type": "boleto",
+        "bank_ispb": "16501555",
+        "discounts": null,
+        "payer_legal_name": null,
+        "recipient_name": null,
         "settlement_date": null,
+        "bank_code": "197",
         "fine_date": null,
-        "max_value": 15000,
-        "expiration_date": "2021-05-27",
-        "recipient_cpf_cnpj": "11725907020",
-        "accepts_partial_payment": true,
-        "number_of_partials": 2
+        "interest_value": null,
+        "number_of_partials": null,
+        "payment_end_time": null,
+        "accepts_partial_payment": null,
+        "payer_cpf_cnpj": null,
+        "unpayable_reason_code": null,
+        "face_value": null,
+        "document_payment_type": null,
+        "bank_name": "STONE IP S.A.",
+        "payer_trade_name": null,
+        "interest_date": null,
+        "document_type": "boleto",
+        "divergent_amount_auth_type": null,
+        "fine_value": null,
+        "updatable_value": null,
+        "recipient_cpf_cnpj": null,
+        "status": "unpayable",
+        "discount_value": null,
+        "total_discounted_value": null,
+        "writable_line": "19790000057509633695546912692699291250005000000"
+    },
+    "effective_payer": {
+        "document": "11362667471",
+        "document_type": "cpf",
+        "legal_name": "Nome do CPF 109.753.846-00"
     },
     "failed_at": null,
     "failure_reason_code": null,
@@ -138,9 +214,9 @@ Body
     "refunded_at": null,
     "rejected_at": null,
     "rejected_by": null,
-    "request_id": "7d9abd369b0a19a3e26fc6b3e2f52f8c",
+    "request_id": "74bc3080-1f51-939d-8f7a-6fda572c8675",
     "scheduled_to": null,
     "status": "APPROVED",
-    "writable_line": "19790000052530097937108880416287686330000015000"
+    "writable_line": "19790000057509633695546912692699291250005000000"
 }
 ```
