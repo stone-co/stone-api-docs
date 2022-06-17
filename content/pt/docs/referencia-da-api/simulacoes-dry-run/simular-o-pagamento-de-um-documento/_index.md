@@ -35,6 +35,14 @@ Código de barras do documento.
 
 Identificador da conta pagadora
 
+**scheduled_to** `string`
+
+Data de agendamento para o pagamento
+
+**amount** `integer`
+
+Valor do pagamento
+
 ##### **RESULT PARAMS**
 
 | Chave                    | Descrição                                                                                                                                                              | Tipo      | Regra de Negócio |
@@ -48,14 +56,14 @@ Identificador da conta pagadora
 
 ###### Objeto BarcodeDetails
 
-| Chave           | Descrição                                                                | Tipo      |
-| --------------- | ------------------------------------------------------------------------ | --------- |
-| bank_code       | Código numérico da instituição que emitiu o documento                    | _String_  |
-| bank_name       | Nome da instituição que emitiu o documento                               | _String_  |
-| barcode         | Código de barras do documento                                            | _String_  |
-| expiration_date | Data de vencimento do documento                                          | _Date_    |
-| face_value      | Valor com o qual o documento foi criado e que consta no código de barras | _Integer_ |
-| writable_line   | Código numerico que acompanha o codigo de barras                         | _String_  |
+| Chave           | Descrição                                                                | Tipo      | Regra de negócio                                                               |
+| --------------- | ------------------------------------------------------------------------ | --------- | ------------------------------------------------------------------------------ |
+| bank_code       | Código numérico da instituição que emitiu o documento                    | _String_  | Obrigatório para boletos bancários, opcional para pagamentos de concessionária |
+| bank_name       | Nome da instituição que emitiu o documento                               | _String_  | Obrigatório para boletos bancários, opcional para pagamentos de concessionária |
+| barcode         | Código de barras do documento                                            | _String_  | Obrigatório                                                                    |
+| expiration_date | Data de vencimento do documento                                          | _String_  | Opcional                                                                       |
+| face_value      | Valor com o qual o documento foi criado e que consta no código de barras | _Integer_ | Obrigatório                                                                    |
+| writable_line   | Código numerico que acompanha o codigo de barras                         | _String_  | Obrigatório                                                                    |
 
 ###### Objeto Details
 
