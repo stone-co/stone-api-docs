@@ -5,7 +5,7 @@ O [site](https://stone-co.github.io/) com a documentação da nossa API de OpenB
 estáticos.
 
 O seu funcionamento é simples: a usuária escolhe um [tema](https://themes.gohugo.io/), insere conteúdo em arquivos de
-formato __markdown__, edita um arquivo de configuração `.toml` para promover customizações e voilà - 🐭🪄 a mágica
+formato **markdown**, edita um arquivo de configuração `.toml` para promover customizações e voilà - 🐭🪄 a mágica
 gopher acontece!
 
 ## Visão geral do projeto
@@ -15,17 +15,17 @@ gopher acontece!
 Este é o repositório principal do site da documentação e todo o conteúdo deve ser adicionado aqui, mas existem outros
 três repositórios relacionados ao projeto:
 
-1) *Tema*: o tema que utilizamos é baseado no tema [Docsy](https://themes.gohugo.io/docsy/)
+1. _Tema_: o tema que utilizamos é baseado no tema [Docsy](https://themes.gohugo.io/docsy/)
    e pode ser encontrado [nesse repositório aqui](https://github.com/stone-co/docsy). Temos um fork para que seja
    possível promovermos alterações diretamente no estilo que não seriam possíveis através do arquivo de configuração.
    No nosso projeto, ele é consumido e referenciado como um submódulo git.
 
-2) *Site Sandbox*: o código-fonte do site no ambiente de sandbox, que é gerado pelo código deste repositório + hugo a
+2. _Site Sandbox_: o código-fonte do site no ambiente de sandbox, que é gerado pelo código deste repositório + hugo a
    cada push na branch master, pode ser encontrado [aqui](https://github.com/stone-co/sandbox). Importante ressaltar que
    o ambiente de sandbox é usado como pré-produção, a única diferença entre os dois é que os artigos sinalizados como `draft`
    serão publicados em sandbox.
 
-3) *Site Produção*: o código-fonte do site, que é gerado pelo código deste repositório + hugo a cada nova tag de
+3. _Site Produção_: o código-fonte do site, que é gerado pelo código deste repositório + hugo a cada nova tag de
    release, pode ser encontrado [aqui](https://github.com/stone-co/stone-co.github.io).
 
 ### Contribuindo
@@ -49,12 +49,13 @@ em `/content/pt/` uma imagem que contenha a palavra _background_ no nome (e.g `c
 
 As seções da home podem ser customizadas diretamente em `/content/pt/_index.html`, usando _blocks_ do tipo `feature`.
 Cada seção precisa ter:
+
 1. Um ícone, que deve ser escolhido em [Font Awesome](https://fontawesome.com/) {1}
 2. Um título {2}
 3. Descrição que aparecerá abaixo do título {3}
 4. Um botão de ação, com:
-    - Endereço para onde o botão levará {4.a} _obs: caso o link seja interno, deve ser usado o endereço relativo_
-    - Texto do botão {4.b}
+   - Endereço para onde o botão levará {4.a} _obs: caso o link seja interno, deve ser usado o endereço relativo_
+   - Texto do botão {4.b}
 
 ```gotemplate
 {{% blocks/feature icon="{1}" title="{2}" %}}
@@ -134,24 +135,25 @@ Use o _package manager_ da sua distro/de sua preferência, instruções adiciona
 
 ### Adicionando conteúdo com Hugo instalado
 
-- Para criar um novo conteúdo (na prática, vai ser criado um arquivo __markdown__ que vai ser usado para gerar uma nova
-  página __html__), deve-se digitar o seguinte comando:
+- Para criar um novo conteúdo (na prática, vai ser criado um arquivo **markdown** que vai ser usado para gerar uma nova
+  página **html**), deve-se digitar o seguinte comando:
 
   `$ hugo new content/nome-da-secao/nome-do-artigo/_index.pt.md`
 
 - Em seguida, editar o arquivo que foi criado e adicionar o conteúdo que desejar após o fim do cabeçalho
   (sinalizado por `---`). O arquivo estará em:
-    ``` 
-    📂stone-api-docs    
-    └──📂content    
-       └──📂nome-da-secao
-          └──📂nome-do-artigo
-             └──📄_index.pt.md
-    ```
+
+  ```
+  📂stone-api-docs
+  └──📂content
+     └──📂nome-da-secao
+        └──📂nome-do-artigo
+           └──📄_index.pt.md
+  ```
 
 - Cada artigo tem um campo chamado `draft` no cabeçalho, que pode ter o valor `true` (caso seja ainda um rascunho)
   ou `false` (caso deva ser publicado). O default do campo é `true`, altere para `false` para sinalizar que o artigo
-  deve ser publicado no ambiente de Produção. 
+  deve ser publicado no ambiente de Produção.
   🚨 Mesmo que o campo `draft` tenha o valor `true`, **o artigo será publicado no ambiente de Sandbox!**
 
 ### Rodando localmente
@@ -159,30 +161,33 @@ Use o _package manager_ da sua distro/de sua preferência, instruções adiciona
 Como o projeto necessita de git submodules para o seu funcionamento, você deve os iniciar da seguinte forma:
 
 - Caso ainda não tenha clonado o projeto:
-    ```shell
-    $ git clone --recurse-submodules https://github.com/stone-co/stone-api-docs.git
-    ```
+
+  ```shell
+  $ git clone --recurse-submodules https://github.com/stone-co/stone-api-docs.git
+  ```
 
 - Caso já tenha clonado:
-    ```shell
-    $ git submodule update --init --recursive
-    ```
+  ```shell
+  $ git submodule update --init --recursive
+  ```
 
 ⚠️ É importante rodar localmente antes de submeter as suas contribuições para o repositório remoto para poder visualizar o
 site e verificar se não há erros na sua construção.
 
 - Digitar no terminal o seguinte comando:
-    ```shell
-    $ hugo server
-    ```
-    🔍 Obs: se você quiser forçar os _drafts_ a serem publicados, utilize a _flag_ `-D`
 
-- No seu navegador, visitar o endereço __localhost:1313__ (ou o endereço que for informado no próprio terminal após
+  ```shell
+  $ hugo server
+  ```
+
+  🔍 Obs: se você quiser forçar os _drafts_ a serem publicados, utilize a _flag_ `-D`
+
+- No seu navegador, visitar o endereço **localhost:1313** (ou o endereço que for informado no próprio terminal após
   rodar o comando acima)
 
 - Para parar, apertar `Ctrl + C` no terminal
 
---------
+---
 
 Para mais informações sobre Hugo: [getting started do Hugo](https://gohugo.io/getting-started/quick-start/) e
 [oficina de sites estáticos com hugo](https://github.com/womenwhogocwb/oficina-hugo).
