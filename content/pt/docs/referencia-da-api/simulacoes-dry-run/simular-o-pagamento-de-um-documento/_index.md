@@ -45,16 +45,16 @@ Valor do pagamento
 
 ##### **RESULT PARAMS**
 
-| Chave                    | Descrição                                                                                                                                                              | Tipo      | Regra de Negócio |
-| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ---------------- |
-| account_id               | Identificador da conta pagadora                                                                                                                                        | _String_  | Obrigatório      |
-| amount                   | Valor do pagamento                                                                                                                                                     | _Integer_ | Obrigatório      |
-| barcode                  | Código de barras do pagamento                                                                                                                                          | _String_  | Obrigatório      |
-| barcode_details          | Informações extraídas do código de barras                                                                                                                              | _Object_  | Obrigatório      |
-| details                  | Informações acerca do status do pagamento de acordo com a sua fonte emissora                                                                                           | _Object_  | Obrigatório      |
-| payment_being_processed? | Indica se a Stone já recebeu uma solicitação de pagamento deste documento e ainda está processando a solicitação. Em caso de “true” não deve ser feito novo pagamento. | _Boolean_ | Obrigatório      |
+| Chave                    | Descrição                                                                                                                                                              | Tipo      | Regra de Negócio                      |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ------------------------------------- |
+| account_id               | Identificador da conta pagadora                                                                                                                                        | _String_  | Obrigatório                           |
+| amount                   | Valor do pagamento                                                                                                                                                     | _Integer_ | Obrigatório                           |
+| barcode                  | Código de barras do pagamento                                                                                                                                          | _String_  | Obrigatório                           |
+| barcode_details          | Informações extraídas do código de barras                                                                                                                              | _Object_  | [Detalhes do objeto](#barcodedetails) |
+| details                  | Informações acerca do status do pagamento de acordo com a sua fonte emissora                                                                                           | _Object_  | [Detalhes do objeto](#details)        |
+| payment_being_processed? | Indica se a Stone já recebeu uma solicitação de pagamento deste documento e ainda está processando a solicitação. Em caso de “true” não deve ser feito novo pagamento. | _Boolean_ | Obrigatório                           |
 
-###### Objeto BarcodeDetails
+###### BarcodeDetails
 
 | Chave           | Descrição                                                                | Tipo      | Regra de negócio                                                               |
 | --------------- | ------------------------------------------------------------------------ | --------- | ------------------------------------------------------------------------------ |
@@ -63,43 +63,43 @@ Valor do pagamento
 | barcode         | Código de barras do documento                                            | _String_  | Obrigatório                                                                    |
 | expiration_date | Data de vencimento do documento                                          | _String_  | Opcional                                                                       |
 | face_value      | Valor com o qual o documento foi criado e que consta no código de barras | _Integer_ | Obrigatório                                                                    |
-| writable_line   | Código numerico que acompanha o codigo de barras                         | _String_  | Obrigatório                                                                    |
+| writable_line   | Código numérico que acompanha o código de barras                         | _String_  | Obrigatório                                                                    |
 
-###### Objeto Details
+###### Details
 
-| Chave                  | Descrição                                                                                                                                                                            | Tipo      |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------- |
-| bank_name              | Nome da instituição que emitiu o documento.                                                                                                                                          | _String_  |
-| barcode                | Código de barras.                                                                                                                                                                    | _String_  |
-| discount_value         | Valor do desconto que está sendo aplicado ao boleto. Caso nenhum desconto esteja sendo aplicado vira `null`.                                                                         | _Integer_ |
-| document_payment_type  | Informa o código referente a título.                                                                                                                                                 | _Integer_ |
-| document_type          | Informa o tipo de documento. Valores possíveis são: boleto e concessionaria.                                                                                                         | _String_  |
-| expiration_date        | Data de vencimento                                                                                                                                                                   | _String_  |
-| face_value             | Valor com o qual o documento foi criado e que consta do código de barras.                                                                                                            | _Integer_ |
-| fine_value             | Valor da multa que está sendo aplicada ao boleto. Caso nenhuma multa esteja sendo aplicada vira `null`.                                                                              | _Integer_ |
-| interest_value         | Valor dos juros que estão sendo aplicados ao boleto. Caso não haja juros aplicados vira `null`.                                                                                      | _Integer_ |
-| max_value              | Valor máximo que será aceito no pagamento deste documento.                                                                                                                           | _Integer_ |
-| min_value              | Valor mínimo que será aceito no pagamento deste documento.                                                                                                                           | _Integer_ |
-| payer_cpf_cnpj         | Número do documento do pagador sem pontos.                                                                                                                                           | _String_  |
-| payer_legal_name       | É o nome que identifica o pagador para fins legais, administrativos e outros fins oficiais.                                                                                          | _String_  |
-| payer_trade_name       | Nome fantasia do pagador.                                                                                                                                                            | _String_  |
-| payment_end_time       | Horário até o qual o pagamento é possível em um dia útil. Respeita o payment_limit_date. Formato hh:mm:ss.                                                                           | _String_  |
-| payment_limit_date     | Data limite para pagamento do documento. Formato ISO8601 "YYYY-MM-DD".                                                                                                               | _String_  |
-| payment_start_time     | Horário a partir do qual o pagamento é possível em um dia útil. Respeita o payment_limit_date. Formato hh:mm:ss.                                                                     | _String_  |
-| recipient_cpf_cnpj     | Número do documento do beneficiário sem pontos.                                                                                                                                      | _String_  |
-| recipient_name         | Nome do beneficiário.                                                                                                                                                                | _String_  |
-| settlement_date        | Data em que o dinheiro do pagamento do boleto é depositado na conta do beneficiário. Formato ISO8601 "YYYY-MM-DDThh:mm:ssZ". Caso o boleto ainda não tenha sido pago voltará `null`. | _String_  |
-| status                 | Status atual do documento na sua instituição emissora. Valores possíveis: payable, paid ou unpayable.                                                                                | _String_  |
-| total_added_value      | Total que foi adicionado ao valor original do documento decorrente de juros e multas.                                                                                                | _Integer_ |
-| total_discounted_value | Total que foi abatido do valor originial do documento decorrente de descontos.                                                                                                       | _Integer_ |
-| updatable_value        | Indica se é permitido alterar o valor do documento. Só disponível para document_type com valor concessionaria.                                                                       | _Boolean_ |
-| value                  | Valor atualizado já com descontos, multas e juros que se aplicam.                                                                                                                    | _Integer_ |
-| writable_line          | Código numérico que acompanha o código de barras.                                                                                                                                    | _String_  |
-| unpayable_reason_code  | Código que representa o motivo de estar impagável.                                                                                                                                   | _String_  |
+| Chave                  | Descrição                                                                                   | Tipo      | Regra de Negócio                                                                                     |
+| ---------------------- | ------------------------------------------------------------------------------------------- | --------- | ---------------------------------------------------------------------------------------------------- |
+| bank_name              | Nome da instituição que emitiu o documento.                                                 | _String_  | Opcional                                                                                             |
+| barcode                | Código de barras.                                                                           | _String_  | Obrigatório                                                                                          |
+| discount_value         | Valor do desconto que está sendo aplicado ao boleto.                                        | _Integer_ | `null` caso não haja disconto sendo aplicado                                                         |
+| document_payment_type  | Informa o código referente a título.                                                        | _Integer_ | [Possíveis valores](#document_payment_type)                                                          |
+| document_type          | Informa o tipo de documento.                                                                | _String_  | `"boleto"` ou `"concessionaria"`                                                                     |
+| expiration_date        | Data de vencimento                                                                          | _String_  | Opcional                                                                                             |
+| face_value             | Valor com o qual o documento foi criado e que consta do código de barras.                   | _Integer_ | Opcional                                                                                             |
+| fine_value             | Valor da multa que está sendo aplicada ao boleto.                                           | _Integer_ | `null` caso nenhuma multa esteja sendo aplicada                                                      |
+| interest_value         | Valor dos juros que estão sendo aplicados ao boleto.                                        | _Integer_ | `null` caso não hajam juros sendo aplicados                                                          |
+| max_value              | Valor máximo que será aceito no pagamento deste documento.                                  | _Integer_ | Opcional                                                                                             |
+| min_value              | Valor mínimo que será aceito no pagamento deste documento.                                  | _Integer_ | Opcional                                                                                             |
+| payer_cpf_cnpj         | Número do documento do pagador sem pontos.                                                  | _String_  | Opcional                                                                                             |
+| payer_legal_name       | É o nome que identifica o pagador para fins legais, administrativos e outros fins oficiais. | _String_  | Opcional                                                                                             |
+| payer_trade_name       | Nome fantasia do pagador.                                                                   | _String_  | Opcional                                                                                             |
+| payment_limit_date     | Data limite para pagamento do documento.                                                    | _String_  | Opcional. Formato ISO8601 `YYYY-MM-DD`.                                                              |
+| payment_start_time     | Horário a partir do qual o pagamento é possível em um dia útil.                             | _String_  | Respeita o `payment_limit_date`. Formato `hh:mm:ss`.                                                 |
+| payment_end_time       | Horário até o qual o pagamento é possível em um dia útil.                                   | _String_  | Respeita o `payment_limit_date`. Formato `hh:mm:ss`.                                                 |
+| recipient_cpf_cnpj     | Número do documento do beneficiário sem pontos.                                             | _String_  | Opcional                                                                                             |
+| recipient_name         | Nome do beneficiário.                                                                       | _String_  | Opcional                                                                                             |
+| settlement_date        | Data em que o dinheiro do pagamento do boleto é depositado na conta do beneficiário.        | _String_  | Formato ISO8601 `YYYY-MM-DDThh:mm:ssZ`. Caso o boleto ainda não tenha sido pago o valor será `null`. |
+| status                 | Status atual do documento na sua instituição emissora.                                      | _String_  | `"payable"`, `"paid"` ou `"unpayable"`.                                                              |
+| total_added_value      | Total que foi adicionado ao valor original do documento decorrente de juros e multas.       | _Integer_ | Retornado somente em pagamentos de concessionária                                                    |
+| total_discounted_value | Total que foi abatido do valor originial do documento decorrente de descontos.              | _Integer_ | Retornado somente em pagamentos de concessionária                                                    |
+| updatable_value        | Indica se é permitido alterar o valor do documento.                                         | _Boolean_ | Retornado somente em pagamentos de concessionária                                                    |
+| value                  | Valor atualizado já com descontos, multas e juros que se aplicam.                           | _Integer_ | Opcional                                                                                             |
+| writable_line          | Código numérico que acompanha o código de barras.                                           | _String_  | Obrigatório                                                                                          |
+| unpayable_reason_code  | Código que representa o motivo de estar impagável.                                          | _String_  | Retornado somente se o status do documento for `"unpayable"`, caso contrário será `null`             |
 
 ---
 
-###### Tipos de document_payment_type
+###### document_payment_type
 
 | Domínio | Descrição                           |
 | ------- | ----------------------------------- |
