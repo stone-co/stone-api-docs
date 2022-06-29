@@ -283,3 +283,18 @@ Body
 ```
 
 Acontece quando a transferência está relacionada a uma cobrança criada por uma conta interna, e a cobrança já foi paga.
+
+----
+
+```
+409 Conflict
+```
+
+Body
+```json
+{
+  "type": "srn:error:idempotency_conflict"
+}
+```
+
+Conflito de idempotência. A chave de idempotência já existe para um body diferente.
