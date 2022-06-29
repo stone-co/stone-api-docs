@@ -194,13 +194,8 @@ Body:
   },
   "status": "CREATED",
   "target": {
-    "account": {
-      "account_code": "10510656",
-      "account_type": "CC",
-      "branch_code": "0001"
-    },
     "entity": {
-      "document": "04836916313",
+      "document": "***369163**",
       "document_type": "cpf",
       "name": "ARCILIO BERNARDI CARDOSO"
     },

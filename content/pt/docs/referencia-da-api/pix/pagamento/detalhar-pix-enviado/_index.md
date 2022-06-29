@@ -89,11 +89,6 @@ Body:
     },
     "status": "MONEY_RESERVED",
     "target": {
-        "account": {
-            "account_code": "10023395",
-            "account_type": "CC",
-            "branch_code": "4104"
-        },
         "entity": {
             "document": "***093657**",
             "document_type": "cpf",
