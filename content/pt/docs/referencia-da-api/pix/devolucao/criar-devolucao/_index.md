@@ -11,7 +11,7 @@ description: >
 <br>
 
 ```
-POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/refunds_for_inbound_pix_payments
+POST https://sandbox-api.openbank.stone.com.br/api/v1/refunds_for_inbound_pix_payments
 ```
 <br>
 
