@@ -122,6 +122,24 @@ Body:
 ---
 
 ```
+403 Forbidden
+```
+
+---
+
+```
+404 Not Found
+```
+
+Body
+```json
+{
+  "type": "srn:error:not_found"
+}
+```
+---
+
+```
 422 Unprocessable Entity
 ```
 
@@ -133,18 +151,6 @@ Body
 ```
 
 Acontece quando o valor passado excede o valor da transação original.
-
-<br>
-
-Body
-```json
-{
-  "type": "srn:error:target_account_not_found"
-}
-```
-
-Acontece quando o alvo da transferência é uma conta interna, e essa conta interna não existe.
-Pagamentos para contas externas inexistentes podem ser criados mas falharão após a confirmação.
 
 <br>
 
