@@ -1,6 +1,6 @@
 ---
-title: "Devolução com Pix"
-linkTitle: "Devolução com Pix"
+title: "Devolução de transferência Pix"
+linkTitle: "Devolução de transferência Pix"
 date: 2022-06-29T10:00:00-03:00
 lastmod: 2022-06-29T10:00:00-03:00
 weight: 2
