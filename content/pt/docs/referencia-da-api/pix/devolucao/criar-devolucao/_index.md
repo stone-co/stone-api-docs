@@ -59,7 +59,7 @@ Exemplo:
 <br>
 
 **reason*** `string`
-<br> Valores permitidos: `beneficiary_request`
+<br> Valores permitidos: `beneficiary_request`, `fraud`, `institution_error` ou `specific_service_offered_by_creditor_agent`
 
 **amount*** `integer`
 <br>Valor da devolução a ser realizada
