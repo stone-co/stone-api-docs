@@ -62,7 +62,7 @@ Exemplo:
 <br> Valores permitidos: `beneficiary_request`, `fraud`, `institution_error` ou `specific_service_offered_by_creditor_agent`
 
 **amount*** `integer`
-<br>Valor da devolução a ser realizada
+<br>Valor da devolução a ser realizada em centavos
 <br>Valor mínimo: 0
 <br>Valor máximo: 1000000000000
 
