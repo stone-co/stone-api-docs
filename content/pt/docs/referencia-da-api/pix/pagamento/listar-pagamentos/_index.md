@@ -19,9 +19,9 @@ Este é um endpoint que unifica Pagamento e devoluções realizadas/recebidas pa
 Nele é possível buscar por `chave`, `end_to_end_id` ou `transaction_id` da operação. Os tipos das operações podem ser:
 
 * refund_for_outbound_pix_payment(devolução recebida)
-* refund_for_inbound_pix_payment (devolução realizada)
+* refund_for_inbound_pix_payment (devolução enviada)
 * inbound_pix_payment (pagamento recebido)
-* outbound_pix_payment (pagamento realizado)
+* outbound_pix_payment (pagamento enviado)
 <br>
 
 #### **PATH PARAMS**
@@ -39,13 +39,13 @@ Identificador da conta.
 ---
 
 **end_to_end_ids**  `string`
-<br> Identificador da conta.
+<br> Identificadores da transação de ponta a ponta.
 
 **transaction_ids**  `string`
-<br> Identificador da conta.
+<br> Identificadores das cobranças (QR Code).
 
 **keys**  `string`
-<br> Identificador da conta.
+<br> Identificadores das chaves Pix.
 
 **limit**  `int32`
 <br> Limite do cursor.
