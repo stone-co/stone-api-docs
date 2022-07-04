@@ -161,7 +161,7 @@ Body
 }
 ```
 
-Tentativa de criar devolução de um pagamento que foi concluída ou aceita.
+Erro na tentativa de criar devolução. O pagamento original não foi concluído ou aceito.
 
 <br>
 
@@ -172,7 +172,7 @@ Body
 }
 ```
 
-O período hábil para criação de uma devolução foi excedido
+O período hábil para criação de uma devolução foi excedido.
 
 <br>
 
