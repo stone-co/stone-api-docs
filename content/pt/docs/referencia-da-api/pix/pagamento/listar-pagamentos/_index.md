@@ -15,7 +15,7 @@ description: >
 GET https://sandbox-api.openbank.stone.com.br/api/v1/pix/{{account_id}}/pix_payments
 ```
 <br>
-Este é um endpoint que unifica Pagamento e devoluções realizadas/recebidas para Participantes Indiretos.
+Este é um endpoint que unifica pagamentos e devoluções realizadas/recebidas para Participantes Indiretos.
 Nele é possível buscar por `chave`, `end_to_end_id` ou `transaction_id` da operação. Os tipos das operações podem ser:
 
 * refund_for_outbound_pix_payment(devolução recebida)
