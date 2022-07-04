@@ -24,7 +24,7 @@ Esse endpoint foi idealizado para criação de uma devolução de uma transferê
 
 <br>
 
-- A transferência Pix recebida deve ser inferior ou igual a 90 dias para realizar a devolução.<br>
+- A data de transferência Pix recebida deve ser inferior ou igual a 90 dias para realizar a devolução.<br>
 - O valor da devolução pode ser igual ou inferior ao valor da transferência original. Caso seja o valor seja inferior, esta será uma devolução parcial, então outras devoluções ainda poderão ser realizadas até que se atinja o valor total.
 
 {{% /pageinfo %}}
