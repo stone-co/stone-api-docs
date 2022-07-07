@@ -24,6 +24,6 @@ Segue abaixo os status possíveis de um **boleto gerado**:
 | CREATED 	 			| Boleto criado.											|
 | REGISTERED 			| Registro do Boleto foi efetuado.							|
 | SETTLED 	 			| Pagamento do Boleto foi liquidado.						|
-| EXPIRED    			| Passou a data limite de pagamento do boleto.				|
+| EXPIRED    			| Passou a data de vencimento do pagamento do boleto.				|
 | CANCELLATION_REQUESTED  | Pedido de cancelamento de um boleto ainda não pago.		|
 | CANCELLED 			| Boleto Cancelado pela solicitação.						|
