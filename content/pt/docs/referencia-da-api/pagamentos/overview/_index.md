@@ -31,12 +31,12 @@ A API de Pagamentos fica disponível todos os dias das 00h00 até 23h50. Boletos
 
 <br>
 
-### Estados
+### Status
 ---
 
 <br>
 
-Segue abaixo os estados possíveis de um **pagamento**: 
+Segue abaixo os status possíveis de um **pagamento**: 
 
 <br>
 
@@ -126,7 +126,7 @@ Aqui listamos quais são os campos que usamos para realizar um pagamento.
 | rejected_at                                                                                                                  | Horário em que a transação foi rejeitada, em formato ISO8601. Retorna `null` caso a transação não tenha sido rejeitada em nenhum momento.                                                                                                              | _String_  |
 | rejected_by                                                                                                                  | Identificador único da usuária que rejeitou a transação, no formato user:UUID4. Retorna `null` caso não tenha sido rejeitada em nenhum momento.                                                                                                        | _String_  |
 | scheduled_to                                                                                                                 | Data do agendamento. Caso não tenha sido agendado retornará `null`.                                                                                                                                                                                    | _String_  |
-| status                                                                                                                       | Status atual do pagamento, podendo ser um dentre os status à seguir: CREATED, REJECTED, EXPIRED, APPROVED, SCHEDULED, FAILED, FINISHED, CANCELLED.                                                                                                   | _String_  |
+| status                                                                                                                       | Status atual do pagamento, podendo ser um dentre os status à seguir: CREATED, MONEY_RESERVED, REJECTED, EXPIRED, APPROVED, SCHEDULED, FAILED, FINISHED, CANCELLED.                                                                                                   | _String_  |
 | writable_line                                                                                                                | Código numérico que acompanha o código de barras.                                                                                                                                                                                                    | _String_  |
 
 <br>

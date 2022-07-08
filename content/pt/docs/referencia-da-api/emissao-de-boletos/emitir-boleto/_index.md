@@ -85,6 +85,35 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
 <br> &nbsp;&nbsp;&nbsp;&nbsp;**trade_name** `string` _(obrigatório)_
 <br> &nbsp;&nbsp;&nbsp;&nbsp;Nome fantasia do pagador. Obrigatório no caso de pagador PJ.
 
+<br> &nbsp;&nbsp;&nbsp;&nbsp;**address** `object` _(opcional)_
+
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**city** `string` _(obrigatório)_
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cidade do endereço do pagador do boleto.
+<br>
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**country** `string` _(obrigatório)_
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;País do endereço do pagador do boleto.
+<br>
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**extra** `string`
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Complemento do endereço do pagador do boleto.
+<br>
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**neighborhood** `string` _(obrigatório)_
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bairro do endereço do pagador do boleto.
+<br>
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**postal_code** `string` _(obrigatório)_
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CEP do endereço do pagador do boleto.
+<br>
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**state** `string` _(obrigatório)_
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UF do endereço do pagador do boleto.
+<br>
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**street** `string` _(obrigatório)_
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Logradouro do endereço do pagador do boleto.
+<br>
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**street_number** `string`
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Número do logradouro do endereço do pagador do boleto.
+<br>
+
+<br>
+
 ---
 <br>
 
@@ -140,25 +169,25 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
 <br>
 
 <br> &nbsp;&nbsp;&nbsp;&nbsp;**city** `string` _(obrigatório)_
-<br> &nbsp;&nbsp;&nbsp;&nbsp;Cidade do beneficiário do boleto.
+<br> &nbsp;&nbsp;&nbsp;&nbsp;Cidade do endereço do beneficiário do boleto.
 <br>
 <br> &nbsp;&nbsp;&nbsp;&nbsp;**country** `string` _(obrigatório)_
-<br> &nbsp;&nbsp;&nbsp;&nbsp;País do beneficiário do boleto.
+<br> &nbsp;&nbsp;&nbsp;&nbsp;País do endereço do beneficiário do boleto.
 <br>
 <br> &nbsp;&nbsp;&nbsp;&nbsp;**extra** `string`
 <br> &nbsp;&nbsp;&nbsp;&nbsp;Complemento do endereço do beneficiário do boleto.
 <br>
 <br> &nbsp;&nbsp;&nbsp;&nbsp;**neighborhood** `string` _(obrigatório)_
-<br> &nbsp;&nbsp;&nbsp;&nbsp;Bairro do beneficiário do boleto.
+<br> &nbsp;&nbsp;&nbsp;&nbsp;Bairro do endereço do beneficiário do boleto.
 <br>
 <br> &nbsp;&nbsp;&nbsp;&nbsp;**postal_code** `string` _(obrigatório)_
-<br> &nbsp;&nbsp;&nbsp;&nbsp;CEP do beneficiário do boleto.
+<br> &nbsp;&nbsp;&nbsp;&nbsp;CEP do endereço do beneficiário do boleto.
 <br>
 <br> &nbsp;&nbsp;&nbsp;&nbsp;**state** `string` _(obrigatório)_
-<br> &nbsp;&nbsp;&nbsp;&nbsp;UF do beneficiário do boleto.
+<br> &nbsp;&nbsp;&nbsp;&nbsp;UF do endereço do beneficiário do boleto.
 <br>
 <br> &nbsp;&nbsp;&nbsp;&nbsp;**street** `string` _(obrigatório)_
-<br> &nbsp;&nbsp;&nbsp;&nbsp;Logradouro do beneficiário do boleto.
+<br> &nbsp;&nbsp;&nbsp;&nbsp;Logradouro do endereço do beneficiário do boleto.
 <br>
 <br> &nbsp;&nbsp;&nbsp;&nbsp;**street_number** `string`
 <br> &nbsp;&nbsp;&nbsp;&nbsp;Número do logradouro do beneficiário do boleto.
