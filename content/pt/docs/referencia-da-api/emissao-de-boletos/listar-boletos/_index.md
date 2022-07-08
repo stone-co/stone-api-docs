@@ -43,8 +43,14 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
 ---
 <br>
 
+**invoice_type** `string`
+<br> Valores permitidos: deposit, proposal ou bill_of_exchange.
+
+---
+<br>
+
 **status** `string`
-<br> Valores Permitidos: CREATED, SETTLED, REGISTERED, EXPIRED, PENDING.
+<br> Valores Permitidos: CREATED, SETTLED, REGISTERED, CANCELLED, EXPIRED, PENDING.
 
 ---
 <br>
@@ -69,67 +75,67 @@ Formato "YYYY-MM-DD".
 <br>
 
 **settled_date** `string`
-<br>
+<br> Data de liquidação do boleto.
 
 ---
 <br>
 
 **amount_lt** `integer`
-<br>
+<br> Valor menor que
 
 ---
 <br>
 
 **amount_gt** `integer`
-<br>
+<br> Valor maior que
 
 ---
 <br>
 
 **start_limit_date** `string`
-<br>
+<br> Listar boletos com data limite a partir dessa data
 
 ---
 <br>
 
 **end_limit_date** `string`
-<br>
+<br> Listar boletos com data limite até essa data
 
 ---
 <br>
 
 **start_expiration_date** `string`
-<br>
+<br> Listar boletos com data de vencimento a partir dessa data
 
 ---
 <br>
 
 **end_expiration_date** `string`
-<br>
+<br> Listar boletos com data de vencimento até essa data
 
 ---
 <br>
 
 **start_issuance_date** `string`
-<br>
+<br> Listar boletos com data de emissão a partir dessa data 
 
 ---
 <br>
 
 **end_issuance_date** `string`
-<br>
+<br> Listar boletos com data de emissão até essa data
 
 ---
 <br>
 
 **start_settled_date** `string`
-<br>
+<br> Listar boletos com data de liquidação a partir dessa data
 
 ---
 <br>
 
 **end_settled_date** `string`
-
+<br> Listar boletos com data de liquidação até essa data
 
 ---
 <br>
