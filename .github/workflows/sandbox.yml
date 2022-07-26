@@ -52,3 +52,15 @@ jobs:
           commitMessage: ${{ github.event.head_commit.message }}
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Deploy to dlpco-sandbox
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.DLPCO_SANDBOX_ACTIONS_DEPLOY_KEY }}
+          EXTERNAL_REPOSITORY: dlpco/banking-docs-sandbox
+          PUBLISH_BRANCH: main
+          PUBLISH_DIR: ./public
+          emptyCommits: false
+          commitMessage: ${{ github.event.head_commit.message }}
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
