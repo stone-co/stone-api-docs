@@ -40,7 +40,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/pix/{end_to_end_id}
 ```
 
 ```json
-{{
+{
   "endToEndId": "E12345678202009091221abcdef12345",
   "txid": "cd1fe328c875481285a6f233ae41b662",
   "valor": "100.00",
