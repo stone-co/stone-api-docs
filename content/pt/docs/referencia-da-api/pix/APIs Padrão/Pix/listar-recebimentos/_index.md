@@ -2,14 +2,13 @@
 title: "Listar Pix recebidos"
 linkTitle: "Listar Pix recebidos"
 date: 2021-06-16T15:17:00-03:00
-lastmod: 2021-09-19T09:09:00-03:00
+lastmod: 2022-08-17T00:00:00-03:00
 weight: 9
 description: >
   
 ---
 
 Através desse endpoint será possível listar todos os Pix recebidos na conta. Esse endpoint segue os padrões definidos pelo Banco Central.
-
 
 ```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/pix

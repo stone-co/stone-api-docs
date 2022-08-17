@@ -8,12 +8,7 @@ description: >
   
 ---
 
-Através desse endpoint será possível criar uma devolução para um Pix recebido através de seu indentificador glboal (EndToEndId). 
-Os status possíveis da resposta poderão ser:
-
-* `EM_PROCESSAMENTO`
-* `DEVOLVIDO`
-* `NAO_REALIZADO`
+Através desse endpoint será possível criar uma devolução para um Pix recebido utilizando o indentificador global (EndToEndId) de uma transação Pix recebida. 
 
 ```
 PUT https://sandbox-api.openbank.stone.com.br/api/v1/pix/{e2eid}/devolucao/{id}

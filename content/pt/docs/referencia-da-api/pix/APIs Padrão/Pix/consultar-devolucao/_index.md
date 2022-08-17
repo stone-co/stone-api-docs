@@ -1,6 +1,6 @@
 ---
-title: "Listar Pix recebidos"
-linkTitle: "Listar Pix recebidos"
+title: "Consultar devolução de Pix"
+linkTitle: "Consultar devolução de Pix"
 date: 2021-06-16T15:17:00-03:00
 lastmod: 2021-09-19T09:09:00-03:00
 weight: 9
@@ -8,7 +8,11 @@ description: >
   
 ---
 
-Através desse endpoint será possível exibir os detalhes de uma devolução de Pix.
+Através desse endpoint será possível exibir os detalhes de uma devolução realizada para uma transferência Pix. Os status possíveis para a devolução poderão ser:
+
+* `EM_PROCESSAMENTO` - a devolução ainda está em processamento
+* `DEVOLVIDO` - concluído com sucesso 
+* `NAO_REALIZADO` - a devolução foi rejeitada
 
 
 ```
