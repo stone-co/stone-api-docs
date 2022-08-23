@@ -24,6 +24,10 @@ PUT https://sandbox-api.openbank.stone.com.br/api/v1/pix/{e2eid}/devolucao/{id}
 **x-stone-account-id*** `string`
 <br> Necessário para permissionamento.
 
+
+**x-stone-idempotency-id*** `string`
+<br> Para garantir idempotência das operações.
+
 <br>
 
 ##### **PATH PARAMS**

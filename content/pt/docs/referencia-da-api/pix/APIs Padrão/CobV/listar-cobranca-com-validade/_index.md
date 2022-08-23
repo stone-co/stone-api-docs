@@ -97,59 +97,49 @@ Exemplo:
 ```
 
 ```json
-    {
-      "calendario": {
-        "criacao": "2021-03-19T22:04:24.209571Z",
-        "dataDeVencimento": "2021-03-18",
-        "validadeAposVencimento": 0
-      },
-      "chave": "4e4bb64d-d17c-4c53-a51b-44p06e28be06",
-      "devedor": {
-        "nome": "Fulano da Silva",
-        "cpf": "85553990335"
-      },
-      "infoAdicionais": [
-        {
-          "nome": "Mr. Due",
-          "valor": "Date Three"
-        }
-      ],
-      "loc": {
-        "criacao": "2021-03-19T22:04:24.209571Z",
-        "id": "5672cf6b-7021-4bce-b809-ed2e2d34e888",
-        "location": "pix-h.stone.com.br/pix/v2/5672cf6b-7021-4bce-b809-ed2e2d34e888",
-        "tipoCob": "cobv"
-      },
-      "recebedor": {
-        "cep": "22250190",
-        "cidade": "Rio de Janeiro",
-        "logradouro": "Rua Honório de BarrosoA, 3A, FlamengoA",
-        "nome": "Gilderoy Lockhart",
-        "uf": "RJA",
-        "cpf": "91092575062"
-      },
-      "revisao": 1,
-      "solicitacaoPagador": "do something until today",
-      "status": "REMOVIDA_PELO_USUARIO_RECEBEDOR",
-      "txid": "6225a6024fd242e7b5d2c00a9dc62238",
-      "valor": {
-        "abatimento": {
-          "modalidade": 1,
-          "valorPerc": "0.50"
-        },
-        "desconto": {
-          "modalidade": 4,
-          "valorPerc": "0.60"
-        },
-        "juros": {
-          "modalidade": 5,
-          "valorPerc": "0.50"
-        },
-        "multa": {
-          "modalidade": 1,
-          "valorPerc": "90.90"
-        },
-        "original": "5.55"
-      }
-    }
+   {
+  	"parametros": {
+  		"inicio": "2020-04-01T00:00:00Z",
+  		"fim": "2020-04-01T23:59:59Z",
+  		"paginacao": {
+  			"paginaAtual": 0,
+  			"itensPorPagina": 100,
+  			"quantidadeDePaginas": 1,
+  			"quantidadeTotalDeItens": 1
+  		}
+  	},
+  	"cobs": [{
+  		"calendario": {
+  			"dataDeVencimento": "2020-12-31",
+  			"validadeAposVencimento": 30
+  		},
+  		"loc": {
+  			"id": 789
+  		},
+  		"devedor": {
+  			"cpf": "12345678909",
+  			"nome": "Francisco da Silva"
+  		},
+  		"valor": {
+  			"original": "123.45",
+  			"multa": {
+  				"modalidade": "2",
+  				"valorPerc": "15.00"
+  			},
+  			"juros": {
+  				"modalidade": "2",
+  				"valorPerc": "2.00"
+  			},
+  			"desconto": {
+  				"modalidade": "1",
+  				"descontoDataFixa": [{
+  					"data": "2020-11-30",
+  					"valorPerc": "30.00"
+  				}]
+  			}
+  		},
+  		"chave": "5f84a4c5-c5cb-4599-9f13-7eb4d419dacc",
+  		"solicitacaoPagador": "Cobrança dos serviços prestados."
+  	}]
+  }
 ```
