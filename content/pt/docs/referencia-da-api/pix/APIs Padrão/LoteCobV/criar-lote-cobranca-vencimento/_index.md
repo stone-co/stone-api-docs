@@ -42,6 +42,8 @@ PUT https://sandbox-api.openbank.stone.com.br/api/v1/lotecobv/{id}
 ---
 <br>
 
+<br>**descricao*** `string`
+<br>**cobsv*** `object`
 <br> &nbsp;&nbsp;&nbsp;&nbsp;**txid** `string`
 <br> &nbsp;&nbsp;&nbsp;&nbsp;Format: "^[a-zA-Z0-9]{26,35}$"
 

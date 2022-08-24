@@ -1,6 +1,6 @@
 ---
-title: "Listar QRCode Dinâmico com Vencimento"
-linkTitle: "Listar QRCode Dinâmico com Vencimento"
+title: "Detalhes Cobrança com Vencimento"
+linkTitle: "Detalhes Cobrança com Vencimento"
 date: 2022-08-23T00:17:00-03:00
 lastmod: 2022-08-23T00:08:00-03:00
 weight: 8
@@ -8,7 +8,7 @@ description: >
   
 ---
 
-Através desse endpoint será possível listar as cobranças com vencimento por Pix.
+Através desse endpoint será possível detalhar uma cobrança com vencimento por Pix.
 
 
 ```

@@ -1,8 +1,8 @@
 ---
 title: "Listar QRCode Dinâmico com Validade"
 linkTitle: "Listar QRCode Dinâmico com Validade"
-date: 2021-06-16T15:17:00-03:00
-lastmod: 2021-09-19T09:08:00-03:00
+date: 2022-07-23T15:17:00-03:00
+lastmod: 2022-07-23T15:17:00-03:00
 weight: 8
 description: >
   

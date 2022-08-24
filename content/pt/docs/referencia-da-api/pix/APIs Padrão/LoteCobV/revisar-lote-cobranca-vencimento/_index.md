@@ -1,6 +1,6 @@
 ---
-title: "Criar Lote Cobranças Vencimento"
-linkTitle: Criar Lote Cobranças Vencimento"
+title: "Revisar Lote Cobranças Vencimento"
+linkTitle: Revisar Lote Cobranças Vencimento"
 date: 2022-08-23T20:00:00-03:00
 lastmod: 2022-08-23T20:00:00-03:00
 weight: 8
@@ -38,8 +38,9 @@ PATCH https://sandbox-api.openbank.stone.com.br/api/v1/lotecobv/{id}
 
 ##### **BODY PARAMS**
 ---
-<br>
 
+<br>**descricao** `string`
+<br>**cobsv** `object`
 <br> &nbsp;&nbsp;&nbsp;&nbsp;**txid*** `string`
 <br> &nbsp;&nbsp;&nbsp;&nbsp;Format: "^[a-zA-Z0-9]{26,35}$"
 
