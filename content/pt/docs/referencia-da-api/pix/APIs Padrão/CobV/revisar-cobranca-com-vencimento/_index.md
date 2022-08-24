@@ -1,18 +1,18 @@
 ---
-title: "Criar CobV"
-linkTitle: "Criar CobV"
-date: 2022-08-23T20:00:00-03:00
-lastmod: 2022-08-23T20:00:00-03:00
+title: "Listar QRCode Dinâmico com Validade"
+linkTitle: "Listar QRCode Dinâmico com Validade"
+date: 2021-06-16T15:17:00-03:00
+lastmod: 2021-09-19T09:08:00-03:00
 weight: 8
 description: >
   
 ---
 
-Através desse endpoint será possível criar as cobranças com validade por Pix.
+Através desse endpoint será possível revisar as cobranças com validade por Pix.
 
 
 ```
-POST https://sandbox-api.openbank.stone.com.br/api/v1/cobv/{txid}
+PATCH https://sandbox-api.openbank.stone.com.br/api/v1/cobv/{txid}
 ```
 <br>
 
@@ -50,6 +50,9 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/cobv/{txid}
 
 **loc** `object`
 <br>&nbsp;&nbsp;&nbsp;&nbsp;**id** `integer`
+
+**status** `string`
+Valores possíveis: `REMOVIDA_PELO_USUARIO_RECEBEDOR`
 
 **devedor** `object`
 <br>&nbsp;&nbsp;&nbsp;&nbsp;**logradouro** `string`
@@ -119,14 +122,10 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/cobv/{txid}
 <br>&nbsp;&nbsp;&nbsp;&nbsp;**valor** `string`
 
 
-Exemplo:
+Exemplo de Body:
 
 ```json
 {
-  "calendario": {
-    "dataDeVencimento": "2020-12-31",
-    "validadeAposVencimento": 30
-  },
   "loc": {
     "id": 789
   },
@@ -139,26 +138,8 @@ Exemplo:
     "nome": "Francisco da Silva"
   },
   "valor": {
-    "original": "123.45",
-    "multa": {
-      "modalidade": "2",
-      "valorPerc": "15.00"
-    },
-    "juros": {
-      "modalidade": "2",
-      "valorPerc": "2.00"
-    },
-    "desconto": {
-      "modalidade": "1",
-      "descontoDataFixa": [
-        {
-          "data": "2020-11-30",
-          "valorPerc": "30.00"
-        }
-      ]
-    }
+    "original": "123.45"
   },
-  "chave": "5f84a4c5-c5cb-4599-9f13-7eb4d419dacc",
   "solicitacaoPagador": "Cobrança dos serviços prestados."
 }
 ```
@@ -168,7 +149,7 @@ Exemplo:
 ---
 
 ```
-201 OK
+200 OK
 ```
 
 ```json
@@ -219,7 +200,7 @@ Exemplo:
   "type": "https://pix.bcb.gov.br/api/v2/error/CobVOperacaoInvalida",
   "title": "Cobrança inválida.",
   "status": 400,
-  "detail": "A requisição que busca alterar ou criar uma cobrança com vencimento não respeita o schema ou está semanticamente errada",
+  "detail": "A requisição que busca alterar ou criar uma cobrança com vencimento não respeita o schema ou está semanticamente errada.",
   "violacoes": {
     "propriedade": "original",
     "razao": "tem seu formato inválido",
@@ -252,3 +233,4 @@ Exemplo:
   "status": 404,
   "detail": "Entidade não encontrada."
 }
+```

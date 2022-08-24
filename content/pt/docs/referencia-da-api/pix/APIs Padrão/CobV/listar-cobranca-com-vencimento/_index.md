@@ -1,6 +1,6 @@
 ---
-title: "Listar QRCode Dinâmico com Validade"
-linkTitle: "Listar QRCode Dinâmico com Validade"
+title: "Listar QRCode Dinâmico com Vencimento"
+linkTitle: "Listar QRCode Dinâmico com Vencimento"
 date: 2021-06-16T15:17:00-03:00
 lastmod: 2021-09-19T09:08:00-03:00
 weight: 8
@@ -8,7 +8,7 @@ description: >
   
 ---
 
-Através desse endpoint será possível listar as cobranças com validade por Pix.
+Através desse endpoint será possível listar as cobranças com vencimento por Pix.
 
 
 ```

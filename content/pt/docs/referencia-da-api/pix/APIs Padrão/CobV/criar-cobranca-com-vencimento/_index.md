@@ -1,18 +1,18 @@
 ---
-title: "Listar QRCode Dinâmico com Validade"
-linkTitle: "Listar QRCode Dinâmico com Validade"
-date: 2021-06-16T15:17:00-03:00
-lastmod: 2021-09-19T09:08:00-03:00
+title: "Criar Cobranca com Vencimento"
+linkTitle: "Criar Cobranca com Vencimento"
+date: 2022-08-23T20:00:00-03:00
+lastmod: 2022-08-23T20:00:00-03:00
 weight: 8
 description: >
   
 ---
 
-Através desse endpoint será possível revisar as cobranças com validade por Pix.
+Através desse endpoint será possível criar as cobranças com vencimento por Pix.
 
 
 ```
-PATCH https://sandbox-api.openbank.stone.com.br/api/v1/cobv/{txid}
+POST https://sandbox-api.openbank.stone.com.br/api/v1/cobv/{txid}
 ```
 <br>
 
@@ -51,10 +51,7 @@ PATCH https://sandbox-api.openbank.stone.com.br/api/v1/cobv/{txid}
 **loc** `object`
 <br>&nbsp;&nbsp;&nbsp;&nbsp;**id** `integer`
 
-**status** `string`
-Valores possíveis: `REMOVIDA_PELO_USUARIO_RECEBEDOR`
-
-**devedor** `object`
+**devedor*** `object`
 <br>&nbsp;&nbsp;&nbsp;&nbsp;**logradouro** `string`
 <br>&nbsp;&nbsp;&nbsp;&nbsp;**cidade** `string`
 <br>&nbsp;&nbsp;&nbsp;&nbsp;**uf** `string`
@@ -62,7 +59,7 @@ Valores possíveis: `REMOVIDA_PELO_USUARIO_RECEBEDOR`
 <br>&nbsp;&nbsp;&nbsp;&nbsp;**cpf** `string`
 <br>&nbsp;&nbsp;&nbsp;&nbsp;**nome** `string`
 
-**valor** `object`
+**valor*** `object`
 <br>&nbsp;&nbsp;&nbsp;&nbsp;**original*** `string`
 <br>&nbsp;&nbsp;&nbsp;&nbsp;Format: \d{1,10}\.\d{2}
 <br>&nbsp;&nbsp;&nbsp;&nbsp;Valor original da cobrança. Ex: 123,34
@@ -71,14 +68,14 @@ Valores possíveis: `REMOVIDA_PELO_USUARIO_RECEBEDOR`
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Valores permitidos:
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fixo: 1
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Percentual: 2
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**valorPerc** `string`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**valorPerc*** `string`
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Format: \d{1,10}\.\d{2}
 <br>&nbsp;&nbsp;&nbsp;&nbsp;**multa** `object`
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**modalidade*** `string`
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Valores permitidos:
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fixo: 1
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Percentual: 2
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**valorPerc** `string`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**valorPerc*** `string`
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Format: \d{1,10}\.\d{2}
 <br>&nbsp;&nbsp;&nbsp;&nbsp;**juros** `object`
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**modalidade*** `string`
@@ -122,10 +119,14 @@ Valores possíveis: `REMOVIDA_PELO_USUARIO_RECEBEDOR`
 <br>&nbsp;&nbsp;&nbsp;&nbsp;**valor** `string`
 
 
-Exemplo de Body:
+Exemplo:
 
 ```json
 {
+  "calendario": {
+    "dataDeVencimento": "2020-12-31",
+    "validadeAposVencimento": 30
+  },
   "loc": {
     "id": 789
   },
@@ -138,8 +139,26 @@ Exemplo de Body:
     "nome": "Francisco da Silva"
   },
   "valor": {
-    "original": "123.45"
+    "original": "123.45",
+    "multa": {
+      "modalidade": "2",
+      "valorPerc": "15.00"
+    },
+    "juros": {
+      "modalidade": "2",
+      "valorPerc": "2.00"
+    },
+    "desconto": {
+      "modalidade": "1",
+      "descontoDataFixa": [
+        {
+          "data": "2020-11-30",
+          "valorPerc": "30.00"
+        }
+      ]
+    }
   },
+  "chave": "5f84a4c5-c5cb-4599-9f13-7eb4d419dacc",
   "solicitacaoPagador": "Cobrança dos serviços prestados."
 }
 ```
@@ -149,7 +168,7 @@ Exemplo de Body:
 ---
 
 ```
-200 OK
+201 OK
 ```
 
 ```json
@@ -200,7 +219,7 @@ Exemplo de Body:
   "type": "https://pix.bcb.gov.br/api/v2/error/CobVOperacaoInvalida",
   "title": "Cobrança inválida.",
   "status": 400,
-  "detail": "A requisição que busca alterar ou criar uma cobrança com vencimento não respeita o schema ou está semanticamente errada",
+  "detail": "A requisição que busca alterar ou criar uma cobrança com vencimento não respeita o schema ou está semanticamente errada.",
   "violacoes": {
     "propriedade": "original",
     "razao": "tem seu formato inválido",
@@ -219,18 +238,5 @@ Exemplo de Body:
   "title": "Acesso Negado",
   "status": 403,
   "detail": "Requisição de participante autenticado que viola alguma regra de autorização."
-}
-```
-
-```
-404 Not Found
-```
-
-```json
-{
-  "type": "https://pix.bcb.gov.br/api/v2/error/NaoEncontrado",
-  "title": "Não Encontrado",
-  "status": 404,
-  "detail": "Entidade não encontrada."
 }
 ```

@@ -1,6 +1,6 @@
 ---
-title: "Listar QRCode Dinâmico com Validade"
-linkTitle: "Listar QRCode Dinâmico com Validade"
+title: "Listar QRCode Dinâmico com Vencimento"
+linkTitle: "Listar QRCode Dinâmico com Vencimento"
 date: 2022-08-23T00:17:00-03:00
 lastmod: 2022-08-23T00:08:00-03:00
 weight: 8
@@ -8,7 +8,7 @@ description: >
   
 ---
 
-Através desse endpoint será possível listar as cobranças com validade por Pix.
+Através desse endpoint será possível listar as cobranças com vencimento por Pix.
 
 
 ```
@@ -78,5 +78,31 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/cobv/{txid}
   },
   "chave": "5f84a4c5-c5cb-4599-9f13-7eb4d419dacc",
   "solicitacaoPagador": "Cobrança dos serviços prestados."
+}
+```
+
+```
+403 Forbidden
+```
+
+```json
+{
+  "type": "https://pix.bcb.gov.br/api/v2/error/AcessoNegado",
+  "title": "Acesso Negado",
+  "status": 403,
+  "detail": "Requisição de participante autenticado que viola alguma regra de autorização."
+}
+```
+
+```
+404 Not Found
+```
+
+```json
+{
+  "type": "https://pix.bcb.gov.br/api/v2/error/NaoEncontrado",
+  "title": "Não Encontrado",
+  "status": 404,
+  "detail": "Entidade não encontrada."
 }
 ```
