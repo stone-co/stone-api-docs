@@ -1,6 +1,6 @@
 ---
-title: "Listar Cobrança imediata"
-linkTitle: "Listar Cobrança imediata"
+title: "Detalhes Cobrança imediata"
+linkTitle: "Detalhes Cobrança imediata"
 date: 2022-08-23T15:00:00-03:00
 lastmod: 2022-08-23T15:00:00-03:00
 weight: 8
@@ -8,8 +8,7 @@ description: >
   
 ---
 
-Através desse endpoint será possível listar as cobranças com imediatas por Pix.
-
+Através desse endpoint será possível possível consultar as cobranças imediatas por Pix.
 
 ```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/cob/{txid}
@@ -78,6 +77,18 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/cob/{txid}
     ]
 }
 
+```
+
+```
+400 Bad Request
+```
+
+```json
+{
+  "type": "https://pix.bcb.gov.br/api/v2/error/CobOperacaoInvalida",
+  "title": "Cabeçalho inválida.",
+  "status": 400,
+  "detail": "O cabeçalho x-stone-account-id deve ser preenchido com um valor válido."
 ```
 
 ```

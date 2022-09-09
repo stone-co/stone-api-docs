@@ -8,7 +8,7 @@ description: >
   
 ---
 
-Através desse endpoint será possível listar as cobranças com imediatas por Pix.
+Através desse endpoint será possível listar as cobranças imediatas por Pix.
 
 
 ```
@@ -157,8 +157,9 @@ Exemplo:
   "status": 400,
   "detail": "A requisição que busca alterar ou criar uma cobrança para pagamento imediato não respeita o schema ou está semanticamente errada.",
   "violacoes": {
-    "propriedade": "devedor.cpf ou devedor.cnpj",
-    "razao": "deve ser preenchido"
+    "propriedade": "cpf",
+    "razao": "Não respeita o schema",
+    "valor": "123"
   }
 }
 ```
@@ -173,18 +174,5 @@ Exemplo:
   "title": "Acesso Negado",
   "status": 403,
   "detail": "Requisição de participante autenticado que viola alguma regra de autorização."
-}
-```
-
-```
-404 Not Found
-```
-
-```json
-{
-  "type": "https://pix.bcb.gov.br/api/v2/error/NaoEncontrado",
-  "title": "Não Encontrado",
-  "status": 404,
-  "detail": "Entidade não encontrada."
 }
 ```

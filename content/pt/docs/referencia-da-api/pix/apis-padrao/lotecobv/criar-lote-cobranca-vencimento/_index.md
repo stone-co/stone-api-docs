@@ -207,7 +207,7 @@ Exemplo:
   "detail": "A requisição que busca alterar ou criar um lote de cobranças com vencimento não respeita o schema ou está semanticamente errada.",
   "violacoes": {
     "propriedade": "id",
-    "razao": "não respeita o schema"
+    "razao": "Não respeita o schema"
   }
 }
 ```
