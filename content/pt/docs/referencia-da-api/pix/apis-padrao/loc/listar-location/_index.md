@@ -27,22 +27,6 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/loc
 
 <br>
 
-##### **BODY PARAMS**
----
-<br>
-
-**tipoCob*** `string`
-Valores possíveis: `cob` e `cobv`
-
-Exemplo:
-
-```json
-{
-  "tipoCob": "cob"
-}
-```
-<br>
-
 ##### **Response**
 ---
 

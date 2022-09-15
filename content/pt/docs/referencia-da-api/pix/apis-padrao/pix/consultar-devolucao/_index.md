@@ -36,8 +36,8 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/pix/{end_to_end_id}/devoluc
 **e2eid*** `string`
 <br>
 
-**id*** `string`
-<br>Format: date-time
+**id*** `uuid`
+<br>
 
 ##### **Response**
 ---

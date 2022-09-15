@@ -12,8 +12,9 @@ Através desse endpoint será possível criar as cobranças com vencimento por P
 
 
 ```
-POST https://sandbox-api.openbank.stone.com.br/api/v1/cobv/{txid}
+PUT https://sandbox-api.openbank.stone.com.br/api/v1/cobv/{txid}
 ```
+
 <br>
 
 ##### **HEADERS**

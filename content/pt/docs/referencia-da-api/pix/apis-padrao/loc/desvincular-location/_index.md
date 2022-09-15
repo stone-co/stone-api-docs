@@ -29,20 +29,11 @@ DELETE https://sandbox-api.openbank.stone.com.br/api/v1/loc/{id}/txid
 
 <br>
 
-##### **BODY PARAMS**
+##### **PATH PARAMS**
 ---
 <br>
 
-**tipoCob*** `string`
-Valores possíveis: `cob` e `cobv`
-
-Exemplo:
-
-```json
-{
-  "tipoCob": "cob"
-}
-```
+**id*** `integer`
 <br>
 
 ##### **Response**

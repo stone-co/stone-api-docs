@@ -48,45 +48,6 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/cobv
 
 **paginacao[itensPorPagina]** `integer`
 
-Exemplo:
-
-```json
-{
-  "type": "object",
-  "properties": {
-    "inicio": {
-      "type": "string",
-      "format": "date-time",
-      "required": true
-    },
-    "fim": {
-      "type": "string",
-      "format": "date-time",
-      "required": true
-    },
-    "cpf": {
-      "type": "string"
-    },
-    "cnpj": {
-      "type": "string"
-    },
-    "status": {
-      "type": "string",
-      "description": "Possíveis valores: ATIVA, CONCLUIDA, REMOVIDA_PELO_USUARIO_RECEBEDOR, REMOVIDA_PELO_PSP"
-    },
-    "paginacao[itensPorPagina]": {
-      "type": "integer"
-    },
-    "paginacao[paginaAtual]": {
-      "type": "integer"
-    }
-  },
-  "required": [
-    "inicio",
-    "fim"
-  ]
-}
-```
 <br>
 
 ##### **Response**
@@ -142,4 +103,17 @@ Exemplo:
   		"solicitacaoPagador": "Cobrança dos serviços prestados."
   	}]
   }
+```
+
+```
+403 Forbidden
+```
+
+```json
+{
+  "type": "https://pix.bcb.gov.br/api/v2/error/AcessoNegado",
+  "title": "Acesso Negado",
+  "status": 403,
+  "detail": "Requisição de participante autenticado que viola alguma regra de autorização."
+}
 ```

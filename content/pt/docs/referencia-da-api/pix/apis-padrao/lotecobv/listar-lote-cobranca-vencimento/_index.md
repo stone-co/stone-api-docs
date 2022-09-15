@@ -12,7 +12,7 @@ Através desse endpoint será possível listar lotes de cobranças com venciment
 
 
 ```
-PATCH https://sandbox-api.openbank.stone.com.br/api/v1/lotecobv/{id}
+GET https://sandbox-api.openbank.stone.com.br/api/v1/lotecobv
 ```
 <br>
 
