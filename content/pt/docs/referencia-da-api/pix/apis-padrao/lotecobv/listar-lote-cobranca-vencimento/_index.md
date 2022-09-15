@@ -40,35 +40,6 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/lotecobv
 
 **paginacao[itensPorPagina]** `integer`
 
-Exemplo:
-
-```json
-{
-  "type": "object",
-  "properties": {
-    "inicio": {
-      "type": "string",
-      "format": "date-time",
-      "required": true
-    },
-    "fim": {
-      "type": "string",
-      "format": "date-time",
-      "required": true
-    },
-    "paginacao[itensPorPagina]": {
-      "type": "integer"
-    },
-    "paginacao[paginaAtual]": {
-      "type": "integer"
-    }
-  },
-  "required": [
-    "inicio",
-    "fim"
-  ]
-}
-```
 <br>
 
 ##### **Response**
