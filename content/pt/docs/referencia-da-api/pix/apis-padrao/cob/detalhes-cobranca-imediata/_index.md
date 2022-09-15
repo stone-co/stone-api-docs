@@ -89,6 +89,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/cob/{txid}
   "title": "Cabeçalho inválida.",
   "status": 400,
   "detail": "O cabeçalho x-stone-account-id deve ser preenchido com um valor válido."
+}
 ```
 
 ```
