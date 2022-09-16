@@ -8,7 +8,7 @@ description: >
   
 ---
 
-Através desse endpoint será possível revisar lote de cobranças com vencimento por Pix.
+Através desse endpoint será possível atualizar lote de cobranças com vencimento por Pix.
 
 
 ```
