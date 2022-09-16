@@ -6,7 +6,7 @@ lastmod: 2021-07-15T14:00:00-03:00
 weight: 3
 draft: false
 description: >
-   
+
 ---
 <br>
 
@@ -34,10 +34,10 @@ DELETE /api/v1/pix/{{account_id}}/entries/{{id}}
 ---
 
 **account_id** `string`
-<br> Identificador da conta 
+<br> Identificador da conta
 
 **id** `string`
-<br> Identificador da chave a ser deletada. Caso não saiba o `id` da chave, liste as chaves da conta por esse [endpoint]({{< relref "/docs/referencia-da-api/pix/chaves-pix/listar-chaves-pix/">}}) e pegue o `id`.
+<br> Identificador da chave a ser deletada. Caso não saiba o `id` da chave, liste as chaves da conta por esse [endpoint]({{< relref "/docs/referencia-da-api/pix/apis-stone/chaves-pix/listar-chaves-pix/">}}) e pegue o `id`.
 <br><br>
 
 ##### **BODY PARAMS**
@@ -59,7 +59,7 @@ Exemplo: "reason": "user_requested" - significa que foi um pedido da cliente fin
   "reason": "user_requested"
 }
 ```
-<br> <br> 
+<br> <br>
 
 ##### **RESPONSE**
 
@@ -74,7 +74,7 @@ content-type: application/json
   "id": “4b612bce-f964-11ea-adc1-0242ac120002”
 }
 ```
-<br> <br> 
+<br> <br>
 
 
 ##### **Webhook de exclusão de uma chave**
@@ -100,4 +100,4 @@ As seguintes informações virão no campo `target_data` dos webhooks:
    "status": “accepted"
 }
 ```
-<br> <br> 
+<br> <br>

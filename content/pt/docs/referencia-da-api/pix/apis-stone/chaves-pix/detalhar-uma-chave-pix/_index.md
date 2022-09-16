@@ -36,7 +36,7 @@ GET /api/v1/pix/{{account_id}}/entries/{{id}}
 <br> Identificador da conta
 
 **id** `string`
-<br> Identificador da chave a ser deletada. Caso não saiba o `id` da chave, liste as chaves da conta por esse [endpoint]({{< relref "/docs/referencia-da-api/pix/chaves-pix/listar-chaves-pix/">}}) e pegue o `id`.
+<br> Identificador da chave a ser deletada. Caso não saiba o `id` da chave, liste as chaves da conta por esse [endpoint]({{< relref "/docs/referencia-da-api/pix/apis-stone/chaves-pix/listar-chaves-pix/">}}) e pegue o `id`.
 <br><br>
 
 ##### **RESPONSE**
@@ -51,8 +51,8 @@ GET /api/v1/pix/{{account_id}}/entries/{{id}}
 ```json
 {
   "id": "d990cc41-e514-4343-a84c-80c677102b17",
-  "key": "+5510998765432", 
-  "key_type": "phone", 
+  "key": "+5510998765432",
+  "key_type": "phone",
   "key_status": "active",
   "account_id": "968cc34d-d827-448b-ac1b-e6e29836a160",
   "participant_ispb": "1234567890",
@@ -66,7 +66,7 @@ GET /api/v1/pix/{{account_id}}/entries/{{id}}
      "name":"Maria Clara Gomes",
      "document_type": "cpf",
      "document": "13152256685"
-  }, 
+  },
   "events": [
     {
       "id": "38963369-533c-42aa-a49e-b5369ff4bd52",
