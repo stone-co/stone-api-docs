@@ -10,10 +10,10 @@ description: >
 
 Através desse endpoint será possível consultar lote de cobranças com vencimento por Pix.
 
+```
+GET https://sandbox-api.openbank.stone.com.br/api/v1/lotecobv/{id}
+```
 
-```
-PATCH https://sandbox-api.openbank.stone.com.br/api/v1/lotecobv/{id}
-```
 <br>
 
 ##### **HEADERS**
