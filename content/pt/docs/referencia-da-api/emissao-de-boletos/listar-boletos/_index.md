@@ -149,7 +149,16 @@ Formato "YYYY-MM-DD".
 **writable_line**`string`
 <br> Código de barras traduzidos em números.
 
+---
 <br>
+
+**payment_invoice** `object`
+<br>
+
+<br> &nbsp;&nbsp;&nbsp;&nbsp;**description** `string` _(opcional)_
+<br> &nbsp;&nbsp;&nbsp;&nbsp;A cliente poderá adicionar informações relativas ao seu produto/serviço a fim de identificar o que foi vendido.
+
+<br><br>
 
 #### **Response**
 
@@ -273,7 +282,11 @@ content-type: application/json
           "registered_at":"2020-03-10T15:03:34Z",
           "settled_at":null,
           "status":"REGISTERED",
-          "writable_line":"19790000052020031015703344761550581910000002000"
+          "writable_line":"19790000052020031015703344761550581910000002000",
+          "payment_invoice": {
+            "description": "Descrição do pagamento."
+          }
+ 
        }
     ]
 }
