@@ -87,5 +87,6 @@ Body
           "writable_line":"19790000052020031015703344761550581910000002000",
           "payment_invoice": {
             "description": "Descrição do pagamento."
-          }
+          },
+          "metadata": {}
  }
