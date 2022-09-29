@@ -149,16 +149,7 @@ Formato "YYYY-MM-DD".
 **writable_line**`string`
 <br> Código de barras traduzidos em números.
 
----
 <br>
-
-**payment_invoice** `object`
-<br>
-
-<br> &nbsp;&nbsp;&nbsp;&nbsp;**description** `string` _(opcional)_
-<br> &nbsp;&nbsp;&nbsp;&nbsp;A cliente poderá adicionar informações relativas ao seu produto/serviço a fim de identificar o que foi vendido.
-
-<br><br>
 
 #### **Response**
 
