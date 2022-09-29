@@ -201,7 +201,13 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
 
 <br> &nbsp;&nbsp;&nbsp;&nbsp;**description** `string` _(opcional)_
 <br> &nbsp;&nbsp;&nbsp;&nbsp;A cliente poderá adicionar informações relativas ao seu produto/serviço a fim de identificar o que foi vendido.
+<br>
 
+---
+<br>**metadata** `object` _(opcional)_
+<br>Preenchido com dados internos do parceiro. 
+
+---
 <br><br>
 
 #### **HEADERS**
