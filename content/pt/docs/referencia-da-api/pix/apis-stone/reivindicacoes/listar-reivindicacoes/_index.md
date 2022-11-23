@@ -1,6 +1,6 @@
 ---
-title: "Listar reivindicações"
-linkTitle: "Listar reivindicações"
+title: "Listagem de Reivindicação/Portabilidade"
+linkTitle: "Listagem de Reivindicação/Portabilidade"
 date: 2022-09-17T18:00:00-03:00
 lastmod: 2022-11-23T11:00:00-03:00
 weight: 10
