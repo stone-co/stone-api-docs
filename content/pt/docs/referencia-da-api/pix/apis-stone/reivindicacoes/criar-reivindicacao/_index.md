@@ -52,9 +52,9 @@ Exemplo:
 ##### **Response**
 ---
 
-```
+
 **Status**: 202
-```
+
 Body
 ```json
 {  
@@ -65,9 +65,9 @@ Body
 ```
 <br> <br> 
 
-```
+
 **Status**: 401
-```
+
 Body
 ```json
 {  
@@ -76,9 +76,9 @@ Body
 ```
 <br> <br> 
 
-```
+
 **Status**: 403
-```
+
 Apenas após 2 minutos de falaha da chave
 <br>
 Body
@@ -90,9 +90,9 @@ Body
 ```
 <br> <br> 
 
-```
+
 **Status**: 422
-```
+
 Chave em status diferente de failed / Reivindicação não é possível (chave já em processo de claim por outra conta)
 <br>
 Body
