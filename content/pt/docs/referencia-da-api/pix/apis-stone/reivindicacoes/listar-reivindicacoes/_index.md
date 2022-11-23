@@ -105,7 +105,7 @@ Body
 "cancel_requested", 
 "cancelled"
 ```
-<br>
+<br><br>
 Obs: status a serem considerados pelo front quando a direction é "outbound"
 <br>
 - `failed` | `cancelled` | `completed`: finalizados
