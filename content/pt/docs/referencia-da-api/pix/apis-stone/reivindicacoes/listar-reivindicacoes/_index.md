@@ -34,6 +34,7 @@ GET /api/v1/pix/:account_id/entry_claims
 Valores permitidos:  `waiting_resolution`, `open`, `cancelled`, `completed` ou `confirmed`
 
 <br>
+
 **direction** `string`
 <br>
 Valores permitidos: `outbound`, `inbound` 
