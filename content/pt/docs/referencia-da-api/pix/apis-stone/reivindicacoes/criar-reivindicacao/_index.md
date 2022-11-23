@@ -8,28 +8,24 @@ draft: true
 description: >
 
 ---
-Caso uma chave esteja em posse de uma outra conta e um usuário tente realizar a criação dela, este processo resultará em uma falha. Neste caso, o usuário pode realizar o processo de reivindicação de uma chave Pix.
-
-Este  processo pode ocorrer tanto para uma chave que pertence ao mesmo  indivíduo/organização (possui o mesmo CPF ou CNPJ) quanto para uma chave  que está em posse de uma pessoa física/jurídica distinta.
-
-No primeiro caso, realiza-se um processo de portabilidade (portability), enquanto no segundo é realizado um processo de Reivindicação de Posse (ownership).
-
-Nem todas as chaves podem passar pelos mesmos processos de transferência entre contas. 
- 
- **- Reivindicação de Posse**: `E-mail`, `Celular`
- <br>
- **- Portabilidade**: `E-mail`, `Celular`, `CPF`, `CNPJ`
-<br><br>
-
-##### **Webhook**
-
 
 ##### **Request**
+---
 
-
-GET /api/v1/pix/:account_id/entry_claims
 ```
-Parâmetros para query.
+POST /api/v1/pix/:account_id/entry_claims
+```
+
+##### **Headers**
+---
+
+**x-stone-idempotency-key** `string`
+<br>Chave de idempotência
+<br>
+
+#### **Paramentros para query**
+---
+
 ```
 - "pix_entry_id" * (obrigatorio)
 - "participant_ispb" *(obrigatório para participantes indiretos)
@@ -45,7 +41,69 @@ Parâmetros para query.
 - "beneficiary_entity.document"   
 ```
 
+Exemplo:  
+
+- `{
+  "pix_entry_id": "390d7eda-e948-4552-bcdf-886c62e5923b",
+  "participant_ispb": "16501555"
+}`;
+<br> <br> 
+
+##### **Response**
+---
+
 ```
-POST - /pix/:account_id/entry_claims/
-content-type: application/json
+**Status**: 202
 ```
+Body
+```json
+{  
+  "id": "390d7eda-e948-4552-bcdf-886c62e5923b",
+  "claim_type": "ownership" | "portability"
+
+}
+```
+<br> <br> 
+
+```
+**Status**: 401
+```
+Body
+```json
+{  
+    "type": "srn:error:unauthenticated"
+}
+```
+<br> <br> 
+
+```
+**Status**: 403
+```
+Apenas após 2 minutos de falaha da chave
+<br>
+Body
+```json
+{  
+     "type": "srn:error:needs_verification",
+     "details": {"verification_id": "uuid"}
+}
+```
+<br> <br> 
+
+```
+**Status**: 422
+```
+Chave em status diferente de failed / Reivindicação não é possível (chave já em processo de claim por outra conta)
+<br>
+Body
+```json
+{  
+    "type": "srn:error:entry_not_found" | "claim_type_not_available"
+}
+```
+<br> <br> 
+
+
+
+
+

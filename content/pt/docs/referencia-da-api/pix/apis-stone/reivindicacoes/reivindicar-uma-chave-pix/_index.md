@@ -56,18 +56,3 @@ Body
 }
 ```
 <br> <br>
-
-
-##### **Webhook**
-
-Serão disparados webhooks quando o status da reivindicação sofrer alterações. Veja [aqui](https://stone-co.github.io/docs/pix/chaves-pix/status/#status-da-reivindica%C3%A7%C3%A3o) os possíveis status para uma reivindicação.
-
-As seguintes informações virão no campo `target_data`.
-
-```json
-{
-  "claim_id": "6c8e9fb9-1416-434d-9933-a36fb3ad7a8c",
-  "status": "open"
-}
-```
-<br> <br>

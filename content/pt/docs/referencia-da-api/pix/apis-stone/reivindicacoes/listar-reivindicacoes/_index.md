@@ -16,7 +16,7 @@ description: >
 GET /api/v1/pix/:account_id/entry_claims
 ```
 
-##### **Query params**
+##### **Paramentros para query**
 ---
 ```
 "status"
