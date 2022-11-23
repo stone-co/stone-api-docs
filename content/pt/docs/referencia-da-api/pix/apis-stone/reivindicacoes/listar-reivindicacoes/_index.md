@@ -18,15 +18,13 @@ GET /api/v1/pix/:account_id/entry_claims
 
 ##### **Query params**
 ---
-
-<br>
 ```
- "status"
- "key"
- "direction"
- "limit"
- "after"
- "before"  
+"status"
+"key"
+"direction"
+"limit"
+"after"
+"before" 
 ```
 
 <br><br>
