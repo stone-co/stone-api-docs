@@ -27,7 +27,7 @@ GET /api/v1/pix/:account_id/entry_claims
 "before" 
 ```
 
-<br><br>
+<br>
 
 **status** `array` `string` 
 <br>
@@ -35,7 +35,7 @@ Valores permitidos:  `waiting_resolution`, `open`, `cancelled`, `completed` ou `
 
 <br>
 **direction** `string`
-
+<br>
 Valores permitidos: `outbound`, `inbound` 
 
 
@@ -90,7 +90,7 @@ Body
 <br> <br> 
 
 
-##### **Status para direção outbound**
+##### **Status para direção `outbound`**
 ---
 
 ```
@@ -117,7 +117,7 @@ Obs: status a serem considerados pelo front quando a direction é "outbound"
 <br><br>
 
 
-##### **Status para direção inbound**
+##### **Status para direção `inbound`**
 ---
 ```
 "waiting_resolution", 
