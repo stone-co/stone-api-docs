@@ -16,22 +16,23 @@ description: >
 GET /api/v1/pix/:account_id/entry_claims
 ```
 
-##### **QUERY PARAMS**
+##### **Query params**
 ---
 
 <br>
 ```
-- "status"
-- "key"
-- "direction"
-- "limit"
-- "after"
-- "before"  
+ "status"
+ "key"
+ "direction"
+ "limit"
+ "after"
+ "before"  
 ```
 
 <br><br>
 
-**status** `array` `string`
+**status** `array` `string` 
+<br>
 Valores permitidos:  `waiting_resolution`, `open`, `cancelled`, `completed` ou `confirmed`
 
 <br>
