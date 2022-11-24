@@ -41,6 +41,39 @@ POST /api/v1/pix/:account_id/entry_claims
 - "beneficiary_entity.document"   
 ```
 
+
+```
+ **pix_entry_id***
+<br>Identificador da chave Pix cuja criação resultou em falha.
+<br>Format: UUID
+**participant_ispb***
+<br>Identificador da instituição.
+ **beneficiary_account**
+<br> Identificação da conta
+**beneficiary_entity** `object`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;**name** `string`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Nome
+<br>&nbsp;&nbsp;&nbsp;&nbsp;**legal_name** `string`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;É o nome que identifica o pagador para fins legais, administrativos e outros fins oficiais
+<br>&nbsp;&nbsp;&nbsp;&nbsp;**document** `string`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Número do documento (CPF/CNPJ)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;**document_type** `string`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Valores permitidos: `cpf`, `cnpj`
+**beneficiary_account** `object`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;**account_code** `string`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Número da conta
+<br>&nbsp;&nbsp;&nbsp;&nbsp;**branch_code** `string`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Agência
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Format: ^\d{4}$
+<br>&nbsp;&nbsp;&nbsp;&nbsp;**account_type** `string`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Tipo da conta.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Valores permitidos: `CC`, `CS`, `PP` ou `PG`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;**created_at** `datetime`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Data de criação da conta.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Format: ISO8601 - "YYYY-MM-DDThh:mm:ssZ"
+```
+
+
 Exemplo:  
 
 - `{
