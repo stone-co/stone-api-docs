@@ -5,7 +5,7 @@ date: 2022-09-17T18:00:00-03:00
 lastmod: 2022-11-23T11:00:00-03:00
 weight: 10
 draft: true
-description: >
+description: Listar as reivindicação/portabilidade>
 
 ---
 
@@ -16,7 +16,7 @@ description: >
 GET /api/v1/pix/:account_id/entry_claims
 ```
 
-##### **Paramentros para query**
+##### **Query Params**
 ---
 ```
 "status"
@@ -30,14 +30,12 @@ GET /api/v1/pix/:account_id/entry_claims
 <br>
 
 **status** `array` `string` 
-<br>
-Valores permitidos:  `waiting_resolution`, `open`, `cancelled`, `completed` ou `confirmed`
-
+Valores permitidos: `open`,  `waiting_resolution`, `confirmed`  , `cancelled` ou `completed`  
 <br>
 
 **direction** `string`
+<br>Valores permitidos: `outbound`, `inbound` 
 <br>
-Valores permitidos: `outbound`, `inbound` 
 
 
 Exemplo:  
@@ -50,7 +48,7 @@ Exemplo:
 ---
 
 ```
-202 CONTINUE
+202 ACCEPTED
 ```
 Body
 ```json
@@ -91,34 +89,6 @@ Body
 <br> <br> 
 
 
-##### **Status para direção `outbound`**
----
-
-```
-"waiting_resolution", 
-"open", 
-"failed",  
-"confirmed", 
-"automatically_confirmed_waiting_resolution",  
-"completed", 
-"complete_requested", 
-"cancel_requested", 
-"cancelled"
-```
-<br><br>
-Obs: status a serem considerados pelo front quando a direction é "outbound"
-<br>
-- `failed` | `cancelled` | `completed`: finalizados
-- `confirmed`: precisa exibir uma notificação pro cliente completar ação
-- demais status são intermediários: 
-    - `open`: criação requisitada
-    - `automatically_confirmed_waiting_resolution`: se passaram 7 dias desde a criação da reivindicação, mas o usuario em posse da chave ainda não confirmou (temos que esperar)
-    - `cancel_requested`: cancelamento requisitado pelo usuário
-    - `complete_requested`: usuário requisitou API de completar, mas ainda não foi completado
-<br><br>
-
-
-##### **Status para direção `inbound`**
 ---
 ```
 "waiting_resolution", 

@@ -1,8 +1,8 @@
 ---
-title: "Detalhar reivindicação"
-linkTitle: "Detalhar reivindicação"
+title: "Detalhes de Reivindicação/Portabilidade "
+linkTitle: "Detalhes de Reivindicação/Portabilidade "
 date: 2020-09-17T18:00:00-03:00
-lastmod: 2020-09-17T18:00:00-03:00
+lastmod: 2022-11-21T11:00:00-03:00
 weight: 9
 draft: true
 description: >
@@ -10,13 +10,13 @@ description: >
 ---
 
 ##### **Request**
-
+---
 ```
 GET /api/v1/pix/:account_id/entry_claims/:claim_id
 ```
 
 ##### **Response**
-
+---
 ```
 200 OK
 ```
