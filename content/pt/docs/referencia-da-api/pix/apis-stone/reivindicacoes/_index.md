@@ -1,6 +1,6 @@
 ---
-title: "Reinvindicação de Chaves Pix"
-linkTitle: "Reinvindicação de Chaves Pix"
+title: "Reivindicação de Chaves Pix"
+linkTitle: "Reivindicação de Chaves Pix"
 date: 2022-11-21T11:00:00-03:00
 lastmod: 2022-11-21T11:00:00-03:00
 weight: 3
