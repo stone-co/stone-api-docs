@@ -75,7 +75,7 @@ Body
 <br> 
 
 ```
-403 Unauthorized
+403 Forbidden
 ```
 
 Usuário não autorizado a realizar a ação

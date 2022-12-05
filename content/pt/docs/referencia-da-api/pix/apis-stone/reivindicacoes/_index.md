@@ -22,7 +22,7 @@ Cada Chave Pix pode ser cadastrada em uma única conta. Se um cliente deseja cad
   a. Conta A e Conta B estão no mesmo PSP
   b. Conta A e Conta B estão em PSPs diferentes
 <br><br>
-Em todos os casos, falamos da figura do PSP que vai ceder a chave (PSP Doador, dono da conta B no nosso exemplo), e o PSP que quer receber e ficar com a chave (PSP Reivindicador, dono da conta A no nosso exemplo).
+Em todos os casos, falamos da figura do PSP que vai ceder a chave (PSP Doador, titular da conta B no nosso exemplo), e o PSP que quer receber e ficar com a chave (PSP Reivindicador, titular da conta A no nosso exemplo).
 <br><br>
 
 
@@ -39,12 +39,12 @@ Em todos os casos, falamos da figura do PSP que vai ceder a chave (PSP Doador, d
     - O usuário reivindicador (que começou o pedido) quiser cancelar;
     - Algum dos PSPs envolvidos perceber uma suspeita de fraude e quiser cancelar.
 <br><br>
-**Sobre portabilidade:** o usuário doador (dono da conta B no nosso exemplo, que já está com a chave) tem até 7 dias para cancelar ou confirmar um pedido de reivindicação do tipo portabilidade. Se ele não responder, o PSP Doador deve deve necessariamente cancelar o pedido.
+**Sobre portabilidade:** o usuário doador (titular da conta B no nosso exemplo, que já está com a chave) tem até 7 dias para cancelar ou confirmar um pedido de reivindicação do tipo portabilidade. Se ele não responder, o PSP Doador deve deve necessariamente cancelar o pedido.
 
 <br><br>
-**Sobre reivindicação de posse:** O usuário doador (dono da conta B no nosso exemplo, que já está com a chave) tem até 7 dias para cancelar ou confirmar um pedido de reivindicação do tipo posse. Se ele não responder, o PSP Doador deve deve necessariamente confirmar o pedido.
+**Sobre reivindicação de posse:** O usuário doador (titular da conta B no nosso exemplo, que já está com a chave) tem até 7 dias para cancelar ou confirmar um pedido de reivindicação do tipo posse. Se ele não responder, o PSP Doador deve deve necessariamente confirmar o pedido.
   - Depois desses 7 dias a gente entra no "período de encerramento", também de 7 dias, onde o usuário doador ainda pode validar a posse da chave e cancelar a reivindicação. Nesse caso, o PSP Doador deve cancelar o processo, por indício de fraude.
-  - Se o usuário doador não validar a posse da chave até o final do "período de encerramento", o PSP Reivindicador deve solicitar uma nova validação de posse do seu usuário (dono da conta A, que deseja posse a chave) e, depois dessa validação, completar o pedido no DICT.
+  - Se o usuário doador não validar a posse da chave até o final do "período de encerramento", o PSP Reivindicador deve solicitar uma nova validação de posse do seu usuário (titular da conta A, que deseja posse a chave) e, depois dessa validação, completar o pedido no DICT.
  - Se o usuário reivindicador não fizer a validação de posse até o 30º dia após o início do processo de reivindicação, o PSP Reivindicador deve necessariamente cancelar a solicitação no DICT. Quando isso ocorre, a posse não ficará com nenhuma das duas instituições.
  <br>
 Nós consultamos com alta frequência o serviço de reivindicação do DICT para ver se existem mudanças nos status de pedidos de reivindicação do tipo portabilidade que nos envolvem (tanto como reivindicador quanto como doador), ou que envolvem algum participante indireto nosso.
