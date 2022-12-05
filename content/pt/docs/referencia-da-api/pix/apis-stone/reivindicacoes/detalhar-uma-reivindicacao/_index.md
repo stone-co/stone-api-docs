@@ -1,16 +1,16 @@
 ---
-title: "Detalhar de Reivindicação/Portabilidade "
-linkTitle: "Detalhar de Reivindicação/Portabilidade "
+title: "Detalhar de Reivindicação "
+linkTitle: "Detalhar de Reivindicação "
 date: 2020-09-17T18:00:00-03:00
 lastmod: 2022-11-21T11:00:00-03:00
 weight: 9
 draft: true
-description: Detalhar reivindicação/portabilidade da chave Pi>
+description: Detalhar reivindicação da chave Pi>
 
 ---
 <br>
 
-Esse endpoint tem como finalidade detalhar o processo de reivindicação/portabilidade.
+Esse endpoint tem como finalidade detalhar o processo de reivindicação.
 
 ##### **Request**
 ---
@@ -79,6 +79,21 @@ Body
 ```json
 {  
     "type": "srn:error:unauthenticated"
+}
+```
+<br> 
+
+
+```
+403 Forbidden
+```
+
+Usuário não autorizado a realizar a ação
+<br>
+Body
+```json
+{  
+  "type": "srn:error:unauthorized"
 }
 ```
 <br> 

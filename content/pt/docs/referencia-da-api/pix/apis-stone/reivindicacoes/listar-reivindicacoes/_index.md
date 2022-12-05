@@ -1,16 +1,16 @@
 ---
-title: "Listagem de Reivindicação/Portabilidade"
-linkTitle: "Listagem de Reivindicação/Portabilidade"
+title: "Listagem de Reivindicação"
+linkTitle: "Listagem de Reivindicação"
 date: 2022-09-17T18:00:00-03:00
 lastmod: 2022-11-23T11:00:00-03:00
 weight: 10
 draft: true
-description: Listar as reivindicação/portabilidade da chave Pix>
+description: Listar as reivindicação da chave Pix>
 
 ---
 <br>
 
-Esse endpoint tem como finalidade listar todas as reivindicações e portabilidades do usuário.
+Esse endpoint tem como finalidade listar todas as reivindicações do usuário.
 
 ##### **Request**
 ---

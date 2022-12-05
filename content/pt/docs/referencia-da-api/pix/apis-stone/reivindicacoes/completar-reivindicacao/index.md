@@ -1,6 +1,6 @@
 ---
-title: "Completar Reivindicação"
-linkTitle: "Completar Reivindicação"
+title: "Completar Reivindicação de Posse"
+linkTitle: "Completar Reivindicação de Posse"
 date: 2022-11-21T11:00:00-03:00
 lastmod: 2022-11-21T1:00:00-03:00
 weight: 8

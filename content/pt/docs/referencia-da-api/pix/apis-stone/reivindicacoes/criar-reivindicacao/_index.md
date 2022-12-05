@@ -1,16 +1,16 @@
 ---
-title: "Criar Reivindicação/Portabilidade"
-linkTitle: "Criar Reivindicação/Portabilidade"
+title: "Criar Reivindicação"
+linkTitle: "Criar Reivindicação"
 date: 2022-11-21T11:00:00-03:00
 lastmod: 2022-11-21T1:00:00-03:00
 weight: 8
 draft: true
-description: Criar reivindicação/portabilidade da chave Pix >
+description: Criar reivindicação da chave Pix >
 
 ---
 <br>
 
-Esse endpoint tem como finalidade criar o processo de reivindicação/portabilidade.
+Esse endpoint tem como finalidade criar o processo de reivindicação.
 
 ##### **Request**
 ---

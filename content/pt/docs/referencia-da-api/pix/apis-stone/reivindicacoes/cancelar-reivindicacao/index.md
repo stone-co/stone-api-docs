@@ -1,16 +1,16 @@
 ---
-title: "Cancelar Reivindicação/Portabilidade"
-linkTitle: "Cancelar Reivindicação/Portabilidade"
+title: "Cancelar Reivindicação"
+linkTitle: "Cancelar Reivindicação"
 date: 2022-11-21T11:00:00-03:00
 lastmod: 2022-11-21T1:00:00-03:00
 weight: 8
 draft: true
-description: Cancelar reivindicação/portabilidade da chave Pix>
+description: Cancelar reivindicação da chave Pix>
 
 ---
 <br>
 
-Esse endpoint tem como finalidade cancelar o processo de reivindicação/portabilidade.
+Esse endpoint tem como finalidade cancelar o processo de reivindicação.
 
 ##### **Request**
 ---
@@ -89,7 +89,7 @@ Body
 <br> 
 
 ```
-403 Unauthorized
+403 Forbidden
 ```
 
 Usuário não autorizado a realizar a ação.
