@@ -5,8 +5,10 @@ date: 2022-11-21T11:00:00-03:00
 lastmod: 2022-11-21T11:00:00-03:00
 weight: 3
 draft: false
-description: >
-  Entenda como funcionam as Reivincações de Chaves Pix!
+description: Como funciona as reivindicações de chaves Pix>
+
+
+  Entenda como funcionam as Reivindicações de Chaves Pix!
 ---
 
 ## O que é uma Reivindicação de Chave Pix

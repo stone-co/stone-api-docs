@@ -5,9 +5,12 @@ date: 2022-09-17T18:00:00-03:00
 lastmod: 2022-11-23T11:00:00-03:00
 weight: 10
 draft: true
-description: Listar as reivindicação/portabilidade>
+description: Listar as reivindicação/portabilidade da chave Pix>
 
 ---
+<br>
+
+Esse endpoint tem como finalidade listar todas as reivindicações e portabilidades do usuário.
 
 ##### **Request**
 ---
@@ -33,27 +36,42 @@ GET /api/v1/pix/:account_id/entry_claims
 Valores permitidos: `open`,  `waiting_resolution`, `confirmed`  , `cancelled` ou `completed`  
 <br>
 
+**key** `string`
+<br>Chave Pix
+<br>
+
 **direction** `string`
 <br>Valores permitidos: `outbound`, `inbound` 
 <br>
 
+**before** `string`
+<br> Cursor opaco da paginação.
 
-Exemplo:  
+<br>
 
-- `GET -/api/v1/pix/:account_id/entry_claim?key[]=35425517084&key[]=93744525023`;
-<br> <br> 
+**after** `string`
+<br> Cursor opaco da paginação.
+
+<br>
+
+**limit** `integer`
+<br> Limite de itens retornados.
+
+<br>
 
 
 ##### **Response**
 ---
 
 ```
-202 ACCEPTED
+200 OK
 ```
+
 Body
+
 ```json
 {
-  "cursor": {},
+  "cursor": {"after": null, "before": null, "limit": 25},
   "data": [
    
     {
@@ -86,18 +104,19 @@ Body
   ]
 }
 ```
-<br> <br> 
+<br>
 
 
----
 ```
-"waiting_resolution", 
-"open",  
-"confirmed", 
-"automatically_confirmed"
-"automatically_confirmed_waiting_resolution",  
-"cancel_requested", 
-"cancelled",
-"automatically_cancelled"
+401 Unauthenticated
 ```
-<br><br>
+
+Usuário não autenticado
+<br>
+Body
+```json
+{  
+    "type": "srn:error:unauthenticated"
+}
+```
+<br> 

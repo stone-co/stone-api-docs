@@ -5,9 +5,12 @@ date: 2022-11-21T11:00:00-03:00
 lastmod: 2022-11-21T1:00:00-03:00
 weight: 8
 draft: true
-description: >
+description: Criar reivindicação/portabilidade da chave Pix >
 
 ---
+<br>
+
+Esse endpoint tem como finalidade criar o processo de reivindicação/portabilidade.
 
 ##### **Request**
 ---
@@ -72,49 +75,59 @@ Exemplo:
 
 ##### **Response**
 ---
-**Status**: 202
 
+```
+202 Accepted
+```
+
+Sucesso na criação da reivindicação de posse/portabilidade 
+<br>
 Body
 ```json
 {  
   "id": "390d7eda-e948-4552-bcdf-886c62e5923b",
   "claim_type": "ownership" | "portability"
-
 }
 ```
 <br> 
 
-**Status**: 401
-
-Body
-```json
-{  
-    "type": "srn:error:unauthenticated"
-}
 ```
-<br> 
+401 Unauthenticated
+```
 
-**Status**: 403
-
-Apenas após 2 minutos de falaha da chave
+Usuário não autenticado
 <br>
 Body
 ```json
 {  
-     "type": "srn:error:needs_verification",
-     "details": {"verification_id": "uuid"}
+  "type": "srn:error:unauthenticated"
 }
 ```
 <br> 
 
-**Status**: 422
+```
+422 Unprocessable Entity
+```
 
-Chave encontra-se em processo de reivindicação ou já está em posse do reivindicador
+Chave não encotrada ou com status diferente de `failed`
+<br>
+Body
+```json
+{
+  "type": "srn:error:entry_not_found" 
+}
+```
+
+```
+422 Unprocessable Entity
+```
+
+Reivindicação não é possível 
 <br>
 Body
 ```json
 {  
-    "type": "srn:error:entry_not_found" | "claim_type_not_available"
+  "type": "claim_type_not_available"
 }
 ```
 <br> 

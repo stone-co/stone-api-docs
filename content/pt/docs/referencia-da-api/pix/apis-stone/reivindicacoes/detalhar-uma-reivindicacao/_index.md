@@ -1,18 +1,21 @@
 ---
-title: "Detalhes de Reivindicação/Portabilidade "
-linkTitle: "Detalhes de Reivindicação/Portabilidade "
+title: "Detalhar de Reivindicação/Portabilidade "
+linkTitle: "Detalhar de Reivindicação/Portabilidade "
 date: 2020-09-17T18:00:00-03:00
 lastmod: 2022-11-21T11:00:00-03:00
 weight: 9
 draft: true
-description: >
+description: Detalhar reivindicação/portabilidade da chave Pi>
 
 ---
+<br>
+
+Esse endpoint tem como finalidade detalhar o processo de reivindicação/portabilidade.
 
 ##### **Request**
 ---
 ```
-GET /api/v1/pix/:account_id/entry_claims/:claim_id
+GET /api/v1/pix/:account_id/entry_claims/:id
 ```
 
 ##### **Response**
@@ -20,6 +23,8 @@ GET /api/v1/pix/:account_id/entry_claims/:claim_id
 ```
 200 OK
 ```
+Detalhes de reivindicação/portabilidade
+<br>
 Body
 ```json
 {
@@ -62,3 +67,18 @@ Body
   ]
 }
 ```
+<br>
+
+```
+401 Unauthenticated
+```
+
+Usuário não autenticado
+<br>
+Body
+```json
+{  
+    "type": "srn:error:unauthenticated"
+}
+```
+<br> 
