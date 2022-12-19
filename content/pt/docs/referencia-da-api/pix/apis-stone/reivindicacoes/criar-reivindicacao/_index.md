@@ -4,8 +4,8 @@ linkTitle: "Criar Reivindicação"
 date: 2022-11-21T11:00:00-03:00
 lastmod: 2022-11-21T1:00:00-03:00
 weight: 8
-draft: true
-description: Criar reivindicação da chave Pix >
+draft: false
+description: >
 
 ---
 <br>
@@ -49,7 +49,6 @@ POST /api/v1/pix/:account_id/entry_claims
 <br>&nbsp;&nbsp;&nbsp;&nbsp;**created_at** `datetime`
 <br>&nbsp;&nbsp;&nbsp;&nbsp;Data de criação da conta.
 <br>&nbsp;&nbsp;&nbsp;&nbsp;Format: ISO8601 - "YYYY-MM-DDThh:mm:ssZ"
-<br>
 
 **beneficiary_entity** `object`
 <br>&nbsp;&nbsp;&nbsp;&nbsp;**name** `string`
@@ -61,6 +60,8 @@ POST /api/v1/pix/:account_id/entry_claims
 <br>&nbsp;&nbsp;&nbsp;&nbsp;**document_type** `string`
 <br>&nbsp;&nbsp;&nbsp;&nbsp;Valores permitidos: `cpf`, `cnpj`
 <br>
+<br>
+
 --- 
 
 Exemplo:  

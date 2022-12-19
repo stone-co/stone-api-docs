@@ -4,8 +4,8 @@ linkTitle: "Detalhar de Reivindicação "
 date: 2020-09-17T18:00:00-03:00
 lastmod: 2022-11-21T11:00:00-03:00
 weight: 9
-draft: true
-description: Detalhar reivindicação da chave Pi>
+draft: false
+description: >
 
 ---
 <br>

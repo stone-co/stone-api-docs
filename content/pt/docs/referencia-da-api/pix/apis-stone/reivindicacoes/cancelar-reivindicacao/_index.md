@@ -4,8 +4,8 @@ linkTitle: "Cancelar Reivindicação"
 date: 2022-11-21T11:00:00-03:00
 lastmod: 2022-11-21T1:00:00-03:00
 weight: 8
-draft: true
-description: Cancelar reivindicação da chave Pix>
+draft: false
+description: >
 
 ---
 <br>

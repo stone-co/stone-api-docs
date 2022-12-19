@@ -4,8 +4,8 @@ linkTitle: "Listagem de Reivindicação"
 date: 2022-09-17T18:00:00-03:00
 lastmod: 2022-11-23T11:00:00-03:00
 weight: 10
-draft: true
-description: Listar as reivindicação da chave Pix>
+draft: false
+description: >
 
 ---
 <br>
