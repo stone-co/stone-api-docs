@@ -38,6 +38,7 @@ lastmod: "2020-10-20T15:04:35.254Z"
 |receiver| Objeto com os dados do sacador avalista. Veja os campos desse `object` [abaixo](/docs/referencia-da-api/emissao-de-boletos/campos/#campos-do-objeto-receiver).	|*Object* | - - - - - - - - - - -   |
 |registered_at	|Data e hora de registro do boleto bancário. Formato ISO8601 `"YYYY-MM-DDThh:mm:ssZ"`.|	*String* | min: 20 / max: 20 |
 |settled_at	|Data e hora em que o dinheiro do pagamento do boleto é depositado na conta do beneficiário. Formato ISO8601 <br>`"YYYY-MM-DDThh:mm:ssZ"`.	|*String* | min: 20 / max: 20 |
+|paid_at	|Data e hora em que foi realizado o pagamento. Formato ISO8601 <br>`"YYYY-MM-DDThh:mm:ssZ"`.	|*String* | min: 20 / max: 20 |
 |status	|Status atual do boleto bancário, podendo ser um dentre os status à seguir: `CREATED`, `REGISTERED`, `SETTLED`, `CANCELLED` ou `EXPIRED`.	|*String* | min: 7 / max: 22 |
 |writable_line	|Código de barras traduzido em números.	|*String* | min: 47 / max: 47 |
 
