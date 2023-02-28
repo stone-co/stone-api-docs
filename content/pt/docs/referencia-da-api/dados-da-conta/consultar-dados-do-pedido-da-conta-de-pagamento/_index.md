@@ -49,7 +49,7 @@ A autenticação pública deve passar pelo nosso IAM Keycloak através do protoc
 ID do cliente é o id da sua aplicação para mais informações veja a documentação de [token de acesso](https://docs.openbank.stone.com.br/docs/guias/token-de-acesso/).
 
 
-O sign up request id é o id gerado apartir de um login feito via `/singups` para mais infos veja [singup](http://localhost:1313/docs/referencia-da-api/dados-da-conta/criar-nova-conta-de-pagamento/).
+O sign up request id é o id gerado a partir de um login feito via `/singups` para mais informações veja [singup](http://localhost:1313/docs/referencia-da-api/dados-da-conta/criar-nova-conta-de-pagamento/).
 
 
 
@@ -81,7 +81,7 @@ O sign up request id é o id gerado apartir de um login feito via `/singups` par
     + **created**: Conta foi criada
     + **closed**: Conta foi encerrada 
     + **pending_analysis**: Pendente de aprovação de KYC
-    + **empty**: Status legado de quando a conta não foi aberta automáticamente
+    + **empty**: Status legado de quando a conta não foi aberta automaticamente
  - owner_id: identificador do usuário ou organização dona da conta de pagamento
  - owner_type: tipo do dono da conta de pagamento (user ou organization)
  - user_id: id do usuário atrelado a conta de pagamento
@@ -89,10 +89,10 @@ O sign up request id é o id gerado apartir de um login feito via `/singups` par
  - user_email_verified: indica se o usuário está com o e-mail verificado.
  - user_assessment_request_status: status do assessment request para criação do usuário.
  - user_input_assessment_status: 
-    + **answered**: Quando o cliente respondeu KYC e esta pendente de análise
+    + **answered**: Quando o cliente respondeu KYC e está pendente de análise
     + **approved**: KYC aprovado
     + **canceled**: Quando o KYC cancelado pela operação
-    + **partially_rejected**: Quando pelomens um CHECK for aprovado e pelomenos um for rejeitado.
+    + **partially_rejected**: Quando pelo menos um CHECK for aprovado e pelomenos um for rejeitado.
     + **rejected**: Quando o cadastro foi rejeitado
     + **requested**: Quando o KYC ainda não foi respondido 
     + **undone**: Quando a análise do KYC foi desfeita
@@ -271,20 +271,20 @@ O sign up request id é o id gerado apartir de um login feito via `/singups` par
 
 #### Possiveis detailed status description
 
-1. Conta não foi aberta  para livre movimentação pois o cadastro do cliente foi rejeitado
+1. Conta não foi aberta para livre movimentação pois o cadastro do cliente foi rejeitado
 2. Conta ainda não foi aberta pois está em análise pelo time da conta
 3. Estado inconsistente
 4. Conta ainda não foi liberada para livre movimentação pois falta o cliente responder informações de cadastro no app e confirmar e-mail
 5. Conta não foi aberta pois o cadastro do cliente foi rejeitado
-6. Conta ainda não foi liberada para livre movimentação pois falta o cliente verificar o email
+6. Conta ainda não foi liberada para livre movimentação pois falta o cliente verificar o e-mail
 7. Conta ainda não foi liberada pois está em análise pelo time da conta
 8. Conta encerrada pois o cadastro do cliente foi rejeitado.
 9. Conta ainda não foi liberada para livre movimentação pois está pendente análise do time da Conta
-10. Conta ainda não foi aberta pois falta o cliente verificar o email
+10. Conta ainda não foi aberta pois falta o cliente verificar o e-mail
 11. Conta não foi liberada para livre movimentação, entrar em contato com o time da Conta
 12. Conta não foi liberada para livre movimentação pois o cadastro do cliente foi rejeitado
 13. Conta ainda não foi liberada para livre movimentação pois falta o cliente responder informações adicionais de cadastro no app
-14. Estado inconsistenteEstado inconsistente
+14. Estado inconsistente
 15. Conta ainda não foi liberada para livre movimentação pois falta o cliente responder informações adicionais de cadastro no app e confirmar e-mail
 16. Conta aprovada para livre movimentação
 17. Conta ainda não foi liberada para livre movimentação pois falta o cliente confirmar e-mail
@@ -292,7 +292,7 @@ O sign up request id é o id gerado apartir de um login feito via `/singups` par
 19. Conta encerrada pois o cadastro do cliente foi rejeitado
 20. Conta ainda não foi aberta pois falta o cliente responder informações de cadastro no app e confirmar e-mail
 21. Conta ainda não foi liberada para livre movimentação pois falta o cliente responder informações de cadastro no app
-22. Conta ainda não foi aberta para livre movimentação pois falta o cliente verificar o email
+22. Conta ainda não foi aberta para livre movimentação pois falta o cliente verificar o e-mail
 23. Conta pendente análise pois falta cliente confirmar e-mail
 24. Conta ainda não foi aberta pois falta o cliente responder informações de cadastro no app
 25. Conta em análise pelo time da conta
@@ -305,6 +305,6 @@ O sign up request id é o id gerado apartir de um login feito via `/singups` par
 
 - Verificações Automáticas (automatic_checks_assessment): Fazemos verificações automáticas do cadastro de usuário como exemplos, verificar situação cadastral, idade legal, sociedade entre outros.
 
-- KYC Know Your Costumer (user_input_assessment): Validadmos a identidade do usuário após de envio de informações como selfie, foto do documato entre outras.
+- KYC Know Your Costumer (user_input_assessment): Validadmos a identidade do usuário após envio de informações como selfie, foto do documato entre outras.
 
 - CHECKS:  Cada informação que pedimos dentro do KYC.

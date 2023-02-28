@@ -10,53 +10,18 @@ O seu funcionamento é simples: a usuária escolhe um [tema](https://themes.gohu
 formato **markdown**, edita um arquivo de configuração `.toml` para promover customizações e voilà - 🐭🪄 a mágica
 gopher acontece!
 
-Table of contents
+Tabela de Conteúdo
 =================
 
-- [Install](#install)
-- [Usage](#usage)
-- [Repository layout](#repository-layout)
-- [General View](#general-view)
-- [Contributing](#contributing)
-- [Git Guideline](#git-guideline)
+- [Uso](#uso)
+- [Visão do Repositório](#visão-do-repositório)
+- [Visão Geral](#visão-geral)
+- [Contribua](#contribua)
+- [Guia GIT](#guia-git)
 - [Deploy](#deploy)
+- [Instalação](#instalação)
 
-
-
-## Install
-#### Windows
-
-Baixe o executável do
-Hugo [Windows 64 bits](https://github.com/gohugoio/hugo/releases/download/v0.64.0/hugo_0.64.0_Windows-64bit.zip)
-ou [Windows 32 bits](https://github.com/gohugoio/hugo/releases/download/v0.64.0/hugo_0.64.0_Windows-32bit.zip)
-(este executável não é um instalador, é necessário fazer a instalação manual)
-
-Descompacte o conteúdo do ZIP para a pasta `C:\Hugo\bin` (pode ser na pasta que preferir)
-
-Copie o caminho onde está o executável `hugo.exe` para configurar seu sistema para reconhecer o comando Hugo. Para isso
-você deve configurar a variável de ambiente `PATH` seguindo os passos abaixo:
-
-> 1. Em Iniciar > Pesquisar, procure e selecione: Sistema (Painel de Controle)
-> 2. Clique no link Configurações avançadas do sistema.
-> 3. Clique em Variáveis de Ambiente. Na seção Variáveis do Sistema, localize a variável de ambiente `PATH` e selecione-a. Clique em Editar. Se a variável de ambiente `PATH` não existir, clique em Novo.
-> 4. Na janela Editar Variável de Sistema (ou Nova Variável de Sistema), especifique o valor (`C:\hugo\bin\`) da variável de ambiente `PATH`. Clique em OK. Feche todas as janelas restantes clicando em OK.
-> 5. Reabra o terminal e execute `$ hugo version`.
-
-Outras formas de instalação podem ser encontradas [aqui](https://gohugo.io/getting-started/installing/#windows)
-
-#### Mac OS
-
-Sugerimos que seja usado o [Homebrew](https://brew.sh), mas no próprio site do Hugo há mais
-instruções ([aqui](https://gohugo.io/getting-started/installing/#macos)).
-
-Comando para instalar com Homebrew: `$ brew install hugo`
-
-#### Linux
-
-Use o _package manager_ da sua distro/de sua preferência, instruções adicionais
-[aqui](https://gohugo.io/getting-started/installing/#linux)
-
-## Usage
+## Uso
 
 Como o projeto necessita de git submodules para o seu funcionamento, você deve os iniciar da seguinte forma:
 
@@ -94,7 +59,7 @@ Para mais informações sobre Hugo: [getting started do Hugo](https://gohugo.io/
 
 
 
-## Repository layout
+## Visão do Repositório
 
 - Para criar um novo conteúdo (na prática, vai ser criado um arquivo **markdown** que vai ser usado para gerar uma nova
   página **html**), deve-se digitar o seguinte comando:
@@ -117,7 +82,7 @@ Para mais informações sobre Hugo: [getting started do Hugo](https://gohugo.io/
   deve ser publicado no ambiente de Produção.
   🚨 Mesmo que o campo `draft` tenha o valor `true`, **o artigo será publicado no ambiente de Sandbox!**
 
-## General View
+## Visão Geral
 
 ### Repositórios relacionados
 
@@ -137,7 +102,7 @@ três repositórios relacionados ao projeto:
 3. _Site Produção_: o código-fonte do site, que é gerado pelo código deste repositório + hugo a cada nova tag de
    release, pode ser encontrado [aqui](https://github.com/stone-co/stone-co.github.io).
 
-## Contributing
+## Contribua
 
 #### Nomeando arquivos e diretórios
 
@@ -179,12 +144,12 @@ Se nenhuma providência for tomada, as seções e posts vão se organizar em ord
 intencional, é necessário preencher o campo `weight` do cabeçalho. O primeiro conteúdo que deve aparecer deve
 ter `weight` igual a 1, o segundo igual a 2, e assim por diante.
 
-## Git Guideline
+## Guia GIT
 
 Mensagens de commit, nomes de branches e títulos de Pull Requests devem seguir os padrões informados no
 [Guia de Estilo Git da Stone](https://github.com/stone-payments/stoneco-best-practices/blob/master/gitStyleGuide/README_pt.md#commits).
 
-Criar suas braches e commits usando a lingua inglesa e seguindo as seguintes regras semanticas.
+Criar suas braches e commits usando a lingua inglesa e seguindo as seguintes regras semânticas.
 #### Branches
 
 Seguem o formato: `<type>/branch-name`
@@ -208,7 +173,7 @@ Seguem o formato: `<type>(<context>): <message>`
 - `tests`: implementação ou refatoração de testes
 - `chore`: atualização de tarefas
 
-> Para mais informções sobre o guide guideline de uma olhada na nossa doc de [Semantic Commit Messages](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716).
+> Para mais informações sobre o guideline dê uma olhada na nossa doc de [Semantic Commit Messages](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716).
 
 Para facilitar a colaboração, o fluxo de Git abaixo deve ser seguido:
 
@@ -231,3 +196,36 @@ a flag `-D` para forçar os artigos que têm `draft: true` no cabeçalho a serem
 
 Temos a [Action](https://github.com/stone-co/stone-api-docs/blob/master/.github/workflows/release.yml)
 que desencadeia uma nova construção do site sempre que geramos uma tag de release neste repositório.
+
+## Instalação
+#### Windows
+
+Baixe o executável do
+Hugo [Windows 64 bits](https://github.com/gohugoio/hugo/releases/download/v0.64.0/hugo_0.64.0_Windows-64bit.zip)
+ou [Windows 32 bits](https://github.com/gohugoio/hugo/releases/download/v0.64.0/hugo_0.64.0_Windows-32bit.zip)
+(este executável não é um instalador, é necessário fazer a instalação manual)
+
+Descompacte o conteúdo do ZIP para a pasta `C:\Hugo\bin` (pode ser na pasta que preferir)
+
+Copie o caminho onde está o executável `hugo.exe` para configurar seu sistema para reconhecer o comando Hugo. Para isso
+você deve configurar a variável de ambiente `PATH` seguindo os passos abaixo:
+
+> 1. Em Iniciar > Pesquisar, procure e selecione: Sistema (Painel de Controle)
+> 2. Clique no link Configurações avançadas do sistema.
+> 3. Clique em Variáveis de Ambiente. Na seção Variáveis do Sistema, localize a variável de ambiente `PATH` e selecione-a. Clique em Editar. Se a variável de ambiente `PATH` não existir, clique em Novo.
+> 4. Na janela Editar Variável de Sistema (ou Nova Variável de Sistema), especifique o valor (`C:\hugo\bin\`) da variável de ambiente `PATH`. Clique em OK. Feche todas as janelas restantes clicando em OK.
+> 5. Reabra o terminal e execute `$ hugo version`.
+
+Outras formas de instalação podem ser encontradas [aqui](https://gohugo.io/getting-started/installing/#windows)
+
+#### Mac OS
+
+Sugerimos que seja usado o [Homebrew](https://brew.sh), mas no próprio site do Hugo há mais
+instruções ([aqui](https://gohugo.io/getting-started/installing/#macos)).
+
+Comando para instalar com Homebrew: `$ brew install hugo`
+
+#### Linux
+
+Use o _package manager_ da sua distro/de sua preferência, instruções adicionais
+[aqui](https://gohugo.io/getting-started/installing/#linux)
