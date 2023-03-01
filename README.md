@@ -13,51 +13,13 @@ gopher acontece!
 Tabela de Conteúdo
 =================
 
-- [Uso](#uso)
 - [Visão do Repositório](#visão-do-repositório)
 - [Visão Geral](#visão-geral)
 - [Contribua](#contribua)
 - [Guia GIT](#guia-git)
 - [Deploy](#deploy)
+- [Uso](#uso)
 - [Instalação](#instalação)
-
-## Uso
-
-Como o projeto necessita de git submodules para o seu funcionamento, você deve os iniciar da seguinte forma:
-
-- Caso ainda não tenha clonado o projeto:
-
-  ```shell
-  $ git clone --recurse-submodules https://github.com/stone-co/stone-api-docs.git
-  ```
-
-- Caso já tenha clonado:
-  ```shell
-  $ git submodule update --init --recursive
-  ```
-
-⚠️ É importante rodar localmente antes de submeter as suas contribuições para o repositório remoto para poder visualizar o
-site e verificar se não há erros na sua construção.
-
-- Digitar no terminal o seguinte comando:
-
-  ```shell
-  $ hugo server
-  ```
-
-  🔍 Obs: se você quiser forçar os _drafts_ a serem publicados, utilize a _flag_ `-D`
-
-- No seu navegador, visitar o endereço **localhost:1313** (ou o endereço que for informado no próprio terminal após
-  rodar o comando acima)
-
-- Para parar, apertar `Ctrl + C` no terminal
-
----
-
-Para mais informações sobre Hugo: [getting started do Hugo](https://gohugo.io/getting-started/quick-start/) e
-[oficina de sites estáticos com hugo](https://github.com/womenwhogocwb/oficina-hugo).
-
-
 
 ## Visão do Repositório
 
@@ -196,6 +158,43 @@ a flag `-D` para forçar os artigos que têm `draft: true` no cabeçalho a serem
 
 Temos a [Action](https://github.com/stone-co/stone-api-docs/blob/master/.github/workflows/release.yml)
 que desencadeia uma nova construção do site sempre que geramos uma tag de release neste repositório.
+
+## Uso
+
+Como o projeto necessita de git submodules para o seu funcionamento, você deve os iniciar da seguinte forma:
+
+- Caso ainda não tenha clonado o projeto:
+
+  ```shell
+  $ git clone --recurse-submodules https://github.com/stone-co/stone-api-docs.git
+  ```
+
+- Caso já tenha clonado:
+  ```shell
+  $ git submodule update --init --recursive
+  ```
+
+⚠️ É importante rodar localmente antes de submeter as suas contribuições para o repositório remoto para poder visualizar o
+site e verificar se não há erros na sua construção.
+
+- Digitar no terminal o seguinte comando:
+
+  ```shell
+  $ hugo server
+  ```
+
+  🔍 Obs: se você quiser forçar os _drafts_ a serem publicados, utilize a _flag_ `-D`
+
+- No seu navegador, visitar o endereço **localhost:1313** (ou o endereço que for informado no próprio terminal após
+  rodar o comando acima)
+
+- Para parar, apertar `Ctrl + C` no terminal
+
+---
+
+Para mais informações sobre Hugo: [getting started do Hugo](https://gohugo.io/getting-started/quick-start/) e
+[oficina de sites estáticos com hugo](https://github.com/womenwhogocwb/oficina-hugo).
+
 
 ## Instalação
 #### Windows
