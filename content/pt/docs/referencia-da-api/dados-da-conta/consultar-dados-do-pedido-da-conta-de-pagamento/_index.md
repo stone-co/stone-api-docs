@@ -49,7 +49,7 @@ A autenticação pública deve passar pelo nosso IAM Keycloak através do protoc
 ID do cliente é o id da sua aplicação para mais informações veja a documentação de [token de acesso](https://docs.openbank.stone.com.br/docs/guias/token-de-acesso/).
 
 
-O sign up request id é o id gerado a partir de um login feito via `/singups` para mais informações veja [singup](http://localhost:1313/docs/referencia-da-api/dados-da-conta/criar-nova-conta-de-pagamento/).
+O sign up request é o id gerado apartir de um pedido feito via `/singups` para mais informações veja [singup](http://localhost:1313/docs/referencia-da-api/dados-da-conta/criar-nova-conta-de-pagamento/).
 
 
 
@@ -66,6 +66,15 @@ O sign up request id é o id gerado a partir de um login feito via `/singups` pa
 
 <br>
 
+
+## Glossário 
+
+- Verificações Automáticas (automatic_checks_assessment): Fazemos verificações automáticas do cadastro de usuário como exemplos, verificar situação cadastral, idade legal, sociedade entre outros.
+
+- KYC Know Your Costumer (user_input_assessment): Validadmos a identidade do usuário após envio de informações como selfie, foto do documato entre outras.
+
+- CHECKS:  Cada informação que pedimos dentro do KYC.
+
 ##### **Responses**
 ---
 
@@ -76,50 +85,50 @@ O sign up request id é o id gerado a partir de um login feito via `/singups` pa
 {{% pageinfo %}}
 **A resposta contém os seguintes dados:**
 
- - id: identificador do pedido de sign up
- - account_status: status da conta de pagamento 
-    + **created**: Conta foi criada
-    + **closed**: Conta foi encerrada 
-    + **pending_analysis**: Pendente de aprovação de KYC
-    + **empty**: Status legado de quando a conta não foi aberta automaticamente
- - owner_id: identificador do usuário ou organização dona da conta de pagamento
- - owner_type: tipo do dono da conta de pagamento (user ou organization)
- - user_id: id do usuário atrelado a conta de pagamento
+ - id: identificador do pedido de sign up.
+ - account_status: status da conta de pagamento.
+    + **created**: conta foi criada.
+    + **closed**: conta foi encerrada.
+    + **pending_analysis**: pendente de aprovação de KYC.
+    + **empty**: Status legado de quando a conta não foi aberta automaticamente.
+ - owner_id: identificador do usuário ou organização dona da conta de pagamento.
+ - owner_type: tipo do dono da conta de pagamento (user ou organization).
+ - user_id: id do usuário atrelado a conta de pagamento.
  - organization_id: id da organização atrelada a conta de pagamento (pode ser nulo caso seja uma conta apenas de PF).
  - user_email_verified: indica se o usuário está com o e-mail verificado.
- - user_assessment_request_status: status do assessment request para criação do usuário.
+ - user_assessment_request_status: status resultante da combinação entre os status dos assessments gerados para o usuário nesse pedido.
  - user_input_assessment_status: 
-    + **answered**: Quando o cliente respondeu KYC e está pendente de análise
-    + **approved**: KYC aprovado
-    + **canceled**: Quando o KYC cancelado pela operação
-    + **partially_rejected**: Quando pelo menos um CHECK for aprovado e pelomenos um for rejeitado.
-    + **rejected**: Quando o cadastro foi rejeitado
-    + **requested**: Quando o KYC ainda não foi respondido 
-    + **undone**: Quando a análise do KYC foi desfeita
- - user_automatic_checks_status: status agrupado das validações automáticas 
-    + **approved**: Aprovado passou por todas as validações automáticas para validação de conta. 
-    + **rejected**: Rejeitado o pedido de abertura de conta
-    + **partially_rejected**: Quando um ou mais checks automáticos foram rejeitados
-    + **rerunned**: Quando reprocessamos as validações
-    + **answered**: Status intermediário enquanto as avaliações não foram finalizadas 
-    + **canceled**: Quando foi cancelado pela operação de analise de KYC
-    + **requested**: Estamos processando pedido 
- - organization_assessment_request_status: status do assessment request para criação da organização (pode ser nulo caso seja uma conta apenas de PF).
+    + **answered**: quando o cliente respondeu KYC e está pendente de análise.
+    + **approved**: KYC aprovado.
+    + **canceled**: quando o KYC foi cancelado pela operação.
+    + **partially_rejected**: Quando pelo menos um dos checks foi aprovado e pelo menos um foi rejeitado.
+    + **rejected**:  quando o cadastro for rejeitado por completo.
+    + **requested**: quando o KYC ainda não foi respondido. 
+    + **undone**: quando a análise do KYC foi desfeita.
+ - user_automatic_checks_status: status agrupado das validações automáticas.
+    + **approved**: aprovado em todas as validações automáticas.
+    + **rejected**: rejeitado o pedido de abertura de conta.
+    + **partially_rejected**: Quando foi rejeitado em uma ou mais validações automáticas.
+    + **rerunned**: quando reprocessamos as validações.
+    + **answered**: status intermediário enquanto as avaliações não foram finalizadas.
+    + **canceled**: quando foi cancelado pela operação de analise de KYC.
+    + **requested**: quando as validações não foram finalizadas ainda.
+ - organization_assessment_request_status: status resultante da combinação entre os status dos assessments gerados para a organização nesse pedido (pode ser nulo caso seja uma conta apenas de PF).
  - subject_id: id da aplicação que criou esse pedido de sign up.
  - status: em qual status está o pedido de sign up: 
-     + **created** - Pedido criado
-     + **kyc_analysis** - Pedido em análise de kyc
-     + **finished** - Pedido finalizado com sucesso 
-     + **failed** -  Pedido falhou por KYC ou problema interno
+     + **created** - pedido criado.
+     + **kyc_analysis** - pedido em análise de kyc.
+     + **finished** - todas as etapas do pedido finalizadas.
+     + **failed** -  pedido falhou no momento da criação.
  - error: apenas presente caso o status seja failed, contém informações do motivo de falha ao fazer o sign up.
  - metadata: metadados customizados passados ao realizar o cadastro.
  - request_metadata: metadados da requisição de cadastro. Ex: user-agent, ip.
  - resource_details: detalhes envolvendos esse cadastro. Ex: usuário verificou o e-mail, horário que o usuário verificou e-mail, assessment de usuário aprovado, conta de pagamento aberta/fechada/inexistente.
- - resource_type: tipo de recurso principal criado 
-    + **usuário**: Criou uma entidade de usuário (srn:resource:user)
-    + **organização**: Criou uma entidade de Organização (srn:resource:organization)
-    + **conta de pagamento PF**: Cria uma entidade usuário com um pedido de conta de pagamento (srn:resource:paymentaccount)
-    + **conta de pagamento PJ**: Cria uma entidade usuário e organização com pedido de conta de pagamento (srn:resource:paymentaccount)
+ - resource_type: tipo de recurso principal criado.
+    + **usuário**: criou uma entidade de usuário (srn:resource:user).
+    + **organização**: criou uma entidade de Organização (srn:resource:organization).
+    + **conta de pagamento PF**: cria uma entidade usuário com um pedido de conta de pagamento (srn:resource:paymentaccount).
+    + **conta de pagamento PJ**: cria uma entidade usuário e organização com pedido de conta de pagamento (srn:resource:paymentaccount).
  - user: alguns campos do usuário, atualmente só carregamos o id e o approval_status (limitedapprovedpartially_rejectedpending_analysis).
  - organization: alguns campos da organização, atualmente só carregamos o id e o approval_status.
  - inserted_at: timestamp da criação do pedido de conta de pagamento.
@@ -299,12 +308,3 @@ O sign up request id é o id gerado a partir de um login feito via `/singups` pa
 
 > detailed_status é formado por status_número
 > ex: `status_1`, `status_111` ...  `status_7559`
-
-
-## Glossário 
-
-- Verificações Automáticas (automatic_checks_assessment): Fazemos verificações automáticas do cadastro de usuário como exemplos, verificar situação cadastral, idade legal, sociedade entre outros.
-
-- KYC Know Your Costumer (user_input_assessment): Validadmos a identidade do usuário após envio de informações como selfie, foto do documato entre outras.
-
-- CHECKS:  Cada informação que pedimos dentro do KYC.
