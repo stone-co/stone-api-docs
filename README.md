@@ -15,11 +15,11 @@ Tabela de Conteúdo
 
 - [Visão Geral](#visão-geral)
 - [Contribua](#contribua)
+- [Guia GIT](#guia-git)
 - [Deploy](#deploy)
 - [Uso](#uso)
 - [Instalação](#instalação)
 - [Visão do Repositório](#visão-do-repositório)
-- [Guia GIT](#guia-git)
 
 ## Visão Geral
 
@@ -82,6 +82,15 @@ Cada seção precisa ter:
 Se nenhuma providência for tomada, as seções e posts vão se organizar em ordem alfabética simples. Para impôr uma ordem
 intencional, é necessário preencher o campo `weight` do cabeçalho. O primeiro conteúdo que deve aparecer deve
 ter `weight` igual a 1, o segundo igual a 2, e assim por diante.
+
+## Guia GIT
+
+Mensagens de commit, nomes de branches e títulos de Pull Requests devem seguir os padrões informados no
+[Guia de Estilo Git da Stone](https://github.com/stone-payments/stoneco-best-practices/blob/master/gitStyleGuide/README_pt.md#commits).
+
+Para facilitar a colaboração, o fluxo de Git abaixo deve ser seguido:
+
+![Flow](docs/images/diagrama_git_flow.png)
 
 ## Deploy
 
@@ -194,36 +203,4 @@ Use o _package manager_ da sua distro/de sua preferência, instruções adiciona
   deve ser publicado no ambiente de Produção.
   🚨 Mesmo que o campo `draft` tenha o valor `true`, **o artigo será publicado no ambiente de Sandbox!**
 
-
-## Guia GIT
-
-Mensagens de commit, nomes de branches e títulos de Pull Requests devem seguir os padrões informados no
-[Guia de Estilo Git da Stone](https://github.com/stone-payments/stoneco-best-practices/blob/master/gitStyleGuide/README_pt.md#commits).
-
-As branches e mensagens de commit devem ser criadas usando a língua inglesa e respeitando as seguintes regras semânticas.
-#### Branches
-
-Seguem o formato: `<type>/branch-name`
-
-- Feature:  `feat/branch-name`
-- Hotfix: `fix/branch-name`
-- Docs:`docs/branch-name`
-- Refactors: `refactor/branch-name`
-- Chore: `chore/branch-name`
-
-#### Commits prefix
-
-Seguem o formato: `<type>(<context>): <message>`
-
-- `feat`: nova funcionalidade
-- `fix`: resolução de bugs
-- `docs`: mudanças na documentação
-- `style`: mudanças na formatação
-- `refactor`: refatoração do codigo
-- `tests`: implementação ou refatoração de testes
-- `chore`: atualização de tarefas
-
-Para facilitar a colaboração, o fluxo de Git abaixo deve ser seguido:
-
-![Flow](docs/images/diagrama_git_flow.png)
 
