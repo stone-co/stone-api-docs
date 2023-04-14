@@ -84,5 +84,9 @@ Body
           "registered_at":"2020-03-10T15:03:34Z",
           "settled_at":NULL,
           "status":"REGISTERED",
-          "writable_line":"19790000052020031015703344761550581910000002000"
+          "writable_line":"19790000052020031015703344761550581910000002000",
+          "payment_invoice": {
+            "description": "Descrição do pagamento."
+          },
+          "metadata": {}
  }
