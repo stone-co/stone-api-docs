@@ -194,14 +194,8 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
 <br>
 
 ---
-<br>
-
-**payment_invoice** `object`
-<br>
-
-<br> &nbsp;&nbsp;&nbsp;&nbsp;**description** `string` _(opcional)_
-<br> &nbsp;&nbsp;&nbsp;&nbsp;A cliente poderá adicionar informações relativas ao seu produto/serviço a fim de identificar o que foi vendido.
-<br>
+<br>**description** `string` _(opcional)_
+<br>A cliente poderá adicionar informações relativas ao seu produto/serviço a fim de identificar o que foi vendido.
 
 ---
 <br>**metadata** `object` _(opcional)_
@@ -304,9 +298,7 @@ Body
    "settled_at": null,
    "status": "CREATED",
    "writable_line": "19790000056313907246482159290061784560000002100",
-   "payment_invoice": {
-     "description": "Descrição do pagamento."
-   },
+   "description": "Descrição do pagamento.",
    "metadata": {}
 }
 ```
@@ -377,9 +369,7 @@ Body
   "settled_at": null,
   "status": "CREATED",
   "writable_line": "19790000056313907246482159290061784560000002100",
-  "payment_invoice": {
-     "description": "Descrição do pagamento."
-  },
+  "description": "Descrição do pagamento.",
   "metadata": {}
 }
 ```
