@@ -10,7 +10,7 @@ description: >
   
 ---
 <br>
-Através desse endpoint será possível criar um QRCode Pix dinâmico.
+Através desse endpoint será possível criar um QRCode Pix dinâmico imediato.
 <br>
 <br>
 
@@ -46,6 +46,16 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/pix_payment_invoices
 **customer** `string`
 <br> &nbsp;&nbsp;&nbsp;&nbsp;**name** `string`
 <br> &nbsp;&nbsp;&nbsp;&nbsp;**document** `string`
+
+**additional_data** `object` 
+
+&nbsp;&nbsp;&nbsp;&nbsp;**name** `string`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Tamanho: min 1 / max 50
+<br>&nbsp;&nbsp;&nbsp;&nbsp;**value** `string`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Tamanho: min 1 / max 200
+
+**expiration** `integer`
+<br>Tempo de expiração. O valor padrão é de 24h caso não seja enviado
 
 **request_for_payer** `string`
 <br>Descrição opcional do QRCode.
@@ -84,9 +94,15 @@ Exemplo:
   "key_type": "<string>",
   "transaction_id": "<string>",
   "amount": "<integer>",
-  "additional_information": "<string>",  
+  "additional_data": "<object>",  
+  "location": "<string>",
+  "request_for_payer": "<string>",
+  "expiration": "<integer>",
+  "status": "<string>",
   "request_id": "<string>",
   "created_at": "<datetime_iso8601>",
+  "paid_at": "<datetime_iso8601>",
+  "cancelled_at": "<datetime_iso8601>",
   "updated_at": "<datetime_iso8601>",
   "created_by": "<string>",
   "last_updated_by": "<string>",
@@ -95,3 +111,49 @@ Exemplo:
 }
 ```
 
+```
+400 Bad Request
+```
+
+```json
+{
+  "reason": [
+    {
+      "error": "is invalid",
+      "path": [
+        "amount"
+      ]
+    },
+    {
+      "error": "is invalid",
+      "path": [
+        "status"
+      ]
+    }
+  ],
+  "type": "srn:error:validation"
+}
+```
+
+---
+
+```
+401 Unauthorized
+```
+
+```json
+{
+  "type": "srn:error:unauthenticated"
+}
+```
+---
+
+```
+403 Forbidden
+```
+
+```json
+{
+  "type": "srn:error:unauthorized"
+}
+```
