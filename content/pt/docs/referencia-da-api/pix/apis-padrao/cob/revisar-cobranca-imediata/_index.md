@@ -130,7 +130,9 @@ Exemplo:
       "nome": "Campo 2",
       "valor": "Informação Adicional2 do PSP-Recebedor"
     }
-  ]
+  ],
+  "qr_code_copia_cola": "<string>",
+  "qr_code": "<string>"
 }
 ```
 
