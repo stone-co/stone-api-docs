@@ -134,8 +134,8 @@ Exemplo:
       "valor": "Informação Adicional2 do PSP-Recebedor"
     }
   ],
-  "qr_code_content": "<string>",
-  "qr_code_image": "<string>"
+  "qr_code_copia_cola": "<string>",
+  "qr_code": "<string>"
 }
 ```
 
