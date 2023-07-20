@@ -86,7 +86,7 @@ Exemplo:
 
 **scheduled_to** `date`
 <br>Data do agendamento
-<br>Formato: YYYY-MM-DD
+<br>Formato: YYYY-MM-DD (ISO 8601 standard)
 
 **source** <br>Dados do pagador
   <br>&nbsp;&nbsp;&nbsp;&nbsp;**entity**
@@ -212,13 +212,71 @@ Body:
 ```
 400 Bad Request
 ```
+Body
+
+```json
+{
+  "reason": [
+    {"error": "should be at most 77 characters", "path": ["key"]},
+    {"error": "must be greater than or equal to 0", "path": ["amount"]},
+    {"error": "can't be blank", "path": ["source", "entity", "name"]},
+    {"error": "can't be blank", "path": ["target", "entity", "name"]},
+    {"error": "must be less than 1_000_000_000_000", "path": ["amount"]},
+    {"error": "is invalid", "path": ["account_id"]},
+    {"error": "is invalid", "path": ["transaction_id"]},
+    {"error": "is invalid", "path": ["key"]},
+    {"error": "can't be blank on transaction_id presence", "path": ["key"]},
+    {"error": "exceeded one year limit", "path": ["scheduled_to"]}
+  ],
+  "type": "srn:error:validation"
+}
+```
+
+Acontece quando são passados campos inválidos. Os erros são cumulativos, então é possível que mais de um motivo de erro seja retornado.
 
 ---
+
+```
+401 Unauthenticated
+```
+Body
+```json
+{  
+  "type": "srn:error:unauthenticated"
+}
+```
+Usuário não está autenticado.
+
+<br> 
+
+```
+403 Forbidden
+```
+
+Body
+```json
+{  
+  "type": "srn:error:unauthorized"
+}
+```
+
+Usuário não autorizado a realizar a ação.
+
+<br> 
 
 ```
 422 Unprocessable Entity
 ```
 Body
+
+```json
+{
+  "type": "srn:error:invalid_key"
+}
+```
+
+<br>
+
 ```json
 {
   "type": "srn:error:key_not_found"
@@ -226,6 +284,16 @@ Body
 ```
 
 Acontece quando a chave passada não está cadastrada no DICT.
+
+<br>
+
+```json
+{
+  "type": "srn:error:target_institution_not_found"
+}
+```
+
+Ocorre quando a outra instituição não existe ou não pertence ao arranjo Pix.
 
 <br>
 
