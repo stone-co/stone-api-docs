@@ -74,6 +74,7 @@ Exemplo:
 
 **description** `string`
 <br>Descrição do pagamento a ser realizado
+<br>Tamanho máximo: 140 caracteres
 
 **transaction_id** `string`
 <br>Identificador da transação, que relaciona uma cobrança a um pagamento Pix. Ela é enviada no response do endpoint `/api/v1/pix/outbound_pix_payments/brcode`
@@ -148,9 +149,6 @@ Body:
 <br>
 
 
-
-
-
 ##### **Responses**
 
 ```
@@ -221,9 +219,12 @@ Body
     {"error": "must be greater than or equal to 0", "path": ["amount"]},
     {"error": "can't be blank", "path": ["source", "entity", "name"]},
     {"error": "can't be blank", "path": ["target", "entity", "name"]},
+    {"error": "can't be blank", "path": ["idempotency_key"]},
+    {"error": "can't be blank", "path": ["target"]},
     {"error": "must be less than 1_000_000_000_000", "path": ["amount"]},
     {"error": "is invalid", "path": ["account_id"]},
     {"error": "is invalid", "path": ["transaction_id"]},
+    {"error": "is invalid", "path": ["scheduled_to"]},
     {"error": "is invalid", "path": ["key"]},
     {"error": "can't be blank on transaction_id presence", "path": ["key"]},
     {"error": "exceeded one year limit", "path": ["scheduled_to"]}
