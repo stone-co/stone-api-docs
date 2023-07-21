@@ -94,9 +94,88 @@ Body:
 ```
 204 OK
 ```
-
+---
 ```
 400 Bad Request
 ```
 
-Acontece quando o id enviado não se conforma ao padrão UUID.
+
+
+Body
+
+```json
+{
+  "reason": [
+    {"error": "can't be blank", "path": ["idempotency_key"]},
+    {"error": "is invalid", "path": ["amount"]},
+    {"error": "is invalid", "path": ["can't be blank"]},
+    {"error": "is invalid", "path": ["description"]},
+    {"error": "can't be blank", "path": ["amount"]}
+  ],
+  "type": "srn:error:validation"
+}
+```
+
+Acontece quando são passados campos inválidos. Os erros são cumulativos, então é possível que mais de um motivo de erro seja retornado. Também pode acontecer quando o id enviado não se conforma ao padrão UUID, neste caso retorna apenas o status 400.
+
+---
+```
+401 Unauthenticated
+```
+Body
+```json
+{  
+  "type": "srn:error:unauthenticated"
+}
+```
+Usuário não está autenticado.
+
+---
+
+```
+403 Forbidden
+```
+
+Body
+```json
+{  
+  "type": "srn:error:unauthorized"
+}
+```
+
+Usuário não autorizado a realizar a ação.
+
+---
+
+```
+409 Conflict
+```
+
+Body
+```json
+{
+  "type": "srn:error:idempotency_conflict"
+}
+```
+
+Conflito de idempotência. A chave de idempotência já existe para um body diferente.
+
+---
+```
+422 Unprocessable Entity
+```
+Body
+```json
+{
+  "type": "srn:error:invoice_expired"
+}
+```
+
+Acontece quando a transferência está relacionada a uma cobrança criada por uma conta interna, e a cobrança expirou.
+
+---
+```
+503 Service Unavailable
+```
+
+Acontece quando não é possível confirmar o pagamento em decorrência dos serviços externos estarem temporariamente indisponíveis.
