@@ -26,6 +26,25 @@
                 }
             }
         },
+        "metadata": {
+            "type": "array",
+            "maxItems": 50,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 50
+                    },
+                    "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 200
+                    }
+                }
+            }
+        },
         "amount": {
             "type": "integer",
             "minimum": 0
