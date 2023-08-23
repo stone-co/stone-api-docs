@@ -24,7 +24,7 @@ lastmod: "2020-10-20T15:04:35.254Z"
 |created_at	|Data e hora em que o boleto bancário foi gerado. Nesse caso nunca será `null`. Formato ISO8601 `"YYYY-MM-DDThh:mm:ssZ"`.	|*String* | min: 20 / max: 20 |
 |created_by	|Identificador único do usuário ou aplicação que criou a transação, no formato user:UUID4 ou application:UUID4respectivamente. Nesse caso nunca será `null`.	|*String* | min: 42 / max: 48 |
 |customer|Objeto com os dados do cliente que será informa como pagador no ato de registro do boleto. Veja os campos desse `object` [abaixo](/docs/referencia-da-api/emissao-de-boletos/campos/#campos-do-objeto-customer).		|*Object* | - - - - - - - - - - -   |
-|discount	|Objeto com os dados referentes ao desconto. Veja os campos desse `object` [abaixo](/docs/referencia-da-api/emissao-de-boletos/campos/#campos-do-objeto-discount).|*Object* | - - - - - - - - - - -   |
+|discounts	|Lista com os objetos com os dados referentes ao descontos. Veja os campos do `object` `discount` [abaixo](/docs/referencia-da-api/emissao-de-boletos/campos/#campos-do-objeto-discount).|*Object* | - - - - - - - - - - -   |
 |expiration_date	|Data de vencimento do boleto bancário. Mesmo depois dessa data expirar o pagamento ainda pode ser feito. <br>Formato `"YYYY-MM-DD"`.	|*String* | min: 10 / max: 10 |
 |fee	|Projeção da taxa que seria cobrada do beneficiário no ato de recebimento do pagamento caso o recebimento fosse agora. É atualizada com a taxa cobrada quando receber o pagamento. |	*Integer* | min: 0 / max: 4 |
 |fee_metadata	|Objeto que identifica detalhes sobre a aplicação da taxa. Veja os campos desse `object` [abaixo](/docs/referencia-da-api/emissao-de-boletos/campos/#campos-do-objeto-fee_metadata).	|*Object* | - - - - - - - - - - -   |
@@ -38,6 +38,7 @@ lastmod: "2020-10-20T15:04:35.254Z"
 |receiver| Objeto com os dados do sacador avalista. Veja os campos desse `object` [abaixo](/docs/referencia-da-api/emissao-de-boletos/campos/#campos-do-objeto-receiver).	|*Object* | - - - - - - - - - - -   |
 |registered_at	|Data e hora de registro do boleto bancário. Formato ISO8601 `"YYYY-MM-DDThh:mm:ssZ"`.|	*String* | min: 20 / max: 20 |
 |settled_at	|Data e hora em que o dinheiro do pagamento do boleto é depositado na conta do beneficiário. Formato ISO8601 <br>`"YYYY-MM-DDThh:mm:ssZ"`.	|*String* | min: 20 / max: 20 |
+|paid_at	|Data e hora em que foi realizado o pagamento. Formato ISO8601 <br>`"YYYY-MM-DDThh:mm:ssZ"`.	|*String* | min: 20 / max: 20 |
 |status	|Status atual do boleto bancário, podendo ser um dentre os status à seguir: `CREATED`, `REGISTERED`, `SETTLED`, `CANCELLED` ou `EXPIRED`.	|*String* | min: 7 / max: 22 |
 |writable_line	|Código de barras traduzido em números.	|*String* | min: 47 / max: 47 |
 
@@ -65,8 +66,9 @@ lastmod: "2020-10-20T15:04:35.254Z"
 
 |Chave|Descrição|Tipo|Caracteres (min/max)|
 | --- | ------- | -- | -------------------|
-| date  | Data até a qual o desconto deve ser aplicado.<br>Formato ISO8601 `"YYYY-MM-DD"`.  | *String* | min: 8 / max: 8 |
-| value | Valor percentual (%) do desconto que será aplicado ao boleto. O valor do deve ser maior que 0.0 e até 90.0. <br>Formato decimal. Ex: "20.0". | *String* | min: > 0 / max: < 90 |
+| date | Data até a qual o desconto deve ser aplicado.<br>Formato ISO8601 `"YYYY-MM-DD"`.  | *String* | min: 8 / max: 8 |
+| value | Valor percentual (%) do desconto que será aplicado ao boleto. O valor do deve ser maior que 0.0 e até 90.0. <br>Formato decimal. Ex: "20.0". | *String* | min: > 0 / max: <= 90 |
+| face_value | Valor do desconto que será aplicado ao boleto em centavos. O valor do deve ser maior que 0 e até 90.0% em relação ao `amount`. <br>Formato inteiro. Ex: 1232. | *Integer* | min: > 0 / max: <= 90% em relação ao `amount` |
 
 
 <br>
@@ -96,9 +98,9 @@ lastmod: "2020-10-20T15:04:35.254Z"
 
 |Chave|Descrição|Tipo|Caracteres (min/max)|
 | --- | ------- | -- | -------------------|
-| date  | Data que define o dia a partir do qual a multa deve ser aplicada ao boleto.<br>Formato ISO8601 `"YYYY-MM-DD"`.                         | *String* | min: 10 / max: 10 |
-| value | Valor percentual (%) da multa que será aplicada ao boleto. O valor do deve ser maior que 0.0 e até 2.0.<br>Formato decimal. Ex: "2.0". | *String* | min: > 0 / max: < 2  |
-
+| date | Data que define o dia a partir do qual a multa deve ser aplicada ao boleto.<br>Formato ISO8601 `"YYYY-MM-DD"`.                         | *String* | min: 10 / max: 10 |
+| value | Valor percentual (%) da multa que será aplicada ao boleto. O valor do deve ser maior que 0.0 e até 2.0.<br>Formato decimal. Ex: "2.0". | *String* | min: > 0 / max: <= 2  |
+| face_value | Valor da multa que será aplicada ao boleto em centavos. O valor do deve ser maior que 0 e até 2.0% em relação ao `amount`. <br>Formato inteiro. Ex: 1232. | *Integer* | min: > 0 / max: <= 90% em relação ao `amount` |
 
 
 <br>
@@ -111,8 +113,10 @@ lastmod: "2020-10-20T15:04:35.254Z"
 
 |Chave|Descrição|Tipo|Caracteres (min/max)|
 | --- | ------- | -- | -------------------|
-| date  | Data que define o dia a partir do qual os juros passam a ser aplicados ao boleto.<br>Formato ISO8601 `"YYYY-MM-DD"`.                      | *String* | min: 10 / max: 10 |
-| value | Valor percentual (%) dos juros que serão aplicados ao boleto. O valor do deve ser maior que 0.0 e até 2.0.<br>Formato decimal. Ex: "2.0". | *String* | min: > 0 / max: < 1 |
+| date | Data que define o dia a partir do qual os juros passam a ser aplicados ao boleto.<br>Formato ISO8601 `"YYYY-MM-DD"`.                      | *String* | min: 10 / max: 10 |
+| value | Valor percentual (%) dos juros que serão aplicados ao boleto. O valor do deve ser maior que 0.0 e até 1.0.<br>Formato decimal. Ex: "1.0". | *String* | min: > 0 / max: <= 1 |
+| face_value | Valor dos juros que serão aplicada ao boleto em centavos. O valor do deve ser maior que 0 e até 1.0% em relação ao `amount`. <br>Formato inteiro. Ex: 1232. | *Integer* | min: > 0 / max: <= 1% em relação ao `amount` |
+
 
 
 
