@@ -1,8 +1,8 @@
 ---
-title: "Criar Location"
-linkTitle: "Criar Location"
+title: "Desvincular Location"
+linkTitle: "Desvincular Location"
 date: 2022-08-23T15:00:00-03:00
-lastmod: 2021-09-19T09:08:00-03:00
+lastmod: 2023-08-23T10:44:00-03:00
 weight: 8
 description: >
   
