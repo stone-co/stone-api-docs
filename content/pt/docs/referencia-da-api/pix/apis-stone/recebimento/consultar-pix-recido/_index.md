@@ -14,11 +14,13 @@ description: >
 ```
 GET https://sandbox-api.openbank.stone.com.br/api/v1/inbound_pix_payments/{id}/
 ```
+
 <br>
 Esse endpoint existe para buscar os dados de uma transação Pix recebida.
 
 
 #### **HEADERS**
+
 ---
 <br>
 
@@ -94,6 +96,7 @@ Pagamento associado a QR Code dinâmico imediato
   "transaction_id": "0d01ec464b3311eebe56-0242ac120002"
 }
 ```
+
 <br>
 
 Pagamento associado a QR Code dinâmico
@@ -199,10 +202,12 @@ Pagamento associado a QR Code estático
 
 <br>
 
-```json
+```
 401 Unauthorized
 ```
-Body
+
+Body:
+
 ```json
 {
   "type": "srn:error:unauthenticated"
@@ -210,10 +215,12 @@ Body
 ```
 <br>
 
-```json
+```
 403 Forbidden
 ```
-Body
+
+Body:
+
 ```json
 {
   "type": "srn:error:unauthorized"
