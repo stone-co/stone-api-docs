@@ -102,6 +102,8 @@ Os possíveis estados do pagamento retornado, que vem no campo `status` são:
 
 - `CREATED`: O pagamento está criado, mas não foi aprovado ainda.
 - `CONFIRMED`: O pagamento foi aprovado, mas o dinheiro ainda não saiu da conta.
+- `SCHEDULED`: O pagamento foi agendado.
+- `CANCELLED`: O pagamento agendado foi cancelado.
 - `FAILED`: O pagamento falhou.
 - `MONEY_RESERVED`: O pagamento foi aprovado, o dinheiro saiu da conta mas ainda não foi concluído.
 - `REFUNDED`: O pagamento foi rejeitado pelo outro banco.

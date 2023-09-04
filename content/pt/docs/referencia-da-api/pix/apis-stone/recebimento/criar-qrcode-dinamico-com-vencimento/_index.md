@@ -44,6 +44,13 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/pix_payment_invoices_with_
 <br>&nbsp;&nbsp;&nbsp;&nbsp;**value** `string`
 <br>&nbsp;&nbsp;&nbsp;&nbsp;Tamanho: min 1 / max 200
 
+**metadata** `object` 
+
+&nbsp;&nbsp;&nbsp;&nbsp;**name** `string`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Tamanho: min 1 / max 50
+<br>&nbsp;&nbsp;&nbsp;&nbsp;**value** `string`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Tamanho: min 1 / max 200
+
 **amount** `integer`
 
 **customer*** `object` 
@@ -127,6 +134,10 @@ Exemplo:
 		"name": "Título",
 		"value": "Descrição"
 	}],
+  "metadata": [{
+		"name": "subject_id",
+		"value": "user:380f9968-8946-4f88-a781-be8b7efc1f90"
+	}],
 	"amount": 15,
 	"customer": {
 		"document": "14423692724",
@@ -178,6 +189,12 @@ Exemplo:
     {
       "name": "Mr. Due",
       "value": "Date"
+    }
+  ],
+  "metadata": [
+    {
+      "name": "subject_id",
+      "value": "user:380f9968-8946-4f88-a781-be8b7efc1f90"
     }
   ],
   "amount": 555,

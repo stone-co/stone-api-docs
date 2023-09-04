@@ -54,6 +54,13 @@ POST https://sandbox-api.openbank.stone.com.br/api/v1/pix_payment_invoices
 <br>&nbsp;&nbsp;&nbsp;&nbsp;**value** `string`
 <br>&nbsp;&nbsp;&nbsp;&nbsp;Tamanho: min 1 / max 200
 
+**metadata** `object` 
+
+&nbsp;&nbsp;&nbsp;&nbsp;**name** `string`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Tamanho: min 1 / max 50
+<br>&nbsp;&nbsp;&nbsp;&nbsp;**value** `string`
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Tamanho: min 1 / max 200
+
 **expiration** `integer`
 <br>Tempo de expiração. O valor padrão é de 24h caso não seja enviado
 
@@ -95,6 +102,7 @@ Exemplo:
   "transaction_id": "<string>",
   "amount": "<integer>",
   "additional_data": "<object>",  
+  "metadata": "<object>",
   "location": "<string>",
   "request_for_payer": "<string>",
   "expiration": "<integer>",
