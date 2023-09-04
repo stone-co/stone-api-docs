@@ -44,7 +44,6 @@
         },
         "target_data": {
             "$ref": "inbound_pix_payment"
-        },
-        "paid_at": "string"
+        }
     }
 }
