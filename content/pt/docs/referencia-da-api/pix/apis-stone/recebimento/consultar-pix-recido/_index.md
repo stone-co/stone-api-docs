@@ -16,8 +16,7 @@ GET https://sandbox-api.openbank.stone.com.br/api/v1/inbound_pix_payments/{id}/
 ```
 
 <br>
-Esse endpoint existe para buscar os dados de uma transação Pix recebida.
-
+Endpoint com detalhes de uma transação Pix recebida.
 
 #### **HEADERS**
 
