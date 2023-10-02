@@ -130,9 +130,9 @@ A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) s
 
 | Tipo de Evento                																											    | Descrição                                                                   |
 | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| [pix_entries_key_created](pix_entries_key_created.json)          									| Representa a criação de uma chave Pix.            |
-| [pix_entries_deleted](pix.entries.deleted.json)               										| Representa a deleção de uma chave Pix.            |
-| [pix_entries_failed](pix.entries.failed.json)             											| Representa a falha na criação de uma chave Pix.   |
+| [pix_entries_status_key_created](pix_entries_key_created.json)          									| Representa a criação de uma chave Pix.            |
+| [pix_entries_status_deleted](pix.entries.deleted.json)               										| Representa a deleção de uma chave Pix.            |
+| [pix_entries_status_failed](pix.entries.failed.json)             											| Representa a falha na criação de uma chave Pix.   |
 | [pix_entries_claims_waiting_resolution](pix.entries.claims.waiting_resolution.json) 					| Representa que estamos aguardando a resposta da cliente sobre a claim (confirmação ou cancelamento).  |
 | [pix_entries_claims_confirmed](pix.entries.claims.confirmed.json)         							| Representa que a cliente confirmou a claim, passando a chave para outra instituição.             |
 | [pix_entries_claims_automatically_confirmed_waiting_resolution](pix.entries.claims.automatically_confirmed_waiting_resolution.json) | Representa que a reivindicação de posse foi automaticamente confirmada porque a cliente não respondeu no prazo de 7 dias corridos. |
