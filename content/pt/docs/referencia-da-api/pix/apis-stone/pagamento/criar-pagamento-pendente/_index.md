@@ -29,9 +29,11 @@ Ou seja, com este endpoint é possível fazer um pix informando tanto o campo `k
 - O campo `key` se torna obrigatório na presença do campo `transaction_id`.<br>
 - A ausência do campo `key`, que seria o envio de um Pix pela Chave Pix torna o campo `target`, que é o campo com os dados bancários do destino, **obrigatório**.<br>
 - É possivel criar um Pix somente informando o campo `account_id` sem precisar informar o campo `source`.<br>
-- Após a criação do Pix através desse endpoint é necessário confirmar o mesmo através do [endpoint](/docs/referencia-da-api/pix/confirmar-pagamento-pendente/) `/api/v1/pix/outbound_pix_payments/{id}/actions/confirm`. Caso o Pix não seja confirmado, ele permanece no status de `CREATED` até ser confirmado.
-- No caso de criação de um Pix utilizando a chave, os dados da `account` do `target` não serão retornados na resposta. Além disso, o campo do `document` do `target` será mascarado caso seja do tipo "cpf".
 - Para criar um agendamento de Pix, basta enviar o campo `scheduled_to` com uma data superior ao dia atual.
+- Após a criação do Pix através desse endpoint é necessário confirmar o mesmo através do [endpoint](/docs/referencia-da-api/pix/confirmar-pagamento-pendente/) `/api/v1/pix/outbound_pix_payments/{id}/actions/confirm`. Caso o Pix não seja confirmado, ele permanece no status de `CREATED` até ser confirmado.
+- Antes da confirmação, pode ser necessário alterar alguns dados da transação. Quando alterado o valor, assim como adição ou remoção da descrição **não é necessário** recriar a transação através deste endpoint. 
+- No caso de alteração da data de agendamento (`scheduled_to`), assim como quando é feita uma transação para outra chave Pix, é necessária a recriação da transação através deste endpoint.
+- No caso de criação de um Pix utilizando a chave, os dados da `account` do `target` não serão retornados na resposta. Além disso, o campo do `document` do `target` será mascarado caso seja do tipo "cpf".
 {{% /pageinfo %}}
 
 <br>
