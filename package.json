@@ -4,8 +4,8 @@
   "description": "docs for api documentation",
   "dependencies": {},
   "devDependencies": {
-    "autoprefixer": "9.8.5",
-    "postcss-cli": "7.1.1"
+    "autoprefixer": "10.4.16",
+    "postcss-cli": "10.1.0"
   },
   "repository": {
     "type": "git",
